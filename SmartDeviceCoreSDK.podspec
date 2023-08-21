@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SmartDeviceCoreSDK'
-  s.version          = '0.1.4'
+  s.version          = '2.0.0-alpha'
   s.summary          = 'smart device core sdk.'
 
   
