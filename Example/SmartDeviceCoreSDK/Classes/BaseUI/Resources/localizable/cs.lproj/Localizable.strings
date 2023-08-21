@@ -1,0 +1,3795 @@
+/* 
+Localizable.strings
+
+Copyright © 2020 CocoaPods. All rights reserved.
+*/
+"about" = "O %@";
+
+"about_str_inter" = "O Amazon Alexa";
+
+"accept" = "Přijmout";
+
+"account_alexa_tips" = "Váš účet byl úspěšně propojen s Alexou. Pokud při používání narazíte na nějaké problémy, přejděte prosím na „Uživatel“ – „Propojení streamování“ a zkontrolujte stav svého zařízení nebo si prohlédněte FAQ.";
+
+"account_had_been_bind" = "Účet je již propojen";
+
+"account_no_registered" = "Tento účet není registrován.";
+
+"account_settings" = "Nastavení účtu";
+
+"action_tracing_open" = "Při detekci pohybu bude %@ automaticky sledovat pohyb.";
+
+"action_tracking" = "Monitorování pohybu";
+
+"activity_zone_tips" = "%@ vždy zaznamenává všechna videa, ale oznámení obdržíte pouze v případě, že je v aktivní(ch) zóně (zónách) zjištěn pohyb.";
+
+"activity_zones" = "Aktivní zóna";
+
+"add_activity_zone" = "Přidat aktivní zónu";
+
+"add_camera_again" = "Přidat zařízení";
+
+"add_camera_first" = "Nebylo nalezeno žádné zařízení, nejprve prosím přidejte zařízení.";
+
+"add_camera_now" = "Přidat kameru nyní";
+
+"add_device_long_press" = "Dlouhým stisknutím zapnete";
+
+"add_device_plugin" = "Zásuvný modul";
+
+"add_device_power_des_key_point" = "dlouze";
+
+"add_device_power_double_des" = "Až uslyšíte \"Scan QR code\", můžete přejít k dalšímu kroku.";
+
+"add_device_power_title" = "Zapněte kameru";
+
+"add_device_push_button" = "Stiskněte tlačítko napájení pro zapnutí";
+
+"add_new_camera" = "Přidat nové zařízení";
+
+"add_new_camera_now" = "Přidat nové zařízení nyní !";
+
+"add_new_device_b" = "Chytrá PTZ kamera";
+
+"add_new_device_g" = "Chytrá bateriová kamera";
+
+"add_other_error" = "Ostatní / Bez zvuku";
+
+"add_preset_scuess" = "Pozice byla úspěšně přidána.";
+
+"add_sleep" = "Přidat";
+
+"add_sleep_plan" = "Přidat plán spánku";
+
+"add_timeout" = "Přidat časový limit zařízení";
+
+"address" = "Adresa";
+
+"address1_placeholder" = "Ulice a číslo, poštovní schránka, PSČ";
+
+"address2_placeholder" = "Podrobná adresa, např. číslo bytu, domu atd.";
+
+"admin" = "Admin";
+
+"admin_info" = "Administrátorské info";
+
+"admin_sharing_in_same_country" = "Účet správce a sekundárního uživatele (sekundárních uživatelů) musí být ve stejné zemi.";
+
+"admin_wakeup_camera" = "V případě potřeby kontaktujte správce a znovu aktivujte %@.";
+
+"advanced_info" = "Pokročilá nastavení";
+
+"after_checking_tips" = "Po zaškrtnutí položky (položek) analýzy bude nahrané video šifrovaně analyzováno za účelem rozpoznání osoby, domácího mazlíčka, vozidla nebo balíčku. Můžete zaškrtnout více než jednu položku.";
+
+"after_checking_tips1" = "Po zaškrtnutí položky (položek) analýzy bude nahrané video analyzováno šifrovaně za účelem rozpoznání osoby nebo zvířete. Můžete zaškrtnout více než jednu položku.";
+
+"agree" = "Souhlasím";
+
+"agree_and_continue" = "Souhlasit a pokračovat";
+
+"ai_analysis" = "Analýza umělé inteligence (AI)";
+
+"ai_analysis_description" = "V současné době existuje celá řada výsledků analýz: Osoba, Domácí mazlíček. Klepněte na odkaz níže a přejděte na obrazovku, kde můžete nastavit položky analýzy pro svá zařízení jednu po druhé.";
+
+"ai_analysis_description1" = "V současné době existuje celá řada výsledků analýz: Osoba, Domácí mazlíček, Vozidlo a Balíček. Klepněte na odkaz níže a přejděte na obrazovku, kde můžete nastavit položky analýzy pro svá zařízení jednu po druhé.";
+
+"ai_car" = "Vozidlo";
+
+"ai_filter" = "Klasifikace";
+
+"ai_filter_des" = "Zapněte kategorii, kterou chcete rozpoznat, video analyzuje, co je na obrazovce, a můžete si vybrat, zda chcete být upozorněni.";
+
+"ai_filter_des2" = "Po zapnutí funkce Klasifikace kamera analyzuje video a určí následující kategorie: Osoba, Domácí zvíře.";
+
+"ai_pet" = "Domácí mazlíček";
+
+"ai_pet_hint" = "Podporuje pouze rozpoznávání koček a psů";
+
+"alarm_no" = "Hlasitost alarmu nelze nastavit pod 10.";
+
+"alarm_on" = "Zapnout";
+
+"alarm_playing" = "Alarm zvoní.";
+
+"alarm_volume" = "Hlasitost alarmu";
+
+"alerdy_move_location" = "%@ už je tady: %@";
+
+"alert" = "Aktivovat alarm";
+
+"alert_buttom" = "Zvukový poplach";
+
+"alexa_link" = "Kliknutím na tlačítko Povolit propojíte svůj účet %@ s Alexou.\nPokud povolíte：";
+
+"alexa_link_allow" = "Povolit";
+
+"alexa_link_refuse" = "Nyní ne";
+
+"alignqr" = "Zarovnejte QR kód, který chcete naskenovat s rámečkem.";
+
+"all_alerts" = "Všechny pohyby";
+
+"all_device" = "Všechna zařízení";
+
+"all_screen" = "Všechny obrazovky";
+
+"allow" = "Povolit";
+
+"allow_bluetooth_permission" = "Povolit přístup k \"Bluetooth\"";
+
+"allow_bluetooth_permission_button" = "Povolení přístupu k Bluetooth";
+
+"allow_camera_permission" = "Umožněte přístup k fotoaparátu telefonu a naskenujte kód QR na kameře.";
+
+"allow_libary" = "Povolte přístup k fotografiím v nastavení telefonu.";
+
+"allow_location_permission" = "Zapnout přístup k poloze";
+
+"allow_location_permission_for_camera" = "Zapnutím přístupu k poloze automaticky získáte aktuální název Wi-Fi a nakonfigurujete jej pro zařízení (doporučeno), nebo název Wi-Fi zadejte ručně (rozlišuje se velikost písmen).";
+
+"allow_location_permission_get_wifi" = "Zapnutím přístupu k poloze automaticky získáte název Wi-Fi (SSID), který je v telefonu aktuálně používán.";
+
+"allow_location_permission_title" = "Zapnutí přístupu k \"poloze\"";
+
+"allowa_camera_permission" = "Povolit přístup k fotoaparátu";
+
+"already_ignore" = "Ignorováno";
+
+"already_long_press" = "Tlačítko Reset již bylo stisknuto.";
+
+"already_register" = "Tento e-mail již existuje. Zkuste se místo toho přihlásit.";
+
+"alter_location" = "Změna umístění";
+
+"amazon_alexa" = "Amazon Alexa";
+
+"analysis_item" = "Položka analýzy (k dispozici je více možností)";
+
+"and" = "a";
+
+"anti_flicker" = "Ochrana proti blikání";
+
+"anti_flicker_setting" = "Ochrana proti blikání";
+
+"anti_flicker_tips" = "Pokud je zapnuta funkce proti blikání, %@ neutralizuje stroboskopický efekt střídavého proudu. Řeší tak blikání obrazovky.";
+
+"apayment_success" = "%@ platba úspěšná";
+
+"apaymntt_fail" = "%@ platba se nezdařila";
+
+"app_build_info" = "Informace o sestavení";
+
+"app_is_update_to_date" = "Již aktualizováno na nejnovější verzi.";
+
+"app_name" = "@string/appName";
+
+"app_transfer_content" = "<![CDATA[ <font>\u3000\u3000Aby aplikace vyhovovala příslušným zásadám a poskytovala uživatelům lepší služby, bude změněna na <strong></strong> aplikaci na <font color=\"#5AC4A7\">%@</font>. <br /> <font>\u3000\u3000Prosím stáhněte <strong></strong> co nejdříve. Můžete se přímo přihlásit <strong></strong> pomocí vašeho účtu. Všechny informace o vašem zařízení a plán služeb Awareness budou zachovány a budete je moci nadále používat.</font><br /> <font>\u3000\u3000Po datu vypršení platnosti již nebude aplikace dostupná. <u><font color=\"#007AFF\"> Více zde >></font></u></font><br />]]>";
+
+"app_transfer_content_logout" = "<![CDATA[ <font>\u3000\u3000Aby aplikace vyhovovala příslušným zásadám a poskytovala uživatelům lepší služby, bude změněna na  <strong></strong> aplikaci na <font color=\"#5AC4A7\">%@</font>.</font><br /> <font>\u3000\u3000 Prosím stáhněte <strong></strong> ASAP. Můžete se přihlásit přímo <strong>Example</strong> pomocí vašeho účtu. Všechny informace o vašem zařízení a plán služeb Awareness budou zachovány a můžete je nadále používat. <u><font color=\"#007AFF\"> Více zde >></font></u></font><br /> ]]>";
+
+"app_update" = "Aktualizace aplikace";
+
+"app_version" = "Informace o aplikaci";
+
+"apple_cancle" = "Platba zrušena";
+
+"apple_reject" = "Tento telefon nepodporuje nákup.";
+
+"audio_setting" = "Nastavení zvuku";
+
+"auto" = "AUTO";
+
+"auto_sleep" = "Plán spánku";
+
+"auto_sleep_prompt" = "Pokud je zapnuta funkce Plán spánku, %@ automaticky přejde do režimu spánku podle plánu spánku.";
+
+"auto_switch_alexa" = "Zařízení, která podporují Alexu, se automaticky restartují a přepnou na H.264 pro připojení k zařízením Alexa.";
+
+"auto_video_record_desc" = "Funkce %@ ukončí záznam po zastavení pohybu, maximální doba je 3 minuty.";
+
+"available_2_4g_are_follows" = "K dispozici jsou tyto sítě Wi-Fi 2,4 GHz:";
+
+"available_fireware" = "Dostupný firmware";
+
+"awareness_service" = "Služba Awareness";
+
+"awarenessbasic" = "%@ Awareness Basic";
+
+"awarenessplus" = "%@ Awareness Plus";
+
+"awarenesspro" = "%@ Awareness Pro";
+
+"back_door" = "Zadní dveře";
+
+"batter_low_upgrade" = "Baterie je vybitá a aktualizaci nelze dokončit. Po nabití prosím znovu aktualizujte.";
+
+"battery_camera" = "Bateriové zařízení";
+
+"battery_camera_tips" = "Dlouze stiskněte tlačítko napájení, dokud zařízení nevydá typický zvuk.";
+
+"battery_issue" = "Problém s baterií/hardwarem";
+
+"battery_level" = "Úroveň nabití baterie";
+
+"bed_room" = "Ložnice";
+
+"before_offline" = "(Předtím, než bude offline)";
+
+"bind_111" = "Jakmile ze zařízení uslyšíte zvuk \"Ding Dong\" nebo uvidíte blikající kontrolku, použijte zařízení ke skenování QR kódu ze vzdálenosti přibližně 15-30 cm. Pokud neslyšíte žádný zvuk, dvakrát klikněte na tlačítko napájení, aby zařízení vstoupilo do režimu skenování QR kódu. Po úspěšném naskenování kódu QR uslyšíte zvukový signál.";
+
+"bind_ap_content" = "Připojte telefon k %@ a vraťte se na %@.";
+
+"bind_ap_help_content" = "%@ se připojí k hotspotu %@ pro konfiguraci sítě.";
+
+"bind_ap_help_wifi_pw" = "Heslo hotspotu:";
+
+"bind_ap_no_found_ap" = "Nelze najít tento hotspot？";
+
+"bind_ap_title" = "Konfigurace Wi-Fi pro zařízení";
+
+"bind_device_b0_step0_desc" = "Po dokončení otáčení kamery můžete přejít k dalšímu kroku.";
+
+"bind_device_delete" = "Odstranit tuto síť";
+
+"bind_device_g_step0_desc" = "Po zaznění spouštěcího zvuku přejděte k dalšímu kroku.";
+
+"bind_device_guide" = "Zapněte kameru podle pokynů na těle kamery.";
+
+"bind_device_guide_confirm" = "Zkontrolujte, zda zařízení vydává zvuk nebo zda kontrolka bliká.";
+
+"bind_device_guide_confirm_window" = "Ujistěte se, že zařízení vydává zvuk nebo že kontrolka bliká, abyste mohli přejít k dalšímu kroku.";
+
+"bind_device_save_wifi" = "Po úspěšném připojení si zapamatujte název a heslo Wi-Fi.";
+
+"bind_device_saved" = "Síť Wi-Fi uložena";
+
+"bind_device_scan" = "Udržujte telefon ve vzdálenosti přibližně 15-30 cm od zařízení, aby bylo možné naskenovat QR kód, a po pípnutí dokončete proces skenování";
+
+"bind_device_scan_failed" = "Připojení se nezdařilo, klikněte prosím zde";
+
+"bind_device_scan_failed_2" = "Kontaktujte zákaznický servis";
+
+"bind_device_skip" = "Po úspěšném připojení budete automaticky přesměrováni na další krok.";
+
+"bind_result_scuess" = "%@ (%@) přijal vaši žádost o přístup k zařízení.";
+
+"bind_result_scuess_check" = "Procházejte sdílená zařízení a najděte ho.";
+
+"bind_step_wifi_finish" = "Informace o Wi-Fi již byly přidány.";
+
+"bird" = "Pták (Bate)";
+
+"bluetooth" = "Bluetooth";
+
+"bluetooth_permission" = "Povolte Bluetooth, abyste zařízení snadno spojili";
+
+"bluetooth_system_center" = "Zapněte funkci \"Bluetooth\" v ovládacím centru systému";
+
+"bluetooth_tips1" = "1 Najděte %@ v nastavení";
+
+"bluetooth_tips2" = "2 Povolte %@ přístup k Bluetooth";
+
+"bt_new_device_pop" = "Bylo nalezeno nové zařízení";
+
+"bt_no_found_device" = "Pokud vaše zařízení není uvedeno";
+
+"bt_no_found_device_link" = "Jiné způsoby připojení>";
+
+"bt_searching_device" = "Vyhledávání aktivovaných zařízení";
+
+"bt_select_device" = "Vyberte své zařízení";
+
+"build_env" = "BuildENV";
+
+"buy" = "Koupit";
+
+"buy_desc" = "* Awareness se vztahuje pouze na práva správce zařízení. Sekundární uživatelé je mohou využívat pouze prostřednictvím práv správce.";
+
+"camera" = "Zařízení";
+
+"camera_alarm" = "Alarm";
+
+"camera_alarm_tips" = "Když je zapnutá funkce \"Alarm\", %@ automaticky vydá výstražný zvuk, když zjistí pohyb.";
+
+"camera_alarm_white_tips" = "Pokud jsou zapnuty funkce \"Alarm\" nebo \"Svítilna\", %@ vás automaticky upozorní, když zjistí pohyb.";
+
+"camera_deleted" = "Toto %@ bylo smazáno.";
+
+"camera_is_offline" = "%@ je offline";
+
+"camera_line_busy" = "%@ se používá, zkuste to prosím později.";
+
+"camera_location" = "Kam byste chtěli umístit toto %@?";
+
+"camera_not_activated" = "Neznámé %@, kontaktujte prosím prodejce.";
+
+"camera_not_activated_short" = "Neznámé %@";
+
+"camera_off" = "%@ je vypnuto. Zapněte jej prosím.";
+
+"camera_off_low_battery" = "%@ se automaticky vypnulo z důvodu vybití baterie na %@, nabijte jej prosím.";
+
+"camera_offline_desc" = "Zkuste restartovat router. Pokud to nepomůže, zkuste znovu připojit %@ k Wi-Fi pomocí tlačítka \"Přidat nové zařízení\".";
+
+"camera_permission" = "Povolit přístup ke kameře";
+
+"camera_permission_tips" = "Povolte přístup k fotoaparátu v Nastavení telefonu, abyste mohli naskenovat QR kód.";
+
+"camera_poor_network" = "%@ je v režimu offline. Zkontrolujte, zda je %@ zapnuté a připojené k síti Wi-Fi.";
+
+"camera_poor_network_short" = "%@ je offline.";
+
+"camera_serial_number" = "%@ sériové číslo";
+
+"camera_sleep" = "%@ je v režimu spánku";
+
+"camera_sleep_open" = "%@ se zapne zítra v %@.";
+
+"camera_wake_up" = "Probudit";
+
+"camera_white_tips" = "Pokud je zapnuta funkce blikajícího Alarmu, %@ bude automaticky blikat při aktivaci pohybového čidla.";
+
+"camera_will_not_record" = "%@ nebude nahrávat, upozorňovat a posílat oznámení.";
+
+"can_move_this_location" = "Přesun do následujících míst";
+
+"can_not_find_camera_qr_code" = "Nemůžete najít QR kód na kameře?";
+
+"can_not_find_qr_code" = "Nemůžete najít QR kód správce?";
+
+"can_not_find_reset" = "Nemůžete najít tlačítko reset?";
+
+"can_not_get_ssid" = "Nepodařilo se získat název Wi-Fi sítě (SSID). Vyberte pro telefon jinou síť Wi-Fi nebo zadejte název Wi-Fi sítě ručně.";
+
+"can_not_get_ssid_short" = "Nepodařilo se získat název Wi-Fi sítě (SSID)";
+
+"can_not_power_up" = "Nelze zapnout?";
+
+"cancel" = "Zrušit";
+
+"cannot_receive_code" = "Neobdrželi jste ověřovací kód?";
+
+"cannot_receive_code_reason_bold1" = "zkontrolujte prosím složku nevyžádané pošty registrovaného e-mailu.";
+
+"cannot_receive_code_reason_bold2" = "mezinárodní běžná a platná e-mailová adresa, například Gmail nebo Yahoo.";
+
+"cannot_receive_code_reason1" = "Po kliknutí na \"Odeslat ověřovací kód\" obdržíte do 60 sekund e-mail s ověřovacím kódem na registrovaný e-mail.";
+
+"cannot_receive_code_reason2" = "Pokud je síťové připojení nestabilní, vyčkejte přibližně 5 minut.";
+
+"cannot_receive_code_reason3" = "Pokud ani po 5 minutách neobdržíte ověřovací kód, <![CDATA[<b>prosíme, zkontrolujte složku spamu registrovaného e-mailu.</b>]]>";
+
+"cannot_receive_code_reason4" = "Pokud e-mail s ověřovacím kódem nemůžete najít ve složce se spamem, může to být způsobeno tím, že kód nelze odeslat na vaši aktuální e-mailovou adresu. Vložte prosím <![CDATA[<b>mezinárodní běžnou a platnou e-mailovou adresu, jako je Gmail nebo Yahoo</b>]]>, abyste obdrželi potvrzovací e-mail.";
+
+"cannot_receive_code_reason5" = "Pokud ani po 5 minutách stále neobdržíte ověřovací kód, zkontrolujte prosím složku se spamem v registrovaném e-mailu.";
+
+"cannot_receive_code_reason6" = "Pokud e-mail s ověřovacím kódem nemůžete najít ve složce se spamem, může to být způsobeno tím, že kód nelze odeslat na vaši aktuální e-mailovou adresu. Vložte prosím <![CDATA[<b>mezinárodní běžnou a platnou e-mailovou adresu, jako je Gmail nebo Yahoo</b>]]>, abyste obdrželi potvrzovací e-mail.";
+
+"cannot_switch" = "Během nahrávání videa nelze změnit rozlišení.";
+
+"cannot_take_screenshot" = "Během natáčení videa nelze pořizovat snímky.";
+
+"car_reid_describ" = "Rozpoznat vozidlo pozorované zařízením a umožnit uživateli jeho označení. Po označení se obsah notifikace aktualizuje a můžete také nastavit, zda se má notifikace odeslat, nebo ne.";
+
+"change" = "Změnit";
+
+"change_binding_email" = "Tento účet se již používá. Použijte prosím jiný e-mail.";
+
+"change_binding_phone" = "Tento účet se již používá. Použijte prosím jiné telefonní číslo.";
+
+"change_email" = "Změnit e-mail";
+
+"change_net_device_power_des" = "Dvojitým kliknutím na tlačítko na zařízení přejděte do režimu síťového připojení. Když bliká modrá kontrolka, je zařízení připraveno k připojení.";
+
+"change_net_device_power_des_key_point" = "dvojitě klikněte";
+
+"change_not_save" = "Chcete uložit změny?";
+
+"change_notification" = "%@ se po %@ dnech změní na %@.";
+
+"change_password" = "Změnit heslo";
+
+"change_password_failed" = "Nepodařilo se změnit heslo. Zkuste to prosím znovu.";
+
+"change_password_success" = "Heslo bylo úspěšně změněno.";
+
+"change_password_tips" = "V zájmu bezpečnosti vašeho účtu musí heslo obsahovat alespoň jedno velké písmeno, jedno malé písmeno a jednu číslici. Musí obsahovat alespoň 8 znaků.";
+
+"change_phone" = "Změnit telefonní číslo";
+
+"change_statement_1" = "Rádi bychom vás informovali, že jsme vydali novou aplikaci %@, která je vylepšenou verzí aplikace. Aplikace Example již nebude aktualizována. Přejděte prosím na naši novou aplikaci %@, protože věříme, že vám poskytne mnohem lepší uživatelský zážitek.";
+
+"change_statement_2" = "Stačí kliknout na tlačítko níže \"Přejít ke stažení\" a otevřít obchod Google Play nebo vyhledat \"%@\" přímo v obchodě Google Play, nainstalovat novou aplikaci a přihlásit se pomocí účtu. Vše (vaše zařízení, data a nastavení) zůstane beze změny.";
+
+"change_statement_2_email" = "Pro otevření obchodu Google Play stačí kliknout na tlačítko níže \"Přejít ke stažení\" nebo vyhledat \"%@\" přímo v obchodě Google Play a poté si zaregistrovat nový účet. V případě jakýchkoli dotazů se obraťte na adresu support@iget.eu.";
+
+"change_statement_5" = "Nemůžeme se dočkat, až vás přivítáme v naší nové aplikaci %@. Rádi si poslechneme vaši zpětnou vazbu!";
+
+"change_vehicle_name" = "kliknutím upravíte název vozidla";
+
+"change_wifi" = "Změna Wi-Fi sítě";
+
+"change_wifi_network" = "Změnit nastavení Wi-Fi";
+
+"charging" = "Nabíjení";
+
+"charging_completed" = "Baterie je plně nabitá";
+
+"check_email_sample" = "xx@xx.xx";
+
+"check_for_update_version" = "Kontrola aktualizace firmwaru";
+
+"check_inbox_des" = "Právě jsme odeslali ověřovací kód na váš e-mail %@.";
+
+"check_net_config" = "Zkontrolujte síť a zkuste to znovu.";
+
+"check_requirements" = "Chybný formát hesla.";
+
+"check_update_version" = "Zkontrolovat aktualizace";
+
+"check_wifi_0" = "Umístěte zařízení %@ na místo, kam jej potřebujete nainstalovat, a zkontrolujte sílu signálu Wi-Fi.";
+
+"check_wifi_1" = "Kontrola síly signálu Wi-Fi...";
+
+"check_wifi_2" = "Ověřte sílu signálu Wi-Fi:";
+
+"check_wifi_3" = "Doporučuje se připojit %@ v aktuálním umístění.";
+
+"check_wifi_4" = "Aktuální umístění není doporučeno pro připojení %@.";
+
+"check_wifi_no" = "V daném místě není signál Wi-Fi. Přesuňte prosím %@ do blízkosti bezdrátového směrovače.";
+
+"check_your_inbox" = "Ověřovací kód";
+
+"choose" = "Vybrat";
+
+"choose_camera_type" = "Pomocí mobilního telefonu naskenujte QR kód na zařízení a zjistěte model zařízení. QR kód se často nachází uvnitř vnějšího pláště nebo pod gumovou zátkou. Tento QR kód obsahuje sériové číslo a model zařízení, obvykle začíná písmeny \"S/N\".";
+
+"choose_error_msg" = "Vyberte chybovou zprávu, kterou jste slyšeli";
+
+"choose_firmware_update" = "Zvolte aktualizaci firmwaru";
+
+"choose_location" = "Zvolte si prosím místo pro své %@, pro lepší zážitek.";
+
+"choose_other_wifi" = "Zvolte jinou síť Wi-Fi";
+
+"choose_question_type" = "Pečlivě vybírejte problém z následujících kategorií. Přesný výběr nám může pomoci najít problém a poskytnout vám rychlejší a lepší pomoc.";
+
+"city" = "Město";
+
+"clear_cache" = "Vymazat mezipaměť";
+
+"clear_cache_des" = "Ve vyrovnávací paměti se shromažďují dočasná data vytvořená během používání. Vymazání mezipaměti neovlivní běžné používání aplikace.";
+
+"clear_cache_not_affect_download_media" = "Vymazání mezipaměti neovlivní běžné používání aplikace.";
+
+"click_support" = "Klikněte pro podporu";
+
+"close" = "Vypnuto";
+
+"close_combiend" = "Jste si jisti, že chcete ukončit sloučení notifikací všech zařízení?";
+
+"close_combiend_tips" = "Po ukončení sloučení notifikačních zpráv budete upozorňováni jednotlivými videi a notifikačních zpráv bude přibývat.";
+
+"close_led" = "Vypnuto";
+
+"close_motion_detection_tip" = "Po optimalizaci funkcí produktu se přepínač nahrávání videa odstraní. Aby to neovlivnilo vaše návyky při používání, je přepínač detekce pohybu dočasně vypnutý. Podle potřeby jej prosím znovu zapněte.";
+
+"cloud_service_buy" = "Zaplatit nyní";
+
+"cloud_size_change" = "Prostor v cloudovém úložišti se zmenší na %@ (celková kapacita je menší než %@GB).";
+
+"cloud_storage_params" = "<![CDATA[<font color=#333333\">%1$d days</font><br><font color=\"#999999\">(≤%2$sGB)</font>]]>";
+
+"cloud_strorage" = "Nahrávání do cloudu";
+
+"common_format" = "Formátovat kartu SD";
+
+"common_service" = "Lite";
+
+"config_night_mode" = "Režim nočního vidění";
+
+"confirm" = "Potvrdit";
+
+"confirm_camera_on" = "Zkontrolujte, zda je kamera zapnutá";
+
+"confirm_model_number" = "Naskenujte QR kód na zařízení pomocí telefonu a potvrďte model zařízení.";
+
+"confirm_new_password" = "Potvrdit nové heslo";
+
+"confirm_open" = "Potvrdit";
+
+"confirm_password" = "Potvrdit heslo";
+
+"confirm_scan_state" = "Zkontrolujte, zda je zařízení v režimu skenování";
+
+"confirm_scan_state_directions" = "Obvykle může nové zařízení přejít do režimu skenování automaticky a vy uslyšíte zvuk skenování nebo uvidíte blikající kontrolku. Pokud tomu tak není, je třeba dvakrát kliknout na tlačítko napájení.";
+
+"confirm_scanning_sound" = "Zkontrolujte, zda zařízení vydává zvukový signál.";
+
+"confirm_scanning_sound_window" = "V dalším kroku se ujistěte, že kamera přehrává zvuk.";
+
+"confirm_speaker_1" = "Určitě jste vypnuli reproduktor?";
+
+"confirm_speaker_2" = "%@ již nebude vydávat žádné zvuky připomínek.";
+
+"confirm_speaker_open" = "Po zapnutí funkce \"Reproduktor\" bude %@ okamžitě poskytovat akustickou zpětnou vazbu a informovat o stavu %@.";
+
+"congratulation_add_camera" = "Gratulujeme, úspěšně jste se zaregistrovali\nProsím, přidejte zařízení.";
+
+"connect_error_ap_1" = "Zkontrolujte, zda jste vybrali nebo zadali správný název Wi-Fi sítě (SSID).";
+
+"connect_error_ap_2" = "Umístěte zařízení do blízkosti Wi-Fi routeru a ujistěte se, že je router připojen ke zdroji napájení.";
+
+"connect_error_ap_3" = "V současné době nejsou podporovány Wi-Fi sítě 5 GHz a podnikové Wi-Fi sítě.";
+
+"connect_error_failed_1" = "Ujistěte se, že je router připojen k dostupné síti.";
+
+"connect_error_failed_2" = "Zkuste restartovat router a znovu se připojit.";
+
+"connect_error_failed_3" = "Zkuste se připojit k jiné síti Wi-Fi.";
+
+"connect_error_ip" = "Ozvalo se \"Retrieve IP timed out\".";
+
+"connect_error_ip_1" = "Protože je k routeru připojeno příliš mnoho zařízení, nelze připojit další zařízení. Odeberte některá nepoužívaná zařízení nebo zařízení, jejichž platnost vypršela. Možná budete muset kontaktovat správce sítě.";
+
+"connect_error_method" = "Ujistěte se, že vaše Wi-Fi síť není podnikovou Wi-Fi sítí. Zařízení podporuje pouze sítě s úrovní zabezpečení nižší než WPA-2.";
+
+"connect_error_no_voice" = "Ozvalo se \"Cloud service connection fail\"";
+
+"connect_error_other" = "Ozvalo se \"Authentication error\"";
+
+"connect_error_password_1" = "Ujistěte se, že zadané heslo Wi-Fi je správné a rozlišuje velká a malá písmena.";
+
+"connect_error_wifi" = "Ozvalo se \"Wi-Fi password error\"";
+
+"connect_error_wifi_net" = "Ozvalo se \"Wi-Fi SSID not found\"";
+
+"connect_find_device" = "Nalezeno nové zařízení";
+
+"connect_heard_failed" = "Ozvala se chybová zpráva.";
+
+"connect_initialize" = "Inicializace %@";
+
+"connect_no_wifi" = "Nemůžete najít informace o Wi-Fi?";
+
+"connect_register" = "Registrace do cloudové služby";
+
+"connect_server" = "Připojení k serveru...";
+
+"connect_sever_timeout" = "Připojení k serveru vypršelo";
+
+"connect_success" = "Připojení bylo úspěšné";
+
+"connect_to_wifi" = "Připojte zařízení k síti";
+
+"connect_wifi" = "Připojení k Wi-Fi síti ";
+
+"connect_wifi_no_voice_error" = "Nic nebylo slyšet";
+
+"connect_wifi_tips" = "Zadejte název Wi-Fi sítě 2,4 GHz (SSID) a heslo pro připojení k zařízení. V současné době nejsou podporovány Wi-Fi sítě 5 GHz a podnikové Wi-Fi sítě. Další informace >>";
+
+"connect_wifi_unkonw_error" = "Ozvalo se \"Other error\".";
+
+"connecting" = "Připojování...";
+
+"connection_failed" = "Připojení se nezdařilo";
+
+"contact_admin_set_az" = "Pro nastavení Aktivní zóny se obraťte na správce kamery";
+
+"control_bar" = "Ovládání";
+
+"copyright" = "Copyright © 2021 Photon Sail Tech All rights reserved";
+
+"country" = "Země";
+
+"country_region" = "Země/oblast";
+
+"coupon" = "Uplatnit kód";
+
+"coupon_expire" = "Platnost kódu vypršela.";
+
+"coupon_used" = "Platnost kódu již vypršela.";
+
+"create_location" = "Vytvořit nové místo";
+
+"create_new_password" = "Nastavit nové heslo";
+
+"create_your_account" = "Nastavit heslo";
+
+"crying_detection" = "Detekce pláče";
+
+"crying_detection_high" = "Pokud se %@ nachází ve vzdálenosti větší než 2,5 metru od dítěte, doporučujeme nastavit úroveň citlivosti na High (Vysoká).";
+
+"crying_detection_low" = "Pokud je %@ velmi blízko dítěte, např. 1 metr, doporučujeme nastavit úroveň citlivosti na Nízká.";
+
+"crying_detection_mid" = "Pokud je %@ ve vzdálenosti 1,5 - 2 metry od dítěte, doporučujeme nastavit úroveň citlivosti na střední.";
+
+"crying_detection_on" = "Když je zapnutá funkce \"Detekce pláče\", budete upozorněni, pokud je v dětském pokoji detekován pláč.";
+
+"crying_tag" = "Pláč";
+
+"current_location" = "Aktuální poloha: %@";
+
+"currently_spt" = "V současné době je podporováno";
+
+"data_acquisition_failed" = "Nepodařilo se získat data, restartujte prosím aplikaci.";
+
+"day" = "%d dnů";
+
+"default_common" = "Výchozí";
+
+"delete" = "Odstranit";
+
+"delete_account" = "Odstranit účet";
+
+"delete_account_failed" = "Účet se nepodařilo odstranit, zkuste to prosím znovu.";
+
+"delete_location_desc" = "Určitě chcete toto umístění odstranit?";
+
+"delete_notice_content_0" = "Jakmile svůj účet odstraníte, nebude již možné jej obnovit. Abyste zajistili bezpečnost svého účtu před jeho smazáním, potvrďte prosím následující informace:";
+
+"delete_notice_content_1" = "Nebylo zaznamenáno žádné neobvyklé chování, jako je napadení účtu hackerem nebo podezřelá přihlašovací aktivita. O smazání účtu bylo požádáno z jiných osobních důvodů.";
+
+"delete_notice_content_2" = "Pokud jste správcem zařízení, ztratíte po odstranění práva k prohlížení a nastavování tohoto zařízení. Pokud jste sdíleni správcem tohoto zařízení, ztratíte po vymazání právo prohlížení.";
+
+"delete_notice_content_3" = "Všechny osobní údaje související s tímto účtem, včetně informací o knihovně, budou trvale smazány a nebude možné je obnovit. Pokud jste si již zakoupili službu Awareness, postupujte opatrně.";
+
+"delete_notice_content_4_ios" = "Vzhledem k tomu, že %@ Awareness používá platební systém třetí strany, zrušení účtu nezastaví automatické obnovení. Chcete-li se vyhnout zbytečným srážkám, zrušte automatické obnovení třetí strany.";
+
+"delete_notice_content_4_ios_link" = "Zrušit automatické obnovení";
+
+"delete_notice_title_0" = "Upozornění o zrušení účtu";
+
+"delete_notice_title_1" = "1. Účet je bezpečný";
+
+"delete_notice_title_2" = "2. Již se nestaráte o zařízení spojené s tímto účtem.";
+
+"delete_notice_title_3" = "3. Všechny osobní údaje budou vymazány";
+
+"delete_notice_title_4" = "4. Zrušení automatického obnovení %@ Awareness";
+
+"delete_one_dialog_message" = "Tato položka bude trvale odstraněna. Tuto akci nelze vrátit zpět.";
+
+"delete_photo" = "Opravdu chcete tuto fotografii odstranit?";
+
+"delete_photo_title" = "Odstranit fotografii";
+
+"delete_photos" = "Jste si jisti, že chcete tyto fotografie odstranit?";
+
+"delete_sleep_time" = "Jste si jisti, že chcete tento plán spánku odstranit?";
+
+"delete_success" = "Úspěšně odstraněno.";
+
+"delete_this_location" = "Odstranit umístění";
+
+"delete_vehicle" = "Určitě chcete odstranit tuto galerii vozidel?";
+
+"delete_vehicles" = "Určitě chcete tyto galerie vozidel odstranit?";
+
+"delete_wifi" = "Opravdu chcete tuto síť odstranit?";
+
+"deleted_successfully" = "Úspěšně odstraněno";
+
+"Deleting" = "Odstraňování...";
+
+"deselect_all" = "Odznačit vše";
+
+"detail_location" = "Podrobné umístění";
+
+"detection_area" = "Detekce oblasti";
+
+"detection_parcel" = "Detekce balíku";
+
+"detection_parcel_desc" = "Po jeho aktivaci vám bude %@ zasílat oznámení při zjištění balíčku, zatímco ostatní irelevantní informace budou filtrovány.";
+
+"detection_pedestrian" = "Detekce osob";
+
+"detection_sensitivity" = "Citlivost detekce";
+
+"device_already_bind_by_other" = "Toto zařízení bylo vázáno na jiný účet. Obraťte se na správce a požádejte o pomoc.";
+
+"device_auth_limitation" = "Žádné povolení k provozu tohoto zařízení.";
+
+"device_b0_default_name" = "%@ Chytrá otočná kamera";
+
+"device_bind_heared_common_voice" = "Až uslyšíte \"Scan QR code\", můžete přejít k dalšímu kroku.";
+
+"device_default_name" = "%@ Chytrá kamera";
+
+"device_g0_default_name" = "%@ Chytrá bateriová kamera";
+
+"device_info" = "%@ info";
+
+"device_installing" = "Firmware se instaluje ...";
+
+"device_ip" = "%@ IP";
+
+"device_is_updating" = "Aktualizace firmwaru...";
+
+"device_k0_default_name" = "%@ Kamera Smart Card";
+
+"device_language" = "%@ Jazyk hlasu";
+
+"device_language_cn" = "汉语 (Chinese)";
+
+"device_language_en" = "English (English)";
+
+"device_language_es" = "Español (Spanish)";
+
+"device_language_fr" = "Français (French)";
+
+"device_language_ge" = "Deutsch (German)";
+
+"device_language_it" = "Italiano (Italian)";
+
+"device_language_ja" = "日本語 (Japanese)";
+
+"device_language_ru" = "Pусский (Russian)";
+
+"device_manager" = "Správa zařízení";
+
+"device_name" = "%@ Název";
+
+"device_name_invalid_tips" = "Zadejte platný název zařízení.";
+
+"device_no_access" = "Nepodařilo se získat přístup k %@, zkuste to prosím znovu.";
+
+"device_no_replied" = "Připojení k telefonní síti je špatné.";
+
+"device_not_bound" = "Zařízení není propojeno.";
+
+"device_offline" = "%@ je offline";
+
+"device_other_device" = "Nejste si jisti, které zařízení je vaše？";
+
+"device_restarted_update" = "Během aktualizace se může %@ několikrát restartovat. Neodpojujte napájení ani nevypínejte %@.";
+
+"device_s0_default_name" = "%@ Kamera Smart Box";
+
+"device_settings" = "%@ Nastavení";
+
+"device_state" = "Stav: %@";
+
+"device_state_ios" = "Stav:";
+
+"device_unactivated" = "Neznámé zařízení, obraťte se na prodejce.";
+
+"device_update_scuess" = "Firmware je již aktualizován.";
+
+"dialog_message_cancel_share" = "<b>%@</b> již nebude dostávat zprávy od <b>%@</b>.";
+
+"dialog_message_del_multi_with_guest" = "Tuto akci nelze vrátit zpět. Protože %d položek pochází z kamery přítele, nelze je smazat.";
+
+"dialog_message_del_multi_without_guest" = "Tyto položky budou trvale smazány. Tuto akci nelze vrátit zpět.";
+
+"dialog_payment_cloud_content" = "Rozšířením až na 30 dní záznamů do cloudu (ne více než 5 GB) vytvoříte bezpečnější úložiště pro videa, neunikne vám žádný důležitý okamžik.";
+
+"dialog_payment_ling_content" = "Určete hlavní obsah videa: Určete osobu, zvíře, vozidlo. A analyzujte jeho chování při akci, abyste získali přesnější informace.";
+
+"dialog_payment_ling_title" = "Inteligentní upozornění";
+
+"dialog_payment_title" = "%@ Awareness Plus";
+
+"dialog_payment_zone_content" = "Po nastavení aktivní zóny se budou odesílat pouze notifikace o přesné poloze, zatímco všechny ostatní informace budou odfiltrovány.";
+
+"dialog_title_del_multi" = "Potvrzujete odstranění %d položek z cloudu?";
+
+"dialog_title_del_one" = "Opravdu chcete vybranou položku odstranit?";
+
+"did_not_hear_scanning_sound" = "Neslyšeli jste pípnutí?";
+
+"ding_dong" = "\"Ding dong ding dong\"";
+
+"disable" = "Zakázat";
+
+"disagree" = "Nesouhlasím";
+
+"distance" = "15-30 cm";
+
+"district_country" = "Oblast/země";
+
+"do_alarm_tips" = "Pokud aktivujete funkci Alarm, bude %@ vydávat výstražné zvuky.";
+
+"do_not_disturb" = "Nerušit";
+
+"do_not_disturb_15min" = "Nerušit po dobu 15 minut";
+
+"do_not_disturb_15min_describ" = "Během 15 minut nebudete dostávat žádná oznámení o detekci pohybu, ale všechny události budou stále zaznamenávány.";
+
+"do_not_disturb_describ" = "Během tohoto období nebudete dostávat žádná oznámení o detekci pohybu, ale všechny události budou stále zaznamenávány.";
+
+"do_not_update" = "Neaktualizovat";
+
+"done" = "Hotovo";
+
+"dont_say_green_light" = "Blikající modré světlo nebylo vidět.";
+
+"double_click_exit" = "Opětovným stisknutím ukončíte %@";
+
+"double_click_power" = "Dvakrát klikněte na tlačítko napájení";
+
+"double_click_power_button" = "Prosím dvojitě klikněte na tlačítko napájení, aby zařízení vstoupilo do režimu skenování";
+
+"double_click_power_directions" = "Po zapnutí zařízení dvakrát klikněte na tlačítko napájení. Když je zapnutý režim skenování, uslyšíte zvuk skenování nebo uvidíte blikající kontrolku.";
+
+"double_click_power_key" = "Dvakrát klikněte na tlačítko napájení pro skenování";
+
+"double_click_power_key_2" = "Dvakrát klikněte na tlačítko napájení a umístěte QR kód v telefonu do vzdálenosti asi 15-30 cm od zařízení.";
+
+"double_click_power_key_reset" = "Dlouhým stisknutím tlačítka reset přejdete do režimu skenování.";
+
+"double_click_power_key_reset_next" = "Po dlouhém stisknutí tlačítka reset můžete přejít k dalšímu kroku.";
+
+"download" = "Stáhnout";
+
+"download_done" = "Stahování je dokončeno";
+
+"download_error" = "Chyba při stahování";
+
+"download_faild_and_try" = "Stažení se nezdařilo, zkuste to prosím znovu.";
+
+"drop_out" = "Odhlásit se";
+
+"duration_alarm" = "Doba trvání alarmu";
+
+"edit" = "Upravit";
+
+"edit2" = "Upravit";
+
+"email" = "E-mail";
+
+"email_bind_success" = "E-mail byl úspěšně propojen.";
+
+"email_change_success" = "E-mail byl úspěšně změněn.";
+
+"email_exists" = "Tento účet byl zaregistrován. Přihlaste se prosím.";
+
+"email_invalid_tips" = "Zadejte prosím platný e-mail.";
+
+"email_or_phone_number" = "Telefonní číslo/e-mail";
+
+"email_phone_number_invalid_tips" = "Zadejte prosím platné telefonní číslo/e-mail.";
+
+"email_unregister_tips" = "Tento účet není ve vybrané zemi registrován.";
+
+"enabled" = "Povolit";
+
+"End" = "Konec";
+
+"end_do_not_disturb" = "Vypnout funkci Nerušit?";
+
+"enter_coupon" = "Zadejte prosím kód pro uplatnění.";
+
+"enter_device_name" = "Zadejte prosím název %@";
+
+"enter_password" = "Heslo";
+
+"enter_pwd_tips_for_del_account" = "Aby byl váš účet v bezpečí, zadejte prosím heslo pro ověření totožnosti uživatele, než přistoupíte ke zrušení účtu.";
+
+"error_2002" = "Nepodařilo se získat přístup k zařízení. Potvrďte prosím, zda je toto zařízení na seznamu.";
+
+"error_2002_short" = "Nepodařilo se získat přístup ke kameře.";
+
+"error_3011" = "Neplatný požadavek";
+
+"error_3012" = "Platnost žádosti vypršela. Zkuste to prosím znovu.";
+
+"error_3013" = "Ignorovat";
+
+"error_email_format" = "Neplatný formát e-mailu.";
+
+"error_message" = "Chybová zpráva";
+
+"error_no_net" = "Není k dispozici žádné síťové připojení.";
+
+"error_no_register" = "Účet neexistuje, zkuste to prosím znovu.";
+
+"error_phone_email_format" = "Neplatné telefonní číslo/e-mail.";
+
+"error_two_passwork_match" = "Hesla se neshodují.";
+
+"error_unknown" = "Neznámá chyba požadavku";
+
+"error_vaild_code" = "Ověřovací kód není správný.";
+
+"event_list" = "Seznam událostí";
+
+"expired_code" = "Vypršela platnost QR kódu";
+
+"expired_notification" = "%@ vyprší po %@ dnech.";
+
+"explore" = "Prozkoumat";
+
+"faied_get_sdvideo" = "Nepodařilo se získat video z karty SD";
+
+"failed_get_infomation" = "Nepodařilo se získat informace (%d)";
+
+"failed_information" = "Nepodařilo se získat informace.";
+
+"failed_restore" = "Obnovení se nezdařilo.";
+
+"failed_to_add_location" = "Nepodařilo se přidat umístění, zkuste to prosím znovu.";
+
+"failed_to_delete_and_try" = "Odstranění se nezdařilo, zkuste to prosím znovu.";
+
+"failed_to_get_information_and_try" = "Mobilní síť je nedostupná. Zkontrolujte prosím připojení k síti.";
+
+"familiar_vehicle" = "Značka vozidla";
+
+"familiar_vehicle_tips" = "Označte rozpoznané vozidlo jako známé vozidlo a tato informace bude aktualizována do obsahu notifikací.";
+
+"feedback" = "Zpětná vazba";
+
+"feedback_failed" = "Omlouváme se, nepodařilo se odeslat zpětnou vazbu, zkuste to prosím znovu.";
+
+"feedback_submit_success" = "Zpětná vazba byla úspěšně odeslána. Děkujeme vám za podporu!";
+
+"filter" = "Filtr";
+
+"find_password_by_email" = "Získání pomocí e-mailu";
+
+"find_password_by_phone" = "Vyhledání pomocí telefonního čísla";
+
+"find_qrcode_way" = "Jak najít QR kód na těle kamery:";
+
+"fireware_is_downloading" = "Firmware se stahuje...";
+
+"fireware_is_installing" = "Firmware se instaluje...";
+
+"fireware_is_updating" = "Firmware se aktualizuje, vyčkejte prosím.";
+
+"fireware_need_force_update_tips" = "Pro lepší zážitek aktualizujte na nejnovější verzi.";
+
+"fireware_need_update_tips" = "Pro lepší zážitek je nutné aktualizovat verzi firmwaru (%@)!";
+
+"fireware_update" = "Aktualizace firmwaru";
+
+"fireware_update_failed" = "Aktualizace se nezdařila, zkuste to prosím znovu.";
+
+"firmware_info" = "Informace o firmwaru";
+
+"firmware_update_fail" = "Firmware se nepodařilo aktualizovat, zkuste to prosím znovu.";
+
+"firmware_update_timeout" = "Časový limit aktualizace firmwaru, zkuste to znovu.";
+
+"firmware_upgraded_successfully" = "Firmware byl úspěšně aktualizován.";
+
+"five_vehicle_marked" = "Lze označit maximálně 5 galerií vozidel.";
+
+"flash_light_item" = "Alarm se svítilnou";
+
+"flicker_rate" = "Frekvence blikání";
+
+"follow_instruction_retry" = "Postupujte podle pokynů a zkuste to znovu";
+
+"follow_step_retry" = "Postupujte podle jednotlivých kroků a zkuste to znovu";
+
+"for_battery_cameras" = "Pro bateriová zařízení";
+
+"for_plugin_cameras" = "Pro zásuvná zařízení";
+
+"forbidden" = "Uživateli není dovoleno pokračovat";
+
+"forck_update_share" = "Je třeba aktualizovat verzi firmwaru (%@). Pro aktualizaci se obraťte na správce tohoto zařízení.";
+
+"forgot_password_" = "Zapomněli jste heslo?";
+
+"forgot_password_btn" = "Zapomenuté heslo";
+
+"forgot_password_not_login_account" = "Zadejte telefonní číslo, které má být k účtu připojeno.";
+
+"forgot_password_tips" = "Zadejte účet, jehož heslo chcete obnovit. Na tento účet vám zašleme ověřovací kód.";
+
+"format" = "Formátovat";
+
+"formatting_cannot_use" = "Během procesu formátování nelze kartu SD používat.";
+
+"found_event1" = "1 událost,";
+
+"found_event2" = "%@ události/í,";
+
+"found_video1" = "a 1 video v daný den.";
+
+"found_video2" = "a %@ videa/í v daný den.";
+
+"free_30d" = "30denní zkušební verze zdarma";
+
+"free_30d_plus" = "%@ Awareness Plus 30denní zkušební verze zdarma";
+
+"free_info" = "7denní bezplatné cloudové úložiště";
+
+"friday" = "Pá";
+
+"friday_2" = "Pátek";
+
+"from_time" = "Z";
+
+"front_door" = "Vstupní dveře";
+
+"g4_change_wifi" = "Mobilní telefon není připojen k síti Wi-Fi. Připojte telefon k síti Wi-Fi nebo zadejte název Wi-Fi ručně.";
+
+"g4_change_wifi_tips" = "Mobilní telefon není připojen k síti Wi-Fi, připojte jej k síti Wi-Fi.";
+
+"gallery" = "Knihovna";
+
+"garage" = "Garáž";
+
+"garden" = "Zahrada";
+
+"get_cloud_size" = "%@ Cloudové úložiště";
+
+"get_coupon_bottom" = "Získat kód pro uplatnění";
+
+"get_coupon_sec" = "Gratulujeme, získali jste \"%@\"%@-měsíční přístup. Během tohoto období můžete využívat následující služby:";
+
+"get_live_url_error" = "Nepodařilo se získat adresu živého vysílání.";
+
+"get_location_failed" = "Nepodařilo se získat umístění.";
+
+"get_location_static" = "Automatické zjištění aktuální polohy";
+
+"get_new_pushes" = "Přijímání notifikací v reálném čase";
+
+"get_now" = "Získat nyní";
+
+"get_phone_verify_code" = "Odeslat ověřovací kód";
+
+"get_policy_desc" = "V zájmu ochrany vašich práv jsme provedli následující aktualizace v souladu s nejnovějšími zákony, předpisy a regulačními zásadami:";
+
+"get_started" = "Začněte hned!";
+
+"get_use_permission" = "Pomocí %@ naskenujte kód a získejte povolení.";
+
+"Ghz2.4" = "2.4 GHz";
+
+"Ghz5" = "5 GHz";
+
+"gif_ad_1" = "Další úložiště pro nahrávání do cloudu";
+
+"gif_ad_2" = "Inteligentní oznámení";
+
+"gif_ad_3" = "Vlastní aktivní zóna";
+
+"go_album_download" = "Přejděte do alba pro zobrazení >";
+
+"go_buy" = "Koupit nyní";
+
+"go_buy_2" = "Zkontrolovat nyní";
+
+"go_buy_plus" = "Přihlásit se k odběru %@ Awareness";
+
+"go_live" = "Sledovat živé video";
+
+"go_on" = "Pokračovat";
+
+"go_open" = "Povolit nyní";
+
+"go_set" = "Nastavit nyní";
+
+"go_system_settings" = "Přejděte do nastavení systému >>";
+
+"go_to_bind" = "Propojit nyní";
+
+"go_to_buy" = "Mám to, koupit hned";
+
+"good" = "Střední";
+
+"got_it" = "Mám to";
+
+"grant_location_permission" = "Povolení přístupu k umístění";
+
+"guardian_read" = "(Pokud je vám méně než 14 let, musí být informován a poučen váš zákonný zástupce.)";
+
+"guest" = "Uživatel host";
+
+"guest_request" = "Požadavek uživatele hosta";
+
+"guide_content_2" = "Sledujte živě a mluvte s návštěvníky kdykoli a kdekoli";
+
+"guide_content_3" = "Filtrování dat pro získání užitečných informací";
+
+"guide_content_4" = "Zbavte se zbytečných rozptýlení";
+
+"guide_long_press_power_tips" = "Jakmile uslyšíte \"Power up\", můžete přejít k dalšímu kroku.";
+
+"guide_long_press_power_tips_b0" = "Jakmile uslyšíte zvuk spuštění, můžete přejít k dalšímu kroku.";
+
+"guide_long_press_power_tips_s0" = "Po připojení kamery ke zdroji napájení můžete přejít k dalšímu kroku.";
+
+"guide_title_2" = "Živé vysílání";
+
+"guide_title_3" = "Inteligentní upozornění";
+
+"h1" = "2 hodiny";
+
+"h12" = "12 hodin";
+
+"handler_success" = "Úspěšně zpracováno.";
+
+"hao_to_invite" = "Jak přidat sdílená zařízení?";
+
+"has_account_and_login" = "Přihlásit se ";
+
+"have_no_device" = "Zatím jste nepřidali žádné zařízení.";
+
+"have_problem" = "Máte potíže?";
+
+"hear_beep" = "Slyšel jsem zvuk nebo viděl rozsvícené světlo";
+
+"hear_device_power_on" = "Slyšel jsem \"Power up\".";
+
+"hear_device_power_on_b0" = "%@ dokončilo rotaci.";
+
+"hear_device_power_on_s0" = "Již připojeno k napájení";
+
+"hear_device_voice" = "Slyšel jsem zvuk.";
+
+"heard_qr_code" = "Slyšel jsem \"Scan successful\"";
+
+"heard_scan_finished" = "Slyšel jsem \"Scan successful/completed\".";
+
+"heard_scan_qr_code" = "Slyšel jsem \"Scan QR code\"";
+
+"heard_scaning_sound" = "Slyšel jsem pípání";
+
+"help" = "Nápověda";
+
+"help_center" = "ČASTO KLADENÉ OTÁZKY";
+
+"help_feedback" = "Nápověda a zpětná vazba";
+
+"help_guide" = "Nápověda >>";
+
+"high" = "Vysoká";
+
+"high_cod" = "Vysoce výkonné kódování";
+
+"hint_feedback" = "Zadejte prosím alespoň 10 slov k popisu problému, abychom vám mohli poskytnout lepší pomoc.";
+
+"hint_feedback_contact" = "Nepovinné, ozveme se vám.";
+
+"hold_qr_code_in_front" = "Podržte QR kód před zařízením.";
+
+"hold_speak" = "Stiskněte tlačítko a mluvte";
+
+"home" = "Domů";
+
+"hot" = "Horký";
+
+"hot_country" = "Oblíbená země";
+
+"how_to_add_friend_camera" = "Přejděte na domovskou stránku aplikace, klikněte na znak \"+\" v pravém horním rohu a vyberte možnost \"Přidat zařízení přítele\".";
+
+"how_to_open_nightvision" = "Přejděte na \"Nastavení nočního vidění -> Režim nočního vidění\" a vyberte \"Režim bílého světla\" >";
+
+"howing_reduced" = "Byl zjištěn hluk a hlasitost byla snížena.";
+
+"human_tracking" = "Sledování lidí";
+
+"human_tracking_2" = "Když se osoba v zorném poli %@ pohybuje, %@ sleduje její pohyb.";
+
+"i_have_read_above_content" = "Přečetl/a jsem si výše uvedený obsah a souhlasím s ním.";
+
+"id" = "ID";
+
+"if_storage_not_access" = "Aby bylo zajištěno rychlejší připojení živého vysílání, musí být základní informace o přehrávači uloženy lokálně, doporučujeme udělit %@ povolení k ukládání v telefonu.";
+
+"Ignore_version" = "Přeskočit tuto verzi";
+
+"image_and_screen_shot" = "Obrázky (nepovinné, nahrajte snímek obrazovky s problémem)";
+
+"image_save_to_ablum" = "Obrázek byl uložen do alba telefonu.";
+
+"indicator" = "Kontrolka";
+
+"indicator_des" = "Jakmile je kontrolka zapnutá, bude svítit, dokud bude %@ pracovat.";
+
+"Indoor_motion_alarm" = "(Tato funkce se nedoporučuje pro použití v interiéru)";
+
+"infrared_des" = "Díky infračervenému světlu vznikají jasnější černobílé snímky.";
+
+"input_email_new" = "Nový e-mail";
+
+"input_email_send" = "Zadejte prosím e-mail, který chcete propojit. Ověřovací kód vám zašleme.";
+
+"input_new_email" = "Zadejte prosím nový e-mail, který chcete propojit. Ověřovací kód vám zašleme.";
+
+"input_new_phone" = "Zadejte nové telefonní číslo, které chcete propojit. Zašleme vám ověřovací kód.";
+
+"input_phone_number_new" = "Zadejte nové telefonní číslo";
+
+"input_phone_number_simple" = "Zadejte telefonní číslo";
+
+"input_phone_number_you_bind" = "Zadejte telefonní číslo, které chcete propojit. Na toto telefonní číslo vám zašleme ověřovací kód.";
+
+"install_bracket_1" = "Montáž držáku";
+
+"install_bracket_2" = "Pro montáž %@ na požadované místo můžete %@ umístit přímo na rovný povrch nebo pomocí šroubu připevnit držák na stěnu nebo strop a poté %@ přišroubovat k pevné základně.";
+
+"Install_on_shelf" = "Přístroj %@ můžete umístit na polici nebo jiný rovný povrch, případně jej můžete připevnit na stěnu nebo strop.";
+
+"install_the_camera" = "Instalace %@";
+
+"installation_guide" = "Průvodce instalací";
+
+"installation_settings" = "Nastavení instalace";
+
+"installation_suggestions" = "Doporučení pro instalaci";
+
+"installing" = "Instalace...";
+
+"intelligent_recognition" = "Inteligentní rozpoznávání";
+
+"inter_volume" = "Hlasitost interkomu";
+
+"interconnect_srt" = "Podpora propojení streamování";
+
+"interconnected" = "Propojené";
+
+"interval_time" = "Nastavit čas chlazení v cloudu";
+
+"invite" = "Sdílení zařízení";
+
+"invite_info_des" = "Pozvaný musí stáhnout a nainstalovat %@.";
+
+"invite_info_des_key_point" = "%@ aplikace";
+
+"invite_title_des" = "Pozvaná osoba může sledovat živý přenos a nahraná videa.";
+
+"invited_join_device" = "vás vyzval k zobrazení %@.";
+
+"ios.answer_bot.cell.text.inactivity_get_in_touch_message" = "Zahájení chatu nebo zanechání zprávy";
+
+"ios.answer_bot.text.label.ask_a_question" = "Popište svůj problém a uveďte model kamery. Model je obvykle uveden na štítku připevněném na vnějším plášti kamery. Někdy může být nutné sundat plášť nebo otevřít gumovou zátku, abyste jej našli. Model může být G0, CGXX (například CG1), CBXX (například CB1), JXJ-FA01 atd.";
+
+"ios.answer_bot.text.label.disabled" = "Vítejte v centru nápovědy pro propojení kamery! Otevírací doba online služeb zaměstnanců: 10:00-20:00 (SGT)/7:00-17:00 (PST). Popište svůj problém a uveďte model kamery. Model je obvykle uveden na štítku připevněném na vnějším plášti kamery. Někdy může být k jeho nalezení nutné sundat plášť nebo otevřít gumovou zátku. Model může být G0, CGXX (například CG1), CBXX (například CB1), JXJ-FA01 atd.";
+
+"ios.answer_bot.text.label.hi" = "Vítejte v centru nápovědy pro propojení kamery! Otevírací doba online služeb zaměstnanců: Singapurský čas 10:00-20:00 (SGT)/ 19:00-17:00 (SPT)";
+
+"ios.conversation.ui.chat.handover.message.selection" = "Přesun k personální službě";
+
+"ios.conversation.ui.chat.welcome_message.handover" = "DOBŘE. Najdu někoho, kdo vám s vaším dotazem pomůže.";
+
+"ios.ZDKRequests.createRequest.leaveAMessage.title" = "Zanechat zprávu";
+
+"is_heard_scan_qr_code" = "Slyšeli jste \"Scan QR code\"?";
+
+"is_last_location" = "Toto je poslední umístění.";
+
+"is_playing" = "Přehrávání";
+
+"issue_1" = "Zkontrolujte, zda je zařízení v režimu skenování (vydává nepřetržitý zvuk \"Ding Dong Ding Dong\").";
+
+"issue_2" = "Udržujte kameru co nejblíže u routeru.";
+
+"join_friend_device" = "Přidat zařízení přítele";
+
+"join_new_device" = "Získejte přístup ke kameře přítele";
+
+"keep_phone_camera_close" = "Zařízení se připojuje, držte jej v blízkosti mobilního telefonu.";
+
+"keep_router" = "Udržujte zařízení v blízkosti směrovače";
+
+"know" = "Ano";
+
+"know_vehicle_popwindow" = "Znáte toto vozidlo?";
+
+"known_vehicle" = "Známé vozidlo";
+
+"language" = "Jazyk aplikace";
+
+"later" = "později";
+
+"latest_version" = "Aktuální";
+
+"learn_how_use" = "Naučte se používat";
+
+"learn_more" = "Další informace >>";
+
+"learn_more_2" = "Další informace >>";
+
+"level_sensitivity" = "%@";
+
+"library_feedback" = "Z následujících možností vyberte obsah, ke kterému chcete získat zpětnou vazbu (možnost výběru z více možností):";
+
+"library_feedback_failed" = "Omlouváme se, nepodařilo se nám odeslat zpětnou vazbu. Zkuste to prosím znovu.";
+
+"library_feedback_not_complete" = "Zpětná vazba není úplná. Chcete opustit tuto stránku bez odeslání zpětné vazby?";
+
+"library_feedback_success" = "Zpětná vazba úspěšně odeslána, děkujeme.";
+
+"library_tips1" = "Aktuální seznam je seřazen podle událostí. Blízké události jsou sloučeny, takže můžete snadno zkontrolovat celkovou situaci v daný den.";
+
+"library_tips2" = "V této události jsou dvě videa s položkou \"Osoba\" a jedno video s položkou \"Vozidlo\".";
+
+"library_tips3" = "Klepnutím sem seřadíte seznam podle videí.";
+
+"library_tips4" = "V tento den se stala 1 událost a 2 videa.";
+
+"light_setting" = "Nastavení osvětlení";
+
+"like_device_name" = "Jak byste chtěli pojmenovat toto %@?";
+
+"limit_reached" = "Dosažení limitu";
+
+"live" = "Živě";
+
+"live_alarm" = "%@ spustil zvukový alarm %@.";
+
+"live_feed" = "Zobrazit živý přenos";
+
+"live_issue" = "Problém s živým pohledem chyba/offline";
+
+"live_network_timeout" = "Vypršel časový limit připojení k serveru";
+
+"live_not_start" = "Živý přenos ještě nezačal.";
+
+"live_play" = "Živě";
+
+"live_play_finish" = "Přehrávání videa na kartě SD dokončeno.";
+
+"live_resolution" = "%@ přepnuto rozlišení.";
+
+"live_server_timeout" = "Časový limit připojení k serveru";
+
+"live_stream_error" = "Časový limit živého vysílání";
+
+"live_stream_timeout" = "Časový limit živého vysílání";
+
+"live_viewers_limit" = "Sledující živého vysílání dosáhli limitu, zkuste to prosím později.";
+
+"live_white_light" = "%@ rozsvítil bílé světlo.";
+
+"livingroom" = "Obývací pokoj";
+
+"load_message_error" = "Nepodařilo se načíst video.";
+
+"load_more_title" = "Stáhněte dolů pro obnovení";
+
+"loading" = "Načítání...";
+
+"loading_failed" = "Nepodařilo se načíst";
+
+"Local_network" = "Lokální síť";
+
+"Local_network_tips1" = "Povolit lokální síť";
+
+"Local_network_tips2" = "Povolte oprávnění v telefonu \"Nastavení\" \n umožnit mobilnímu telefonu připojit zařízení pro přístup k živému vysílání";
+
+"locating" = "Probíhá lokalizace...";
+
+"location" = "Umístění";
+
+"location_2" = "Určení polohy";
+
+"location_address_des" = "Země/Region\nStát/Provincie\nMěsto";
+
+"location_create_success" = "Umístění bylo úspěšně vytvořeno.";
+
+"location_error" = "Chyba umístění";
+
+"location_management" = "Správa umístění";
+
+"location_name" = "Název umístění";
+
+"location_name_error" = "Chyba formátu názvu umístění.";
+
+"location_name_exist" = "Tento název umístění již existuje, upravte jej a zkuste to znovu.";
+
+"location_name_required" = "Požadovaný název lokality";
+
+"location_not_" = "Název umístění nesmí být prázdný.";
+
+"location_not_save" = "Uložit informace o aktuálním umístění?";
+
+"location_permission" = "Povolit přístup k umístění";
+
+"location_permission_help_adding" = "Povolte přístup k umístění v nastavení telefonního systému, aby se zařízení propojilo.";
+
+"location_permission_tips" = "Chcete-li získat seznam Wi-Fi sítí v okolí, povolte v nastavení telefonu přístup k poloze.";
+
+"location_permission_word" = "Povolte přístup k poloze, aby bylo možné automaticky zadat Wi-Fi síť připojenou k vašemu telefonu.";
+
+"location_save_success" = "Umístění bylo úspěšně uloženo.";
+
+"location_selection" = "Výběr umístění";
+
+"location_service" = "Lokalizační služba";
+
+"location_setting" = "Umístění";
+
+"log_in_tips" = "Vítejte v %@";
+
+"login_expired" = "Platnost přihlášení vypršela, přihlaste se znovu.";
+
+"login_other_device" = "Tento účet je v současné době přihlášen na jiném mobilním telefonu. Pokud jste to nebyli vy, doporučujeme po opětovném přihlášení změnit heslo.";
+
+"login_way_password" = "Přihlášení pomocí hesla";
+
+"login_way_verify_code" = "Přihlášení pomocí ověřovacího kódu";
+
+"logout" = "Odhlásit se";
+
+"logout_des" = "Opravdu se chcete odhlásit?";
+
+"long_press_reboot" = "Stisknutím a podržením tlačítka restartování po dobu 3 sekund zařízení restartujete.";
+
+"long_press_reboot_directions" = "Najděte otvor pro tlačítko restartování, stiskněte jej a podržte po dobu 3 sekund kolíkem, který je součástí balení, nebo špičatým předmětem, abyste zařízení restartovali. Pokud se zařízení nerestartuje, musíte stisknout a podržet tlačítko napájení po dobu 3 sekund, aby se zapnulo, dokud neuslyšíte zvuk zapnutí nebo neuvidíte rozsvícený indikátor.";
+
+"long_press_reset_button" = "Stiskněte dlouze tlačítko reset na 3 sekundy, aby kamera vstoupila do režimu skenování";
+
+"long_press_the_power_key_b0" = "Připojte ke zdroji napájení pro zapnutí";
+
+"loss_aifunction" = "Funkce umělé inteligence již nejsou k dispozici (zóna aktivity, inteligentní upozornění).";
+
+"low" = "Nízký";
+
+"low_battery_warning" = "%@ je v režimu slabé baterie, nabijte kameru.";
+
+"low_power" = "%@ vypnuto z důvodu slabé baterie. Nabijte ji prosím.";
+
+"mac_address" = "Wi-Fi MAC";
+
+"mail_phone_register_des" = "Zadejte prosím své telefonní číslo/e-mail. Na něj vám zašleme ověřovací kód.";
+
+"mail_registered" = "Tento zadaný e-mail byl zaregistrován, přihlaste se prosím místo něj.";
+
+"make_sure_cemera_on" = "Stiskněte a podržte tlačítko napájení nebo připojte napájecí zdroj, dokud neuslyšíte zvuk spuštění nebo dokud se nerozsvítí kontrolka.";
+
+"manual_f" = "Manuální";
+
+"manual_input" = "Manuální zadávání";
+
+"mark" = "Značka";
+
+"mark_first" = "Neexistuje žádný označený obsah, nejprve označte z následujících galerií vozidel.";
+
+"marked_cancle" = "Úspěšně odznačeno";
+
+"marked_fail" = "Nepodařilo se označit, zkuste to prosím znovu.";
+
+"marked_success" = "Úspěšně označeno.";
+
+"marked_vehicle" = "Označené vozidlo";
+
+"may_be_connection" = "Nelze se připojit k %@, zkontrolujte prosím síťové připojení.";
+
+"mcu_version" = "Verze MCU";
+
+"medium" = "Střední";
+
+"membership_expire" = "Balíček inteligentní služby se změní na %@ na %@. V případě potřeby si prosím stáhněte videa.";
+
+"membership_tip" = "Platnost %@ vypršela. Funkce umělé inteligence již nebudou na %@ dostupné a úložiště cloudových záznamů bude omezeno na 7denní kapacitu. V případě potřeby si službu znovu zakupte.";
+
+"merge" = "Sloučit";
+
+"merge_push" = "Notifikace sloučení";
+
+"merge_push_tips" = "Po zapnutí funkce notifikace sloučení budou po sobě jdoucí videa v krátkém čase sloučena a odeslána dohromady, což vám pomůže rychle zobrazit všechny po sobě jdoucí pohyby (po zapnutí se použije pro všechna přidaná zařízení).";
+
+"merge_push_tips1" = "Po zapnutí funkce notifikace sloučení budou po sobě jdoucí videa v krátkém čase sloučena a odeslána dohromady, což vám pomůže rychle zobrazit všechny po sobě jdoucí pohyby (po zapnutí se použije pro všechna přidaná zařízení).";
+
+"merge_tips" = "Galerie vozidel může obsahovat maximálně 20 fotografií. Pokud je v ní po sloučení více než 20 fotografií, část fotografií bude smazána.";
+
+"merge_vehicles" = "Určitě chcete sloučit tyto galerie vozidel?";
+
+"merged_failed" = "Sloučení se nezdařilo, zkuste to prosím znovu.";
+
+"merged_successfully" = "Úspěšně sloučeno";
+
+"microphone" = "Mikrofon";
+
+"microphone_permission" = "Povolit přístup k mikrofonu";
+
+"microphone_permission_tips" = "Chcete-li používat funkci obousměrného zvuku, povolte v nastavení telefonu funkci Mikrofon.";
+
+"migration_statement_1" = "Prohlášení o změně aplikace";
+
+"migration_statement_2_1" = "Aby se aplikace přizpůsobila příslušným předpisům a poskytovala uživatelům lepší služby, stane se na %@ aplikací Example.";
+
+"migration_statement_2_2" = "Stáhněte si prosím co nejdříve. Do aplikace se můžete přihlásit pomocí svého účtu. Všechny informace o vašem zařízení a stavu služby Awareness zůstanou zachovány a budete k nim moci pokračovat.";
+
+"migration_statement_2_3" = "Po uplynutí doby platnosti nebude možné aplikaci Example používat. Další informace >>";
+
+"migration_statement_3" = "Omlouváme se za nepříjemnosti, Example přeje bezpečnou navigaci!";
+
+"migration_statement_3_android" = "<![CDATA[Omlouváme se za nepříjemnosti, <strong>Example</strong> bude váš účet chránit! ]]>";
+
+"migration_statement_5" = "Připomeňte mi to příště";
+
+"migration_statement_6_1" = "Aby se aplikace Example přizpůsobila příslušným předpisům a poskytovala uživatelům v Číně lepší služby, stane se na %@ aplikací Example.";
+
+"migration_statement_6_2" = "Aplikaci již nelze používat. Stáhněte si prosím co nejdříve. Do aplikace se můžete přihlásit přímo pomocí svého účtu Example. Všechny informace o vašem zařízení a stavu služby Awareness zůstanou zachovány a budete je moci nadále používat. Další informace >>";
+
+"migration_statement_7" = "Aby se aplikace přizpůsobila příslušným předpisům a poskytovala uživatelům lepší služby, stane se z ní aplikace App on %@. Stáhněte si prosím aplikaci a zaregistrujte si nový účet. Děkujeme vám za spolupráci.";
+
+"migration_statement_7_android" = "<![CDATA[In order to align with the relevant regulations and provide a better service to the users, App will become <strong>Example</strong> App on <font color=\"#5AC4A7\">%@</font>. Please download <strong>Example</strong> and register an account. Thank you for your cooperation.]]>";
+
+"min30" = "30 minut";
+
+"mine" = "Uživatel";
+
+"missed" = "Nepřečtené";
+
+"model_number" = "%@ Model";
+
+"momo_payment" = "MoMo Pay";
+
+"monday" = "Po";
+
+"monday_2" = "Pondělí";
+
+"month_1" = "Led";
+
+"month_10" = "Říj";
+
+"month_11" = "Lis";
+
+"month_12" = "Pro";
+
+"month_2" = "Úno";
+
+"month_3" = "Bře";
+
+"month_4" = "Dub";
+
+"month_5" = "Kvě";
+
+"month_6" = "Čer";
+
+"month_7" = "Čer";
+
+"month_8" = "Srp";
+
+"month_9" = "Zář";
+
+"more" = "Více";
+
+"more_data" = "Načíst další data";
+
+"more_event" = "%@ více upozornění";
+
+"more_info" = "Více informací";
+
+"more_pre_location" = "Lze přidat až %d přednastavených pozic.";
+
+"more_selection" = "Další možnosti";
+
+"motion_alarm" = "Při detekci pohybu %@ automaticky spustí alarm.";
+
+"motion_detection" = "Detekce pohybu";
+
+"motion_detection_des" = "Jakmile je detektor pohybu zapnutý, %@ se spustí na základě pohybu objektů a nahraje video, což vám pomůže kdykoli zjistit změny v prostředí.";
+
+"motion_issue" = "Problém s detekcí pohybu";
+
+"motion_sport_auto_is_open" = "Při zapnuté funkci sledování pohybu není ovladač joysticku k dispozici.";
+
+"motion_tracking" = "Sledování pohybu";
+
+"motion_tracking_open" = "Po zapnutí funkce sledování pohybu bude %@ automaticky nahrávat záznam po zjištění jakéhokoli pohybu.";
+
+"move_app_name" = "Example";
+
+"mtn_desc" = "Další informace naleznete na webových stránkách.";
+
+"mtn_go_momo_or_wait" = "Pro dokončení platby přejděte na MoMo. Pokud byla platba dokončena, chvíli počkejte.";
+
+"mtn_momo_payment_title" = "Zaplaťte Askari %@ pomocí svého účtu MoMo. Zadejte své telefonní číslo:";
+
+"mtn_mpesa_payment" = "M-PESA Pay";
+
+"multi_choice" = "Analýza umělé inteligence (výběr z více možností)";
+
+"my_device" = "Moje zařízení";
+
+"my_house" = "Můj domov";
+
+"n_device_use_this_location" = "V tomto umístění je již umístěno %d zařízení. Změňte prosím umístění zařízení.";
+
+"name_required" = "Zadejte název";
+
+"nest_day" = "Další den";
+
+"network_error" = "Chyba sítě";
+
+"network_error_our_server" = "Připojení k serveru vypršelo";
+
+"network_low" = "Síťové připojení je špatné, zkuste to prosím znovu.";
+
+"network_name" = "Název Wi-Fi (SSID)";
+
+"network_timeout" = "Síťové připojení vypršelo.";
+
+"network_unavailable_and_try" = "Není k dispozici žádné síťové připojení. Zkuste to prosím znovu.";
+
+"new_bind_device_name" = "Nastavení názvu a umístění %@";
+
+"new_device" = "Nové zařízení";
+
+"new_feature" = "Aktualizace obsahu(ů)：";
+
+"new_location" = "Nové umístění";
+
+"new_password" = "Nové heslo";
+
+"new_phone" = "Nové telefonní číslo";
+
+"new_version" = "Nová verze：";
+
+"next" = "Další krok";
+
+"next_format" = "Úloha formátování bude provedena po aktuální úloze.";
+
+"night_mode_red" = "Infračervený režim";
+
+"night_mode_white" = "Režim bílého světla";
+
+"night_version" = "Automatické noční vidění";
+
+"night_version_setting" = "Nastavení nočního vidění";
+
+"night_version_tips" = "Po zapnutí funkce Noční vidění bude %@ podporovat noční vidění, aby se zlepšil jeho výkon za zhoršených světelných podmínek.";
+
+"no" = "Ne";
+
+"no_access" = "Přístup k této kameře není možný. Přidejte ji znovu nebo požádejte o přístup ke kameře jejího správce.";
+
+"no_camera" = "Žádné zařízení";
+
+"no_camera_auth" = "Žádné povolení k použití kamery. Po povolení v nastavení telefonu to zkuste znovu >>";
+
+"no_item_selected" = "Nebyla vybrána žádná položka";
+
+"no_locations" = "Žádné informace o umístění";
+
+"no_network" = "Žádná síť";
+
+"no_network_cannot_set" = "%@ je v režimu offline a prozatím jej nelze nastavit.";
+
+"No_new_gallery" = "Žádná nová galerie vozidel";
+
+"no_password" = "Pole Heslo není vyplněno";
+
+"no_position" = "Žádná přednastavená pozice, pro její přidání kontaktujte správce kamery.";
+
+"no_qr_code" = "QR kód nebyl nalezen, zkuste to prosím znovu.";
+
+"no_response" = "%@ neodpovídá";
+
+"no_resumable_order" = "Žádná obnovitelná objednávka";
+
+"no_select_timezone" = "Není vybráno žádné časové pásmo.";
+
+"no_supper_5g" = "Zdá se, že vaše Wi-Fi má frekvenci 5 GHz, která není podporována. Zkontrolujte, zda používáte síť Wi-Fi 2,4 GHz.";
+
+"no_tip" = "Dnes již nezobrazovat";
+
+"no_wifi_nearby" = "V okolí není k dispozici žádná síť Wi-Fi.";
+
+"no_wifi_signal" = "Žádný signál";
+
+"nocamera_spt_alexa" = "Alexu v současné době nepodporuje žádné zařízení";
+
+"nodata_libary_tip" = "Žádné další nahrávky v den konání.";
+
+"nodata_tip" = "Žádná další data";
+
+"noProduct" = "Tato položka byla odstraněna.";
+
+"not_account_alexa_tips" = "Váš účet ještě nebyl propojen s Alexou. Můžete otevřít aplikaci Alexa a propojit svůj účet přidáním Skills do aplikace Alexa.";
+
+"not_allow" = "Není povoleno";
+
+"not_found" = "Tato stránka neexistuje nebo je zde jiný problém.";
+
+"not_hear_scan_qr_code" = "Neslyšel jsem \"Scan QR code\".";
+
+"not_interconnected" = "Propojování...počkejte prosím";
+
+"not_know" = "Ne";
+
+"not_logged_in" = "Nepřihlášen";
+
+"not_open" = "Vypnuto";
+
+"not_open_now" = "Prozatím nepovolovat";
+
+"not_show_tips_any_more" = "Nezobrazovat znovu";
+
+"not_support_5g" = "Tato kamera podporuje pouze sítě Wi-Fi 2,4 GHz.Vaše aktuální síť je síť 5 GHz.";
+
+"not_support_vehicle_marking" = "Zařízení v seznamu v současné době nepodporují funkci označování vozidel, pro více informací klikněte na >>";
+
+"not_use" = "0 Aktivní zóna";
+
+"notication_no_end" = "Akce ještě neskončila. Projděte si prosím knihovnu a podívejte se na celé video později.";
+
+"notification_des" = "Po aktivaci funkce Oznámení vám bude %@ zasílat oznámení o spuštěných nahrávkách, aby vás upozornil na jakékoli neobvyklé aktivity.";
+
+"notification_des_tips" = "Vaše %@ vás může upozornit, když zjistí pohyb. Vyberte typ(y) oznámení, která chcete dostávat.";
+
+"notification_detection_people" = "Osoba";
+
+"notification_no_item_choose" = "Pokud není vybrána žádná kategorie objektu, funkce Klasifikace nebude k dispozici. Vyberte alespoň jeden předmět.";
+
+"notification_push" = "Vyskakovací oznámení";
+
+"notification_scuess_offline" = "Účinkuje, když je %@ online.";
+
+"notification_sec" = "Po vypršení platnosti:";
+
+"notification_setting" = "Nastavení upozornění";
+
+"notification_to_choose_item" = "Vybrat nyní";
+
+"notification_warm_des" = "Při zjištění pohybu vám %@ zašle oznámení. Díky tomuto nastavení budete dostávat oznámení rychle, ale možná také příliš často.";
+
+"notifications" = "Oznámení";
+
+"notifications_for_marked" = "Pouze oznámení o označených vozidlech";
+
+"notifications_for_two" = "Oznámení o označených a neoznačených vozidlech";
+
+"notifications_for_unmarked" = "Pouze oznámení o neoznačených vozidlech ";
+
+"notifications_permission" = "Povolit přístup k oznámení";
+
+"NSCameraUsageDescription" = "Pokud není povolen přístup ke kameře, nebude možné QR kód naskenovat.";
+
+"NSLocalNetworkUsageDescription" = "Pokud není povolen přístup k místní síti, nebude možné sledovat živé vysílání.";
+
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Pokud není povolen přístup k poloze, aplikace nebude schopna automaticky získat aktuální polohu.";
+
+"NSLocationWhenInUseUsageDescription" = "Povolte přístup k poloze, aby se automaticky vyplnila Wi-Fi, která je aktuálně připojena k vašemu mobilnímu telefonu, a získané informace o Wi-Fi se použijí k přidání kamery do aplikace.";
+
+"NSMicrophoneUsageDescription" = "Pokud není povolen přístup k Mikrofonu, nebudete moci používat funkci obousměrného zvuku.";
+
+"NSPhotoLibraryUsageDescription" = "Pokud není povolen přístup k aplikaci Fotky, nebudete moci ukládat obrázky nebo videa do alba telefonu.";
+
+"num_new_message" = "Nová zpráva";
+
+"number_az" = "%@ Aktivní zóny";
+
+"off_time" = "(Čas: %@)";
+
+"office" = "Kancelář";
+
+"offline" = "Offline";
+
+"offline_reconnect" = "Služba %@ je offline, prosím, znovu ji připojte.";
+
+"ok" = "OK";
+
+"old_password" = "Staré heslo";
+
+"one_az" = "1 Aktivní zóna";
+
+"online" = "Online";
+
+"only_video3" = "K dispozici je 1 video.";
+
+"only_video4" = "K dispozici jsou %@ videa.";
+
+"open_bluetooth" = "Zapnutím funkce Bluetooth zařízení rychle propojíte.";
+
+"open_bluetooth_bonding" = "Zapněte Bluetooth, abyste umožnili snadnější připojení a propojení zařízení \"%@\".";
+
+"open_bluetooth_help_adding" = "Funkce Bluetooth telefonu je vypnutá. Zapněte jej a přidejte zařízení snadno a rychle.";
+
+"open_fail_retry" = "Nastavení se nezdařilo, zkuste to prosím znovu.";
+
+"open_led" = "Zapnuto";
+
+"open_location_Info" = "Zapnutím možnosti \"Informace o poloze\" automaticky vyplníte informace o Wi-Fi.";
+
+"open_location_service" = "Otevřít služby určování polohy";
+
+"open_location_wifi" = "Získejte aktuální název Wi-Fi sítě automaticky prostřednictvím polohových služeb (doporučeno) nebo zadejte název Wi-Fi sítě ručně (rozlišuje se velikost písmen).";
+
+"open_smart" = "Zkuste %@ Awareness";
+
+"open_wifi" = "Zapnout Wi-Fi";
+
+"open_wifi_word" = "Zapněte \"Wi-Fi\" a vyhledejte dostupné sítě v okolí.";
+
+"opened" = "Zapnuto";
+
+"options_include" = "obsahuje";
+
+"or" = "nebo";
+
+"ota_failed_low_power" = "Baterie je vybitá a aktualizaci nelze dokončit. Po nabití proveďte opětovnou aktualizaci";
+
+"other" = "Ostatní";
+
+"other_error_with_code" = "Něco se pokazilo, zkuste to prosím znovu později.";
+
+"other_payment_not_detected" = "Platba %@ není detekována. Před dalším nákupem prosím potvrďte, že je platební kanál dostupný.";
+
+"other_plans" = "Ostatní %@ Awareness";
+
+"other_plans_des" = "Pokud po vypršení platnosti aktuálního předplatného %@ Awareness nákup neobnovíte, dojde k automatickému přechodu na další plán.";
+
+"package_detained" = "Balíček je doručen";
+
+"package_down" = "Zdá se, že byl doručen nový balíček";
+
+"package_guide" = "Jak zpřesnit detekci balíčku?";
+
+"package_guide_five" = "Nezapomeňte vybrat balíček v Nastavení oznámení / chytré notifikace.";
+
+"package_guide_four" = "Vybrat balíček";
+
+"package_guide_four_tips" = "Ujistěte se, že je balíček v zobrazení %@ dobře viditelný a že není blokován jinými objekty.";
+
+"package_guide_four_tips_2" = "V noci nebo při nedostatečném osvětlení je detekční schopnost snížena. Sledujte především výsledky detekce ve dne nebo za dostatečného osvětlení.";
+
+"package_guide_four_tips_3" = "Pokud balíček zůstane na místě delší dobu, ovlivní to detekční schopnost. Doporučujeme jej včas po obdržení oznámení o balíčku odnést.";
+
+"package_guide_one" = "Montážní poloha";
+
+"package_guide_six" = "Oblast balíčku";
+
+"package_guide_six_1" = "Doporučujeme umístit balíček do středu zorného pole kamery nebo nastavit místo pro balíček na zemi u dveří a říct kurýrovi, aby do něj balíček vložil.";
+
+"package_guide_six_2" = "Současně ohraničte oblast, kde se balíček může objevit na obrazovce videa, ve spojení s umístěním balíčku na zemi, abyste zvýšili přesnost rozpoznání balíčku.";
+
+"package_guide_six_3" = "Tipy: Minimální detekční velikost balíčku je 20x25x2,5 cm. Detekce balíčku, který je menší než minimální velikost, může být obtížná.";
+
+"package_guide_three" = "%@ zobrazení";
+
+"package_guide_two" = "Doporučujeme umístit %@ do výšky přibližně 2,5 m (8 stop) a naklonit jej tak, abyste dobře viděli na dveře a prostor, kde se balíček nachází.";
+
+"package_guide_two_2" = "Nedoporučuje se používat funkci detekce balíčků v interiéru nebo v příliš složitém prostředí.";
+
+"package_guide_two_3" = "Po vyjmutí %@ pro nabíjení nebo změně umístění %@ nezapomeňte znovu ověřit, zda je oblast pro balíček přesná.";
+
+"package_guide_two_4" = "Zároveň by vzdálenost mezi %@ a balíčkem neměla přesáhnout 3 m (10 stop).";
+
+"package_scenes" = "Přesnost rozpoznávání balíčků stále není optimální, a proto se průběžně optimalizuje. V ideálním případě by měl být používán ve standardním prostředí s úhlem pohledu šikmo dolů ve výšce přibližně 2,1 m (7 stop) od země.";
+
+"package_tag" = "Balíček";
+
+"package_tips" = "Jakmile %@ zjistí, že byl balíček vyzvednut a položen, pošle vám zprávu.";
+
+"package_up" = "Zdá se, že balíček byl odebrán";
+
+"page_expired" = "Platnost této stránky vypršela. Zkuste to prosím znovu.";
+
+"password_code_error" = "Heslo nebo ověřovací kód je chybný.";
+
+"password_incorrect" = "Heslo je nesprávné. Potvrďte prosím heslo.";
+
+"password_or_code_invalid" = "Překontrolujte si prosím požadavky na formát.";
+
+"pay_attention_data" = "Dávejte pozor na využívání dat, když není k dispozici síť Wi-Fi.";
+
+"pay_scuess" = "%@ Platba za Awareness proběhla úspěšně. Přejděte prosím do svého osobního centra a zkontrolujte oprávnění plánu.";
+
+"payment_auto_pay" = "Měsíční předplatné";
+
+"payment_choose_buy_time" = "Zvolte dobu trvání";
+
+"payment_choose_vip_item_first" = "Nejprve si prosím vyberte položku";
+
+"payment_cloud_save" = "%@ Awareness";
+
+"payment_current_vip" = "%@";
+
+"payment_download_it" = "Stáhnout nyní";
+
+"payment_generate_order" = "Odeslat objednávku";
+
+"payment_pay" = "Zaplatit objednávku";
+
+"payment_pay_failed" = "Platba se nezdařila, zkuste to prosím znovu.";
+
+"payment_pay_failed_totally" = "Platba se nezdařila";
+
+"payment_pay_success" = "Platba proběhla úspěšně";
+
+"payment_play_store_fail" = "Platba se nezdařila, přejděte do Obchodu Play a zkontrolujte stav přihlášení.";
+
+"payment_please_choose_time" = "Zvolte dobu používání";
+
+"payment_price" = "<![CDATA[<font><small>%@</small></font> <font><big>%.2f</big></font>]]>";
+
+"payment_product_already_paid" = "Již jste si zakoupili možnost %@ Awareness. Prosím, nekupujte ji znovu.";
+
+"payment_product_not_exist" = "Tato položka neexistuje.";
+
+"payment_to_buy" = "Zaplatit nyní";
+
+"payment_user_cancel" = "Zrušeno";
+
+"payment_verifying" = "%@ ověřuje se...";
+
+"payment_vip_update" = "Aktualizace";
+
+"pem_des" = "Sledování živého vysílání a přehrávání videí";
+
+"permission" = "Oprávnění";
+
+"permission_dialog_message_get_camera" = "Pokud není přístup povolen, nebude možné QR kód naskenovat.";
+
+"permission_dialog_message_get_location" = "Pokud není přístup k polozepovolen, nebude možné automaticky získat informace o používané síti Wi-Fi.";
+
+"permission_dialog_message_get_mircrophone" = "Pokud není přístup k mikrofonu povolen, nebude možné uskutečňovat zvukové hovory.";
+
+"permission_dialog_message_get_storage" = "K používání aplikace je nutný přístup k úložišti.";
+
+"permission_dialog_title" = "%@ by rádo získalo přístup k %@.";
+
+"person_alerts" = "Lidský pohyb";
+
+"person_alter_tips" = "Výhradně v souvislosti s pohybem lidí se zobrazí oznámení \"Někdo byl detekován\". Oznámení je konkrétnější a méně časté, ale může se mírně opozdit.";
+
+"phone_already_register" = "Toto telefonní číslo již existuje. Zkuste se přihlásit.";
+
+"phone_no_net" = "Telefon nemá připojení k síti.";
+
+"phone_number" = "Telefonní číslo";
+
+"phone_number_bind_success" = "Phone number successfully bound.";
+
+"phone_number_change_success" = "Telefonní číslo bylo úspěšně propojeno.";
+
+"phone_number_invalid_tips" = "Telefonní číslo zadejte ve správném formátu.";
+
+"phone_weak_network_short" = "Mobilní síť je nedostupná. Zkontrolujte prosím připojení k síti.";
+
+"photos" = "Fotografie";
+
+"photos_permission" = "Povolení přístupu k fotografiím";
+
+"photos_permission_tips" = "Povolte v nastavení systému telefonu přístup k fotografiím pro ukládání mediálních souborů.";
+
+"plan_basic" = "Basic";
+
+"plan_common" = "Žádný plán";
+
+"plan_expires" = "Platnost končí za %@";
+
+"plan_plus" = "Plus";
+
+"plan_pro" = "Pro";
+
+"play_next_event" = "Přehrát další událost";
+
+"play_previous_event" = "Přehrát předchozí událost";
+
+"playback_is_living_now" = "Živý přenos";
+
+"playback_video" = "Přehrávání videa";
+
+"player_error" = "Chyba při streamování videa";
+
+"please_install_playstore" = "K dokončení platby je třeba použít Obchod Play.";
+
+"please_open_location_service" = "V nastavení systému telefonu otevřete položku \"Polohové služby\".";
+
+"please_open_permission" = "Zapněte spínač plovoucího okna.";
+
+"please_pay_vip_first" = "Chcete-li používat službu chytré notifikace, musíte si zakoupit plán Awareness.";
+
+"please_pay_vip_first_2" = "Chcete-li tuto funkci používat, zakupte si plán Awareness";
+
+"please_read_policy_and_agree" = "Pečlivě si přečtěte a kliknutím na tlačítko \"Souhlasím a pokračovat\" potvrďte, že jste si podmínky přečetli a souhlasíte s nimi.";
+
+"please_retry" = "Opakovat";
+
+"please_scan_qr_code_first" = "Nejprve naskenujte QR kód";
+
+"please_select" = "Vyberte prosím";
+
+"please_turn_on_motion_detection" = "Chcete-li tuto funkci používat, musíte zapnout funkci detekce pohybu.";
+
+"please_turn_on_wifi_setting" = "Povolte Wi-Fi v nastavení telefonu.";
+
+"plugin_camera" = "Zásuvné zařízení";
+
+"plugin_camera_tips" = "Připojte ke zdroji napájení, dokud se ze zařízení neozve varovný zvuk a dokud se nedokončí otáčení.";
+
+"position_deleted" = "Úspěšně smazáno. Nyní lze přidat novou pozici.";
+
+"position_tips" = "Pokud si nastavíte často sledované pozice, budete je moci kdykoli najít jediným kliknutím.";
+
+"postal_code" = "PSČ";
+
+"pre_location_max_5" = "Přidat lze pouze pět pozic.";
+
+"pre_position_add" = "Nová pozice";
+
+"preset_location" = "Pozice";
+
+"privacy_policy" = "Zásady ochrany osobních údajů";
+
+"problem_and_feedback" = "Otázky a připomínky";
+
+"prompt" = "Nápověda";
+
+"prompt_volume" = "Hlasitost hlasu";
+
+"province_region" = "Stát/provincie/region";
+
+"purchase_record" = "Záznam o nákupu";
+
+"push_group_tips" = "%u více oznámení";
+
+"push_permission" = "Povolení přístupu k oznámení";
+
+"pwd_error" = "Heslo je nesprávné.";
+
+"qr_expire" = "Platnost kódu QR vyprší za %@";
+
+"qr_scurss" = "Úspěšné skenování.";
+
+"qrcode_way1" = "Otočte tělem a zkontrolujte, zda je na plášti QR kód.";
+
+"qrcode_way2" = "Pokud QR kód na plášti nenajdete, vyjměte gumovou zátku těla kamery a zkontrolujte, zda je QR kód pod ní.";
+
+"qrcode_way3" = "Pokud se QR kód nenachází na vnějším plášti nebo pod gumovou zátkou těla kamery, sejměte vnější plášť a zkontrolujte, zda se QR kód nachází na vnitřní straně těla kamery nebo na vnějším plášti.";
+
+"question_reply" = "Odeslat zpětnou vazbu";
+
+"question_type" = "Kategorie dotazů";
+
+"questions_contact" = "Kontakt";
+
+"questions_pictures" = "Obrázek (nepovinné, nahrajte snímek obrazovky s problémem)";
+
+"questions_statement_error" = "Vyplňte prosím otázku více než 10 slovy.";
+
+"quick_connect" = "Rychlé připojení";
+
+"quick_connect_tips" = "Zjistili jsme %@ kamer, které lze rychle připojit \n Klikněte pro zahájení připojení.";
+
+"ratio_720p" = "SD";
+
+"reach_max_live_num" = "Dosáhli jste maximálního limitu živých přenosů.";
+
+"receive_fail" = "Shromažďování se nezdařilo, zkuste to prosím znovu.";
+
+"receive_scuess" = "Úspěšně shromážděno, začněte jej používat hned teď!";
+
+"receive_tips" = "Potvrzujete, že nepotřebujete přijímat žádné oznámení?";
+
+"reconnect" = "Znovu připojit";
+
+"reconnect_camera" = "Opakovat pokus o připojení kamery";
+
+"reconnect_wifi" = "Znovu se připojte k předchozí síti Wi-Fi v nastavení systému telefonu. Po dokončení operace se vraťte na tuto stránku a zkontrolujte, zda připojení proběhlo úspěšně.";
+
+"reconnect_wifi_button" = "Znovu se připojit k síti Wi-Fi";
+
+"reconnect_wifi_camera" = "Znovu připojit Wi-Fi";
+
+"record_failed" = "Záznam se nezdařil, zkuste to prosím znovu.";
+
+"record_success" = "Uložit do alba.";
+
+"record_video" = "Nahrávat video";
+
+"record_video_tips" = "Když zapnete funkci Záznam videa, bude %@ automaticky nahrávat video, jakmile detekuje pohyb.";
+
+"reference_instruction_power" = "Referenční provozní pokyny k vyhledání tlačítka Start";
+
+"reference_instruction_reboot" = "Kde naleznete malý otvor tlačítka napájení zjistíte v návodu.";
+
+"refresh" = "Obnovit";
+
+"registrationsharing" = "Pokud chcete zařízení sdílet, ujistěte se, že správce a sekundární uživatel jsou registrováni ve stejné zemi.";
+
+"reject" = "Odmítnout";
+
+"reject_audio" = "Povolte mikrofon v nastavení telefonu.";
+
+"release_stop" = "Uvolnit pro zastavení";
+
+"remember_password" = "Zapamatovat heslo";
+
+"remove_device" = "Odstranit %@";
+
+"remove_device_des" = "Od %@ již nebudete dostávat žádná data.";
+
+"remove_device_success" = "%@ úspěšně odstraněno.";
+
+"remove_device_title" = "Jste si jisti, že chcete odstranit %@?";
+
+"remove_share_device_des" = "%@ již nebude přijímat žádná data od %@.";
+
+"remove_share_device_title" = "Opravdu chcete tento účet odstranit?";
+
+"remove_tag_tips" = "Odstraňte štítek \"Označené vozidlo\" z této galerie vozidel a galerie vozidel bude přesunuta do sekce \"Ostatní\".";
+
+"renewal_clause_key_clause" = "Smlouva o nepřetržitém předplatném";
+
+"renewal_clause_key_terms" = "Smlouva o poskytování služby Awareness";
+
+"renewal_download_tips" = "V případě potřeby obnovte Awareness nebo si stáhněte video.";
+
+"replay" = "Přehrát";
+
+"request_error" = "Chyba požadavku";
+
+"request_expired" = "Požadavek vypršel, zkuste to prosím znovu.";
+
+"request_frequent" = "Příliš mnoho požadavků, zkuste to prosím později.";
+
+"request_permission_title" = "Čekání na autorizaci";
+
+"request_timeout_and_try" = "Požadavek vypršel, zkuste to prosím znovu.";
+
+"resend_after_tip" = "Znovu odeslat po %ds";
+
+"resend_after_tip_ios" = "Znovu odeslat po %@%@";
+
+"resent_verification_code" = "Znovu odeslat";
+
+"reset" = "Obnovit";
+
+"reset_password_success" = "Heslo bylo úspěšně obnoveno.";
+
+"resign_in" = "Přihlásit se";
+
+"restore_purchase_record" = "Obnovit";
+
+"restore_successfully" = "Obnovení proběhlo úspěšně.";
+
+"retry2" = "Znovu";
+
+"root_warning_title" = "U rootnutého telefonu mohou existovat bezpečnostní rizika.";
+
+"rotate_image" = "Otáčení obrazu";
+
+"rotate_image_open" = "Pokud zapnete funkci \"Otáčení obrazu\", může dojít k ovlivnění citlivosti na pohyb.";
+
+"same_email" = "Změňte prosím e-mail na jiný.";
+
+"same_one_vehicle" = "Myslíte si, že je to jedno vozidlo?";
+
+"same_phone" = "Změňte prosím telefonní číslo na jiné.";
+
+"same_time_play_most" = "Současně mohou hrát maximálně 4 zařízení.";
+
+"saturday" = "So";
+
+"saturday_2" = "Sobota";
+
+"save" = "Uložit";
+
+"save_album" = "Uložit do alba telefonu";
+
+"save_failed_and_try" = "Nepodařilo se uložit, zkuste to prosím znovu.";
+
+"save_gb" = "(≤%dGB)";
+
+"saved_success" = "Úspěšně uloženo";
+
+"saved_successfully" = "Úspěšně uloženo";
+
+"say_green_light" = "Viděl/a jsem modré světlo";
+
+"scan_camera_qr_code" = "Naskenujte QR kód";
+
+"scan_camera_way" = "Naskenujte kód pro propojení";
+
+"scan_info_des" = "Otevřete aplikaci správce Nastavení zařízení / Sdílení / Sdílení zařízení";
+
+"scan_info_title" = "QR kód naleznete pod následující cestou";
+
+"scan_no_qr_button" = "Neslyšel jsem \"Scan QR code\".";
+
+"scan_QR_code" = "Naskenujte QR kód pomocí zařízení";
+
+"scan_qr_code_des" = "Umístěte QR kód na telefon ze vzdálenosti asi 15-30 cm (6-12 palců) od zařízení.";
+
+"scan_qr_code_directions" = "QR kód skenujte asi 15-30 cm (6-12 palců) od zařízení poté, co uslyšíte zvuk skenování nebo uvidíte blikající světlo. Skenování dokončete, jakmile uslyšíte další zvuk.";
+
+"scan_QR_code_directions" = "Naskenujte QR kód ze vzdálenosti přibližně 15-30 cm od zařízení. Skenování dokončete, jakmile uslyšíte další zvuk.";
+
+"scan_qr_code_failed" = "Nelze dokončit skenování?";
+
+"scan_qr_code_notice_title1" = "Zkontrolujte, zda je zařízení zapnuté a zda je v režimu skenování.";
+
+"scan_qr_code_notice_title2" = "Upravení vzdálenosti mezi zařízením a QR kódem";
+
+"scan_qr_code_notice1" = "Kontrolka by měla při skenování kódu svítit modře a blikat. Pokud je v jiném režimu, po zapnutí dvakrát klikněte na tlačítko napájení, aby zařízení přešlo do režimu skenování a kontrolka blikala modře.";
+
+"scan_qr_code_notice2" = "Umístěte zařízení do vzdálenosti 15-30 cm od QR kódu. Pokud se nedaří naskenovat, pohybujte QR kódem sem a tam. Můžete se podívat na obrázek na předchozí straně.";
+
+"scan_qrcode_by_phone" = "Naskenujte QR kód pomocí telefonu";
+
+"scan_the_qr_code" = "Naskenujte QR kód a připojte se";
+
+"scene" = "Nastavení scény";
+
+"schedule_time" = "Nastavení rozvrhu";
+
+"screenshot_sharing" = "Sdílet snímek obrazovky";
+
+"screenshots" = "Snímek obrazovky";
+
+"sd_card" = "SD karta";
+
+"sd_card_format_failed" = "Formátování se nezdařilo, zkuste to prosím znovu.";
+
+"sd_card_format_remind" = "Všechna data na této SD kartě budou odstraněna. Určitě ji chcete naformátovat?";
+
+"sd_card_format_success" = "SD karta byla úspěšně naformátována.";
+
+"sd_card_formating" = "Formátování SD karty ...";
+
+"sd_card_formatting" = "Zjištěna probíhající úloha formátování, zkuste to prosím později.";
+
+"sd_card_not_exist" = "SD karta nebyla detekována";
+
+"sd_error" = "Formát SD karty je nesprávný. Zformátujte ji prosím.";
+
+"sd_error_format_sure" = "SD karta byla detekována, ale formát je nesprávný. Před použitím ji musíte naformátovat.";
+
+"sd_format_error" = "Nesprávný formát";
+
+"sd_is_formatting" = "SD karta se formátuje, vyčkejte prosím.";
+
+"sd_management" = "Správa SD karty";
+
+"sd_no_data_date" = "V současné době není k dispozici žádné video.";
+
+"sd_supper" = "SD karta není podporována";
+
+"sdcard_7_24" = "Video na SD kartě";
+
+"sdcard_has_no_video" = "Žádné video na SD kartě";
+
+"sdcard_need_format" = "Formát SD karty je nesprávný";
+
+"sdcard_need_format_shared" = "Formát SD karty je nesprávný, obraťte se na správce a zformátujte ji.";
+
+"sdcard_no_more_video" = "Žádná další videa na SD kartě.";
+
+"SDcard_video_viewers_limit" = "Dosáhli jste limitu videozobrazení na SD kartě, zkuste to prosím později.";
+
+"sdvideo_error" = "Chyba přehrávání videa na SD kartě";
+
+"sdvideo_timeout" = "Časový limit přehrávání videa na SD kartě";
+
+"search" = "Vyhledat";
+
+"search_buletooth" = "Vyhledávání blízkých zařízení Bluetooth";
+
+"seconds" = "s";
+
+"selcet_spot_2" = "Vyberte vhodné místo pro instalaci zařízení. Zvolte polohu, kde mu nebude nic bránit ve výhledu, a ujistěte se, že se nachází v oblasti pokrytí sítě Wi-Fi.";
+
+"select_4vehicle" = "Můžete vybrat maximálně 4 galerie vozidel.";
+
+"select_all" = "Vybrat vše";
+
+"select_camera" = "Vyberte zařízení, které chcete přidat";
+
+"select_items" = "Vybrat položky";
+
+"select_network" = "Vybrat síť";
+
+"select_one_ai" = "*Vyberte alespoň jeden objekt pro test umělé inteligence.";
+
+"select_one_option" = "Vyberte alespoň jednu možnost";
+
+"select_spot_1" = "Vyberte vhodné místo pro fotoaparát";
+
+"select_street" = "Ulice";
+
+"select_terms" = "Prohlédněte si prosím smlouvu s uživatelem a zásady ochrany osobních údajů a souhlaste s nimi.";
+
+"select_wifi_title" = "Výběr Wi-Fi pro zařízení";
+
+"send_log" = "Pokud dojde k chybě při živém vysílání, nahrajte prosím protokol přehrávače, který nám pomůže najít problém.";
+
+"send_log_tips" = "(Nejedná se o žádné údaje, neváhejte je použít)";
+
+"sendingcode" = "Odeslání ověřovacího kódu";
+
+"sensitivity_level" = "Úroveň citlivosti na světlo";
+
+"sent_alarm_failed" = "Alarm se nepodařilo spustit, zkuste to prosím znovu.";
+
+"sent_alarm_successfully" = "Alarm se úspěšně spustil.";
+
+"sepvalue" = "—";
+
+"serial_number" = "S/N";
+
+"server_error" = "Chyba serveru";
+
+"service_center" = "Přidat nový lístek";
+
+"service_cloud_desc" = "Prodloužení až na 60 dní cloudového úložiště pro nahrávání o velikosti 10 GB (3 typy plánů Awareness) pro vytvoření nejbezpečnějšího úložiště videa, abyste nikdy nezmeškali žádný kritický okamžik.";
+
+"service_detail" = "Podrobnosti plánu";
+
+"set" = "Nastavit";
+
+"set_az" = "Nastavit zónu aktivity";
+
+"setup_success" = "Úspěšně nastaveno";
+
+"share" = "Podíl";
+
+"share_error" = "Sdílení se nezdařilo, zkuste to prosím znovu.";
+
+"share_scan_qr_content" = "Naskenujte QR kód správce zařízení";
+
+"share_to" = "Sdíleno pro:";
+
+"shared_by" = "Sdíleno";
+
+"shared_by_" = "Sdíleno %@";
+
+"shared_devices" = "Sdílená zařízení";
+
+"shared_invalid_qr_code" = "Neplatný QR kód, zkuste to prosím znovu.";
+
+"shared_self_error" = "Toto zařízení je již ve vašem seznamu.";
+
+"sharing" = "Sdílení";
+
+"shooting_interval" = "Chlazení v cloudu";
+
+"shooting_interval_des" = "Jakmile je zapnuta funkce doba ochlazování, v nastaveném časovém intervalu se již nebude nahrávat žádné video, což může prodloužit životnost baterie %@.";
+
+"shot_fail" = "Nepodařilo se pořídit snímek.";
+
+"sign_in" = "Přihlásit se";
+
+"sign_up" = "Registrace nového účtu";
+
+"sign_up_register" = "Zaregistrovat se";
+
+"sign_up_tips" = "Zadejte prosím svůj e-mail a my vám zašleme ověřovací kód.";
+
+"signal_strength" = "Síla Wi-Fi";
+
+"siren_des" = "Po zapnutí alarmové sirény %@ automaticky zazní upozornění, když se spustí pohybový senzor.";
+
+"size" = "Velikost：";
+
+"skip" = "Přeskočit";
+
+"sleep" = "Úsporný režim";
+
+"sleep_end_time" = "Čas ukončení";
+
+"sleep_end_time_atsteam" = "%@ ukončil spánek v %@ %@.";
+
+"sleep_mode" = "Spánek";
+
+"sleep_period" = "Doba spánku";
+
+"sleep_period_etting" = "Nastavení časového období pro automatický přechod zařízení %@ do režimu spánku";
+
+"sleep_plan" = "Režim spánku";
+
+"sleep_prompt" = "Pokud je zapnutý režim spánku, nelze sledovanou oblast sledovat v reálném čase a funkce, jako je detekce pohybu, interkom a alarm, jsou pozastaveny.";
+
+"sleep_setting" = "Nastavení režimu spánku";
+
+"sleep_start" = "Datum aktivace";
+
+"sleep_start_time" = "Čas zahájení";
+
+"sleep_tips" = "%@ je v režimu spánku, před nastavením jej probuďte.";
+
+"sleep_work_time" = "Provozní doba";
+
+"sleeping" = "Spaní";
+
+"Smart_assistant" = "Inteligentní servisní asistent";
+
+"smart_camera" = "Chytré zařízení";
+
+"smart_common_contrast" = "Žádný plán VS %@ Awareness";
+
+"smart_push" = "Smart Push";
+
+"smart_push_tips" = "Zaškrtněte položky, které chcete dostávat chytrými notifikacemi. Pokud chcete zobrazit více položek notifikací, ";
+
+"smart_push_tips1" = "přejděte na obrazovku analýzy AI a zaškrtněte další položky. Pokud jsou všechny zaškrtnuté, ignorujte je. >>";
+
+"smart_service_desc" = "%@ Úvod do Awareness";
+
+"sound" = "Zvuk";
+
+"source" = "Umístění úložiště";
+
+"speaker" = "Reproduktor";
+
+"speaker_volume" = "Hlasitost reproduktoru";
+
+"split_screen" = "Rozdělená obrazovka";
+
+"sport_auto" = "Monitorování pohybu";
+
+"status_led" = "Stavová LED dioda";
+
+"stay_this_page" = "Zůstat na této stránce";
+
+"storage" = "Úložiště";
+
+"storage_space_access" = "Žádost o povolení";
+
+"str_inter" = "Propojení streamování";
+
+"street_address_2" = "Podrobná adresa (nepovinné)";
+
+"strong" = "Silný";
+
+"submit" = "Odeslat";
+
+"submit_deletion" = "Odeslat žádost o vymazání";
+
+"sunday" = "Ne";
+
+"sunday_2" = "Neděle";
+
+"supper_net_work" = "Tento fotoaparát podporuje pouze 2,4 GHz Wi-Fi. Vaše aktuální připojení je 5 GHz.";
+
+"sure_to_clear_cache" = "Potvrzujete vymazání mezipaměti?";
+
+"sure_to_delete_location" = "Potvrzujete smazání této adresy?";
+
+"sure_to_delete_zone" = "Potvrzujete odstranění této aktivní zóny?";
+
+"sure_to_drop_out" = "Určitě chcete zrušit funkci \"Přidat zařízení\"?";
+
+"sure_to_remove_device" = "Potvrzujete odstranění tohoto %@?";
+
+"sure_to_turn_alarm_on" = "Potvrzujete zapnutí alarmu?";
+
+"sure_to_turn_off_detection" = "Potvrzujete vypnutí detekce pohybu?";
+
+"swicth_264cod_tips1" = "%@ se přepne na kódování H.264 a kvalita živého vysílání se sníží. Jste si jisti, že chcete přepnout?";
+
+"switch_264cod_tips" = "%@ automaticky přepne kódování přenosu videa, abyste mohli %@ ovládat a přistupovat k němu pomocí Alexy.";
+
+"switch_265cod_tips" = "%@ automaticky přepne na nejplynulejší dostupné kódování přenosu videa, abyste mohli sledovat co nejčistší živý obraz.";
+
+"switch_265cod_tips2" = "%@ se přepne na kódování H.265 a živé vysílání bude čistší, ale %@ nebude podporovat chytré asistenty, jako je Alexa. Jste si jisti, že chcete přejít?";
+
+"system_album_name" = "%@";
+
+"system_error_try_again" = "Systém je zaneprázdněn, zkuste to prosím znovu.";
+
+"system_update" = "Aktualizace systému";
+
+"system_version" = "Verze systému";
+
+"tap_to_know" = "klepněte na pro více informací >>";
+
+"terminated_day" = "Do %@";
+
+"terminated_format" = "dd/MM/yyyy";
+
+"thursday" = "Čt";
+
+"thursday_2" = "Čtvrtek";
+
+"time_zone" = "Časové pásmo";
+
+"timer_unit" = "Otevřít jednotku časovače";
+
+"tips_ssid_empty" = "Zadejte platný název sítě Wi-Fi (SSID).";
+
+"tips_wifi_password_empty" = "Zadejte prosím platné heslo.";
+
+"to_coninue_please_check_internet" = "Zkontrolujte, zda je telefon připojen k platné síti.";
+
+"to_get_phone_wifi" = "Získat aktuální Wi-Fi síť telefonu";
+
+"to_get_wifi_list_nearby" = "Získat seznam Wi-Fi sítí v okolí";
+
+"to_time" = "Na";
+
+"toast_add_zone_total_3" = "Lze přidat pouze tři aktivní zóny.";
+
+"toast_change_language" = "Jazyk byl úspěšně změněn.";
+
+"toast_del_all_are_guest" = "Tyto položky může odstranit pouze správce.";
+
+"toast_del_one_is_guest" = "Tuto položku může smazat pouze správce.";
+
+"toast_zone_not_playing" = "Zatím nehraje";
+
+"today" = "Dnes";
+
+"total_event1" = "K dispozici je 1 událost,";
+
+"total_event2" = "k dispozici je %@ událostí,";
+
+"total_video1" = "a 1 video.";
+
+"total_video2" = "a %@ videa/í.";
+
+"tracking_guide" = "Současně také podporujeme sledování osob.";
+
+"tracking_guide_2" = "Nastavení sledování osob >>";
+
+"tracking_mode" = "Režim sledování";
+
+"troubleshooting_issue" = "Opakujte pokus po vyřešení následujících problémů nebo propojte pomocí skenování.";
+
+"troubleshooting_issue2" = "Po vyřešení následujících problémů to zkuste znovu.";
+
+"try_later" = "Zopakovat později";
+
+"tuesday" = "Út";
+
+"tuesday_2" = "Úterý";
+
+"turn_alern" = "Určitě chcete alarm zapnout?";
+
+"turn_off_push_tips" = "Pokud chcete funkci používat i nadále, doporučujeme ponechat alespoň jednu položku, jinak bude funkce Oznámení vypnuta.";
+
+"turn_on_camera" = "Zapnout zařízení";
+
+"turn_on_camera_directions" = "Dlouze stiskněte tlačítko napájení na 3 sekundy, dokud neuslyšíte zvuk zapnutí nebo se nerozsvítí kontrolka.";
+
+"turn_on_camera_scanQR" = "Zapněte zařízení a naskenujte QR kód";
+
+"turn_on_location_services" = "Zapnutím \"Polohové služby\" povolíte společnosti Example používat vaši polohu.";
+
+"turn_on_location_services_get_wifi" = "Zapnutím služby určování polohy automaticky získáte aktuální název sítě Wi-Fi (SSID) telefonu.";
+
+"turn_on_location_services_title" = "Zapněte \"Polohové služby\" v \"Nastavení-Soukromí\".";
+
+"turned_off" = "%@ vypnuto. Zapněte prosím %@.";
+
+"turned_on_donot_disturb" = "Nerušit je zapnuto";
+
+"twok" = "2K";
+
+"twoway_radio" = "Interkom";
+
+"unable_to_load_image" = "Nelze načíst obraz";
+
+"unauthorized" = "Uživatel musí být ověřen, aby mohl pokračovat";
+
+"unavailable_before_upgrade" = "Během aktualizace firmwaru není %@ k dispozici.";
+
+"understanc_agree" = "Rozumím a souhlasím";
+
+"unheard_scan_qr_code" = "Neslyšel jsem \"Scan QR code\".";
+
+"unmarked_successfully" = "Úspěšně odznačení";
+
+"unmarked_vehicle" = "Neoznačené vozidlo";
+
+"update" = "Aktualizace";
+
+"update_device_name_scuess" = "%@ jméno bylo úspěšně aktualizováno.";
+
+"update_location_scuess" = "Umístění bylo úspěšně aktualizováno.";
+
+"update_now" = "Aktualizovat nyní";
+
+"update_the_latest_version" = "Aktualizace na nejnovější verzi %@";
+
+"update_time_string" = "Poslední aktualizace %@ v %@";
+
+"update_timezone_scuess" = "Časové pásmo úspěšně aktualizováno.";
+
+"update_user_name_success" = "Uživatelské jméno úspěšně aktualizováno.";
+
+"updating" = "Aktualizace...";
+
+"upgrade_firmware" = "Aktualizace firmwaru";
+
+"upgrage_to_plan" = "%@ aktualizovat na %@";
+
+"uploaded_fail" = "Nahrávání se nezdařilo, zkuste to prosím znovu.";
+
+"uploaded_success" = "Úspěšně nahráno.";
+
+"use_app_scan" = "Pomocí aplikace %@ naskenujte níže uvedený QR kód a přidejte %@.";
+
+"use_coupon" = "Použijte kód pro uplatnění";
+
+"user_account_in_protection" = "%@ Awareness vypršelo, zakupte prosím znovu.";
+
+"user_agreement" = "Uživatelská smlouva";
+
+"user_guide_4" = "Aktivní zóna";
+
+"user_guide_desc_1" = "Snadnější správa více zařízení";
+
+"user_guide_package" = "Uživatelská příručka";
+
+"user_name" = "Uživatelské jméno";
+
+"Username_inuse" = "Toto uživatelské jméno se již používá.";
+
+"username_noncompliance" = "Špatný formát uživatelského jména.";
+
+"vehicle_approaching" = "Blíží se vozidlo";
+
+"vehicle_leaving" = "Odjíždí vozidlo";
+
+"vehicle_name" = "Název vozidla";
+
+"vehicle_notification" = "Oznámení o vozidle";
+
+"vehicle_parked" = "Zaparkované vozidlo";
+
+"verificatio_code_require" = "Po příliš mnoha neúspěšných pokusech o přihlášení je vyžadován ověřovací kód.";
+
+"verification_code_expired" = "Platnost ověřovacího kódu vypršela.";
+
+"verification_code_not_right" = "Nesprávný ověřovací kód.";
+
+"verificting_error" = "Objednávka se ověřuje, vyčkejte prosím";
+
+"verify_identity_desc_1" = "Před propojením je třeba zadat heslo pro ověření identity uživatele.";
+
+"verify_network" = "Připojit se k Wi-Fi síti";
+
+"verify_network_des" = "V současné době podporuje pouze Wi-Fi sítě 2,4 GHz. Po připojení k síti Wi-Fi můžete přejít k dalšímu kroku.";
+
+"verify_send_code" = "Právě jsme odeslali ověřovací kód na vaše telefonní číslo %@.";
+
+"verify_user_info" = "Ověření totožnosti";
+
+"verify_user_rebind" = "Před opětovným propojením zařízení je třeba zadat heslo pro ověření identity uživatele.";
+
+"Example_policy" = "Uživatelská smlouva a zásady ochrany osobních údajů";
+
+"video_duration" = "Doba trvání";
+
+"video_feedback_agree" = "Souhlasím se zasláním originálního videa (včetně všech osobních údajů), které pomůže společnosti %@ analyzovat data. Viz Zásady ochrany osobních údajů.";
+
+"video_feedback_cell_other" = "Kliknutím přidáte podrobnosti.";
+
+"video_feedback_check" = "Prohlédněte si a přijměte relativní podmínky.";
+
+"video_hb" = "HD";
+
+"video_max_below_20m" = "Video by nemělo být větší než 20 M.";
+
+"video_over_day" = "Platnost tohoto videa vypršela.";
+
+"video_resolution" = "Rozlišení nahrávání";
+
+"video_saved_to_ablum" = "Video bylo uloženo do alba telefonu.";
+
+"video_saving" = "Ukládání videa...";
+
+"video_smooth" = "SM";
+
+"video_tag" = "Značka videa";
+
+"videolist_error" = "Získat seznam chyb videa";
+
+"videolist_timeout" = "Získat seznam časových limitů videa";
+
+"vip_activity_zone_warning" = "%@ Funkce Awareness";
+
+"voice_talk_failed_and_retry" = "Chyba zvuku, zkuste to prosím znovu.";
+
+"volume" = "Hlasitost alarmu";
+
+"wait_for_permission_tips" = "Vaše žádost byla úspěšně odeslána správci. Počkejte prosím na autorizaci od správce.";
+
+"wakeup_camera" = "Probudit %@";
+
+"weak" = "Slabý";
+
+"weak_wifi_notation" = "Síla Wi-Fi v současné síti %@ je slabá. Doporučujeme změnit umístění nebo použít jinou síť Wi-Fi.";
+
+"wednesday" = "St";
+
+"wednesday_2" = "Středa";
+
+"where_is_qrcode" = "QR kód je na těle zařízení umístěn na nálepce, která se často nachází uvnitř vnějšího pláště nebo pod gumovou zátkou. Tento QR kód obsahuje sériové číslo a typové číslo, obvykle začínající \"S/N\".";
+
+"while_using" = "Během používání";
+
+"white_light" = "Bílé světlo";
+
+"white_tips" = "Pokud potřebujete noční osvětlení bílým světlem, přejděte na";
+
+"whitelight_des" = "Bílé světlo osvětluje prostředí. Zkuste obnovit barevný obraz do původního stavu v noci.";
+
+"wifi" = "Wi-Fi";
+
+"wifi_channel" = "Kanál Wi-Fi";
+
+"wifi_confim" = "Zkontrolujte, zda je váš název Wi-Fi (SSID) a heslo správné (rozlišují se malá a velká písmena).";
+
+"wifi_connect" = "Wi-Fi připojení";
+
+"wifi_issue" = "Přidat problém se zařízením";
+
+"wifi_name" = "Název Wi-Fi:";
+
+"wifi_password" = "Heslo:";
+
+"wifi_scanning" = "Vyhledávání Wi-Fi sítě";
+
+"wifi_setting" = "Nastavení Wi-Fi";
+
+"wifi_state" = "Síla Wi-Fi: %@";
+
+"wifi_state_ios" = "Síla Wi-Fi:";
+
+"wlan_enable_play" = "Chcete i nadále používat data v telefonu, když není k dispozici Wi-Fi?";
+
+"wrong_az_tips" = "*Omlouváme se, systém zjistil v následující aktivní zóně problémy, které mohou způsobit nepřesnou detekci. Odstraňte je prosím a přidejte znovu.";
+
+"wrong_code" = "QR kód je chybný";
+
+"yes" = "Ano";
+
+"zone_1" = "Zóna 1";
+
+"zone_2" = "Zóna 2";
+
+"zone_3" = "Zóna 3";
+
+"zone_with_args" = "Zóna %@";
+
+"bind_ap_help_title" = "Připojit %@ hotspot";
+
+"download_position" = "%d/%d stahování...";
+
+"use_guide" = "Návod k použití";
+
+"not_account_alexa_tips1" = "Po propojení účtu s Alexou můžete prostřednictvím zařízení řady Echo hlasově ovládat zařízení podporující Alexu, ";
+
+"not_account_alexa_tips2" = "například jako: \"Alexa, show me my camera.\"";
+
+"account_alexa_button" = "Propojit se službou Alexa";
+
+"account_alexa_succeed" = "Účet byl úspěšně propojen";
+
+"account_alexa_failed1" = "Propojení účtu se nezdařilo, zkuste to prosím znovu";
+
+"account_alexa_failed2" = "Propojení účtu se nezdařilo";
+
+"account_alexa_succeed_tips1" = "Váš účet a Alexa jsou propojeny, můžete hlasově ovládat zařízení s Alexou prostřednictvím zařízení řady Echo, ";
+
+"account_alexa_succeed_tips2" = "například jako: \"Alexa, show me my camera.\"";
+
+"live_audio_recording_swt" = "Živý záznam zvuku";
+
+"video_audio_recording_swt" = "Záznam zvuku ve videu";
+
+"audio_recording_instr" = "Přepínač nahrávání zvuku určuje, zda %@ nahrává zvuk během živého vysílání nebo nahrávání videa.";
+
+"unmute_failed_title" = "Nelze zrušit ztlumení";
+
+"unmute_failed_content" = "Nelze zrušit ztlumení, protože je vypnuto živé nahrávání zvuku. Nejprve zapněte přepínač živého nahrávání zvuku";
+
+"firmware_update_skip" = "Ignorovat tuto verzi";
+
+"add_device_AP" = "Přidat zařízení";
+
+"add_device_WiFi" = "Přidat zařízení";
+
+"add_device_shared" = "Přidat zařízení přítele";
+
+"add_method_wifi" = "Wi-Fi připojení";
+
+"add_method_hotspot" = "Přímý hotspot";
+
+"add_method_check" = "Potvrdit způsob připojení zařízení";
+
+"add_wifi_suit" = "Vhodné pro instalaci v prostředí s Wi-Fi.";
+
+"add_hotspot_suit" = "Vhodné pro instalaci v prostředí bez Wi-Fi. Při prohlížení zařízení nebude mít telefon přístup k internetu.";
+
+"add_feature_dif" = "Srovnání funkcí";
+
+"add_dif_alarm" = "Poplašná zpráva";
+
+"add_dif_stream" = "Sledujte živé vysílání kdykoli a kdekoli";
+
+"add_dif_nearstream" = "Živý přenos sledujte pouze v blízkosti zařízení";
+
+"add_dif_Cloudvideo" = "Nahrávání na cloud";
+
+"add_dif_SDvideo" = "Nahrávání na SD kartu";
+
+"add_successfully" = "Zařízení úspěšně přidáno";
+
+"add_device_name" = "Nastavit název zařízení";
+
+"add_hotspot_pwd" = "Nastavit heslo hotspotu zařízení";
+
+"add_set_hotspotpwd" = "Nastavit heslo pro hotspot zařízení";
+
+"add_hotspot_ssid" = "Internet:";
+
+"add_pwd" = "Heslo:";
+
+"add_pwd_remember" = "*Prosím, zapamatujte si toto heslo, můžete si uložit snímek obrazovky";
+
+"add_set_pwd" = "Nastavit a zkopírovat heslo";
+
+"add_copied_pwd" = "Úspěšně zkopírováno do schránky";
+
+"add_connect_hotspot" = "Při připojování k hotspotu zařízení vložte heslo přímo nebo jej zadejte ručně následujícím způsobem:";
+
+"add_notsupport_hotspot" = "Hotspot zařízení, ke kterému se chcete připojit. Toto zařízení nepodporuje metodu přímého připojení k hotspotu.";
+
+"add_reselect" = "Znovu vybrat";
+
+"add_nofind_device" = "Zařízení nebylo nalezeno";
+
+"home_device_hotspot" = "Zařízení Hotspot Direct";
+
+"home_notconnect_hotspot" = "Toto zařízení nelze zobrazit, protože váš telefon není připojen k hotspotu tohoto zařízení.";
+
+"home_viewdevice" = "Zobrazit zařízení";
+
+"home_back_hotspot" = "Po návratu na domovskou stránku aplikace bude aktuálně připojený hotspot odpojen.";
+
+"home_wifi_hotspot" = "Připojit k hotspotu zařízení";
+
+"home_hotspot_step1" = "Krok 1. Aktivovat hotspot zařízení";
+
+"home_hotspot_pir" = "Přibližte se k zařízení a uvidíte souvislé modré světlo.";
+
+"home_hotspot_power" = "Krátce stiskněte tlačítko napájení a uvidíte, že modrá kontrolka stále svítí.";
+
+"home_hotspot_step2" = "Krok 2. Připojení k Hotspot zařízení";
+
+"home_hotspot_connect" = "Telefon je připojen k hotspotu %@.";
+
+"set_info_status1" = "Odpojeno";
+
+"set_info_status2" = "Připojeno";
+
+"set_info_hotspot" = "Název hotspotu zařízení";
+
+"set_info_hotspotpwd" = "Heslo hotspotu zařízeni";
+
+"set_info_electricity" = "Před odpojením hotspotu";
+
+"set_wifi_connect" = "Připojit k Wi-Fi síti";
+
+"set_wifi_other_methods_bt" = "Další způsoby připojení";
+
+"home_ap_change" = "Změnit síť";
+
+"home_hotspot_goconnect" = "Připojte Wi-Fi mobilního telefonu k \"%@\" a poté se vraťte do aplikace %@ pro zobrazení zařízení.";
+
+"add_way_choose" = "Přejít na";
+
+"setting_ap_change" = "Nastavení lze měnit pouze v případě, že je zařízení připojeno k síti Wi-Fi.";
+
+"setting_ap_connectwifi" = "Připojení k Wi-Fi";
+
+"setting_db_charge" = "Způsob nabíjení";
+
+"setting_db_chargetype1" = "Kabel zvonku";
+
+"setting_db_chargetype2" = "USB";
+
+"setting_db_tone" = "Tón zvonku";
+
+"setting_db_tone1" = "Vyzváněcí tón 1";
+
+"setting_db_tone2" = "Vyzváněcí tón 2";
+
+"setting_db_remove" = "Odstranit alarm";
+
+"setting_db_remove_off" = "Pokud je zvonek po otevření oddělen od zadního panelu, odešle zachycené video do mobilního telefonu, vydá poplašný zvuk a červené světlo v blízkosti tlačítka začne blikat.";
+
+"setting_db_remove_on" = "Po vybití zvonku nejprve vypněte alarm a poté vyjměte zvonek, abyste jej mohli nabít.";
+
+"setting_call_switch" = "Volání jedním dotykem";
+
+"library_sign" = "Volat";
+
+"setting_db_tone3" = "Vyzváněcí tón 3";
+
+"unmute_failed_content_guest" = "Nelze zrušit ztlumení, protože je vypnuto živé nahrávání zvuku. Obraťte se na správce, aby jej povolil.";
+
+"setting_db_ring" = "Vyzvánění";
+
+"device_type_unknown" = "zařízení";
+
+"device_type_camera" = "kamera";
+
+"device_type_doorbell" = "zvonek";
+
+"dp_live_revolution_640_360" = "SD";
+
+"dp_live_revolution_640_480" = "SD";
+
+"dp_live_revolution_1280_720" = "SD";
+
+"dp_live_revolution_1920_1080" = "HD";
+
+"dp_live_revolution_2048_1536" = "2K";
+
+"dp_live_revolution_2304_1296" = "2K";
+
+"dp_live_revolution_2560_1440" = "2K";
+
+"dp_record_revolution_640_360" = "SD";
+
+"dp_record_revolution_640_480" = "SD";
+
+"dp_record_revolution_1280_720" = "SD";
+
+"dp_record_revolution_1920_1080" = "HD";
+
+"dp_record_revolution_2048_1536" = "2K";
+
+"dp_record_revolution_2304_1296" = "2K";
+
+"dp_record_revolution_2560_1440" = "2K";
+
+"setting_e_status" = "(Před vypnutím)";
+
+"calling_mute_bt" = "Ztlumit";
+
+"calling_speaker_bt" = "Reproduktor";
+
+"calling_decline_bt" = "Odmítnout";
+
+"calling_accept_bt" = "Přijmout";
+
+"bind_db_select_way_title" = "Zvolte způsob instalace zvonku";
+
+"bind_db_select_way_way1_text" = "Žádný kabel zvonku";
+
+"bind_db_select_way_way2_text" = "Instalace pomocí kabelu zvonku";
+
+"bind_db_select_way_way1_bt" = "Instalace bez kabelu zvonku";
+
+"bind_db_select_way_content" = "Pro zahájení instalace domovního zvonku zvolte způsob instalace podle aktuální situace ve vašem domě.";
+
+"find_device_mac_wire" = "Ethernet:";
+
+"find_device_mac_wifi" = "Wi-Fi:";
+
+"choose_connect_way_title" = "Výběr způsobu připojení";
+
+"choose_connect_way_wifi" = "Připojení přes Wi-Fi";
+
+"choose_connect_way_ethernet" = "Připojení přes ethernetový kabel";
+
+"ethernet_wire_connect_title" = "Připojení ethernetového kabelu";
+
+"ethernet_wire_connect_content" = "Připojte prosím ethernetový kabel pro %@ a ujistěte se, že se síť může připojit k internetu.";
+
+"ethernet_wire_connect_check_box" = "Zkontrolujte, zda je připojen ethernetový kabel";
+
+"ethernet_internet_failed_title" = "Ujistěte se, že síťové připojení funguje";
+
+"ethernet_internet_failed_content" = "%@ je připojeno k síťovému kabelu, ale nelze se připojit k internetu, zkontrolujte prosím síť.";
+
+"ethernet_internet_failed_check_box" = "Ujistěte se, že jste připojeni k internetu";
+
+"ethernet_ip_failed_title" = "Získat časový limit IP";
+
+"connect_error_unsupport_wifi" = "Slyšel jsem \"Wi-Fi connection is not supported\"";
+
+"connect_error_unsupport_ethernet" = "Slyšel jsem \"Wired connection is not supported\"";
+
+"ethernet_internet_failed_confirm_window" = "Ujistěte se, že síťové připojení funguje";
+
+"ethernet_wire_connect_confirm_window" = "Ujistěte se, že jste připojeni k internetu";
+
+"default_device_name" = "chytré zařízení";
+
+"feedback_choose_device_input_default" = "AICXXXXXXXX1234";
+
+"cool_down_time_interval_time_10" = "10 s";
+
+"cool_down_time_interval_time_30" = "30 s";
+
+"cool_down_time_interval_time_60" = "1 min";
+
+"cool_down_time_interval_time_180" = "3 min";
+
+"cool_down_time_interval_time_300" = "5 min";
+
+"video_duration_10" = "10 s";
+
+"video_duration_15" = "15 s";
+
+"video_duration_20" = "20 s";
+
+"share_error_2014" = "Nelze sdílet s uživateli účtu v různých zemích";
+
+"ethernet_mac_address" = "Ethernet MAC";
+
+"payment_get_product_list_error" = "Nelze zakoupit, zkontrolujte svůj účet v Obchodě Play nebo služby Google.";
+
+"chime_setting_title" = "Nastavení reproduktoru dveřního zvonku";
+
+"mechanical_chime_switch" = "Mechanický reproduktor dveřního zvonku";
+
+"mechanical_chime_volume" = "Doba vyzvánění";
+
+"mechanical_play" = "Přehrát";
+
+"mechanical_chime_switch_content" = "Přepínačem lze ovládat, zda reproduktor po stisknutí zvonku zazvoní, a dobu zvonění lze po zapnutí nastavit tak, aby vám vyhovovala.";
+
+"mechanical_chime_switch_error" = "Nedostupné";
+
+"mechanical_chime_switch_error_text" = "Mechanický reproduktor není připojen nebo je vypnuto napájení, viz %@";
+
+"mechanical_chime_switch_error_text_link" = "Průvodce instalací";
+
+"mechanical_chime_switch_pop_title" = "Nelze zapnout";
+
+"mechanical_chime_switch_pop_content" = "%@ není připojeno k mechanickému zvonku nebo není podporováno, zkontrolujte správnost zapojení.";
+
+"mechanical_chime_switch_pop_helpbt" = "Zobrazit nápovědu";
+
+"indoor_chime_connect_content" = "Propojte reproduktor dveřního zvonku podle návodu";
+
+"indoor_chime_bind" = "Tlačítko SYNC";
+
+"indoor_chime_bind_title" = "Reproduktor dveřního zvonku";
+
+"indoor_chime_bind_bt" = "Připojení reproduktoru dveřního zvonku";
+
+"indoor_chime_up" = "Tlačítko pro zvýšení hlasitosti";
+
+"indoor_chime_down" = "Tlačítko pro snížení hlasitosti";
+
+"indoor_chime_change" = "Tlačítko přepínání vyzvánění";
+
+"set_autopoweron" = "Nastavení automatického zapnutí";
+
+"set_autopoweron_charge" = "Automatické zapnutí po nabití";
+
+"set_autopoweron_charge_explain" = "Když se zařízení vybije baterie, po nabití se automaticky zapne, aby se ušetřilo vaše úsilí.";
+
+"set_autopoweron_charge_level" = "Zadaná úroveň napájení baterie na";
+
+"set_autopoweron_charge_level1" = "25%";
+
+"set_autopoweron_charge_level2" = "50%";
+
+"set_autopoweron_charge_level3" = "75%";
+
+"set_autopoweron_charge_level4" = "100%";
+
+"set_buttoncall" = "Volání jedním dotykem";
+
+"feedback_choose_device_title" = "Vybrat zařízení";
+
+"feedback_choose_device_content" = "Zadejte prosím číslo SN daného zařízení.";
+
+"feedback_choose_device_subtitle" = "Nebo vyberte zařízení, se kterým máte problémy (více možností).";
+
+"log_update" = "Nahrání protokolu";
+
+"system_permission_center" = "Systémové oprávnění";
+
+"system_permission_center_title" = "Systémové oprávnění";
+
+"system_permission_center_allow" = "Povolit";
+
+"system_permission_center_not_allow" = "Nepovolovat";
+
+"system_permission_center_loc_title" = "Umístění";
+
+"system_permission_center_loc_content" = "Vyhledávání dostupných zařízení v okolí, získávání informací o Wi-Fi pro rychlé připojení k zařízení atd.";
+
+"system_permission_center_sto_title" = "Úložiště";
+
+"system_permission_center_sto_content" = "Snímky obrazovky, nahrávání obrazovky, stahování a přehrávání videa během živého vysílání";
+
+"system_permission_center_mic_title" = "Mikrofón";
+
+"system_permission_center_mic_content" = "Pro obousměrný hovor";
+
+"system_permission_center_phone_title" = "Telefonní hovor";
+
+"system_permission_center_phone_content" = "Používá se pro domovní zvonky a další zařízení s funkcí volání na mobilní telefony.";
+
+"system_permission_center_cam_title" = "Kamera";
+
+"system_permission_center_cam_content" = "Pro skenování QR kódu a další funkce";
+
+"system_permission_center_ble_title" = "Bluetooth";
+
+"system_permission_center_ble_content" = "Pro funkce, jako je vyhledávání blízkých zařízení";
+
+"tier_name_basic" = "%@ Awareness Basic";
+
+"tier_name_plus" = "%@ Awareness Plus";
+
+"tier_name_pro" = "%@ Awareness Pro";
+
+"tier_name_lite_old" = "%@ Lite";
+
+"tier_name_lite_new" = "%@ Lite";
+
+"tier_name_no_plan" = "%@ Žádný plán";
+
+"log_upload_fail" = "Nahrávání se nezdařilo, zkuste to prosím znovu.";
+
+"log_upload_success" = "Úspěšně nahráno.";
+
+"notification_keep_running" = "%@ bude běžet dál, abyste mohli dostávat oznámení včas.";
+
+"bird_list_enter_bt" = "Podívejte se na možné druhy ptáků";
+
+"learn_more_3" = "Podrobnosti";
+
+"bird_list_title" = "Možné druhy";
+
+"bird_list_percentage" = "%@%";
+
+"bird_list_feedback_bt" = "Nic z výše uvedeného, ​​zpětná vazba pomáhá AI růst";
+
+"wiki_bt" = "Zobrazit více informací";
+
+"bird_feedback_title" = "Zpětná vazba";
+
+"bird_feedback_input_text" = "Zadejte druh, který si myslíte";
+
+"submit_bt" = "Předložit";
+
+"bird_feedback_success" = "Zpětná vazba úspěch";
+
+"bird_feedback_failed" = "Omlouváme se, zpětná vazba selhala, zkuste to prosím znovu později";
+
+"awareness_bird_fans" = "Plán Ptačích fanoušků";
+
+"tier_message_bird_fans_note" = "Potřebujete si předplatit základní plán Awareness nebo vyšší plány";
+
+"purchase_support_device" = "Podporovaná zařízení";
+
+"auto_ota" = "Automatická aktualizace";
+
+"auto_ota_status_on" = "Na";
+
+"auto_ota_status_off" = "Vypnuto";
+
+"auto_ota_title" = "Automatická aktualizace";
+
+"auto_ota_switch" = "Automatická aktualizace";
+
+"auto_ota_content" = "Zařízení se pokusí aktualizovat firmware automaticky od 2:00 do 6:00 a během procesu aktualizace nebudou slyšet žádné zvukové výzvy ani světelné poruchy. Zařízení přeruší práci během aktualizace firmwaru a po dokončení obnoví.";
+
+"player_days_hour" = "do hodiny";
+
+"player_days" = "před %@ %@";
+
+"unit_day" = "den";
+
+"unit_days" = "dní";
+
+"unit_hour" = "hodina";
+
+"unit_hours" = "hodin";
+
+"notification_keep_runing_title" = "Proces na pozadí";
+
+"notification_keep_runing_content" = "Aplikace bude nadále spuštěna, abyste mohli dostávat včasnější zprávy";
+
+"bird.find_subcategory" = "Byl zjištěn pták, vypadá jako {birdName}!";
+
+"tier_message_bird_notifacation_describe" = "Získejte schopnost rozpoznávat ptáky! A připomeňte vám to pomocí Smart Push!";
+
+"tier_message_bird_subcategory_describe" = "Podporujte více než 10 000 druhů ptáků";
+
+"not_account_google_tips1" = "Po propojení vašeho účtu a Google Assistant můžete hlasem ovládat zařízení s podporou Google Assistant prostřednictvím zařízení řady Google Home,";
+
+"not_account_google_tips2" = "například: „OK Google, ukaž mi můj fotoaparát.“";
+
+"account_google_succeed_tips1" = "Váš účet a Google Assistant jsou propojeny a zařízení s podporou Google Assistant můžete ovládat hlasem prostřednictvím zařízení řady Google Home,";
+
+"account_google_succeed_tips2" = "například: „OK Google, ukaž mi můj fotoaparát.“";
+
+"google_assistant" = "Google Assistant";
+
+"account_google_tips" = "Váš účet byl úspěšně propojen s Asistentem Google. Pokud při používání narazíte na nějaké problémy, přejděte na „Uživatel“ – „Propojení streamování“ a zkontrolujte stav svého zařízení nebo si prohlédněte FAQ.";
+
+"account_google_button" = "Propojení s Asistentem Google";
+
+"commonMotionBody" = "Váš fotoaparát detekoval pohyb";
+
+"bird_exist" = "Zjištěn pták";
+
+"push_bird_fans_title" = "Ptačí fanoušci";
+
+"push_bird_fans_before_content" = "Připojte se k plánu fanoušků ptáků a získejte upozornění na ptáky, objevujte a sbírejte ptačí druhy!";
+
+"bird_fans_free_plan_title" = "Beta";
+
+"bird_fans_free_plan_price" = "Volný, uvolnit";
+
+"bird_fans_free_plan_price_finish" = "Přijato";
+
+"bird_feedback_mark" = "Označ jako\"%@\"";
+
+"not_account_google_tips" = "Váš účet ještě nebyl propojen se službou Google Home. Můžete otevřít aplikaci Google Home a propojit svůj účet přidáním Akce do Google Home.";
+
+"auto_switch_google" = "Zařízení, která podporují Google Home, se automaticky restartují a přepnou na H.264, aby se připojili k zařízením Google Home.";
+
+"google_link" = "Kliknutím na Povolit propojíte svůj účet %@ s Google Home.\nPokud Povolit：";
+
+"plan_feature_title" = "Popis funkce";
+
+"nocamera_spt_google" = "Google Home aktuálně nepodporuje žádné zařízení";
+
+"push_bird_fans_after_content" = "Zapněte přepínač, aby bylo možné analyzovat, zda jsou ve videu ptáci, a určit určité druhy ptáků v příslušném zobrazení";
+
+"open_wifi_ap" = "Chcete-li se připojit k hotspotu zařízení, zapněte Wi-Fi";
+
+"hg_awareness" = "Homeguard Secure Plan";
+
+"device_plan_manage" = "Správa plánu zařízení";
+
+"plan_hg_single" = "Jediné zařízení";
+
+"plan_hg_four" = "Čtyři zařízení";
+
+"expiry_date" = "V platnosti, dokud%@";
+
+"available_device" = "Dostupný";
+
+"device_plan_manage_drag" = "Přetáhněte na tento plán";
+
+"device_plan_manage_no_device" = "Tento plán nepoužívá žádné zařízení";
+
+"device_plan_manage_not_support" = "Toto zařízení tento plán nepodporuje";
+
+"purchase_purchase_duration" = "Doba nákupu";
+
+"purchase_effective_device" = "Efektivní zařízení";
+
+"purchase_manage_device" = "Správa zařízení";
+
+"purchase_history_current_subscription" = "Aktuální předplatné";
+
+"purchase_history_title" = "Historie nákupů";
+
+"purchase_history_purchase_time" = "Doba nákupu:";
+
+"purchase_history_next_renewal_time" = "Čas příštího obnovení:";
+
+"purchase_history_refunded" = "Vráceno";
+
+"purchase_history_no_history" = "Žádná historie nákupů";
+
+"awareness_table_device_number" = "číslo zařízení";
+
+"awareness_table_unlimited_device" = "neomezený";
+
+"awareness_table_1_device" = "1";
+
+"awareness_table_4_device" = "4";
+
+"review_window_choose_title" = "Jste spokojeni s používáním";
+
+"review_window_satisfied_title" = "Ohodnoťte nás prosím";
+
+"review_window_choose_satisfied" = "spokojený";
+
+"review_window_choose_dissatisfied" = "nespokojený";
+
+"review_window_dissatisfied_title" = "Dejte nám zpětnou vazbu";
+
+"review_window_dissatisfied_feedback" = "zpětná vazba";
+
+"review_window_skip" = "Teď ne";
+
+"review_window_submit" = "Předložit";
+
+"review_window_satisfied_go_bt" = "Jdi hned";
+
+"review_window_success_toast" = "Úspěšně odesláno";
+
+"review_window_fail_toast" = "Odeslání se nezdařilo, zkuste to znovu později";
+
+"alexa_auth_cancel_bt" = "Odpojit";
+
+"alexa_auth_cancel_pop_window_text" = "Po odpojení nebudete moci ovládat zařízení s podporou Alexa prostřednictvím zařízení Alexa, jako je Echo Show. Opravdu chcete odpojit?";
+
+"device_plan_manage_unsaved_pop_window_text" = "Změna plánu se neuloží, určete, zda chcete ukončit přímo";
+
+"verification_code_subtitle" = "Ověřovací kód byl odeslán na %@";
+
+"sign_error_username_empty" = "Uživatelské jméno nemůže být prázdné";
+
+"alexa_auth_cancel_succeed_toast" = "Úspěšně zrušit vazbu";
+
+"alexa_auth_cancel_failed_toast" = "Odpojení se nezdařilo, zkuste to znovu později";
+
+"device_plan_manage_full_toast" = "Plán je plný";
+
+"sign_password_input" = "Zadejte heslo";
+
+"sign_password_again_input" = "Zadejte heslo znovu";
+
+"sign_username_input" = "Zadejte uživatelské jméno";
+
+"account_alexa_failed3" = "Zrušená vazba";
+
+"device_language_pt" = "Português (Portugalština)";
+
+"payment_auto_pay_subtext" = "Obnovit měsíčně, zrušit kdykoli";
+
+"app_lang_follow_system" = "sledovat systém";
+
+"doorbell_notification_switch" = "Upozornění na zvonek";
+
+"doorbell_notification_mode" = "Push metoda";
+
+"doorbellPressNotifyType_options_phone" = "Telefonát";
+
+"doorbellPressNotifyType_options_push" = "Oznámení";
+
+"smart_push_package_des" = "Pro analýzu krabicovitých obalů umístěných např. u dveří.";
+
+"smart_push_package_guide" = "Upozornění k použití";
+
+"feedback_add_new" = "Přidat";
+
+"notification_help" = "Push nebyl přijat nebo push zpožděn %@";
+
+"system_permission_center_notify_content" = "Používá se k přijímání zpráv oznámení zařízení, systémových zpráv atd.";
+
+"system_permission_center_notify_title" = "Oznámení";
+
+"feedback_number" = "No. ";
+
+"smart_push_other" = "Ostatní";
+
+"smart_push_novip_des" = "Chcete-li získat další funkce, přihlaste se k odběru Awareness";
+
+"smart_push_other_des" = "Jiné pohyby než výše uvedené.";
+
+"notification_motion_switch" = "Oznámení detekce pohybu";
+
+"service_cloud_desc_hg" = "Prodloužení až na 30 dní cloudového úložiště pro nahrávání o velikosti 8 GB (2 typy plánů Awareness) pro vytvoření nejbezpečnějšího úložiště videa, abyste nikdy nezmeškali žádný kritický okamžik.";
+
+"change_voice" = "Změňte hlas";
+
+"change_voice_normal" = "Normální";
+
+"change_voice_man" = "Muž";
+
+"change_voice_girl" = "Dívka";
+
+"change_voice_monster" = "Netvor";
+
+"rate_add_attachment" = "Nahrát obrázek";
+
+"link_to_google" = "Propojte %@ s Googlem";
+
+"signin_status" = "Jste přihlášeni jako %@";
+
+"switch_account" = "Změnit účet";
+
+"google_permission_des" = "Požádáme o následující oprávnění:";
+
+"google_permission_one" = "Přístup k informacím o vašem účtu %@.";
+
+"google_permission_two" = "Používejte služby %@.";
+
+"google_permission_three" = "Umožněte Googlu ovládat vaše zařízení.";
+
+"google_privacy_policy" = "Zkontrolujte %@ společnosti Google";
+
+"google_auth_cancel_guide" = "Můžete odpojit na %@";
+
+"google_auth_agree" = "Souhlas a odkaz";
+
+"google_auth_cancel" = "zrušení";
+
+"google_unlink_address" = "myaccount.google.com";
+
+"power_source_page_title" = "Jak plánujete používat své %@?";
+
+"power_source_page_subtitle" = "Tuto volbu můžete kdykoli změnit na stránce nastavení napájení.";
+
+"powerSource_options_plug_in" = "Zapojit";
+
+"powerSource_options_solar_panel" = "Solární panel";
+
+"powerSource_options_battery_power_only" = "Napájení pouze z baterie";
+
+"powerSource_options_wired" = "Kabelové";
+
+"powerSource_options_unselected" = "Vybrat";
+
+"auto_power_on_page_title" = "Povolit automatické zapnutí po nabití";
+
+"auto_power_on_page_descr" = "Tuto funkci můžete nyní nebo kdykoli vypnout na stránce nastavení napájení.";
+
+"power_source_item_name" = "Zdroj energie";
+
+"set_power_settings" = "Nastavení napájení";
+
+"camera_off_solar" = "Kamera je offline. Solárně nabíjená kamera se po nabití automaticky zapne.";
+
+"chargeAutoPowerOnCapacity_options_25pct" = "25%";
+
+"chargeAutoPowerOnCapacity_options_50pct" = "50%";
+
+"chargeAutoPowerOnCapacity_options_75pct" = "75%";
+
+"chargeAutoPowerOnCapacity_options_100pct" = "100%";
+
+"doorbell_call" = "Někdo zvoní u dveří.";
+
+"wired_connection" = "Drátové připojení";
+
+"video_settings" = "Nastavení videa";
+
+"connection_mode" = "Připojený režim";
+
+"connect_wifi2" = "Připojte Wi-Fi";
+
+"pirCooldownTime_options_10s" = "10 s";
+
+"pirCooldownTime_options_30s" = "30 s";
+
+"pirCooldownTime_options_60s" = "1 min";
+
+"pirCooldownTime_options_180s" = "3 min";
+
+"pirCooldownTime_options_300s" = "5 min";
+
+"videoResolution_options_mid" = "SD";
+
+"videoResolution_options_high" = "HD";
+
+"videoResolution_options_2k" = "2K";
+
+"videoAntiFlickerFrequency_options_50Hz" = "50Hz";
+
+"videoAntiFlickerFrequency_options_60Hz" = "60Hz";
+
+"pirSensitivity_options_auto" = "Automatický";
+
+"pirSensitivity_options_high" = "Vysoká";
+
+"pirSensitivity_options_mid" = "Střední";
+
+"pirSensitivity_options_low" = "Nízký";
+
+"pirRecordTime_options_auto" = "Automatický";
+
+"pirRecordTime_options_10s" = "10 s";
+
+"pirRecordTime_options_15s" = "15 s";
+
+"pirRecordTime_options_20s" = "20 s";
+
+"set_pan_tilt_settings" = "Nastavení otáčení a naklánění";
+
+"pan_tilt_calibration" = "Kalibrace otáčení a naklánění";
+
+"calibrate_start" = "Kalibrovat";
+
+"pan_tilt_calibration_descr" = "Kalibrace trvá asi 15-25s. Během procesu neotáčejte fotoaparátem ručně.";
+
+"calibrate_in_progress" = "Kalibrace";
+
+"calibrate_success" = "Kalibrace je hotová!";
+
+"calibrating_now_try_later" = "Probíhá kalibrace pan-tilt, zkuste to později.";
+
+"vip_recommend_page_title" = "Získejte 1 měsíc %@ zdarma.";
+
+"vip_cloud_storage_title" = "30denní cloudové úložiště";
+
+"vip_cloud_storage_descr" = "Získejte přístup k více minulým nahrávkám odkudkoli a kdykoli.";
+
+"vip_video_length_title" = "Delší délka záznamu";
+
+"vip_video_length_descr" = "Nahrajte až tři minuty, abyste zachytili celý příběh.";
+
+"vip_smart_push_title" = "Smart Push";
+
+"vip_smart_push_descr" = "Získejte upozornění pouze v případě potřeby. Detekce osob, balíků, zvířat a vozidel.";
+
+"vip_activity_zone_title" = "Personalizované zabezpečení";
+
+"vip_activity_zone_descr" = "Přizpůsobte si oblasti, abyste dostávali upozornění, která jsou nejdůležitější.";
+
+"free_trial_all_cams_descr" = "První měsíc zdarma, poté %@/měsíc/všechny kamery, zrušit kdykoli.";
+
+"free_trial_4_cams_descr" = "První měsíc zdarma, poté %@/month/4 kamery, zrušit kdykoli.";
+
+"free_trial_try_btn" = "Vyzkoušej zdarma";
+
+"free_trial_skip_btn" = "Ne, díky";
+
+"free_trial_fail_alert_title" = "Bezplatná zkušební verze se nezdařila";
+
+"free_trial_fail_alert_descr" = "Zdá se, že při spuštění bezplatné zkušební verze došlo k problému. Prosím zkuste to znovu.";
+
+"plan_activated_alert_title" = "Plán je aktivován!";
+
+"plan_activated_alert_descr" = "Svůj plán můžete spravovat na stránce uživatelského profilu.";
+
+"payment_fail_alert_title" = "Platba selhala";
+
+"payment_fail_alert_descr" = "Zdá se, že došlo k problému s vaší platbou. Prosím zkuste to znovu.";
+
+"plan" = "Plán";
+
+"free_trial_btn_long" = "Začněte 1 měsíční zkušební verzi zdarma";
+
+"privacy_and_terms" = "%@ a %@";
+
+"monkey_awareness" = "Monkey Vision Povědomí";
+
+"plan_monkey_single" = "Jediné zařízení";
+
+"plan_monkey_two" = "Dvě zařízení";
+
+"plan_monkey_unlimited" = "Neomezené zařízení";
+
+"close_btn" = "Uzavření";
+
+"awareness_table_2_device" = "2";
+
+"vip_subscribe_now" = "Přihlaste se k odběru";
+
+"notification_general" = "Oznámení";
+
+"get_free" = "Získat zdarma";
+
+"get_awareness_first_bt" = "Nejprve získejte informační službu";
+
+"night_vision_off_descr" = "Po zapnutí se %@ automaticky přepne do režimu nočního vidění za špatných světelných podmínek a poskytuje čisté video i ve tmě.";
+
+"night_vision_on_descr" = "%@ použije infračervené světlo ke zlepšení kvality obrazu ve tmě a vytvoření černobílého videa.";
+
+"night_vision_white_black_title" = "Černobílý režim";
+
+"night_vision_white_black_descr" = "Pomocí infračerveného světla je kamera schopna vylepšit kvalitu obrazu a výsledkem je čisté černobílé video.";
+
+"night_vision_color_title" = "Barevný režim";
+
+"night_vision_color_descr" = "Pomocí bílého světla kamera pořizuje barevné záběry s více detaily. Vezměte prosím na vědomí, že při detekci pohybu se rozsvítí bílé světlo.";
+
+"starlight_sensor_title" = "Senzor hvězdného světla";
+
+"startlight_sensor_descr" = "Zachyťte barevné, ostré a čisté snímky téměř za jakýchkoliv podmínek pomocí snímače Starlight Sensor, který dokáže produkovat ohromující výsledky i v nejtemnějším prostředí.";
+
+"starlight_sensor_descr" = "Zachyťte barevné, ostré a čisté snímky téměř za jakýchkoliv podmínek pomocí snímače Starlight Sensor, který dokáže produkovat ohromující výsledky i v nejtemnějším prostředí.";
+
+"switch_language" = "Přepnout jazyk";
+
+"switch_language_descr" = "Přepnout jazyk aplikace na %@";
+
+"voiceLanguage_options_cn" = "汉语 (Chinese)";
+
+"voiceLanguage_options_en" = "English (English)";
+
+"voiceLanguage_options_es" = "Español (Spanish)";
+
+"voiceLanguage_options_fr" = "Français (French)";
+
+"voiceLanguage_options_de" = "Deutsch (German)";
+
+"voiceLanguage_options_it" = "Italiano (Italian)";
+
+"voiceLanguage_options_ja" = "日本語 (Japanese)";
+
+"voiceLanguage_options_ru" = "Pусский (Russian)";
+
+"alarmDuration_options_5s" = "5 s";
+
+"alarmDuration_options_10s" = "10 s";
+
+"alarmDuration_options_15s" = "15 s";
+
+"nightVisionMode_options_infrared" = "Infračervený režim";
+
+"nightVisionMode_options_white" = "Režim bílého světla";
+
+"nightVisionSensitivity_options_high" = "Vysoká";
+
+"nightVisionSensitivity_options_mid" = "Střední";
+
+"nightVisionSensitivity_options_low" = "Nízký";
+
+"alarm_setting" = "Nastavení alarmu";
+
+"magicpix_turn_on_confirm" = "MagicPix může zlepšit kvalitu obrazu za špatných světelných podmínek, ale může také zvýšit spotřebu baterie nebo způsobit přehřátí. Přejete si pokračovat?";
+
+"upgrade_now_btn" = "Vylepšit";
+
+"detection_preference" = "Předvolba detekce";
+
+"detection_preference_subtext" = "Výchozí %@ spustí nahrávání při změně obrazovky. Po výběru předvolby začne %@ nahrávat až poté, co je detekován určený pohyb.";
+
+"pirAi_options_detectPersonAi" = "Pouze humanoid";
+
+"pirAi_options_detectPersonAi_pop" = "Pokud je povoleno, %@ zaznamená video pouze tehdy, když je detekován pohyb ve tvaru člověka, takže můžete zmeškat další informace o pohybu.";
+
+"auto_sleep_subtext" = "Poté, co %@ přejde do režimu spánku, zastaví nahrávání, alarm a odesílá upozornění";
+
+"doorBellRing_options_1" = "Vyzváněcí tón 1";
+
+"doorBellRing_options_2" = "Vyzváněcí tón 2";
+
+"doorBellRing_options_3" = "Vyzváněcí tón 3";
+
+"live_failure_auto_guidance" = "Pomalé načítání? Zkuste AUTO rozlišení";
+
+"live_failure_auto_try_btn" = "Vyzkoušet";
+
+"live_failure_auto_thanks" = "Ne, díky";
+
+"live_resolution_auto_title" = "AUTO Rozlišení";
+
+"live_resolution_auto_descr" = "Náš systém, který se přizpůsobí aktuální rychlosti vaší sítě, automaticky upraví kvalitu videa pro bezproblémový a nepřerušovaný zážitek z živého vysílání. Uvědomte si, že pokud je připojení k síti slabé, může dojít ke snížení kvality videa.";
+
+"switch_to_auto_reminder" = "Zaostávání? Zkuste AUTO rozlišení.";
+
+"switch_to_auto_now" = "Přepnout nyní";
+
+"network_speed_slow" = "Pomalý internet";
+
+"network_speed_fast" = "Rychlý internet";
+
+"bind_ap_alert_join_ios" = "Připojit";
+
+"bind_ap_alert_title_android" = "Připojit k zařízení?";
+
+"bind_ap_alert_descr_ios" = "%@ se chce připojit k síti WLAN „%@“";
+
+"bind_ap_alert_descr_android" = "%@ použije k připojení k zařízení dočasnou síť Wi-Fi.";
+
+"bind_ap_alert_connect" = "Připojit";
+
+"bind_connect_ap_page_title" = "Po zobrazení výzvy se připojte k síti Wi-Fi.";
+
+"bind_connect_ap_page_descr" = "Váš fotoaparát vytvoří dočasnou síť, která umožní vašemu telefonu se připojit přímo pro bezproblémový proces nastavení.";
+
+"location_perm_purpose_search_device" = "Povolte oprávnění v nastavení systému, abyste mohli zjišťovat a připojovat se k zařízením v okolí";
+
+"enable_nearby_devices_perm" = "Povolte oprávnění blízkých zařízení";
+
+"nearby_perm_purpose_search_device" = "Povolte oprávnění v nastavení systému, abyste mohli zjišťovat a připojovat se k zařízením v okolí";
+
+"nearby_devices_perm" = "Zařízení v okolí";
+
+"sd_card_emtpy" = "Nebyly nalezeny žádné nahrávky";
+
+"andriod_storage_perm_recording" = "Chcete-li ukládat videa, udělte oprávnění v nastavení aplikace.";
+
+"library_cloud" = "Mrak";
+
+"library_sdcard" = "SD karta";
+
+"library_sdcard_select_device" = "Vyberte Zařízení";
+
+"library_sdcard_wake_device" = "Chcete-li zobrazit video na kartě SD, musíte %@ probudit, což může spotřebovávat energii baterie";
+
+"library_sdcard_select_device_bt" = "Vyberte zařízení";
+
+"library_sdcard_no_device" = "Žádné zařízení";
+
+"recording_setting" = "Nastavení nahrávání";
+
+"shooting_interval_sd" = "Chlazení SD karty";
+
+"interval_time_sd" = "Nastavit čas chlazení SD karty";
+
+"sdCardVideoModes" = "Režim nahrávání";
+
+"sdCardVideoModes_options_eventual" = "Nahrávejte pouze při detekci pohybu";
+
+"sdCardVideoModes_options_continual" = "Nepřetržitý záznam";
+
+"sdCardVideoModes_options_onChargeContinual" = "Zapojte nepřetržité nahrávání";
+
+"sdCardVideoTime_options_10s" = "10 s";
+
+"sdCardVideoTime_options_30s" = "30 s";
+
+"sdCardVideoTime_options_60s" = "1 min";
+
+"sdCardVideoTime_options_180s" = "3 min";
+
+"sdCardVideoTime_options_300s" = "5 min";
+
+"sdCardCooldownSeconds_options_10s" = "10 s";
+
+"sdCardCooldownSeconds_options_30s" = "30 s";
+
+"sdCardCooldownSeconds_options_60s" = "1 min";
+
+"sdCardCooldownSeconds_options_180s" = "3 min";
+
+"sdCardCooldownSeconds_options_300s" = "5 min";
+
+"vip_feature_cloud_storage" = "Rolující historie";
+
+"vip_feature_motion_detection" = "Záznam pohybu";
+
+"vip_feature_motion_alerts" = "Upozornění na pohyb";
+
+"vip_feature_smart_push" = "Smart push";
+
+"vip_feature_activity_zone" = "Zóna aktivity";
+
+"vip_feature_person_detection" = "Detekce osob";
+
+"vip_feature_pet_detection" = "Detekce domácích mazlíčků";
+
+"vip_feature_package_detection" = "Detekce balíku";
+
+"vip_feature_vehicle_detection" = "Detekce vozidel";
+
+"vip_feature_cooldown_time" = "Detekce nulového zpoždění";
+
+"vip_feature_record_length" = "Záznam pohybu";
+
+"vip_feature_device_quantity" = "Počet zařízení";
+
+"vip_feature_device_quantity_unlimited" = "Neomezené";
+
+"vip_compare_page_title" = "Opravdu chcete odejít?";
+
+"vip_compare_continue_free_btn" = "Pokračujte s plánem zdarma";
+
+"vip_compare_try_btn" = "Zkuste %@ zdarma";
+
+"vip_profile_non_vip_card_title" = "Získejte ze svého fotoaparátu maximum!";
+
+"vip_profile_non_vip_card_descr" = "Odemkněte pokročilou detekci AI, smart push, zónu aktivity, větší cloudové úložiště a další!";
+
+"vip_compare_feature_title" = "Funkce";
+
+"vip_feature_cloud_storage_day_count" = "Max %@ dní";
+
+"vip_feature_recording_length_20s" = "Až 20 s";
+
+"vip_feature_record_length_3min" = "Až 3 min";
+
+"vip_compare_free_title" = "Bezplatná";
+
+"vip_feature_not_supported" = "N/A";
+
+"error_load_data_failed" = "Při načítání dat došlo k problému.";
+
+"upgrade_for_free" = "Vyzkoušet zdarma";
+
+"switch_resolution_failed" = "Přepnutí rozlišení se nezdařilo, zkuste to prosím znovu.";
+
+"live_failure_resolution_guidance" = "Zaostávání? Zkuste %@ rozlišení.";
+
+"vip_feature_record_length_20s" = "Až 20 s";
+

@@ -1,0 +1,3796 @@
+/* 
+Localizable.strings
+
+
+Copyright © 2020 CocoaPods. All rights reserved.
+*/
+"about" = "%@ hakkında";
+
+"about_str_inter" = "Amazon Alexa Hakkında";
+
+"accept" = "Kabul Et";
+
+"account_alexa_tips" = "Hesabınız Alexa'ya başarıyla bağlandı. Kullanırken herhangi bir sorunlar karşılaşırsanız cihazınız durumunu kontrol etmek veya SSS'yi görüntülemek için lütfen \"Kullanıcı\"-\"Akış Ara Bağlantısı\" sekmesine gidin.";
+
+"account_had_been_bind" = "Hesap zaten bağlı";
+
+"account_no_registered" = "Bu hesap kayıtlı değil.";
+
+"account_settings" = "Hesap Ayarları";
+
+"action_tracing_open" = "Hareket algılandığında %@, hareketi otomatik olarak izleyecek.";
+
+"action_tracking" = "Hareket İzleme";
+
+"activity_zone_tips" = "%@ sürekli kayıttadır ancak yalnızca Faaliyet Bölgesi'nde hareket algılanması durumunda bildirim alırsınız.";
+
+"activity_zones" = "Faaliyet Bölgesi";
+
+"add_activity_zone" = "Faaliyet Bölgesi Ekle";
+
+"add_camera_again" = "Cihaz Ekle";
+
+"add_camera_first" = "Cihaz bulunamadı, lütfen önce bir cihaz ekleyin.";
+
+"add_camera_now" = "Şimdi kamera ekle";
+
+"add_device_long_press" = "Açmak için uzun basın";
+
+"add_device_plugin" = "Eklenti";
+
+"add_device_power_des_key_point" = "uzun basın";
+
+"add_device_power_double_des" = "\"QR kodunu tarayın\" sesini duyduğunuzda bir sonraki adıma geçebilirsiniz.";
+
+"add_device_power_title" = "Kameranızı açın";
+
+"add_device_push_button" = "Açmak için güç düğmesine basın";
+
+"add_new_camera" = "Yeni bir cihaz ekleyin";
+
+"add_new_camera_now" = "Şimdi yeni bir cihaz ekleyin!";
+
+"add_new_device_b" = "Akıllı PTZ Kamera";
+
+"add_new_device_g" = "Akıllı Pilli Kamera";
+
+"add_other_error" = "Başka / Ses yok";
+
+"add_preset_scuess" = "Pozisyon başarıyla eklendi.";
+
+"add_sleep" = "Ekle";
+
+"add_sleep_plan" = "Uyku planı ekleyin";
+
+"add_timeout" = "Cihaz zaman aşımı ekleyin";
+
+"address" = "Adres";
+
+"address1_placeholder" = "Cadde ve numara, Posta kutusu, c/o.";
+
+"address2_placeholder" = "Ayrıntılı adres, ör. apartman, ev numarası vb.";
+
+"admin" = "Yönetici";
+
+"admin_info" = "Yönetici Bilgisi";
+
+"admin_sharing_in_same_country" = "Yönetici ve ikincil kullanıcıların hesabı aynı ülkeye kayıtlı olmalıdır.";
+
+"admin_wakeup_camera" = "Gerekirse %@ özelliğini yeniden etkinleştirmek için yöneticiyle iletişime geçin.";
+
+"advanced_info" = "Gelişmiş ayarlar";
+
+"after_checking_tips" = "Analiz öğelerini işaretledikten sonra, video kaydı Şahısları, Evcil Hayvanları, Araçları veya Paketleri tanımak üzere şifreli olarak analiz edilir. Birden fazla öğeyi işaretleyebilirsiniz.";
+
+"after_checking_tips1" = "Analiz öğelerini işaretledikten sonra, video kaydı Şahısları ve Evcil Hayvanları tanımak üzere şifrelenmiş bir şekilde analiz edilir. Birden fazla öğeyi işaretleyebilirsiniz.";
+
+"agree" = "Kabul Et";
+
+"agree_and_continue" = "Kabul et ve devam et";
+
+"ai_analysis" = "Yapay Zeka Analizi";
+
+"ai_analysis_description" = "Şu anda çeşitli analiz sonuçları bulunmaktadır: Şahıs, Evcil Hayvan. Cihazlarınızın analiz öğelerini tek tek ayarlamak için lütfen aşağıdaki bağlantıya dokunun ve ayar ekranına gidin.";
+
+"ai_analysis_description1" = "Şu anda çeşitli analiz sonuçları bulunmaktadır: Şahıs, Evcil Hayvan, Araç ve Paket. Cihazlarınızın analiz öğelerini tek tek ayarlamak için lütfen aşağıdaki bağlantıya dokunun ve ayar ekranına gidin.";
+
+"ai_car" = "Araç";
+
+"ai_filter" = "Sınıflandırma";
+
+"ai_filter_des" = "Tanımak istediğiniz kategoriyi açın, video ekranda ne olduğunu analiz edecek ve bilgilendirilip bilgilendirilmemeyi seçebilirsiniz.";
+
+"ai_filter_des2" = "Sınıflandırma özelliğini etkinleştirdikten sonra kamera, videoyu analiz eder ve aşağıdaki kategorileri tanımlar: Şahıs, Evcil Hayvan.";
+
+"ai_pet" = "Evcil Hayvan";
+
+"ai_pet_hint" = "Sadece kediler ve köpekleri tanır";
+
+"alarm_no" = "Alarm sesi 10'un altına düşürülemez.";
+
+"alarm_on" = "Aç";
+
+"alarm_playing" = "Alarm çalıyor.";
+
+"alarm_volume" = "Alarm sesi";
+
+"alerdy_move_location" = "%@ zaten burada: %@";
+
+"alert" = "Alarmı Etkinleştir";
+
+"alert_buttom" = "Sesli Alarm";
+
+"alexa_link" = "%@ hesabınızı Alexa'ya bağlamak için İzin Ver seçeneğine tıklayın.\nIf İzin ver:";
+
+"alexa_link_allow" = "İzin Ver";
+
+"alexa_link_refuse" = "Şimdi değil";
+
+"alignqr" = "Taramak için QR kodunu çerçeveye hizalayın.";
+
+"all_alerts" = "Tüm hareketler";
+
+"all_device" = "Tüm cihazlar";
+
+"all_screen" = "Tüm ekranlar";
+
+"allow" = "İzin Ver";
+
+"allow_bluetooth_permission" = "\"Bluetooth\" erişimine izin verin";
+
+"allow_bluetooth_permission_button" = "Bluetooth erişimine izin verin";
+
+"allow_camera_permission" = "Kameradaki QR kodunu taramak için telefon kamerasına erişime izin verin.";
+
+"allow_libary" = "Telefon ayarlarından fotoğraflara erişime izin verin.";
+
+"allow_location_permission" = "Konum erişimini açın";
+
+"allow_location_permission_for_camera" = "Mevcut Wi-Fi adını otomatik olarak almak ve cihaz için yapılandırmak için konum erişimini açın (önerilir) veya Wi-Fi adını manuel olarak girin (büyük/küçük harfe duyarlı).";
+
+"allow_location_permission_get_wifi" = "Telefonda kullanılmakta olan Wi-Fi adını (SSID) otomatik olarak almak için konum erişimini açın.";
+
+"allow_location_permission_title" = "\"Konum\" erişimini açın";
+
+"allowa_camera_permission" = "Kamera erişimine izin verin";
+
+"already_ignore" = "Yoksayıldı";
+
+"already_long_press" = "Zaten sıfırlama düğmesine basıldı.";
+
+"already_register" = "Bu e-posta zaten var. Bunun yerine oturum açmayı deneyin.";
+
+"alter_location" = "Konumu değiştirin";
+
+"amazon_alexa" = "Amazon Alexa";
+
+"analysis_item" = "Analiz öğesi (birden çok seçenek mevcuttur)";
+
+"and" = "ve";
+
+"anti_flicker" = "Titreşim Önleme";
+
+"anti_flicker_setting" = "Titreşim Önleme";
+
+"anti_flicker_tips" = "Titreşim önleme açıkken %@, alternatif akımın flaş etkisini nötralize edecektir. Ekranın titremesi sorununu çözecektir.";
+
+"apayment_success" = "%@ ödemesi başarılı";
+
+"apaymntt_fail" = "%@ ödemesi başarısız";
+
+"app_build_info" = "Derleme Bilgisi";
+
+"app_is_update_to_date" = "Zaten en son sürüme güncellendi.";
+
+"app_name" = "@string/appName";
+
+"app_transfer_content" = "<![CDATA[ <font>\u3000\u3000Çin'de ilgili politikalara uymak ve kullanıcılara daha iyi hizmet verebilmek için, Example Uygulaması <font color=\"#5AC4A7\">%@</font> tarihinde <strong>Example</strong> Uygulamasına dönüşecektir. <br /> <font>\u3000\u3000Lütfen en kısa süre içinde <strong>Example</strong> uygulamasını indirin. <strong>Example</strong> uygulamasına Example hesabınız üzerinden doğrudan giriş yapabilirsiniz. Tüm cihaz bilgileriniz ve Awareness servis planınız korunacak ve kullanmaya devam edebileceksiniz. </font><br /> <font>\u3000\u3000Son kullanma tarihinden sonra Example Uygulaması artık kullanılamayacak. <u><font color=\"#007AFF\"> Daha fazla bilgi edinin >></font></u></font><br />]]>";
+
+"app_transfer_content_logout" = "<![CDATA[ <font>\u3000\u3000Çin'de ilgili politikalara uymak ve kullanıcılara daha iyi hizmet verebilmek için, Example Uygulaması <font color=\"#5AC4A7\">%@ tarihinde </font> <strong>Example</strong> Uygulamasına dönüştü.</font><br /> <font>\u3000\u3000Example Uygulaması artık kullanılamayacak. Lütfen <strong>Example</strong> uygulamasını en kısa zamanda indirin. <strong>Example</strong> uygulamasına Example hesabınız üzerinden doğrudan giriş yapabilirsiniz. Tüm cihaz bilgileriniz ve Awareness servis planınız korunacak ve kullanmaya devam edebileceksiniz. <u><font color=\"#007AFF\"> Daha fazla bilgi edinin >></font></u></font><br /> ]]>";
+
+"app_update" = "Uygulama güncellemesi";
+
+"app_version" = "Uygulama bilgisi";
+
+"apple_cancle" = "Ödeme iptal edildi";
+
+"apple_reject" = "Bu telefon satın almayı desteklemiyor.";
+
+"audio_setting" = "Ses ayarları";
+
+"auto" = "AUTO";
+
+"auto_sleep" = "Uyku Zamanlaması";
+
+"auto_sleep_prompt" = "Uyku Zamanlaması açıkken %@, uyku programına göre otomatik olarak uyku moduna girecektir.";
+
+"auto_switch_alexa" = "Alexa'yı destekleyen cihazlar, Alexa cihazlarına bağlanmak için otomatik olarak yeniden başlatılacak ve H.264 biçimine geçecektir.";
+
+"auto_video_record_desc" = "%@ hareket durduktan sonra kaydını sonlandıracaktır, maksimum süre 3 dakikadır.";
+
+"available_2_4g_are_follows" = "Mevcut 2,4 GHz Wi-Fi ağları şunlardır:";
+
+"available_fireware" = "Mevcut Ürün Yazılımı";
+
+"awareness_service" = "Awareness Hizmeti";
+
+"awarenessbasic" = "%@ Awareness Temel";
+
+"awarenessplus" = "%@ Awareness Plus";
+
+"awarenesspro" = "%@ Awareness Pro";
+
+"back_door" = "Arka kapı";
+
+"batter_low_upgrade" = "Pil zayıf olduğundan yükseltme tamamlanamadı. Lütfen şarj ettikten sonra yükseltmeyi yeniden başlatın.";
+
+"battery_camera" = "Pil cihazı";
+
+"battery_camera_tips" = "Lütfen cihaz bir ses çıkarana kadar güç düğmesine basılı tutun.";
+
+"battery_issue" = "Pil / donanım sorunu";
+
+"battery_level" = "Pil seviyesi";
+
+"bed_room" = "Yatak odası";
+
+"before_offline" = "(Çevrimdışı olmadan önce)";
+
+"bind_111" = "Cihazdan bir \"Ding Dong\" sesi duyarsanız veya yanıp sönen ışığı görürseniz QR kodunu yaklaşık 6-12 inç (15-30 cm) mesafeden taramak için cihazı kullanın. Herhangi bir ses duymuyorsanız, cihazın QR kod tarama moduna girmesi için güç düğmesine iki kes basın. QR kodu başarıyla tarandığında bir bip sesi duyacaksınız.";
+
+"bind_ap_content" = "Lütfen telefonunuzu %@ öğesine bağlayın ve %@ öğesine dönün";
+
+"bind_ap_help_content" = "%@ ağ yapılandırması için %@ hotspotuna bağlanacaktır";
+
+"bind_ap_help_wifi_pw" = "Hotspot şifresi:";
+
+"bind_ap_no_found_ap" = "Bu hotspot'u bulamıyor musunuz?";
+
+"bind_ap_title" = "Bu cihazın Wi-Fi sistemini yapılandırın";
+
+"bind_device_b0_step0_desc" = "Kamera rotasyonunu tamamladıktan sonra bir sonraki adıma geçebilirsiniz.";
+
+"bind_device_delete" = "Bu ağı sil";
+
+"bind_device_g_step0_desc" = "Başlangıç sesinden sonra bir sonraki adıma geçin.";
+
+"bind_device_guide" = "Kamerayı, kamera gövdesindeki talimatlara göre açın.";
+
+"bind_device_guide_confirm" = "Cihazın ses çıkardığından veya Gösterge Işığının yanıp söndüğünden emin olun";
+
+"bind_device_guide_confirm_window" = "Bir sonraki adıma geçmek için lütfen cihazdan gelen sesi duyduğunuzdan veya ışığın yanıp söndüğünden emin olun.";
+
+"bind_device_save_wifi" = "Başarılı bir bağlantıdan sonra Wi-Fi adını ve şifresini hatırla.";
+
+"bind_device_saved" = "Wi-Fi ağı kaydedildi";
+
+"bind_device_scan" = "QR kodunu taramak için telefonu cihazdan yaklaşık 6-12 inç (15-30 cm) uzakta tutun ve bip sesinden sonra tarama işlemini tamamlayın";
+
+"bind_device_scan_failed" = "Bağlantı başarısız, lütfen buraya tıklayın";
+
+"bind_device_scan_failed_2" = "Müşteri hizmetlerine başvurun";
+
+"bind_device_skip" = "Bağlantı başarılı olduğunda otomatik olarak bir sonraki adıma yönlendirileceksiniz.";
+
+"bind_result_scuess" = "%@(%@) cihaza erişim isteğinizi kabul etti.";
+
+"bind_result_scuess_check" = "Bulmak için Paylaşılan cihazlara göz atın.";
+
+"bind_step_wifi_finish" = "Wi-Fi bilgisi zaten eklendi.";
+
+"bird" = "Kuş";
+
+"bluetooth" = "Bluetooth";
+
+"bluetooth_permission" = "Cihazı kolayca bağlamak için Bluetooth'u etkinleştirin";
+
+"bluetooth_system_center" = "Sistem kontrol merkezindeki \"Bluetooth\" özelliğini açın";
+
+"bluetooth_tips1" = "1 Ayarlarda %@ seçeneğini bulun";
+
+"bluetooth_tips2" = "2 %@ öğesinin Bluetooth'a erişmesine izin verin";
+
+"bt_new_device_pop" = "Yeni cihaz bulundu";
+
+"bt_no_found_device" = "Cihazınız listede değilse";
+
+"bt_no_found_device_link" = "Diğer bağlantı yöntemleri>";
+
+"bt_searching_device" = "Etkin cihazlar aranıyor";
+
+"bt_select_device" = "Cihazınızı seçin";
+
+"build_env" = "BuildENV";
+
+"buy" = "Satın Al";
+
+"buy_desc" = "* Awareness yalnızca cihaz yönetici hakları için geçerlidir. İkincil kullanıcılar bu özelliği yalnızca yönetici hakları aracılığıyla kullanabilir.";
+
+"camera" = "Cihaz";
+
+"camera_alarm" = "Alarm";
+
+"camera_alarm_tips" = "\"Alarm\" özelliği açıkken %@, bir hareket algıladığında otomatik olarak bir uyarı sesi çıkarır.";
+
+"camera_alarm_white_tips" = "\"Alarm\" veya \"Flaş\" özellikleri açıkken %@, bir hareket algıladığında sizi otomatik olarak uyarır.";
+
+"camera_deleted" = "Bu %@ silindi.";
+
+"camera_is_offline" = "%@ çevrimdışı";
+
+"camera_line_busy" = "%@ şu anda kullanımda lütfen daha sonra tekrar deneyin.";
+
+"camera_location" = "Bu %@ değerini nereye yerleştirmek istersiniz?";
+
+"camera_not_activated" = "Bilinmeyen %@, lütfen satıcıyla iletişime geçin.";
+
+"camera_not_activated_short" = "Bilinmeyen %@";
+
+"camera_off" = "%@ kapalı. Lütfen açın.";
+
+"camera_off_low_battery" = "%@ cihazındaki düşük pil seviyesi nedeniyle %@ otomatik olarak kapatıldı, lütfen şarj edin.";
+
+"camera_offline_desc" = "Yönlendiriciyi yeniden başlatmayı deneyin. İşe yaramazsa \"Yeni bir cihaz ekle\" seçeneğini kullanarak %@ cihazınızı yeniden Wi-Fi ağına bağlamayı deneyin.";
+
+"camera_permission" = "Kamera erişimine izin ver";
+
+"camera_permission_tips" = "QR kodunu taramak için telefonun \"Ayarlar\" bölümünde kamera erişimine izin verin.";
+
+"camera_poor_network" = "%@ çevrimdışı. Lütfen %@ cihazının açık olduğundan ve bir Wi-Fi ağına bağlı olduğundan emin olun.";
+
+"camera_poor_network_short" = "%@ çevrimdışı.";
+
+"camera_serial_number" = "%@ seri numarası";
+
+"camera_sleep" = "%@ uyku modunda";
+
+"camera_sleep_open" = "%@ yarın saat %@'de açılacaktır.";
+
+"camera_wake_up" = "Uyandır";
+
+"camera_white_tips" = "Alarm Işık özelliği açıkken hareket sensörü tetiklendiğinde %@, otomatik olarak yanıp sönecektir.";
+
+"camera_will_not_record" = "%@ kayıt almaz, alarm çalmaz ve bildirimleri iletmez.";
+
+"can_move_this_location" = "Aşağıdaki konumlara taşıyın";
+
+"can_not_find_camera_qr_code" = "Kameradaki QR kodunu bulamıyor musunuz?";
+
+"can_not_find_qr_code" = "Yöneticinin QR kodunu bulamıyor musunuz?";
+
+"can_not_find_reset" = "Sıfırlama düğmesini bulamıyor musunuz?";
+
+"can_not_get_ssid" = "Wi-Fi ağ adı (SSID) alınamadı. Lütfen telefonunuz için farklı bir Wi-Fi seçin veya Wi-Fi adını manuel olarak girin.";
+
+"can_not_get_ssid_short" = "Wi-Fi ağ adı (SSID) alınamadı";
+
+"can_not_power_up" = "Açamıyor musunuz?";
+
+"cancel" = "İptal Et";
+
+"cannot_receive_code" = "Doğrulama kodunu almadınız mı?";
+
+"cannot_receive_code_reason_bold1" = "lütfen kayıtlı e-postanızın spam klasörünü kontrol edin.";
+
+"cannot_receive_code_reason_bold2" = "Gmail veya Yahoo gibi uluslararası yaygın ve geçerli e-posta adresi";
+
+"cannot_receive_code_reason1" = "\"Doğrulama kodu gönder\" seçeneğine tıkladıktan sonra, doğrulama kodunu içeren e-postayı 60 saniye içinde kayıtlı e-postanızda alacaksınız.";
+
+"cannot_receive_code_reason2" = "Ağ bağlantısı dengesizse lütfen yaklaşık 5 dakika bekleyin.";
+
+"cannot_receive_code_reason3" = "5 dakika sonra hala doğrulama kodunu almadıysanız<![CDATA[<b>lütfen kayıtlı e-postanızın spam klasörünü kontrol edin.</b>]]>";
+
+"cannot_receive_code_reason4" = "Doğrulama kodunu içeren e-postayı spam klasöründe de bulamazsanız bunun nedeni kodun geçerli e-posta adresinize gönderilememesi olabilir. Lütfen doğrulama e-postasını almak için <![CDATA[<b>Gmail veya Yahoo gibi uluslararası yaygın ve geçerli e-posta adresi</b>]]> sağlayıcısı kullanın.";
+
+"cannot_receive_code_reason5" = "5 dakika sonra hala doğrulama kodunu almadıysanız lütfen kayıtlı e-postanızın spam klasörünü kontrol edin.";
+
+"cannot_receive_code_reason6" = "Doğrulama kodunu içeren e-postayı spam klasöründe de bulamazsanız bunun nedeni kodun geçerli e-posta adresinize gönderilememesi olabilir. Lütfen doğrulama e-postasını almak için <![CDATA[<b>Gmail veya Yahoo gibi uluslararası yaygın ve geçerli e-posta adresi</b>]]> sağlayıcısı kullanın.";
+
+"cannot_switch" = "Video kaydı sırasında çözünürlük değiştirilemez.";
+
+"cannot_take_screenshot" = "Video kaydı sırasında fotoğraf alınamaz.";
+
+"car_reid_describ" = "Cihaz tarafından gözlemlenen aracı tanıyın ve kullanıcının işaretlemesine izin verin. İşaretledikten sonra, ileti içeriği güncellenir ve iletilip iletilmeyeceğini de ayarlayabilirsiniz.";
+
+"change" = "Değiştir";
+
+"change_binding_email" = "Bu hesap zaten kullanılıyor. Lütfen farklı bir e-posta kullanın.";
+
+"change_binding_phone" = "Bu hesap zaten kullanılıyor. Lütfen farklı bir telefon numarası kullanın.";
+
+"change_email" = "E-postayı değiştir";
+
+"change_net_device_power_des" = "Ağ bağlantısı moduna girmek için cihazdaki düğmeye iki kez basın. Mavi ışık yanıp sönüyorsa cihaz bağlanmaya hazır demektir.";
+
+"change_net_device_power_des_key_point" = "çift tıklayın";
+
+"change_not_save" = "Değişiklikleri kaydetmek istiyor musunuz?";
+
+"change_notification" = "%@, %@ gün sonra %@'a dönüşür.";
+
+"change_password" = "Şifreyi değiştir";
+
+"change_password_failed" = "Şifre değiştirilemedi. Lütfen yeniden deneyin.";
+
+"change_password_success" = "Şifre başarıyla değiştirildi.";
+
+"change_password_tips" = "Hesabınızın güvenliği için şifrenizde en az bir büyük harf, bir küçük harf ve bir rakam bulunmalıdır. Şifrenizde en az 8 karakter olmalıdır.";
+
+"change_phone" = "Telefon numarasını değiştir";
+
+"change_statement_1" = "%@ adında Example'nun yükseltilmiş versiyonu olan yeni bir uygulama yayınladığımızı size bildirmekten mutluluk duyuyoruz. Example artık güncellenmeyecek. Çok daha iyi bir kullanıcı deneyimi sağlayacağına inandığımız için lütfen %@ adlı yeni uygulamamıza geçiş yapın.";
+
+"change_statement_2" = "Google Play Store'u açmak için aşağıdaki \"İndirmeye git\" düğmesine tıklamanız veya doğrudan Google Play Store'da \"%@\" diye arama yapmanız, yeni uygulamayı yüklemeniz ve Example hesabınızla oturum açmanız yeterlidir. Her şey (cihazlarınız, verileriniz ve ayarlarınız) değişmeden kalacaktır.";
+
+"change_statement_2_email" = "Google Play Store'u açmak için aşağıdaki \"İndirmeye git\" düğmesine tıklamanız veya doğrudan Google Play Store'da \"%@\" diye araması yapmanız ve ardından yeni bir hesap açmanız yeterlidir. Herhangi bir sorunuz varsa, lütfen support@Example.tech adresimizden iletişime geçin.";
+
+"change_statement_5" = "Yeni %@ uygulamamızda sizi görmek için sabırsızlanıyoruz. Geri bildiriminizi duymak isteriz!";
+
+"change_vehicle_name" = "aracın adını değiştirmek için dokunun";
+
+"change_wifi" = "Wi-Fi ağını değiştir";
+
+"change_wifi_network" = "Wi-Fi ayarlarını değiştir";
+
+"charging" = "Şarj oluyor";
+
+"charging_completed" = "Pil tamamen şarj oldu";
+
+"check_email_sample" = "xx@xx.xx";
+
+"check_for_update_version" = "Ürün yazılımı güncellemelerini kontrol et";
+
+"check_inbox_des" = "%@ e-postanıza bir doğrulama kodu gönderdik.";
+
+"check_net_config" = "Lütfen ağınızı kontrol edin ve tekrar deneyin.";
+
+"check_requirements" = "Geçersiz şifre biçimi.";
+
+"check_update_version" = "Güncellemeleri kontrol et";
+
+"check_wifi_0" = "Lütfen %@ cihazını kullanmak istediğiniz yere yerleştirin ve Wi-Fi sinyalinin gücünü kontrol edin.";
+
+"check_wifi_1" = "Wi-Fi sinyal gücünü kontrol edin…";
+
+"check_wifi_2" = "Wi-Fi sinyal gücünüzü onaylayın:";
+
+"check_wifi_3" = "%@ cihazınızı geçerli konuma monte etmeniz önerilir.";
+
+"check_wifi_4" = "%@ cihazınızı geçerli konuma monte etmeniz önerilmez.";
+
+"check_wifi_no" = "Geçerli konumda Wi-Fi sinyali yok. Lütfen %@ cihazınızı kablosuz yönlendiricinin yakınına taşıyın.";
+
+"check_your_inbox" = "Doğrulama kodu";
+
+"choose" = "Seç";
+
+"choose_camera_type" = "Cihaz modelini öğrenmek için cihazdaki QR kodunu taramak için cep telefonunuzu kullanın. QR kodu genellikle dış kabın içinde veya lastik tapanın altındadır. Bu QR kodu, genellikle \"S/N\" ile başlar, cihazın seri numarasını ve modelini içerir.";
+
+"choose_error_msg" = "Lütfen duyduğunuz hata mesajını seçin";
+
+"choose_firmware_update" = "Ürün yazılımı güncellemesini seçin";
+
+"choose_location" = "Lütfen daha iyi bir deneyim yaşamak için %@ cihazınıza bir yer seçin.";
+
+"choose_other_wifi" = "Başka bir Wi-Fi ağı seçin";
+
+"choose_question_type" = "Lütfen konuyu aşağıdaki kategorilerden dikkatlice seçiniz. Doğru bir seçim, size daha hızlı ve daha iyi yardım sağlamak için sorunu bulmamıza yardımcı olabilir.";
+
+"city" = "Şehir";
+
+"clear_cache" = "Önbelleği temizle";
+
+"clear_cache_des" = "Önbellek, kullanım sırasında oluşturulan geçici verileri toplar. Önbelleği temizlemek uygulamanın normal kullanımını etkilemez.";
+
+"clear_cache_not_affect_download_media" = "Önbelleği temizlemek uygulamanın normal kullanımını etkilemez.";
+
+"click_support" = "Destek için tıklayın";
+
+"close" = "Kapalı";
+
+"close_combiend" = "Tüm ortak cihaz iletilerini kapatmak istediğinizden emin misiniz?";
+
+"close_combiend_tips" = "Ortak iletiyi kapattığınızda her bir videodan ayrı ileti almaya başlayacaksınız ve aldığın ileti mesajlarınızın sayısı artacak.";
+
+"close_led" = "Kapat";
+
+"close_motion_detection_tip" = "Ürün özelliklerinin optimize edildikten sonra video kayıt etme anahtarı kaldırılır. Kullanım alışkanlıklarınızı etkilememek için Hareket Algılama anahtarı geçici olarak kapatılır. Lütfen gerek olduğunda yeniden açın.";
+
+"cloud_service_buy" = "Şimdi öde";
+
+"cloud_size_change" = "Bulut depolama alanı %@ düşürüldü (toplam kapasite %@GB'dan az)";
+
+"cloud_storage_params" = "<![CDATA[<font color=#333333\">%1$d gün</font><br><font color=\"#999999\">(≤%2$sGB)</font>]]>";
+
+"cloud_strorage" = "Bulut kaydı";
+
+"common_format" = "SD kartı biçimlendir";
+
+"common_service" = "Hafif";
+
+"config_night_mode" = "Gece Görüş Modu";
+
+"confirm" = "Onayla";
+
+"confirm_camera_on" = "Kameranın açık olduğunu onayla";
+
+"confirm_model_number" = "Cihaz modelini onaylamak için cihazdaki QR kodunu telefonunuzla tarayın";
+
+"confirm_new_password" = "Yeni şifreyi onayla";
+
+"confirm_open" = "Onayla";
+
+"confirm_password" = "Şifreyi onayla";
+
+"confirm_scan_state" = "Cihazın tarama modunda olduğundan emin olun";
+
+"confirm_scan_state_directions" = "Genellikle yeni bir cihaz tarama moduna otomatik olarak girer ve bir tarama sesi duyarsınız veya yanıp sönen bir ışık görürsünüz. Olmazsa güç düğmesine çift basmanız gerekir.";
+
+"confirm_scanning_sound" = "Cihazın bip sesi yayıp yaymadığından emin olun";
+
+"confirm_scanning_sound_window" = "Lütfen bir sonraki adım için kameranın ses yaptığından emin olun.";
+
+"confirm_speaker_1" = "Hoparlörü kapatmak istediğinden emin misin?";
+
+"confirm_speaker_2" = "%@ artık herhangi bir hatırlatma sesi çıkarmayacak";
+
+"confirm_speaker_open" = "\"Hoparlör\" özelliğini açtığınızda %@, %@ durumu hakkında bilgi vermek için akustik geri bildirim sağlayacaktır.";
+
+"congratulation_add_camera" = "Tebrikler, başarıyla kayıt oldunuz\nLütfen bir cihaz ekleyin";
+
+"connect_error_ap_1" = "Lütfen doğru Wi-Fi ağ adını (SSID) seçtiğinizi veya girdiğinizi kontrol edin.";
+
+"connect_error_ap_2" = "Lütfen cihazınızı Wi-Fi yönlendiricisinin yanına yerleştirin ve yönlendiricinin bir güç kaynağına takılı olduğundan emin olun.";
+
+"connect_error_ap_3" = "Şu anda 5 GHz Wi-Fi ve kurumsal Wi-Fi desteklenmemektedir.";
+
+"connect_error_failed_1" = "Lütfen yönlendiricinizin kullanılabilir bir ağa bağlı olduğundan emin olun.";
+
+"connect_error_failed_2" = "Lütfen yönlendiriciyi yeniden başlatmayı ve yeniden bağlanmayı deneyin.";
+
+"connect_error_failed_3" = "Lütfen farklı bir Wi-Fi ağına bağlanmayı deneyin.";
+
+"connect_error_ip" = "\"IP alma işlemi zaman aşımına uğradı\" bildirimini duydum";
+
+"connect_error_ip_1" = "Yönlendiriciye halihazırda bağlı çok fazla cihaz olduğundan daha fazla cihaz bağlayamazsınız. Lütfen kullanılmayan veya süresi dolmuş diğer cihazları kaldırın. Yönlendirici yöneticisine başvurmanız gerekebilir.";
+
+"connect_error_method" = "Lütfen Wi-Fi ağınızın kurumsal bir Wi-Fi ağı olmadığından emin olun. Cihaz yalnızca WPA-2'nin altında güvenlik düzeyine sahip ağları destekler.";
+
+"connect_error_no_voice" = "\"Bulut hizmeti bağlantısı başarısız\" bildirimini duydum";
+
+"connect_error_other" = "\"Kimlik doğrulama hatası\" bildirimini duydum";
+
+"connect_error_password_1" = "Lütfen girdiğiniz Wi-Fi şifresinin doğru olduğunu ve büyük/küçük harfe duyarlı bir şekilde yazıldığından emin olun.";
+
+"connect_error_wifi" = "\"Wi-Fi şifre hatası\" bildirimini duydum";
+
+"connect_error_wifi_net" = "\"Wi-Fi SSID bulunamadı\" bildirimini duydum";
+
+"connect_find_device" = "Yeni cihaz bulundu";
+
+"connect_heard_failed" = "Bir hata mesajı duydum.";
+
+"connect_initialize" = "%@ başlat";
+
+"connect_no_wifi" = "Wi-Fi bilgisini bulamıyor musunuz?";
+
+"connect_register" = "Bulut hizmetine kaydedin";
+
+"connect_server" = "Sunucuya bağlanılıyor...";
+
+"connect_sever_timeout" = "Sunucuya bağlantı zaman aşımına uğradı";
+
+"connect_success" = "Bağlantı başarılı oldu";
+
+"connect_to_wifi" = "Cihazı ağa bağlayın";
+
+"connect_wifi" = "Wi-Fi ağına bağlanın";
+
+"connect_wifi_no_voice_error" = "Hiçbir şey duymadım.";
+
+"connect_wifi_tips" = "Lütfen cihaza bağlanmak için 2,4 GHz Wi-Fi ağ adını (SSID) ve şifreyi girin. Şu anda 5 GHz Wi-Fi ve kurumsal Wi-Fi bağlantılar desteklenmemektedir. Daha fazla bilgi >>";
+
+"connect_wifi_unkonw_error" = "\"Başka bir hata\" bildirimi duydum.";
+
+"connecting" = "Bağlanılıyor...";
+
+"connection_failed" = "Bağlanılamadı";
+
+"contact_admin_set_az" = "Faaliyet Bölgesini ayarlamak için kamera yöneticisiyle iletişime geçin";
+
+"control_bar" = "Kontrol Et";
+
+"copyright" = "Telif Hakkı © 2021 Photon Sail Tech Tüm hakları saklıdır";
+
+"country" = "Ülke";
+
+"country_region" = "Ülke/Bölge";
+
+"coupon" = "Kodu Kullan";
+
+"coupon_expire" = "Kullanım kodunun süresi dolmuş.";
+
+"coupon_used" = "Kullanım kodu kullanılmış.";
+
+"create_location" = "Yeni bir konum oluştur";
+
+"create_new_password" = "Yeni şifre belirle";
+
+"create_your_account" = "Şifre belirle";
+
+"crying_detection" = "Ağlama Algılama";
+
+"crying_detection_high" = "%@ cihazı ile bebeğin arasında 2,5 metreden daha fazla bir mesafe varsa hassasiyet seviyesinin Yüksek olarak ayarlanması önerilir.";
+
+"crying_detection_low" = "%@ cihazı bebeğe çok yakınsa ör. 1 metre, hassasiyet seviyesinin Düşük olarak ayarlanması önerilir.";
+
+"crying_detection_mid" = "%@ cihazı ile bebek arasında 2,0-2,5 metre arasında bir mesafe varsa hassasiyet seviyesinin Orta olarak ayarlanması önerilir.";
+
+"crying_detection_on" = "\"Ağlama Algılama\" özelliği açıkken bebek odasında ağlama algılanırsa size haber verilir.";
+
+"crying_tag" = "Ağlama";
+
+"current_location" = "Şu Anki Konum: %@";
+
+"currently_spt" = "Şu anda destekleniyor";
+
+"data_acquisition_failed" = "Veri alınamadı, lütfen uygulamayı yeniden başlatın.";
+
+"day" = "%d gün";
+
+"default_common" = "Varsayılan";
+
+"delete" = "Sil";
+
+"delete_account" = "Hesabı sil";
+
+"delete_account_failed" = "Hesap silinemedi, lütfen yeniden deneyin.";
+
+"delete_location_desc" = "Bu konumu silmek istediğinizden misiniz?";
+
+"delete_notice_content_0" = "Hesabınızı silerseniz hesap geri alınamaz. Güvenliğiniz için, hesabınızı silmeden önce lütfen aşağıdaki bilgileri onaylayın:";
+
+"delete_notice_content_1" = "Hesabın saldırıya uğraması veya şüpheli oturum açma etkinliği gibi anormal davranışlar yoktu. Hesabın silinmesi kişisel sebeplerden dolayı talep edildi.";
+
+"delete_notice_content_2" = "Cihazın yöneticisi sizseniz silme işleminden sonra bu cihazın görüntüleme ve ayarlama haklarını kaybedersiniz. Yönetici tarafından bu cihaz size paylaşılıyorsa silme işleminden hemen sonra görüntüleme hakkını kaybedersiniz.";
+
+"delete_notice_content_3" = "Kütüphane bilgileri de dahil olmak üzere bu hesapla ilgili tüm kişisel veriler kalıcı olarak silinir ve geri getirilemez. Awareness Hizmetini daha önce satın aldıysanız lütfen dikkatli olun.";
+
+"delete_notice_content_4_ios" = "%@ Awareness üçüncü taraf bir ödeme sistemi kullandığı için hesap iptali otomatik yenilenmeyi durdurmaz. Gereksiz kesintilerden kaçınmak için lütfen üçüncü taraf üzerinden otomatik yenilemeyi iptal et.";
+
+"delete_notice_content_4_ios_link" = "otomatik yenilemeyi iptal et";
+
+"delete_notice_title_0" = "Hesap iptal bildirimi";
+
+"delete_notice_title_1" = "1. Hesap güvende";
+
+"delete_notice_title_2" = "2. Bu hesapla ilişkili cihaz hakkında artık ilgilenmiyorum";
+
+"delete_notice_title_3" = "3. Tüm kişisel veriler silinecek";
+
+"delete_notice_title_4" = "4. %@ Awareness hizmetinin otomatik yenilemesini iptal et";
+
+"delete_one_dialog_message" = "Bu öğe kalıcı olarak silinecektir. Bu eylem geri alınamaz.";
+
+"delete_photo" = "Bu fotoğrafı silmek istediğinizden emin misiniz?";
+
+"delete_photo_title" = "Fotoğrafı Sil";
+
+"delete_photos" = "Bu fotoğrafları silmek istediğinizden emin misiniz?";
+
+"delete_sleep_time" = "Bu uyku zamanlamasını silmek istediğinizden emin misiniz?";
+
+"delete_success" = "Başarıyla silindi.";
+
+"delete_this_location" = "Konumu Sil";
+
+"delete_vehicle" = "Bu araç galerisini silmek istediğinizden emin misiniz?";
+
+"delete_vehicles" = "Bu araç galerilerini silmek istediğinizden emin misiniz?";
+
+"delete_wifi" = "Bu ağı silmek istediğinizden emin misiniz?";
+
+"deleted_successfully" = "Başarıyla silindi";
+
+"Deleting" = "Siliniyor...";
+
+"deselect_all" = "Tüm seçimleri kaldır";
+
+"detail_location" = "Detaylı Konum";
+
+"detection_area" = "Alan Algılama";
+
+"detection_parcel" = "Paket Algılama";
+
+"detection_parcel_desc" = "Bu etkinleştirildikten sonra bir paket algılandığında %@ size bildirim gönderir ve diğer alakasız bilgileri filtreler.";
+
+"detection_pedestrian" = "Şahıs Algılama";
+
+"detection_sensitivity" = "Algılama Hassasiyeti";
+
+"device_already_bind_by_other" = "Bu cihaz başka bir hesaba bağlı. Yardım için lütfen yöneticiyle iletişime geçin.";
+
+"device_auth_limitation" = "Bu cihazı çalıştırma izniniz yok.";
+
+"device_b0_default_name" = "%@ Akıllı PTZ Kamera";
+
+"device_bind_heared_common_voice" = "\"QR kodunu tarayın\" sesini duyduğunuzda bir sonraki adıma geçebilirsiniz.";
+
+"device_default_name" = "%@ Akıllı Kamera";
+
+"device_g0_default_name" = "%@ Akıllı Pilli Kamera";
+
+"device_info" = "%@ bilgi";
+
+"device_installing" = "Ürün yazılımı yükleniyor…";
+
+"device_ip" = "%@ IP";
+
+"device_is_updating" = "Ürün yazılımı yükseltiliyor…";
+
+"device_k0_default_name" = "%@ Akıllı Kart Kamera";
+
+"device_language" = "%@ Ses Dili";
+
+"device_language_cn" = "汉语 (Çince)";
+
+"device_language_en" = "English (İngilizce)";
+
+"device_language_es" = "Español (İspanyolca)";
+
+"device_language_fr" = "Français (Fransızca)";
+
+"device_language_ge" = "Deutsch (Almanca)";
+
+"device_language_it" = "Italiano (İtalyanca)";
+
+"device_language_ja" = "日本語 (Japonca)";
+
+"device_language_ru" = "Pусский (Rusça)";
+
+"device_manager" = "Cihaz Yönetimi";
+
+"device_name" = "%@ Adı";
+
+"device_name_invalid_tips" = "Lütfen geçerli bir cihaz adı girin.";
+
+"device_no_access" = "%@ öğesine erişilemedi, lütfen yeniden deneyin.";
+
+"device_no_replied" = "Telefon şebekesi bağlantınız zayıf.";
+
+"device_not_bound" = "Cihaz bağlı değil.";
+
+"device_offline" = "%@ çevrimdışı";
+
+"device_other_device" = "Cihazınızın hangisi olduğundan emin değil misiniz?";
+
+"device_restarted_update" = "Yükseltme sırasında %@ birkaç kez yeniden başlatılabilir. Lütfen güç kaynağını kesmeyin veya %@ cihazınızı kapatmayın.";
+
+"device_s0_default_name" = "%@ Akıllı Kutu Kamera";
+
+"device_settings" = "%@ Ayarı";
+
+"device_state" = "Durum: %@";
+
+"device_state_ios" = "Durum:";
+
+"device_unactivated" = "Bilinmeyen cihaz, lütfen satıcıyla iletişime geçin.";
+
+"device_update_scuess" = "Ürün yazılımı zaten güncel.";
+
+"dialog_message_cancel_share" = "<b>%@</b> artık<b>%@</b> öğesinden mesaj almayacak.";
+
+"dialog_message_del_multi_with_guest" = "Bu eylem geri alınamaz. %d öğeleri bir arkadaş kamerasından geldiği için silinemezler.";
+
+"dialog_message_del_multi_without_guest" = "Bu öğeler kalıcı olarak silinecektir. Bu eylem geri alınamaz.";
+
+"dialog_payment_cloud_content" = "Daha güvenli bir video depolama alanı oluşturmak için bulut kaydını 30 günlük olacak şekilde (5 GB'den fazla değil) uzatın böylece hiçbir kritik anı kaçırmazsınız.";
+
+"dialog_payment_ling_content" = "Videonun ana içeriğini belirle: Şahıs, Evcil Hayvan, Araç. Ve eylem davranışı analizi yaparak daha akıllı iletiler oluşturun.";
+
+"dialog_payment_ling_title" = "Akıllı Bildirim";
+
+"dialog_payment_title" = "%@ Awareness Plus";
+
+"dialog_payment_zone_content" = "Faaliyet Bölgesi belirlediğinizde yalnızca doğru konumla ilgili tetiklenen mesajlar gönderilir, diğer bilgiler filtrelenir.";
+
+"dialog_title_del_multi" = "%d öğelerini buluttan silmeyi onaylıyor musunuz?";
+
+"dialog_title_del_one" = "Seçili öğeleri silmek istediğinizden emin misiniz?";
+
+"did_not_hear_scanning_sound" = "Bip sesi duymadınız mı?";
+
+"ding_dong" = "\"Ding dong ding dong\"";
+
+"disable" = "Devre Dışı Bırak";
+
+"disagree" = "Katılmıyorum";
+
+"distance" = "6-12 inç (15-30 cm)";
+
+"district_country" = "Semt/İlçe";
+
+"do_alarm_tips" = "Alarm özelliğini etkinleştirirseniz %@ uyarı sesleri yaymaya başlar.";
+
+"do_not_disturb" = "Rahatsız etme";
+
+"do_not_disturb_15min" = "15 dakikalığına rahatsız etme";
+
+"do_not_disturb_15min_describ" = "15 dakika boyunca herhangi bir Hareket Algılama bildirimi almayacaksınız ancak tüm olaylar yine de kaydedilecektir.";
+
+"do_not_disturb_describ" = "Bu süre zarfında herhangi bir Hareket Algılama bildirimi almayacaksınız ancak tüm olaylar yine de kaydedilecektir.";
+
+"do_not_update" = "Güncelleme yapma";
+
+"done" = "Bitti";
+
+"dont_say_green_light" = "Yanıp sönen mavi ışık görmedim.";
+
+"double_click_exit" = "%@ çıkmak için tekrar basın";
+
+"double_click_power" = "Güç düğmesine çift basın";
+
+"double_click_power_button" = "Cihazın tarama moduna girmesini sağlamak için lütfen güç düğmesine çift tıklayın";
+
+"double_click_power_directions" = "Cihaz açıldıktan sonra güç düğmesine çift basın. Tarama modu açıkken bir tarama sesi duyarsınız ya da yanıp sönen bir ışık görürsünüz.";
+
+"double_click_power_key" = "Taramak için güç düğmesine çift basın";
+
+"double_click_power_key_2" = "Güç düğmesine çift basın ve telefonunuzdaki QR kodunu cihazdan yaklaşık 6-12 inç (15-30 cm) uzağa yerleştirin.";
+
+"double_click_power_key_reset" = "Tarama moduna girmek için sıfırlama düğmesine uzun basın";
+
+"double_click_power_key_reset_next" = "Sıfırlama düğmesine uzun süre bastıktan sonra bir sonraki adıma geçebilirsiniz.";
+
+"download" = "İndir";
+
+"download_done" = "İndirme işlemi tamamlandı";
+
+"download_error" = "İndirme hatası";
+
+"download_faild_and_try" = "İndirme başarısız oldu, lütfen tekrar deneyin.";
+
+"drop_out" = "Çıkış yap";
+
+"duration_alarm" = "Alarm Süresi";
+
+"edit" = "Düzenle";
+
+"edit2" = "Düzenle";
+
+"email" = "E-posta";
+
+"email_bind_success" = "E-posta başarıyla bağlandı.";
+
+"email_change_success" = "E-posta başarıyla değiştirildi.";
+
+"email_exists" = "Bu hesap zaten kayıtlı. Lütfen doğrudan giriş yapın.";
+
+"email_invalid_tips" = "Lütfen geçerli bir e-posta girin.";
+
+"email_or_phone_number" = "Telefon Numarası/e-posta";
+
+"email_phone_number_invalid_tips" = "Lütfen geçerli bir telefon numarası/e-posta girin.";
+
+"email_unregister_tips" = "Bu hesap seçilen ülkede kayıtlı değildir.";
+
+"enabled" = "Etkinleştir";
+
+"End" = "Sonlandır";
+
+"end_do_not_disturb" = "Rahatsız Etmeyin özelliğini devre dışı bırakmak istiyor musunuz?";
+
+"enter_coupon" = "Lütfen kullanım kodunu girin.";
+
+"enter_device_name" = "Lütfen %@ adını girin";
+
+"enter_password" = "Şifre";
+
+"enter_pwd_tips_for_del_account" = "Hesabınızı güvende tutmak için hesabın iptaline geçmeden önce kullanıcın kimliğini doğrulamamız için lütfen şifreyi girin.";
+
+"error_2002" = "Cihaza erişilemedi. Lütfen bu cihazın listenizde olup olmadığını doğrulayın.";
+
+"error_2002_short" = "Kameraya erişilemedi.";
+
+"error_3011" = "Geçersiz istek";
+
+"error_3012" = "İstek zaman aşımına uğradı. Lütfen yeniden deneyin.";
+
+"error_3013" = "Yoksay";
+
+"error_email_format" = "Geçersiz e-posta biçimi.";
+
+"error_message" = "Hata mesajı";
+
+"error_no_net" = "Kullanılabilir ağ bağlantısı yok.";
+
+"error_no_register" = "Bu hesap mevcut değil, lütfen yeniden deneyin.";
+
+"error_phone_email_format" = "Geçersiz telefon numarası/e-posta.";
+
+"error_two_passwork_match" = "Şifreler eşleşmiyor.";
+
+"error_unknown" = "Bilinmeyen istek hatası";
+
+"error_vaild_code" = "Doğrulama kodu doğru değil.";
+
+"event_list" = "Etkinlik listesi";
+
+"expired_code" = "QR kodunun süresi dolmuş";
+
+"expired_notification" = "%@, %@ gün içinde sona erecek.";
+
+"explore" = "Keşfet";
+
+"faied_get_sdvideo" = "SD kart videosu alınamadı";
+
+"failed_get_infomation" = "Bilgi alınamadı (%d)";
+
+"failed_information" = "Bilgi alınamadı.";
+
+"failed_restore" = "Geri yükleme başarısız oldu.";
+
+"failed_to_add_location" = "Konum eklenemedi, lütfen yeniden deneyin.";
+
+"failed_to_delete_and_try" = "Silme işlemi başarısız oldu, lütfen yeniden deneyin.";
+
+"failed_to_get_information_and_try" = "Mobil ağ kullanılamıyor. Lütfen ağ bağlantınızı kontrol edin.";
+
+"familiar_vehicle" = "Araç işareti";
+
+"familiar_vehicle_tips" = "Tanınan aracı bilinen bir araç olarak işaretleyin ve bu bilgiler ileti içeriğine güncellenecektir.";
+
+"feedback" = "Geri bildirim";
+
+"feedback_failed" = "Üzgünüz, geri bildirim gönderilemedi, lütfen tekrar deneyin.";
+
+"feedback_submit_success" = "Geri bildirim başarıyla gönderildi. Desteğiniz için teşekkür ederiz!";
+
+"filter" = "Filtre";
+
+"find_password_by_email" = "E-posta ile al";
+
+"find_password_by_phone" = "Telefon numarası ile al";
+
+"find_qrcode_way" = "Kamera gövdesindeki QR kodu nasıl bulunur:";
+
+"fireware_is_downloading" = "Ürün yazılımı indiriliyor…";
+
+"fireware_is_installing" = "Ürün yazılımı yükleniyor…";
+
+"fireware_is_updating" = "Ürün yazılımı yükseltiliyor, lütfen bekleyin.";
+
+"fireware_need_force_update_tips" = "Daha iyi bir deneyim için lütfen en son sürüme güncelleyin.";
+
+"fireware_need_update_tips" = "Daha iyi bir deneyim için ürün yazılımı sürümünün (%@) sürümüne yükseltilmesi gerekir!";
+
+"fireware_update" = "Ürün yazılımı güncellemesi";
+
+"fireware_update_failed" = "Güncelleme başarısız oldu, lütfen tekrar deneyin.";
+
+"firmware_info" = "Ürün yazılımı bilgisi";
+
+"firmware_update_fail" = "Ürün yazılımı güncellenemedi, lütfen tekrar deneyin.";
+
+"firmware_update_timeout" = "Ürün yazılımı yükseltmesi zaman aşımına uğradı, lütfen tekrar deneyin.";
+
+"firmware_upgraded_successfully" = "Ürün yazılımı başarıyla yükseltildi.";
+
+"five_vehicle_marked" = "En fazla 5 adede kadar araç galerisi işaretlenebilir.";
+
+"flash_light_item" = "Flaş Alarmı";
+
+"flicker_rate" = "Titreşim Frekansı";
+
+"follow_instruction_retry" = "Yönergeleri izleyin ve yeniden deneyin";
+
+"follow_step_retry" = "Adımları izleyin ve yeniden deneyin";
+
+"for_battery_cameras" = "Pilli cihazlar için";
+
+"for_plugin_cameras" = "Fişli cihazlar için";
+
+"forbidden" = "Kullanıcının devam etmesine izin verilmiyor";
+
+"forck_update_share" = "Ürün yazılımı sürümünün (%@) sürümüne yükseltilmesi gerekir. Yükseltmek için lütfen bu cihazın yöneticisine başvurun.";
+
+"forgot_password_" = "Şifrenizi mi unuttunuz?";
+
+"forgot_password_btn" = "Şifremi unuttum";
+
+"forgot_password_not_login_account" = "Lütfen hesaba bağlanacak bir telefon numarası girin.";
+
+"forgot_password_tips" = "Lütfen şifresini sıfırlamak istediğiniz hesabı girin. Bu hesaba bir doğrulama kodu göndereceğiz.";
+
+"format" = "Biçim";
+
+"formatting_cannot_use" = "Biçimlendirme işlemi sırasında SD kart kullanılamaz.";
+
+"found_event1" = "1 etkinlik,";
+
+"found_event2" = "%@ etkinlik,";
+
+"found_video1" = "ve günden 1 video.";
+
+"found_video2" = "ve günden %@ video.";
+
+"free_30d" = "30 günlük ücretsiz deneme";
+
+"free_30d_plus" = "%@ Awareness Plus 30 günlük ücretsiz deneme";
+
+"free_info" = "7 günlük ücretsiz bulut depolama";
+
+"friday" = "C";
+
+"friday_2" = "Cuma";
+
+"from_time" = "İtibaren";
+
+"front_door" = "Ön kapı";
+
+"g4_change_wifi" = "Cep telefonu bir Wi-Fi ağına bağlı değil. Lütfen telefonunuzu bir Wi-Fi ağına bağlayın veya Wi-Fi adını manuel olarak girin.";
+
+"g4_change_wifi_tips" = "Cep telefonu Wi-Fi'a bağlı değil, lütfen telefonu bir Wi-Fi ağına bağlayın.";
+
+"gallery" = "Kütüphane";
+
+"garage" = "Garaj";
+
+"garden" = "Bahçe";
+
+"get_cloud_size" = "%@ Bulut depolama";
+
+"get_coupon_bottom" = "Kullanım kodunu al";
+
+"get_coupon_sec" = "Tebrikler, \"%@\"%@ aylık erişim elde ettiniz. Bu süre zarfında aşağıdaki hizmetlerden yararlanabilirsiniz:";
+
+"get_live_url_error" = "Canlı akış adresi alınırken bir hata ile karşılaşıldı.";
+
+"get_location_failed" = "Konum alınırken bir hata ile karşılaşıldı.";
+
+"get_location_static" = "Geçerli konumu otomatik olarak al";
+
+"get_new_pushes" = "Gerçek zamanlı olarak bildirim iletileri alın";
+
+"get_now" = "Şimdi alın";
+
+"get_phone_verify_code" = "Doğrulama kodu gönder";
+
+"get_policy_desc" = "Haklarınızı korumak için en son yasalara, düzenlemelere ve düzenleyici politikalara uygun olarak aşağıdaki güncellemeleri yaptık:";
+
+"get_started" = "Hemen Şimdi Başlayın!";
+
+"get_use_permission" = "İzin kodunu taramak için %@ kullanın.";
+
+"Ghz2.4" = "2.4 GHz";
+
+"Ghz5" = "5 GHz";
+
+"gif_ad_1" = "Ekstra Bulut Kayıt Depolama Alanı";
+
+"gif_ad_2" = "Akıllı Bildirim";
+
+"gif_ad_3" = "Özel Faaliyet Bölgesi";
+
+"go_album_download" = "Görüntülemek için albüme gidin >";
+
+"go_buy" = "Şimdi satın al";
+
+"go_buy_2" = "Şimdi kontrol et";
+
+"go_buy_plus" = "%@ Awareness'a abone olun";
+
+"go_live" = "Canlı videoyu izleyin";
+
+"go_on" = "Devam Et";
+
+"go_open" = "Şimdi etkinleştir";
+
+"go_set" = "Şimdi belirle";
+
+"go_system_settings" = "Sistem ayarlarına gidin >>";
+
+"go_to_bind" = "Şimdi bağla";
+
+"go_to_buy" = "Anladım, şimdi satın al";
+
+"good" = "Orta";
+
+"got_it" = "Anladım";
+
+"grant_location_permission" = "Konum erişimine izin ver";
+
+"guardian_read" = "(14 yaşından daha küçükseniz yasal vasiniz bilgilendirilmelidir ve sözleşmeyi okumalıdır)";
+
+"guest" = "Misafir kullanıcı";
+
+"guest_request" = "Misafir kullanıcı isteği";
+
+"guide_content_2" = "Canlı izleyin ve her zaman her yerde ziyaretçilerle konuşun";
+
+"guide_content_3" = "Yararlı bilgileri ulaşmak için verileri filtreleyin";
+
+"guide_content_4" = "Gereksiz dikkat dağıtıcılardan kurtulun";
+
+"guide_long_press_power_tips" = "\"Güç açık\" sesini duyduğunuzda bir sonraki adıma geçebilirsiniz.";
+
+"guide_long_press_power_tips_b0" = "Başlangıç sesini duyduğunuzda bir sonraki adıma geçebilirsiniz.";
+
+"guide_long_press_power_tips_s0" = "Kamerayı bir güç kaynağına bağladıktan sonra bir sonraki adıma geçebilirsiniz.";
+
+"guide_title_2" = "Canlı Akış";
+
+"guide_title_3" = "Akıllı Bildirim";
+
+"h1" = "2 saat";
+
+"h12" = "12 saat";
+
+"handler_success" = "Başarıyla işlendi.";
+
+"hao_to_invite" = "Paylaşılan cihazlar nasıl eklenir?";
+
+"has_account_and_login" = "Giriş yap";
+
+"have_no_device" = "Henüz herhangi bir cihaz eklemediniz.";
+
+"have_problem" = "Sorun mu yaşıyorsunuz?";
+
+"hear_beep" = "Ses duydum ya da ışık gördüm";
+
+"hear_device_power_on" = "\"Güç açık\" bildirimini duydum.";
+
+"hear_device_power_on_b0" = "%@ rotasyonunu tamamladı.";
+
+"hear_device_power_on_s0" = "Zaten bir güç kaynağına bağlı";
+
+"hear_device_voice" = "Sesi duydum.";
+
+"heard_qr_code" = "\"Tarama başarılı\" bildirimini duydum";
+
+"heard_scan_finished" = "\"Tarama başarılı oldu/tamamlandı\" bildirimini duydum";
+
+"heard_scan_qr_code" = "\"QR kodunu tara\" bildirimini duydum";
+
+"heard_scaning_sound" = "Bir bip sesi duydum";
+
+"help" = "Yardım";
+
+"help_center" = "SSS";
+
+"help_feedback" = "Yardım ve Geri bildirim";
+
+"help_guide" = "Yardım >>";
+
+"high" = "Yüksek";
+
+"high_cod" = "Yüksek Performanslı Kodlama";
+
+"hint_feedback" = "Size daha iyi yardım sağlayabilmemiz için lütfen sorunu tanımlarken en az 10 kelime uzunluğunda bir açıklama girin.";
+
+"hint_feedback_contact" = "İsteğinize bağlı olarak size geri döneceğiz.";
+
+"hold_qr_code_in_front" = "QR kodunu cihazınızın önünde tutun";
+
+"hold_speak" = "Konuşmak için bas";
+
+"home" = "Ev";
+
+"hot" = "Sıcak";
+
+"hot_country" = "Popüler ülke";
+
+"how_to_add_friend_camera" = "Uygulamanın ana sayfasına gidin, sağ üst köşedeki \"+\" işaretine tıklayın ve \"Arkadaşınızın cihazını ekleyin\" seçeneğini seçin.";
+
+"how_to_open_nightvision" = "\"Gece Görüş Ayarı -> Gece Görüş Modu\" seçeneğine gidin ve \"Beyaz ışık Modu\" seçeneğini seçin >";
+
+"howing_reduced" = "Bir gürültü algılandı ve ses seviyesi düşürüldü.";
+
+"human_tracking" = "İnsan Takibi";
+
+"human_tracking_2" = "%@ görüş alanındaki bir şahıs hareket ederse %@ hareketleri izleme başlayacaktır.";
+
+"i_have_read_above_content" = "Yukarıdaki tüm içerikleri okudum ve kabul ediyorum.";
+
+"id" = "KİMLİK";
+
+"if_storage_not_access" = "Canlı yayının daha hızlı bağlanabilmesini sağlamak için, oynatıcının temel bilgilerinin yerel olarak saklanması gerekir, bu yüzden telefonda depolama iznine%@ vermeniz önerilir.";
+
+"Ignore_version" = "Bu sürümü atla";
+
+"image_and_screen_shot" = "Görüntüler (isteğe bağlı, sorunun ekran görüntüsünü yükleyin)";
+
+"image_save_to_ablum" = "Görüntü telefon albümüne kaydedildi.";
+
+"indicator" = "Gösterge ışığı";
+
+"indicator_des" = "Gösterge ışığı etkinleştirildiğinde %@ çalışırken ışık yanacaktır.";
+
+"Indoor_motion_alarm" = "(Bu özellik iç mekan kullanımı için önerilmez)";
+
+"infrared_des" = "Kızılötesi ışık sayesinde daha net siyah beyaz görüntüler elde edilir.";
+
+"input_email_new" = "Yeni e-posta";
+
+"input_email_send" = "Lütfen bağlamak istediğiniz e-postayı girin. Size doğrulama kodunu göndereceğiz.";
+
+"input_new_email" = "Lütfen bağlamak istediğiniz yeni e-postayı girin. Size doğrulama kodunu göndereceğiz.";
+
+"input_new_phone" = "Lütfen bağlamak istediğiniz yeni telefon numarasını girin. Bir doğrulama kodu göndereceğiz.";
+
+"input_phone_number_new" = "Yeni telefon numarasını girin";
+
+"input_phone_number_simple" = "Telefon numarasını girin";
+
+"input_phone_number_you_bind" = "Lütfen bağlamak istediğiniz telefon numarasını girin. Bu telefon numarasına bir doğrulama kodu göndereceğiz.";
+
+"install_bracket_1" = "Braketi takın";
+
+"install_bracket_2" = "%@ öğesini istediğiniz yere monte etmek için %@ öğesini doğrudan düz bir yüzeye yerleştirebilir veya braketi duvara veya tavana sabitlemek için bir vida kullanabilir ve ardından %@ öğesini sabit tabana vidalayabilirsiniz.";
+
+"Install_on_shelf" = "%@ öğesini bir rafa veya başka bir düz yüzeye yerleştirebilir, duvara veya tavana monte edebilirsiniz.";
+
+"install_the_camera" = "%@ öğesini takın";
+
+"installation_guide" = "Kurulum kılavuzu";
+
+"installation_settings" = "Kurulum ayarları";
+
+"installation_suggestions" = "Kurulum önerileri";
+
+"installing" = "Yükleniyor...";
+
+"intelligent_recognition" = "Akıllı Tanıma";
+
+"inter_volume" = "İnterkom Sesi";
+
+"interconnect_srt" = "Ara bağlantı akışını destekleyin";
+
+"interconnected" = "Ara Bağlantılı";
+
+"interval_time" = "Bulut Soğutma Süresi Ayarla";
+
+"invite" = "Cihaz paylaşımı";
+
+"invite_info_des" = "Davetlinin %@ dosyasını indirip yüklemesi gerekir.";
+
+"invite_info_des_key_point" = "%@ uygulaması";
+
+"invite_title_des" = "Davetli canlı akışı ve kaydedilen videoları izleyebilir.";
+
+"invited_join_device" = "%@ izlemek için davet etti.";
+
+"ios.answer_bot.cell.text.inactivity_get_in_touch_message" = "Sohbet başlatın veya mesaj bırakın";
+
+"ios.answer_bot.text.label.ask_a_question" = "Lütfen sorununuzu açıklayın ve kamera modelini belirtin. Model ismi genellikle kameranın dış kabına yapıştırılmış etikette bulunur. Bazen bulmak için kabı çıkarmanız veya lastik tapayı açmanız gerekebilir. Model G0, CGXX (örneğin CG1), CBXX (örneğin CB1), JXJ-FA01 vb. Olabilir.";
+
+"ios.answer_bot.text.label.disabled" = "Kamera Bağlama Yardım Merkezine Hoş Geldiniz! Online personel servisi çalışma saatleri: 10.00-20.00 (SGT)/19.00-05.00 (PST). Lütfen sorununuzu açıklayın ve kamera modelini belirtin. Model ismi genellikle kameranın dış kabına yapıştırılmış etikette bulunur. Bazen bulmak için kabı çıkarmanız veya lastik tapayı açmanız gerekebilir. Model G0, CGXX (örneğin CG1), CBXX (örneğin CB1), JXJ-FA01 vb. Olabilir.";
+
+"ios.answer_bot.text.label.hi" = "Kamera Bağlama Yardım Merkezine Hoş Geldiniz! Online personel servisi çalışma saatleri: Singapur saatiyle 10.00-20.00 (SGT)/ 19.00-05.00 (SPT)";
+
+"ios.conversation.ui.chat.handover.message.selection" = "Personel servisine transfer";
+
+"ios.conversation.ui.chat.welcome_message.handover" = "TAMAM. Sorgunuzla ilgili yardımcı olabilecek birini bulacağım.";
+
+"ios.ZDKRequests.createRequest.leaveAMessage.title" = "Mesaj bırakın";
+
+"is_heard_scan_qr_code" = "\"QR kodunu tara\" bildirimini duydunuz mu?";
+
+"is_last_location" = "Burası son konum.";
+
+"is_playing" = "Oynatılıyor";
+
+"issue_1" = "Cihazın tarama modunda olup olmadığını kontrol edin (sürekli bir \"Ding Dong Ding Dong\" sesi yayar).";
+
+"issue_2" = "Kamerayı yönlendiriciye mümkün olduğunca yakın tutun.";
+
+"join_friend_device" = "Arkadaşınızın Cihazını Ekleyin";
+
+"join_new_device" = "Arkadaşınızın kamerasına erişin";
+
+"keep_phone_camera_close" = "Cihaz bağlanıyor, lütfen cihazı cep telefonuna yakın tutun.";
+
+"keep_router" = "Cihazı yönlendiriciye yakın tutun";
+
+"know" = "Evet";
+
+"know_vehicle_popwindow" = "Bu aracı tanıyor musunuz?";
+
+"known_vehicle" = "Bilinen Araç";
+
+"language" = "UYGULAMA Dili";
+
+"later" = "sonra";
+
+"latest_version" = "Güncel";
+
+"learn_how_use" = "Nasıl kullanılacağını öğrenin";
+
+"learn_more" = "Daha fazla bilgi >>";
+
+"learn_more_2" = "Daha fazla bilgi >>";
+
+"level_sensitivity" = "%@";
+
+"library_feedback" = "Lütfen aşağıdaki seçeneklerden geri bildirim almak istediğiniz içerikleri seçin (Çok seçenekli):";
+
+"library_feedback_failed" = "Üzgünüz, geri bildirim gönderilemedi. Lütfen yeniden deneyin.";
+
+"library_feedback_not_complete" = "Geri bildirim tamamlanmadı. Geri bildirim göndermeden bu sayfadan ayrılmak istediğinizden emin misiniz?";
+
+"library_feedback_success" = "Geri bildirim başarıyla gönderildi, teşekkür ederiz.";
+
+"library_tips1" = "Mevcut liste etkinlik sırasına göre düzenlenmiştir. Yakındaki tüm videolar birleştirilir, böylece belirli bir gündeki genel durumu kolayca kontrol edebilirsiniz.";
+
+"library_tips2" = "Bu etkinlikte \"Şahıs\" içeren iki video ve \"Araç\" içeren bir video bulunmaktadır.";
+
+"library_tips3" = "Listeyi video sırasına göre düzenlemek için buraya dokunun.";
+
+"library_tips4" = "Bu gün 1 etkinlik ve 2 video var.";
+
+"light_setting" = "Aydınlatma Ayarları";
+
+"like_device_name" = "Bu %@ nasıl adlandırmak istersiniz?";
+
+"limit_reached" = "Sınıra ulaşıldı";
+
+"live" = "Canlı";
+
+"live_alarm" = "%@, %@ cihazının sesli alarmını tetikledi.";
+
+"live_feed" = "Canlı akışı görüntüle";
+
+"live_issue" = "Canlı akış hatası/çevrimdışı olma sorunu";
+
+"live_network_timeout" = "Sunucu bağlantı zaman aşımına uğradı";
+
+"live_not_start" = "Canlı akış henüz başlamadı.";
+
+"live_play" = "Canlı";
+
+"live_play_finish" = "SD kart video oynatma tamamlandı.";
+
+"live_resolution" = "%@ çözünürlüğü değiştirdi.";
+
+"live_server_timeout" = "Sunucu bağlantı zaman aşımına uğradı";
+
+"live_stream_error" = "Canlı akış zaman aşımına uğradı";
+
+"live_stream_timeout" = "Canlı akış zaman aşımına uğradı";
+
+"live_viewers_limit" = "Canlı akış izleyici sınırına ulaştı, lütfen daha sonra tekrar deneyin.";
+
+"live_white_light" = "%@ beyaz ışığı açtı.";
+
+"livingroom" = "Oturma odası";
+
+"load_message_error" = "Video yüklenemedi.";
+
+"load_more_title" = "Yenilemek için çekin";
+
+"loading" = "Yükleniyor...";
+
+"loading_failed" = "Yüklenemedi";
+
+"Local_network" = "Yerel Ağ";
+
+"Local_network_tips1" = "Yerel Ağı Etkinleştir";
+
+"Local_network_tips2" = "Telefonun \"Ayarlar\" bölümünden izni etkinleştirin \ n canlı akışa erişmek için cep telefonunuzun cihaza bağlamasına izin verin";
+
+"locating" = "Yerelleştirme devam ediyor...";
+
+"location" = "Konum";
+
+"location_2" = "Konumu belirle";
+
+"location_address_des" = "Ülke/Bölge\nEyalet/İl\nŞehir";
+
+"location_create_success" = "Konum başarıyla oluşturuldu.";
+
+"location_error" = "Konum hatası";
+
+"location_management" = "Konum Yönetimi";
+
+"location_name" = "Konum adı";
+
+"location_name_error" = "Konum adı biçimi hatası.";
+
+"location_name_exist" = "Bu konum adı zaten var, lütfen düzenleyin ve tekrar deneyin.";
+
+"location_name_required" = "Konum adı gerekli";
+
+"location_not_" = "Konum adı boş olamaz.";
+
+"location_not_save" = "Geçerli konum bilgileri kaydedilsin mi?";
+
+"location_permission" = "Konum erişimine izin ver";
+
+"location_permission_help_adding" = "Cihazı bağlamak için telefon sistemi ayarlarından konum erişimine izin verin.";
+
+"location_permission_tips" = "Yakındaki Wi-Fi ağlarının listesini almak için telefon ayarlarından konum erişimine izin verin.";
+
+"location_permission_word" = "Telefonunuza bağlı Wi-Fi şebekesinin otomatik olarak girilebilmesi için lütfen konum erişimine izin verin.";
+
+"location_save_success" = "Konum başarıyla kaydedildi.";
+
+"location_selection" = "Konumu seçin";
+
+"location_service" = "Konum hizmeti";
+
+"location_setting" = "Konum";
+
+"log_in_tips" = "%@ öğesine hoş geldiniz";
+
+"login_expired" = "Giriş süresi doldu, lütfen tekrar giriş yapın.";
+
+"login_other_device" = "Bu hesap şu anda başka bir cep telefonunda oturum açmış durumda. Oturumu siz açmadıysanız tekrar oturum açtıktan sonra şifrenizi değiştirmenizi öneririz.";
+
+"login_way_password" = "Şifre ile giriş yap";
+
+"login_way_verify_code" = "Doğrulama koduyla giriş yap";
+
+"logout" = "Oturumu kapat";
+
+"logout_des" = "Oturumu kapatmak istediğinizden emin misiniz?";
+
+"long_press_reboot" = "Cihazı yeniden başlatmak için yeniden başlat düğmesine 3 saniye basılı tutun";
+
+"long_press_reboot_directions" = "Yeniden başlatma düğmesinin deliğini bulun, cihazı yeniden başlatmak için pakete dahil olan pimle veya sivri uçlu bir nesneyle 3 saniye basılı tutun. Yeniden başlatılmazsa açma sesini duyana veya gösterge ışığının yandığını görene kadar açmak için açma/kapama düğmesine 3 saniye basılı tutmanız gerekir.";
+
+"long_press_reset_button" = "Kameranın tarama moduna girmesi için lütfen sıfırlama düğmesine 3 saniye uzun basın";
+
+"long_press_the_power_key_b0" = "Açmak için güç kaynağına bağlayın";
+
+"loss_aifunction" = "Yapay Zeka özellikleri artık mevcut değil (Faaliyet Bölgesi, Akıllı Bildirim)";
+
+"low" = "Düşük";
+
+"low_battery_warning" = "%@ düşük pil modunda, lütfen kameranızı şarj edin.";
+
+"low_power" = "%@ düşük pil nedeniyle kapandı. Lütfen şarj edin.";
+
+"mac_address" = "Wi-Fi MAC'i";
+
+"mail_phone_register_des" = "Lütfen cep telefonu numaranızı/e-postanızı girin. Size bir doğrulama kodu göndereceğiz.";
+
+"mail_registered" = "Girdiğiniz bu e-posta zaten kayıtlı, lütfen kayıt olmak yerine giriş yapın.";
+
+"make_sure_cemera_on" = "Lütfen bir başlatma sesi duyana veya gösterge ışığının yandığını görene kadar güç düğmesine basılı tutun veya bir güç kaynağı bağlayın.";
+
+"manual_f" = "Manuel";
+
+"manual_input" = "Manuel giriş";
+
+"mark" = "İşaretle";
+
+"mark_first" = "İşaretli içerik yok, lütfen önce aşağıdaki araç galerilerinden bir şey işaretleyin.";
+
+"marked_cancle" = "İşaret başarıyla kaldırıldı.";
+
+"marked_fail" = "İşaretleme başarısız oldu, lütfen yeniden deneyin.";
+
+"marked_success" = "Başarıyla işaretlendi.";
+
+"marked_vehicle" = "Araç işaretlendi";
+
+"may_be_connection" = "%@ sistemine bağlanılamıyor, lütfen ağ bağlantınızı kontrol edin.";
+
+"mcu_version" = "MCU Sürümü";
+
+"medium" = "Orta";
+
+"membership_expire" = "Akıllı hizmetin paketi %@ tarihinde %@ sürümüne geçiş yapacaktır. İhtiyaç duyuluyorsa lütfen videoları indirin.";
+
+"membership_tip" = "%@ zaman aşımına uğradı. Yapay zeka özellikleri artık %@ sisteminde kullanılamayacak ve bulut kayıtlarının depolaması 7 günlük kapasiteye düşürülecek. İhtiyacınız varsa lütfen hizmeti tekrar satın alın.";
+
+"merge" = "Birleştir";
+
+"merge_push" = "Birleşik İleti";
+
+"merge_push_tips" = "Birleşik ileti etkinleştirildikten sonra, kısa süre içinde ardışık bir şekilde alınan videolar birleştirilecek ve bir araya getirilecek, bu da tüm ardışık hareketleri hızlı bir şekilde görüntülemenize yardımcı olacak (etkinleştirildikten sonra, tüm ekli cihazlarınız için geçerli olacaktır).";
+
+"merge_push_tips1" = "Birleşik ileti etkinleştirildikten sonra, kısa süre içinde ardışık bir şekilde alınan videolar birleştirilecek ve bir araya getirilecek, bu da tüm ardışık hareketleri hızlı bir şekilde görüntülemenize yardımcı olacak (etkinleştirildikten sonra, tüm ekli cihazlarınız için geçerli olacaktır).";
+
+"merge_tips" = "Bir araç galerisinde en fazla 20 fotoğraf olabilir. Birleştirildikten sonra hala 20'den fazla fotoğraf varsa, fotoğrafların bir kısmı silinir.";
+
+"merge_vehicles" = "Bu araç galerilerini birleştirmek istediğinizden emin misiniz?";
+
+"merged_failed" = "Birleştirme başarısız oldu, lütfen yeniden deneyin.";
+
+"merged_successfully" = "Başarıyla birleştirildi";
+
+"microphone" = "Mikrofon";
+
+"microphone_permission" = "Mikrofona erişime izin ver";
+
+"microphone_permission_tips" = "İki yönlü ses özelliğini kullanmak için telefon ayarlarından Mikrofonu etkinleştirin.";
+
+"migration_statement_1" = "Uygulama değişikliği bildirimi";
+
+"migration_statement_2_1" = "İlgili düzenlemelere uyum sağlamak ve Çin'deki kullanıcılara daha iyi hizmet sunmak için Example Uygulaması, %@ tarihinden itibaren Example uygulamasına dönüşecektir.";
+
+"migration_statement_2_2" = "Lütfen mümkün olan en kısa sürede Example uygulamasını indirin. Example uygulamasına Example hesabınızla oturum açabilirsiniz. Tüm cihaz bilgileriniz ve Awareness servis durumunuz korunacak ve onlarla devam edebileceksiniz.";
+
+"migration_statement_2_3" = "Son kullanma tarihinden sonra Example Uygulaması artık kullanılamayacak. Daha fazla bilgi >>";
+
+"migration_statement_3" = "Verdiğimiz rahatsızlıktan dolayı özür dileriz, Example size güvenli günler diler!";
+
+"migration_statement_3_android" = "<![CDATA[Verdiğimiz rahatsızlıktan dolayı özür dileriz, <strong>Example</strong> hesabınızı korumaya devam edecek! ]]>";
+
+"migration_statement_5" = "Bir dahaki sefere hatırlat";
+
+"migration_statement_6_1" = "İlgili düzenlemelere uyum sağlamak ve Çin'deki kullanıcılara daha iyi hizmet sunmak için Example Uygulaması, %@ tarihinden itibaren Example uygulamasına dönüşecektir.";
+
+"migration_statement_6_2" = "Example uygulaması artık kullanılamayacaktır. Lütfen mümkün olan en kısa sürede Example uygulamasını indirin. Example uygulamasına Example hesabınızla doğrudan oturum açabilirsiniz. Tüm cihaz bilgileriniz ve Awareness servis durumunuz korunacak ve onları kullanmaya devam edebileceksiniz. Daha fazla bilgi >>";
+
+"migration_statement_7" = "İlgili düzenlemelere uyum sağlamak ve Çin'deki kullanıcılara daha iyi hizmet sunmak için Example Uygulaması, %@ tarihinden itibaren Example uygulamasına dönüşecektir. Lütfen Example uygulamasını indirin ve yeni bir hesap açın. İşbirliğiniz için teşekkür ederiz.";
+
+"migration_statement_7_android" = "<![CDATA[İlgili düzenlemelere uyum sağlamak ve Çin'deki kullanıcılara daha iyi hizmet sunmak için Example Uygulaması, <font color=\"#5AC4A7\">%@</font> tarihinden itibaren <strong>Example</strong> uygulamasına dönüşecektir. Lütfen <strong>Example</strong> uygulamasını indirin ve yeni bir hesap açın. İşbirliğiniz için teşekkür ederiz.]]>";
+
+"min30" = "30 dakika";
+
+"mine" = "Kullanıcı";
+
+"missed" = "Okunmamış";
+
+"model_number" = "%@ Model";
+
+"momo_payment" = "MoMo Pay";
+
+"monday" = "P";
+
+"monday_2" = "Pazartesi";
+
+"month_1" = "Ocak.";
+
+"month_10" = "Eki.";
+
+"month_11" = "Kas.";
+
+"month_12" = "Ara.";
+
+"month_2" = "Şub.";
+
+"month_3" = "Mar.";
+
+"month_4" = "Nis.";
+
+"month_5" = "May.";
+
+"month_6" = "Haz.";
+
+"month_7" = "Tem.";
+
+"month_8" = "Ağu.";
+
+"month_9" = "Eyl.";
+
+"more" = "Daha fazla";
+
+"more_data" = "Daha fazla veri yükle";
+
+"more_event" = "%@ ek bildirim";
+
+"more_info" = "Daha fazla bilgi";
+
+"more_pre_location" = "En fazla %d olacak şekilde önceden ayarlanmış pozisyonlar eklenebilir.";
+
+"more_selection" = "Daha fazla seçenek";
+
+"motion_alarm" = "Hareket algılandığında %@ otomatik olarak bir alarm çalacak.";
+
+"motion_detection" = "Hareket algılama";
+
+"motion_detection_des" = "Hareket Dedektörü açıkken %@, nesnelerin hareketleri tarafından tetiklenir ve ortamdaki değişiklikleri her zaman tespit etmenize yardımcı olmak için bir video kaydeder.";
+
+"motion_issue" = "Hareket Algılama sorunu";
+
+"motion_sport_auto_is_open" = "Hareket İzleme özelliği açıkken kumanda çubuğu denetleyicisi kullanılamaz.";
+
+"motion_tracking" = "Hareket İzleme";
+
+"motion_tracking_open" = "Hareket İzleme açık açıkken %@, herhangi bir hareketi algıladıktan sonra kaydı otomatik olarak takip edecektir.";
+
+"move_app_name" = "Example";
+
+"mtn_desc" = "Daha fazla bilgi için lütfen web sitesine gidin.";
+
+"mtn_go_momo_or_wait" = "Lütfen ödemeyi tamamlamak için Momo'ya gidin. Ödeme tamamlandıysa lütfen bir süre bekleyin.";
+
+"mtn_momo_payment_title" = "MoMo hesabınızla, Askari %@ ödeyin. Telefon numaranızı girin:";
+
+"mtn_mpesa_payment" = "M-PESA Pay";
+
+"multi_choice" = "Yapay Zeka Analizi (Çok seçenekli)";
+
+"my_device" = "Cihazım";
+
+"my_house" = "Evim";
+
+"n_device_use_this_location" = "Bu konumda zaten yerleştirilmiş %d cihazı var. Lütfen cihazın konumunu değiştirin.";
+
+"name_required" = "Bir ad girin";
+
+"nest_day" = "Ertesi gün";
+
+"network_error" = "Ağ hatası";
+
+"network_error_our_server" = "Sunucu bağlantısı zaman aşımına uğradı";
+
+"network_low" = "Ağ bağlantısı zayıf, lütfen tekrar deneyin.";
+
+"network_name" = "Wi-Fi Adı (SSID)";
+
+"network_timeout" = "Ağ bağlantısı zaman aşımına uğradı.";
+
+"network_unavailable_and_try" = "Kullanılabilir ağ bağlantısı yok. Lütfen yeniden deneyin.";
+
+"new_bind_device_name" = "%@ için bir ad ve konum belirleyin";
+
+"new_device" = "Yeni cihaz";
+
+"new_feature" = "Güncelleme içerik(leri)：";
+
+"new_location" = "Yeni Konum";
+
+"new_password" = "Yeni Şifre";
+
+"new_phone" = "Yeni Telefon Numarası";
+
+"new_version" = "Yeni sürüm:";
+
+"next" = "Sonraki Adım";
+
+"next_format" = "Biçimlendirme görevi, geçerli görevden sonra gerçekleştirilecek.";
+
+"night_mode_red" = "Kızılötesi modu";
+
+"night_mode_white" = "Beyaz ışık modu";
+
+"night_version" = "Otomatik Gece Görüşü";
+
+"night_version_setting" = "Gece Görüş Ayarı";
+
+"night_version_tips" = "Gece görüşü açıkken %@, loş koşullarda görüntüleme performansını artırmak için gece görüntülemeyi destekleyecektir.";
+
+"no" = "Hayır";
+
+"no_access" = "Bu kameraya erişim yok. Lütfen tekrar ekleyin veya yöneticisinden kamera erişimi isteyin.";
+
+"no_camera" = "Cihaz yok";
+
+"no_camera_auth" = "Kamera izni yok. Lütfen telefon ayarlarında etkinleştirdikten sonra tekrar deneyin >>";
+
+"no_item_selected" = "Seçili öğe yok";
+
+"no_locations" = "Konum bilgisi yok";
+
+"no_network" = "Ağ yok";
+
+"no_network_cannot_set" = "%@ çevrimdışı olduğu için şimdilik ayar yapılamaz.";
+
+"No_new_gallery" = "Yeni araç galerisi yok";
+
+"no_password" = "Şifre alanı doldurulmadı";
+
+"no_position" = "Önceden ayarlanmış konum yok, eklemek için lütfen kamera yöneticisine başvurun.";
+
+"no_qr_code" = "QR kodu bulunamadı, lütfen tekrar deneyin.";
+
+"no_response" = "%@ yanıt vermiyor";
+
+"no_resumable_order" = "Geri alınabilir emir yok";
+
+"no_select_timezone" = "Saat dilimi seçilmedi.";
+
+"no_supper_5g" = "Wi-Fi bağlantınız desteklenmeyen 5 GHz kullanıyor gibi görünüyor. Lütfen 2.4 GHz Wi-Fi ağı kullandığınızdan emin olun.";
+
+"no_tip" = "Bugün tekrar gösterme";
+
+"no_wifi_nearby" = "Yakınlarda Wi-Fi ağı yok.";
+
+"no_wifi_signal" = "Sinyal yok";
+
+"nocamera_spt_alexa" = "Şu anda hiçbir cihaz Alexa'yı desteklemiyor";
+
+"nodata_libary_tip" = "O gün içinde başka kayıt yok.";
+
+"nodata_tip" = "Daha fazla veri yok";
+
+"noProduct" = "Bu öğe kaldırıldı.";
+
+"not_account_alexa_tips" = "Hesabınız henüz Alexa'ya bağlanmadı. Alexa uygulamasını açabilir ve Alexa'ya \"Skills\" ekleyerek hesabınızı bağlayabilirsiniz.";
+
+"not_allow" = "İzin verilmez";
+
+"not_found" = "Bu sayfa mevcut değil veya başka bir sorun var.";
+
+"not_hear_scan_qr_code" = "\"QR kodunu tara\" bildirimini duymadım.";
+
+"not_interconnected" = "Ara bağlantı kuruluyor...lütfen bekleyin";
+
+"not_know" = "Hayır";
+
+"not_logged_in" = "Oturum açılmadı";
+
+"not_open" = "Kapat";
+
+"not_open_now" = "Şimdilik etkinleştirme";
+
+"not_show_tips_any_more" = "Bunu bir daha gösterme";
+
+"not_support_5g" = "Bu kamera sadece 2.4 GHz Wi-Fi ağlarını destekler. Mevcut ağınız 5 Ghz.";
+
+"not_support_vehicle_marking" = "Listedeki cihazlar şu anda araç işaretleme işlevini desteklemiyor, daha fazla bilgi edinmek için dokunun >>";
+
+"not_use" = "0 Faaliyet Bölgesi";
+
+"notication_no_end" = "Etkinlik henüz bitmedi. Videonun tamamını daha sonra izlemek için lütfen Kütüphaneye göz atın.";
+
+"notification_des" = "Bildirim etkinleştirildiğinde %@, herhangi bir anormal etkinlik hakkında sizi uyarmak için tetiklenen kayıtların bildirimlerini gönderir.";
+
+"notification_des_tips" = "%@ hareket algıladığında sizi bilgilendirebilir. Lütfen almak istediğiniz bildirim türlerini seçin.";
+
+"notification_detection_people" = "Şahıs";
+
+"notification_no_item_choose" = "Nesne kategorisi seçilmezse Sınıflandırma özelliği kullanılamaz. Lütfen en az bir öğe seçin.";
+
+"notification_push" = "Bildirim İletileri";
+
+"notification_scuess_offline" = "%@ çevrimiçi olduğunda etkili olur.";
+
+"notification_sec" = "Sona erdikten sonra, siz:";
+
+"notification_setting" = "Bildirim ayarları";
+
+"notification_to_choose_item" = "Şimdi seç";
+
+"notification_warm_des" = "%@ hareketleri algıladığında size bildirim gönderecek. Bu ayar, bildirimlerin hızlı gelmesini sağlayabilir ancak bazen çok fazla bildirim gönderebilir.";
+
+"notifications" = "Bildirim";
+
+"notifications_for_marked" = "Yalnızca işaretli araçların bildirim iletileri";
+
+"notifications_for_two" = "İşaretli olan ve olmayan araçların bildirim iletileri";
+
+"notifications_for_unmarked" = "Yalnızca işaretli olmayan araçların bildirim iletileri ";
+
+"notifications_permission" = "Bildirim erişimini etkinleştir";
+
+"NSCameraUsageDescription" = "Kameraya erişim etkin değilse QR kodunu tarayamazsınız.";
+
+"NSLocalNetworkUsageDescription" = "Yerel Ağa erişim etkin değilse canlı akış izleyemezsiniz.";
+
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Konuma erişim etkin değilse uygulama geçerli konumu otomatik olarak belirleyemez.";
+
+"NSLocationWhenInUseUsageDescription" = "Cep telefonunuza bağlı olan Wi-Fi'yı otomatik olarak doldurmak için Konuma erişime izin verin böylelikle elde edilen Wi-Fi bilgileri kameranızı uygulamaya eklemek için kullanılacaktır.";
+
+"NSMicrophoneUsageDescription" = "Mikrofona erişim etkin değilse iki yönlü ses özelliğini kullanamazsınız.";
+
+"NSPhotoLibraryUsageDescription" = "Fotoğraflara erişim etkin değilse görseller veya videoları telefon albümünüze kaydedemezsiniz.";
+
+"num_new_message" = "Yeni mesaj";
+
+"number_az" = "%@ Faaliyet Bölgeleri";
+
+"off_time" = "(Süre: %@)";
+
+"office" = "Ofis";
+
+"offline" = "Çevrimdışı";
+
+"offline_reconnect" = "%@ çevrimdışı, lütfen yeniden bağlayın.";
+
+"ok" = "TAMAM";
+
+"old_password" = "Eski Şifre";
+
+"one_az" = "1 Faaliyet Bölgesi";
+
+"online" = "Çevrimiçi";
+
+"only_video3" = "1 video var.";
+
+"only_video4" = "%@ video var.";
+
+"open_bluetooth" = "Cihazı hızlı bir şekilde bağlamak için Bluetooth'u açın.";
+
+"open_bluetooth_bonding" = "\"%@\" öğesinin cihaza daha kolay bağlamasına ve eşleşmesine izin vermek için Bluetooth'u açın.";
+
+"open_bluetooth_help_adding" = "Telefonun bluetooth'u kapalı. Cihazı hızlı ve kolay bir şekilde eklemek için açın.";
+
+"open_fail_retry" = "Ayar başarısız oldu, lütfen tekrar deneyin.";
+
+"open_led" = "Açık";
+
+"open_location_Info" = "Wi-Fi bilgilerini otomatik olarak doldurmak için \"Konum bilgisi\" erişimini açın.";
+
+"open_location_service" = "Konum Servislerini Aç";
+
+"open_location_wifi" = "Geçerli Wi-Fi ağ adını Konum Servisleri aracılığıyla otomatik olarak edinin (önerilir) veya Wi-Fi adını manuel olarak girin (büyük/küçük harfe duyarlı).";
+
+"open_smart" = "%@ Awareness'ı Dene";
+
+"open_wifi" = "Wi-Fi'yi açın";
+
+"open_wifi_word" = "Yakındaki kullanılabilir ağları aramak için \"Wi-Fi\" özelliğini açın.";
+
+"opened" = "Açık";
+
+"options_include" = "içerir";
+
+"or" = "veya";
+
+"ota_failed_low_power" = "Pil zayıf olduğundan yükseltme tamamlanamadı. Lütfen şarj ettikten sonra yeniden yükseltin";
+
+"other" = "Diğerleri";
+
+"other_error_with_code" = "Bir şeyler yanlış oldu. Lütfen sonra tekrar deneyiniz.";
+
+"other_payment_not_detected" = "%@ ödemesi algılanmadı. Lütfen tekrar satın almadan önce ödeme kanalının mevcut olduğunu onaylayın.";
+
+"other_plans" = "Diğer %@ Awareness";
+
+"other_plans_des" = "Geçerli %@ Awareness aboneliği sona erdikten sonra satın alma işlemini yenilemezseniz otomatik olarak bir sonraki plana geçer.";
+
+"package_detained" = "Bir paket teslim edildi";
+
+"package_down" = "Yeni bir paket teslim edilmiş gibi görünüyor";
+
+"package_guide" = "Paket Tespiti nasıl daha doğru hale getirilir?";
+
+"package_guide_five" = "Lütfen Bildirim Ayarları / Akıllı İleti bölümünden paketi seçmeyi unutmayın.";
+
+"package_guide_four" = "Paket seç";
+
+"package_guide_four_tips" = "Lütfen paketin %@ görüş alanında açıkça görülebildiğinden ve diğer nesneler tarafından engellenmediğinden emin olun.";
+
+"package_guide_four_tips_2" = "Geceleri veya yetersiz ışık durumunda, algılama yeteneği azalır. Lütfen esas olarak gün içindeki veya yeterli ışık koşulları altındaki algılama sonuçlarına bakın.";
+
+"package_guide_four_tips_3" = "Paket uzun süre yerinde kalırsa algılama yeteneği etkilenecektir. Paketi bildirimini aldıktan sonra zamanında almanız önerilir.";
+
+"package_guide_one" = "Kurulum konumu";
+
+"package_guide_six" = "Paket alanı";
+
+"package_guide_six_1" = "Paketi kameranın görüş alanının ortasına yerleştirmenizi veya kapıda yerde bir paket konumu belirleyerek kuryeye paketi içine koymasını söylemenizi öneririz.";
+
+"package_guide_six_2" = "Aynı zamanda, paketin tanıma doğruluğunu iyileştirmek için paketin yerdeki konumuna denk gelecek şekilde video ekranında paketin görünebileceği alanı çerçeveleyin.";
+
+"package_guide_six_3" = "İpuçları: Minimum paket algılama boyutu şudur: 8x10x1 inç (20x25x2.5 cm). Minimum boyuttan daha küçük bir paketi tespit etmek zor olabilir.";
+
+"package_guide_three" = "%@ görüş";
+
+"package_guide_two" = "%@ cihazınızı yaklaşık 8 feet (2,5 m) yüksekliğe yerleştirmeniz ve kapınızı ile paketin bulunduğu alanı net bir şekilde görebilmesi için eğmeniz önerilir.";
+
+"package_guide_two_2" = "Paket algılama işlevinin iç mekanlarda veya aşırı karmaşık bir ortamda kullanılması önerilmez.";
+
+"package_guide_two_3" = "%@ cihazınızı şarj etmek için veya %@ cihazınızın yerini değiştirmek için cihazının konumunu değiştirdikten sonra, paket alanının doğru olup olmadığını yeniden kontrol etmeyi unutmayın.";
+
+"package_guide_two_4" = "Aynı zamanda, paket ile %@ arasındaki mesafe 10 feet'i (3 m) geçmemelidir.";
+
+"package_scenes" = "Paket tanıma doğruluğu hala en doğru seviyesinde değildir, bu nedenle, sürekli olarak optimize edilmektedir. İdeal olarak, zeminden yaklaşık 7 fit (2,1 m) yükseklikte aşağı doğru eğik bir görüş açısına sahip standart bir ayarda kullanılmalıdır.";
+
+"package_tag" = "Paket";
+
+"package_tips" = "%@, paketin alındığını ve koyulduğunu algıladığında, size bir mesaj gönderir.";
+
+"package_up" = "Bir paket yerinden alınmış gibi görünüyor";
+
+"page_expired" = "Bu sayfanın süresi doldu. Lütfen yeniden deneyin.";
+
+"password_code_error" = "Şifre veya doğrulama kodu yanlış.";
+
+"password_incorrect" = "Şifre yanlış. Lütfen şifreyi onaylayın.";
+
+"password_or_code_invalid" = "Lütfen biçim gereksinimlerini tekrar kontrol edin.";
+
+"pay_attention_data" = "Kullanılabilir Wi-Fi ağı olmadığında lütfen mobil veri kullanımınıza dikkat edin.";
+
+"pay_scuess" = "%@ Awareness ödemesi başarılı. Planın izinlerini kontrol etmek için lütfen kişisel merkezinize gidin.";
+
+"payment_auto_pay" = "Aylık abone";
+
+"payment_choose_buy_time" = "Süre seçin";
+
+"payment_choose_vip_item_first" = "Lütfen önce öğeyi seçin";
+
+"payment_cloud_save" = "%@ Awareness";
+
+"payment_current_vip" = "%@";
+
+"payment_download_it" = "Hemen indir";
+
+"payment_generate_order" = "Siparişi gönder";
+
+"payment_pay" = "Siparişi öde";
+
+"payment_pay_failed" = "Ödeme başarısız oldu, lütfen tekrar deneyin.";
+
+"payment_pay_failed_totally" = "Ödeme başarısız oldu";
+
+"payment_pay_success" = "Ödeme başarılı";
+
+"payment_play_store_fail" = "Ödeme başarısız oldu, giriş durumunuzu kontrol etmek için lütfen Play Store'a gidin.";
+
+"payment_please_choose_time" = "Kullanım süresini seçin";
+
+"payment_price" = "<![CDATA[<font><small>%@</small></font> <font><big>%.2f</big></font>]]>";
+
+"payment_product_already_paid" = "Bir %@ Awareness seçeneğini zaten satın aldınız. Lütfen tekrar satın almayın.";
+
+"payment_product_not_exist" = "Bu öğe yok.";
+
+"payment_to_buy" = "Şimdi öde";
+
+"payment_user_cancel" = "İptal edildi";
+
+"payment_verifying" = "%@ doğrulanıyor...";
+
+"payment_vip_update" = "Yükselt";
+
+"pem_des" = "Canlı akışı ve kayıttan video izleyin";
+
+"permission" = "İzinler";
+
+"permission_dialog_message_get_camera" = "Erişim yetkisi yoksa QR kodunu tarayamazsınız.";
+
+"permission_dialog_message_get_location" = "Konum erişimine izin verilmediyse kullanılan Wi-Fi bilgilerini otomatik olarak alamazsınız.";
+
+"permission_dialog_message_get_mircrophone" = "Mikrofon erişimi yetkisi yoksa sesli arama yapamazsınız.";
+
+"permission_dialog_message_get_storage" = "Uygulamayı kullanmak için depolama erişimi gereklidir.";
+
+"permission_dialog_title" = "%@, %@ erişimi istiyor.";
+
+"person_alerts" = "İnsan Hareketi";
+
+"person_alter_tips" = "Yalnızca insan hareketi olursa \"Birisi tespit edildi\" bildirimini alacaksınız. Bildirim daha spesifik ve daha seyrek olduğu için biraz gecikebilir.";
+
+"phone_already_register" = "Bu telefon numarası zaten var. Bunun yerine oturum açmayı deneyin.";
+
+"phone_no_net" = "Telefonunuzun ağ bağlantısı yok.";
+
+"phone_number" = "Telefon numarası";
+
+"phone_number_bind_success" = "Telefon numarası başarıyla bağlandı.";
+
+"phone_number_change_success" = "Telefon numarası başarıyla değiştirildi.";
+
+"phone_number_invalid_tips" = "Lütfen telefon numarasını doğru biçimde girin.";
+
+"phone_weak_network_short" = "Mobil ağ kullanılamıyor. Lütfen ağ bağlantısını kontrol edin.";
+
+"photos" = "Fotoğraflar";
+
+"photos_permission" = "Fotoğraf erişimine izin ver";
+
+"photos_permission_tips" = "Medya dosyalarını depolamak için telefon sistem ayarlarından fotoğraf erişimine izin verin.";
+
+"plan_basic" = "Basic";
+
+"plan_common" = "Aboneliksiz";
+
+"plan_expires" = "%@ içinde süresi doluyor";
+
+"plan_plus" = "Plus";
+
+"plan_pro" = "Pro";
+
+"play_next_event" = "Sonraki etkinliği oynat";
+
+"play_previous_event" = "Önceki etkinliği oynat";
+
+"playback_is_living_now" = "Canlı akış";
+
+"playback_video" = "Kayıttan video oynatım";
+
+"player_error" = "Video akışı hatası";
+
+"please_install_playstore" = "Ödemeyi tamamlamak için Play Store'u kullanmanız gerekiyor.";
+
+"please_open_location_service" = "Lütfen telefonunuzun sistem ayarlarından \"Konum Servisleri\" seçeneğini açın.";
+
+"please_open_permission" = "Lütfen kayan pencere seçeneğini açın.";
+
+"please_pay_vip_first" = "Akıllı İleti'yi kullanmak için Awareness Planını satın almanız gerekir";
+
+"please_pay_vip_first_2" = "Bu özelliği kullanmak için Awareness Planını satın alın";
+
+"please_read_policy_and_agree" = "Lütfen dikkatlice okuyun ve şartları okuyup kabul ettiğinizi belirtmek için \"Kabul Et ve Devam Et\" seçeneğine tıklayın.";
+
+"please_retry" = "Yeniden dene";
+
+"please_scan_qr_code_first" = "Lütfen önce QR kodunu tarayın";
+
+"please_select" = "Lütfen seçin";
+
+"please_turn_on_motion_detection" = "Bu özelliği kullanmak için Hareket Algılama özelliğini açmanız gerekir";
+
+"please_turn_on_wifi_setting" = "Lütfen telefon ayarlarınızdan Wi-Fi'ı etkinleştirin.";
+
+"plugin_camera" = "Fişe takın";
+
+"plugin_camera_tips" = "Lütfen cihazdan bir uyarı sesi duyana ve cihaz rotasyonu tamamlayana kadar bir güç kaynağına bağlayın.";
+
+"position_deleted" = "Başarıyla silindi. Artık yeni pozisyon eklenebilir.";
+
+"position_tips" = "Sık izlediğiniz pozisyonları ayarlarsanız istediğiniz zaman tek bir tıklama ile onları bulabilirsiniz.";
+
+"postal_code" = "Posta kodu";
+
+"pre_location_max_5" = "Sadece beş pozisyon eklenebilir.";
+
+"pre_position_add" = "Yeni pozisyon";
+
+"preset_location" = "Pozisyon";
+
+"privacy_policy" = "Gizlilik Politikası";
+
+"problem_and_feedback" = "Sorular ve yorumlar";
+
+"prompt" = "Yardım";
+
+"prompt_volume" = "Ses seviyesi";
+
+"province_region" = "Eyalet/İl/ Bölge";
+
+"purchase_record" = "Satın alma kaydı";
+
+"push_group_tips" = "%u bildirim daha";
+
+"push_permission" = "Bildirim erişimini etkinleştir";
+
+"pwd_error" = "Şifre yanlış.";
+
+"qr_expire" = "QR kodunun süresi %@ tarihinde dolacaktır";
+
+"qr_scurss" = "Başarıyla tarandı.";
+
+"qrcode_way1" = "Kapta bir QR kodu olup olmadığını kontrol etmek için lütfen gövdeyi çevirin.";
+
+"qrcode_way2" = "Kap üzerinde QR kodu bulunamazsa lütfen kamera gövdesinin lastik tapasını çıkarın ve altında QR kodu olup olmadığını kontrol edin.";
+
+"qrcode_way3" = "QR kodu kamera gövdesinin dış kabında veya lastik tapasında değilse QR kodunun kamera gövdesinin içinde mi yoksa dış kabında mı olduğunu kontrol etmek için lütfen dış kabı çıkarın.";
+
+"question_reply" = "Geri bildirim gönder";
+
+"question_type" = "Soru kategorisi";
+
+"questions_contact" = "İrtibat Kurun";
+
+"questions_pictures" = "Görüntü (isteğe bağlı, sorunun ekran görüntüsünü yükleyin)";
+
+"questions_statement_error" = "Lütfen sorununuzu 10 kelimeden uzun bir şekilde açıklayın.";
+
+"quick_connect" = "Hızlı bağlantı";
+
+"quick_connect_tips" = "Hızlı bağlanabilen %@ kameraları tespit ettik \n Bağlantıyı başlatmak için lütfen tıklayın.";
+
+"ratio_720p" = "SD";
+
+"reach_max_live_num" = "Maksimum canlı akış sınırına ulaştınız.";
+
+"receive_fail" = "Toplama başarısız oldu, lütfen tekrar deneyin.";
+
+"receive_scuess" = "Başarıyla toplandı, şimdi kullanmaya başlayın!";
+
+"receive_tips" = "Herhangi bir ileti öğesi almak istemediğinizi onaylıyor musunuz?";
+
+"reconnect" = "Yeniden bağlan";
+
+"reconnect_camera" = "Kamerayı yeniden bağlamayı dene";
+
+"reconnect_wifi" = "Lütfen telefon sistem ayarlarında önceki Wi-Fi ağına yeniden bağlanın. İşlem tamamlandıktan sonra bağlamanın başarılı olup olmadığını kontrol etmek için bu sayfaya dönün.";
+
+"reconnect_wifi_button" = "Wi-Fi'a Yeniden Bağlan";
+
+"reconnect_wifi_camera" = "Wi-Fi'ı Yeniden Bağla";
+
+"record_failed" = "Kaydetme başarısız oldu, lütfen yeniden deneyin.";
+
+"record_success" = "Albüme kaydet.";
+
+"record_video" = "Video kaydet";
+
+"record_video_tips" = "Video Kayıt özelliğini açtığınızda %@, hareket aldığında otomatik olarak videoyu kaydeder.";
+
+"reference_instruction_power" = "Başlat düğmesini bulmak için referans çalıştırma talimatı";
+
+"reference_instruction_reboot" = "Güç düğmesinin küçük deliğini bulmak için lütfen talimatlara bakın.";
+
+"refresh" = "Yenile";
+
+"registrationsharing" = "Cihazı paylaşmak istiyorsanız lütfen yönetici ve ikincil kullanıcının aynı ülkede kayıtlı olduğundan emin olun.";
+
+"reject" = "Reddet";
+
+"reject_audio" = "Lütfen telefon ayarlarından mikrofonu etkinleştirin.";
+
+"release_stop" = "Durdurmak için basmayı bırakın";
+
+"remember_password" = "Şifreyi hatırla";
+
+"remove_device" = "%@ öğesini sil";
+
+"remove_device_des" = "Bu %@ cihazından artık herhangi bir veri almayacaksınız.";
+
+"remove_device_success" = "%@ başarıyla kaldırıldı.";
+
+"remove_device_title" = "Bu %@ silmek istediğinizden emin misiniz?";
+
+"remove_share_device_des" = "%@ artık %@ cihazından herhangi bir veri almayacak.";
+
+"remove_share_device_title" = "Bu hesabı silmek istediğinizden emin misiniz?";
+
+"remove_tag_tips" = "Bu araç galerisinden \"İşaretli Araç\" etiketini kaldırın, araç galerisi \"Diğerleri\" sekmesine taşınacaktır.";
+
+"renewal_clause_key_clause" = "Sürekli Abonelik Hizmet Sözleşmesi";
+
+"renewal_clause_key_terms" = "Awareness Hizmeti Sözleşmesi";
+
+"renewal_download_tips" = "Gerekirse lütfen Awareness aboneliğinizi yenileyin veya videoyu indirin.";
+
+"replay" = "Tekrar oynat";
+
+"request_error" = "İstek hatası";
+
+"request_expired" = "İsteğin süresi doldu, lütfen tekrar deneyin.";
+
+"request_frequent" = "Çok fazla istek verildi, lütfen daha sonra tekrar deneyin.";
+
+"request_permission_title" = "Yetki bekleniyor";
+
+"request_timeout_and_try" = "İstek zaman aşımına uğradı, lütfen yeniden deneyin.";
+
+"resend_after_tip" = "%d s sonra yeniden gönder";
+
+"resend_after_tip_ios" = "%@%@ sonra yeniden gönder";
+
+"resent_verification_code" = "Tekrar gönder";
+
+"reset" = "Sıfırla";
+
+"reset_password_success" = "Şifre başarıyla sıfırlandı.";
+
+"resign_in" = "Giriş yap";
+
+"restore_purchase_record" = "Eski haline getirmek";
+
+"restore_successfully" = "Geri yükleme başarılı.";
+
+"retry2" = "Yeniden dene";
+
+"root_warning_title" = "Rootlanmış telefonlarda güvenlik riskleri olabilir.";
+
+"rotate_image" = "Görüntüyü çevir";
+
+"rotate_image_open" = "“Görüntüyü çevir\" özelliğini açarsanız hareket hassasiyeti etkilenebilir.";
+
+"same_email" = "Lütfen farklı bir e-posta kullanın.";
+
+"same_one_vehicle" = "Bunun bir araç olduğunu mu düşünüyorsunuz?";
+
+"same_phone" = "Lütfen farklı bir telefon numarası kullanın.";
+
+"same_time_play_most" = "Aynı anda en fazla 4 cihaz oynatılabilir.";
+
+"saturday" = "C";
+
+"saturday_2" = "Cumartesi";
+
+"save" = "Kaydet";
+
+"save_album" = "Telefon albümüne kaydet";
+
+"save_failed_and_try" = "Kaydetme başarısız oldu, lütfen yeniden deneyin.";
+
+"save_gb" = "(≤%dGB)";
+
+"saved_success" = "Başarıyla kaydedildi";
+
+"saved_successfully" = "Başarıyla kaydedildi";
+
+"say_green_light" = "Mavi ışık gördüm";
+
+"scan_camera_qr_code" = "QR kodunu tara";
+
+"scan_camera_way" = "Bağlamak için kodu tara";
+
+"scan_info_des" = "Yöneticinin uygulamasını açın Cihaz Ayarı / Paylaşım / Cihaz Paylaşımı";
+
+"scan_info_title" = "QR kodu aşağıdaki bu yolu izleyerek bulunabilir";
+
+"scan_no_qr_button" = "\"QR kodunu tara\" bildirimini duymadım.";
+
+"scan_QR_code" = "Cihazla birlikte QR kodunu tarayın";
+
+"scan_qr_code_des" = "Telefonunuzdaki QR kodunu cihazdan yaklaşık 6-12 inç (15-30 cm) uzağa yerleştirin.";
+
+"scan_qr_code_directions" = "Tarama sesini duyduktan veya yanıp sönen ışığı gördükten sonra QR Kodu cihazın yaklaşık 6-12 inç (15-30 cm) önüne tarayın ve diğer sesi duyduğunuzda taramayı tamamlayın.";
+
+"scan_QR_code_directions" = "QR kodunu cihazdan yaklaşık 6-12 inç (15-30 cm) uzakta tarayın. Diğer bir sesi duyduğunuzda taramayı tamamlayın.";
+
+"scan_qr_code_failed" = "Taramayı bitiremediniz mi?";
+
+"scan_qr_code_notice_title1" = "Cihazın açık ve kod tarama modunda olduğunu onaylayın";
+
+"scan_qr_code_notice_title2" = "Cihaz ve QR kodu arasındaki mesafeyi ayarlayın";
+
+"scan_qr_code_notice1" = "Kodu tararken Gösterge ışığı mavi olmalı ve yanıp sönmelidir. Cihazınız başka bir moddaysa cihazı açtıktan sonra güç düğmesine çift tıklayın, böylece cihaz tarama moduna girecek ve yanıp sönen mavi bir ışığa dönüşecektir.";
+
+"scan_qr_code_notice2" = "Cihazı QR kodundan 6-12 inç (15-30 cm) uzağa yerleştirin. Kod uzun süredir taranmadıysa lütfen ileri geri hareket ettirin. Bir önceki sayfadaki şekle bakabilirsiniz.";
+
+"scan_qrcode_by_phone" = "QR kodunu telefonunuzla tarayın";
+
+"scan_the_qr_code" = "Bağlanmak için QR kodunu tarayın";
+
+"scene" = "Sahne ayarları";
+
+"schedule_time" = "Zaman Planı ayarları";
+
+"screenshot_sharing" = "Ekran görüntüsü paylaşımı";
+
+"screenshots" = "Ekran görüntüsü";
+
+"sd_card" = "SD kart";
+
+"sd_card_format_failed" = "Biçimlendirilme başarısız oldu, lütfen yeniden deneyin.";
+
+"sd_card_format_remind" = "Bu SD karttaki tüm veriler silinecek. Biçimlendirmek istediğinizden emin misiniz?";
+
+"sd_card_format_success" = "SD kart başarıyla biçimlendirildi.";
+
+"sd_card_formating" = "SD kart biçimlendiriliyor…";
+
+"sd_card_formatting" = "Devam eden bir biçimlendirme görevi algılandı, lütfen daha sonra tekrar deneyin.";
+
+"sd_card_not_exist" = "SD kart algılanmadı";
+
+"sd_error" = "SD kart biçimi yanlış. Lütfen biçimlendirin.";
+
+"sd_error_format_sure" = "SD kart algılandı, ancak kart biçimi yanlış. Kullanmadan önce biçimlendirmeniz gerekir.";
+
+"sd_format_error" = "Yanlış biçim";
+
+"sd_is_formatting" = "SD kart biçimleniyor, lütfen bekleyin.";
+
+"sd_management" = "SD Kart Yönetimi";
+
+"sd_no_data_date" = "Şu anda video yok.";
+
+"sd_supper" = "SD kart desteklenmiyor";
+
+"sdcard_7_24" = "SD kart videosu";
+
+"sdcard_has_no_video" = "SD kartta video yok";
+
+"sdcard_need_format" = "SD kart biçimi yanlış";
+
+"sdcard_need_format_shared" = "SD kart biçimi yanlış, biçimlendirmek için lütfen yönetici ile iletişime geçin.";
+
+"sdcard_no_more_video" = "SD kartta başka video yok.";
+
+"SDcard_video_viewers_limit" = "SD kart video görüntüleme sınırına ulaştınız, lütfen daha sonra tekrar deneyin.";
+
+"sdvideo_error" = "SD kart video oynatma hatası";
+
+"sdvideo_timeout" = "SD kart video oynatma zaman aşımı";
+
+"search" = "Ara";
+
+"search_buletooth" = "Yakındaki bluetooth cihazlarını aranıyor";
+
+"seconds" = "s";
+
+"selcet_spot_2" = "Cihazı, görüşünün engellenmediği bir konuma kurmak için lütfen iyi bir nokta seçin ve Wi-Fi ağı kapsama alanı içinde olduğundan emin olun.";
+
+"select_4vehicle" = "En fazla 4 araç galerisi seçebilirsiniz.";
+
+"select_all" = "Hepsini seç";
+
+"select_camera" = "Eklemek için cihaz seçin";
+
+"select_items" = "Ögelerin seçin";
+
+"select_network" = "Ağı seçin";
+
+"select_one_ai" = "*Yapay zeka testi için en az bir nesne seçin.";
+
+"select_one_option" = "En az bir seçenek belirleyin";
+
+"select_spot_1" = "Kameranız için iyi bir yer seçin";
+
+"select_street" = "Sokak";
+
+"select_terms" = "Lütfen Kullanıcı Sözleşmesi'ni ve Gizlilik Politikası görüntüleyin ve kabul edin.";
+
+"select_wifi_title" = "Cihaz için Wi-Fi seçin";
+
+"send_log" = "Bir canlı akış hatasıyla karşılaşırsanız sorunu bulmamıza yardımcı olması için lütfen oynatıcı günlüğünü yükleyin.";
+
+"send_log_tips" = "(Veri içermez, lütfen kullanmaktan çekinmeyin)";
+
+"sendingcode" = "Doğrulama kodu gönderiliyor";
+
+"sensitivity_level" = "Işık hassasiyeti seviyesi";
+
+"sent_alarm_failed" = "Alarm çalma başarısız oldu, lütfen tekrar deneyin.";
+
+"sent_alarm_successfully" = "Alarm başarıyla çaldı.";
+
+"sepvalue" = "—";
+
+"serial_number" = "S/N";
+
+"server_error" = "Sunucu hatası";
+
+"service_center" = "Yeni bilet ekle";
+
+"service_cloud_desc" = "Hiçbir kritik anı kaçırmamak ve en güvenli video depolama alanını oluşturmak için 10 GB bulut kayıt depolama (3 tür Awareness Planı) ile 60 güne kadar uzatın.";
+
+"service_detail" = "Plan ayrıntıları";
+
+"set" = "Belirle";
+
+"set_az" = "Faaliyet Bölgesi Belirle";
+
+"setup_success" = "Başarıyla ayarlandı";
+
+"share" = "Paylaşmak";
+
+"share_error" = "Paylaşım başarısız oldu, lütfen tekrar deneyin.";
+
+"share_scan_qr_content" = "Lütfen cihaz yöneticisinin QR kodunu tarayın";
+
+"share_to" = "Şu kişiye paylaşıldı:";
+
+"shared_by" = "Paylaşan kişi:";
+
+"shared_by_" = "Paylaşan kişi: %@";
+
+"shared_devices" = "Paylaşılan cihazlar";
+
+"shared_invalid_qr_code" = "Geçersiz QR kodu, lütfen tekrar deneyin.";
+
+"shared_self_error" = "Bu cihaz zaten listenizde.";
+
+"sharing" = "Paylaşım";
+
+"shooting_interval" = "Bulut Soğutma";
+
+"shooting_interval_des" = "Bekleme süresi özelliği açıldıktan sonra ayarlanan zaman aralığında tekrar video kaydedilmez, bu da %@ cihazının pil ömrünü uzatabilir.";
+
+"shot_fail" = "Fotoğraf çekme işlemi başarsız oldu.";
+
+"sign_in" = "Giriş yap";
+
+"sign_up" = "Yeni bir hesap için kaydolun";
+
+"sign_up_register" = "Kaydol";
+
+"sign_up_tips" = "Lütfen e-postanızı girin ve size bir doğrulama kodu gönderelim.";
+
+"signal_strength" = "Wi-Fi gücü";
+
+"siren_des" = "Alarm Sireni açıldıktan sonra hareket sensörü tetiklendiğinde %@ otomatik olarak bir uyarı sesi çıkarır.";
+
+"size" = "Boyut:";
+
+"skip" = "Atla";
+
+"sleep" = "Güç tasarrufu modu";
+
+"sleep_end_time" = "Bitiş zamanı";
+
+"sleep_end_time_atsteam" = "%@, uykuyu %@%@'de tamamladı.";
+
+"sleep_mode" = "Uyku";
+
+"sleep_period" = "Uyku süresi";
+
+"sleep_period_etting" = "%@ cihazını otomatik olarak uyku moduna almak için geçmesi gereken süreyi ayarlayın";
+
+"sleep_plan" = "Uyku modu";
+
+"sleep_prompt" = "Uyku modu açıkken gözetim alanı gerçek zamanlı olarak görüntülenemez ve Hareket Algılama, İnterkom ve Alarm gibi özellikler askıya alınır.";
+
+"sleep_setting" = "Uyku Ayarları";
+
+"sleep_start" = "Etkinleştirme tarihi";
+
+"sleep_start_time" = "Başlangıç zamanı";
+
+"sleep_tips" = "%@ uyku modunda, ayarlamadan önce uyandırın";
+
+"sleep_work_time" = "Çalışma süresi";
+
+"sleeping" = "Uyuyor";
+
+"Smart_assistant" = "Akıllı Servis Asistanı";
+
+"smart_camera" = "Akıllı Cihaz";
+
+"smart_common_contrast" = "Aboneliksiz vs %@ Awareness";
+
+"smart_push" = "Smart Push";
+
+"smart_push_tips" = "Akıllı iletiler almak istediğiniz öğeleri işaretleyin. Daha fazla ileti görmek istiyorsanız ";
+
+"smart_push_tips1" = "diğer öğeleri işaretlemek için lütfen Yapay Zeka Analiz ekranına gidin. Hepsi işaretliyse bu mesajı görmezden gelin. >>";
+
+"smart_service_desc" = "%@ Awareness'a giriş";
+
+"sound" = "Ses";
+
+"source" = "Depolama yeri";
+
+"speaker" = "Hoparlör";
+
+"speaker_volume" = "Hoparlör ses seviyesi";
+
+"split_screen" = "Bölünmüş ekran";
+
+"sport_auto" = "Hareket İzleme";
+
+"status_led" = "Durum LED'i";
+
+"stay_this_page" = "Bu sayfada kal";
+
+"storage" = "Depolama";
+
+"storage_space_access" = "İzin iste";
+
+"str_inter" = "Akış Ara Bağlantısı";
+
+"street_address_2" = "Ayrıntılı adres (isteğe bağlı)";
+
+"strong" = "Güçlü";
+
+"submit" = "Gönder";
+
+"submit_deletion" = "Silme isteğini gönder";
+
+"sunday" = "P";
+
+"sunday_2" = "Pazar";
+
+"supper_net_work" = "Bu kamera sadece 2.4 GHz Wi-Fi'yı destekliyor. Geçerli bağlantınız 5 ghz.";
+
+"sure_to_clear_cache" = "Önbelleği temizlemeyi onaylıyor musunuz?";
+
+"sure_to_delete_location" = "Bu adresi silmeyi onaylıyor musunuz?";
+
+"sure_to_delete_zone" = "Bu Faaliyet Bölgesini silmeyi onaylıyor musunuz?";
+
+"sure_to_drop_out" = "\"Cihaz ekle\" seçeneğini iptal etmek istediğinizden emin misiniz?";
+
+"sure_to_remove_device" = "Bu %@ öğesini kaldırmayı onaylıyor musunuz?";
+
+"sure_to_turn_alarm_on" = "Alarmı açmayı onaylıyor musunuz?";
+
+"sure_to_turn_off_detection" = "Hareket Algılamayı kapatmayı onaylıyor musunuz?";
+
+"swicth_264cod_tips1" = "%@, H.264 kodlamasına geçecek ve canlı yayının netliği azaltılacaktır. Geçmek istediğinizden emin misiniz?";
+
+"switch_264cod_tips" = "%@, cihazınızı kontrol etmek ve %@ cihazınıza erişmek için Alexa veya Google Asistan'ı kullanabilmenizi sağlamak için video aktarım kodlamasını otomatik olarak değiştirecektir.";
+
+"switch_265cod_tips" = "%@, en net canlı görüntüyü görebilmenizi sağlamak için otomatik olarak mevcut en düzgün video aktarım kodlamasına geçecek.";
+
+"switch_265cod_tips2" = "%@, H.265 kodlamasına geçecek ve canlı yayınları izlemek daha net olacak, ancak %@'niz Alexa veya Google Asistan gibi akıllı yardımcıları destekleyemeyecek, geçiş yapmak istediğinizden emin misiniz?";
+
+"system_album_name" = "%@";
+
+"system_error_try_again" = "Sistem meşgul, lütfen tekrar deneyin.";
+
+"system_update" = "Sistem güncellemesi";
+
+"system_version" = "Sistem sürümü";
+
+"tap_to_know" = "daha fazla bilgi edinmek için dokunun >>";
+
+"terminated_day" = "%@'a kadar";
+
+"terminated_format" = "dd.MM.yyyy EEEE";
+
+"thursday" = "P";
+
+"thursday_2" = "Perşembe";
+
+"time_zone" = "Saat dilimi";
+
+"timer_unit" = "Zamanlayıcı ünitesini aç";
+
+"tips_ssid_empty" = "Lütfen geçerli bir Wi-Fi ağ adı (SSID) girin.";
+
+"tips_wifi_password_empty" = "Lütfen geçerli bir şifre girin.";
+
+"to_coninue_please_check_internet" = "Lütfen telefonunuzun geçerli bir şebekeye bağlı olduğundan emin olun.";
+
+"to_get_phone_wifi" = "Telefonunuzun mevcut Wi-Fi ağını alın";
+
+"to_get_wifi_list_nearby" = "Yakındaki Wi-Fi ağlarının bir listesini alın";
+
+"to_time" = "Şuna:";
+
+"toast_add_zone_total_3" = "Sadece üç Faaliyet Bölgesi eklenebilir.";
+
+"toast_change_language" = "Dil başarıyla değiştirildi.";
+
+"toast_del_all_are_guest" = "Bu öğeler yalnızca yönetici tarafından silinebilir.";
+
+"toast_del_one_is_guest" = "Bu öğe yalnızca yönetici tarafından silinebilir.";
+
+"toast_zone_not_playing" = "Henüz oynamıyor";
+
+"today" = "Bugün";
+
+"total_event1" = "1 Etkinlik var,";
+
+"total_event2" = "%@ etkinlik var,";
+
+"total_video1" = "ve 1 video var.";
+
+"total_video2" = "ve %@ video var.";
+
+"tracking_guide" = "Aynı zamanda İnsan Takip özelliğini de destekliyoruz.";
+
+"tracking_guide_2" = "İnsan Takibi Ayarla >>";
+
+"tracking_mode" = "Takip modu";
+
+"troubleshooting_issue" = "Aşağıdaki sorunları giderdikten sonra yeniden deneyin veya tarama yoluyla bağlayın";
+
+"troubleshooting_issue2" = "Aşağıdaki sorunları giderdikten sonra tekrar deneyin";
+
+"try_later" = "Daha sonra tekrar deneyin";
+
+"tuesday" = "S";
+
+"tuesday_2" = "Salı";
+
+"turn_alern" = "Alarmı açmak istediğinizden emin misiniz?";
+
+"turn_off_push_tips" = "Yine de özelliği kullanmak istiyorsanız en az bir öğeyi saklamanız önerilir, aksi takdirde Bildirim özelliği kapatılır.";
+
+"turn_on_camera" = "Cihazı aç";
+
+"turn_on_camera_directions" = "Açılış sesini duyana veya ışık yanana kadar güç düğmesine 3 saniye boyunca uzun basın.";
+
+"turn_on_camera_scanQR" = "Cihazınızı açın ve QR kodunu tarayın";
+
+"turn_on_location_services" = "\"Example\" uygulamasının konumunuzu kullanmasına izin vermek için \"Konum Servisleri\" seçeneğini açın";
+
+"turn_on_location_services_get_wifi" = "Telefonun mevcut Wi-Fi ağ adını (SSID) otomatik olarak almak için konum hizmetini açın.";
+
+"turn_on_location_services_title" = "\"Ayarlar-Gizlilik\" bölümünde \"Konum Servisleri\" seçeneğini açın";
+
+"turned_off" = "%@ kapalı. Lütfen %@ öğesini açın.";
+
+"turned_on_donot_disturb" = "Rahatsız etme özelliği açık";
+
+"twok" = "2K";
+
+"twoway_radio" = "İnterkom";
+
+"unable_to_load_image" = "Görsel yüklenemiyor";
+
+"unauthorized" = "Devam etmek için kullanıcının yetki sahibi olması gerekiyor";
+
+"unavailable_before_upgrade" = "Ürün yazılımı yükseltilirken %@ kullanılamaz.";
+
+"understanc_agree" = "Anlıyorum ve katılıyorum";
+
+"unheard_scan_qr_code" = "\"QR kodunu tara\" bildirimini duymadım.";
+
+"unmarked_successfully" = "İşaret başarıyla kaldırıldı";
+
+"unmarked_vehicle" = "Araç işareti kaldırıldı";
+
+"update" = "Güncelleme";
+
+"update_device_name_scuess" = "%@ adı başarıyla güncellendi.";
+
+"update_location_scuess" = "Konum başarıyla güncellendi.";
+
+"update_now" = "Şimdi güncelle";
+
+"update_the_latest_version" = "En son %@ sürümüne güncelle";
+
+"update_time_string" = "Son %@ güncellemesi şu tarihte: %@ ";
+
+"update_timezone_scuess" = "Saat dilimi başarıyla güncellendi.";
+
+"update_user_name_success" = "Kullanıcı adı başarıyla güncellendi.";
+
+"updating" = "Güncelleniyor...";
+
+"upgrade_firmware" = "Ürün yazılımını yükselt";
+
+"upgrage_to_plan" = "%@ öğesi %@ öğesine güncellendi";
+
+"uploaded_fail" = "Yükleme başarısız oldu, lütfen tekrar deneyin.";
+
+"uploaded_success" = "Başarılı bir şekilde yüklendi.";
+
+"use_app_scan" = "%@ eklemek için aşağıdaki QR kodunu taramak için lütfen %@ uygulamasını kullanın";
+
+"use_coupon" = "Kullanım kodunu kullan";
+
+"user_account_in_protection" = "%@ Awareness'ın süresi doldu, lütfen tekrar satın alın.";
+
+"user_agreement" = "Kullanıcı Sözleşmesi";
+
+"user_guide_4" = "Faaliyet Bölgesi";
+
+"user_guide_desc_1" = "Birden fazla cihazı daha kolay yönetin";
+
+"user_guide_package" = "Kullanım Kılavuzu";
+
+"user_name" = "Kullanıcı adı";
+
+"Username_inuse" = "Bu Kullanıcı adı zaten kullanılıyor.";
+
+"username_noncompliance" = "Yanlış Kullanıcı adı biçimi.";
+
+"vehicle_approaching" = "Bir araç yaklaşıyor";
+
+"vehicle_leaving" = "Bir araç ayrılıyor";
+
+"vehicle_name" = "Araç Adı";
+
+"vehicle_notification" = "Araç Bildirimi";
+
+"vehicle_parked" = "Bir araç park halinde";
+
+"verificatio_code_require" = "Çok sayıda başarısız oturum açma denemesinden sonra bir doğrulama kodu gerekir.";
+
+"verification_code_expired" = "Doğrulama kodunun süresi doldu.";
+
+"verification_code_not_right" = "Doğrulama kodu doğru değil.";
+
+"verificting_error" = "Sipariş doğrulandı, lütfen bekleyin";
+
+"verify_identity_desc_1" = "Bağlamadan önce, kullanıcının kimliğinizi doğrulamak için şifreyi girmeniz gerekir.";
+
+"verify_network" = "Wi-Fi ağına bağlanın";
+
+"verify_network_des" = "Şu anda yalnızca 2,4 GHz Wi-Fi ağlarını destekliyor. Bir Wi-Fi ağına bağlandıktan sonra bir sonraki adıma geçebilirsiniz.";
+
+"verify_send_code" = "%@ numaranıza bir doğrulama kodu gönderdik.";
+
+"verify_user_info" = "Kimliği doğrula";
+
+"verify_user_rebind" = "Cihazı tekrar ağlamadan önce, kullanıcının kimliğinizi doğrulamak için şifreyi girmeniz gerekir.";
+
+"Example_policy" = "Kullanıcı Sözleşmesi ve Gizlilik Politikası";
+
+"video_duration" = "Süre";
+
+"video_feedback_agree" = "%@'nun verileri analiz etmesine yardımcı olmak için orijinal videoyu (tüm kişisel bilgiler dahil) göndermeyi kabul ediyorum. Lütfen Gizlilik Politikası bakın.";
+
+"video_feedback_cell_other" = "Ayrıntı eklemek için tıklayın.";
+
+"video_feedback_check" = "Lütfen ilgili şartları inceleyin ve kabul edin.";
+
+"video_hb" = "HD";
+
+"video_max_below_20m" = "Video 20 M'den büyük olmamalıdır.";
+
+"video_over_day" = "Bu videonun süresi doldu.";
+
+"video_resolution" = "Kayıt Çözünürlüğü";
+
+"video_saved_to_ablum" = "Video telefon albümüne kaydedildi.";
+
+"video_saving" = "Video kaydediliyor...";
+
+"video_smooth" = "SM";
+
+"video_tag" = "Video etiketi";
+
+"videolist_error" = "Video listesi hatası";
+
+"videolist_timeout" = "Video listesi zaman aşımı";
+
+"vip_activity_zone_warning" = "%@ Awareness özellikleri";
+
+"voice_talk_failed_and_retry" = "Ses hatası, lütfen tekrar deneyin.";
+
+"volume" = "Alarm sesi";
+
+"wait_for_permission_tips" = "Başvurunuz başarıyla yöneticiye gönderildi. Lütfen yöneticinin yetkilendirmesini bekleyin.";
+
+"wakeup_camera" = "%@ cihazını uyandır";
+
+"weak" = "Zayıf";
+
+"weak_wifi_notation" = "Mevcut %@ cihazının Wi-Fi gücü zayıf. Konumu değiştirmenizi veya farklı bir Wi-Fi ağı kullanmanızı öneririz.";
+
+"wednesday" = "Ç";
+
+"wednesday_2" = "Çarşamba";
+
+"where_is_qrcode" = "Cihaz gövdesindeki QR kodu, genellikle dış kabın içinde veya lastik tapanın altında bulunan bir çıkartmanın üzerindedir. Bu QR kodu, genellikle \"S/N\" ile başlayan seri numarasını ve tip numarasını içerir.";
+
+"while_using" = "Kullanırken";
+
+"white_light" = "Beyaz ışık";
+
+"white_tips" = "Geceleri Beyaz Işık aydınlatmasına ihtiyacınız varsa, lütfen şuraya gidin:";
+
+"whitelight_des" = "Beyaz Işık çevreyi aydınlatır. Renkli görüntüyü geceleri orijinal durumuna geri getirmeyi deneyin.";
+
+"wifi" = "Wi-Fi";
+
+"wifi_channel" = "Wi-Fi kanalı";
+
+"wifi_confim" = "Lütfen Wi-Fi adınızın (SSID) ve şifrenizin doğru olup olmadığını (büyük/küçük harf duyarlı) yeniden kontrol edin.";
+
+"wifi_connect" = "Wi-Fi bağlantısı";
+
+"wifi_issue" = "Cihaz sorunu ekle";
+
+"wifi_name" = "Wi-Fi adı:";
+
+"wifi_password" = "Şifre:";
+
+"wifi_scanning" = "Wi-Fi ağında aranıyor";
+
+"wifi_setting" = "Wi-Fi ayarları";
+
+"wifi_state" = "Wi-Fi gücü: %@";
+
+"wifi_state_ios" = "Wi-Fi gücü:";
+
+"wlan_enable_play" = "Kullanılabilir Wi-Fi ağı olmamasına rağmen verilerinizi kullanmaya devam etmek istiyor musunuz?";
+
+"wrong_az_tips" = "*Üzgünüz, sistem aşağıdaki Faaliyet Alanında hatalı algılamaya neden olabilecek bazı sorunlar algıladı. Lütfen silin ve tekrar ekleyin.";
+
+"wrong_code" = "QR kodu yanlış";
+
+"yes" = "Evet";
+
+"zone_1" = "Bölge 1";
+
+"zone_2" = "Bölge 2";
+
+"zone_3" = "Bölge 3";
+
+"zone_with_args" = "Bölge %@";
+
+"bind_ap_help_title" = "%@ hotspotuna bağlan";
+
+"download_position" = "%d/%d indiriliyor...";
+
+"use_guide" = "Kullanım Kılavuzu";
+
+"not_account_alexa_tips1" = "Hesabınız ve Alexa bağlandıktan sonra, Echo serisi cihazlar üzerinden Alexa özellikli cihazları sesli kontrol edebilirsiniz, ";
+
+"not_account_alexa_tips2" = "şunun gibi: \"Alexa, kameramı göster.\"";
+
+"account_alexa_button" = "Alexa ile bağlantı";
+
+"account_alexa_succeed" = "Hesap başarıyla bağlandı";
+
+"account_alexa_failed1" = "Hesap bağlantısı başarısız oldu, lütfen tekrar deneyin";
+
+"account_alexa_failed2" = "Hesap bağlantısı başarısız oldu";
+
+"account_alexa_succeed_tips1" = "Hesabınız ve Alexa bağlantılıdır ve Alexa özellikli cihazları Echo serisi cihazlar üzerinden sesle kontrol edebilirsiniz, ";
+
+"account_alexa_succeed_tips2" = "şunun gibi: \"Alexa, kameramı göster.\"";
+
+"live_audio_recording_swt" = "Canlı ses kaydı";
+
+"video_audio_recording_swt" = "Video ses kaydı";
+
+"audio_recording_instr" = "Ses kayıt seçeneği, %@ cihazınızın canlı kayıt veya video kaydı sırasında ses kaydı yapıp yapmayacağını kontrol edecektir.";
+
+"unmute_failed_title" = "Ses açılamıyor";
+
+"unmute_failed_content" = "Canlı ses kaydı kapalı olduğundan ses açılamıyor. Lütfen önce canlı ses kayıt seçeneğini açın";
+
+"firmware_update_skip" = "Bu sürümü yoksay";
+
+"add_device_AP" = "Cihaz ekle";
+
+"add_device_WiFi" = "Cihaz ekle";
+
+"add_device_shared" = "Bir arkadaşınızın cihazını ekleyin";
+
+"add_method_wifi" = "WiFi Bağlantısı";
+
+"add_method_hotspot" = "Hotspot Doğrudan";
+
+"add_method_check" = "Cihaz bağlantı yöntemini onaylayın";
+
+"add_wifi_suit" = "Wi-Fi'lı kurulum ortamı için uygundur.";
+
+"add_hotspot_suit" = "Wi-Fi'sız kurulum ortamı için uygundur. Cihazı görüntülerken, telefon İnternet'e erişemeyecektir.";
+
+"add_feature_dif" = "Özellik karşılaştırması";
+
+"add_dif_alarm" = "Alarm mesajı";
+
+"add_dif_stream" = "Her zaman, her yerde canlı akışı izleyin";
+
+"add_dif_nearstream" = "Canlı akışı yalnızca cihazın yakınında izleyin";
+
+"add_dif_Cloudvideo" = "Bulutta kaydediliyor";
+
+"add_dif_SDvideo" = "SD kartta kaydediliyor";
+
+"add_successfully" = "Cihaz başarıyla eklendi";
+
+"add_device_name" = "Cihaz adını ayarla";
+
+"add_hotspot_pwd" = "Cihaz hotspot şifresini ayarla";
+
+"add_set_hotspotpwd" = "Cihazınızın hotspot'u için bir şifre belirleyin";
+
+"add_hotspot_ssid" = "Internet:";
+
+"add_pwd" = "Şifre:";
+
+"add_pwd_remember" = "*Lütfen bu şifreyi unutmayın, bir ekran görüntüsü alabilirsiniz";
+
+"add_set_pwd" = "Şifreyi ayarlayın ve kopyalayın";
+
+"add_copied_pwd" = "Çalışma alanına başarıyla kopyalandı";
+
+"add_connect_hotspot" = "Cihaz hotspotuna bağlanırken şifreyi doğrudan yapıştırın veya şifreyi aşağıdaki gibi manuel olarak girin:";
+
+"add_notsupport_hotspot" = "Bağlanmayı seçtiğiniz cihazın hotspotu, cihaz hotspot direct bağlantı yöntemini desteklemiyor";
+
+"add_reselect" = "Yeniden seç";
+
+"add_nofind_device" = "Cihaz bulunamadı";
+
+"home_device_hotspot" = "Hotspot Direct Bağlantı Cihazı";
+
+"home_notconnect_hotspot" = "Telefonunuz bu cihazın hotspotuna bağlı olmadığı için bu cihaz görüntülenemiyor";
+
+"home_viewdevice" = "Cihazı görüntüle";
+
+"home_back_hotspot" = "Uygulamanın ana sayfasına geri döndüğünüzde, şu anda bağlı olan hotspotun bağlantısı kesilecektir";
+
+"home_wifi_hotspot" = "Cihazın hotspotuna bağlanın";
+
+"home_hotspot_step1" = "Adım 1. Cihazın hotspotunu etkinleştirme";
+
+"home_hotspot_pir" = "Cihaza yaklaşın ve sabit bir mavi ışık göreceksiniz";
+
+"home_hotspot_power" = "Güç düğmesine kısa basın ve mavi ışığın her zaman açık olduğunu göreceksiniz";
+
+"home_hotspot_step2" = "2. adım. Cihaz Hotspotunu Bağla";
+
+"home_hotspot_connect" = "Telefon %@ cihazının hotspotuna bağlı";
+
+"set_info_status1" = "Bağlantı Kesildi";
+
+"set_info_status2" = "Bağlanıldı";
+
+"set_info_hotspot" = "Cihaz hotspot adı";
+
+"set_info_hotspotpwd" = "Cihaz hotspot şifresi";
+
+"set_info_electricity" = "Hotspot bağlantısını kesmeden önce";
+
+"set_wifi_connect" = "Wi-Fi'ya Bağlan";
+
+"set_wifi_other_methods_bt" = "Diğer bağlantı yöntemleri";
+
+"home_ap_change" = "Ağı değiştir";
+
+"home_hotspot_goconnect" = "Cep telefonunun Wi-Fi'ını \"%@\" cihazına bağlayın ardından cihazı görüntülemek için %@ Uygulamasına geri dönün";
+
+"add_way_choose" = "Git";
+
+"setting_ap_change" = "Ayarlar yalnızca cihaz Wi-Fi'ya bağlıyken değiştirilebilir";
+
+"setting_ap_connectwifi" = "Wi-Fi'ya Bağlan";
+
+"setting_db_charge" = "Şarj yöntemi";
+
+"setting_db_chargetype1" = "Kapı zili teli";
+
+"setting_db_chargetype2" = "USB";
+
+"setting_db_tone" = "Kapı Zili Sesi";
+
+"setting_db_tone1" = "Zil sesi 1";
+
+"setting_db_tone2" = "Zil sesi 2";
+
+"setting_db_remove" = "Alarmı kaldır";
+
+"setting_db_remove_off" = "Açtıktan sonra, kapı zili arka panelden ayrılırsa kapı zili, çekilen videoyu cep telefonuna gönderir, bir alarm sesi çıkarır ve düğmenin yanındaki kırmızı ışık yanıp söner";
+
+"setting_db_remove_on" = "Kapı zilinin şarjı bittiğinde lütfen önce çıkarma alarmını kapatın ve ardından şarj etmek için kapı zilini çıkarın";
+
+"setting_call_switch" = "Tek dokunuşla arama";
+
+"library_sign" = "Çağrı yap";
+
+"setting_db_tone3" = "Zil sesi 3";
+
+"unmute_failed_content_guest" = "Canlı ses kaydı kapalı olduğundan ses açılamıyor. Etkinleştirmek için lütfen yöneticiyle iletişime geçin.";
+
+"setting_db_ring" = "Çal";
+
+"device_type_unknown" = "cihaz";
+
+"device_type_camera" = "kamera";
+
+"device_type_doorbell" = "kapı zili";
+
+"dp_live_revolution_640_360" = "SD";
+
+"dp_live_revolution_640_480" = "SD";
+
+"dp_live_revolution_1280_720" = "SD";
+
+"dp_live_revolution_1920_1080" = "HD";
+
+"dp_live_revolution_2048_1536" = "2K";
+
+"dp_live_revolution_2304_1296" = "2K";
+
+"dp_live_revolution_2560_1440" = "2K";
+
+"dp_record_revolution_640_360" = "SD";
+
+"dp_record_revolution_640_480" = "SD";
+
+"dp_record_revolution_1280_720" = "SD";
+
+"dp_record_revolution_1920_1080" = "HD";
+
+"dp_record_revolution_2048_1536" = "2K";
+
+"dp_record_revolution_2304_1296" = "2K";
+
+"dp_record_revolution_2560_1440" = "2K";
+
+"setting_e_status" = "(Kapatmadan önce)";
+
+"calling_mute_bt" = "Sessize al";
+
+"calling_speaker_bt" = "Hoparlör";
+
+"calling_decline_bt" = "Reddet";
+
+"calling_accept_bt" = "Kabul Et";
+
+"bind_db_select_way_title" = "Kapı zilinin nasıl kurulacağını seçin";
+
+"bind_db_select_way_way1_text" = "Kapı zili kablosu yok";
+
+"bind_db_select_way_way2_text" = "Kapı zili tel ile kurulum";
+
+"bind_db_select_way_way1_bt" = "Kapı zili kablosu olmadan kurulum";
+
+"bind_db_select_way_content" = "Kapı zili kurulumunu başlatmak için lütfen evinizin durumuna göre kurulum yöntemini seçin";
+
+"find_device_mac_wire" = "Ethernet:";
+
+"find_device_mac_wifi" = "Wi-Fi:";
+
+"choose_connect_way_title" = "Bir bağlantı yöntemi seçin";
+
+"choose_connect_way_wifi" = "Wi-Fi üzerinden bağlanın";
+
+"choose_connect_way_ethernet" = "Ethernet kablosuyla bağlanın";
+
+"ethernet_wire_connect_title" = "Ethernet kablosunu bağlayın";
+
+"ethernet_wire_connect_content" = "Lütfen %@ethernet kablosunu bağlayın ve ağın internete bağlanabildiğinden emin olun";
+
+"ethernet_wire_connect_check_box" = "Ethernet kablosunun bağlı olduğundan emin olun";
+
+"ethernet_internet_failed_title" = "Ağ bağlantısının çalıştığından emin olun";
+
+"ethernet_internet_failed_content" = "%@ ağ kablosuna bağlı ancak internete bağlanamıyor, lütfen ağınızı kontrol edin";
+
+"ethernet_internet_failed_check_box" = "İnternete bağlı olduğunuzdan emin olun";
+
+"ethernet_ip_failed_title" = "IP zaman aşımı ";
+
+"connect_error_unsupport_wifi" = "\"Wi-Fi bağlantısı desteklenmiyor\" bildirimini duydum";
+
+"connect_error_unsupport_ethernet" = "\"Kablolu bağlantı desteklenmiyor\" bildirimini duydum";
+
+"ethernet_internet_failed_confirm_window" = "Ağ bağlantısının çalıştığından emin olun";
+
+"ethernet_wire_connect_confirm_window" = "İnternete bağlı olduğunuzdan emin olun";
+
+"default_device_name" = "akıllı cihaz";
+
+"feedback_choose_device_input_default" = "AICXXXXXXXX1234";
+
+"cool_down_time_interval_time_10" = "10 saniye";
+
+"cool_down_time_interval_time_30" = "30 saniye";
+
+"cool_down_time_interval_time_60" = "1 dakika";
+
+"cool_down_time_interval_time_180" = "3 dakika";
+
+"cool_down_time_interval_time_300" = "5 dakika";
+
+"video_duration_10" = "10 saniye";
+
+"video_duration_15" = "15 saniye";
+
+"video_duration_20" = "20 saniye";
+
+"share_error_2014" = "Farklı ülkelerdeki hesap kullanıcılarıyla paylaşılamaz";
+
+"ethernet_mac_address" = "Ethernet MAC'i";
+
+"payment_get_product_list_error" = "Satın alınamıyor, lütfen Play Store hesabınızı veya Google hizmetlerini kontrol edin.";
+
+"chime_setting_title" = "zil ayarları";
+
+"mechanical_chime_switch" = "mekanik çan";
+
+"mechanical_chime_volume" = "Ses";
+
+"mechanical_play" = "Oyna";
+
+"mechanical_chime_switch_content" = "Anahtar, kapı ziline basıldıktan sonra mekanik zilin çalıp çalmayacağını kontrol edebilir ve açıldıktan sonra, uygun olduğunu hissedene kadar Ses seviyesi ayarlanabilir.";
+
+"mechanical_chime_switch_error" = "kullanım dışı";
+
+"mechanical_chime_switch_error_text" = "Mekanik zil bağlı değil veya güç kapalı, lütfen %@ adresine bakın";
+
+"mechanical_chime_switch_error_text_link" = "Yükleme Rehberi";
+
+"mechanical_chime_switch_pop_title" = "açılamıyor";
+
+"mechanical_chime_switch_pop_content" = "%@ mekanik zile bağlı değil veya desteklenmiyor, lütfen kablolamanın doğru olduğunu kontrol edin.";
+
+"mechanical_chime_switch_pop_helpbt" = "Yardımı görüntüle";
+
+"indoor_chime_connect_content" = "Zilinizi kılavuza göre bağlayın";
+
+"indoor_chime_bind" = "SENKRONİZE düğmesi";
+
+"indoor_chime_bind_title" = "kapı zili zili";
+
+"indoor_chime_bind_bt" = "Kapı Zili Zilini Bağlayın";
+
+"indoor_chime_up" = "Sesi açma düğmesi";
+
+"indoor_chime_down" = "Sesi kısma düğmesi";
+
+"indoor_chime_change" = "Zil sesi geçiş düğmesi";
+
+"set_autopoweron" = "Otomatik açma ayarları";
+
+"set_autopoweron_charge" = "Şarj ettikten sonra otomatik açma";
+
+"set_autopoweron_charge_explain" = "Cihazın pili bittiğinde, çabanızdan tasarruf etmek için şarj ettikten sonra otomatik olarak açılacaktır.";
+
+"set_autopoweron_charge_level" = "Güç açıkken belirtilen pil seviyesi";
+
+"set_autopoweron_charge_level1" = "25%";
+
+"set_autopoweron_charge_level2" = "50%";
+
+"set_autopoweron_charge_level3" = "75%";
+
+"set_autopoweron_charge_level4" = "100%";
+
+"set_buttoncall" = "Tek dokunuşla arama";
+
+"feedback_choose_device_title" = "cihaz seç";
+
+"feedback_choose_device_content" = "Lütfen söz konusu cihazın SN numarasını girin";
+
+"feedback_choose_device_subtitle" = "Veya sorun yaşadığınız cihazı seçin (birden fazla seçenek)";
+
+"log_update" = "Günlük yükleme";
+
+"system_permission_center" = "sistem izni";
+
+"system_permission_center_title" = "sistem izni";
+
+"system_permission_center_allow" = "izin vermek";
+
+"system_permission_center_not_allow" = "İzin vermemek";
+
+"system_permission_center_loc_title" = " Konum";
+
+"system_permission_center_loc_content" = "Yakındaki mevcut cihazları arayın, cihazlara hızlı bir şekilde bağlanmak için Wi-Fi bilgilerini alın, vb.";
+
+"system_permission_center_sto_title" = " Depolamak";
+
+"system_permission_center_sto_content" = "Canlı yayın sırasında ekran görüntüleri, ekran kayıtları, video indirme ve oynatma işlevleri";
+
+"system_permission_center_mic_title" = "Mikrofon";
+
+"system_permission_center_mic_content" = "İki yönlü konuşma için";
+
+"system_permission_center_phone_title" = "Telefon görüşmesi";
+
+"system_permission_center_phone_content" = "Cep telefonlarını aramak için çağrı işlevli kapı zilleri ve diğer cihazlar için kullanılır";
+
+"system_permission_center_cam_title" = "Kamera";
+
+"system_permission_center_cam_content" = "QR kodunu ve diğer işlevleri taramak için";
+
+"system_permission_center_ble_title" = "Bluetooth";
+
+"system_permission_center_ble_content" = "Yakındaki cihazları aramak gibi işlevler için";
+
+"tier_name_basic" = "%@ Temel Farkındalık";
+
+"tier_name_plus" = "%@ Farkındalık Artı";
+
+"tier_name_pro" = "%@ Farkındalık Uzmanı";
+
+"tier_name_lite_old" = "%@ Hafif";
+
+"tier_name_lite_new" = "%@ Hafif";
+
+"tier_name_no_plan" = "%@ Plan yok";
+
+"log_upload_fail" = "Yükleme başarısız oldu, lütfen tekrar deneyin.";
+
+"log_upload_success" = "Başarılı bir şekilde yüklendi.";
+
+"notification_keep_running" = "Bildirimleri daha zamanında alabilmeniz için %@ çalışmaya devam edecek";
+
+"bird_list_enter_bt" = "Olası kuş türlerini görüntüleyin";
+
+"learn_more_3" = "Detaylar";
+
+"bird_list_title" = "Olası Türler";
+
+"bird_list_percentage" = "%@%";
+
+"bird_list_feedback_bt" = "Yukarıdakilerin hiçbiri, geri bildirim AI'nın büyümesine yardımcı olur";
+
+"wiki_bt" = "Daha fazla bilgi";
+
+"bird_feedback_title" = "Geri bildirim";
+
+"bird_feedback_input_text" = "Düşündüğünüz türleri girin";
+
+"submit_bt" = "Göndermek";
+
+"bird_feedback_success" = "Geri bildirim başarısı";
+
+"bird_feedback_failed" = "Üzgünüz, geri bildirim başarısız oldu, lütfen daha sonra tekrar deneyin";
+
+"awareness_bird_fans" = "Kuş Hayranları Paketi";
+
+"tier_message_bird_fans_note" = "Farkındalık Temel planına veya daha yüksek planlara abone olmanız gerekiyor";
+
+"purchase_support_device" = "Desteklenen cihazlar";
+
+"auto_ota" = "Otomatik güncelleme";
+
+"auto_ota_status_on" = "Açık";
+
+"auto_ota_status_off" = "Kapalı";
+
+"auto_ota_title" = "Otomatik güncelleme";
+
+"auto_ota_switch" = "Otomatik güncelleme";
+
+"auto_ota_content" = "Cihaz, ürün yazılımını 2:00AM'den 06:00AM'ye kadar otomatik olarak güncellemeye çalışacak ve güncelleme işlemi sırasında sesli uyarılar ve hafif rahatsızlıklar olmayacaktır. Cihaz, bellenim güncellenirken çalışmayı askıya alır ve bittiğinde kaldığı yerden devam eder.";
+
+"player_days_hour" = "bir saat içerisinde";
+
+"player_days" = "%@ %@ önce";
+
+"unit_day" = "gün";
+
+"unit_days" = "gün";
+
+"unit_hour" = "saat";
+
+"unit_hours" = "saat";
+
+"notification_keep_runing_title" = "Arka plan süreci";
+
+"notification_keep_runing_content" = "Daha zamanında mesaj alabilmeniz için uygulama çalışmaya devam edecek";
+
+"bird.find_subcategory" = "Kuş algılandı, {birdName} gibi görünüyor!";
+
+"tier_message_bird_notifacation_describe" = "Kuşları tanıma yeteneğini kazanın! Ve size Smart Push ile hatırlatın!";
+
+"tier_message_bird_subcategory_describe" = "10000'den fazla kuş türünü destekleyin";
+
+"not_account_google_tips1" = "Hesabınız ve Google Assistant bağlandıktan sonra, Google Home serisi cihazlar üzerinden Google Assistant özellikli cihazları sesli kontrol edebilirsiniz, ";
+
+"not_account_google_tips2" = "şunun gibi: \"OK Google, kameramı göster.\"";
+
+"account_google_succeed_tips1" = "Hesabınız ve Google Assistant bağlantılıdır ve Google Assistant özellikli cihazları Google Home serisi cihazlar üzerinden sesle kontrol edebilirsiniz, ";
+
+"account_google_succeed_tips2" = "şunun gibi: \"OK Google, kameramı göster.\"";
+
+"google_assistant" = "Google Assistant";
+
+"account_google_tips" = "Hesabınız Google Assistant'ya başarıyla bağlandı. Kullanırken herhangi bir sorunlar karşılaşırsanız cihazınız durumunu kontrol etmek veya SSS'yi görüntülemek için lütfen \"Kullanıcı\"-\"Akış Ara Bağlantısı\" sekmesine gidin.";
+
+"account_google_button" = "Google Assistant ile bağlantı";
+
+"commonMotionBody" = "Kameranız hareket algıladı";
+
+"bird_exist" = "Bir kuş tespit edildi";
+
+"push_bird_fans_title" = "Kuş Hayranları";
+
+"push_bird_fans_before_content" = "Kuş bildirimi almak, kuş türlerini keşfetmek ve toplamak için Kuş Hayranları Planına katılın!";
+
+"bird_fans_free_plan_title" = "Beta";
+
+"bird_fans_free_plan_price" = "Özgür";
+
+"bird_fans_free_plan_price_finish" = "Alınan";
+
+"bird_feedback_mark" = "\"%@\" olarak işaretle";
+
+"not_account_google_tips" = "Hesabınız henüz Google Home'a bağlanmadı. Google Home uygulamasını açabilir ve Google Home'a Eylem ekleyerek hesabınızı bağlayabilirsiniz.";
+
+"auto_switch_google" = "Google Home'yı destekleyen cihazlar, Google Home cihazlarına bağlanmak için otomatik olarak yeniden başlatılacak ve H.264 biçimine geçecektir.";
+
+"google_link" = "%@ hesabınızı Google Home'ya bağlamak için İzin Ver seçeneğine tıklayın.\nIf İzin ver:";
+
+"plan_feature_title" = "İşlev açıklaması";
+
+"nocamera_spt_google" = "Şu anda hiçbir cihaz Google Home'yı desteklemiyor";
+
+"push_bird_fans_after_content" = "Videoda kuş olup olmadığını analiz etmek ve uygun görünümde belirli kuş türlerini belirlemek için düğmeyi açtı";
+
+"open_wifi_ap" = "Cihaz erişim noktasına bağlanmak için lütfen Wi-Fi'yi açın";
+
+"hg_awareness" = "Homeguard Secure Plan";
+
+"device_plan_manage" = "Cihaz planı yönetimi";
+
+"plan_hg_single" = "Tek cihaz";
+
+"plan_hg_four" = "dört cihaz";
+
+"expiry_date" = "%@ tarihine kadar geçerlidir";
+
+"available_device" = "Mevcut";
+
+"device_plan_manage_drag" = "Bu plana sürükleyin";
+
+"device_plan_manage_no_device" = "Bu planı kullanan hiçbir cihaz yok";
+
+"device_plan_manage_not_support" = "Bu cihaz bu planı desteklemiyor";
+
+"purchase_purchase_duration" = "Satın alma süresi";
+
+"purchase_effective_device" = "Etkili cihaz";
+
+"purchase_manage_device" = "Cihazları yönet";
+
+"purchase_history_current_subscription" = "Mevcut abonelik";
+
+"purchase_history_title" = "Satın alım geçmişi";
+
+"purchase_history_purchase_time" = "Satın alma süresi:";
+
+"purchase_history_next_renewal_time" = "Bir sonraki yenileme zamanı:";
+
+"purchase_history_refunded" = "geri ödendi";
+
+"purchase_history_no_history" = "Satın alma geçmişi yok";
+
+"awareness_table_device_number" = "cihaz sayısı";
+
+"awareness_table_unlimited_device" = "sınırsız";
+
+"awareness_table_1_device" = "1";
+
+"awareness_table_4_device" = "4";
+
+"review_window_choose_title" = "kullanımdan memnun musun";
+
+"review_window_satisfied_title" = "Lütfen bizi değerlendirin";
+
+"review_window_choose_satisfied" = "memnun";
+
+"review_window_choose_dissatisfied" = "hoşnutsuz";
+
+"review_window_dissatisfied_title" = "Lütfen bize geri bildirimde bulunun";
+
+"review_window_dissatisfied_feedback" = "geri bildirim";
+
+"review_window_skip" = "Şimdi değil";
+
+"review_window_submit" = "Göndermek";
+
+"review_window_satisfied_go_bt" = "Git şimdi";
+
+"review_window_success_toast" = "Başarıyla gönderildi";
+
+"review_window_fail_toast" = "Gönderilemedi, lütfen daha sonra tekrar deneyin";
+
+"alexa_auth_cancel_bt" = "Bağlantıyı kaldır";
+
+"alexa_auth_cancel_pop_window_text" = "Bağlantıyı kaldırdıktan sonra, Echo Show gibi Alexa cihazları aracılığıyla Alexa özellikli cihazları kontrol edemezsiniz. Bağlantıyı kaldırmak istediğinizden emin misiniz?";
+
+"device_plan_manage_unsaved_pop_window_text" = "Plan değişikliği kaydedilmedi, doğrudan çıkıp çıkmayacağınızı belirleyin";
+
+"verification_code_subtitle" = "Doğrulama kodu %@ adresine gönderildi";
+
+"sign_error_username_empty" = "Kullanıcı adı boş olamaz";
+
+"alexa_auth_cancel_succeed_toast" = "Bağlantıyı başarıyla kaldır";
+
+"alexa_auth_cancel_failed_toast" = "Bağlantı kaldırılamadı, lütfen daha sonra tekrar deneyin";
+
+"device_plan_manage_full_toast" = "plan dolu";
+
+"sign_password_input" = "Şifre girin";
+
+"sign_password_again_input" = "Şifreyi tekrar girin";
+
+"sign_username_input" = "Kullanıcı adı girin";
+
+"account_alexa_failed3" = "İptal edilen bağlama";
+
+"device_language_pt" = "Português (Portekizce)";
+
+"payment_auto_pay_subtext" = "Aylık yenileyin, istediğiniz zaman iptal edin";
+
+"app_lang_follow_system" = "sistemi takip et";
+
+"doorbell_notification_switch" = "kapı zili bildirimi";
+
+"doorbell_notification_mode" = "İtme yöntemi";
+
+"doorbellPressNotifyType_options_phone" = "Telefon görüşmesi";
+
+"doorbellPressNotifyType_options_push" = "Bildirim";
+
+"smart_push_package_des" = "Örneğin kapı girişlerine yerleştirilmiş kutu benzeri paketlerin analizi için.";
+
+"smart_push_package_guide" = "kullanım bildirimi";
+
+"feedback_add_new" = "Ekle";
+
+"notification_help" = "Push alınmadı veya push gecikmeli %@";
+
+"system_permission_center_notify_content" = "Cihaz bildirim mesajlarını, sistem mesajlarını vb. almak için kullanılır.";
+
+"system_permission_center_notify_title" = "Bildirim";
+
+"feedback_number" = "No. ";
+
+"smart_push_other" = "Diğerleri";
+
+"smart_push_novip_des" = "Daha fazla özellik için Farkındalık'a abone olun";
+
+"smart_push_other_des" = "Yukarıdakilerin dışındaki diğer hareketler.";
+
+"notification_motion_switch" = "Hareket Algılama Bildirimi";
+
+"service_cloud_desc_hg" = "Hiçbir kritik anı kaçırmamak ve en güvenli video depolama alanını oluşturmak için 8 GB bulut kayıt depolama (2 tür Awareness Planı) ile 30 güne kadar uzatın.";
+
+"change_voice" = "Sesi değiştir";
+
+"change_voice_normal" = "Normal";
+
+"change_voice_man" = "Erkek adam";
+
+"change_voice_girl" = "Kız";
+
+"change_voice_monster" = "Canavar";
+
+"rate_add_attachment" = "Fotoğraf yükleniyor";
+
+"link_to_google" = "%@ ile Google'ı bağla";
+
+"signin_status" = "Olarak giriş yapıldı %@";
+
+"switch_account" = "Hesabı değiştir";
+
+"google_permission_des" = "Aşağıdaki izinleri isteyeceğiz:";
+
+"google_permission_one" = "%@ hesap bilgilerinize erişin.";
+
+"google_permission_two" = "%@ hizmetlerini kullanın.";
+
+"google_permission_three" = "Google'ın cihazlarınızı kontrol etmesine izin verin.";
+
+"google_privacy_policy" = "Google'ın %@ hesabını inceleyin";
+
+"google_auth_cancel_guide" = "%@ adresinden bağlantıyı kaldırabilirsiniz";
+
+"google_auth_agree" = "Kabul et ve bağla";
+
+"google_auth_cancel" = "İptal";
+
+"google_unlink_address" = "myaccount.google.com";
+
+"power_source_page_title" = "%@'nızı nasıl kullanmayı planlıyorsunuz?";
+
+"power_source_page_subtitle" = "Seçimi istediğiniz zaman güç ayarları sayfasından değiştirebilirsiniz.";
+
+"powerSource_options_plug_in" = "Eklenti";
+
+"powerSource_options_solar_panel" = "Güneş paneli";
+
+"powerSource_options_battery_power_only" = "Yalnızca pil gücü";
+
+"powerSource_options_wired" = "kablolu";
+
+"powerSource_options_unselected" = "Seçme";
+
+"auto_power_on_page_title" = "Şarj ettikten sonra otomatik açmayı etkinleştir";
+
+"auto_power_on_page_descr" = "Bu özelliği şimdi veya istediğiniz zaman güç ayarları sayfasından kapatabilirsiniz.";
+
+"power_source_item_name" = "Güç kaynağı";
+
+"set_power_settings" = "Güç ayarları";
+
+"camera_off_solar" = "Kamera çevrimdışı. Solar şarjlı kamera, şarj edildikten sonra otomatik olarak açılır.";
+
+"chargeAutoPowerOnCapacity_options_25pct" = "25%";
+
+"chargeAutoPowerOnCapacity_options_50pct" = "50%";
+
+"chargeAutoPowerOnCapacity_options_75pct" = "75%";
+
+"chargeAutoPowerOnCapacity_options_100pct" = "100%";
+
+"doorbell_call" = "Birisi kapı zilini çalıyor.";
+
+"wired_connection" = "Kablolu bağlantı";
+
+"video_settings" = "Video ayarları";
+
+"connection_mode" = "Bağlantılı Mod";
+
+"connect_wifi2" = "Wi-Fi'yi bağlayın";
+
+"pirCooldownTime_options_10s" = "10 saniye";
+
+"pirCooldownTime_options_30s" = "30 saniye";
+
+"pirCooldownTime_options_60s" = "1 dakika";
+
+"pirCooldownTime_options_180s" = "3 dakika";
+
+"pirCooldownTime_options_300s" = "5 dakika";
+
+"videoResolution_options_mid" = "SD";
+
+"videoResolution_options_high" = "HD";
+
+"videoResolution_options_2k" = "2K";
+
+"videoAntiFlickerFrequency_options_50Hz" = "50Hz";
+
+"videoAntiFlickerFrequency_options_60Hz" = "60Hz";
+
+"pirSensitivity_options_auto" = "Otomatik";
+
+"pirSensitivity_options_high" = "Yüksek";
+
+"pirSensitivity_options_mid" = "Orta";
+
+"pirSensitivity_options_low" = "Düşük";
+
+"pirRecordTime_options_auto" = "Otomatik";
+
+"pirRecordTime_options_10s" = "10 saniye";
+
+"pirRecordTime_options_15s" = "15 saniye";
+
+"pirRecordTime_options_20s" = "20 saniye";
+
+"set_pan_tilt_settings" = "Pan-tilt Ayarı";
+
+"pan_tilt_calibration" = "Pan-tilt Kalibrasyonu";
+
+"calibrate_start" = "kalibre et";
+
+"pan_tilt_calibration_descr" = "Kalibrasyon yaklaşık 15-25 saniye sürer. Lütfen işlem sırasında kamerayı manuel olarak döndürmeyin.";
+
+"calibrate_in_progress" = "Kalibrasyon";
+
+"calibrate_success" = "Kalibrasyon yapıldı!";
+
+"calibrating_now_try_later" = "Pan-tilt kalibrasyonu devam ediyor, lütfen daha sonra deneyin.";
+
+"vip_recommend_page_title" = "1 Aylık %@ ücretsiz kazanın.";
+
+"vip_cloud_storage_title" = "30 Günlük Bulut Depolama";
+
+"vip_cloud_storage_descr" = "Daha fazla geçmiş kayda istediğiniz zaman istediğiniz yerden erişin.";
+
+"vip_video_length_title" = "Daha Uzun Kayıt Uzunluğu";
+
+"vip_video_length_descr" = "Tüm hikayeyi yakalamak için üç dakikaya kadar kayıt yapın.";
+
+"vip_smart_push_title" = "Akıllı Basma";
+
+"vip_smart_push_descr" = "Yalnızca gerektiğinde uyarı alın. Kişi, paket, hayvan ve araç tespiti.";
+
+"vip_activity_zone_title" = "Kişiselleştirilmiş Güvenlik";
+
+"vip_activity_zone_descr" = "En önemli uyarıları almak için alanları özelleştirin.";
+
+"free_trial_all_cams_descr" = "İlk ay ücretsiz, ardından %@/ay/tüm kameralar, istediğiniz zaman iptal edin.";
+
+"free_trial_4_cams_descr" = "İlk ay ücretsiz, ardından %@/ay/4 kamera, istediğiniz zaman iptal edin.";
+
+"free_trial_try_btn" = "Ücretsiz dene";
+
+"free_trial_skip_btn" = "Hayır, teşekkürler";
+
+"free_trial_fail_alert_title" = "Ücretsiz deneme başarısız oldu";
+
+"free_trial_fail_alert_descr" = "Görünüşe göre ücretsiz denemeyi başlatmak için bir sorun oluştu. Lütfen tekrar deneyin.";
+
+"plan_activated_alert_title" = "Plan etkinleştirildi!";
+
+"plan_activated_alert_descr" = "Planınızı kullanıcı profili sayfasından yönetebilirsiniz.";
+
+"payment_fail_alert_title" = "Ödeme başarısız";
+
+"payment_fail_alert_descr" = "Ödemenizle ilgili bir sorun olduğu anlaşılıyor. Lütfen tekrar deneyin.";
+
+"plan" = "Plan";
+
+"free_trial_btn_long" = "1 Aylık Ücretsiz Denemeyi Başlatın";
+
+"privacy_and_terms" = "%@ ve %@";
+
+"monkey_awareness" = "Monkey Vision Farkındalık";
+
+"plan_monkey_single" = "Tek cihaz";
+
+"plan_monkey_two" = "İki cihaz";
+
+"plan_monkey_unlimited" = "sınırsız cihaz";
+
+"close_btn" = "Kapatma";
+
+"awareness_table_2_device" = "2";
+
+"vip_subscribe_now" = "Şimdi Abone Ol";
+
+"notification_general" = "Bildiri";
+
+"get_free" = "Bedavaya al";
+
+"get_awareness_first_bt" = "Önce Farkındalık Hizmeti Alın";
+
+"night_vision_off_descr" = "Açıldığında, %@ düşük ışık koşullarında otomatik olarak Gece Görüşü moduna girerek karanlıkta bile net videolar sağlar.";
+
+"night_vision_on_descr" = "%@, karanlıkta görüntü kalitesini iyileştirmek ve siyah beyaz video üretmek için kızılötesi ışığı kullanacak.";
+
+"night_vision_white_black_title" = "Siyah Beyaz Modu";
+
+"night_vision_white_black_descr" = "Kızılötesi ışık kullanarak, kamera görüntü kalitesini iyileştirerek net siyah beyaz video elde edebilir.";
+
+"night_vision_color_title" = "Renk Modu";
+
+"night_vision_color_descr" = "Kamera, beyaz ışığı kullanarak daha fazla ayrıntıyla renkli çekimler yapar. Hareket algılandığında beyaz ışığın yanacağını lütfen unutmayın.";
+
+"starlight_sensor_title" = "Yıldız Işığı Sensörü";
+
+"startlight_sensor_descr" = "En loş ortamlarda dahi çarpıcı sonuçlar üretebilen Starlight Sensör ile hemen her koşulda renkli, keskin ve net görüntüler yakalayın.";
+
+"starlight_sensor_descr" = "En loş ortamlarda dahi çarpıcı sonuçlar üretebilen Starlight Sensör ile hemen her koşulda renkli, keskin ve net görüntüler yakalayın.";
+
+"switch_language" = "Dili Değiştir";
+
+"switch_language_descr" = "Uygulama dilini %@ olarak değiştir";
+
+"voiceLanguage_options_cn" = "汉语 (Çince)";
+
+"voiceLanguage_options_en" = "English (İngilizce)";
+
+"voiceLanguage_options_es" = "Español (İspanyolca)";
+
+"voiceLanguage_options_fr" = "Français (Fransızca)";
+
+"voiceLanguage_options_de" = "Deutsch (Almanca)";
+
+"voiceLanguage_options_it" = "Italiano (İtalyanca)";
+
+"voiceLanguage_options_ja" = "日本語 (Japonca)";
+
+"voiceLanguage_options_ru" = "Pусский (Rusça)";
+
+"alarmDuration_options_5s" = "5 saniye";
+
+"alarmDuration_options_10s" = "10 saniye";
+
+"alarmDuration_options_15s" = "15 saniye";
+
+"nightVisionMode_options_infrared" = "Kızılötesi modu";
+
+"nightVisionMode_options_white" = "Beyaz ışık modu";
+
+"nightVisionSensitivity_options_high" = "Yüksek";
+
+"nightVisionSensitivity_options_mid" = "Orta";
+
+"nightVisionSensitivity_options_low" = "Düşük";
+
+"alarm_setting" = "Alarm Ayarları";
+
+"magicpix_turn_on_confirm" = "MagicPix, düşük ışık koşullarında görüntü kalitesini artırabilir, ancak aynı zamanda pil tüketimini artırabilir veya aşırı ısınmaya neden olabilir. Devam etmek istiyor musunuz?";
+
+"upgrade_now_btn" = "Güncelleme";
+
+"detection_preference" = "Tespit Tercihi";
+
+"detection_preference_subtext" = "%@, ekran değiştiğinde kaydı başlatmak için varsayılandır. Bir tercih seçtikten sonra, %@ yalnızca belirtilen hareket algılandıktan sonra kayda başlayacaktır.";
+
+"pirAi_options_detectPersonAi" = "Yalnızca insansı";
+
+"pirAi_options_detectPersonAi_pop" = "Etkinleştirildiğinde, %@ yalnızca insan şeklindeki hareket algılandığında video kaydeder, bu nedenle diğer hareket bilgilerini kaçırabilirsiniz.";
+
+"auto_sleep_subtext" = "%@ uyuduktan sonra kaydı durduracak, alarm verecek ve bildirimler gönderecek";
+
+"doorBellRing_options_1" = "Zil sesi 1";
+
+"doorBellRing_options_2" = "Zil sesi 2";
+
+"doorBellRing_options_3" = "Zil sesi 3";
+
+"live_failure_auto_guidance" = "Yavaş mı yükleniyor? AUTO Çözünürlüğü Deneyin";
+
+"live_failure_auto_try_btn" = "Şimdi dene";
+
+"live_failure_auto_thanks" = "Hayır, teşekkürler";
+
+"live_resolution_auto_title" = "AUTO Çözünürlük";
+
+"live_resolution_auto_descr" = "Mevcut ağ hızınıza göre uyarlanan sistemimiz, kesintisiz, kesintisiz bir canlı akış deneyimi için video kalitesini otomatik olarak ayarlar. Ağ bağlantısı zayıfsa video kalitesinde düşüş olabileceğini unutmayın.";
+
+"switch_to_auto_reminder" = "Gecikme mi? AUTO çözünürlüğünü deneyin.";
+
+"switch_to_auto_now" = "Şimdi Değiştir";
+
+"network_speed_slow" = "Yavaş internet";
+
+"network_speed_fast" = "Hızlı İnternet";
+
+"bind_ap_alert_join_ios" = "Bağlamak";
+
+"bind_ap_alert_title_android" = "Cihaza bağlanılsın mı?";
+
+"bind_ap_alert_descr_ios" = "%@ WLAN \"%@\" Ağına Katılmak İstiyor";
+
+"bind_ap_alert_descr_android" = "%@, cihaza bağlanmak için geçici bir Wi-Fi ağı kullanacak.";
+
+"bind_ap_alert_connect" = "Bağlamak";
+
+"bind_connect_ap_page_title" = "İstendiğinde, Wi-Fi ağına bağlanın.";
+
+"bind_connect_ap_page_descr" = "Kameranız, zahmetsiz bir kurulum işlemi için telefonunuzun doğrudan bağlanmasına izin veren geçici bir ağ oluşturur.";
+
+"location_perm_purpose_search_device" = "Yakındaki cihazları keşfetmek ve bunlara bağlanmak için Sistem Ayarlarında izinleri etkinleştirin";
+
+"enable_nearby_devices_perm" = "Yakındaki cihazlar iznini etkinleştir";
+
+"nearby_perm_purpose_search_device" = "Yakındaki cihazları keşfetmek ve bunlara bağlanmak için Sistem Ayarlarında izinleri etkinleştirin";
+
+"nearby_devices_perm" = "Yakındaki cihazlar";
+
+"sd_card_emtpy" = "kayıt bulunamadı";
+
+"andriod_storage_perm_recording" = "Videoları kaydetmek için lütfen Uygulama ayarlarında izin verin.";
+
+"library_cloud" = "Bulut";
+
+"library_sdcard" = "Hafıza kartı";
+
+"library_sdcard_select_device" = "Cihaz seç";
+
+"library_sdcard_wake_device" = "Pil gücünü tüketebilen SD kart videosunu görüntülemek için %@ uyandırmanız gerekiyor";
+
+"library_sdcard_select_device_bt" = "Lütfen bir cihaz seçin";
+
+"library_sdcard_no_device" = "Hiçbir aygıt";
+
+"recording_setting" = "Kayıt Ayarı";
+
+"shooting_interval_sd" = "SD Kart Soğutma";
+
+"interval_time_sd" = "SD Kart Soğutma Süresi Ayarla";
+
+"sdCardVideoModes" = "Kayıt modu";
+
+"sdCardVideoModes_options_eventual" = "Yalnızca hareket algılandığında kayıt yapın";
+
+"sdCardVideoModes_options_continual" = "Sürekli kayıt";
+
+"sdCardVideoModes_options_onChargeContinual" = "Sürekli kaydı takın";
+
+"sdCardVideoTime_options_10s" = "10 saniye";
+
+"sdCardVideoTime_options_30s" = "30 saniye";
+
+"sdCardVideoTime_options_60s" = "1 dakika";
+
+"sdCardVideoTime_options_180s" = "3 dakika";
+
+"sdCardVideoTime_options_300s" = "5 dakika";
+
+"sdCardCooldownSeconds_options_10s" = "10 saniye";
+
+"sdCardCooldownSeconds_options_30s" = "30 saniye";
+
+"sdCardCooldownSeconds_options_60s" = "1 dakika";
+
+"sdCardCooldownSeconds_options_180s" = "3 dakika";
+
+"sdCardCooldownSeconds_options_300s" = "5 dakika";
+
+"vip_feature_cloud_storage" = "Haddeleme geçmişi";
+
+"vip_feature_motion_detection" = "Hareket kaydı";
+
+"vip_feature_motion_alerts" = "Hareket uyarıları";
+
+"vip_feature_smart_push" = "Smart push";
+
+"vip_feature_activity_zone" = "Etkinlik bölgesi";
+
+"vip_feature_person_detection" = "Kişi tespiti";
+
+"vip_feature_pet_detection" = "Evcil hayvan tespiti";
+
+"vip_feature_package_detection" = "Paket tespiti";
+
+"vip_feature_vehicle_detection" = "Araç tespiti";
+
+"vip_feature_cooldown_time" = "Sıfır gecikme tespiti";
+
+"vip_feature_record_length" = "Hareket kaydı";
+
+"vip_feature_device_quantity" = "Cihaz sayısı";
+
+"vip_feature_device_quantity_unlimited" = "Sınırsız";
+
+"vip_compare_page_title" = "Ayrılmak istediğinizden emin misiniz?";
+
+"vip_compare_continue_free_btn" = "Ücretsiz Planla Devam Et";
+
+"vip_compare_try_btn" = "%@ Ücretsiz Deneyin";
+
+"vip_profile_non_vip_card_title" = "Kameranızdan en iyi şekilde yararlanın！";
+
+"vip_profile_non_vip_card_descr" = "Gelişmiş AI algılama, akıllı itme, aktivite bölgesi, daha büyük bulut depolama ve daha fazlasının kilidini açın!";
+
+"vip_compare_feature_title" = "Fonksiyonlar";
+
+"vip_feature_cloud_storage_day_count" = "maks %@ gün";
+
+"vip_feature_recording_length_20s" = "20 saniyeye kadar";
+
+"vip_feature_record_length_3min" = "3 dakikaya kadar";
+
+"vip_compare_free_title" = "Özgür";
+
+"vip_feature_not_supported" = "N / A";
+
+"error_load_data_failed" = "Verileri yüklerken bir sorunla karşılaştık.";
+
+"upgrade_for_free" = "Ücretsiz deneyin";
+
+"switch_resolution_failed" = "Çözünürlük değiştirilemedi, lütfen tekrar deneyin.";
+
+"live_failure_resolution_guidance" = "Gecikme mi? %@ çözünürlüğünü deneyin.";
+
+"vip_feature_record_length_20s" = "20 saniyeye kadar";
+

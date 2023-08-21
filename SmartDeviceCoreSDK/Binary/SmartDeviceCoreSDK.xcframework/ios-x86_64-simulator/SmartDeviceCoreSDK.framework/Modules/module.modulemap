@@ -1,0 +1,11 @@
+framework module SmartDeviceCoreSDK {
+  umbrella header "SmartDeviceCoreSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module SmartDeviceCoreSDK.Swift {
+  header "SmartDeviceCoreSDK-Swift.h"
+  requires objc
+}

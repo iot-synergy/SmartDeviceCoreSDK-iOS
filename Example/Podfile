@@ -1,0 +1,61 @@
+use_frameworks!
+
+platform :ios, '11.0'
+
+target 'SmartDeviceCoreSDK_Example' do
+
+  pod 'SmartDeviceCoreSDK', :path => '../', :subspecs => ["Source"]
+  
+  
+  pod 'A4xIJKMediaPlayerUIKit', :path => 'SmartDeviceCoreSDK/Classes/A4xIJKMediaPlayerUIKit'
+  pod 'BindUIkit', :path => 'SmartDeviceCoreSDK/Classes/BindUIkit'
+  pod 'A4xLiveVideoUIKit', :path => 'SmartDeviceCoreSDK/Classes/A4xLiveSDK/LiveVideoUIKit'
+  pod 'A4xLibraryUIKit', :path => 'SmartDeviceCoreSDK/Classes/A4xLibraryUIKit'
+  pod 'A4xDeviceSettingSDK', :path => 'SmartDeviceCoreSDK/Classes/A4xDeviceSettingSDK'
+  pod 'A4xLocation', :path => 'SmartDeviceCoreSDK/Classes/BindUIkit/A4xLocation'
+  pod 'BaseUI', :path => 'SmartDeviceCoreSDK/Classes/BaseUI'
+  pod 'MediaCodec', :path => 'SmartDeviceCoreSDK/Classes/MediaCodec'
+  pod 'ScanQR', :path => 'SmartDeviceCoreSDK/Classes/ScanQR'
+
+  # 业务库的 Interface 层
+  pod 'A4xDeviceSettingInterface', :path => 'SmartDeviceCoreSDK/Classes/A4xDeviceSettingInterface'
+  pod 'BindInterface', :path => 'SmartDeviceCoreSDK/Classes/BindInterface'
+  pod 'A4xLiveVideoUIInterface', :path => 'SmartDeviceCoreSDK/Classes/A4xLiveVideoUIInterface'
+  
+  
+  # 公网三方库
+  pod 'JXSegmentedView'
+  pod 'YogaKit'
+  pod 'lottie-ios'
+  pod 'LFLiveKit'
+  pod "SCPageControl"
+  pod 'SnapKit' , '~> 5.0.0'
+  pod 'IQKeyboardManager'
+  pod 'FSCalendar', '~>2.8'
+  pod 'MJRefresh' , '~>3.2'
+  pod 'YYWebImage' , '~>1.0.5'
+  pod 'HXImage'
+  pod 'AutoInch', '~> 1.3.1'
+  pod 'WHDebugTool', '~> 1.7'
+  pod 'SCIndexView'
+  pod 'Resolver'
+  
+  target 'SmartDeviceCoreSDK_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
+
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['ENABLE_BITCODE'] = 'NO'
+      config.build_settings['APPLICATION_EXTENSION_API_ONLY'] = 'NO'
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '11.0'
+      config.build_settings['CODE_SIGN_IDENTITY'] = ''
+      config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
+    end
+  end
+end

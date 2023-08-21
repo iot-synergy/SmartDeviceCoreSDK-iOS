@@ -1,0 +1,3796 @@
+/* 
+Localizable.strings
+
+
+Copyright © 2020 CocoaPods. All rights reserved.
+*/
+"about" = "אודות %@";
+
+"about_str_inter" = "על אודות Amazon Alexa";
+
+"accept" = "לְקַבֵּל";
+
+"account_alexa_tips" = "החשבון שלך קושר בהצלחה לאקסה. אם אתה נתקל בבעיות כלשהן בשימוש, אנא עבור אל \"משתמש\"-\"חיבור זרימה\" כדי לבדוק את מצב המכשיר שלך או להציג שאלות נפוצות.";
+
+"account_had_been_bind" = "חשבון זה כבר משוייך";
+
+"account_no_registered" = "חשבון זה אינו רשום";
+
+"account_settings" = "הגדרות חשבון";
+
+"action_tracing_open" = "כאשר מזוהה תנועה, ה-%@ יעקוב אוטומטית אחר התנועה.";
+
+"action_tracking" = "מעקב תנועה";
+
+"activity_zone_tips" = "ה-%@ מקליט תמיד את כל הסרטונים, אך תקבל התראה רק במקרה שתזוהה תנועה באזורי הפעילות.";
+
+"activity_zones" = "אזור פעילות";
+
+"add_activity_zone" = "הוסף אזור פעילות";
+
+"add_camera_again" = "הוסף מכשיר";
+
+"add_camera_first" = "לא נמצא מכשיר, הוסף תחילה מכשיר.";
+
+"add_camera_now" = "הוסף מצלמה עכשיו";
+
+"add_device_long_press" = "לחיצה ארוכה להדלקה";
+
+"add_device_plugin" = "חיבור";
+
+"add_device_power_des_key_point" = "לחץ לחיצה ארוכה";
+
+"add_device_power_double_des" = "בהישמע \"Scan QR code\", ניתן להמשיך לשלב הבא.";
+
+"add_device_power_title" = "הדלק את המצלמה";
+
+"add_device_push_button" = "לחצן";
+
+"add_new_camera" = "הוסף מכשיר חדש";
+
+"add_new_camera_now" = "הוסף מכשיר חדש עכשיו!";
+
+"add_new_device_b" = "מצלמת PTZ חכמה";
+
+"add_new_device_g" = "מצלמת סוללה חכמה";
+
+"add_other_error" = "נושאים אחרים / אין חיווי קולי";
+
+"add_preset_scuess" = "מיקום הוסף בהצלחה";
+
+"add_sleep" = "הוסף";
+
+"add_sleep_plan" = "הוסף תוכנית מצב שינה";
+
+"add_timeout" = "הוסף זמן קצוב למכשיר";
+
+"address" = "כתובת";
+
+"address1_placeholder" = "רחוב ומספר, תיבת דואר, אצל.";
+
+"address2_placeholder" = "כתובת מפורטת כגון, דירה, מספר בית וכו'.";
+
+"admin" = "מנהל מערכת";
+
+"admin_info" = "מידע מנהל";
+
+"admin_sharing_in_same_country" = "החשבון של מנהל המערכת והמשתמש/ים המשניים חייבים להיות באותה מדינה.";
+
+"admin_wakeup_camera" = "אנא צור קשר עם האדמין כדי להפעיל מחדש את %@ במידת הצורך.";
+
+"advanced_info" = "הגדרות מתקדמות";
+
+"after_checking_tips" = "לאחר סימון פריטי הניתוח, הסרטון המוקלט ינותח מוצפן לזיהוי אדם, חיית מחמד, רכב, חבילה. אתה יכול לסמן יותר מפריט אחד.";
+
+"after_checking_tips1" = "לאחר סימון פריטי הניתוח, הסרטון המוקלט ינותח מוצפן לזיהוי אדם, חיית מחמד. אתה יכול לסמן יותר מפריט אחד.";
+
+"agree" = "לְהַסכִּים";
+
+"agree_and_continue" = "מסכים והמשך";
+
+"ai_analysis" = "ניתוח AI";
+
+"ai_analysis_description" = "ישנן כיום מגוון תוצאות ניתוח: אדם, חיית מחמד. אנא הקש על הקישור למטה וקפוץ למסך כדי להגדיר את פריטי הניתוח עבור המכשירים שלך אחד אחד.";
+
+"ai_analysis_description1" = "יש כיום מגוון של תוצאות ניתוח: אדם, חיית מחמד, רכב וחבילה. אנא הקש על הקישור למטה וקפוץ למסך כדי להגדיר את פריטי הניתוח עבור המכשירים שלך אחד אחד.";
+
+"ai_car" = "רכב";
+
+"ai_filter" = "סיווג";
+
+"ai_filter_des" = "הפעל את הקטגוריה שברצונך לזהות, הסרטון ינתח את מה שמופיע על המסך, ותוכל לבחור אם לקבל הודעה.";
+
+"ai_filter_des2" = ".בהפעלת הסיווג, תוכן הוידאו ינותח. נכון לעכשיו, קטגוריות הזיהוי העיקריות כוללות: אדם,  חיית מחמד..";
+
+"ai_pet" = "חיית מחמד";
+
+"ai_pet_hint" = "תומך רק בהכרה של חתול וכלב";
+
+"alarm_no" = "לא ניתן לקבוע עוצמת קול מתחת ל- 10";
+
+"alarm_on" = "להדליק";
+
+"alarm_playing" = "האזעקה מצלצלת.";
+
+"alarm_volume" = "עוצמת אזעקה";
+
+"alerdy_move_location" = "ה-%@ כבר כאן: %@";
+
+"alert" = "הפעל אזעקה";
+
+"alert_buttom" = "צופר אזעקה";
+
+"alexa_link" = "לחץ על אפשר כדי לקשר את חשבון %@ שלך ל- Alexa. אם אפשר\n:";
+
+"alexa_link_allow" = "להתיר";
+
+"alexa_link_refuse" = "לא עכשיו";
+
+"alignqr" = "יישר את קוד ה- QR למסגרת לסריקה.";
+
+"all_alerts" = "כל התנועות";
+
+"all_device" = "כל המכשירים";
+
+"all_screen" = "כל המסכים";
+
+"allow" = "להתיר";
+
+"allow_bluetooth_permission" = "אפשר הרשאות \"Bluetooth\"";
+
+"allow_bluetooth_permission_button" = "אפשר הרשאות Bluetooth";
+
+"allow_camera_permission" = "אפשר גישה למצלמת הטלפון לסרוק את קוד ה- QR במצלמה.";
+
+"allow_libary" = "נא לאפשר גישה למצלמות בהגדרות המצלמה";
+
+"allow_location_permission" = "אפשר הרשאות \"מיקום\"";
+
+"allow_location_permission_for_camera" = "הפעל את הגישה למיקום כדי לקבל אוטומטית את שם ה-Wi-Fi הנוכחי ולהגדיר אותו עבור המכשיר (מומלץ), או הזן ידנית את שם ה-Wi-Fi (תלוי רישיות).";
+
+"allow_location_permission_get_wifi" = "אפשר שירותי מיקום בטלפון, וקבל באופן אוטומטי את פרטי הרשת האלחוטית הנוכחית.";
+
+"allow_location_permission_title" = "אפשר הרשאות \"מיקום\"";
+
+"allowa_camera_permission" = "אפשר הרשאות מצלמה";
+
+"already_ignore" = "התעלמו";
+
+"already_long_press" = "לחצתי על כפתור האיפוס";
+
+"already_register" = "כתובת דוא\"ל זו כבר קיימת. נסה להתחבר במקום";
+
+"alter_location" = "שנה מיקום";
+
+"amazon_alexa" = "Amazon Alexa";
+
+"analysis_item" = "פריט ניתוח (קיימות אפשרויות רבות)";
+
+"and" = "ו";
+
+"anti_flicker" = "אנטי הבהוב";
+
+"anti_flicker_setting" = "אנטי הבהוב";
+
+"anti_flicker_tips" = "אם האנטי-הבהוב מופעל, ה-%@ ינטרל את אפקט ה-strobe של זרם החילופין. זה פותר את הבהוב המסך.";
+
+"apayment_success" = "%@ שולם בהצלחה";
+
+"apaymntt_fail" = "%@ תשלום נכשל";
+
+"app_build_info" = "Build Info";
+
+"app_is_update_to_date" = "כבר עידכנת לגירסה האחרונה";
+
+"app_name" = "@string/appName";
+
+"app_transfer_content" = "<![CDATA[ <font>\u3000\u3000In order to cooperate with relevant policies and provide better services to users in China, Example App will be changed to <strong>Example</strong> App on <font color=\"#5AC4A7\">%@</font>. <br /> <font>\u3000\u3000Please download <strong>Example</strong> in time. You can log in to <strong>Example</strong> directly through your Example account. All your camera info and Awareness service status will be retained and you can continue to use it. </font><br /> <font>\u3000\u3000After the expiration date, Example APP will no longer be usable. <u><font color=\"#007AFF\"> Learn more >></font></u></font><br />]]>";
+
+"app_transfer_content_logout" = "<![CDATA[ <font>\u3000\u3000In order to cooperate with relevant policies and provide better services to users in China, Example App changed to <strong>Example</strong> App on <font color=\"#5AC4A7\">%@</font>.</font><br /> <font>\u3000\u3000Example APP can no longer be usable. Please download <strong>Example</strong> in time. You can log in to <strong>Example</strong> directly through your Example account. All your camera info and Awareness service status will be retained and you can continue to use it. <u><font color=\"#007AFF\"> Learn more >></font></u></font><br /> ]]>";
+
+"app_update" = "עדכון אפליקציה";
+
+"app_version" = "גרסאת אפליקציה";
+
+"apple_cancle" = "תשלום בוטל";
+
+"apple_reject" = "טלפון זה אינו תומך ברכישה.";
+
+"audio_setting" = "הגדרות אודיו";
+
+"auto" = "AUTO";
+
+"auto_sleep" = "תזמן שינה";
+
+"auto_sleep_prompt" = "אם תזמון שינה מופעל, ה-%@ יכנס אוטומטית למצב שינה בהתאם ללוח הזמנים של השינה.";
+
+"auto_switch_alexa" = "מכשירים התומכים באלקסה יופעלו מחדש באופן אוטומטי ויעברו ל-H.264 כדי להתחבר למכשירי Alexa.";
+
+"auto_video_record_desc" = "ה-%@ יסיים את ההקלטה לאחר הפסקת התנועה, הזמן המרבי הוא 3 דקות.";
+
+"available_2_4g_are_follows" = "הרשתות האלחוטיות בתדר 2.4GHz הזמינות הן:";
+
+"available_fireware" = "קושחה זמינה";
+
+"awareness_service" = "שירותי האנליטיקה והאחסון בענן";
+
+"awarenessbasic" = "%@ מודעות בסיסיות";
+
+"awarenessplus" = "%@ מודעות פלוס";
+
+"awarenesspro" = "%@ מודעות Pro";
+
+"back_door" = "דלת אחורית";
+
+"batter_low_upgrade" = "הסוללה חלשה ולא ניתן להשלים את השדרוג. נא שדרג מחדש לאחר הטעינה.";
+
+"battery_camera" = "מכשיר סוללה";
+
+"battery_camera_tips" = "אנא לחץ לחיצה ארוכה על לחצן ההפעלה עד שהמכשיר ישודר צליל טיפ.";
+
+"battery_issue" = "בעיה בסוללה/חומרה";
+
+"battery_level" = "רמת סוללה";
+
+"bed_room" = "חדר שינה";
+
+"before_offline" = "(לפני החיבור לאינטרנט)";
+
+"bind_111" = "כאשר אתה שומע צליל \"דינג דונג\" מהמכשיר או רואה את האור המהבהב, השתמש במכשיר כדי לסרוק את קוד ה-QR במרחק של כ-6-12 אינץ' (15-30 ס\"מ). אם אינך שומע שום צליל, לחץ פעמיים על לחצן ההפעלה כדי לגרום למכשיר להיכנס למצב סורק קוד QR. תשמע צליל ביפ כאשר קוד ה-QR נסרק בהצלחה.";
+
+"bind_ap_content" = "אנא חבר את הטלפון שלך אל %@ וחזור אל %@";
+
+"bind_ap_help_content" = "%@ יתחבר לנקודה החמה %@ עבור תצורת הרשת";
+
+"bind_ap_help_wifi_pw" = "סיסמת נקודה חמה:";
+
+"bind_ap_no_found_ap" = "לא מוצא את הנקודה החמה הזו?";
+
+"bind_ap_title" = "הגדר Wi-Fi עבור המכשיר";
+
+"bind_device_b0_step0_desc" = "לאחר סיום תנועת המצלמה, ניתן להמשיך לשלב הבא";
+
+"bind_device_delete" = "מחק רשת זו";
+
+"bind_device_g_step0_desc" = "כאשר נשמע צליל הפעלה, ניתן להמשיך לשלב הבא.";
+
+"bind_device_guide" = "הפעל את המצלמה לפי הנחיות המדריך";
+
+"bind_device_guide_confirm" = "ודא שהמכשיר פולט צליל או שנורית החיווי מהבהבת";
+
+"bind_device_guide_confirm_window" = "נא להקפיד לשמוע את הצליל מהמכשיר, או שהאור מהבהב, כדי להמשיך לשלב הבא.";
+
+"bind_device_save_wifi" = "שמור את שם וסמסמאת הרשת האלחוטית לאחר חיבור מוצלח.";
+
+"bind_device_saved" = "רשת אלחוטית נשמרה";
+
+"bind_device_scan" = "שמור את הטלפון במרחק של כ-6-12 אינץ' (15-30 ס\"מ) מהמכשיר כדי לסרוק את קוד ה-QR, ולהשלים את תהליך הסריקה לאחר הצפצוף";
+
+"bind_device_scan_failed" = "חיבור נכשל, הקלק כאן בבקשה";
+
+"bind_device_scan_failed_2" = "צור קשר עם התמיכה";
+
+"bind_device_skip" = "השלב הבא יתקבל באופן אוטומטי לאחר חיבור מוצלח.";
+
+"bind_result_scuess" = "%@ (%@) קיבל את בקשתך לגשת למכשיר.";
+
+"bind_result_scuess_check" = "עיין במכשירים משותפים כדי למצוא אותו.";
+
+"bind_step_wifi_finish" = "הזנתי את פרטי הרשת האלחוטית";
+
+"bird" = "ציפור";
+
+"bluetooth" = "Bluetooth";
+
+"bluetooth_permission" = "אפשר Bluetooth כדי לאגד בקלות את המכשיר";
+
+"bluetooth_system_center" = "הפעל את ה- Bluetooth בהגדרות מרכז הבקרה";
+
+"bluetooth_tips1" = "1. מצא את %@ בהגדרות";
+
+"bluetooth_tips2" = "2. אפשר ל %@ גישה ל- Bluetooth";
+
+"bt_new_device_pop" = "נמצא מכשיר חדש";
+
+"bt_no_found_device" = "אם המכשיר שלך לא מופיע ברשימה";
+
+"bt_no_found_device_link" = "שיטות חיבור אחרות>";
+
+"bt_searching_device" = "מחפש מכשירים מופעלים";
+
+"bt_select_device" = "בחר את המכשיר שלך";
+
+"build_env" = "BuildENV";
+
+"buy" = "לִקְנוֹת";
+
+"buy_desc" = "* המודעות חלה רק על זכויות מנהל המכשיר. משתמשים משניים יכולים ליהנות ממנו רק באמצעות זכויות המנהל.";
+
+"camera" = "התקן";
+
+"camera_alarm" = "התראה";
+
+"camera_alarm_tips" = "כאשר התכונה \"אזעקה\" מופעלת, ה-%@ ישדר אוטומטית צליל התראה כאשר הוא מזהה תנועה.";
+
+"camera_alarm_white_tips" = "כאשר התכונות \"אזעקה\" או \"פנס\" פועלות, ה-%@ יתריע אוטומטית כאשר הוא מזהה תנועה.";
+
+"camera_deleted" = "%@ זה נמחק.";
+
+"camera_is_offline" = "%@ לא מחובר";
+
+"camera_line_busy" = "ה-%@ נמצא בשימוש, אנא נסה מאוחר יותר.";
+
+"camera_location" = "היכן תרצה למקם את %@ זה?";
+
+"camera_not_activated" = "לא ידוע %@, אנא צור קשר עם הקמעונאי.";
+
+"camera_not_activated_short" = "לא ידוע %@";
+
+"camera_off" = "ה-%@ כבוי. אנא הפעל אותו.";
+
+"camera_off_low_battery" = "ה-%@ כבה אוטומטית עקב סוללה חלשה ב-%@, נא לטעון אותו.";
+
+"camera_offline_desc" = "נסה לאתחל את הראוטר. אם זה לא עוזר, נסה לחבר מחדש את %@ ל-Wi-Fi על ידי כפתור \"הוסף מכשיר חדש\".";
+
+"camera_permission" = "אפשר למצלמה גישה";
+
+"camera_permission_tips" = "אפשר גישה למצלמה ב\"הגדרות \"בטלפון כדי לסרוק את קוד ה- QR.";
+
+"camera_poor_network" = "ה-%@ לא מקוון. אנא ודא שה-%@ מופעל ומחובר לרשת Wi-Fi.";
+
+"camera_poor_network_short" = "ה-%@ לא מקוון.";
+
+"camera_serial_number" = "%@ מספר סידורי";
+
+"camera_sleep" = "ה-%@ נמצא במצב שינה";
+
+"camera_sleep_open" = "ה-%@ יופעל מחר ב-%@.";
+
+"camera_wake_up" = "התעוררי";
+
+"camera_white_tips" = "אם תכונת הבזק אזעקה מופעלת, %@ יהבהב אוטומטית כאשר חיישן התנועה מופעל.";
+
+"camera_will_not_record" = "ה-%@ לא יקליט, יתריע ותראה דחיפה.";
+
+"can_move_this_location" = "ניתן להעביר למיקומים הבאים";
+
+"can_not_find_camera_qr_code" = "לא מוצא את הקודר שעל גוף המצלמה?";
+
+"can_not_find_qr_code" = "לא מצליח למצוא את קוד ה- QR של המנהל?";
+
+"can_not_find_reset" = "לא מצליח למצוא את כפתור האיפוס?";
+
+"can_not_get_ssid" = "לא ניתן לקבל את פרטי הרשת האלחוטית, אנא שנה רשת אלחוטית או הזן את המידע באופן ידני.";
+
+"can_not_get_ssid_short" = "קבלת פרטי הרשת האלחוטית נכשלה";
+
+"can_not_power_up" = "אי אפשר להדליק?";
+
+"cancel" = "לְבַטֵל";
+
+"cannot_receive_code" = "לא מקבל את קוד האימות?";
+
+"cannot_receive_code_reason_bold1" = "אנא בדוק את תיקיית דואר הזבל.שבתיבת הדואר שלך.";
+
+"cannot_receive_code_reason_bold2" = "כתובת דוא\"ל בינלאומית נורמלית כגון Gmail ו- Yahoo";
+
+"cannot_receive_code_reason1" = "לאחר לחיצה על \"אשר\", תיבת הדואר שלך תקבל את קוד האימות תוך 60 שניות.";
+
+"cannot_receive_code_reason2" = "במידה ומצב הרשת אינו יציב, יש להמתין בסבלנות כ- 5 דקות.";
+
+"cannot_receive_code_reason3" = "במידה וקוד האימות לא נתקבל גם לאחר 5 דקות, <![CDATA[<b>אנא בדוק את תיקיית דואר הזבל.שבתיבת הדואר שלך.</b>]]>";
+
+"cannot_receive_code_reason4" = "במידה וקוד האימות לא נמצא בתיקיית דואר הזבל, ייתכן כי לא ניתן היה לשלוח קוד אימות לכתובת הדוא\"ל הנוכחית. אנא שנה ל <![CDATA[<b>כתובת דוא\"ל בינלאומית נורמלית כגון Gmail ו- Yahoo</b>]]> לקבלת קוד אימות.";
+
+"cannot_receive_code_reason5" = "במידה וקוד האימות לא נתקבל גם לאחר 5 דקות, אנא בדוק את תיקיית דואר הזבל שבתיבת הדואר שלך.";
+
+"cannot_receive_code_reason6" = "במידה וקוד האימות לא נמצא בתיקיית דואר הזבל, ייתכן כי לא ניתן היה לשלוח קוד אימות לכתובת הדוא\"ל הנוכחית. אנא שנה ל <![CDATA[<b>כתובת דוא\"ל בינלאומית נורמלית כגון Gmail ו- Yahoo</b>]]> לקבלת קוד אימות.";
+
+"cannot_switch" = "לא ניתן לשנות רזולוציה במהלך הקלטה.";
+
+"cannot_take_screenshot" = "לא ניתן לצלם תמונות במהלך הקלטה.";
+
+"car_reid_describ" = "זהה את הרכב שנצפה על ידי המכשיר ואפשר למשתמש לסמן אותו. לאחר הסימון, תוכן הדחיפה יתעדכן, וניתן גם להגדיר אם לדחוף או לא.";
+
+"change" = "שנה עכשיו";
+
+"change_binding_email" = "חשבון זה כבר קיים. נא לשנות לכתובת דואר אלקטרוני אחרת.";
+
+"change_binding_phone" = "חשבון זה כבר קיים. נא לשנות למספר טלפון אחר.";
+
+"change_email" = "שנה כתובת דוא\"ל";
+
+"change_net_device_power_des" = "לחץ פעמיים על הלחצן במכשיר כדי להיכנס למצב חיבור הרשת. כאשר האור הכחול מהבהב, המכשיר מוכן לחיבור.";
+
+"change_net_device_power_des_key_point" = "לחיצה כפולה";
+
+"change_not_save" = "האם לשמור את השינויים?";
+
+"change_notification" = "%@ ישתנה ל%@ לאחר %@ ימים.";
+
+"change_password" = "שנה סיסמה";
+
+"change_password_failed" = "שינוי הסיסמה נכשל, אנא נסה שוב.";
+
+"change_password_success" = "סיסמה שונתה בהצלחה";
+
+"change_password_tips" = "למען בטחונך, אורך הסיסמה חייב להיות לפחות 8 תווים ועל הסיסמה להכיל אות גדולה, אות קטנה וסיפרה.";
+
+"change_phone" = "שנה מספר טלפון";
+
+"change_statement_1" = "אנו שמחים להודיע ​​לך שהוצאנו אפליקציה חדשה, %@, שהיא הגרסה המשודרגת של Example. Example לא יעודכן יותר. אנא עברו לאפליקציה החדשה שלנו %@ מכיוון שאנו מאמינים שהיא תספק חווית משתמש טובה בהרבה.";
+
+"change_statement_2" = "אתה רק צריך ללחוץ על הכפתור מתחת ל\"עבור להורדה\" כדי לפתוח את חנות Google Play או לחפש \"%@\" ישירות בחנות Google Play, להתקין את האפליקציה החדשה ולהיכנס עם חשבון Example שלך. הכל (המכשירים, הנתונים וההגדרות שלך) יישארו ללא שינוי.";
+
+"change_statement_2_email" = "You only need to click on the button below \"Go to download\" to open the Google Play Store or search \"%@\" directly in the Google Play Store, and then register a new account. If you have any questions, please contact support@Example.tech .";
+
+"change_statement_5" = "We can't wait to welcome you to our new %@ app. We'd love to hear your feedback!";
+
+"change_vehicle_name" = "הקש כדי לשנות את שם הרכב";
+
+"change_wifi" = "שנה רשת רשת אלחוטית";
+
+"change_wifi_network" = "שנה הגדרות רשת אלחוטית";
+
+"charging" = "טְעִינָה";
+
+"charging_completed" = "סוללה טעונה במלואה";
+
+"check_email_sample" = "xx@xx.xx";
+
+"check_for_update_version" = "בדוק לעידכוני קושחה";
+
+"check_inbox_des" = "קוד אימות כרגע נשלח למזהה הדוא\"ל  %@ שלך, נא להזין אותו נכונה.";
+
+"check_net_config" = "אנא בדוק את הרשת שלך ונסה שוב.";
+
+"check_requirements" = "פורמט הסיסמה שהוזן אינו נכון";
+
+"check_update_version" = "בדוק לעידכונים";
+
+"check_wifi_0" = "אנא הצב את %@ היכן שאתה צריך להתקין אותו ובדוק את עוצמת אות ה-Wi-Fi.";
+
+"check_wifi_1" = "בדוק את חוזק אות הרשת האלחוטית ...";
+
+"check_wifi_2" = "וודא את חוזק אות הרשת האלחוטית:";
+
+"check_wifi_3" = "מומלץ לעלות את ה-%@ במיקום הנוכחי.";
+
+"check_wifi_4" = "המיקום הנוכחי אינו מומלץ לטעינת ה-%@.";
+
+"check_wifi_no" = "אין אות Wi-Fi במיקום הנוכחי. אנא העבר את ה-%@ ליד הנתב האלחוטי.";
+
+"check_your_inbox" = "קוד אימות";
+
+"choose" = "בחר";
+
+"choose_camera_type" = "השתמש בטלפון הנייד שלך כדי לסרוק את קוד ה-QR במכשיר כדי לדעת את דגם המכשיר. קוד ה-QR נמצא לעתים קרובות בתוך המעטפת החיצונית או מתחת לפקק הגומי. קוד QR זה מכיל את המספר הסידורי והדגם של המכשיר, בדרך כלל מתחיל ב-\"S/N\".";
+
+"choose_error_msg" = "נא לבחור בהודעת השגיאה שאתה שומע";
+
+"choose_firmware_update" = "בחר בעידכון הקושחה";
+
+"choose_location" = "אנא בחר מיקום עבור %@ שלך כדי ליהנות מחוויה טובה יותר.";
+
+"choose_other_wifi" = "בחר ברשת אלחוטית אחרת";
+
+"choose_question_type" = "אנא בחר בקפידה את הנושא מהקטגוריות הבאות. בחירה מדויקת יכולה לעזור לנו לאתר את הבעיה כדי לספק לך סיוע מהיר וטוב יותר.";
+
+"city" = "עיר";
+
+"clear_cache" = "נקה מטמון";
+
+"clear_cache_des" = "המטמון הוא נתונים זמניים הנוצרים במהלך השימוש. ניקוי המטמון אינו משפיע על השימוש הרגיל באפליקציה.";
+
+"clear_cache_not_affect_download_media" = "ניקוי המטמון לא ישפיע על השימוש הרגיל באפליקציה.";
+
+"click_support" = "לחץ לתמיכה";
+
+"close" = "כבויה";
+
+"close_combiend" = "האם אתה בטוח שברצונך לסגור את דחיפת המיזוג של כל המכשירים?";
+
+"close_combiend_tips" = "לאחר סגירת לחיצת המיזוג, כל סרטון בודד ידחוף אותך והודעות הדחיפה יגדלו.";
+
+"close_led" = "כבוי";
+
+"close_motion_detection_tip" = "לאחר מיטוב פונקציות המצלמה, מתג הקלטת הוידאו יוסר. כדי לא להשפיע על הרגלי השימוש שלך, מתג גילוי התנועה כבוי באופן זמני. במידת הצורך, ניתן להפעילו מחדש.";
+
+"cloud_service_buy" = "שלם עכשיו";
+
+"cloud_size_change" = "שטח האחסון בענן יצטמצם ל- %@ (הקיבולת המקסימלית היא GB%@)";
+
+"cloud_storage_params" = "<![CDATA[<font color=#333333\">%1$d days</font><br><font color=\"#999999\">(≤%2$sGB)</font>]]>";
+
+"cloud_strorage" = "הקלטת ענן";
+
+"common_format" = "עיצוב כרטיס SD";
+
+"common_service" = "לייט";
+
+"config_night_mode" = "מצב ראיית לילה";
+
+"confirm" = "לְאַשֵׁר";
+
+"confirm_camera_on" = "וודא שהמצלמה דלוקה";
+
+"confirm_model_number" = "סרוק את קוד ה-QR במכשיר עם הטלפון שלך כדי לאשר את דגם המכשיר";
+
+"confirm_new_password" = "אשר סיסמה חדשה";
+
+"confirm_open" = "לְאַשֵׁר";
+
+"confirm_password" = "אשר סיסמה";
+
+"confirm_scan_state" = "ודא שהמכשיר במצב סריקה";
+
+"confirm_scan_state_directions" = "בדרך כלל מכשיר חדש יכול להיכנס למצב סריקה באופן אוטומטי, ותשמעו צליל סריקה או תראו אור מהבהב. אם לא, עליך ללחוץ פעמיים על כפתור ההפעלה.";
+
+"confirm_scanning_sound" = "אשר אם המכשיר משמיע צפצוף";
+
+"confirm_scanning_sound_window" = "אנא ודא שהמצלמה מנגנת צליל לשלב הבא.";
+
+"confirm_speaker_1" = "האם אתה בטוח לכבות את הרמקול?";
+
+"confirm_speaker_2" = "ה-%@ לא ישדר עוד צלילי תזכורת";
+
+"confirm_speaker_open" = "כאשר אתה מפעיל את התכונה \"רמקול\", ה-%@ יספק מיד משוב אקוסטי כדי ליידע את המצב של ה-%@.";
+
+"congratulation_add_camera" = "מזל טוב, נרשמת בהצלחה\nאנא הוסף מכשיר";
+
+"connect_error_ap_1" = "אנא בדוק במידה ובחרת או הזנת את שם הרשת האלחוטית הנכון.";
+
+"connect_error_ap_2" = "אנא הצב את המכשיר ליד נתב ה-Wi-Fi וודא שהנתב מחובר למקור מתח.";
+
+"connect_error_ap_3" = "נכון לעכשיו, 5 GHz Wi-Fi ו-Wi-Fi ארגוני אינם נתמכים.";
+
+"connect_error_failed_1" = "אנא בדוק שהנתב בעל גישה לאינטרנט.";
+
+"connect_error_failed_2" = "אנא נסה לאתחל את הנתב האלחוטי ונסה להתחבר מחדש.";
+
+"connect_error_failed_3" = "אנא נסה רשת אלחוטית אחרת.";
+
+"connect_error_ip" = "שמעתי \"Retrieving IP timeout\"";
+
+"connect_error_ip_1" = "מכיוון שיש יותר מדי מכשירים המחוברים לנתב, לא ניתן לחבר מכשירים נוספים. אנא הסר כמה מכשירים שאינם בשימוש או שפג תוקפם. ייתכן שתצטרך לפנות למנהל הנתב.";
+
+"connect_error_method" = "אנא ודא שרשת ה-Wi-Fi שלך אינה רשת Wi-Fi ארגונית. המכשיר תומך רק ברשתות עם רמת אבטחה מתחת ל-WPA-2.";
+
+"connect_error_no_voice" = "שמעתי \"חיבור שירותי ענן נכשל\"";
+
+"connect_error_other" = "שמעתי \"Authentication error\"";
+
+"connect_error_password_1" = "אנא וודא שסיסמאת הרשת האלחוטית שהוזנה, הינה נכונה ושים לב לאותיות רישיות.";
+
+"connect_error_wifi" = "שמעתי \"שגיאת סיסמת רשת אלחוטית\"";
+
+"connect_error_wifi_net" = "שמעתי \"רשת אלחוטית SSID לא נמצא\"";
+
+"connect_find_device" = "נמצא מכשיר חדש";
+
+"connect_heard_failed" = "שמעתי הודעת שגיאה.";
+
+"connect_initialize" = "אתחול ה-%@";
+
+"connect_no_wifi" = "לא מוצא את פרטי הרשת האלחוטית?";
+
+"connect_register" = "הירשם לשירותי הענן";
+
+"connect_server" = "מתחבר לשרת...";
+
+"connect_sever_timeout" = "פסק הזמן של החיבור לשרת";
+
+"connect_success" = "החיבור הצליח";
+
+"connect_to_wifi" = "חבר את המכשיר לרשת";
+
+"connect_wifi" = "התחבר לרשת ה- רשת אלחוטית";
+
+"connect_wifi_no_voice_error" = "לא שמעתי כלום.";
+
+"connect_wifi_tips" = "אנא הזן שם רשת Wi-Fi של 2.4 GHz (SSID) ואת הסיסמה כדי להתחבר למכשיר. נכון לעכשיו, 5 GHz Wi-Fi ורשתות Wi-Fi ארגוניות אינן נתמכות. למידע נוסף >>";
+
+"connect_wifi_unkonw_error" = "שמעתי \"Other error\".";
+
+"connecting" = "מתחבר....";
+
+"connection_failed" = "חיבור נכשל";
+
+"contact_admin_set_az" = "צור קשר עם בעל המצלמה להגדרת אזור פעילות";
+
+"control_bar" = "לִשְׁלוֹט";
+
+"copyright" = "Copyright © 2021 Photon Sail Tech All rights reserved";
+
+"country" = "מדינה";
+
+"country_region" = "אזור/מדינה";
+
+"coupon" = "לפדות קוד";
+
+"coupon_expire" = "פג תוקפו של קוד המימוש.";
+
+"coupon_used" = "נעשה שימוש בקוד המימוש.";
+
+"create_location" = "צור מיקום חדש";
+
+"create_new_password" = "הגדר סיסמה חדשה";
+
+"create_your_account" = "הגדר סיסמה";
+
+"crying_detection" = "זיהוי בכי";
+
+"crying_detection_high" = "אם ה-%@ נמצא במרחק של יותר מ-9 רגל מהתינוק, מומלץ להגדיר את רמת הרגישות ל- High.";
+
+"crying_detection_low" = "אם ה-%@ קרוב מאוד לתינוק, למשל, 3ft, מומלץ להגדיר את רמת הרגישות לנמוכה.";
+
+"crying_detection_mid" = "אם ה-%@ נמצא במרחק של 6-9 רגל מהתינוק, מומלץ להגדיר את רמת הרגישות לבינונית.";
+
+"crying_detection_on" = "כאשר פונקציית \"זיהוי בכי\" פעילה, הודעת התראה תישלח כאשר התינוק בוכה בחדרו.";
+
+"crying_tag" = "בכי";
+
+"current_location" = "מיקום נוכחי: %@";
+
+"currently_spt" = "נתמך כרגע";
+
+"data_acquisition_failed" = "השגת נתונים נכשלה. נא לאתחל את האפליקציה.";
+
+"day" = "%d ימים";
+
+"default_common" = "ברירת מחדל";
+
+"delete" = "מחק";
+
+"delete_account" = "מחק חשבון";
+
+"delete_account_failed" = "מחיקת החשבון נכשלה, נסה שוב.";
+
+"delete_location_desc" = "האם אתה בטוח שברצונך למחוק מיקום זה?";
+
+"delete_notice_content_0" = "כיוון שלא ניתן לשחזר חשבון לאחר מחיקתו, טרם שליחת בקשת המחיקה, ועל מנת לוודא את ביטחון החשבון, אנא אשר את המידע הבא:";
+
+"delete_notice_content_1" = "לא אותרו פעולות חריגות כגון גניבת מספר, חיבור מרחוק וכו' בימים האחרונים ומחיקת החשבון נובעת מהחלטה עצמית.";
+
+"delete_notice_content_2" = "אם אתה המנהל של המכשיר, תאבד את זכויות הצפייה וההגדרה של המכשיר הזה לאחר המחיקה. אם אתה משותף עם המכשיר על ידי המנהל שלו, אתה תאבד את הצפייה מיד לאחר המחיקה.";
+
+"delete_notice_content_3" = "המידע האישי, סטטוס התשלום וכל פרטי האלבום הקשורים לחשבון זה יימחקו לצמיתות ולא ניתן יהיה לשחזר אותם. אם כבר רכשת את שירותי האנליטיקה והאחסון בענן, המשך בזהירות.";
+
+"delete_notice_content_4_ios" = "מכיוון ש-%@ Awareness משתמש במערכת תשלומים של צד שלישי, ביטול החשבון לא יעצור את החידוש האוטומטי. כדי למנוע ניכויים מיותרים, אנא לבטל את החידוש האוטומטי של הצד השלישי.";
+
+"delete_notice_content_4_ios_link" = "לבטל את החידוש האוטומטי";
+
+"delete_notice_title_0" = "התראת מחיקת חשבון";
+
+"delete_notice_title_1" = "1. החשבון בטוח";
+
+"delete_notice_title_2" = "2. לא מודאג יותר מהמכשיר המשויך לחשבון זה";
+
+"delete_notice_title_3" = "3. נתוני אנליטיקה אישיים יימחקו";
+
+"delete_notice_title_4" = "4. בטל את החידוש האוטומטי של שירותי האנליטיקה הואחסון %@";
+
+"delete_one_dialog_message" = "פריט זה יימחק מיידית. לא ניתן לבטל פעולה זו.";
+
+"delete_photo" = "האם אתה בטוח שברצונך למחוק את התמונה הזו?";
+
+"delete_photo_title" = "למחוק תמונה";
+
+"delete_photos" = "האם אתה בטוח שברצונך למחוק את התמונות האלה?";
+
+"delete_sleep_time" = "האם אתה בטוח שברצונך למחוק את לו\"ז מצב שינה?";
+
+"delete_success" = "נמחק בהצלחה";
+
+"delete_this_location" = "מחק מיקום";
+
+"delete_vehicle" = "האם אתה בטוח שתמחק את גלריית הרכבים הזו?";
+
+"delete_vehicles" = "האם אתה בטוח שתמחק את גלריות הרכבים האלה?";
+
+"delete_wifi" = "האם אתה בטוח שברצונך למחוק את הרשת האלחוטית הזו?";
+
+"deleted_successfully" = "נמחק בהצלחה";
+
+"Deleting" = "מוחק...";
+
+"deselect_all" = "הסר סימון מהכל";
+
+"detail_location" = "כתובת מפורטת";
+
+"detection_area" = "איתור אזור";
+
+"detection_parcel" = "איתור חבילה";
+
+"detection_parcel_desc" = "לאחר הפעלתו, ה-%@ ישלח לך הודעה כאשר תזוהה חבילה, בעוד מידע לא רלוונטי אחר יסונן.";
+
+"detection_pedestrian" = "זיהוי אדם";
+
+"detection_sensitivity" = "רגישות הזיהוי";
+
+"device_already_bind_by_other" = "מכשיר זה נקשר לחשבון אחר. אנא צור קשר עם המנהל לעזרה.";
+
+"device_auth_limitation" = "אין הרשאה להפעיל מכשיר זה.";
+
+"device_b0_default_name" = "%@ מצלמת PTZ חכמה";
+
+"device_bind_heared_common_voice" = "כאשר צליל הסריקה נשמע, ניתן להמשיך לשלב הבא.";
+
+"device_default_name" = "%@ מצלמה חכמה";
+
+"device_g0_default_name" = "%@ מצלמת סוללה חכמה";
+
+"device_info" = "%@ מידע";
+
+"device_installing" = "מתקינה קושחה...";
+
+"device_ip" = "%@ IP";
+
+"device_is_updating" = "משדרגת קושחה...";
+
+"device_k0_default_name" = "%@ מצלמת כרטיס חכם";
+
+"device_language" = "%@ שפת קול";
+
+"device_language_cn" = "汉语(סינית)";
+
+"device_language_en" = "English(אנגלית)";
+
+"device_language_es" = "Español(ספרדית)";
+
+"device_language_fr" = "Français(צרפתית)";
+
+"device_language_ge" = "Deutsche(גרמנית)";
+
+"device_language_it" = "Italiano(איטלקית)";
+
+"device_language_ja" = "日本語(יפנית)";
+
+"device_language_ru" = "Pусский(רוסית)";
+
+"device_manager" = "ניהול מכשירים";
+
+"device_name" = "%@ שם";
+
+"device_name_invalid_tips" = "נא להזין שם מכשיר חוקי.";
+
+"device_no_access" = "הגישה ל-%@ נכשלה, אנא נסה שוב.";
+
+"device_no_replied" = "חיבור הרשת אינו יציב";
+
+"device_not_bound" = "המצלמה אינה שמוייכת.";
+
+"device_offline" = "%@ לא מחובר";
+
+"device_other_device" = "לא בטוח איזה מהם המכשיר שלך?";
+
+"device_restarted_update" = "במהלך השדרוג, ה-%@ עשוי להפעיל מחדש מספר פעמים. נא לא לנתק את אספקת החשמל או לכבות את %@.";
+
+"device_s0_default_name" = "%@ מצלמת Box Box";
+
+"device_settings" = "%@ הגדרה";
+
+"device_state" = "סטטוס: %@";
+
+"device_state_ios" = "סטָטוּס:";
+
+"device_unactivated" = "מכשיר לא ידוע, אנא צור קשר עם המשווק.";
+
+"device_update_scuess" = "הקושחה מעודכנת בגרסה האחרונה";
+
+"dialog_message_cancel_share" = "<b>%@</b> כבר לא יקבל הודעות מ<b>%@</b> .";
+
+"dialog_message_del_multi_with_guest" = "לא ניתן לבטל פעולה זו. %d קבצים הם ממצלמת חבר ולא ניתן למוחקם";
+
+"dialog_message_del_multi_without_guest" = "פריטים אלו יימחקו מיידית. לא ניתן לבטל פעולה זו.";
+
+"dialog_payment_cloud_content" = "פונקציית הקלטות בענן הורחבה ל- 30 יום (לא יותר מ- 5GB) ליצירת אחסון וידאו מאובטח יותר, כדי שלא תפספס רגעים קריטיים.";
+
+"dialog_payment_ling_content" = "זהה את התוכן העיקרי של הסרטון: אדם, חיית מחמד, רכב. ונתח את התנהגות הפעולה שלה, הפוך מידע דחיפה אינטליגנטי יותר.";
+
+"dialog_payment_ling_title" = "התראה חכמה";
+
+"dialog_payment_title" = "%@ שירותי אנליטיקה ואחסון בענן פלוס";
+
+"dialog_payment_zone_content" = "קבע את אזור הפעילות. קבל הודעה בדחיפה רק מהמיקום המדוייק וסנן המידע הלא רלוונטי.";
+
+"dialog_title_del_multi" = "האם אתה בטוח שברצונך למחוק %d פריטים מהאחסון בענן?";
+
+"dialog_title_del_one" = "האם אתה בטוח שברצונך למחוק פריט זה?";
+
+"did_not_hear_scanning_sound" = "לא שמעת צליל צפצוף?";
+
+"ding_dong" = "\"דינג דונג דינג דונג\"";
+
+"disable" = "השבת";
+
+"disagree" = "לא מסכים";
+
+"distance" = "15-30 ס\"מ";
+
+"district_country" = "מחוז/מדינה";
+
+"do_alarm_tips" = "אם תפעיל את תכונת ההתראה, ה-%@ ישדר צלילי התראה.";
+
+"do_not_disturb" = "נא לא להפריע";
+
+"do_not_disturb_15min" = "נא לא להפריע במשך 15 דקות";
+
+"do_not_disturb_15min_describ" = "במשך ז15 דקות, לא תתקבלנה התראות גילוי תנועה, אך האירועים עדיין יוקלטו.";
+
+"do_not_disturb_describ" = "במשך זמן זה, לא תתקבלנה התראות גילוי תנועה, אך האירועים עדיין יוקלטו.";
+
+"do_not_update" = "לא מעודכן";
+
+"done" = "בוצע";
+
+"dont_say_green_light" = "לא ראיתי את האור הכחול.";
+
+"double_click_exit" = "לחץ שוב על מנת לצאת מ%@";
+
+"double_click_power" = "קליק כפול על כפתור ההדלקה";
+
+"double_click_power_button" = "נא לחיצה כפולה על לחצן ההפעלה כדי לגרום למכשיר להיכנס למצב סריקה";
+
+"double_click_power_directions" = "לחץ פעמיים על לחצן ההפעלה לאחר הפעלת המכשיר. כאשר מצב הסריקה מופעל, תשמע צליל סריקה או תראה אור מהבהב.";
+
+"double_click_power_key" = "לחץ פעמיים על לחצן ההפעלה כדי לסרוק";
+
+"double_click_power_key_2" = "לחץ פעמיים על לחצן ההפעלה והנח את קוד ה-QR בטלפון שלך במרחק של כ-6-12 אינץ' (15-30 ס\"מ) מהמכשיר.";
+
+"double_click_power_key_reset" = "לחיצה ארוכה על לחצן האיפוס לסריקה";
+
+"double_click_power_key_reset_next" = "לאחר לחיצה ארוכה על לחצן האיפוס, ניתן להמשיך לשלב הבא.";
+
+"download" = "הורד";
+
+"download_done" = "ההורדה הושלמה";
+
+"download_error" = "שגיאת הורדה";
+
+"download_faild_and_try" = "ההורדה נכשלה, אנא נסה שנית";
+
+"drop_out" = "להתנתק";
+
+"duration_alarm" = "משך אזעקה";
+
+"edit" = "לַעֲרוֹך";
+
+"edit2" = "לַעֲרוֹך";
+
+"email" = "דואר אלקטרוני";
+
+"email_bind_success" = "הדואר האלקטרוני נקשר בהצלחה.";
+
+"email_change_success" = "הדואר האלקטרוני השתנה בהצלחה.";
+
+"email_exists" = "חשבון זה כבר קיים. אנא נסה להתחבר.";
+
+"email_invalid_tips" = "נא להזין כתובת דוא\"ל חוקית.";
+
+"email_or_phone_number" = "מספר טלפון/כתובת דוא\"ל";
+
+"email_phone_number_invalid_tips" = "נא להזין מספר טלפון/כתובת דוא\"ל בפורמט הנכון.";
+
+"email_unregister_tips" = "חשבון זה אינו רשום במדינה שנבחרה";
+
+"enabled" = "לְאַפשֵׁר";
+
+"End" = "סוף";
+
+"end_do_not_disturb" = "האם לסיים את מצב \"נא לא להפריע\"?";
+
+"enter_coupon" = "אנא הזן את קוד המימוש.";
+
+"enter_device_name" = "אנא הזן את השם %@";
+
+"enter_password" = "סיסמה";
+
+"enter_pwd_tips_for_del_account" = "נא להזין סיסמה לאימות זהות בעל החשבון לפני מחיקה.";
+
+"error_2002" = "הגישה למכשיר נכשלה. אנא אשר אם מכשיר זה נמצא ברשימה שלך.";
+
+"error_2002_short" = "גישה למצלמה נכשלה.";
+
+"error_3011" = "בקשה לא חוקית";
+
+"error_3012" = "תוקף הבקשה פג, אנא נסה שוב.";
+
+"error_3013" = "התעלם מהשגיאה.";
+
+"error_email_format" = "פורמט כתובת הדוא\"ל שגוי.";
+
+"error_message" = "הודעת שגיאה";
+
+"error_no_net" = "חיבור רשת אינו זמין.";
+
+"error_no_register" = "פרטי כניסה שגויים, אנא נסה שוב.";
+
+"error_phone_email_format" = "פורמט מספר הטלפון/כתובת הדוא\"ל שגוי.";
+
+"error_two_passwork_match" = "שתי הסיסמאות שהוזנו אינן תואמות.";
+
+"error_unknown" = "שגיאת בקשה לא ידועה";
+
+"error_vaild_code" = "קוד האימות שגוי.";
+
+"event_list" = "רשימת אירועים";
+
+"expired_code" = "פג תוקף QR";
+
+"expired_notification" = "תוקף ה%@ יפוג לאחר %@ ימים.";
+
+"explore" = "חקור";
+
+"faied_get_sdvideo" = "טעינת קובץ הוידאו מכרטיס הזיכרון נכשלה";
+
+"failed_get_infomation" = "קבלת המידע נכשלה.(%d)";
+
+"failed_information" = "קבלת המידע נכשלה.";
+
+"failed_restore" = "שיחזור נכשל";
+
+"failed_to_add_location" = "הוספת המיקום נכשלה. נסה שוב.";
+
+"failed_to_delete_and_try" = "המחיקה נכשלה, אנא נסה שוב.";
+
+"failed_to_get_information_and_try" = "הרשת הסלולרית אינה זמינה, אנא בדוק את חיבור הרשת הסלולרית.";
+
+"familiar_vehicle" = "סימן רכב";
+
+"familiar_vehicle_tips" = "סמן את ה- רכב המוכר כרכב ידוע ומידע זה יעודכן לתוכן הדחיפה.";
+
+"feedback" = "משוב";
+
+"feedback_failed" = "סליחה. שליחת המשוב נכשלה, אנא נסה שוב.";
+
+"feedback_submit_success" = "שליחת המשוב הצליחה. תודה על שיתוף הפעולה!";
+
+"filter" = "סנן";
+
+"find_password_by_email" = "אחזר באמצעות מספר טלפון";
+
+"find_password_by_phone" = "אחזר באמצעות כתובת דוא\"ל";
+
+"find_qrcode_way" = "כיצד למצוא את הקודר על גוף המצלמה:";
+
+"fireware_is_downloading" = "הקושחה מורידה ...";
+
+"fireware_is_installing" = "הקושחה מותקנת ...";
+
+"fireware_is_updating" = "הקושחה מתעדכנת, נא להמתין.";
+
+"fireware_need_force_update_tips" = "לחווית משתמש טובה יותר, יש לעדכן לגרסה האחרונה.";
+
+"fireware_need_update_tips" = "לחווית משתמש טובה יותר, נדרשת גרסאת קושחה (%@) !";
+
+"fireware_update" = "עדכון קושחה";
+
+"fireware_update_failed" = "העידכון נכשל, אנא נסה שוב";
+
+"firmware_info" = "מידע קושחה";
+
+"firmware_update_fail" = "עידכון הקושחה נכשל, אנא נסה שוב.";
+
+"firmware_update_timeout" = "פסק הזמן לשדרוג הקושחה, נסה שוב.";
+
+"firmware_upgraded_successfully" = "הקושחה שודרגה בהצלחה.";
+
+"five_vehicle_marked" = "ניתן לסמן עד 5 גלריית רכבים בלבד.";
+
+"flash_light_item" = "הבהוב אזעקה";
+
+"flicker_rate" = "קצב הבהוב";
+
+"follow_instruction_retry" = "בצע את ההוראות ונסה שוב";
+
+"follow_step_retry" = "עקוב אחר השלבים ונסה שוב";
+
+"for_battery_cameras" = "עבור התקני סוללה";
+
+"for_plugin_cameras" = "עבור התקני פלאג-אין";
+
+"forbidden" = "למשתמש אין הרשאה להמשיך";
+
+"forck_update_share" = "יש לעדכן את גרסת הקושחה (%@). אנא צור קשר עם מנהל המכשיר הזה כדי לשדרג.";
+
+"forgot_password_" = "שכחת סיסמה?";
+
+"forgot_password_btn" = "שכחת סיסמה";
+
+"forgot_password_not_login_account" = "הזן את מספר הטלפון שברצונך לשייך.";
+
+"forgot_password_tips" = "אנא הזן את החשבון שברצונך לאפס לו סיסמה, ונשלח לך קוד אימות.";
+
+"format" = "פוּרמָט";
+
+"formatting_cannot_use" = "במהלך הפירמוט, לא ניתן להשתמש בכרטיס הזיכרון.";
+
+"found_event1" = "אירוע אחד,";
+
+"found_event2" = "%@ אירועים,";
+
+"found_video1" = "וסרטון אחד ביום.";
+
+"found_video2" = "ו- %@ סרטונים ביום.";
+
+"free_30d" = "תקופת נסיון חינם ל-30 יום";
+
+"free_30d_plus" = "%@ שירותי אנליטיקה ואחסון פלוס 30 יום ניסיון חינם";
+
+"free_info" = "אחסון בענן בחינם למשך 7 ימים";
+
+"friday" = "ו׳";
+
+"friday_2" = "יוֹם שִׁישִׁי";
+
+"from_time" = "מ";
+
+"front_door" = "דלת קדמית";
+
+"g4_change_wifi" = "הטלפון הנייד אינו מחובר לרשת אלחוטית. נא לחבר לרשת אלחוטית או הזן  את פרטי הרשת האלחוטית באופן ידני.";
+
+"g4_change_wifi_tips" = "הטלפון אינו מחובר לרשת אלחוטית. נא לחברו לרשת אלחוטית";
+
+"gallery" = "אלבום";
+
+"garage" = "מוּסָך";
+
+"garden" = "גינה";
+
+"get_cloud_size" = "%@ שטח אחסון בענן";
+
+"get_coupon_bottom" = "קבל קוד מימוש";
+
+"get_coupon_sec" = "ברכותינו, קיבלת \"%@\"%@-חודש גישה. במהלך תקופה זו, תוכל ליהנות מהשירותים הבאים:";
+
+"get_live_url_error" = "קבלת שידור חי נכשלה.";
+
+"get_location_failed" = "קבלת מיקום נכשלה";
+
+"get_location_static" = "קבל מיקום מהטלפון באופן אוטומטי";
+
+"get_new_pushes" = "קבל הודעות בדחיפה חדשות במהירות האפשרית";
+
+"get_now" = "קבל עכשיו";
+
+"get_phone_verify_code" = "שלח";
+
+"get_policy_desc" = "על מנת להגן על זכויותיך ביעילות, העידכונים הבאים בוצעו בהתאם לתקנות החוק ומדיניות האסדרה העדכניים ביותר:";
+
+"get_started" = "התחל!";
+
+"get_use_permission" = "השתמש ב%@ לסריקת הקוד לקבלת אישור.";
+
+"Ghz2.4" = "2.4GHz";
+
+"Ghz5" = "5GHz";
+
+"gif_ad_1" = "שטח אחסון בענן נוסף";
+
+"gif_ad_2" = "תמיכה בהודעות חכמות";
+
+"gif_ad_3" = "אזור פעילות מותאם אישית";
+
+"go_album_download" = "עבור אל האלבום לצפייה >";
+
+"go_buy" = "לקנייה מהירה";
+
+"go_buy_2" = "בדוק עכשיו";
+
+"go_buy_plus" = "הירשם לשירותי האנליטיקה והאחסון בענן %@";
+
+"go_live" = "שידור חי";
+
+"go_on" = "המשך";
+
+"go_open" = "לפתיחה";
+
+"go_set" = "להגדרה";
+
+"go_system_settings" = "גש להגדרות מערכת >>";
+
+"go_to_bind" = "לשיוך";
+
+"go_to_buy" = "הבנתי, קנה עכשיו";
+
+"good" = "בינוני";
+
+"got_it" = "הבנתי";
+
+"grant_location_permission" = "אפשר הרשאת מיקום";
+
+"guardian_read" = "(במידה והינך מתחת לגיל 14, יש לקרוא בחברת מבוגר אחראי.)";
+
+"guest" = "אורח";
+
+"guest_request" = "בקשת אורח";
+
+"guide_content_2" = "שידור חי ואינטראקציה קולית מכל מקום ובכל עת";
+
+"guide_content_3" = "סינון נתונים לקבלת מידע רלוונטי";
+
+"guide_content_4" = "המנע מהסחות דעת מיותרות";
+
+"guide_long_press_power_tips" = "בהישמע ההודעה \"Power up\", ניתן להמשיך לשלב הבא.";
+
+"guide_long_press_power_tips_b0" = "בהישמע הצליל , ניתן להמשיך לשלב הבא.";
+
+"guide_long_press_power_tips_s0" = "לאחר חיבור המצלמה, ניתן להמשיך לשלב הבא.";
+
+"guide_title_2" = "שידור חי";
+
+"guide_title_3" = "התראה חכמה";
+
+"h1" = "שעתיים";
+
+"h12" = "12 שעות";
+
+"handler_success" = "עובד בהצלחה.";
+
+"hao_to_invite" = "כיצד להוסיף מכשירים משותפים?";
+
+"has_account_and_login" = "כניסה";
+
+"have_no_device" = "עדיין לא הוספת אף מכשיר.";
+
+"have_problem" = "נתקלת בבעיה?";
+
+"hear_beep" = "אני שומע את הצליל ורואה את הנורה דולקת";
+
+"hear_device_power_on" = "שמעתי את ההודעה \"הפעל כוח\".";
+
+"hear_device_power_on_b0" = "%@ השלים סיבוב.";
+
+"hear_device_power_on_s0" = "חיברתי את המצלמה.";
+
+"hear_device_voice" = "שמעתי את הצליל.";
+
+"heard_qr_code" = "שמעתי את ההודעה \"Scan success\"";
+
+"heard_scan_finished" = "שמעתי את ההודעה \"Scan success/finished\"";
+
+"heard_scan_qr_code" = "שמעתי את ההודעה \"Scan QR Code\"";
+
+"heard_scaning_sound" = "אני שומע צליל צפצוף";
+
+"help" = "עזרה";
+
+"help_center" = "שאלות נפוצות";
+
+"help_feedback" = "עזרה ומשוב";
+
+"help_guide" = "עזרה >>";
+
+"high" = "גבוה";
+
+"high_cod" = "קידוד בעל ביצועים גבוהים";
+
+"hint_feedback" = "נא למלא משוב בעל יותר מ-10 מילים על מנת שניתן יהיה לספק עזרה טובה יותר.";
+
+"hint_feedback_contact" = "אופציונלי, כך שנוכל ליצור עימך קשר.";
+
+"hold_qr_code_in_front" = "החזק את קוד ה-QR מול המכשיר שלך";
+
+"hold_speak" = "לחץ כדי לדבר";
+
+"home" = "בית";
+
+"hot" = "פופולרי";
+
+"hot_country" = "מדינה פופולרית";
+
+"how_to_add_friend_camera" = "עבור אל דף הבית של האפליקציה, לחץ על הסימן \"+\" בפינה השמאלית העליונה ובחר \"הוסף מכשיר של חבר\".";
+
+"how_to_open_nightvision" = "\"הגדרות תאורת לילה -> מצב תאורת לילה\", ובחר ב-\"מצב אור לבן\" >";
+
+"howing_reduced" = "קול יללה זוהה והווליום הונמך.";
+
+"human_tracking" = "מעקב אדם";
+
+"human_tracking_2" = "כאשר אדם בשדה הראייה של ה-%@ זז, ה-%@ יעקוב אחר התנועות.";
+
+"i_have_read_above_content" = "קראתי ומסכים לתוכן שלעיל.";
+
+"id" = "ID";
+
+"if_storage_not_access" = "על מנת להבטיח שניתן לחבר את השידור החי מהר יותר, יש לאחסן את המידע הבסיסי של השחקן באופן מקומי, מומלץ לתת %@הרשאת אחסון של הטלפון.";
+
+"Ignore_version" = "דלג על גרסה זו";
+
+"image_and_screen_shot" = "תמונות (אופציונלי: העלאת תצלום מסך של הבעיה)";
+
+"image_save_to_ablum" = "התמונה נשמרה באלבום התמונות שבטלפון.";
+
+"indicator" = "נורת מחוון";
+
+"indicator_des" = "נורית החיווי, לאחר הפעלתה, תידלק בזמן שה-%@ פועל.";
+
+"Indoor_motion_alarm" = "(פונקציה זו אינה מומלצת בשימוש פנימי)";
+
+"infrared_des" = "תאורת האינפרה-אדום מאירה את הסביבה ומציגה תמונת שחור-לבן ברורה יותר";
+
+"input_email_new" = "כתובת דוא\"ל חדשה";
+
+"input_email_send" = "נא להזין כתובת דוא\"ל שברצונך לשייך, וקוד אימות ישלח אליך.";
+
+"input_new_email" = "הזן כתובת דוא\"ל שברצונך לשייך, וקוד אימות ישלח אליך.";
+
+"input_new_phone" = "נא להזין מספר טלפון שברצונך לשייך, וקוד אימות ישלח אליך.";
+
+"input_phone_number_new" = "הזן מספר טלפון חדש";
+
+"input_phone_number_simple" = "הזן מספר טלפון";
+
+"input_phone_number_you_bind" = "נא להזין מספר טלפון שברצונך לשייך, וקוד אימות ישלח אליך.";
+
+"install_bracket_1" = "התקן את בסיס המצלמה";
+
+"install_bracket_2" = "כדי להרכיב את ה-%@ במיקום הרצוי, ניתן למקם את ה-%@ ישירות על משטח ישר או להשתמש בבורג כדי לקבע את התושבת על הקיר או התקרה, ולאחר מכן להבריג את ה-%@ לבסיס הקבוע.";
+
+"Install_on_shelf" = "אתה יכול למקם את %@ על מדף או כל משטח שטוח אחר, או שאתה יכול להרכיב אותו על קיר או תקרה.";
+
+"install_the_camera" = "התקן את %@";
+
+"installation_guide" = "מדריך התקנה";
+
+"installation_settings" = "הגדרות התקנה";
+
+"installation_suggestions" = "הצעות התקנה";
+
+"installing" = "מתקין...";
+
+"intelligent_recognition" = "זיהוי חכם";
+
+"inter_volume" = "נפח אינטרקום";
+
+"interconnect_srt" = "תמיכה בסטרימינג בין קישורים";
+
+"interconnected" = "מחוברים זה לזה";
+
+"interval_time" = "הגדר זמן קירור לענן";
+
+"invite" = "שיתוף מכשיר";
+
+"invite_info_des" = "על המוזמן להוריד ולהתקין את %@.";
+
+"invite_info_des_key_point" = "%@ app";
+
+"invite_title_des" = "המוזמן יכול לצפות בשידור החי ובסרטוני וידאו מוקלטים.";
+
+"invited_join_device" = "הזמין אותך לצפות ב-%@.";
+
+"ios.answer_bot.cell.text.inactivity_get_in_touch_message" = "Start a chat or leave a message";
+
+"ios.answer_bot.text.label.ask_a_question" = "Please describe your issue and indicate the camera model. The model is usually on the label affixed to the camera's outer shell. Sometimes you may need to take off the shell or open the rubber plug to find it. The model can be G0, CGXX (for example CG1), CBXX (for example CB1), JXJ-FA01, etc.";
+
+"ios.answer_bot.text.label.disabled" = "Welcome to the Camera Binding Help Center! Online staff service opening hours: 10 AM-8 PM (SGT)/7 PM-5 AM (PST). Please describe your issue and indicate the camera model. The model is usually on the label affixed to the camera's outer shell. Sometimes you may need to take off the shell or open the rubber plug to find it. The model can be G0, CGXX (for example CG1), CBXX (for example CB1), JXJ-FA01, etc.";
+
+"ios.answer_bot.text.label.hi" = "Welcome to the Camera Binding Help Center! Online staff service opening hours: Singapore time 10 AM-8 PM (SGT)/ 7 PM-5 AM (SPT)";
+
+"ios.conversation.ui.chat.handover.message.selection" = "Tansfer to staff service";
+
+"ios.conversation.ui.chat.welcome_message.handover" = "OK. I will find someone who can help with your query.";
+
+"ios.ZDKRequests.createRequest.leaveAMessage.title" = "Leave a message";
+
+"is_heard_scan_qr_code" = "האם שמעת את ההודעה \"Scan QR code\"?";
+
+"is_last_location" = "זהו המיקום האחרון.";
+
+"is_playing" = "משחק";
+
+"issue_1" = "ודא אם המכשיר נמצא במצב סריקה (פולט צליל רציף של \"Ding Dong Ding Dong\").";
+
+"issue_2" = "מקם את המצלמה קרוב ככל האפשר לנתב האלחוטי.";
+
+"join_friend_device" = "הוסף מכשיר של חבר";
+
+"join_new_device" = "קבל גישה";
+
+"keep_phone_camera_close" = "המכשיר מתחבר, נא לשמור את המכשיר קרוב לטלפון הנייד.";
+
+"keep_router" = "שמור את המכשיר קרוב לנתב";
+
+"know" = "כן";
+
+"know_vehicle_popwindow" = "מכירים את הרכב הזה?";
+
+"known_vehicle" = "רכב ידוע";
+
+"language" = "שפת אפליקציה";
+
+"later" = "יותר מאוחר";
+
+"latest_version" = "עדכני";
+
+"learn_how_use" = "למד כיצד להשתמש";
+
+"learn_more" = "למידע נוסף >>";
+
+"learn_more_2" = "למידע נוסף >>";
+
+"level_sensitivity" = "%@";
+
+"library_feedback" = "אנא בחר את התוכן שברצונך לתת משוב מהאפשרויות הבאות (רב בחירה):";
+
+"library_feedback_failed" = "סליחה. שליחת המשוב נכשלה, אנא נסה שוב.";
+
+"library_feedback_not_complete" = "המשוב אינו שלם. האם אתה רוצה לעזוב את הדף הזה מבלי לשלוח את המשוב?";
+
+"library_feedback_success" = "המשוב נשלח בהצלחה, תודה רבה.";
+
+"library_tips1" = "הרשימה הנוכחית מסודרת לפי סדר האירועים. הסרטונים הסמוכים מוזגים כך שתוכל לבדוק בקלות את המצב הכללי ביום הנתון.";
+
+"library_tips2" = "ישנם שני סרטונים עם \"אדם\" וסרטון אחד עם \"רכב\" באירוע זה.";
+
+"library_tips3" = "הקש כאן כדי לסדר את הרשימה לפי סדר הסרטונים.";
+
+"library_tips4" = "יש אירוע אחד ושני סרטונים ביום זה.";
+
+"light_setting" = "הגדרות תאורה";
+
+"like_device_name" = "איך תרצה לקרוא לזה %@?";
+
+"limit_reached" = "הגבול הגיע";
+
+"live" = "Live";
+
+"live_alarm" = "%@ הפעיל את האזעקה הקולית של %@.";
+
+"live_feed" = "שידור חי";
+
+"live_issue" = "שגיאה בתצוגה חיה / בעיה לא מקוונת";
+
+"live_network_timeout" = "פסק זמן לחיבור שרת";
+
+"live_not_start" = "השידור החי עדיין לא התחיל.";
+
+"live_play" = "שידור חי";
+
+"live_play_finish" = "ניגון הוידאו בכרטיס הזיכרון הסתיים.";
+
+"live_resolution" = "%@ החליפה רזולוצייה.";
+
+"live_server_timeout" = "פסק זמן לחיבור שרת";
+
+"live_stream_error" = "פסק זמן לשידור חי";
+
+"live_stream_timeout" = "פסק זמן לשידור חי";
+
+"live_viewers_limit" = "מגבלת מספר הצופים בשידור חי הושגה, אנא נסה שוב מאוחר יותר.";
+
+"live_white_light" = "%@ הדליקה אור לבן.";
+
+"livingroom" = "סלון";
+
+"load_message_error" = "העלאת קובץ הוידאו נכשלה.";
+
+"load_more_title" = "שחרר לריענון";
+
+"loading" = "מעלה ...";
+
+"loading_failed" = "טעינה נכשלה";
+
+"Local_network" = "רשת מקומית";
+
+"Local_network_tips1" = "הפעל רשת מקומית";
+
+"Local_network_tips2" = "אפשר את ההרשאה בטלפון \"הגדרות\" \ ואפשר לטלפון הנייד שלך לחבר את המכשיר כדי לגשת לשידור החי";
+
+"locating" = "מאתר ...";
+
+"location" = "מיקום";
+
+"location_2" = "מיקום";
+
+"location_address_des" = "ארץ/אזור\nמדינה/מחוז\nעיר";
+
+"location_create_success" = "מיקום נוצר בהצלחה.";
+
+"location_error" = "שגיאת מידע מיקום";
+
+"location_management" = "ניהול מיקום";
+
+"location_name" = "שם מיקום";
+
+"location_name_error" = "פוורמט שם מיקום שגוי.";
+
+"location_name_exist" = "שם המיקום כבר קיים, נא לערוך ולנסות שוב.";
+
+"location_name_required" = "נדרש שם מיקום";
+
+"location_not_" = "שם המיקום אינו יכול להיות ריק.";
+
+"location_not_save" = "האם לשמור מידע מיקום נוכחי?";
+
+"location_permission" = "אפשר גישה למיקום";
+
+"location_permission_help_adding" = "אפשר גישה למיקום בהגדרות מערכת הטלפון כדי לאגד את המכשיר.";
+
+"location_permission_tips" = "אפשר גישה למיקום בהגדרות הטלפון כדי לקבל את רשימת רשתות ה- רשת אלחוטית בקרבת מקום.";
+
+"location_permission_word" = "נא לאפשר \"גישת מיקום\" למילוי אוטומטי של פרטי הרשת האלחוטית.";
+
+"location_save_success" = "מיקום נשמר בהצלחה.";
+
+"location_selection" = "בחירת מיקום.";
+
+"location_service" = "שירותי מיקום";
+
+"location_setting" = "מיקום";
+
+"log_in_tips" = "ברוך הבא ל %@";
+
+"login_expired" = "פג תוקף כניסתך, נא להתחבר שוב.";
+
+"login_other_device" = "חשבון זה מחובר כעת בטלפון נייד אחר. אם זה לא אתה, אנו ממליצים לשנות את הסיסמה שלך לאחר שנכנסת שוב.";
+
+"login_way_password" = "סיסמאת כניסה לחשבון";
+
+"login_way_verify_code" = "קוד אימות כניסה לחשבון";
+
+"logout" = "התנתק";
+
+"logout_des" = "האם אתה בטוח שברצונך להתנתק?";
+
+"long_press_reboot" = "לחץ והחזק את לחצן האתחול למשך 3 שניות כדי להפעיל מחדש את המכשיר";
+
+"long_press_reboot_directions" = "מצא את החור של כפתור האתחול, לחץ והחזק אותו עם הסיכה הכלולה באריזה או עם חפץ מחודד למשך 3 שניות כדי להפעיל מחדש את המכשיר. אם הוא לא מופעל מחדש, עליך ללחוץ ולהחזיק את לחצן ההפעלה למשך 3 שניות כדי להפעיל אותו עד שתשמע את צליל ההפעלה או שתראה את נורית החיווי דולקת.";
+
+"long_press_reset_button" = "אנא לחץ לחיצה ארוכה על לחצן האיפוס למשך 3 שניות כדי לגרום למצלמה להיכנס למצב סריקה";
+
+"long_press_the_power_key_b0" = "חבר לחשמל להדלקה";
+
+"loss_aifunction" = "אובדן כל פונקציות האנליטיקה (אזור פעילות, התראות חכמות)";
+
+"low" = "חלשה";
+
+"low_battery_warning" = "%@ במצב סוללה נמוך, אנא טען את המצלמה.";
+
+"low_power" = "%@ כבוי עקב סוללה חלשה. נא לחייב אותו.";
+
+"mac_address" = "Wi-Fi MAC";
+
+"mail_phone_register_des" = "נא להזין מספר טלפון/כתובת דוא\"ל, וקוד אימות ישלח אליך.";
+
+"mail_registered" = "חשבון עם דוא\"ל זה כבר קיים, נסה להתחבר במקום.";
+
+"make_sure_cemera_on" = "אנא לחץ והחזק את לחצן ההפעלה או חבר ספק כוח עד שתשמע צליל הפעלה או תראה את נורית החיווי דולקת.";
+
+"manual_f" = "ידני";
+
+"manual_input" = "הזנה ידנית";
+
+"mark" = "סימון";
+
+"mark_first" = "אין תוכן מסומן, נא לסמן תחילה מגלריות הרכבים הבאות.";
+
+"marked_cancle" = "הסימון בוטל בהצלחה.";
+
+"marked_fail" = "הסימון נכשל, אנא נסה שוב.";
+
+"marked_success" = "סומן בהצלחה.";
+
+"marked_vehicle" = "רכב מסומן";
+
+"may_be_connection" = "לא ניתן להתחבר ל-%@, אנא בדוק את חיבור הרשת.";
+
+"mcu_version" = "גרסאת MCU";
+
+"medium" = "בינוני";
+
+"membership_expire" = "השירות של %@ יתקבל ב- %@. במידת הצורך, ניתן להוריד את הוידאו לבד.";
+
+"membership_tip" = "פג תוקפה של %@. כל פונקציות האנליטיקה תאבדנה ואחסון ההקלטות בענן ישתנה ל- %@ של 7 ימים. באפשרותך לרכוש חבילה חדשה של שירותי אנליטיקה ואחסון בענן.";
+
+"merge" = "לְמַזֵג";
+
+"merge_push" = "מיזוג דחיפה";
+
+"merge_push_tips" = "לאחר הפעלת ה-Merge Push, הסרטונים העוקבים תוך זמן קצר ימוזגו וידחפו יחדיו, מה שיכול לעזור לכם לצפות במהירות בכל התנועות העוקבות (לאחר הפעלתו, הוא יחול על כל המכשירים שנוספו).";
+
+"merge_push_tips1" = "לאחר הפעלת ה-Merge Push, הסרטונים העוקבים תוך זמן קצר ימוזגו וידחפו יחדיו, מה שיכול לעזור לכם לצפות במהירות בכל התנועות העוקבות (לאחר הפעלתו, הוא יחול על כל המכשירים שנוספו).";
+
+"merge_tips" = "גלריית רכבים יכולה להכיל רק 20 תמונות לכל היותר. אם יש יותר מ-20 תמונות לאחר המיזוג, חלק מהתמונות יימחקו.";
+
+"merge_vehicles" = "האם אתה בטוח שתמזג את גלריות הרכבים הללו?";
+
+"merged_failed" = "המיזוג נכשל, אנא נסה שוב.";
+
+"merged_successfully" = "מוזג בהצלחה";
+
+"microphone" = "מיקרופון";
+
+"microphone_permission" = "אפשר גישה למיקרופון";
+
+"microphone_permission_tips" = "אפשר גישה למיקרופון בהגדרות הטלפון לצורך ניהול שיחות קוליות.";
+
+"migration_statement_1" = "הצהרת שינוי של האפליקציה";
+
+"migration_statement_2_1" = "In order to cooperate with relevant policies and provide better services to users in China, Example App will be changed to Example App on %@.";
+
+"migration_statement_2_2" = "Please download Example as soon as possible. You can sign in to Example with your Example account. All your device info and Awareness service status will be retained and you will be able to continue to them.";
+
+"migration_statement_2_3" = "After the expiration date, Example APP will no longer be usable. Learn more >>";
+
+"migration_statement_3" = "We apologize for the inconvenience, Example will guard safety for you!";
+
+"migration_statement_3_android" = "<![CDATA[We apologize for the inconvenience, <strong>Example</strong> will guard safety for you! ]]>";
+
+"migration_statement_5" = "הזכר לי בפעם הבאה";
+
+"migration_statement_6_1" = "In order to cooperate with relevant policies and provide better services to users in China, Example App changed to Example App on %@.";
+
+"migration_statement_6_2" = "Example APP can no longer be used. Please download Example as soon as possible. You can sign in to Example directly with your Example account. All your device info and Awareness service status will be retained and you will be able to continue to use them. Learn more >>";
+
+"migration_statement_7" = "In order to cooperate with relevant policies and provide better services to users in China, Example App will be changed to Example App on %@. Please download Example and sign up for your account. Thank you very much for your cooperation.";
+
+"migration_statement_7_android" = "<![CDATA[In order to cooperate with relevant policies and provide better services to users in China, Example App will be changed to <strong>Example</strong> App on <font color=\"#5AC4A7\">%@</font>. Please download <strong>Example</strong> and sign up your account. Thank you very much for your cooperation.]]>";
+
+"min30" = "30 דקות";
+
+"mine" = "משתמש";
+
+"missed" = "לא נקרא";
+
+"model_number" = "%@ דגם";
+
+"momo_payment" = "שלם באמצעות MoMo";
+
+"monday" = "ב׳";
+
+"monday_2" = "יוֹם שֵׁנִי";
+
+"month_1" = "ינואר";
+
+"month_10" = "אוקטובר";
+
+"month_11" = "נובמבר";
+
+"month_12" = "דצמבר";
+
+"month_2" = "פברואר";
+
+"month_3" = "מרץ";
+
+"month_4" = "אפריל";
+
+"month_5" = "מאי";
+
+"month_6" = "יוני";
+
+"month_7" = "יולי";
+
+"month_8" = "אוגוסט";
+
+"month_9" = "ספטמבר";
+
+"more" = "נוסף";
+
+"more_data" = "העלה נתונים נוספים";
+
+"more_event" = "%@ אירועים נוספים";
+
+"more_info" = "מידע נוסף";
+
+"more_pre_location" = "ניתן להוסיף רק עוד %d נקודות־ציון";
+
+"more_selection" = "אפשרויות נוספות";
+
+"motion_alarm" = "כאשר מזוהה תנועה, ה-%@ ישמיע אזעקה אוטומטית.";
+
+"motion_detection" = "גלאי תנועה";
+
+"motion_detection_des" = "ברגע שגלאי התנועה מופעל, ה-%@ מופעל על ידי תנועות האובייקטים והוא יקליט סרטון, שיעזור לך לזהות שינויים בסביבה בכל עת.";
+
+"motion_issue" = "בעיה בזיהוי תנועה";
+
+"motion_sport_auto_is_open" = "הג'ויסטיק אינו זמין כאשר פונקציית מעקב התנועה פעילה.";
+
+"motion_tracking" = "מעקב תנועה";
+
+"motion_tracking_open" = "ברגע ש'מעקב תנועה' מופעל, ה-%@ יעקוב אוטומטית אחר ההקלטה לאחר זיהוי תנועה כלשהי.";
+
+"move_app_name" = "Example";
+
+"mtn_desc" = "אנא היכנס לאתר כדי לקבל מידע נוסף.";
+
+"mtn_go_momo_or_wait" = "עבור ל- MoMo לביצוע התשלום. במידה וכבר שולם, אנא המתן.";
+
+"mtn_momo_payment_title" = "Askari התחיל בחיוב של %@ בחשבון ה- MoMo שלך. הזן מספר טלפון:";
+
+"mtn_mpesa_payment" = "שלם באמצעות M-PESA";
+
+"multi_choice" = "בחירה מרובה (רב אפשרויות)";
+
+"my_device" = "המכשיר שלי";
+
+"my_house" = "הבית שלי";
+
+"n_device_use_this_location" = "יש כבר %d מכשירים ממוקמים במיקום זה. אנא שנה מיקום עבור המכשיר.";
+
+"name_required" = "הכנס שם";
+
+"nest_day" = "למחרת";
+
+"network_error" = "שגיאת רשת";
+
+"network_error_our_server" = "זמן חיבור נגמר";
+
+"network_low" = "חיבור הרשת אינו יציב, אנא נסה שוב.";
+
+"network_name" = "שם רשת אלחוטית";
+
+"network_timeout" = "זמן חיבור רשת נגמר.";
+
+"network_unavailable_and_try" = "אין חיבור רשת זמין, נא לנסות שוב.";
+
+"new_bind_device_name" = "הגדר שם ומיקום עבור %@";
+
+"new_device" = "מכשיר חדש";
+
+"new_feature" = "עדכון תוכן:";
+
+"new_location" = "מיקום חדש";
+
+"new_password" = "סיסמה חדשה";
+
+"new_phone" = "מספר טלפון חדש";
+
+"new_version" = "גירסה חדשה:";
+
+"next" = "השלב הבא";
+
+"next_format" = "משימת הפירמוט תבוצע לאחר המשימה הנוכחית.";
+
+"night_mode_red" = "מצב אינפרה אדום";
+
+"night_mode_white" = "מצב אור לבן";
+
+"night_version" = "ראיית לילה אוטומטית";
+
+"night_version_setting" = "הגדרת ראיית לילה";
+
+"night_version_tips" = "לאחר הפעלת Night Vision, ה-%@ יתמוך בצפייה בלילה כדי לשפר את הביצועים שלו בתנאים עמומים.";
+
+"no" = "לא";
+
+"no_access" = "אין גישה למצלמה זו. נא להוסיפה מחדש, או הגש בקשה להרשאה.";
+
+"no_camera" = "אין מכשיר";
+
+"no_camera_auth" = "אין הרשאות מצלמה, אנא נסה שוב לאחר הגדרה.";
+
+"no_item_selected" = "לא נבחר פריט";
+
+"no_locations" = "אין מידע מיקום";
+
+"no_network" = "אין רשת";
+
+"no_network_cannot_set" = "ה-%@ לא מקוון ולא ניתן להגדיר אותו כעת.";
+
+"No_new_gallery" = "אין גלריית רכבים חדשה";
+
+"no_password" = "הסיסמה לא מולאה";
+
+"no_position" = "אין מיקום מוגדר מראש, אנא צור קשר עם מנהל המצלמה כדי להוסיף אחת.";
+
+"no_qr_code" = "קוד QR לא נמצא, נסה שוב.";
+
+"no_response" = "%@ לא מגיב";
+
+"no_resumable_order" = "לא קיימות הזמנות שניתן לחדש";
+
+"no_select_timezone" = "לא נבחר אזור זמן.";
+
+"no_supper_5g" = "נראה של-Wi-Fi שלך יש תדר של 5 GHz, שאינו נתמך. אנא אשר מחדש אם אתה משתמש ברשת Wi-Fi 2.4 GHz.";
+
+"no_tip" = "אל תציג זאת שוב היום";
+
+"no_wifi_nearby" = "אין רשת אלחוטית זמינה בקרבת מקום.";
+
+"no_wifi_signal" = "אין אות";
+
+"nocamera_spt_alexa" = "אף מכשיר לא תומך באלקסה כרגע";
+
+"nodata_libary_tip" = "אין מידע מוקלט ליום זה.";
+
+"nodata_tip" = "אין נתונים";
+
+"noProduct" = "פריט זה הוסר.";
+
+"not_account_alexa_tips" = "החשבון שלך לא קושר עדיין לאקסה. אתה יכול לפתוח את אפליקציית Alexa ולקשר את חשבונך על ידי הוספת מיומנויות לאקסה.";
+
+"not_allow" = "לא מורשה";
+
+"not_found" = "דף זה אינו קיים או קיימות בעיות אחרות.";
+
+"not_hear_scan_qr_code" = "לא שמעתי \"Scan QR code\".";
+
+"not_interconnected" = "מתחברים ... אנא המתן";
+
+"not_know" = "לא";
+
+"not_logged_in" = "המשתמש לא מחובר";
+
+"not_open" = "כבוי";
+
+"not_open_now" = "לא לפתוח";
+
+"not_show_tips_any_more" = "אל תציג שוב";
+
+"not_support_5g" = "המצלמה תומכת רק בתדר אלחוטי 2.4GHz. הרשת הנוכחית היא 5Ghz.";
+
+"not_support_vehicle_marking" = "המכשירים ברשימה אינם תומכים כרגע בפונקציית סימון הרכב, הקש למידע נוסף >>";
+
+"not_use" = "0 אזור";
+
+"notication_no_end" = "האירוע עוד לא הסתיים. אנא צפה בהקלטת האירוע באלבום בהמשך.";
+
+"notification_des" = "לאחר הפעלת ההתראה, ה-%@ ישלח לך הודעות על הקלטות שהופעלו כדי להתריע על כל פעילות חריגה.";
+
+"notification_des_tips" = "%@ שלך יכול להודיע ​​לך כאשר הוא מזהה תנועות. אנא בחר את סוגי ההתראות שברצונך לקבל.";
+
+"notification_detection_people" = "אדם";
+
+"notification_no_item_choose" = "פונקציית הסיווג לא תהיה תקפה, אם לא יסומנו פריטים. נא לבחור בפריט אחד לפחות.";
+
+"notification_push" = "הודעות בדחיפה";
+
+"notification_scuess_offline" = "זה נכנס לתוקף כאשר %@ מחובר.";
+
+"notification_sec" = "לאחר תפוגת החבילה:";
+
+"notification_setting" = "הגדרות התראות";
+
+"notification_to_choose_item" = "לבחירה";
+
+"notification_warm_des" = "ה-%@ ישלח לך התראות כאשר הוא יזהה תנועות. הגדרה זו תגרום לך לקבל התראות במהירות אבל אולי גם בתדירות גבוהה מדי.";
+
+"notifications" = "התראה";
+
+"notifications_for_marked" = "הודעות פוש של כלי רכב מסומנים בלבד";
+
+"notifications_for_two" = "הודעות דחיפה של כלי רכב מסומנים ולא מסומנים";
+
+"notifications_for_unmarked" = "הודעות פוש של כלי רכב לא מסומנים בלבד";
+
+"notifications_permission" = "אפשר גישה להתראות";
+
+"NSCameraUsageDescription" = "אם הגישה למצלמה אינה מופעלת, לא תוכל לסרוק את קוד ה- QR.";
+
+"NSLocalNetworkUsageDescription" = "אם הגישה לרשת המקומית אינה מופעלת, לא תוכל לצפות בשידור חי.";
+
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "אם הגישה למיקום אינה מופעלת, האפליקציה לא תוכל להשיג את המיקום הנוכחי באופן אוטומטי.";
+
+"NSLocationWhenInUseUsageDescription" = "אפשר גישה למיקום למלא אוטומטית את ה- רשת אלחוטית המחובר כעת לטלפון הנייד שלך, ומידע ה- רשת אלחוטית המתקבל ישמש להוספת המצלמה שלך לאפליקציה.";
+
+"NSMicrophoneUsageDescription" = "אם הגישה למיקרופון אינה מופעלת, לא תוכל להשתמש בתכונת שמע דו כיוונית.";
+
+"NSPhotoLibraryUsageDescription" = "אם הגישה לתמונות לא מופעלת, לא תוכל לשמור תמונה או סרטונים באלבום הטלפון שלך.";
+
+"num_new_message" = "הודעה חדשה";
+
+"number_az" = "%@ אזורים";
+
+"off_time" = "(זמן: %@)";
+
+"office" = "משרד";
+
+"offline" = "לא מקוון";
+
+"offline_reconnect" = "ה-%@ לא מקוון, אנא חבר אותו מחדש.";
+
+"ok" = "אישור";
+
+"old_password" = "סיסמה ישנה";
+
+"one_az" = "אזור 1";
+
+"online" = "מקוון";
+
+"only_video3" = "יש סרטון אחד.";
+
+"only_video4" = "ישנם %@ סרטונים.";
+
+"open_bluetooth" = "הפעל את Bluetooth כדי לאגד את המכשיר במהירות.";
+
+"open_bluetooth_bonding" = "הפעל את ה-Bluetooth כדי לאפשר ל\"%@\" להתחבר ולקשר את המכשיר ביתר קלות.";
+
+"open_bluetooth_help_adding" = "ה-Bluetooth של הטלפון כבוי. הפעל אותו כדי להוסיף את המכשיר במהירות ובקלות.";
+
+"open_fail_retry" = "ההגדרה נכשלה, אנא נסה שוב.";
+
+"open_led" = "פעיל";
+
+"open_location_Info" = "הפעל את \"גישת מיקום\" על מנת לאפשר למילוי אוטומטי של פרטי הרשת האלחוטית.";
+
+"open_location_service" = "פתח שירותי מיקום";
+
+"open_location_wifi" = "קבל באופן אוטומטי את פרטי הרשת האלחוטית הנוכחית משירותי המיקום בטלפון (מומלץ) או הזן פרטים אלו באופן ידני (תלוי רישיות).";
+
+"open_smart" = "לְנַסוֹת %@ שירותי האנליטיקה והאחסון בענן";
+
+"open_wifi" = "הפעל את הרשת האלחוטית";
+
+"open_wifi_word" = "הפעל את \"רשת אלחוטית\" כדי לעזור במציאת רשתות אלחוטיות זמינות.";
+
+"opened" = "פעיל";
+
+"options_include" = "השירותים כוללים";
+
+"or" = "או";
+
+"ota_failed_low_power" = "הסוללה חלשה ולא ניתן להשלים את השדרוג. נא שדרג מחדש לאחר הטעינה.";
+
+"other" = "אחרים";
+
+"other_error_with_code" = "משהו השתבש, אנא נסה שוב מאוחר יותר.";
+
+"other_payment_not_detected" = "תשלום %@ לא זוהה. נא לוודא שערוץ התשלומים זמין לפני ביצוע רכישה שוב.";
+
+"other_plans" = "אַחֵר %@ שירותי האנליטיקה והאחסון בענן";
+
+"other_plans_des" = "אם לא תחדש לרכוש לאחר שפג תוקפו של %@ המודעות הנוכחי, הוא יעבור אוטומטית לתוכנית הבאה.";
+
+"package_detained" = "חבילה מועברת";
+
+"package_down" = "נראה שנמסרה חבילה חדשה";
+
+"package_guide" = "הכיצד לדייק את פונקציית זיהוי חבילה?";
+
+"package_guide_five" = "אנא אל תשכח לבחור את חבילה בהגדרות התראות / דחיפה חכמה.";
+
+"package_guide_four" = "בחר חבילה";
+
+"package_guide_four_tips" = "אנא ודא שהחבילה נראית בבירור בתצוגת %@ ושהיא אינה חסומה על ידי אובייקטים אחרים.";
+
+"package_guide_four_tips_2" = "בלילה או במקרה של חוסר אור, יכולת הזיהוי יורדת. אנא התייחס בעיקר לתוצאות הזיהוי במהלך היום או בתנאי אור מספיקים.";
+
+"package_guide_four_tips_3" = "אם החבילה נשארת לאורך זמן, יכולת הזיהוי תיפגע. מומלץ לקחת אותו בזמן לאחר קבלת הודעת החבילה.";
+
+"package_guide_one" = "עמדת התקנה";
+
+"package_guide_six" = "אזור החבילה";
+
+"package_guide_six_1" = "אנו ממליצים להניח את החבילה במרכז שדה הראייה של המצלמה, או לקבוע מיקום אריזה על הקרקע בדלת, ולומר לשליח להכניס את החבילה לתוכה.";
+
+"package_guide_six_2" = "במקביל, מסגר את האזור בו עשויה להופיע החבילה במסך הווידאו בשילוב עם מיקום החבילה על הקרקע כדי לשפר את דיוק הזיהוי של החבילה.";
+
+"package_guide_six_3" = "טיפים: גודל הזיהוי המינימלי של חבילה הוא 20x25x2.5 ס\"מ. ייתכן שיהיה קשה לזהות חבילה שקטנה מהגודל המינימלי.";
+
+"package_guide_three" = "%@ נוף";
+
+"package_guide_two" = "מומלץ למקם את ה-%@ שלך בגובה של כ-8 רגל (2.5 מ') ולהטות אותו כך שתוכל לראות בבירור את הפתח שלך ואת האזור בו נמצאת החבילה.";
+
+"package_guide_two_2" = "לא מומלץ להשתמש בפונקציית זיהוי החבילות בתוך הבית או בסביבה מורכבת מדי.";
+
+"package_guide_two_3" = "לאחר הסרת ה-%@ לטעינה או שינוי המיקום של ה-%@, זכור לאשר מחדש אם אזור החבילה מדויק.";
+
+"package_guide_two_4" = "יחד עם זאת, המרחק בין %@ לחבילה לא יעלה על 10 רגל (3 מ').";
+
+"package_scenes" = "למרות שפונקציה זו מתייעלת ומשתפרת באופן רציף, הדיוק בזיהוי חבילות אינו אופטימלי נכון לעכשיו. מומלץ להשתמש בפונקציה זו בסצינה סטנדרטית, כאשר המצלמה ממוקמת כ-2.1 מטרים מהקרקע ובזוית ראייה אלכסונית מטה.";
+
+"package_tag" = "חבילה";
+
+"package_tips" = "כאשר ה-%@ יזהה שהחבילה נאספה והונחה, הוא ישלח לך הודעה.";
+
+"package_up" = "נראה חבילה נלקחת";
+
+"page_expired" = "פג תוקף דף זה, אנא נסה שוב.";
+
+"password_code_error" = "הסיסמה או קוד האימות שגויים.";
+
+"password_incorrect" = "הסיסמה שגויה, נא לוודא סיסמה.";
+
+"password_or_code_invalid" = "נא לבדוק שנית את דרישות הפורמט.";
+
+"pay_attention_data" = "נא לשים לב לנתונים בסביבה של רשת לא אלחוטית.";
+
+"pay_scuess" = " נרכשו בהצלחה. אנא גש למרכז האישי לבדיקת הרשאות הפונקציה%@ שירותי האנליטיקה והאחסון בענן";
+
+"payment_auto_pay" = "מנוי חודשי";
+
+"payment_choose_buy_time" = "בחר משך";
+
+"payment_choose_vip_item_first" = "אנא בחר בפריט קודם לכן";
+
+"payment_cloud_save" = "%@ שירותי האנליטיקה והאחסון בענן";
+
+"payment_current_vip" = "%@";
+
+"payment_download_it" = "להורדה";
+
+"payment_generate_order" = "שלח הזמנה";
+
+"payment_pay" = "הזמנת תשלום";
+
+"payment_pay_failed" = "התשלום נכשל, אנא נסה שוב.";
+
+"payment_pay_failed_totally" = "התשלום נכשל";
+
+"payment_pay_success" = "שולם בהצלחה";
+
+"payment_play_store_fail" = "התשלום נכשל. נא לעבור ל- Play Store כדי לבדוק את מצב החיבור.";
+
+"payment_please_choose_time" = "בחר במצב השימוש";
+
+"payment_price" = "<![CDATA[<font><big>%@%.2f</big></font><font><small>ש\"ח</small></font>]]>";
+
+"payment_product_already_paid" = "%@חבילת שירותי אנליטיקה ואחסון בענן כבר נרכשה, נא לא לרכוש שוב.";
+
+"payment_product_not_exist" = "פריט זה אינו קיים.";
+
+"payment_to_buy" = "לקנייה";
+
+"payment_user_cancel" = "בוטלה";
+
+"payment_verifying" = "%@ בודק...";
+
+"payment_vip_update" = "שדרוג";
+
+"pem_des" = "צפה בשידור חי ובהקלטות הפלייבק";
+
+"permission" = "הרשאות";
+
+"permission_dialog_message_get_camera" = "אם הגישה אינה מורשית, לא תוכל לסרוק את קוד ה- QR.";
+
+"permission_dialog_message_get_location" = "אם גישת המיקום אינה מורשית, לא תוכל להשיג באופן אוטומטי את פרטי ה- Wi-Fi הנמצא בשימוש.";
+
+"permission_dialog_message_get_mircrophone" = "אם הגישה למיקרופון אינה מורשית, לא תוכל לבצע שיחות שמע.";
+
+"permission_dialog_message_get_storage" = "נדרשת גישה לאחסון כדי להשתמש באפליקציה.";
+
+"permission_dialog_title" = "%@ מעוניין לקבל גישה ל %@";
+
+"person_alerts" = "תנועה אנושית";
+
+"person_alter_tips" = "תקבל את ההודעה ש\"מישהו זוהה\" רק לגבי תנועות אנושיות. ההודעה היא ספציפית יותר ופחות תכופה, אך היא עשויה להתעכב מעט.";
+
+"phone_already_register" = "מספר טלפון זה כבר קיים, נסה להתחבר לחשבון.";
+
+"phone_no_net" = "לטלפון שלך אין חיבור לרשת.";
+
+"phone_number" = "מספר טלפון";
+
+"phone_number_bind_success" = "מספר הטלפון שוייך בהצלחה.";
+
+"phone_number_change_success" = "מספר הטלפון הוחלף בהצלחה.";
+
+"phone_number_invalid_tips" = "נא להזין את מספר הטלפון בפורמט הנכון.";
+
+"phone_weak_network_short" = "רשת הטלפון אינה זמינה.";
+
+"photos" = "תמונות";
+
+"photos_permission" = "אפשר גישה לתמונות";
+
+"photos_permission_tips" = "אפשר גישה לתמונות בהגדרות הטלפון כדי לאחסן קבצי מדיה.";
+
+"plan_basic" = "Basic";
+
+"plan_common" = "אין תוכנית";
+
+"plan_expires" = "פג תוקף ב %@";
+
+"plan_plus" = "Plus";
+
+"plan_pro" = "Pro";
+
+"play_next_event" = "שחקו את האירוע הבא";
+
+"play_previous_event" = "שחק אירוע קודם";
+
+"playback_is_living_now" = "שידור חי";
+
+"playback_video" = "קובץ פלייבק";
+
+"player_error" = "שגיאת ניגון קובץ וידאו";
+
+"please_install_playstore" = "להשלמת תהליך התשלום, יש לעשות שימוש ב- PlayStore.";
+
+"please_open_location_service" = "נא להפעיל את פונקציית \"שירותי מיקום\" בהגדרות הטלפון.";
+
+"please_open_permission" = "אנא הפעל את מתג החלון הצף.";
+
+"please_pay_vip_first" = "כדי להשתמש ב-Smart Push, עליך לרכוש את תוכנית המודעות";
+
+"please_pay_vip_first_2" = "קבל שירותי האנליטיקה והאחסון בענן, השתמש בפונקציה זו";
+
+"please_read_policy_and_agree" = "נא לקרוא בעיון ולהקליק על \"הסכם והמשך\" כדי לציין שקראת ואתה מסכים לכל התנאים.";
+
+"please_retry" = "נסה שוב";
+
+"please_scan_qr_code_first" = "נא לסרוק את הקודר קודם";
+
+"please_select" = "נא לבחור";
+
+"please_turn_on_motion_detection" = "לשימוש בפונקציה זו, עליך להפעיל את גילוי התנועה";
+
+"please_turn_on_wifi_setting" = "נא להפעיל את גישת הרשת האלחוטית בהגדרות הטלפון.";
+
+"plugin_camera" = "מכשיר תוסף";
+
+"plugin_camera_tips" = "אנא התחבר למקור חשמל עד שתשמע צליל התראה מהמכשיר והוא ישלים את הסיבוב.";
+
+"position_deleted" = "נמחקה בהצלחה. ניתן להוסיף כעת נקודת־ציון חדשה.";
+
+"position_tips" = "הגדר מיקומים הנצפים באופן תדיר כנקודות־ציון. נקודות־ציון אלו זמינות בעל עת בלחיצת מקש.";
+
+"postal_code" = "מיקוד";
+
+"pre_location_max_5" = "ניתן להוסיף רק חמש עמדות.";
+
+"pre_position_add" = "תפקיד חדש";
+
+"preset_location" = "עמדה";
+
+"privacy_policy" = "מדיניות פרטיות";
+
+"problem_and_feedback" = "שאלות והערות";
+
+"prompt" = "עֶזרָה";
+
+"prompt_volume" = "עוצמת קול";
+
+"province_region" = "מדינה/מחוז/אזור";
+
+"purchase_record" = "שיא רכישה";
+
+"push_group_tips" = "%u יותר הודעות";
+
+"push_permission" = "אפשר גישה להתרעות";
+
+"pwd_error" = "הסיסמה שגויה.";
+
+"qr_expire" = "פג תוקף קוד ה- QR ב- %@";
+
+"qr_scurss" = "נסרק בהצלחה.";
+
+"qrcode_way1" = "סובב את גוף המצלמה כדי לבדוק אם קיים קודר על מעטפת המצלמה.";
+
+"qrcode_way2" = "אם קוד ה- QR לא נמצא על המעטפת, הסר את תקע הגומי של גוף המצלמה ובדוק אם יש קוד QR מתחתיו.";
+
+"qrcode_way3" = "אם קוד ה- QR אינו על המעטפת החיצונית או תקע הגומי של גוף המצלמה, הסר את המעטפת החיצונית כדי לבדוק אם קוד ה- QR נמצא בחלק הפנימי של גוף המצלמה או המעטפת החיצונית.";
+
+"question_reply" = "שלח משוב";
+
+"question_type" = "סוג שאלה";
+
+"questions_contact" = "צור קשר";
+
+"questions_pictures" = "תמונות (אופציונלי: העלאת תצלום מסך של הבעיה)";
+
+"questions_statement_error" = "נא לפרט על הבעיה ביותר מ- 10 מילים.";
+
+"quick_connect" = "חיבור מהיר";
+
+"quick_connect_tips" = "%@ מצלמות ניתנות לחיבור מהיר. נא ללחוץ כדי להתחיל בחיבור.";
+
+"ratio_720p" = "SD";
+
+"reach_max_live_num" = "הגעת למגבלה המקסימלית של שידורים חיים.";
+
+"receive_fail" = "נכשל. אנא נסה שוב.";
+
+"receive_scuess" = "הצליח. התחל בשימוש!";
+
+"receive_tips" = "האם אתה בטוח שאינך צריך לסמן פריטים כלשהם?";
+
+"reconnect" = "התחבר מחדש";
+
+"reconnect_camera" = "נסה לחבר את המצלמה מחדש";
+
+"reconnect_wifi" = "אנא התחבר מחדש ל-Wi-Fi הקודם בהגדרות מערכת הטלפון. חזור לדף זה לאחר השלמת הפעולה כדי לבדוק שהכריכה עברה בהצלחה.";
+
+"reconnect_wifi_button" = "התחבר מחדש ל- רשת אלחוטית";
+
+"reconnect_wifi_camera" = "התחבר מחדש לרשת האלחוטית";
+
+"record_failed" = "ההקלטה נכשלה, נסה שוב מחדש.";
+
+"record_success" = "שמור לאלבום התמונות בטלפון.";
+
+"record_video" = "הקלט וידאו";
+
+"record_video_tips" = "כאשר אתה מפעיל את תכונת הקלטת וידאו, ה-%@ יקליט את הסרטון באופן אוטומטי כאשר הוא מזהה תנועה.";
+
+"reference_instruction_power" = "אנא עיין במדריך המצלמה לאיתור כפתור ההדלקה";
+
+"reference_instruction_reboot" = "אנא עיין במדריך המצלמה לאיתור חור כפתור האיפוס.";
+
+"refresh" = "לְרַעֲנֵן";
+
+"registrationsharing" = "אם ברצונך לשתף את המכשיר, אנא ודא שמנהל המערכת והמשתמש המשני רשומים באותה מדינה.";
+
+"reject" = "סירוב";
+
+"reject_audio" = "נא לאפשר גישה למיקרופון בהגדרות הטלפון.";
+
+"release_stop" = "שחרר כדי לעצור";
+
+"remember_password" = "זכור סיסמה";
+
+"remove_device" = "הסר %@";
+
+"remove_device_des" = "לא תקבל נתונים מה-%@ הזה יותר.";
+
+"remove_device_success" = "%@ הוסר בהצלחה.";
+
+"remove_device_title" = "האם אתה בטוח שברצונך להסיר את %@ זה?";
+
+"remove_share_device_des" = "%@ לא תקבל נתונים מ %@ יותר.";
+
+"remove_share_device_title" = "האם אתה בטוח שברצונך למחוק חשבון זה?";
+
+"remove_tag_tips" = "הסר את התג \"רכב מסומן\" מגלריית הרכבים הזו, וגלריית הרכב תועבר ל\"אחרים\".";
+
+"renewal_clause_key_clause" = "הסכם שירות מינוי רציף";
+
+"renewal_clause_key_terms" = "סכם שירותי האנליטיקה והאחסון בענן";
+
+"renewal_download_tips" = "במידת הצורך, נא לחדש את שירותי האנליטיקה והאחסון בענן או הורד את קובץ הוידאו.";
+
+"replay" = "נגן מחדש";
+
+"request_error" = "שגיאת בקשה";
+
+"request_expired" = "תוקף הבקשה פג, אנא נסה שוב.";
+
+"request_frequent" = "בקשות רבות מדי, אנא נסה שוב מאוחר יותר.";
+
+"request_permission_title" = "ממתין לאישור";
+
+"request_timeout_and_try" = "תם זמן הבקשה, אנא נסה שוב.";
+
+"resend_after_tip" = "שלח שוב לאחר %ds";
+
+"resend_after_tip_ios" = "שלח שוב לאחר %@%@";
+
+"resent_verification_code" = "שלח שוב";
+
+"reset" = "איפוס";
+
+"reset_password_success" = "סיסמה אופסה בהצלחה.";
+
+"resign_in" = "להתחבר";
+
+"restore_purchase_record" = "לשחזר";
+
+"restore_successfully" = "שוחזר בהצלחה";
+
+"retry2" = "נסה שוב";
+
+"root_warning_title" = "ייתכנו סיכוני אבטחה בטלפון מושרש.";
+
+"rotate_image" = "סובב תמונה";
+
+"rotate_image_open" = "הפעל את פונקציית \"סובב תמונה\", רגישות גילוי תנועה עלולה להיות מושפעת.";
+
+"same_email" = "נא לשנות לכתובת דוא\"ל אחרת.";
+
+"same_one_vehicle" = "אתה חושב שזה רכב אחד?";
+
+"same_phone" = "נא לשנות למספר טלפון אחר.";
+
+"same_time_play_most" = "ניתן להפעיל 4 מכשירים לכל היותר בו זמנית.";
+
+"saturday" = "ש׳";
+
+"saturday_2" = "יום שבת";
+
+"save" = "שמור";
+
+"save_album" = "שמור לאלבום התמונות בטלפון";
+
+"save_failed_and_try" = "שמירה נכשלה, אנא נסה שוב.";
+
+"save_gb" = "(≤%dGB)";
+
+"saved_success" = "נשמרה בהצלחה";
+
+"saved_successfully" = "נשמר בהצלחה";
+
+"say_green_light" = "ראיתי את האור הכחול";
+
+"scan_camera_qr_code" = "סרוק את קוד ה- QR";
+
+"scan_camera_way" = "הוסף באמצעות הוספת קוד סריקה";
+
+"scan_info_des" = "פתח את אפליקציית המנהל הגדרות מכשיר / שיתוף / שיתוף מכשיר";
+
+"scan_info_title" = "ניתן למצוא קוד QR על ידי ביצוע השביל";
+
+"scan_no_qr_button" = "לא שמעתי \"Scan QR code\".";
+
+"scan_QR_code" = "סרוק את קוד ה-QR עם המכשיר";
+
+"scan_qr_code_des" = "הנח את קוד ה-QR בטלפון שלך בערך במרחק של 6-12 אינץ' (15-30 ס\"מ) מהמכשיר.";
+
+"scan_qr_code_directions" = "סרוק את ה-QR-Code כ-6-12 אינץ' (15-30 ס\"מ) בחזית המכשיר לאחר שמיעת צליל הסריקה או ראיית האור המהבהב, והשלם את הסריקה כאשר אתה שומע צליל נוסף.";
+
+"scan_QR_code_directions" = "סרוק את קוד ה-QR במרחק של כ-6-12 אינץ' (15-30 ס\"מ) מהמכשיר. השלם סריקה כאשר אתה שומע צליל נוסף.";
+
+"scan_qr_code_failed" = "הסריקה לא הושלמה?";
+
+"scan_qr_code_notice_title1" = "אשר שהמכשיר מופעל ונמצא במצב סריקת קוד";
+
+"scan_qr_code_notice_title2" = "התאם את המרחק בין המכשיר לקוד ה-QR";
+
+"scan_qr_code_notice1" = "נורית החיווי צריכה להיות כחולה ולהבהב בעת סריקת הקוד. אם הוא נמצא בכל מצב אחר, אנא לחץ פעמיים על כפתור ההפעלה לאחר הפעלתו, כך שהמכשיר יכנס למצב סריקה ויהפוך לאור כחול מהבהב.";
+
+"scan_qr_code_notice2" = "מקם את המכשיר במרחק של 6-12 אינץ' (15-30 ס\"מ) מקוד ה-QR. אם הוא לא נסרק במשך זמן רב, אנא העבר אותו קדימה ואחורה. אתה יכול לעיין באיור בעמוד הקודם.";
+
+"scan_qrcode_by_phone" = "סרוק את קוד ה- QR באמצעות הטלפון שלך";
+
+"scan_the_qr_code" = "סרוק קוד QR כדי להתחבר";
+
+"scene" = "הגדרות סצנה";
+
+"schedule_time" = "הגדרת לו\"ז";
+
+"screenshot_sharing" = "שיתוף תצלום מסך";
+
+"screenshots" = "מסך";
+
+"sd_card" = "כרטיס זיכרון";
+
+"sd_card_format_failed" = "הפירמוט נכשל, אנא נסה שוב.";
+
+"sd_card_format_remind" = "כל הנתונים בכרטיס הזיכרון יימחקו, האם אתה בטוח שברצונך לפרמט אותו?";
+
+"sd_card_format_success" = "כרטיס הזיכרון פורמט בהצלחה.";
+
+"sd_card_formating" = "כרטיס הזיכרון בפעולת פירמוט...";
+
+"sd_card_formatting" = "זוהתה משימת פירמוט פעילה, נא לנסות שוב מאחור יותר.";
+
+"sd_card_not_exist" = "לא זוהה כרטיס זיכרון";
+
+"sd_error" = "כרטיס הזיכרון אינו מפורמט כהלכה, נא לפרמט אותו.";
+
+"sd_error_format_sure" = "כרטיס זיכרון זוהה אך אינו מפורמט כהלכה. יש לפרמט את הכרטיס לפני השימוש.";
+
+"sd_format_error" = "פורמט שגוי";
+
+"sd_is_formatting" = "כרטיס הזיכרון מתפרמט, נא להמתין.";
+
+"sd_management" = "ניהול כרטיסי SD";
+
+"sd_no_data_date" = "אין קובץ וידאו כרגע.";
+
+"sd_supper" = "אין תמיכה בכרטיס זיכרון זה";
+
+"sdcard_7_24" = "קובץ וידאו מכרטיס הזיכרון";
+
+"sdcard_has_no_video" = "אין קבצי וידאו בכרטיס הזיכרון";
+
+"sdcard_need_format" = "פורמט כרטיס הזיכרון שגוי";
+
+"sdcard_need_format_shared" = "פורמט כרטיס הזיכרון שגוי. נא ליצור קשר עם מנהל המצלמה כדי לפרמט.";
+
+"sdcard_no_more_video" = "כרטיס הזיכרון ריק מתוכן.";
+
+"SDcard_video_viewers_limit" = "מגבלת מספר הצופים בקבצי כרטיס הזיכרון הושגה, אנא נסה שוב מאוחר יותר.";
+
+"sdvideo_error" = "שגיאת ניגון וידאו מכרטיס הזיכרון";
+
+"sdvideo_timeout" = "תם זמן ניגון וידאו מכרטיס הזיכרון";
+
+"search" = "חיפוש";
+
+"search_buletooth" = "סורק למכשירי Bluetooth בקרבת מקום";
+
+"seconds" = "שניה";
+
+"selcet_spot_2" = "אנא בחר מקום טוב להתקין את המכשיר במיקום שבו הנוף שלו אינו חסום וודא שהוא נמצא באזור הכיסוי של רשת ה-Wi-Fi.";
+
+"select_4vehicle" = "אתה יכול לבחור רק 4 גלריות רכב לכל היותר.";
+
+"select_all" = "בחר הכל";
+
+"select_camera" = "בחר את המכשיר להוספה";
+
+"select_items" = "בחר פריטים";
+
+"select_network" = "בחר רשת";
+
+"select_one_ai" = "*בחר לפחות באחד מפריטי האנליטיקה לבדיקה.";
+
+"select_one_option" = "בחר באפשרות אחת לפחות";
+
+"select_spot_1" = "בחר מיקום טוב עבור המצלמה";
+
+"select_street" = "רחוב";
+
+"select_terms" = "נא לסמן את הסכם המשתמש ומדיניות הפרטיות.";
+
+"select_wifi_title" = "בחר Wi-Fi עבור המכשיר";
+
+"send_log" = "במידה ונתקלת במצב בו לא ניתן לצפות בשידור החי, עזור לנו ע\"י העלאת יומן הנגן כדי שנוכל למצוא את הבעיה.";
+
+"send_log_tips" = "(בטוח לשימוש. לא מעורבים כאן נתוני הפעלה)";
+
+"sendingcode" = "שולחת קוד אימות";
+
+"sensitivity_level" = "רמת רגישות לאור";
+
+"sent_alarm_failed" = "שליחת ההתראה נכשלה, אנא נסה שוב.";
+
+"sent_alarm_successfully" = "שליחת התראה הצליחה.";
+
+"sepvalue" = "—";
+
+"serial_number" = "S/N";
+
+"server_error" = "שגיאת שרת";
+
+"service_center" = "הוסף כרטיס חדש";
+
+"service_cloud_desc" = "פונקציית הקלטות בענן הורחבה ל- 60 יום ו- 10GB (שלושה סוגי חבילות של שירותי אנליטיקה ואחסון בענן) ליצירת אחסון וידאו מאובטח יותר, כדי שלא תפספס רגעים קריטיים.";
+
+"service_detail" = "פרטי תוכנית";
+
+"set" = "להכין";
+
+"set_az" = "הגדר אזור פעילות";
+
+"setup_success" = "הוגדר בהצלחה";
+
+"share" = "לַחֲלוֹק";
+
+"share_error" = "השיתוף נכשל, אנא נסה שוב.";
+
+"share_scan_qr_content" = "אנא סרוק את קוד ה-QR של מנהל המכשיר";
+
+"share_to" = "שותפה ל:";
+
+"shared_by" = "שותפה ע\"י";
+
+"shared_by_" = "שותפה ע\"י %@";
+
+"shared_devices" = "מכשירים משותפים";
+
+"shared_invalid_qr_code" = "קודר לא חוקי, אנא נסה שוב.";
+
+"shared_self_error" = "המכשיר הזה כבר נמצא ברשימה שלך.";
+
+"sharing" = "משתף";
+
+"shooting_interval" = "קירור ענן";
+
+"shooting_interval_des" = "ברגע שזמן ההתקררות מופעל, לא יוקלט שוב ​​וידאו במרווח הזמן שנקבע, מה שיכול להגדיל את חיי הסוללה של %@.";
+
+"shot_fail" = "צילום נכשל.";
+
+"sign_in" = "כניסה";
+
+"sign_up" = "הרשמה לחשבון חדש";
+
+"sign_up_register" = "הרשמה";
+
+"sign_up_tips" = "הזן כתובת דוא\"ל וקוד אימות ישלח אליך.";
+
+"signal_strength" = "חוזק רשת אלחוטית";
+
+"siren_des" = "לאחר הפעלת סירנת אזעקה, ה-%@ ישמיע התראה אוטומטית כאשר חיישן התנועה מופעל.";
+
+"size" = "גודל:";
+
+"skip" = "דלג";
+
+"sleep" = "חסכון אנרגיה";
+
+"sleep_end_time" = "שעת סיום";
+
+"sleep_end_time_atsteam" = "%@ סיים את השינה ב-%@ %@.";
+
+"sleep_mode" = "מצב שינה";
+
+"sleep_period" = "משך מצב שינה";
+
+"sleep_period_etting" = "הגדר את פרק הזמן כדי להעביר את %@ למצב שינה באופן אוטומטי";
+
+"sleep_plan" = "תוכנית מצב שינה";
+
+"sleep_prompt" = "אם מצב השינה מופעל, לא ניתן לראות את אזור המעקב בזמן אמת ותכונות כגון זיהוי תנועה, אינטרקום ואזעקה יושעו.";
+
+"sleep_setting" = "הגדרות מצב שינה";
+
+"sleep_start" = "תאריך ההפעלה";
+
+"sleep_start_time" = "שעת התחלה";
+
+"sleep_tips" = "ה-%@ נמצא במצב שינה, יש להעיר אותו לפני ההגדרה";
+
+"sleep_work_time" = "זמן פעילות";
+
+"sleeping" = "במצב שינה";
+
+"Smart_assistant" = "עוזר שירות חכם";
+
+"smart_camera" = "מכשיר חכם";
+
+"smart_common_contrast" = "שירותים בסיסיים לעומת VS %@ שירותי אנליטיקה ואחסון בענן";
+
+"smart_push" = "Smart Push";
+
+"smart_push_tips" = "סמן את הפריטים שאתה רוצה לקבל דחיפות חכמות. אם אתה רוצה לראות עוד פריטי דחיפה, ";
+
+"smart_push_tips1" = "סמן את הפריטים שאתה רוצה לקבל דחיפות חכמות AI כדי לסמן פריטים אחרים. אם הכל מסומן, אנא התעלם מזה. >>";
+
+"smart_service_desc" = "%@ מבוא לשירותי אנליטיקה ואחסון בענן";
+
+"sound" = "צליל";
+
+"source" = "מקור";
+
+"speaker" = "רמקול";
+
+"speaker_volume" = "עוצמת רמקול";
+
+"split_screen" = "מסך מפוצל";
+
+"sport_auto" = "מעקב תנועה";
+
+"status_led" = "מצב נוריות חיווי";
+
+"stay_this_page" = "הישאר בדף זה";
+
+"storage" = "אחסון";
+
+"storage_space_access" = "בקש אישור";
+
+"str_inter" = "חיבור זרם";
+
+"street_address_2" = "כתובת מפורטת (אופציונלי)";
+
+"strong" = "חזק";
+
+"submit" = "שלח";
+
+"submit_deletion" = "שלח בקשת מחיקה";
+
+"sunday" = "א׳";
+
+"sunday_2" = "יוֹם רִאשׁוֹן";
+
+"supper_net_work" = "המצלמה תומכת רק בתדר אלחוטי 2.4GHz. הרשת הנוכחית היא 5Ghz.";
+
+"sure_to_clear_cache" = "האם אתה בטוח שברצונך לנקות את זיכרון המטמון?";
+
+"sure_to_delete_location" = "האם אתה בטוח שברצונך למחוק את הכתובת?";
+
+"sure_to_delete_zone" = "האם אתה בטוח שברצונך למחוק אזור הפעילות?";
+
+"sure_to_drop_out" = "האם אתה בטוח שתבטל את \"הוסף מכשיר\"?";
+
+"sure_to_remove_device" = "האם אתה מאשר להסיר את %@ זה?";
+
+"sure_to_turn_alarm_on" = "האם אתה בטוח שברצונך להפעיל את ההתראות?";
+
+"sure_to_turn_off_detection" = "האם אתה בטוח שברצונך לכבות את גילוי התנועה?";
+
+"swicth_264cod_tips1" = "ה-%@ יעבור לקידוד H.264, והבהירות של השידור החי תופחת. האם אתה בטוח שתחליף?";
+
+"switch_264cod_tips" = "%@ יחליף אוטומטית את קידוד העברת הווידאו כדי להבטיח שתוכל להשתמש באלקסה או ב-Google Assistant כדי לשלוט במכשיר שלך ולגשת ל-%@ שלך";
+
+"switch_265cod_tips" = "ה-%@ יעבור אוטומטית לקידוד העברת הווידאו החלק ביותר הזמין כדי להבטיח שתוכל לצפות בתמונה החיה הברורה ביותר.";
+
+"switch_265cod_tips2" = "%@ יעבור לקידוד H.265, והצפייה בשידורים חיים תהיה ברורה יותר, אך %@ שלך לא יוכל לתמוך בעוזרות חכמות כגון Alexa או Google Assistant, האם אתה בטוח שברצונך לעבור?";
+
+"system_album_name" = "%@";
+
+"system_error_try_again" = "המערכת עסוקה, אנא נסה שוב.";
+
+"system_update" = "עידכון מערכת";
+
+"system_version" = "גרסאת מערכת";
+
+"tap_to_know" = "הקש למידע נוסף >>";
+
+"terminated_day" = "עד %@";
+
+"terminated_format" = "dd.MM.yyyy";
+
+"thursday" = "ה׳";
+
+"thursday_2" = "יוֹם חֲמִישִׁי";
+
+"time_zone" = "אזור זמן";
+
+"timer_unit" = "יחידת זמן פתוחה";
+
+"tips_ssid_empty" = "נא להזין שם רשת אלחוטית חוקי.";
+
+"tips_wifi_password_empty" = "נא להזין סיסמה חוקית.";
+
+"to_coninue_please_check_internet" = "נא לוודא שהטלפון מחובר לרשת חוקית.";
+
+"to_get_phone_wifi" = "קבל את הרשת האלחוטית הנוכחית ממכשיר הטלפון שלך";
+
+"to_get_wifi_list_nearby" = "קבל רשימת רשתות אלחוטיות זמינות";
+
+"to_time" = "ל";
+
+"toast_add_zone_total_3" = "ניתן להוסיף רק עד שלושה אזורי פעילות.";
+
+"toast_change_language" = "שפה הוחלפה בהצלחה.";
+
+"toast_del_all_are_guest" = "פריטים אלו ניתנים למחיקה רק ע\"י מנהל.";
+
+"toast_del_one_is_guest" = "פריט זה ניתן למחיקה רק ע\"י מנהל.";
+
+"toast_zone_not_playing" = "לא מנגן";
+
+"today" = "היום";
+
+"total_event1" = "יש אירוע אחד,";
+
+"total_event2" = "ישנם %@ אירועים,";
+
+"total_video1" = "וסרטון אחד.";
+
+"total_video2" = "ו- %@ סרטונים.";
+
+"tracking_guide" = "סרטון אחד ביום זה";
+
+"tracking_guide_2" = "הגדר מעקב אדם >>";
+
+"tracking_mode" = "מצב מעקב";
+
+"troubleshooting_issue" = "נסה שוב לאחר בדיקת פתרון בעיות או הוסף מצלמה באמצעות קוד סריקה";
+
+"troubleshooting_issue2" = "נסה שוב לאחר בדיקת פתרון בעיות אלו";
+
+"try_later" = "נסה שוב מאוחר יותר";
+
+"tuesday" = "ג׳";
+
+"tuesday_2" = "יוֹם שְׁלִישִׁי";
+
+"turn_alern" = "האם אתה בטוח שברצונך להפעיל את האזעקה?";
+
+"turn_off_push_tips" = "אם אתה עדיין רוצה להשתמש בתכונה, מומלץ לשמור לפחות פריט אחד, אחרת תכונת ההודעות תושבת.";
+
+"turn_on_camera" = "הפעל את המכשיר";
+
+"turn_on_camera_directions" = "לחיצה ארוכה של 3 שניות על כפתור ההדלקה עד הישמע צליל ההפעלה או שהאור ידלק.";
+
+"turn_on_camera_scanQR" = "הפעל את המכשיר שלך וסרוק את קוד ה-QR";
+
+"turn_on_location_services" = "הפעל את \"שירותי מיקום\" כדי לאפשר ל-\"Example\" לעשות שימוש במיקומך.";
+
+"turn_on_location_services_get_wifi" = "הפעל את שירותי המיקום בטלפון, וקבל באופן אוטומטי את פרטי הרשת האלחוטית הנוכחית.";
+
+"turn_on_location_services_title" = "הפעל את \"שירותיי מיקום\" ב-\"הגדרות פרטיות\"";
+
+"turned_off" = "%@ כבוי. אנא הפעל את %@.";
+
+"turned_on_donot_disturb" = "פונקציית \"נא לא להפריע\" מופעלת";
+
+"twok" = "2K";
+
+"twoway_radio" = "רדיו דו כיווני";
+
+"unable_to_load_image" = "לא ניתן להציג תמונה";
+
+"unauthorized" = "יש לאמת את המשתמש כדי להמשיך";
+
+"unavailable_before_upgrade" = "ה-%@ אינו זמין בזמן שדרוג הקושחה.";
+
+"understanc_agree" = "אני מבין ומסכים עם";
+
+"unheard_scan_qr_code" = "לא שמעתי \"Scan QR code\".";
+
+"unmarked_successfully" = "בוטלה הסימון בהצלחה";
+
+"unmarked_vehicle" = "רכב לא מסומן";
+
+"update" = "עדכון";
+
+"update_device_name_scuess" = "שם %@ עודכן בהצלחה.";
+
+"update_location_scuess" = "מיקום עודכן בהצלחה.";
+
+"update_now" = "עדכן עכשיו";
+
+"update_the_latest_version" = "עדכן לגרסה העדכנית %@";
+
+"update_time_string" = "עידכון אחרון %@ ב %@";
+
+"update_timezone_scuess" = "אזור זמן עודכן בהצלחה.";
+
+"update_user_name_success" = "שם משתמש עודכן בהצלחה.";
+
+"updating" = "מעדכן...";
+
+"upgrade_firmware" = "שדרג קושחה";
+
+"upgrage_to_plan" = "%@ עדכן ל %@";
+
+"uploaded_fail" = "העלאה נכשלה, אנא נסה שוב.";
+
+"uploaded_success" = "העלאה הושלמה בהצלחה.";
+
+"use_app_scan" = "אנא השתמש באפליקציית %@ כדי לסרוק את קוד ה-QR להלן כדי להוסיף %@";
+
+"use_coupon" = "השתמש בקוד מימוש";
+
+"user_account_in_protection" = "%@ פג תוקף שירותי האנליטיקה והאחסון בענן. נא לחדש.";
+
+"user_agreement" = "הסכם משתמש";
+
+"user_guide_4" = "אזור פעילות";
+
+"user_guide_desc_1" = "נהל מכשירים מרובים ביתר קלות";
+
+"user_guide_package" = "מדריכי משתמש";
+
+"user_name" = "שם משתמש";
+
+"Username_inuse" = "שם המשתמש כבר בשימוש.";
+
+"username_noncompliance" = "שם המשתמש אינו תאימות.";
+
+"vehicle_approaching" = "רכב מתקרב";
+
+"vehicle_leaving" = "רכב יוצא";
+
+"vehicle_name" = "שם הרכב";
+
+"vehicle_notification" = "הודעת רכב";
+
+"vehicle_parked" = "רכב חונה";
+
+"verificatio_code_require" = "לאחר הקשת סיסמה שגוייה פעמים רבות, נדרש קוד אימות.";
+
+"verification_code_expired" = "פג תוקף קוד האימות.";
+
+"verification_code_not_right" = "קוד האימות שגוי.";
+
+"verificting_error" = "ההזמנה עוברת תהליך אימות, נא להמתין";
+
+"verify_identity_desc_1" = "טרם השיוך, יש להזין את הסיסמה לצורך אימות המשתמש";
+
+"verify_network" = "התחבר לרשת האלחוטית";
+
+"verify_network_des" = "נכון לעכשיו התמיכה היא אך ורק לרשת אלחוטית בתדר 2.4GHz. לאחר החיבור ניתן להמשיך לשלב הבא.";
+
+"verify_send_code" = "כרגע נשלח למספר הטלפון %@ קוד אימות, נא להזין אותו נכונה.";
+
+"verify_user_info" = "אמת את הזהות";
+
+"verify_user_rebind" = "טרם השיוך מחדש, יש להזין את הסיסמה לצורך אימות המשתמש.";
+
+"Example_policy" = "הסכם משתמש ומדיניות פרטיות";
+
+"video_duration" = "משך";
+
+"video_feedback_agree" = "אני מסכים לשלוח משוב ותוכן וידאו מקורי (כולל כל המידע האישי) אל %@ כדי לעזור להם לבצע ניתוח משני של הנתונים. אנא עיין ב-מדיניות פרטיות עבור המסמכים המשפטיים הרלוונטיים.";
+
+"video_feedback_cell_other" = "לחץ כדי להוסיף פרטים.";
+
+"video_feedback_check" = "נא לסמן את התנאים הרלוונטיים";
+
+"video_hb" = "HD";
+
+"video_max_below_20m" = "הוידאו אמור להיות בטווח של 20 מטרים.";
+
+"video_over_day" = "פג תוקף קובץ הוידאו";
+
+"video_resolution" = "רזולוציית הקלטה";
+
+"video_saved_to_ablum" = "קובץ הוידאו נשמר באלבום התמונות בטלפון.";
+
+"video_saving" = "קובץ הוידאו בתהליך שמירה...";
+
+"video_smooth" = "SM";
+
+"video_tag" = "תגית וידאו";
+
+"videolist_error" = "שגיאת קבלת רשימת וידאו";
+
+"videolist_timeout" = "תם זמן קבלת רשימת וידאו";
+
+"vip_activity_zone_warning" = "%@ מאפיין שירותי האנליטיקה והאחסון בענן";
+
+"voice_talk_failed_and_retry" = "השמעת הקול נכשלה, אנא נסה שוב.";
+
+"volume" = "עוצמת אזעקה";
+
+"wait_for_permission_tips" = "בקשתך נשלחה למנהל בהצלחה, אנא המתן לאישור.";
+
+"wakeup_camera" = "תעיר את %@";
+
+"weak" = "חלש";
+
+"weak_wifi_notation" = "חוזק ה-Wi-Fi של %@ הנוכחי חלש. המלצנו לך לשנות את המיקום או להשתמש ברשת Wi-Fi אחרת.";
+
+"wednesday" = "ד׳";
+
+"wednesday_2" = "יום רביעי";
+
+"where_is_qrcode" = "קוד ה-QR על גוף המכשיר נמצא על מדבקה, הממוקמת לרוב בתוך המעטפת החיצונית או מתחת לפקק הגומי. קוד QR זה מכיל את המספר הסידורי ומספר הסוג, בדרך כלל מתחיל ב-\"S/N\".";
+
+"while_using" = "במהלך שימוש";
+
+"white_light" = "אור לבן";
+
+"white_tips" = "אם אתה נזקק בפונקציית תאורת האור הלבן בלילה, אנא עבור אל";
+
+"whitelight_des" = "תאורת אור לבן מאירה במטרה לשחזר צבע בסביבה לילית";
+
+"wifi" = "וויי - פיי";
+
+"wifi_channel" = "ערוץ רשת אלחוטית";
+
+"wifi_confim" = "נא וודא את נכונותם של שם וסיסמאת הרשת האלחוטית (תלוי אותיות רישיות).";
+
+"wifi_connect" = "חיבור רשת אלחוטית";
+
+"wifi_issue" = "הוספת בעיה במכשיר";
+
+"wifi_name" = "שם רשת אלחוטית:";
+
+"wifi_password" = "סיסמה:";
+
+"wifi_scanning" = "חיפוש רשת";
+
+"wifi_setting" = "הגדרות רשת אלחוטית";
+
+"wifi_state" = "חוזק רשת אלחוטית: %@";
+
+"wifi_state_ios" = "חוזק רשת אלחוטית:";
+
+"wlan_enable_play" = "האם להמשיך בשימוש נתונים בסביבה שאינה רשת אלחוטית?";
+
+"wrong_az_tips" = "* סליחה! המערכת זיהתה בעיות באזורי הפעילות הבאים, אשר עלולות לגרום לגילוי לא מדויק. נא למחוק ולהוסיף שוב.";
+
+"wrong_code" = "הקודר שגוי";
+
+"yes" = "כן";
+
+"zone_1" = "אזור 1";
+
+"zone_2" = "אזור 2";
+
+"zone_3" = "אזור 3";
+
+"zone_with_args" = "אזור %@";
+
+"bind_ap_help_title" = "חבר %@ נקודה חמה";
+
+"download_position" = "מוריד %d/%d ...";
+
+"use_guide" = "השתמש במדריך";
+
+"not_account_alexa_tips1" = "לאחר שחשבונך וAlexa מקושרים, תוכל לשלוט בקול במכשירים התומכים ב-Alexa דרך מכשירי סדרת Echo,";
+
+"not_account_alexa_tips2" = "כגון: “Alexa, תראה לי את המצלמה שלי.\"";
+
+"account_alexa_button" = "קישור עם Alexa";
+
+"account_alexa_succeed" = "החשבון קושר בהצלחה";
+
+"account_alexa_failed1" = "קישור החשבון נכשל, אנא נסה שוב";
+
+"account_alexa_failed2" = "קישור החשבון נכשל";
+
+"account_alexa_succeed_tips1" = "החשבון שלך ו-Alexa מקושרים, ואתה יכול לשלוט במכשירים התומכים ב-Alexa באמצעות מכשירי סדרת Echo,";
+
+"account_alexa_succeed_tips2" = "כגון: “Alexa, תראה לי את המצלמה שלי.\"";
+
+"live_audio_recording_swt" = "הקלטת אודיו חיה";
+
+"video_audio_recording_swt" = "הקלטת אודיו וידאו";
+
+"audio_recording_instr" = "מתג הקלטת האודיו ישלוט אם %@ שלך מקליט אודיו במהלך הקלטת וידאו חיה או וידאו.";
+
+"unmute_failed_title" = "לא ניתן לבטל את ההשתקה";
+
+"unmute_failed_content" = "לא ניתן לבטל את ההשתקה כי הקלטת אודיו חיה מושבתת. אנא הפעל תחילה את מתג הקלטת אודיו חי";
+
+"firmware_update_skip" = "תתעלם מהגרסה הזו";
+
+"add_device_AP" = "הוסף מכשיר";
+
+"add_device_WiFi" = "הוסף מכשיר";
+
+"add_device_shared" = "הוסף מכשיר של חבר";
+
+"add_method_wifi" = "חיבור אינטרנט אלחוטי";
+
+"add_method_hotspot" = "נקודה חמה ישירה";
+
+"add_method_check" = "אשר את שיטת חיבור ההתקן";
+
+"add_wifi_suit" = "מתאים לסביבת התקנה עם Wi-Fi.";
+
+"add_hotspot_suit" = "מתאים לסביבת התקנה ללא Wi-Fi. בעת צפייה במכשיר, הטלפון לא יוכל לגשת לאינטרנט.";
+
+"add_feature_dif" = "השוואת תכונות";
+
+"add_dif_alarm" = "הודעת אזעקה";
+
+"add_dif_stream" = "צפה בשידור חי בכל זמן ובכל מקום";
+
+"add_dif_nearstream" = "צפה בשידור החי רק ליד המכשיר";
+
+"add_dif_Cloudvideo" = "הקלטה בענן";
+
+"add_dif_SDvideo" = "הקלטה בכרטיס SD";
+
+"add_successfully" = "המכשיר נוסף בהצלחה";
+
+"add_device_name" = "הגדר את שם המכשיר";
+
+"add_hotspot_pwd" = "הגדר סיסמת נקודה חמה במכשיר";
+
+"add_set_hotspotpwd" = "הגדר סיסמה עבור הנקודה החמה של המכשיר שלך";
+
+"add_hotspot_ssid" = "האינטרנט:";
+
+"add_pwd" = "סיסמה:";
+
+"add_pwd_remember" = "*אנא זכור את הסיסמה הזו, אתה יכול לשמור צילום מסך";
+
+"add_set_pwd" = "הגדר והעתק את הסיסמה";
+
+"add_copied_pwd" = "הועתק בהצלחה ללוח";
+
+"add_connect_hotspot" = "בעת התחברות לנקודה חמה של המכשיר, הדבק את הסיסמה ישירות, או הזן את הסיסמה באופן ידני באופן הבא:";
+
+"add_notsupport_hotspot" = "הנקודה החמה של המכשיר שאליו תבחר להתחבר, המכשיר אינו תומך בשיטת החיבור הישיר של הנקודה החמה";
+
+"add_reselect" = "בחר מחדש";
+
+"add_nofind_device" = "מכשיר לא נמצא";
+
+"home_device_hotspot" = "מכשיר חיבור ישיר לנקודה חמה";
+
+"home_notconnect_hotspot" = "לא ניתן לצפות במכשיר הזה מכיוון שהטלפון שלך לא מחובר לנקודה החמה של המכשיר הזה";
+
+"home_viewdevice" = "הצג את המכשיר";
+
+"home_back_hotspot" = "בחזרה לדף הבית של האפליקציה, הנקודה החמה המחוברת כעת תנותק";
+
+"home_wifi_hotspot" = "התחבר לנקודה חמה של המכשיר";
+
+"home_hotspot_step1" = "שלב 1. הפעל את הנקודה החמה של המכשיר";
+
+"home_hotspot_pir" = "התקרבו למכשיר וראו אור כחול מלא";
+
+"home_hotspot_power" = "לחץ קצר על לחצן ההפעלה וראה שהאור הכחול דולק תמיד";
+
+"home_hotspot_step2" = "שלב 2. חבר נקודה חמה למכשיר";
+
+"home_hotspot_connect" = "הטלפון מחובר לנקודה החמה של %@";
+
+"set_info_status1" = "מְנוּתָק";
+
+"set_info_status2" = "מְחוּבָּר";
+
+"set_info_hotspot" = "שם נקודה חמה במכשיר";
+
+"set_info_hotspotpwd" = "סיסמת נקודה חמה במכשיר";
+
+"set_info_electricity" = "לפני ניתוק הנקודה החמה";
+
+"set_wifi_connect" = "התחבר ל-Wi-Fi";
+
+"set_wifi_other_methods_bt" = "שיטות חיבור אחרות";
+
+"home_ap_change" = "שנה רשת";
+
+"home_hotspot_goconnect" = "חבר את ה-Wi-Fi של הטלפון הנייד ל-\"%@\", ולאחר מכן חזור לאפליקציית %@ כדי להציג את המכשיר";
+
+"add_way_choose" = "ללכת";
+
+"setting_ap_change" = "ניתן לשנות את ההגדרות רק כאשר המכשיר מחובר ל-Wi-Fi";
+
+"setting_ap_connectwifi" = "התחבר ל-Wi-Fi";
+
+"setting_db_charge" = "שיטת טעינה";
+
+"setting_db_chargetype1" = "חוט פעמון";
+
+"setting_db_chargetype2" = "יו אס בי";
+
+"setting_db_tone" = "צליל פעמון";
+
+"setting_db_tone1" = "1 רינגטון";
+
+"setting_db_tone2" = "רינגטון 2";
+
+"setting_db_remove" = "הסר את האזעקה";
+
+"setting_db_remove_off" = "לאחר הפתיחה, אם פעמון הדלת מופרד מהפאנל האחורי, פעמון הדלת ישלח את הסרטון המצולם לטלפון הנייד, ויפלוט צליל אזעקה, והנורית האדומה ליד הכפתור מהבהבת";
+
+"setting_db_remove_on" = "כאשר כוח פעמון הדלת נגמר, נא לכבות תחילה את אזעקת ההסרה ולאחר מכן להסיר את פעמון הדלת כדי לטעון";
+
+"setting_call_switch" = "שיחה בנגיעה אחת";
+
+"library_sign" = "שִׂיחָה";
+
+"setting_db_tone3" = "רינגטון 3";
+
+"unmute_failed_content_guest" = "לא ניתן לבטל את ההשתקה כי הקלטת אודיו חיה מושבתת. אנא פנה למנהל המערכת כדי להפעיל זאת.";
+
+"setting_db_ring" = "טַבַּעַת";
+
+"device_type_unknown" = "התקן";
+
+"device_type_camera" = "מַצלֵמָה";
+
+"device_type_doorbell" = "פעמון דלת";
+
+"dp_live_revolution_640_360" = "SD";
+
+"dp_live_revolution_640_480" = "SD";
+
+"dp_live_revolution_1280_720" = "SD";
+
+"dp_live_revolution_1920_1080" = "HD";
+
+"dp_live_revolution_2048_1536" = "2K";
+
+"dp_live_revolution_2304_1296" = "2K";
+
+"dp_live_revolution_2560_1440" = "2K";
+
+"dp_record_revolution_640_360" = "SD";
+
+"dp_record_revolution_640_480" = "SD";
+
+"dp_record_revolution_1280_720" = "SD";
+
+"dp_record_revolution_1920_1080" = "HD";
+
+"dp_record_revolution_2048_1536" = "2K";
+
+"dp_record_revolution_2304_1296" = "2K";
+
+"dp_record_revolution_2560_1440" = "2K";
+
+"setting_e_status" = "(לפני הכיבוי)";
+
+"calling_mute_bt" = "לְהַשְׁתִיק";
+
+"calling_speaker_bt" = "רַמקוֹל";
+
+"calling_decline_bt" = "יְרִידָה";
+
+"calling_accept_bt" = "לְקַבֵּל";
+
+"bind_db_select_way_title" = "בחר כיצד להתקין את פעמון הדלת";
+
+"bind_db_select_way_way1_text" = "אין חוט פעמון בדלת";
+
+"bind_db_select_way_way2_text" = "התקנה עם חוט פעמון";
+
+"bind_db_select_way_way1_bt" = "התקנה ללא חוט פעמון";
+
+"bind_db_select_way_content" = "אנא בחר את שיטת ההתקנה בהתאם למצב בפועל של הבית שלך כדי להתחיל את התקנת פעמון הדלת";
+
+"find_device_mac_wire" = "אתרנט:";
+
+"find_device_mac_wifi" = "וויי - פיי:";
+
+"choose_connect_way_title" = "בחר שיטת חיבור";
+
+"choose_connect_way_wifi" = "התחבר באמצעות Wi-Fi";
+
+"choose_connect_way_ethernet" = "התחבר באמצעות כבל Ethernet";
+
+"ethernet_wire_connect_title" = "חבר את כבל ה-Ethernet";
+
+"ethernet_wire_connect_content" = "אנא חבר את כבל ה-Ethernet עבור %@ וודא שהרשת יכולה להתחבר לאינטרנט";
+
+"ethernet_wire_connect_check_box" = "ודא שכבל ה-Ethernet מחובר";
+
+"ethernet_internet_failed_title" = "ודא שחיבור הרשת פועל";
+
+"ethernet_internet_failed_content" = "%@ מחובר לכבל הרשת, אך אינו יכול להתחבר לאינטרנט, אנא בדוק את הרשת שלך";
+
+"ethernet_internet_failed_check_box" = "ודא שאתה מחובר לאינטרנט";
+
+"ethernet_ip_failed_title" = "קבל פסק זמן של IP";
+
+"connect_error_unsupport_wifi" = "שמעתי \"חיבור Wi-Fi אינו נתמך\"";
+
+"connect_error_unsupport_ethernet" = "שמעתי \"חיבור קווי אינו נתמך\"";
+
+"ethernet_internet_failed_confirm_window" = "ודא שחיבור הרשת פועל";
+
+"ethernet_wire_connect_confirm_window" = "ודא שאתה מחובר לאינטרנט";
+
+"default_device_name" = "מכשיר חכם";
+
+"feedback_choose_device_input_default" = "AICXXXXXXXX1234";
+
+"cool_down_time_interval_time_10" = "10 שניות";
+
+"cool_down_time_interval_time_30" = "30 שניות";
+
+"cool_down_time_interval_time_60" = "דקה 1";
+
+"cool_down_time_interval_time_180" = "3 דקות";
+
+"cool_down_time_interval_time_300" = "5 דקות";
+
+"video_duration_10" = "10 שניות";
+
+"video_duration_15" = "15 שניות";
+
+"video_duration_20" = "20 שניות";
+
+"share_error_2014" = "לא ניתן לשתף עם משתמשי חשבון במדינות שונות";
+
+"ethernet_mac_address" = "Ethernet MAC";
+
+"payment_get_product_list_error" = "לא ניתן לרכוש, אנא בדוק את חשבון חנות Play שלך או את שירותי Google.";
+
+"chime_setting_title" = "הגדרות פעמון";
+
+"mechanical_chime_switch" = "פעמון מכני";
+
+"mechanical_chime_volume" = "כרך";
+
+"mechanical_play" = "לְשַׂחֵק";
+
+"mechanical_chime_switch_content" = "המתג יכול לשלוט אם הצלצול המכני מצלצל לאחר לחיצה על פעמון הדלת, וניתן לכוונן את עוצמת הקול לאחר ההדלקה עד שתרגיש שהוא מתאים";
+
+"mechanical_chime_switch_error" = "אינו זמין";
+
+"mechanical_chime_switch_error_text" = "הצלצול המכני אינו מחובר או שהחשמל כבוי, אנא עיין ב-%@";
+
+"mechanical_chime_switch_error_text_link" = "מדריך התקנה";
+
+"mechanical_chime_switch_pop_title" = "לא ניתן להפעיל";
+
+"mechanical_chime_switch_pop_content" = "%@ אינו מחובר לפעמון המכני או אינו נתמך, אנא בדוק שהחיווט תקין.";
+
+"mechanical_chime_switch_pop_helpbt" = "צפה בעזרה";
+
+"indoor_chime_connect_content" = "קשר את הצלצול שלך לפי המדריך";
+
+"indoor_chime_bind" = "כפתור SYNC";
+
+"indoor_chime_bind_title" = "פעמון פעמון";
+
+"indoor_chime_bind_bt" = "חבר את פעמון פעמון הדלת";
+
+"indoor_chime_up" = "כפתור הגברת עוצמת הקול";
+
+"indoor_chime_down" = "לחצן להורדת עוצמת הקול";
+
+"indoor_chime_change" = "לחצן החלפת רינגטונים";
+
+"set_autopoweron" = "הגדרות הפעלה אוטומטית";
+
+"set_autopoweron_charge" = "הפעלה אוטומטית לאחר טעינה";
+
+"set_autopoweron_charge_explain" = "כאשר הסוללה של המכשיר נגמרת, הוא יידלק אוטומטית לאחר הטעינה כדי לחסוך במאמץ.";
+
+"set_autopoweron_charge_level" = "רמת הסוללה שצוינה מופעלת";
+
+"set_autopoweron_charge_level1" = "25%";
+
+"set_autopoweron_charge_level2" = "50%";
+
+"set_autopoweron_charge_level3" = "75%";
+
+"set_autopoweron_charge_level4" = "100%";
+
+"set_buttoncall" = "שיחה בלחיצה אחת";
+
+"feedback_choose_device_title" = "תבחר מכשיר";
+
+"feedback_choose_device_content" = "נא להזין את מספר ה-SN של המכשיר המדובר";
+
+"feedback_choose_device_subtitle" = "או בחר את המכשיר שאתה נתקל בבעיות איתו (אפשרויות מרובות)";
+
+"log_update" = "העלאת יומן";
+
+"system_permission_center" = "הרשאת מערכת";
+
+"system_permission_center_title" = "הרשאת מערכת";
+
+"system_permission_center_allow" = "להתיר";
+
+"system_permission_center_not_allow" = "לא מורשה";
+
+"system_permission_center_loc_title" = " מקום";
+
+"system_permission_center_loc_content" = "חפש מכשירים זמינים בקרבת מקום, קבל מידע Wi-Fi כדי להתחבר במהירות למכשירים וכו'.";
+
+"system_permission_center_sto_title" = " אִחסוּן";
+
+"system_permission_center_sto_content" = "צילומי מסך, הקלטות מסך, הורדה והשמעה של פונקציות וידאו במהלך שידור חי";
+
+"system_permission_center_mic_title" = "מִיקרוֹפוֹן";
+
+"system_permission_center_mic_content" = "לדיבור דו כיווני";
+
+"system_permission_center_phone_title" = "שיחת טלפון";
+
+"system_permission_center_phone_content" = "משמש לפעמוני דלת והתקנים אחרים עם פונקציות שיחה להתקשרות לטלפונים ניידים";
+
+"system_permission_center_cam_title" = "מַצלֵמָה";
+
+"system_permission_center_cam_content" = "לסריקת קוד QR ופונקציות נוספות";
+
+"system_permission_center_ble_title" = "בלוטות";
+
+"system_permission_center_ble_content" = "לפונקציות כגון חיפוש מכשירים קרובים";
+
+"tier_name_basic" = "%@ מודעות בסיסית";
+
+"tier_name_plus" = "%@ מודעות פלוס";
+
+"tier_name_pro" = "%@ מודעות פרו";
+
+"tier_name_lite_old" = "%@ לייט";
+
+"tier_name_lite_new" = "%@ לייט";
+
+"tier_name_no_plan" = "%@ אין תוכנית";
+
+"log_upload_fail" = "העלאה נכשלה, אנא נסה שוב.";
+
+"log_upload_success" = "העלאה הושלמה בהצלחה.";
+
+"notification_keep_running" = "%@ ימשיך לפעול כך שתוכל לקבל הודעה בזמן יותר";
+
+"bird_list_enter_bt" = "הצג מיני ציפורים אפשריים";
+
+"learn_more_3" = "פרטים";
+
+"bird_list_title" = "מינים אפשריים";
+
+"bird_list_percentage" = "%@%";
+
+"bird_list_feedback_bt" = "אף אחד מהדברים לעיל, משוב עוזר לבינה מלאכותית לצמוח";
+
+"wiki_bt" = "הצג מידע נוסף";
+
+"bird_feedback_title" = "מָשׁוֹב";
+
+"bird_feedback_input_text" = "הזן את המין שאתה חושב";
+
+"submit_bt" = "שלח";
+
+"bird_feedback_success" = "משוב הצלחה";
+
+"bird_feedback_failed" = "מצטערים, המשוב נכשל, אנא נסה שוב מאוחר יותר";
+
+"awareness_bird_fans" = "חבילת מעריצי ציפורים";
+
+"tier_message_bird_fans_note" = "צריך להירשם לתוכנית Awareness Basic או תוכניות גבוהות יותר";
+
+"purchase_support_device" = "מכשירים נתמכים";
+
+"auto_ota" = "עדכון אוטומטי";
+
+"auto_ota_status_on" = "עַל";
+
+"auto_ota_status_off" = "כבוי";
+
+"auto_ota_title" = "עדכון אוטומטי";
+
+"auto_ota_switch" = "עדכון אוטומטי";
+
+"auto_ota_content" = "המכשיר ינסה לעדכן את הקושחה באופן אוטומטי מ-02:00 עד 06:00, ולא יהיו הנחיות קול והפרעות קלות במהלך תהליך העדכון. המכשיר משעה את העבודה בזמן שהקושחה מתעדכנת, ומתחדש בסיום.";
+
+"player_days_hour" = "תוך שעה";
+
+"player_days" = "לפני %@ %@";
+
+"unit_day" = "יום";
+
+"unit_days" = "ימים";
+
+"unit_hour" = "שעה";
+
+"unit_hours" = "שעות";
+
+"notification_keep_runing_title" = "תהליך רקע";
+
+"notification_keep_runing_content" = "האפליקציה תמשיך לפעול כך שתוכל לקבל יותר הודעות בזמן";
+
+"bird.find_subcategory" = "ציפור זוהתה, נראה כמו {birdName}!";
+
+"tier_message_bird_notifacation_describe" = "קבל את היכולת לזהות ציפורים! ולהזכירך עם Smart Push!";
+
+"tier_message_bird_subcategory_describe" = "תמיכה ב-10000+ מינים של ציפורים";
+
+"not_account_google_tips1" = "לאחר שחשבונך וGoogle Assistant מקושרים, תוכל לשלוט בקול במכשירים התומכים ב-Google Assistant דרך מכשירי סדרת Google Home,";
+
+"not_account_google_tips2" = "כגון: “OK Google, תראה לי את המצלמה שלי.\"";
+
+"account_google_succeed_tips1" = "החשבון שלך ו-Google Assistant מקושרים, ואתה יכול לשלוט במכשירים התומכים ב-Google Assistant באמצעות מכשירי סדרת Google Home,";
+
+"account_google_succeed_tips2" = "כגון: “OK Google, תראה לי את המצלמה שלי.\"";
+
+"google_assistant" = "Google Assistant";
+
+"account_google_tips" = "החשבון שלך קושר בהצלחה לאקסה. אם אתה נתקל בבעיות כלשהן בשימוש, אנא עבור אל \"משתמש\"-\"חיבור זרימה\" כדי לבדוק את מצב המכשיר שלך או להציג שאלות נפוצות.";
+
+"account_google_button" = "קישור עם Google Assistant";
+
+"commonMotionBody" = "המצלמה זיהתה תנועה";
+
+"bird_exist" = "זוהתה ציפור";
+
+"push_bird_fans_title" = "מעריצי ציפורים";
+
+"push_bird_fans_before_content" = "הצטרף לתוכנית מעריצי הציפורים כדי לקבל הודעה על ציפורים, לגלות ולאסוף מיני ציפורים!";
+
+"bird_fans_free_plan_title" = "Beta";
+
+"bird_fans_free_plan_price" = "חינם";
+
+"bird_fans_free_plan_price_finish" = "קיבלו";
+
+"bird_feedback_mark" = "סמן כ\"%@\"";
+
+"not_account_google_tips" = "החשבון שלך עדיין לא קושר ל-Google Home. אתה יכול לפתוח את אפליקציית Google Home ולקשר את חשבונך על ידי הוספת Action ל-Google Home.";
+
+"auto_switch_google" = "מכשירים התומכים ב-Google Home יופעלו מחדש באופן אוטומטי ויעברו ל-H.264 כדי להתחבר למכשירי Google Home.";
+
+"google_link" = "לחץ על אפשר כדי לקשר את חשבון %@ שלך ל- Google Home. אם אפשר\n:";
+
+"plan_feature_title" = "תיאור פונקציה";
+
+"nocamera_spt_google" = "אף מכשיר לא תומך באלקסה כרגע";
+
+"push_bird_fans_after_content" = "הפעיל את המתג כדי לנתח אם יש ציפורים בסרטון ולזהות מיני ציפורים מסוימים בתצוגה המתאימה";
+
+"open_wifi_ap" = "אנא הפעל Wi-Fi כדי להתחבר לנקודה חמה במכשיר";
+
+"hg_awareness" = "Homeguard Secure Plan";
+
+"device_plan_manage" = "ניהול תוכנית התקנים";
+
+"plan_hg_single" = "מכשיר בודד";
+
+"plan_hg_four" = "ארבעה מכשירים";
+
+"expiry_date" = "בתוקף עד%@";
+
+"available_device" = "זמין";
+
+"device_plan_manage_drag" = "גרור לתוכנית הזו";
+
+"device_plan_manage_no_device" = "אין מכשיר שמשתמש בתוכנית הזו";
+
+"device_plan_manage_not_support" = "מכשיר זה אינו תומך בתוכנית זו";
+
+"purchase_purchase_duration" = "משך הרכישה";
+
+"purchase_effective_device" = "מכשיר יעיל";
+
+"purchase_manage_device" = "נהל מכשירים";
+
+"purchase_history_current_subscription" = "מנוי נוכחי";
+
+"purchase_history_title" = "היסטוריית רכישות";
+
+"purchase_history_purchase_time" = "זמן רכישה:";
+
+"purchase_history_next_renewal_time" = "זמן החידוש הבא:";
+
+"purchase_history_refunded" = "הוחזר";
+
+"purchase_history_no_history" = "אין היסטוריית רכישות";
+
+"awareness_table_device_number" = "מספר המכשיר";
+
+"awareness_table_unlimited_device" = "ללא הגבלה";
+
+"awareness_table_1_device" = "1";
+
+"awareness_table_4_device" = "4";
+
+"review_window_choose_title" = "האם אתה מרוצה מהשימוש";
+
+"review_window_satisfied_title" = "אנא דרג אותנו";
+
+"review_window_choose_satisfied" = "שבע רצון";
+
+"review_window_choose_dissatisfied" = "לא מרוצה";
+
+"review_window_dissatisfied_title" = "אנא תנו לנו משוב";
+
+"review_window_dissatisfied_feedback" = "מָשׁוֹב";
+
+"review_window_skip" = "לא עכשיו";
+
+"review_window_submit" = "שלח";
+
+"review_window_satisfied_go_bt" = "לך עכשיו";
+
+"review_window_success_toast" = "נשלח בהצלחה";
+
+"review_window_fail_toast" = "השליחה נכשלה, אנא נסה שוב מאוחר יותר";
+
+"alexa_auth_cancel_bt" = "בטל את הקישור";
+
+"alexa_auth_cancel_pop_window_text" = "לאחר ביטול הקישור, לא תוכל לשלוט במכשירים התומכים באלקסה דרך מכשירי אלקסה כגון Echo Show. האם אתה בטוח שברצונך לבטל את הקישור?";
+
+"device_plan_manage_unsaved_pop_window_text" = "שינוי התוכנית לא נשמר, קבע אם לצאת ישירות";
+
+"verification_code_subtitle" = "קוד אימות נשלח אל %@";
+
+"sign_error_username_empty" = "שם המשתמש לא יכול להיות ריק";
+
+"alexa_auth_cancel_succeed_toast" = "בטל את הקישור בהצלחה";
+
+"alexa_auth_cancel_failed_toast" = "ביטול הקישור נכשל, נסה שוב מאוחר יותר";
+
+"device_plan_manage_full_toast" = "התוכנית מלאה";
+
+"sign_password_input" = "הזן את הסיסמה";
+
+"sign_password_again_input" = "הקלד את הסיסמא מחדש";
+
+"sign_username_input" = "הכנס שם משתמש";
+
+"account_alexa_failed3" = "כריכה מבוטלת";
+
+"device_language_pt" = "Português (פורטוגזית)";
+
+"payment_auto_pay_subtext" = "תתחדש מדי חודש, בטל בכל עת";
+
+"app_lang_follow_system" = "לעקוב אחרי המערכת";
+
+"doorbell_notification_switch" = "התראה על פעמון דלת";
+
+"doorbell_notification_mode" = "שיטת דחיפה";
+
+"doorbellPressNotifyType_options_phone" = "שיחת טלפון";
+
+"doorbellPressNotifyType_options_push" = "הוֹדָעָה";
+
+"smart_push_package_des" = "לניתוח של חבילות דמויי קופסה המונחות למשל בפתחים.";
+
+"smart_push_package_guide" = "הודעת שימוש";
+
+"feedback_add_new" = "לְהוֹסִיף";
+
+"notification_help" = "דחיפה לא התקבלה או דחיפה מושהית %@";
+
+"system_permission_center_notify_content" = "משמש לקבלת הודעות התראות על המכשיר, הודעות מערכת וכו'.";
+
+"system_permission_center_notify_title" = "התראה";
+
+"feedback_number" = "No. ";
+
+"smart_push_other" = "אחרים";
+
+"smart_push_novip_des" = "הירשם ל-Awareness לקבלת תכונות נוספות";
+
+"smart_push_other_des" = "הצעות נוספות מלבד האמור לעיל.";
+
+"notification_motion_switch" = "התראה על זיהוי תנועה";
+
+"service_cloud_desc_hg" = "הארך עד 30 יום עם אחסון הקלטות בענן בנפח 8 ג'יגה-בתים (2 סוגים של תוכניות מודעות) כדי ליצור את אחסון הווידאו המאובטח ביותר, כך שלעולם לא תפספס אף רגע קריטי.";
+
+"change_voice" = "שנה קול";
+
+"change_voice_normal" = "נוֹרמָלִי";
+
+"change_voice_man" = "איש";
+
+"change_voice_girl" = "נערה";
+
+"change_voice_monster" = "מִפלֶצֶת";
+
+"rate_add_attachment" = "העלאת תמונה";
+
+"link_to_google" = "קישור %@ עם Google";
+
+"signin_status" = "מחובר בתור %@";
+
+"switch_account" = "שנה חשבון";
+
+"google_permission_des" = "נבקש את ההרשאות הבאות:";
+
+"google_permission_one" = "גישה לפרטי החשבון %@ שלך.";
+
+"google_permission_two" = "השתמש בשירותי %@.";
+
+"google_permission_three" = "אפשר ל-Google לשלוט במכשירים שלך.";
+
+"google_privacy_policy" = "סקור את %@ של גוגל";
+
+"google_auth_cancel_guide" = "אתה יכול לבטל את הקישור ב-%@";
+
+"google_auth_agree" = "מסכים וקשר";
+
+"google_auth_cancel" = "לְבַטֵל";
+
+"google_unlink_address" = "myaccount.google.com";
+
+"power_source_page_title" = "איך אתה מתכנן להשתמש ב-%@ שלך?";
+
+"power_source_page_subtitle" = "אתה יכול לשנות את הבחירה בכל עת מדף הגדרות צריכת החשמל.";
+
+"powerSource_options_plug_in" = "חיבור";
+
+"powerSource_options_solar_panel" = "פנל סולארי";
+
+"powerSource_options_battery_power_only" = "כוח סוללה בלבד";
+
+"powerSource_options_wired" = "חוטי";
+
+"powerSource_options_unselected" = "בחר";
+
+"auto_power_on_page_title" = "הפעל הפעלה אוטומטית לאחר הטעינה";
+
+"auto_power_on_page_descr" = "אתה יכול לכבות תכונה זו כעת או בכל עת מדף הגדרות צריכת החשמל.";
+
+"power_source_item_name" = "מקור כוח";
+
+"set_power_settings" = "הגדרות חשמל";
+
+"camera_off_solar" = "המצלמה במצב לא מקוון. מצלמה טעונה סולארית נדלקת אוטומטית לאחר הטעינה.";
+
+"chargeAutoPowerOnCapacity_options_25pct" = "25%";
+
+"chargeAutoPowerOnCapacity_options_50pct" = "50%";
+
+"chargeAutoPowerOnCapacity_options_75pct" = "75%";
+
+"chargeAutoPowerOnCapacity_options_100pct" = "100%";
+
+"doorbell_call" = "מישהו מצלצל בפעמון הדלת.";
+
+"wired_connection" = "חיבור קווי";
+
+"video_settings" = "הגדרות וידאו";
+
+"connection_mode" = "מצב מחובר";
+
+"connect_wifi2" = "חבר Wi-Fi";
+
+"pirCooldownTime_options_10s" = "10 שניות";
+
+"pirCooldownTime_options_30s" = "30 שניות";
+
+"pirCooldownTime_options_60s" = "דקה 1";
+
+"pirCooldownTime_options_180s" = "3 דקות";
+
+"pirCooldownTime_options_300s" = "5 דקות";
+
+"videoResolution_options_mid" = "SD";
+
+"videoResolution_options_high" = "HD";
+
+"videoResolution_options_2k" = "2K";
+
+"videoAntiFlickerFrequency_options_50Hz" = "50Hz";
+
+"videoAntiFlickerFrequency_options_60Hz" = "60Hz";
+
+"pirSensitivity_options_auto" = "אוטומטי";
+
+"pirSensitivity_options_high" = "גבוה";
+
+"pirSensitivity_options_mid" = "בינוני";
+
+"pirSensitivity_options_low" = "חלשה";
+
+"pirRecordTime_options_auto" = "אוטומטי";
+
+"pirRecordTime_options_10s" = "10 שניות";
+
+"pirRecordTime_options_15s" = "15 שניות";
+
+"pirRecordTime_options_20s" = "20 שניות";
+
+"set_pan_tilt_settings" = "הגדרת פניה-הטיה";
+
+"pan_tilt_calibration" = "כיול פניה-הטיה";
+
+"calibrate_start" = "לְדַרֵג";
+
+"pan_tilt_calibration_descr" = "הכיול לוקח בערך 15-25 שניות. נא לא לסובב את המצלמה באופן ידני במהלך התהליך.";
+
+"calibrate_in_progress" = "מכייל";
+
+"calibrate_success" = "הכיול נעשה!";
+
+"calibrating_now_try_later" = "כיול פניה-הטיה מתבצע, אנא נסה מאוחר יותר.";
+
+"vip_recommend_page_title" = "קבל %@ חודש אחד בחינם.";
+
+"vip_cloud_storage_title" = "אחסון בענן ל-30 יום";
+
+"vip_cloud_storage_descr" = "גישה ליותר הקלטות קודמות מכל מקום ובכל זמן.";
+
+"vip_video_length_title" = "אורך הקלטה ארוך יותר";
+
+"vip_video_length_descr" = "הקלט עד שלוש דקות כדי ללכוד את הסיפור המלא.";
+
+"vip_smart_push_title" = "דחיפה חכמה";
+
+"vip_smart_push_descr" = "קבל התראות רק בעת הצורך. זיהוי אדם, חבילה, בעלי חיים וכלי רכב.";
+
+"vip_activity_zone_title" = "אבטחה מותאמת אישית";
+
+"vip_activity_zone_descr" = "התאם אישית אזורים כדי לקבל התראות החשובות ביותר.";
+
+"free_trial_all_cams_descr" = "החודש הראשון בחינם, ולאחר מכן %@/month/כל המצלמות, בטל בכל עת.";
+
+"free_trial_4_cams_descr" = "חודש ראשון חינם, ואז %@/month/4 מצלמות, בטל בכל עת.";
+
+"free_trial_try_btn" = "נסה בחינם";
+
+"free_trial_skip_btn" = "לא תודה";
+
+"free_trial_fail_alert_title" = "ניסיון חינם נכשל";
+
+"free_trial_fail_alert_descr" = "נראה שהייתה בעיה להתחיל את תקופת הניסיון בחינם. בבקשה נסה שוב.";
+
+"plan_activated_alert_title" = "התוכנית מופעלת!";
+
+"plan_activated_alert_descr" = "אתה יכול לנהל את התוכנית שלך בדף פרופיל המשתמש.";
+
+"payment_fail_alert_title" = "התשלום נכשל";
+
+"payment_fail_alert_descr" = "נראה שהייתה בעיה בתשלום שלך. בבקשה נסה שוב.";
+
+"plan" = "לְתַכְנֵן";
+
+"free_trial_btn_long" = "התחל ניסיון חינם של חודש אחד";
+
+"privacy_and_terms" = "%@ ו-%@";
+
+"monkey_awareness" = "Monkey Vision מודעות";
+
+"plan_monkey_single" = "מכשיר בודד";
+
+"plan_monkey_two" = "שני מכשירים";
+
+"plan_monkey_unlimited" = "מכשיר ללא הגבלה";
+
+"close_btn" = "סגירת מעגל";
+
+"awareness_table_2_device" = "2";
+
+"vip_subscribe_now" = "הירשם עכשיו";
+
+"notification_general" = "הוֹדָעָה";
+
+"get_free" = "לקבל בחינם";
+
+"get_awareness_first_bt" = "קבל קודם שירות מודעות";
+
+"night_vision_off_descr" = "כאשר מופעל, ה-%@ נכנס אוטומטית למצב ראיית לילה בתנאי תאורה חלשה, ומספק סרטונים ברורים גם בחושך.";
+
+"night_vision_on_descr" = "ה-%@ ישתמש באור אינפרא אדום כדי לשפר את איכות התמונה בחושך ולהפיק וידאו בשחור לבן.";
+
+"night_vision_white_black_title" = "מצב שחור לבן";
+
+"night_vision_white_black_descr" = "על ידי שימוש באור אינפרא אדום, המצלמה מסוגלת לשפר את איכות התמונה, וכתוצאה מכך וידאו ברור בשחור לבן.";
+
+"night_vision_color_title" = "מצב צבע";
+
+"night_vision_color_descr" = "באמצעות אור לבן, המצלמה מצלמת צילומים צבעוניים עם פרטים נוספים. שימו לב שהאור הלבן יהיה דולק כאשר מזוהה תנועה.";
+
+"starlight_sensor_title" = "חיישן אור כוכבים";
+
+"startlight_sensor_descr" = "צלם תמונות צבעוניות, חדות וברורות כמעט בכל מצב עם חיישן אור הכוכבים, שיכול אפילו להפיק תוצאות מדהימות בסביבה האפלולית ביותר.";
+
+"starlight_sensor_descr" = "צלם תמונות צבעוניות, חדות וברורות כמעט בכל מצב עם חיישן אור הכוכבים, שיכול אפילו להפיק תוצאות מדהימות בסביבה האפלולית ביותר.";
+
+"switch_language" = "החלף שפה";
+
+"switch_language_descr" = "שנה את שפת האפליקציה ל-%@";
+
+"voiceLanguage_options_cn" = "汉语(סינית)";
+
+"voiceLanguage_options_en" = "English(אנגלית)";
+
+"voiceLanguage_options_es" = "Español(ספרדית)";
+
+"voiceLanguage_options_fr" = "Français(צרפתית)";
+
+"voiceLanguage_options_de" = "Deutsche(גרמנית)";
+
+"voiceLanguage_options_it" = "Italiano(איטלקית)";
+
+"voiceLanguage_options_ja" = "日本語(יפנית)";
+
+"voiceLanguage_options_ru" = "Pусский(רוסית)";
+
+"alarmDuration_options_5s" = "5 שניות";
+
+"alarmDuration_options_10s" = "10 שניות";
+
+"alarmDuration_options_15s" = "15 שניות";
+
+"nightVisionMode_options_infrared" = "מצב אינפרה אדום";
+
+"nightVisionMode_options_white" = "מצב אור לבן";
+
+"nightVisionSensitivity_options_high" = "גבוה";
+
+"nightVisionSensitivity_options_mid" = "בינוני";
+
+"nightVisionSensitivity_options_low" = "חלשה";
+
+"alarm_setting" = "הגדרות אזעקה";
+
+"magicpix_turn_on_confirm" = "MagicPix יכול לשפר את איכות התמונה בתנאי תאורה חלשה, אך הוא עשוי גם להגביר את צריכת הסוללה או לגרום להתחממות יתר. האם אתה מעוניין להמשיך?";
+
+"upgrade_now_btn" = "שדרוג";
+
+"detection_preference" = "העדפת זיהוי";
+
+"detection_preference_subtext" = "ברירת המחדל של %@ מתחילה להקליט כאשר המסך משתנה. לאחר בחירת העדפה, %@ יתחיל להקליט רק לאחר זיהוי התנועה שצוינה.";
+
+"pirAi_options_detectPersonAi" = "דמוי אדם בלבד";
+
+"pirAi_options_detectPersonAi_pop" = "כאשר מופעל, %@ יקליט וידאו רק כאשר מזוהה תנועה בצורת אדם, כך שאתה עלול לפספס מידע תנועה אחר.";
+
+"auto_sleep_subtext" = "לאחר ש-%@ ישנה, הוא יפסיק להקליט, להזעיק ולשלוח הודעות";
+
+"doorBellRing_options_1" = "1 רינגטון";
+
+"doorBellRing_options_2" = "רינגטון 2";
+
+"doorBellRing_options_3" = "רינגטון 3";
+
+"live_failure_auto_guidance" = "טוען לאט? נסה רזולוציה אוטומטית";
+
+"live_failure_auto_try_btn" = "נסה עכשיו";
+
+"live_failure_auto_thanks" = "לא תודה";
+
+"live_resolution_auto_title" = "רזולוציה אוטומטית";
+
+"live_resolution_auto_descr" = "בהתאם למהירות הרשת הנוכחית שלך, המערכת שלנו מתאימה אוטומטית את איכות הווידאו לחוויית סטרימינג בשידור חי חלקה ללא הפרעות. שים לב שעלולה להתרחש ירידה באיכות הווידאו אם חיבור הרשת חלש.";
+
+"switch_to_auto_reminder" = "הַשׁהָיָה? נסה רזולוציה אוטומטית.";
+
+"switch_to_auto_now" = "החלף עכשיו";
+
+"network_speed_slow" = "אינטרנט איטי";
+
+"network_speed_fast" = "אינטרנט מהיר";
+
+"bind_ap_alert_join_ios" = "לְהִצְטַרֵף";
+
+"bind_ap_alert_title_android" = "להתחבר למכשיר?";
+
+"bind_ap_alert_descr_ios" = "%@ רוצה להצטרף לרשת WLAN “%@\"?";
+
+"bind_ap_alert_descr_android" = "%@ ישתמש ברשת Wi-Fi זמנית כדי להתחבר למכשיר.";
+
+"bind_ap_alert_connect" = "לְחַבֵּר";
+
+"bind_connect_ap_page_title" = "כאשר תתבקש, התחבר לרשת ה-Wi-Fi.";
+
+"bind_connect_ap_page_descr" = "המצלמה שלך יוצרת רשת זמנית, המאפשרת לטלפון שלך להתחבר ישירות לתהליך הגדרה ללא מאמץ.";
+
+"location_perm_purpose_search_device" = "אפשר הרשאות בהגדרות המערכת כדי לגלות ולהתחבר למכשירים קרובים";
+
+"enable_nearby_devices_perm" = "אפשר הרשאת מכשירים קרובים";
+
+"nearby_perm_purpose_search_device" = "אפשר הרשאות בהגדרות המערכת כדי לגלות ולהתחבר למכשירים קרובים";
+
+"nearby_devices_perm" = "מכשירים בקרבת מקום";
+
+"sd_card_emtpy" = "לא נמצאו הקלטות";
+
+"andriod_storage_perm_recording" = "כדי לשמור סרטונים, אנא הענק את ההרשאה בהגדרות האפליקציה.";
+
+"library_cloud" = "ענן";
+
+"library_sdcard" = "כרטיס זיכרון";
+
+"library_sdcard_select_device" = "תבחר מכשיר";
+
+"library_sdcard_wake_device" = "אתה צריך להתעורר %@ כדי לצפות בסרטון כרטיס SD, שעשוי לצרוך סוללה";
+
+"library_sdcard_select_device_bt" = "אנא בחר מכשיר";
+
+"library_sdcard_no_device" = "אין מכשיר";
+
+"recording_setting" = "הגדרת הקלטה";
+
+"shooting_interval_sd" = "קירור כרטיס SD";
+
+"interval_time_sd" = "הגדר זמן קירור לכרטיס SD";
+
+"sdCardVideoModes" = "מצב הקלטה";
+
+"sdCardVideoModes_options_eventual" = "הקלט רק כאשר מזוהה תנועה";
+
+"sdCardVideoModes_options_continual" = "שיא מתמשך";
+
+"sdCardVideoModes_options_onChargeContinual" = "חבר הקלטה רציפה";
+
+"sdCardVideoTime_options_10s" = "10 שניות";
+
+"sdCardVideoTime_options_30s" = "30 שניות";
+
+"sdCardVideoTime_options_60s" = "דקה 1";
+
+"sdCardVideoTime_options_180s" = "3 דקות";
+
+"sdCardVideoTime_options_300s" = "5 דקות";
+
+"sdCardCooldownSeconds_options_10s" = "10 שניות";
+
+"sdCardCooldownSeconds_options_30s" = "30 שניות";
+
+"sdCardCooldownSeconds_options_60s" = "דקה 1";
+
+"sdCardCooldownSeconds_options_180s" = "3 דקות";
+
+"sdCardCooldownSeconds_options_300s" = "5 דקות";
+
+"vip_feature_cloud_storage" = "היסטוריה מתגלגלת";
+
+"vip_feature_motion_detection" = "הקלטת תנועה";
+
+"vip_feature_motion_alerts" = "התראות תנועה";
+
+"vip_feature_smart_push" = "Smart push";
+
+"vip_feature_activity_zone" = "אזור פעילות";
+
+"vip_feature_person_detection" = "זיהוי אדם";
+
+"vip_feature_pet_detection" = "זיהוי חיות מחמד";
+
+"vip_feature_package_detection" = "זיהוי חבילות";
+
+"vip_feature_vehicle_detection" = "זיהוי רכב";
+
+"vip_feature_cooldown_time" = "זיהוי השהייה אפס";
+
+"vip_feature_record_length" = "הקלטת תנועה";
+
+"vip_feature_device_quantity" = "מספר מכשירים";
+
+"vip_feature_device_quantity_unlimited" = "ללא הגבלה";
+
+"vip_compare_page_title" = "אתה בטוח שאתה רוצה לעזוב?";
+
+"vip_compare_continue_free_btn" = "המשך עם תוכנית חינם";
+
+"vip_compare_try_btn" = "נסה %@ בחינם";
+
+"vip_profile_non_vip_card_title" = "להפיק את המרב מהמצלמה שלך!";
+
+"vip_profile_non_vip_card_descr" = "פתח את הנעילה של זיהוי AI מתקדם, דחיפה חכמה, אזור פעילות, אחסון ענן גדול יותר ועוד!";
+
+"vip_compare_feature_title" = "פונקציות";
+
+"vip_feature_cloud_storage_day_count" = "עד%@ ימים";
+
+"vip_feature_recording_length_20s" = "עד 20 שניות";
+
+"vip_feature_record_length_3min" = "עד 3 דקות";
+
+"vip_compare_free_title" = "חינם";
+
+"vip_feature_not_supported" = "לא ישים";
+
+"error_load_data_failed" = "נתקלנו בבעיה בטעינת הנתונים.";
+
+"upgrade_for_free" = "נסה בחינם";
+
+"switch_resolution_failed" = "החלפת הרזולוציה נכשלה. נסה שוב.";
+
+"live_failure_resolution_guidance" = "הַשׁהָיָה? נסה את הרזולוציה %@.";
+
+"vip_feature_record_length_20s" = "עד 20 שניות";
+
