@@ -16,10 +16,10 @@ Pod::Spec.new do |s|
                         smart device core SDK
                        DESC
 
-  s.homepage         = 'https://bitbucket-internal.addx.live/projects/SWCLIEN/repos/smartdevicecoresdk-ios/browse'
+  s.homepage         = 'https://github.com/SmartIotDeviceSDK/SmartDeviceCoreSDK-iOS'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'meihuafeng' => 'hmei@a4x.io' }
-  s.source           = { :git => 'ssh://git@bitbucket-internal.addx.live:7999/swclien/smartdevicecoresdk-ios.git', :tag => s.version.to_s }
+  s.author           = { 'mhf' => 'freelancer.mhf@gmail.com' }
+  s.source           = { :git => 'git@github.com:SmartIotDeviceSDK/SmartDeviceCoreSDK-iOS.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '11.0'
   s.swift_version = '5.1'
