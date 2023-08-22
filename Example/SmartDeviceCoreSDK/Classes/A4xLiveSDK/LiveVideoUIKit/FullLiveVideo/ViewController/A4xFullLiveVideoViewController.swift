@@ -90,23 +90,6 @@ open class A4xFullLiveVideoViewController: A4xBaseViewController {
         return temp
     }()
     
-    /**缩放事件*/
-    @objc func viewPinch(sender: UIPinchGestureRecognizer) {
-        let _width = 640.0
-        let _height = 320.0
-        if sender.scale < 0.7 || sender.scale > 1.2 {
-            return
-        }
-        let scale = sender.scale < 0.5 ? 0.5 : sender.scale
-    }
-    
-    /**平移事件*/
-    @objc func viewPan(sender: UIPanGestureRecognizer) {
-        let point = sender.translation(in: self.view)
-        sender.view?.center = CGPoint(x: sender.view!.center.x + point.x, y: sender.view!.center.y + point.y)
-        sender.setTranslation(.zero, in: self.view)
-    }
-    
     override public func viewWillAppear(_ animated: Bool) {
         
         
@@ -257,32 +240,7 @@ extension A4xFullLiveVideoViewController: ILiveStateListener {
         case 1:
             message = A4xBaseManager.shared.getLocalString(key: "network_low")
             break
-        case 2:
-            message = A4xBaseManager.shared.getLocalString(key: "live_viewers_limit")
-            break
-        case 3:
-            A4xBaseAuthorizationViewModel.single.showRequestAlert(type: A4xBaseAuthorizationType.localNet) { [weak self](f) in
-                if !f {
-                } else {
-                    self?.mLivePlayer?.sendLiveMessage(customParam: ["isLocalNetLimit": true])
-                }
-            }
-            break
-        case -1:
-            message = A4xBaseManager.shared.getLocalString(key: "sd_card_not_exist")
-            break
-        case -2:
-            let message = A4xBaseManager.shared.getLocalString(key: "sdcard_has_no_video")
-            break
-        case -3:
-            let message = A4xBaseManager.shared.getLocalString(key: "sdcard_need_format")
-            break
-        case -4:
-            let message = A4xBaseManager.shared.getLocalString(key: "SDcard_video_viewers_limit")
-            break
-        case -5:
-            message = A4xBaseManager.shared.getLocalString(key: "other_error_with_code")
-            break
+        
         default:
             break
         }

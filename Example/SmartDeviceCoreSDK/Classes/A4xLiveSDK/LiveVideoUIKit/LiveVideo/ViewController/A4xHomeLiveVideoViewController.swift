@@ -476,14 +476,9 @@ extension A4xHomeLiveVideoViewController: A4xHomeVideoCellContentProtocol, UICol
             reloadCellTypes()
         }
         
-        guard rowIndex < cellTypes.count  else {
+        if rowIndex > cellTypes.count || rowIndex < 0 {
             return
         }
-        
-        guard rowIndex < 0 else {
-            return
-        }
-        
         cellTypes[rowIndex] = type
     }
     
