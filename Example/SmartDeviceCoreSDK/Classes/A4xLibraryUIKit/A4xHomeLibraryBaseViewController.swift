@@ -7,6 +7,8 @@ import SmartDeviceCoreSDK
 import JXSegmentedView
 import BaseUI
 import YYWebImage
+import A4xDeviceSettingInterface
+import Resolver
 
 public class A4xHomeLibraryBaseViewController: A4xHomeBaseViewController {
     
@@ -145,7 +147,7 @@ public class A4xHomeLibraryBaseViewController: A4xHomeBaseViewController {
     deinit {
  
         NotificationCenter.default.removeObserver(self)
-        A4xLog("-----> A4xHomeLibraryBaseViewController deinit")
+        logDebug("-----> A4xHomeLibraryBaseViewController deinit")
     }
     
     private func initLanguageChangeNotification() {
@@ -157,7 +159,7 @@ public class A4xHomeLibraryBaseViewController: A4xHomeBaseViewController {
     }
     
     public override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        A4xLog("gestureRecognizerShouldBegin")
+        logDebug("gestureRecognizerShouldBegin")
         switch self.calenday.scope {
         case .month:
             let velocity = self.scopeGesture.velocity(in: self.view)
@@ -215,7 +217,7 @@ public class A4xHomeLibraryBaseViewController: A4xHomeBaseViewController {
                 if FSCalendarScope.init(rawValue: UInt(newValue)) == .week && self.topView.showCalenday == true {
                     self.topView.showCalenday = false
                 }
-                A4xLog("------------observeValue------------------")
+                logDebug("------------observeValue------------------")
             }
         }
     }
@@ -311,6 +313,7 @@ public class A4xHomeLibraryBaseViewController: A4xHomeBaseViewController {
                 })
             } else {
                 self?.topView.segmentedView.selectItemAt(index: 0)
+                Resolver.deviceSettingImpl.pushSDVideoHistoryViewController(deviceModel: deviceModel, navigationController: self?.navigationController)
             }
             
         }
@@ -538,7 +541,7 @@ extension A4xHomeLibraryBaseViewController: FSCalendarDelegate, FSCalendarDataSo
     
     
     public func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        A4xLog("calendar didSelect data: \(date)")
+        logDebug("calendar didSelect data: \(date)")
         if monthPosition == .next || monthPosition == .previous {
             calendar.setCurrentPage(date, animated: true)
         }
@@ -546,7 +549,7 @@ extension A4xHomeLibraryBaseViewController: FSCalendarDelegate, FSCalendarDataSo
     }
     
     public func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
-        A4xLog("calendar boundingRectWillChange bounds.height: \(bounds.height)")
+        logDebug("calendar boundingRectWillChange bounds.height: \(bounds.height)")
         self.calenday.snp.updateConstraints { (make) in
             make.height.equalTo(bounds.height)
         }
@@ -604,7 +607,7 @@ extension A4xHomeLibraryBaseViewController: UITableViewDelegate, UITableViewData
         
         weak var weakSelf = self
         self.tableView.mj_header = A4xMJRefreshHeader {
-            A4xLog("-----------> A4xMJRefreshHeader")
+            logDebug("-----------> A4xMJRefreshHeader")
             A4xVideoLibraryFilterModel.get(block: { (model) in
                 
                 weakSelf?.filterTagModel = model
@@ -803,7 +806,7 @@ extension A4xHomeLibraryBaseViewController {
     
     
     func presentMediaPlay(index: Int, dataEventSource: [RecordEventBean]) {
-        A4xLog("-----------> presentMediaPlay index: \(index)")
+        logDebug("-----------> presentMediaPlay index: \(index)")
         
         let vc = A4xLibraryDetailBaseViewController(index: index, dataEventSource: dataEventSource, isFromSDCard: isSDMode)
         vc.filterTagModel = self.filterTagModel
@@ -831,11 +834,11 @@ extension A4xHomeLibraryBaseViewController {
         }
         
         vc.onDissmisEventBlock = { model in
-            A4xLog("---------------> onDissmisEventBlock: \(model)")
+            logDebug("---------------> onDissmisEventBlock: \(model)")
         }
         
         vc.souceChangeEventBlock = { source in  
-            A4xLog("---------------> souceChangeEventBlock: \(source)")
+            logDebug("---------------> souceChangeEventBlock: \(source)")
             switch source {
             case let .updateEvent(modle):
                 let index = weakSelf?.souceAtEventIndex(source: modle!) ?? 0
@@ -900,12 +903,12 @@ extension A4xHomeLibraryBaseViewController {
     private func bottomUpdateSelect(type : A4xResourceBottomStyle) {
         switch type {
         case .delete:
-            A4xLog("delte")
+            logDebug("delte")
             deleteEventResource()
         case .share:
-            A4xLog("share")
+            logDebug("share")
         case .download:
-            A4xLog("download")
+            logDebug("download")
             downloadEvent()
         }
     }
@@ -961,7 +964,7 @@ extension A4xHomeLibraryBaseViewController {
                         let endTimestamp = self.isSDMode ? self.calenday.currentPage.dayBetween.1 : 0
                         self.libraryVM.getEventDetail(isFromSDCard: self.isSDMode, serialNumbers: serialNumbers, startTimestamp: startTimestamp, endTimestamp: endTimestamp, filter: self.filterTagModel, videoEventKey: source.videoEventKey ?? "0", result: { list, total, error in
                             if list != nil {
-                                A4xLog("-----------> sub list count: \(list?.count ?? 0)")
+                                logDebug("-----------> sub list count: \(list?.count ?? 0)")
                                 downloadSource += list!
                             }
                             group.leave()

@@ -210,22 +210,22 @@ public class A4xMJRefreshHeader: MJRefreshHeader {
         didSet {
             switch state {
             case .idle:
-                A4xLog("A4xMJRefreshHeader idle stop")
+                logDebug("A4xMJRefreshHeader idle stop")
                 self.arrowImageView.state = .stop
                 releaseAutoTimer()
             case .pulling:
                 self.arrowImageView.state = .default
-                A4xLog("A4xMJRefreshHeader pulling")
+                logDebug("A4xMJRefreshHeader pulling")
             case .refreshing:
                 self.arrowImageView.state = .loading
                 startTimeLoading()
-                A4xLog("A4xMJRefreshHeader refreshing")
+                logDebug("A4xMJRefreshHeader refreshing")
             case .willRefresh:
                 self.arrowImageView.state = .stop
                 releaseAutoTimer()
-                A4xLog("A4xMJRefreshHeader willRefresh")
+                logDebug("A4xMJRefreshHeader willRefresh")
             case .noMoreData:
-                A4xLog("A4xMJRefreshHeader noMoreData")
+                logDebug("A4xMJRefreshHeader noMoreData")
             }
         }
     }

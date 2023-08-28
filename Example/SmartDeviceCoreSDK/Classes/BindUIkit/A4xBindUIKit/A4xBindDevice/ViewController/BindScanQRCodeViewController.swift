@@ -80,8 +80,8 @@ class BindScanQRCodeViewController: BindBaseViewController {
                 }
                 wifiName = String(array?[0] ?? "no_wifi_name")
                 wifiPwd = String(array?[1] ?? "no_wifi_pwd")
-                A4xLog("---------> error back wifiname: \(wifiName ?? "")")
-                A4xLog("---------> error back wifiPwd: \(wifiPwd ?? "")")
+                logDebug("---------> error back wifiname: \(wifiName ?? "")")
+                logDebug("---------> error back wifiPwd: \(wifiPwd ?? "")")
             } else {
             }
         }
@@ -106,7 +106,7 @@ class BindScanQRCodeViewController: BindBaseViewController {
     }
     
     deinit {
-        A4xLog("BindScanQRCodeViewController deinit")
+        logDebug("BindScanQRCodeViewController deinit")
     }
     
     private func getBindQRCodeImg() {
@@ -217,7 +217,7 @@ class BindScanQRCodeViewController: BindBaseViewController {
 
 extension BindScanQRCodeViewController {
     override func onStepChange(code: Int) {
-        A4xLog("---------> onStepChange code: \(code)")
+        logDebug("---------> onStepChange code: \(code)")
         
         if code > 1 && code != 4 {
             
@@ -227,7 +227,7 @@ extension BindScanQRCodeViewController {
     }
     
     override func onGenarateQrCode(newQRCdoe: UIImage?, oldQRCode: UIImage?, wireQRCode: UIImage?) {
-        A4xLog("---------> onGenarateQrCode")
+        logDebug("---------> onGenarateQrCode")
         
         self.newQRCodeImg = newQRCdoe
         self.oldQRCodeImg = oldQRCode
@@ -249,7 +249,7 @@ extension BindScanQRCodeViewController {
     }
     
     override func onError(code: Int, msg: String?) {
-        A4xLog("---------> onError")
+        logDebug("---------> onError")
         self.bindScanQRCodeView?.qrCodeLoadingImgView.layer.removeAllAnimations()
         self.bindScanQRCodeView?.qrCodeLoadingImgView.isHidden = true
         self.bindScanQRCodeView?.qrCodeImgView.image = nil
@@ -260,7 +260,7 @@ extension BindScanQRCodeViewController {
 
 extension BindScanQRCodeViewController: BluetoothManagerProtocol {
     func onBleBindResult(resStr: String?, code: String?) {
-        A4xLog("---------> ble wait SN: \(resStr ?? "") code: \(code ?? "-1")")
+        logDebug("---------> ble wait SN: \(resStr ?? "") code: \(code ?? "-1")")
     }
 }
 

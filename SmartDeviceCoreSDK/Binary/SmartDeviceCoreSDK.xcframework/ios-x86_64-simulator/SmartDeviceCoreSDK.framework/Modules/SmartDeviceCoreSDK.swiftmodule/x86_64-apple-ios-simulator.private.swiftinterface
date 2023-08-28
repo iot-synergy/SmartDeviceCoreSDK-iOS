@@ -4,7 +4,6 @@
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import SystemConfiguration.CaptiveNetwork
-import CloudKit
 import CommonCrypto
 import CoreBluetooth
 import CoreLocation
@@ -14,7 +13,6 @@ import MobileCoreServices
 import Network
 import NetworkExtension
 import Photos
-import SQLite3
 @_exported import SmartDeviceCoreSDK
 import Swift
 import SystemConfiguration
@@ -296,6 +294,7 @@ public enum A4xAccountErrorType : Swift.Int {
   case noLogin
   case loginExpired
   case otherLogin
+  case tokenMissing
   case deviceRemove
   public func message() -> Swift.String?
   public init?(rawValue: Swift.Int)
@@ -501,18 +500,14 @@ public struct AppEvnetAPIModel : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc open class A4xAppGroupIdManager : ObjectiveC.NSObject {
+@_inheritsConvenienceInitializers @objc open class A4xAppGroupIdManager : ObjectiveC.NSObject {
   @objc public static let shared: SmartDeviceCoreSDK.A4xAppGroupIdManager
-  @objc override dynamic open func copy() -> Any
-  @objc override dynamic open func mutableCopy() -> Any
   @objc public func updatePushBadge(badge: Swift.Int)
   @objc public func loadPushBadge() -> Swift.Int
   @objc public func insert_event(msg: Swift.String)
   @objc public func getPushEventInfo() -> Swift.String
   @objc public func setUserToken(token: Swift.String)
   @objc public func loadUserToken() -> Swift.String
-  @objc public func setUserEnv(env: Swift.String)
-  @objc public func loadNetEnv() -> Swift.String
   @objc public func setBaseURL(url: Swift.String)
   @objc public func getBaseURL() -> Swift.String
   @objc public func setTenantId(value: Swift.String)
@@ -533,6 +528,8 @@ public struct AppEvnetAPIModel : Swift.Codable {
   @objc public func getNode() -> Swift.String
   @objc public func setMagicPixAbility(value: Swift.String)
   @objc public func getMagicPixAbility() -> Swift.String
+  public func setNetworkConfig()
+  @objc override dynamic public init()
   @objc deinit
 }
 public enum A4xAppRemoveAPI : Swift.String {
@@ -597,46 +594,12 @@ public struct A4xActivityZonePointsResponse : Swift.Codable {
   @objc public static func pointsToVertices(points: [CoreFoundation.CGPoint]) -> Swift.String
   @objc deinit
 }
-public enum A4xBaseAddressRequestStateEnum : Swift.Int {
-  case Fail
-  case Getting
-  case Scuess
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum A4xBaseAddressDermissStateEnum : Swift.Int {
-  case Disable
-  case Denied
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public protocol A4xBaseAddressViewModelDelegate : AnyObject {
-  func getLocation(state: SmartDeviceCoreSDK.A4xBaseAddressRequestStateEnum, model: SmartDeviceCoreSDK.A4xDeviceLocationModel?)
-  func getPermissError(error: SmartDeviceCoreSDK.A4xBaseAddressDermissStateEnum)
-}
-@objc @_inheritsConvenienceInitializers public class A4xBaseAddressViewModel : ObjectiveC.NSObject, CoreLocation.CLLocationManagerDelegate {
-  public var localManager: CoreLocation.CLLocationManager
-  public var isLocationing: Swift.Bool
+@objc @_inheritsConvenienceInitializers public class A4xBaseAddressViewModel : ObjectiveC.NSObject {
   public var addressModel: SmartDeviceCoreSDK.A4xDeviceLocationModel?
-  weak public var delegate: SmartDeviceCoreSDK.A4xBaseAddressViewModelDelegate?
-  public var geocoder: CoreLocation.CLGeocoder {
-    get
-    set
-  }
   @objc override dynamic public init()
   public func onMain(block: @escaping (() -> Swift.Void))
   public func deleteLocation(location: SmartDeviceCoreSDK.A4xDeviceLocationModel?, compleHandel: @escaping ((_ locationId: Swift.Int?, _ error: Swift.String?, _ holdDevices: [SmartDeviceCoreSDK.DeviceBean]?) -> Swift.Void))
   public func updateOrAddNewLocation(location: SmartDeviceCoreSDK.A4xDeviceLocationModel, compleHandel: @escaping ((_ locationId: Swift.Int?, _ error: Swift.String?) -> Swift.Void))
-  public func getLocation()
-  public func cancleRequest()
-  @objc public func locationManager(_ manager: CoreLocation.CLLocationManager, didUpdateLocations locations: [CoreLocation.CLLocation])
-  @objc public func locationManager(_ manager: CoreLocation.CLLocationManager, didChangeAuthorization status: CoreLocation.CLAuthorizationStatus)
   @objc deinit
 }
 public protocol A4xBaseAlertModelProtocol : Swift.Decodable, Swift.Encodable {
@@ -1878,70 +1841,8 @@ public struct A4xDeviceLocationModel : SmartDeviceCoreSDK.A4xDeviceLocationFilte
   public var addTime: Swift.Double?
   public init()
   public static func == (lhs: SmartDeviceCoreSDK.A4xDeviceLocationModel, rhs: SmartDeviceCoreSDK.A4xDeviceLocationModel) -> Swift.Bool
-  public func stateDB() -> Swift.String?
-  public func cityDB() -> Swift.String?
-  public func districtDB() -> Swift.String?
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
-}
-public enum A4xLocationDetailType : Swift.Int {
-  case country
-  case region
-  case city
-  case district
-  case street
-  case end
-  public var placeHoder: Swift.String {
-    get
-  }
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-public class A4xAddressInfoModel {
-  public var country: SmartDeviceCoreSDK.A4xLocationSQLModel? {
-    get
-    set
-  }
-  public var region: SmartDeviceCoreSDK.A4xLocationSQLModel? {
-    get
-    set
-  }
-  public var city: SmartDeviceCoreSDK.A4xLocationSQLModel? {
-    get
-    set
-  }
-  public var district: SmartDeviceCoreSDK.A4xLocationSQLModel? {
-    get
-    set
-  }
-  public var currentIndex: SmartDeviceCoreSDK.A4xLocationDetailType
-  public var currentDB: SmartDeviceCoreSDK.A4xLocationSQLModel?
-  public init()
-  public func selectDBModle(db: SmartDeviceCoreSDK.A4xLocationSQLModel) -> (results: [(Swift.String, [SmartDeviceCoreSDK.A4xLocationSQLModel])], hot: [SmartDeviceCoreSDK.A4xLocationSQLModel])
-  public func selectIndex(index: SmartDeviceCoreSDK.A4xLocationDetailType) -> (results: [(Swift.String, [SmartDeviceCoreSDK.A4xLocationSQLModel])], hot: [SmartDeviceCoreSDK.A4xLocationSQLModel])
-  public func parseAddressModle(addModle: inout SmartDeviceCoreSDK.A4xDeviceLocationModel) -> (results: [(Swift.String, [SmartDeviceCoreSDK.A4xLocationSQLModel])], hot: [SmartDeviceCoreSDK.A4xLocationSQLModel])
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class A4xLocationSQLModel : SmartDeviceCoreSDK.SQLTable {
-  @objc public var id: Swift.Int
-  @objc public var code: Swift.String?
-  @objc public func dbName() -> Swift.String?
-  @objc public func imageName() -> Swift.String?
-  @objc deinit
-}
-public enum A4xLocationSelectType {
-  case country(value: Swift.String?)
-  case region(value: Swift.String?)
-  case city(value: Swift.String?)
-  case district(value: Swift.String?)
-  case street(value: Swift.String?)
-  public var titleInfo: (title: Swift.String, isPlaceHoder: Swift.Bool) {
-    get
-  }
-  public static func allCase(of model: SmartDeviceCoreSDK.A4xAddressInfoModel) -> [SmartDeviceCoreSDK.A4xLocationSelectType]
 }
 public struct A4xDevicesCodeSelectionModel : Swift.Codable {
   public init(defaultCodec: Swift.String? = nil)
@@ -2907,8 +2808,6 @@ public struct A4xLibraryStatusResponse : Swift.Codable {
   @objc override dynamic public init()
   @objc deinit
 }
-public func A4xLog<T>(_ message: T, file: Swift.String = #file, funcName: Swift.String = #function, lineNum: Swift.Int = #line)
-public func LogTime() -> Swift.String
 public enum A4xNavError : Swift.Int {
   case unknown
   case email_format
@@ -2919,17 +2818,6 @@ public enum A4xNavError : Swift.Int {
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
-    get
-  }
-}
-public enum NetEnvironment : Swift.String {
-  case DEV
-  case TEST
-  case ONLINE
-  public func valueStr() -> Swift.String
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
     get
   }
 }
@@ -2968,9 +2856,7 @@ extension SmartDeviceCoreSDK.A4xNetTargetTypeProtocol {
   }
 }
 public protocol A4xNetBaseConfigProtocol {
-  func setEnvironment(env: SmartDeviceCoreSDK.NetEnvironment)
-  func getNetEnvironment() -> SmartDeviceCoreSDK.NetEnvironment
-  func setEnviURL(env: SmartDeviceCoreSDK.NetEnvironment, url: Swift.String)
+  func setEnviURL(url: Swift.String)
   func getURL() -> Swift.String
   func setLogEnable(enable: Swift.Bool)
   func getLogEnable() -> Swift.Bool
@@ -4610,6 +4496,9 @@ public struct AccessTokenPlugin : SmartDeviceCoreSDK.PluginType {
   public init(tokenClosure: @escaping () -> Swift.String)
   public func prepare(_ request: Foundation.URLRequest, target: SmartDeviceCoreSDK.TargetType) -> Foundation.URLRequest
 }
+@objc public protocol AccountChangeListener {
+  @objc func onAccountInfoError(status: Swift.Int)
+}
 public enum AFError : Swift.Error {
   public enum ParameterEncodingFailureReason {
     case missingURL
@@ -5960,9 +5849,7 @@ extension SmartDeviceCoreSDK.A4xNetManager : SmartDeviceCoreSDK.A4xNetBaseConfig
   public func getApiVersion() -> Swift.String
   public func setToken(token: Swift.String?)
   @objc dynamic public func getToken() -> Swift.String?
-  public func setEnvironment(env: SmartDeviceCoreSDK.NetEnvironment)
-  public func getNetEnvironment() -> SmartDeviceCoreSDK.NetEnvironment
-  public func setEnviURL(env: SmartDeviceCoreSDK.NetEnvironment, url: Swift.String)
+  public func setEnviURL(url: Swift.String)
   public func getURL() -> Swift.String
   public func setLogEnable(enable: Swift.Bool)
   public func getLogEnable() -> Swift.Bool
@@ -6154,6 +6041,8 @@ public typealias Image = SmartDeviceCoreSDK.ImageType
   @objc public func setLanguage(_ language: Swift.String) -> Self
   @objc public func setCountryNo(_ countryNo: Swift.String) -> Self
   @objc public func setIsDebug(_ isDebug: Swift.Bool) -> Self
+  @objc public func setLoggerDelegate(_ loggerDelegate: SmartDeviceCoreSDK.LoggerDelegate?) -> Self
+  @objc public func setAccountChangeListener(_ accountListener: SmartDeviceCoreSDK.AccountChangeListener?) -> Self
   @objc public func build() -> SmartDeviceCoreSDK.InitSDKConfig
   @objc override dynamic public init()
   @objc deinit
@@ -6164,6 +6053,8 @@ public typealias Image = SmartDeviceCoreSDK.ImageType
   @objc public var language: Swift.String?
   @objc public var countryNo: Swift.String?
   @objc public var isDebug: Swift.Bool
+  @objc public var loggerDelegate: SmartDeviceCoreSDK.LoggerDelegate?
+  @objc public var accountChangeListener: SmartDeviceCoreSDK.AccountChangeListener?
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class LibraryCore : ObjectiveC.NSObject {
@@ -6499,6 +6390,29 @@ extension SmartDeviceCoreSDK.LiveManagerInstance : SmartDeviceCoreSDK.LiveAllSta
   @objc dynamic public func onMagicPixProcessState(deviceId: Swift.String, status: Swift.Int)
   @objc dynamic public func onRecordState(deviceId: Swift.String, state: Swift.Int, videoPath: Swift.String)
   @objc dynamic public func onCurrentSdRecordTime(deviceId: Swift.String, time: Foundation.TimeInterval)
+}
+@objc public protocol LoggerDelegate : ObjectiveC.NSObjectProtocol {
+  @objc func error(_ tag: Swift.String, message: Swift.String)
+  @objc func warning(_ tag: Swift.String, message: Swift.String)
+  @objc func info(_ tag: Swift.String, message: Swift.String)
+  @objc func debug(_ tag: Swift.String, message: Swift.String)
+  @objc func verbose(_ tag: Swift.String, message: Swift.String)
+}
+public enum LogLevel : Swift.Int {
+  case off
+  case error
+  case warning
+  case info
+  case debug
+  case verbose
+  public var stringValue: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
 }
 public typealias Manager = SmartDeviceCoreSDK.SessionManager
 public typealias Method = SmartDeviceCoreSDK.HTTPMethod
@@ -7031,6 +6945,7 @@ extension ObjectiveC.NSObject {
   @objc public func otaStart(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onProgress: @escaping (_ code: Swift.Int) -> Swift.Void)
   public func startOTAUpdate(deviceID: Swift.String, resultBlock: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ progressModel: SmartDeviceCoreSDK.A4xDeviceUpdateProgressInfoModel?) -> Swift.Void)
   open func fetchOTAUpdateProgress(deviceID: Swift.String, resultBlock: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ data: SmartDeviceCoreSDK.A4xDeviceUpdateProgressInfoModel?) -> Swift.Void)
+  @objc public func getOtaStatus(serialNumber: Swift.String, onSuccess: @escaping (_ isComple: Swift.Bool) -> Swift.Void, onProgress: @escaping (_ code: Swift.Int, _ progress: Swift.Int) -> Swift.Void, onError: @escaping (_ code: Swift.Int) -> Swift.Void)
   @objc public func otaStop()
   @objc override dynamic public init()
   @objc deinit
@@ -7698,6 +7613,7 @@ open class SessionManager {
 }
 @_inheritsConvenienceInitializers @objc public class SmartDeviceCore : ObjectiveC.NSObject {
   @objc public class func getInstance() -> SmartDeviceCoreSDK.SmartDeviceCore
+  @objc public var isDebug: Swift.Bool
   @objc public func initSDK(config: SmartDeviceCoreSDK.InitSDKConfig, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   @objc public func login(token: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   @objc public func updateLanguage(language: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
@@ -7705,23 +7621,18 @@ open class SessionManager {
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(SQLiteBase) public class SQLiteBase : ObjectiveC.NSObject {
-  @objc deinit
-  @objc override dynamic public var description: Swift.String {
-    @objc get
-  }
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(SQLiteDB) public class SQLiteDB : SmartDeviceCoreSDK.SQLiteBase {
-  public static let shared: SmartDeviceCoreSDK.SQLiteDB
-  @objc override dynamic public var description: Swift.String {
-    @objc get
-  }
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class SQLTable : ObjectiveC.NSObject {
-  @objc public var isDeleted: Swift.Bool
-  @objc public var created: Foundation.Date
-  @objc public var modified: Foundation.Date
+public func logError(_ message: Swift.String, file: Swift.String = #file, line: Swift.Int = #line, function: Swift.String = #function)
+public func logWarning(_ message: Swift.String, file: Swift.String = #file, line: Swift.Int = #line, function: Swift.String = #function)
+public func logInfo(_ message: Swift.String, file: Swift.String = #file, line: Swift.Int = #line, function: Swift.String = #function)
+public func logDebug(_ message: Swift.String, file: Swift.String = #file, line: Swift.Int = #line, function: Swift.String = #function)
+public func logVerbose(_ message: Swift.String, file: Swift.String = #file, line: Swift.Int = #line, function: Swift.String = #function)
+@objc @_inheritsConvenienceInitializers @objcMembers public class SmartDeviceLogger : ObjectiveC.NSObject {
+  @objc public class func warning(_ tag: Swift.String, message: Swift.String)
+  @objc public class func info(_ tag: Swift.String, message: Swift.String)
+  @objc public class func error(_ tag: Swift.String, message: Swift.String)
+  @objc public class func debug(_ tag: Swift.String, message: Swift.String)
+  @objc public class func verbose(_ tag: Swift.String, message: Swift.String)
+  @objc override dynamic public init()
   @objc deinit
 }
 public protocol TargetType {
@@ -8007,12 +7918,6 @@ extension SmartDeviceCoreSDK.A4xAppEventAPI : Swift.RawRepresentable {}
 extension SmartDeviceCoreSDK.A4xAppRemoveAPI : Swift.Equatable {}
 extension SmartDeviceCoreSDK.A4xAppRemoveAPI : Swift.Hashable {}
 extension SmartDeviceCoreSDK.A4xAppRemoveAPI : Swift.RawRepresentable {}
-extension SmartDeviceCoreSDK.A4xBaseAddressRequestStateEnum : Swift.Equatable {}
-extension SmartDeviceCoreSDK.A4xBaseAddressRequestStateEnum : Swift.Hashable {}
-extension SmartDeviceCoreSDK.A4xBaseAddressRequestStateEnum : Swift.RawRepresentable {}
-extension SmartDeviceCoreSDK.A4xBaseAddressDermissStateEnum : Swift.Equatable {}
-extension SmartDeviceCoreSDK.A4xBaseAddressDermissStateEnum : Swift.Hashable {}
-extension SmartDeviceCoreSDK.A4xBaseAddressDermissStateEnum : Swift.RawRepresentable {}
 extension SmartDeviceCoreSDK.A4xBaseAppLanguageType : Swift.Equatable {}
 extension SmartDeviceCoreSDK.A4xBaseAppLanguageType : Swift.Hashable {}
 extension SmartDeviceCoreSDK.A4xBaseAppLanguageType : Swift.RawRepresentable {}
@@ -8058,9 +7963,6 @@ extension SmartDeviceCoreSDK.A4xDeviceLanguageEnum : Swift.RawRepresentable {}
 extension SmartDeviceCoreSDK.A4xDeviceLocationAPI : Swift.Equatable {}
 extension SmartDeviceCoreSDK.A4xDeviceLocationAPI : Swift.Hashable {}
 extension SmartDeviceCoreSDK.A4xDeviceLocationAPI : Swift.RawRepresentable {}
-extension SmartDeviceCoreSDK.A4xLocationDetailType : Swift.Equatable {}
-extension SmartDeviceCoreSDK.A4xLocationDetailType : Swift.Hashable {}
-extension SmartDeviceCoreSDK.A4xLocationDetailType : Swift.RawRepresentable {}
 extension SmartDeviceCoreSDK.A4xDevicesCodeSelectionEnum : Swift.Equatable {}
 extension SmartDeviceCoreSDK.A4xDevicesCodeSelectionEnum : Swift.Hashable {}
 extension SmartDeviceCoreSDK.A4xDevicesCodeSelectionEnum : Swift.RawRepresentable {}
@@ -8094,9 +7996,6 @@ extension SmartDeviceCoreSDK.RecordEventBean.CodingKeys : Swift.RawRepresentable
 extension SmartDeviceCoreSDK.A4xNavError : Swift.Equatable {}
 extension SmartDeviceCoreSDK.A4xNavError : Swift.Hashable {}
 extension SmartDeviceCoreSDK.A4xNavError : Swift.RawRepresentable {}
-extension SmartDeviceCoreSDK.NetEnvironment : Swift.Equatable {}
-extension SmartDeviceCoreSDK.NetEnvironment : Swift.Hashable {}
-extension SmartDeviceCoreSDK.NetEnvironment : Swift.RawRepresentable {}
 extension SmartDeviceCoreSDK.A4xNetLanguage : Swift.Equatable {}
 extension SmartDeviceCoreSDK.A4xNetLanguage : Swift.Hashable {}
 extension SmartDeviceCoreSDK.A4xNetLanguage : Swift.RawRepresentable {}
@@ -8234,6 +8133,9 @@ extension SmartDeviceCoreSDK.A4xPlayerStopReason : Swift.Hashable {}
 extension SmartDeviceCoreSDK.A4xPlayerStopReason : Swift.RawRepresentable {}
 extension SmartDeviceCoreSDK.A4xPlayerDisplayType : Swift.Equatable {}
 extension SmartDeviceCoreSDK.A4xPlayerDisplayType : Swift.Hashable {}
+extension SmartDeviceCoreSDK.LogLevel : Swift.Equatable {}
+extension SmartDeviceCoreSDK.LogLevel : Swift.Hashable {}
+extension SmartDeviceCoreSDK.LogLevel : Swift.RawRepresentable {}
 extension SmartDeviceCoreSDK.HTTPMethod : Swift.Equatable {}
 extension SmartDeviceCoreSDK.HTTPMethod : Swift.Hashable {}
 extension SmartDeviceCoreSDK.HTTPMethod : Swift.RawRepresentable {}

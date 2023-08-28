@@ -29,7 +29,7 @@ class A4xAddPresetLocationAlert : UIView  , A4xBaseAlertViewProtocol {
         self.config = A4xBaseAlertConfig()
         self.config.outBoundsHidden = false
         self.config.type = .alert(A4xBaseAlertAnimailType.scale)
-        self.identifier = "A4xLocationSelectView"
+        self.identifier = "A4xAddPresetLocationAlert"
         awidth = 300.auto()
         super.init(frame: frame)
         self.setUpView()

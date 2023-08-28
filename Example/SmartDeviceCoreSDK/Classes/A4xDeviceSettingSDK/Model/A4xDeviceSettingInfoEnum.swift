@@ -94,6 +94,13 @@ public enum A4xDeviceSettingInfoEnum {
         let videoSettingDesString = ""
         boxSetDesArr = [motionDesStr, notifiDesStr, alarmSettingDesString, videoSettingDesString]
         
+        // sd卡录像新增
+        if deviceModel?.sdCard != nil {
+            if deviceModel?.sdCard?.formatStatus != 1 {
+                boxSubSetting.append(.backvideo)
+                boxSetDesArr.append("")
+            }
+        }
         
         boxSetting.append(.boxArr((boxSubSetting, boxSetDesArr)))
         allSetting.append(boxSetting)
@@ -124,7 +131,8 @@ public enum A4xDeviceSettingInfoEnum {
 
 public enum A4xDeviceSettingSubInfoEnum {
     case motion 
-    case notifi 
+    case notifi
+    case backvideo // sd video
     case alarmSetting 
     
     case videoSetting 
@@ -136,6 +144,8 @@ public enum A4xDeviceSettingSubInfoEnum {
             return A4xBaseManager.shared.getLocalString(key: "motion_detection")
         case .notifi:
             return A4xBaseManager.shared.getLocalString(key: "notification_setting")
+        case .backvideo:
+            return A4xBaseManager.shared.getLocalString(key: "sdcard_7_24")
         case .alarmSetting:
             return A4xBaseManager.shared.getLocalString(key: "alarm_setting")
         case .videoSetting:
@@ -149,6 +159,8 @@ public enum A4xDeviceSettingSubInfoEnum {
             return A4xDeviceSettingResource.UIImage(named: "device_set_motion_detection")?.rtlImage()
         case .notifi:
             return A4xDeviceSettingResource.UIImage(named: "device_set_push")?.rtlImage()
+        case .backvideo:
+            return A4xDeviceSettingResource.UIImage(named: "device_set_sd_video")?.rtlImage()
         case .alarmSetting:
             return A4xDeviceSettingResource.UIImage(named: "device_set_alarm")?.rtlImage()
         case .videoSetting:

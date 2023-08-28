@@ -28,20 +28,20 @@ public class A4xAppSettingManager {
                 //setInterfaceOrientation(orientation: .portrait)
                 UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue,forKey: "orientation")
                 UIViewController.attemptRotationToDeviceOrientation()
-                A4xLog("interfaceOrientations portrait")
+                logDebug("interfaceOrientations portrait")
                 A4xAppSettingManager.shared.delegate?.changeOrientation(orientation: .portrait)
             } else if !(interfaceOrientations.contains(.portrait) ) {
                 if interfaceOrientations.contains(.landscapeRight) {
                     //setInterfaceOrientation(orientation: .landscapeRight)
                     UIDevice.current.setValue(UIInterfaceOrientation.landscapeRight.rawValue,forKey: "orientation")
                     UIViewController.attemptRotationToDeviceOrientation()
-                    A4xLog("interfaceOrientations landscapeRight")
+                    logDebug("interfaceOrientations landscapeRight")
                     A4xAppSettingManager.shared.delegate?.changeOrientation(orientation: .landscapeRight)
                 } else if interfaceOrientations.contains(.landscapeLeft) {
                     //setInterfaceOrientation(orientation: .landscapeLeft)
                     UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue,forKey: "orientation")
                     UIViewController.attemptRotationToDeviceOrientation()
-                    A4xLog("interfaceOrientations landscapeLeft")
+                    logDebug("interfaceOrientations landscapeLeft")
                     A4xAppSettingManager.shared.delegate?.changeOrientation(orientation: .landscapeLeft)
                 } else {
                    

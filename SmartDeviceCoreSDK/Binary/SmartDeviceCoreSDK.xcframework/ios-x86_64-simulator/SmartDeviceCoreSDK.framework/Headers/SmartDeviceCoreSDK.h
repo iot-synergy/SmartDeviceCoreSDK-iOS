@@ -8,5 +8,6 @@
 #ifndef SmartDeviceCoreSDK_h
 #define SmartDeviceCoreSDK_h
 
+#import "A4xObjcWebRtcPlayer.h"
 
 #endif /* SmartDeviceCoreSDK_h */

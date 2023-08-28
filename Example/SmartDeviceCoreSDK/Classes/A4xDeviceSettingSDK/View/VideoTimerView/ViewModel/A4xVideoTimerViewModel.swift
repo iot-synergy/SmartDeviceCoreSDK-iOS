@@ -101,7 +101,7 @@ class A4xVideoTimerViewModel {
         
         let checkLoadDatas = currentTime.checkLoadDate(maxTimeRange: Int64(maxTimeRange), loadHours: loadDataUnits.union(loadingUnits))
         
-        A4xLog("A4xVideoTimerViewModel loadData: \(checkLoadDatas)")
+        logDebug("A4xVideoTimerViewModel loadData: \(checkLoadDatas)")
         
         weak var weakSelf = self
         
@@ -111,7 +111,7 @@ class A4xVideoTimerViewModel {
                 return
             }
             
-            A4xLog("-----------> UTC(世界时间) fromDate: \(fromDate) toDate: \(toDate)")
+            logDebug("-----------> UTC(世界时间) fromDate: \(fromDate) toDate: \(toDate)")
             
             var datas: Set<Int> = Set(Date.dataToUnitTimes(fromDate: fromDate, toDate: toDate))
             

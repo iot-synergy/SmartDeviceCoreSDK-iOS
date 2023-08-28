@@ -12,25 +12,12 @@ import BaseUI
 
 enum A4xAddLocationEnum {
     case name
-    case location
-    case address
     case delete
     
     func string() -> (placeHoder : String? ,  title : String?) {
         switch self {
         case .name:
             return (A4xBaseManager.shared.getLocalString(key: "location_name") , A4xBaseManager.shared.getLocalString(key: "detail_location"))
-        case .address:
-            return (A4xBaseManager.shared.getLocalString(key: "detail_location") , A4xBaseManager.shared.getLocalString(key: "detail_location"))
-        case .location:
-            let district : String
-            if A4xBaseAppLanguageType.language() == .english {
-                district = ""
-            }else {
-                district = "\n\(A4xBaseManager.shared.getLocalString(key: "district_country"))"
-            }
-            
-            return ("\(A4xBaseManager.shared.getLocalString(key: "country"))\n\(A4xBaseManager.shared.getLocalString(key: "province_region"))\n\(A4xBaseManager.shared.getLocalString(key: "district_country"))\(district)" ,nil)//A4xBaseManager.shared.getLocalString(key: "location_address_des") , nil)
         case .delete:
             return (nil , A4xBaseManager.shared.getLocalString(key: "delete_this_location"))
         }
@@ -40,10 +27,6 @@ enum A4xAddLocationEnum {
         switch self {
         case .name:
             fallthrough
-        case .address:
-            return "baseIdentifier"
-        case .location:
-            return "locationIdentifier"
         case .delete:
             return "deleteIdentifier"
         }
@@ -53,10 +36,6 @@ enum A4xAddLocationEnum {
         switch self {
         case .name:
             return 30
-        case .address:
-            return 220
-        case .location:
-            return 0
         case .delete:
             return 0
         }
@@ -70,28 +49,6 @@ enum A4xAddLocationEnum {
         switch self {
         case .name:
             return m.name
-        case .location:
-            var location : String?
-            if let country = m.country {
-                location = country
-                if let state = m.state {
-                    location? += "\n\(state)"
-                }
-                if let city = m.city {
-                    if city != m.state { 
-                        location? += "\n\(city)"
-                    }
-                    if let district = m.district {
-                        location? += "\n\(district)"
-                        
-                        
-                        
-                    }
-                }
-            }
-            return location
-        case .address:
-            return m.add1Name
         case .delete:
             return nil
         }
@@ -138,13 +95,10 @@ public class A4xAddLocationViewController: A4xBaseViewController {
     
     public override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        addressViewModel.cancleRequest()
     }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
-        addressViewModel.delegate = self
         
         self.view.backgroundColor = ADTheme.C6
         self.defaultNav()
@@ -260,27 +214,6 @@ public class A4xAddLocationViewController: A4xBaseViewController {
         }
     }
 }
-extension A4xAddLocationViewController : UIScrollViewDelegate , A4xBaseAddressViewModelDelegate {
-    
-    
-    public func getLocation(state: A4xBaseAddressRequestStateEnum, model: A4xDeviceLocationModel?) {
-        if var m = model {
-            let id = currentModel.id
-            let name = currentModel.name
-            let addr = currentModel.add1Name
-            m.name = name
-            m.add1Name = addr
-            m.id = id
-            currentModel = m
-        }
-        self.tableView.reloadData()
-    }
-    
-    public func getPermissError(error: A4xBaseAddressDermissStateEnum) {
-        
-        self.tableView.reloadData()
-    }
-}
 
 extension A4xAddLocationViewController : UITableViewDelegate , UITableViewDataSource {
     
@@ -327,16 +260,7 @@ extension A4xAddLocationViewController : UITableViewDelegate , UITableViewDataSo
         
         if (tableCell == nil){
             
-            if type == .location {
-                let  cell = A4xAddLocationAddressCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: identifier)
-                weak var weakSelf = self
-                cell.locationBlock = {
-                    
-                    weakSelf?.addressViewModel.getLocation()
-                }
-                tableCell = cell
-                
-            }else if type == .delete {
+            if type == .delete {
                 tableCell = A4xAddLocationRemove(style: UITableViewCell.CellStyle.default, reuseIdentifier: identifier)
             }else{
                 tableCell = A4xAddLocationInputCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: identifier)
@@ -353,9 +277,6 @@ extension A4xAddLocationViewController : UITableViewDelegate , UITableViewDataSo
         tableCell?.value = type.value(of: currentModel)
         tableCell?.type = type
         tableCell?.maxInput = type.maxInput()
-        if let cell : A4xAddLocationAddressCell = tableCell as? A4xAddLocationAddressCell {
-            cell.isLocationing = self.addressViewModel.isLocationing
-        }
         
         return tableCell!
     }
@@ -442,19 +363,6 @@ extension A4xAddLocationViewController : UITableViewDelegate , UITableViewDataSo
         switch type {
         case .name:
             currentModel.name = value
-            
-        case .location:
-            
-            let alert  = A4xLocationSelectView(Address: self.currentModel)
-            weak var weakSelf = self
-            alert.selectAddressDone = { modle in
-                weakSelf?.currentModel = modle
-                weakSelf?.tableView.reloadData()
-                
-            }
-            alert.show()
-        case .address:
-            currentModel.add1Name = value
             
         case .delete:
             

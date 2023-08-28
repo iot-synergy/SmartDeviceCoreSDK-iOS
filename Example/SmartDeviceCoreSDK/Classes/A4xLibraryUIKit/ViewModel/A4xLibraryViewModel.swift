@@ -105,7 +105,7 @@ import SmartDeviceCoreSDK
     
     
     func getVideosByFilter(isMore: Bool, date: Date, filter: A4xVideoLibraryFilterModel?, result: @escaping ([RecordBean]?,  _ hasMore: Bool, _ total: Int?, _ error: String? ) -> Void) {
-        A4xLog("-----------> getResources normal selectlibrary ")
+        logDebug("-----------> getResources normal selectlibrary ")
         
         if !isMore {
             self.resoucesPage = 0

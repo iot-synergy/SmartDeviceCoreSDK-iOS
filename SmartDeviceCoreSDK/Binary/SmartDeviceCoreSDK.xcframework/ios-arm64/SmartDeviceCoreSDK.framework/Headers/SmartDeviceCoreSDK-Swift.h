@@ -232,7 +232,6 @@ using UInt = size_t;
 #endif
 @import CoreBluetooth;
 @import CoreFoundation;
-@import CoreLocation;
 @import Foundation;
 @import ObjectiveC;
 @import Photos;
@@ -304,10 +303,6 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK20A4xAppGroupIdManager")
 @interface A4xAppGroupIdManager : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) A4xAppGroupIdManager * _Nonnull shared;)
 + (A4xAppGroupIdManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-- (id _Nonnull)copy SWIFT_WARN_UNUSED_RESULT;
-- (id _Nonnull)mutableCopy SWIFT_WARN_UNUSED_RESULT;
 /// 更新推送新消息脚标
 /// \param badge 如果为空自增 +1
 ///
@@ -317,8 +312,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) A4xAppGroupI
 - (NSString * _Nonnull)getPushEventInfo SWIFT_WARN_UNUSED_RESULT;
 - (void)setUserTokenWithToken:(NSString * _Nonnull)token;
 - (NSString * _Nonnull)loadUserToken SWIFT_WARN_UNUSED_RESULT;
-- (void)setUserEnvWithEnv:(NSString * _Nonnull)env;
-- (NSString * _Nonnull)loadNetEnv SWIFT_WARN_UNUSED_RESULT;
 - (void)setBaseURLWithUrl:(NSString * _Nonnull)url;
 - (NSString * _Nonnull)getBaseURL SWIFT_WARN_UNUSED_RESULT;
 - (void)setTenantIdWithValue:(NSString * _Nonnull)value;
@@ -339,6 +332,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) A4xAppGroupI
 - (NSString * _Nonnull)getNode SWIFT_WARN_UNUSED_RESULT;
 - (void)setMagicPixAbilityWithValue:(NSString * _Nonnull)value;
 - (NSString * _Nonnull)getMagicPixAbility SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -349,14 +343,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) A4xBaseAccou
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class CLLocationManager;
-@class CLLocation;
 
 SWIFT_CLASS("_TtC18SmartDeviceCoreSDK23A4xBaseAddressViewModel")
-@interface A4xBaseAddressViewModel : NSObject <CLLocationManagerDelegate>
+@interface A4xBaseAddressViewModel : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-- (void)locationManager:(CLLocationManager * _Nonnull)manager didUpdateLocations:(NSArray<CLLocation *> * _Nonnull)locations;
-- (void)locationManager:(CLLocationManager * _Nonnull)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
 @end
 
 
@@ -921,31 +911,6 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK17A4xLivePlayerView")
 - (UIView * _Nullable)viewForZoomingInScrollView:(UIScrollView * _Nonnull)scrollView SWIFT_WARN_UNUSED_RESULT;
 @end
 
-@class NSDate;
-
-/// Base class for providing object-based access to SQLite tables. Simply define the properties and their default values (a value has to be there in order to determine value type) and SQLTable will handle the basic CRUD (creating, reading, updating, deleting) actions for you without any additional code.
-SWIFT_CLASS("_TtC18SmartDeviceCoreSDK8SQLTable")
-@interface SQLTable : NSObject
-/// Every SQLTable sub-class will contain an <code>isDeleted</code> flag. Instead of deleting records, you should set the flag to <code>true</code> for deletions and filter your data accordingly when fetching data from <code>SQLTable</code>. This flag will be used to synchronize deletions via CloudKit
-@property (nonatomic) BOOL isDeleted;
-/// Every SQLTable sub-class will contain a <code>created</code> property indicating the creation date of the record.
-@property (nonatomic, copy) NSDate * _Nonnull created;
-/// Every SQLTable sub-class will contain a <code>modified</code> property indicating the last modification date of the record.
-@property (nonatomic, copy) NSDate * _Nonnull modified;
-/// Base initialization which sets up the table name and then verifies that the table exists in the DB, and if it does not, creates it.
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-SWIFT_CLASS("_TtC18SmartDeviceCoreSDK19A4xLocationSQLModel")
-@interface A4xLocationSQLModel : SQLTable
-@property (nonatomic) NSInteger id;
-@property (nonatomic, copy) NSString * _Nullable code;
-- (NSString * _Nullable)dbName SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nullable)imageName SWIFT_WARN_UNUSED_RESULT;
-@end
-
 
 SWIFT_CLASS("_TtC18SmartDeviceCoreSDK11A4xLockTool")
 @interface A4xLockTool : NSObject
@@ -1499,6 +1464,17 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) A4xWebSocket
 - (void)mediaPlayer:(A4xObjcWebRtcPlayer * _Nonnull)player onSignalMsg:(NSData * _Nonnull)msg;
 - (void)mediaPlayer:(A4xObjcWebRtcPlayer * _Nonnull)player onState:(A4xSignalConnState)state;
 - (void)mediaPlayer:(A4xObjcWebRtcPlayer * _Nonnull)player onError:(int32_t)errCode errMsg:(NSString * _Null_unspecified)errMsg;
+@end
+
+
+SWIFT_PROTOCOL("_TtP18SmartDeviceCoreSDK21AccountChangeListener_")
+@protocol AccountChangeListener
+/// account info error occured,
+/// -1022: not login
+/// -1023: token expired
+/// -1024: other login
+/// -1025: token missing
+- (void)onAccountInfoErrorWithStatus:(NSInteger)status;
 @end
 
 
@@ -2582,6 +2558,7 @@ SWIFT_PROTOCOL("_TtP18SmartDeviceCoreSDK18ILiveStateListener_")
 - (void)onProcessImage:(uint8_t * _Null_unspecified)inputImageData w:(int32_t)imageWidth h:(int32_t)imageHeight cb:(ImageAlgorithmCallBack _Null_unspecified)callback;
 @end
 
+@protocol LoggerDelegate;
 @class InitSDKConfig;
 
 SWIFT_CLASS("_TtC18SmartDeviceCoreSDK17InitConfigBuilder")
@@ -2590,6 +2567,8 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK17InitConfigBuilder")
 - (nonnull instancetype)setLanguage:(NSString * _Nonnull)language SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)setCountryNo:(NSString * _Nonnull)countryNo SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)setIsDebug:(BOOL)isDebug SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)setLoggerDelegate:(id <LoggerDelegate> _Nullable)loggerDelegate SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)setAccountChangeListener:(id <AccountChangeListener> _Nullable)accountListener SWIFT_WARN_UNUSED_RESULT;
 - (InitSDKConfig * _Nonnull)build SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -2626,6 +2605,10 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK13InitSDKConfig")
 @property (nonatomic, copy) NSString * _Nullable countryNo;
 /// 是否是 Debug 环境，Debug 环境会走 staging 服务
 @property (nonatomic) BOOL isDebug;
+/// sets the logger delegate that receive logs from the sdk.
+@property (nonatomic, strong) id <LoggerDelegate> _Nullable loggerDelegate;
+/// listen the account info change
+@property (nonatomic, strong) id <AccountChangeListener> _Nullable accountChangeListener;
 @end
 
 @class LibraryStatusListBean;
@@ -2850,6 +2833,17 @@ SWIFT_PROTOCOL("_TtP18SmartDeviceCoreSDK10LivePlayer_")
 - (void)magicPixImageWithImage:(UIImage * _Nullable)image comple:(void (^ _Nonnull)(UIImage * _Nullable))comple;
 @end
 
+
+/// Logger delegate to implement in oder to receive logs from the smart device core sdk.
+SWIFT_PROTOCOL("_TtP18SmartDeviceCoreSDK14LoggerDelegate_")
+@protocol LoggerDelegate <NSObject>
+- (void)error:(NSString * _Nonnull)tag message:(NSString * _Nonnull)message;
+- (void)warning:(NSString * _Nonnull)tag message:(NSString * _Nonnull)message;
+- (void)info:(NSString * _Nonnull)tag message:(NSString * _Nonnull)message;
+- (void)debug:(NSString * _Nonnull)tag message:(NSString * _Nonnull)message;
+- (void)verbose:(NSString * _Nonnull)tag message:(NSString * _Nonnull)message;
+@end
+
 enum TSMediaAssetExportSessionStatus : NSInteger;
 
 SWIFT_PROTOCOL("_TtP18SmartDeviceCoreSDK18MediaCodecProtocol_")
@@ -3036,6 +3030,7 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK7OTACore")
 /// -3112 - OUTDATED_FIRMWARE - 设备固件版本距离最新版本差距过大，需要多次升级
 /// -3120 - NO_FIRMWARE - 当前设备型号无固件
 - (void)otaStartWithSerialNumber:(NSString * _Nonnull)serialNumber onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError onProgress:(void (^ _Nonnull)(NSInteger))onProgress;
+- (void)getOtaStatusWithSerialNumber:(NSString * _Nonnull)serialNumber onSuccess:(void (^ _Nonnull)(BOOL))onSuccess onProgress:(void (^ _Nonnull)(NSInteger, NSInteger))onProgress onError:(void (^ _Nonnull)(NSInteger))onError;
 - (void)otaStop;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -3115,25 +3110,6 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK15RecordEventBean")
 @end
 
 
-
-/// Simple wrapper class to provide basic SQLite database access as a non-singleton
-SWIFT_CLASS_NAMED("SQLiteBase")
-@interface SQLiteBase : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-/// Output the current SQLite database path
-@property (nonatomic, readonly, copy) NSString * _Nonnull description;
-@end
-
-
-/// Simple wrapper class to provide basic SQLite database access.
-SWIFT_CLASS_NAMED("SQLiteDB")
-@interface SQLiteDB : SQLiteBase
-/// Output the current SQLite database path
-@property (nonatomic, readonly, copy) NSString * _Nonnull description;
-@end
-
-
 /// Responsible for handling all delegate callbacks for the underlying session.
 SWIFT_CLASS("_TtC18SmartDeviceCoreSDK15SessionDelegate")
 @interface SessionDelegate : NSObject
@@ -3197,30 +3173,40 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK15SessionDelegate")
 - (void)URLSession:(NSURLSession * _Nonnull)session downloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask didResumeAtOffset:(int64_t)fileOffset expectedTotalBytes:(int64_t)expectedTotalBytes;
 @end
 
-@class NSURLAuthenticationChallenge;
-@class NSURLCredential;
+@class NSURLSessionStreamTask;
+@class NSInputStream;
+@class NSOutputStream;
 
-@interface SessionDelegate (SWIFT_EXTENSION(SmartDeviceCoreSDK)) <NSURLSessionDelegate>
-/// Tells the delegate that the session has been invalidated.
-/// \param session The session object that was invalidated.
+SWIFT_AVAILABILITY(tvos,introduced=9.0) SWIFT_AVAILABILITY(macos,introduced=10.11) SWIFT_AVAILABILITY(ios,introduced=9.0)
+@interface SessionDelegate (SWIFT_EXTENSION(SmartDeviceCoreSDK)) <NSURLSessionStreamDelegate>
+/// Tells the delegate that the read side of the connection has been closed.
+/// \param session The session.
 ///
-/// \param error The error that caused invalidation, or nil if the invalidation was explicit.
+/// \param streamTask The stream task.
 ///
-- (void)URLSession:(NSURLSession * _Nonnull)session didBecomeInvalidWithError:(NSError * _Nullable)error;
-/// Requests credentials from the delegate in response to a session-level authentication request from the
-/// remote server.
-/// \param session The session containing the task that requested authentication.
+- (void)URLSession:(NSURLSession * _Nonnull)session readClosedForStreamTask:(NSURLSessionStreamTask * _Nonnull)streamTask;
+/// Tells the delegate that the write side of the connection has been closed.
+/// \param session The session.
 ///
-/// \param challenge An object that contains the request for authentication.
+/// \param streamTask The stream task.
 ///
-/// \param completionHandler A handler that your delegate method must call providing the disposition
-/// and credential.
+- (void)URLSession:(NSURLSession * _Nonnull)session writeClosedForStreamTask:(NSURLSessionStreamTask * _Nonnull)streamTask;
+/// Tells the delegate that the system has determined that a better route to the host is available.
+/// \param session The session.
 ///
-- (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
-/// Tells the delegate that all messages enqueued for a session have been delivered.
-/// \param session The session that no longer has any outstanding requests.
+/// \param streamTask The stream task.
 ///
-- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession * _Nonnull)session;
+- (void)URLSession:(NSURLSession * _Nonnull)session betterRouteDiscoveredForStreamTask:(NSURLSessionStreamTask * _Nonnull)streamTask;
+/// Tells the delegate that the stream task has been completed and provides the unopened stream objects.
+/// \param session The session.
+///
+/// \param streamTask The stream task.
+///
+/// \param inputStream The new input stream.
+///
+/// \param outputStream The new output stream.
+///
+- (void)URLSession:(NSURLSession * _Nonnull)session streamTask:(NSURLSessionStreamTask * _Nonnull)streamTask didBecomeInputStream:(NSInputStream * _Nonnull)inputStream outputStream:(NSOutputStream * _Nonnull)outputStream;
 @end
 
 @class NSURLSessionDataTask;
@@ -3273,40 +3259,30 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK15SessionDelegate")
 - (void)URLSession:(NSURLSession * _Nonnull)session dataTask:(NSURLSessionDataTask * _Nonnull)dataTask willCacheResponse:(NSCachedURLResponse * _Nonnull)proposedResponse completionHandler:(void (^ _Nonnull)(NSCachedURLResponse * _Nullable))completionHandler;
 @end
 
-@class NSURLSessionStreamTask;
-@class NSInputStream;
-@class NSOutputStream;
+@class NSURLAuthenticationChallenge;
+@class NSURLCredential;
 
-SWIFT_AVAILABILITY(tvos,introduced=9.0) SWIFT_AVAILABILITY(macos,introduced=10.11) SWIFT_AVAILABILITY(ios,introduced=9.0)
-@interface SessionDelegate (SWIFT_EXTENSION(SmartDeviceCoreSDK)) <NSURLSessionStreamDelegate>
-/// Tells the delegate that the read side of the connection has been closed.
-/// \param session The session.
+@interface SessionDelegate (SWIFT_EXTENSION(SmartDeviceCoreSDK)) <NSURLSessionDelegate>
+/// Tells the delegate that the session has been invalidated.
+/// \param session The session object that was invalidated.
 ///
-/// \param streamTask The stream task.
+/// \param error The error that caused invalidation, or nil if the invalidation was explicit.
 ///
-- (void)URLSession:(NSURLSession * _Nonnull)session readClosedForStreamTask:(NSURLSessionStreamTask * _Nonnull)streamTask;
-/// Tells the delegate that the write side of the connection has been closed.
-/// \param session The session.
+- (void)URLSession:(NSURLSession * _Nonnull)session didBecomeInvalidWithError:(NSError * _Nullable)error;
+/// Requests credentials from the delegate in response to a session-level authentication request from the
+/// remote server.
+/// \param session The session containing the task that requested authentication.
 ///
-/// \param streamTask The stream task.
+/// \param challenge An object that contains the request for authentication.
 ///
-- (void)URLSession:(NSURLSession * _Nonnull)session writeClosedForStreamTask:(NSURLSessionStreamTask * _Nonnull)streamTask;
-/// Tells the delegate that the system has determined that a better route to the host is available.
-/// \param session The session.
+/// \param completionHandler A handler that your delegate method must call providing the disposition
+/// and credential.
 ///
-/// \param streamTask The stream task.
+- (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
+/// Tells the delegate that all messages enqueued for a session have been delivered.
+/// \param session The session that no longer has any outstanding requests.
 ///
-- (void)URLSession:(NSURLSession * _Nonnull)session betterRouteDiscoveredForStreamTask:(NSURLSessionStreamTask * _Nonnull)streamTask;
-/// Tells the delegate that the stream task has been completed and provides the unopened stream objects.
-/// \param session The session.
-///
-/// \param streamTask The stream task.
-///
-/// \param inputStream The new input stream.
-///
-/// \param outputStream The new output stream.
-///
-- (void)URLSession:(NSURLSession * _Nonnull)session streamTask:(NSURLSessionStreamTask * _Nonnull)streamTask didBecomeInputStream:(NSInputStream * _Nonnull)inputStream outputStream:(NSOutputStream * _Nonnull)outputStream;
+- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession * _Nonnull)session;
 @end
 
 @class NSURLSessionTask;
@@ -3389,6 +3365,7 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK15ShareDeviceBean")
 SWIFT_CLASS("_TtC18SmartDeviceCoreSDK15SmartDeviceCore")
 @interface SmartDeviceCore : NSObject
 + (SmartDeviceCore * _Nonnull)getInstance SWIFT_WARN_UNUSED_RESULT;
+@property (nonatomic) BOOL isDebug;
 /// 初始化SDK
 /// config : 配置项
 - (void)initSDKWithConfig:(InitSDKConfig * _Nonnull)config onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError SWIFT_METHOD_FAMILY(none);
@@ -3397,6 +3374,17 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK15SmartDeviceCore")
 - (void)loginWithToken:(NSString * _Nonnull)token onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
 - (void)updateLanguageWithLanguage:(NSString * _Nonnull)language onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
 - (void)loginOut;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC18SmartDeviceCoreSDK17SmartDeviceLogger")
+@interface SmartDeviceLogger : NSObject
++ (void)warning:(NSString * _Nonnull)tag message:(NSString * _Nonnull)message;
++ (void)info:(NSString * _Nonnull)tag message:(NSString * _Nonnull)message;
++ (void)error:(NSString * _Nonnull)tag message:(NSString * _Nonnull)message;
++ (void)debug:(NSString * _Nonnull)tag message:(NSString * _Nonnull)message;
++ (void)verbose:(NSString * _Nonnull)tag message:(NSString * _Nonnull)message;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

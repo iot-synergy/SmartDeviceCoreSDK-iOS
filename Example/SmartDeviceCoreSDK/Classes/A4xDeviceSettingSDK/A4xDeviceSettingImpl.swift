@@ -27,6 +27,10 @@ public class A4xDeviceSettingImpl: A4xDeviceSettingInterface {
         navigationController?.pushViewController(soundVC, animated: true)
     }
 
+    public func pushSDVideoHistoryViewController(deviceModel: DeviceBean?, navigationController: UINavigationController?) {
+        let vc = A4xSDVideoHistoryViewController(deviceModel: deviceModel ?? DeviceBean())
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
     public func pushActivityZoneViewController(deviceModel: DeviceBean?, navigationController: UINavigationController?) {
         let vc = A4xActivityZoneViewController()

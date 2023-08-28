@@ -516,7 +516,7 @@ class BindConnectWaitViewController: BindBaseViewController {
     // 系统wifi设置切换到当前app
     @objc func didBecomeActive() {
         
-        A4xLog("---------> didBecomeActive")
+        logDebug("---------> didBecomeActive")
         // 无网络处理
         if A4xUserDataHandle.Handle?.netConnectType == .nonet {
             // 判断是否ap模式下
@@ -696,7 +696,7 @@ extension BindConnectWaitViewController {
     
     // 开始加载等待动画
     private func startLoadingAnimail() {
-        A4xLog("---------> startLoadingAnimail")
+        logDebug("---------> startLoadingAnimail")
         logoToBigAniView?.isHidden = false
         logoToBigAniView!.play { (result) in }
         loadNextLoadingAnimail()
@@ -704,7 +704,7 @@ extension BindConnectWaitViewController {
     
     // 加载下一个动画 - 循环调用
     @objc private func loadNextLoadingAnimail() {
-        A4xLog("---------> loadNextLoadingAnimail")
+        logDebug("---------> loadNextLoadingAnimail")
         connectWaittingBGAniView?.isHidden = false
         connectWaittingBGAniView!.loopMode = .loop
         connectWaittingBGAniView!.play()
@@ -958,7 +958,7 @@ extension BindConnectWaitViewController {
 // MARK: - 绑定监听和处理
 extension BindConnectWaitViewController {
     override func onStepChange(code: Int) {
-        A4xLog("---------> onStepChange code: \(code)")
+        logDebug("---------> onStepChange code: \(code)")
         if self.currentStep != code {
             self.currentStep = code
             self.bindCheckStepAnimil(step: code, animName: "", serialNumber: nil, isFailed: false)
@@ -967,11 +967,11 @@ extension BindConnectWaitViewController {
     }
     
     override func onGenarateQrCode(newQRCdoe: UIImage?, oldQRCode: UIImage?, wireQRCode: UIImage?) {
-        A4xLog("---------> onGenarateQrCode")
+        logDebug("---------> onGenarateQrCode")
     }
     
     override func onSuccess(code: Int, msg: String?, serialNumber: String?) {
-        A4xLog("---------> onSuccess")
+        logDebug("---------> onSuccess")
         self.viewModel?.saveBindWifiToCache(wifiName: self.wifiName ?? "", wifiPwd: self.wifiPwd ?? "" )
         
         // 打点事件（发送后端）
@@ -980,7 +980,7 @@ extension BindConnectWaitViewController {
     }
     
     override func onError(code: Int, msg: String?) {
-        A4xLog("---------> onError code: \(code) msg: \(msg)")
+        logDebug("---------> onError code: \(code) msg: \(msg)")
         var errType: BindErrorTypeEnum? = .none
         switch code {
         case -10203: // 密码错误
@@ -1039,7 +1039,7 @@ extension BindConnectWaitViewController {
 extension BindConnectWaitViewController {
     // 处理连接中
     private func connectingUI() {
-        A4xLog("---------> ble connectingUI")
+        logDebug("---------> ble connectingUI")
         
         // 更改状态
         UIView.animate(withDuration: 0.6, animations: {

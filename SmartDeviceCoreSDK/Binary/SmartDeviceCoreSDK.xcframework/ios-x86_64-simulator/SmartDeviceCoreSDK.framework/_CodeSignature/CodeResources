@@ -50,7 +50,7 @@
 		</data>
 		<key>Headers/A4xServiceContext.h</key>
 		<data>
-		UlSicyETz2yfAQG32yHq8tXY2kE=
+		yvIu6MeK6xbKJHuraeOzFg3nhYM=
 		</data>
 		<key>Headers/A4xSignal.h</key>
 		<data>
@@ -202,7 +202,7 @@
 		</data>
 		<key>Headers/SmartDeviceCoreSDK-Swift.h</key>
 		<data>
-		0qO8CWLx/8vhPIBfk2tU9J+P5Xw=
+		/4NdgTB4Bud5KbXpaKn4EY65HOk=
 		</data>
 		<key>Headers/SmartDeviceCoreSDK-umbrella.h</key>
 		<data>
@@ -210,7 +210,7 @@
 		</data>
 		<key>Headers/SmartDeviceCoreSDK.h</key>
 		<data>
-		7/siYg8vKw5AFXTveC5rQRGI9W8=
+		HbUhu0WoYsR1pSgEw/9KdtKBNPw=
 		</data>
 		<key>Headers/StatsBuilder.h</key>
 		<data>
@@ -226,31 +226,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		zGZnlzGOsmTXkUCtqb78/5SDZYo=
+		sGh1TDrDV2CscwDIofaSC736Yts=
 		</data>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		R2mBk9eY5DMGGiQDELO6rIw3ENc=
+		XR7UXxBNl2mX8qLNPmeW/UcsIg8=
 		</data>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		rKVowCxYJ8dN0L6G+CRc7s5A9Cs=
+		OltNTMrhun1FPWcFPgKv71+MwtU=
 		</data>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		TnrwrmQkoGNukP4I+4elQVa6g/o=
+		4ogcnqnXsBOaMAOCkN2wTZ2KU60=
 		</data>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		L1Wo0VpCFxP+n3jesTUs2xaRDhA=
+		LOy8HsP2hEb3kCnuSGDgprcYcic=
 		</data>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		TnrwrmQkoGNukP4I+4elQVa6g/o=
+		4ogcnqnXsBOaMAOCkN2wTZ2KU60=
 		</data>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		lfNNb5OXSv7W20eKY2Ve+s7qRWI=
+		GWAdifUiwG5FMxPOE6tvGkfJjfo=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -340,7 +340,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			R2T2LCaMFF7j8IlfKNb3bvYqW4BjDmV6gy9TD0Vqc7w=
+			St/tQ3T1WFQZdjgNmaH95XWuAgwjO6KR6oHcWCGgvbk=
 			</data>
 		</dict>
 		<key>Headers/A4xSignal.h</key>
@@ -606,7 +606,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			umenNvJIafJRpfpDe+ahiehniKXNcQH0fxkK7fmOn1g=
+			0vTa6T97MsQynEmqUyfxIzMkQOMC26Vdpg1bmfGZrDc=
 			</data>
 		</dict>
 		<key>Headers/SmartDeviceCoreSDK-umbrella.h</key>
@@ -620,7 +620,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HP5WQOGwcYQLE30Zqt+BENZJQ+HAwNfBuifdfXzrfZs=
+			wuo3WenwVF6ABGjuvlkmxc2cSVkPbgkKOz4CtnqwINI=
 			</data>
 		</dict>
 		<key>Headers/StatsBuilder.h</key>
@@ -648,42 +648,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JZnHg563gTLa/lNWz+n+2VYornDY1qefp0U+pgYiGCg=
+			ry+iSbFXAsXdvFNZyOm6JIFsFgo/gxTwkbuluTfBDcE=
 			</data>
 		</dict>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aZvfkfn7Bz8l4w8KhwE7y63c/R/Q88+wKl9KZXZLdqg=
+			bYdOP/ey2B9/0hb7e+z82Xl7NO8kSbcl9lcNb60Mkxo=
 			</data>
 		</dict>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			njRoeavUQag6hfNV6Aq4YIB7Au++6v2hzADEX+FqXZY=
+			iUXra5tgWVgM9yPQ92f+0CZSG6MXbLdQa5qh//FwdBw=
 			</data>
 		</dict>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+sPHNQSbclGX8lCnnfpQPgYEV4JmeCvN2W5Slr+BPkE=
+			QZfC7+mI/Ip4zioMsLjPh9ukZ9qv1iv7XBDGjvxrYYA=
 			</data>
 		</dict>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			njRoeavUQag6hfNV6Aq4YIB7Au++6v2hzADEX+FqXZY=
+			iUXra5tgWVgM9yPQ92f+0CZSG6MXbLdQa5qh//FwdBw=
 			</data>
 		</dict>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			JEmKcnYsgbYLr08mNm/+thqFa5IE4GQseFjLXq+DZzs=
+			bcPeC1LZ8pnTgfNAb8wZ7jL6Tq+3UDHdA2qNhevQGVI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

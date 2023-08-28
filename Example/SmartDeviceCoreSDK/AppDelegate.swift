@@ -26,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .setLanguage("en")
             .setCountryNo("US")
             .setIsDebug(true)
+            .setLoggerDelegate(LoggerImpl())
+            .setAccountChangeListener(self)
             .build()
             
         SmartDeviceCore.getInstance().initSDK(config: config) { code, message in
@@ -65,3 +67,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 }
 
+extension AppDelegate: AccountChangeListener {
+    
+    /**
+     账号过期
+     -1022: not login
+     -1023: token expired
+     -1024: other login
+     -1025: token missing
+     */
+    func onAccountInfoError(status: Int) {
+        logError("account info error: \(status)")
+    }
+    
+}

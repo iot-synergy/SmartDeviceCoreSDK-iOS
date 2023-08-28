@@ -29,14 +29,14 @@ class A4xVideoTimerContontView: UIView {
     
     var currentDate: Date = Date() {
         didSet {
-            A4xLog("currentDate update currentDate: \(currentDate)")
+            logDebug("currentDate update currentDate: \(currentDate)")
             self.setNeedsDisplay()
         }
     }
     
     var minDate: Date {
         didSet {
-            A4xLog("minDate update currentDate: \(currentDate) minDate: \(minDate)")
+            logDebug("minDate update currentDate: \(currentDate) minDate: \(minDate)")
             self.setNeedsDisplay()
         }
     }
@@ -256,7 +256,7 @@ class A4xVideoTimerContontView: UIView {
         
         let timerange = CGFloat(self.timeStep) / CGFloat(itemWidth) * self.width
         
-        A4xLog("A4xVideoTimerContontView loadMoreDate canLoadMoreData currentDate: \(currentDate)【\(currentDate.timeIntervalSince1970)】 lastDrawDate: \(lastDrawDate) 【\(lastDrawDate.timeIntervalSince1970)】 timerange: \(timerange)")
+        logDebug("A4xVideoTimerContontView loadMoreDate canLoadMoreData currentDate: \(currentDate)【\(currentDate.timeIntervalSince1970)】 lastDrawDate: \(lastDrawDate) 【\(lastDrawDate.timeIntervalSince1970)】 timerange: \(timerange)")
         
         
         //maxTimeRange:最大时间区间
@@ -266,10 +266,6 @@ class A4xVideoTimerContontView: UIView {
             }
             comple()
         }
-    }
-    
-    deinit {
-        A4xLog(type(of: self).description() + " deinit")
     }
     
     override func draw(_ rect: CGRect) {
@@ -311,7 +307,7 @@ class A4xVideoTimerContontView: UIView {
         path.stroke()
         
         
-        A4xLog("-------------> startDrawDate: \(startDrawDate)")
+        logDebug("-------------> startDrawDate: \(startDrawDate)")
         self.loadMoreDate(lastDrawDate: startDrawDate)
         
         if let leftView: UIView = self.leftView {

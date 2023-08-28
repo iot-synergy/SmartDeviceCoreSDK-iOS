@@ -134,7 +134,7 @@ public class A4xBaseNoDataView: UIView {
             let showRetry = self.nodataValue.retry
             
             if let errorStr = self.nodataValue.error {
-                A4xLog("展示的errorStr: \(errorStr)")
+                logDebug("展示的errorStr: \(errorStr)")
                 if errorStr == A4xBaseManager.shared.getLocalString(key: "not_support_vehicle_marking") {
                     /// "点击了解详情 >>"
                     let tips = A4xBaseManager.shared.getLocalString(key: "tap_to_know")

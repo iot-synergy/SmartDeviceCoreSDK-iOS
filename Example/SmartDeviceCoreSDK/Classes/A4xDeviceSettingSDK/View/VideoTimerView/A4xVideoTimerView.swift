@@ -97,9 +97,6 @@ class A4xVideoTimerView: UIView, UIScrollViewDelegate {
         return temp
     }()
     
-    deinit {
-        A4xLog(type(of: self).description() + "deinit")
-    }
     
     lazy var timerView: A4xVideoTimerContontView = {
         weak var weakSelf = self
@@ -211,7 +208,7 @@ class A4xVideoTimerView: UIView, UIScrollViewDelegate {
     }
     
     func updateTimerView(){
-        A4xLog("A4xVideoTimerView updateTimerView")
+        logDebug("A4xVideoTimerView updateTimerView")
         let defaultCenterX = self.bounds.width
         let offset = self.scrollView.contentOffset.x
         timerView.moveLocation(value: offset - defaultCenterX)
@@ -219,7 +216,7 @@ class A4xVideoTimerView: UIView, UIScrollViewDelegate {
     }
     
     func resetTimer(){
-        A4xLog("A4xVideoTimerView resetTimer")
+        logDebug("A4xVideoTimerView resetTimer")
         let defaultCenterX = self.bounds.width
         self.scrollView.contentOffset = CGPoint(x: defaultCenterX, y: 0)
     }
@@ -243,7 +240,7 @@ class A4xVideoTimerView: UIView, UIScrollViewDelegate {
     }
     
     private func checkUpdateTimeView(type : A4xDateType) {
-        A4xLog("A4xVideoTimerView checkUpdateTimeView \(type)")
+        logDebug("A4xVideoTimerView checkUpdateTimeView \(type)")
         let scrollDirection = getScrollDirection(self.scrollView)
         switch type {
         case .none:
@@ -264,7 +261,7 @@ class A4xVideoTimerView: UIView, UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let defaultCenterX = self.bounds.width
         let offset = scrollView.contentOffset.x
-        A4xLog("A4xVideoTimerView scrollViewDidScroll \(scrollView.contentOffset.x)")
+        logDebug("A4xVideoTimerView scrollViewDidScroll \(scrollView.contentOffset.x)")
         let (_,type) = timerView.getTime(withMove: offset - defaultCenterX)
         checkUpdateTimeView(type: type)
         let (date,_) = timerView.getTime(withMove: offset - defaultCenterX)
@@ -272,7 +269,7 @@ class A4xVideoTimerView: UIView, UIScrollViewDelegate {
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        A4xLog("A4xVideoTimerView DidEndDecelerating \(scrollView.contentOffset.x)")
+        logDebug("A4xVideoTimerView DidEndDecelerating \(scrollView.contentOffset.x)")
         self.updateTimerView()
         let currentData = timerView.currentDate
         let (selectDate, date) = self.timerView.hasDataDate(date: currentData)
@@ -282,7 +279,7 @@ class A4xVideoTimerView: UIView, UIScrollViewDelegate {
             
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let targetOffset = targetContentOffset.pointee.x
-        A4xLog("A4xVideoTimerView WillEndDragging targetOffset \(targetOffset) current \(scrollView.contentOffset.x)")
+        logDebug("A4xVideoTimerView WillEndDragging targetOffset \(targetOffset) current \(scrollView.contentOffset.x)")
         let defaultCenterX = self.bounds.width
         let temp = timerView.toBounds(withMove: targetOffset - defaultCenterX)
         if CGFloat(temp) != targetOffset - defaultCenterX {
@@ -291,7 +288,7 @@ class A4xVideoTimerView: UIView, UIScrollViewDelegate {
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        A4xLog("A4xVideoTimerView didEndDragging  \(scrollView.contentOffset.x)  decelerate \(decelerate ? "正在" : "不在") 减速")
+        logDebug("A4xVideoTimerView didEndDragging  \(scrollView.contentOffset.x)  decelerate \(decelerate ? "正在" : "不在") 减速")
         if !decelerate {
             self.updateTimerView()
             if let date = self.selectDate {

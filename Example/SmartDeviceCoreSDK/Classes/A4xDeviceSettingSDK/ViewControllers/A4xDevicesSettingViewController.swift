@@ -349,6 +349,9 @@ extension A4xDevicesSettingViewController: A4xDevicesSettingRangeCellProtocol {
                 videoVC.deviceModel = self.dataSource
                 self.navigationController?.pushViewController(videoVC, animated: true)
                 break
+            case .backvideo:
+                self.pushBackVideoViewController()
+                break
             case .none:
                 break
             }
@@ -534,7 +537,10 @@ extension A4xDevicesSettingViewController: UITableViewDelegate, UITableViewDataS
         }
     }
     
-    
+    private func pushBackVideoViewController() {
+        let vc = A4xSDVideoHistoryViewController(deviceModel: self.dataSource ?? DeviceBean(serialNumber: self.dataSource?.serialNumber ?? ""))
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     private func notificationSetting() {
         let notiVC = A4xDeviceSettingPushSettingViewController()

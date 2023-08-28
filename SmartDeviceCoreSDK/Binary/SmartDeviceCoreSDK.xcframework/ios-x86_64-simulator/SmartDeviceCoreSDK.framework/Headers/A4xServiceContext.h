@@ -36,6 +36,7 @@
 -(void)initServiceContext:(NSString*)token
                    server:(NSString*)serverUrl
                    appInfo:(AppInfo*)appInfo;
+-(BOOL)isDebug;
 
 @end
 

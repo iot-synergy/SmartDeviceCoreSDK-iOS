@@ -174,10 +174,10 @@ class A4xHomeBaseHeaderUIControl : UIControl {
         if touch.tapCount > 1 {
             NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(doubleClickAction), object: nil)
             NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(oneClickAction), object: nil)
-//            A4xLog("A4xHomeBaseHeaderUIControl perform doubleClickAction")
+//            logDebug("A4xHomeBaseHeaderUIControl perform doubleClickAction")
             self.perform(#selector(doubleClickAction), with: nil, afterDelay: delaytime)
         } else {
-//            A4xLog("A4xHomeBaseHeaderUIControl perform oneClickAction")
+//            logDebug("A4xHomeBaseHeaderUIControl perform oneClickAction")
             self.perform(#selector(oneClickAction), with: nil, afterDelay: delaytime)
         }
         
@@ -190,14 +190,13 @@ class A4xHomeBaseHeaderUIControl : UIControl {
     var lastTime: TimeInterval = 0
     
     @objc private func doubleClickAction() {
-        A4xLog("A4xHomeBaseHeaderUIControl doubleClick ")
+        logDebug("A4xHomeBaseHeaderUIControl doubleClick ")
         let curda = Date().timeIntervalSince1970
         let last = lastTime
         lastTime = curda
-        A4xLog(String(format: "A4xHomeBaseHeaderUIControl oneClick %.2f", (curda - last)))
 
         if curda - last < 0.5 {
-            A4xLog("A4xHomeBaseHeaderUIControl doubleClick too shot")
+            logDebug("A4xHomeBaseHeaderUIControl doubleClick too shot")
             return
         }
         self.doubleClick?()
@@ -207,11 +206,9 @@ class A4xHomeBaseHeaderUIControl : UIControl {
         let curda = Date().timeIntervalSince1970
         let last = lastTime
         lastTime = curda
-        
-        A4xLog(String(format: "A4xHomeBaseHeaderUIControl oneClick %.2f", (curda - last)))
 
         if (curda - last) < 0.5 {
-            A4xLog("A4xHomeBaseHeaderUIControl oneClick too shot")
+            logDebug("A4xHomeBaseHeaderUIControl oneClick too shot")
             return
         }
         self.headerShowType = self.headerShowType == .Show ? .Hidden : .Show

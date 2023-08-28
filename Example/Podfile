@@ -1,12 +1,10 @@
 use_frameworks!
 
-source 'git@github.com:SmartIotDeviceSDK/iOSPodsRepo.git'
-
 platform :ios, '11.0'
 
 target 'SmartDeviceCoreSDK_Example' do
 
-  pod 'SmartDeviceCoreSDK', '~> 2.0.0-alpha'
+  pod 'SmartDeviceCoreSDK', :path => '../'
   
   
   pod 'A4xIJKMediaPlayerUIKit', :path => 'SmartDeviceCoreSDK/Classes/A4xIJKMediaPlayerUIKit'

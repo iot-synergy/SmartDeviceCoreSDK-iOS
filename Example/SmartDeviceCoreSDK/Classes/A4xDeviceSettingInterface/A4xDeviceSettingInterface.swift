@@ -24,6 +24,8 @@ public protocol A4xDeviceSettingInterface {
     
     func pushDevicesSoundViewController(deviceModel: DeviceBean, navigationController: UINavigationController?)
     
+    func pushSDVideoHistoryViewController(deviceModel: DeviceBean?, navigationController: UINavigationController?)
+    
     func pushActivityZoneViewController(deviceModel: DeviceBean?, navigationController: UINavigationController?)
         
 }
@@ -43,6 +45,10 @@ public class NoopDeviceSettingImpl: A4xDeviceSettingInterface {
     }
     
     public func pushDevicesSoundViewController(deviceModel: DeviceBean, navigationController: UINavigationController?) {
+        UIApplication.shared.keyWindow?.makeToast("can not push controller because setting sdk not register")
+    }
+    
+    public func pushSDVideoHistoryViewController(deviceModel: DeviceBean?, navigationController: UINavigationController?) {
         UIApplication.shared.keyWindow?.makeToast("can not push controller because setting sdk not register")
     }
     
