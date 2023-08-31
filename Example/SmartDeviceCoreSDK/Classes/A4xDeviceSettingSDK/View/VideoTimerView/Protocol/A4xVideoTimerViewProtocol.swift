@@ -9,7 +9,7 @@
 import Foundation
 import SmartDeviceCoreSDK
 
-typealias A4xTimerLoadCompleBlock = ((_ isScuess : Bool , _ dateSourde : [A4xVideoTimeModel]?) -> Void)
+typealias A4xTimerLoadCompleBlock = ((_ isScuess : Bool , _ dateSourde : [VideoTimeModel]?) -> Void)
 
 
 
@@ -29,7 +29,7 @@ protocol A4xVideoTimerViewProtocol : NSObjectProtocol {
     func timerView(timerView : A4xVideoTimerView , minDate date : Date)
     func timerViewMaxDate(timerView : A4xVideoTimerView ) -> Date
     func timerView(timerView : A4xVideoTimerView , willSelectDate date : Date)
-    func timerView(timerView : A4xVideoTimerView , didSelectDate date : Date , inData : A4xVideoTimeModel? )
+    func timerView(timerView : A4xVideoTimerView , didSelectDate date : Date , inData : VideoTimeModel? )
     func timerMinView(timerView : A4xVideoTimerView ) -> A4xVideoChildView?
     func timerMaxView(timerView : A4xVideoTimerView ) -> A4xVideoChildView?
     func timerLoadDate(timerView : A4xVideoTimerView , fromDate : Date , toDate : Date , comple : @escaping A4xTimerLoadCompleBlock)
@@ -61,5 +61,5 @@ protocol A4xVideoTimerViewInterface : class {
     
     func reloadDate(comple: @escaping (() -> Void))
     
-    func timerCurrentInfo(date : Date?) -> (Date , A4xVideoTimeModel?)
+    func timerCurrentInfo(date : Date?) -> (Date , VideoTimeModel?)
 }

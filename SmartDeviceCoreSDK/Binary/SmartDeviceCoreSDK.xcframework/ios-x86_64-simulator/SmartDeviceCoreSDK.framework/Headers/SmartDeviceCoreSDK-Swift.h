@@ -274,18 +274,6 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK14A4xAPModeModel")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-/// 主体变更协议类型
-typedef SWIFT_ENUM(NSInteger, A4xAgreementType, open) {
-/// terms 条款
-  A4xAgreementTypeTerms = 0,
-/// policy 隐私政策
-  A4xAgreementTypePolicy = 1,
-/// awareness
-  A4xAgreementTypeAwareness = 2,
-/// awareness 订阅
-  A4xAgreementTypeSubscription = 3,
-};
-
 @class AnalysisModelBean;
 
 SWIFT_CLASS("_TtC18SmartDeviceCoreSDK19A4xAnalysisResponse")
@@ -336,14 +324,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) A4xAppGroupI
 @end
 
 
-SWIFT_CLASS("_TtC18SmartDeviceCoreSDK29A4xBaseAccountCenterInterface")
-@interface A4xBaseAccountCenterInterface : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) A4xBaseAccountCenterInterface * _Nonnull shared;)
-+ (A4xBaseAccountCenterInterface * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
 SWIFT_CLASS("_TtC18SmartDeviceCoreSDK23A4xBaseAddressViewModel")
 @interface A4xBaseAddressViewModel : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
@@ -388,23 +368,11 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK14A4xBaseManager")
 @interface A4xBaseManager : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) A4xBaseManager * _Nonnull shared;)
 + (A4xBaseManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
-@property (nonatomic, readonly, copy) NSString * _Nonnull a4xVersion;
-@property (nonatomic, readonly, copy) NSString * _Nonnull a4xDate;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-- (id _Nonnull)copy SWIFT_WARN_UNUSED_RESULT;
-- (id _Nonnull)mutableCopy SWIFT_WARN_UNUSED_RESULT;
 - (NSString * _Nonnull)getLocalStringWithKey:(NSString * _Nonnull)key param:(NSArray<NSString *> * _Nonnull)param SWIFT_WARN_UNUSED_RESULT;
-- (NSArray<NSValue *> * _Nonnull)matchStrRange:(NSString * _Nonnull)matchStr SWIFT_WARN_UNUSED_RESULT;
 /// 判断是不是Debug环境
 /// @return Bool - true:是debug环境 false:不是debug环境
 - (BOOL)checkIsDebug SWIFT_WARN_UNUSED_RESULT;
-/// 推送设置校验是否正确
-/// ToDo:可以拆分到A4xVideoPushManager中，在A4xVideoPushManager.podspec中添加：
-/// s.dependency ‘SmartBaseSDK’
-/// s.dependency ‘A4xNetwork’
-/// 的依赖，由于SmartBaseSDK、A4xNetwork还未独立成仓，暂时放在base层中。
-- (BOOL)checkPushIsRightWithUserInfo:(NSDictionary * _Nonnull)userInfo SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -433,33 +401,6 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK19A4xBasePhotoManager")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-enum A4xSDKPayType : NSInteger;
-
-SWIFT_CLASS("_TtC18SmartDeviceCoreSDK18A4xBaseThemeConfig")
-@interface A4xBaseThemeConfig : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) A4xBaseThemeConfig * _Nonnull shared;)
-+ (A4xBaseThemeConfig * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
-@property (nonatomic) enum A4xSDKPayType sdkPayType;
-/// App仅在国内上线的tenantIds,不支持苹果的Voice-Over-Time-Protocal
-@property (nonatomic, copy) NSArray<NSString *> * _Nonnull supportArray_CN;
-- (BOOL)supportCN SWIFT_WARN_UNUSED_RESULT;
-/// 设置绑定支持Wi-Fi 或 有线
-/// 0,默认支持Wi-Fi 和 有线；1，仅支持Wi-Fi；2，仅支持有线
-- (NSInteger)supportBindType SWIFT_WARN_UNUSED_RESULT;
-/// 设置绑定支持常电 或 低功耗
-/// 0,默认支持常电和低功耗；1，仅支持低功耗；2，仅支持常电
-- (NSInteger)supportDeviceType SWIFT_WARN_UNUSED_RESULT;
-/// 用户设置页 – 顶部主题色对应的tenantId
-@property (nonatomic, copy) NSArray<NSString *> * _Nonnull userSettingTopThemeColorTenantIds;
-/// A4xUserVipDetailViewController页面用于判断是单设备维度、用户维度
-@property (nonatomic, copy) NSArray<NSString *> * _Nonnull payDetailDesByDevice;
-/// OEM App FAQ List
-@property (nonatomic, copy) NSDictionary<NSString *, NSString *> * _Nonnull faqList;
-/// OEM Login Header BgPic
-@property (nonatomic, copy) NSDictionary<NSString *, NSString *> * _Nonnull OEMList;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
 @class UIImage;
 
 SWIFT_CLASS("_TtC18SmartDeviceCoreSDK21A4xBaseVideoImageTool")
@@ -468,12 +409,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) A4xBaseVideo
 + (A4xBaseVideoImageTool * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 - (void)saveThumbsImageWithKey:(NSString * _Nonnull)key image:(UIImage * _Nonnull)image;
 - (void)removeThumbsImageWithKey:(NSString * _Nonnull)key;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC18SmartDeviceCoreSDK26A4xBaseViewCornerRedisUtil")
-@interface A4xBaseViewCornerRedisUtil : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1240,24 +1175,6 @@ typedef SWIFT_ENUM(NSInteger, A4xSDKModuleType, open) {
   A4xSDKModuleTypeSetting = 3,
 };
 
-/// 支付套餐名字，如果是HG则直接返回后端的tierName字段，其他都根据tierID去取值
-typedef SWIFT_ENUM(NSInteger, A4xSDKPayType, open) {
-/// 默认
-  A4xSDKPayTypeDefault = 0,
-/// OEM
-  A4xSDKPayTypeOEM_HG = 1,
-};
-
-/// 底部Tabbar页面使用的定制类型
-typedef SWIFT_ENUM(NSInteger, A4xSDKTabbarType, open) {
-/// 默认主题,即MainTheme,没有探索,正常排序
-  A4xSDKTabbarTypeDefault = 0,
-/// 探索在第一个
-  A4xSDKTabbarTypeExploreAtFirst = 1,
-/// 探索在第一个
-  A4xSDKTabbarTypeExploreAtLast = 2,
-};
-
 typedef SWIFT_ENUM(NSInteger, A4xSDKThemeType, open) {
 /// 默认
   A4xSDKThemeTypeDefault = 0,
@@ -1265,19 +1182,12 @@ typedef SWIFT_ENUM(NSInteger, A4xSDKThemeType, open) {
   A4xSDKThemeTypeTheme1 = 1,
 };
 
-
-SWIFT_CLASS("_TtC18SmartDeviceCoreSDK22A4xSDStateItemResponse")
-@interface A4xSDStateItemResponse : NSObject
-@property (nonatomic) BOOL hasVideo;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
+@class HaveRecordDayResponse;
 
 SWIFT_CLASS("_TtC18SmartDeviceCoreSDK23A4xSDStateModelResponse")
 @interface A4xSDStateModelResponse : NSObject
-- (nonnull instancetype)initWithVideoInfo:(NSArray<A4xSDStateItemResponse *> * _Nullable)videoInfo OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic, copy) NSArray<A4xSDStateItemResponse *> * _Nullable videoInfo;
+- (nonnull instancetype)initWithVideoInfo:(NSArray<HaveRecordDayResponse *> * _Nullable)videoInfo OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, copy) NSArray<HaveRecordDayResponse *> * _Nullable videoInfo;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1386,27 +1296,6 @@ typedef SWIFT_ENUM(NSInteger, A4xVideoTag, open) {
   A4xVideoTagDoorbell_remove = 8192,
   A4xVideoTagBird = 16384,
 };
-
-
-SWIFT_CLASS("_TtC18SmartDeviceCoreSDK17A4xVideoTimeModel")
-@interface A4xVideoTimeModel : NSObject
-- (nonnull instancetype)initWithStart:(int64_t)start end:(int64_t)end OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic) int64_t start;
-@property (nonatomic) int64_t end;
-- (NSString * _Nonnull)log SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-SWIFT_CLASS("_TtC18SmartDeviceCoreSDK25A4xVideoTimeModelResponse")
-@interface A4xVideoTimeModelResponse : NSObject
-@property (nonatomic, copy) NSArray<A4xVideoTimeModel *> * _Nullable videoSlices;
-@property (nonatomic, strong) A4xVideoTimeModel * _Nullable earliestVideoSlice;
-- (nonnull instancetype)initWithVideoSlices:(NSArray<A4xVideoTimeModel *> * _Nullable)videoSlices earliestVideoSlice:(A4xVideoTimeModel * _Nullable)earliestVideoSlice OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
 
 
 SWIFT_CLASS("_TtC18SmartDeviceCoreSDK24A4xWebSocketMessageModel")
@@ -2505,6 +2394,14 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK20FilterTagDeviceModel")
 
 
 
+SWIFT_CLASS("_TtC18SmartDeviceCoreSDK21HaveRecordDayResponse")
+@interface HaveRecordDayResponse : NSObject
+@property (nonatomic) BOOL hasVideo;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_PROTOCOL("_TtP18SmartDeviceCoreSDK17IBindtateListener_")
 @protocol IBindtateListener
 @optional
@@ -2722,6 +2619,8 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK19LiveManagerInstance")
 @end
 
 @protocol LivePlayer;
+@class VideoTimeModel;
+@class VideoTimeModelResponse;
 
 @interface LiveManagerInstance (SWIFT_EXTENSION(SmartDeviceCoreSDK))
 - (id <LivePlayer> _Nullable)creatLivePlayerWithSerialNumber:(NSString * _Nonnull)serialNumber customParam:(NSDictionary<NSString *, id> * _Nullable)customParam SWIFT_WARN_UNUSED_RESULT;
@@ -2745,10 +2644,10 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK19LiveManagerInstance")
 - (void)setPreLocationPointWithDeviceId:(NSString * _Nonnull)deviceId coordinate:(NSString * _Nonnull)coordinate customParam:(NSDictionary<NSString *, id> * _Nullable)customParam onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
 - (void)stopLiveWithDeviceId:(NSString * _Nonnull)deviceId customParam:(NSDictionary<NSString *, id> * _Nullable)customParam;
 - (void)destroyLiveWithDeviceId:(NSString * _Nonnull)deviceId customParam:(NSDictionary<NSString *, id> * _Nullable)customParam;
-- (void)getSdHasVideoDaysWithDeviceId:(NSString * _Nonnull)deviceId startTime:(NSTimeInterval)startTime videoslices:(NSArray<A4xVideoTimeModel *> * _Nullable)videoslices customParam:(NSDictionary<NSString *, id> * _Nullable)customParam comple:(void (^ _Nonnull)(A4xSDStateModelResponse * _Nullable))comple SWIFT_DEPRECATED_MSG("SDK 2.0 End-of-life");
-- (void)getSDVideoListWithDeviceId:(NSString * _Nonnull)deviceId startTime:(NSTimeInterval)startTime stopTime:(NSTimeInterval)stopTime customParam:(NSDictionary<NSString *, id> * _Nullable)customParam :(void (^ _Nonnull)(A4xVideoTimeModelResponse * _Nonnull, enum A4xSDVideoError))completionCallback SWIFT_DEPRECATED_MSG("SDK 2.0 End-of-life");
-- (void)startSdcardWithDeviceId:(NSString * _Nonnull)deviceId startTime:(NSTimeInterval)startTime hasData:(BOOL)hasData audio:(BOOL)audio customParam:(NSDictionary<NSString *, id> * _Nullable)customParam SWIFT_DEPRECATED_MSG("SDK 2.0 End-of-life");
-- (void)stopSdcardWithDeviceId:(NSString * _Nonnull)deviceId customParam:(NSDictionary<NSString *, id> * _Nullable)customParam SWIFT_DEPRECATED_MSG("SDK 2.0 End-of-life");
+- (void)getSdHasVideoDaysWithDeviceId:(NSString * _Nonnull)deviceId startTime:(NSTimeInterval)startTime videoslices:(NSArray<VideoTimeModel *> * _Nullable)videoslices customParam:(NSDictionary<NSString *, id> * _Nullable)customParam comple:(void (^ _Nonnull)(A4xSDStateModelResponse * _Nullable))comple SWIFT_DEPRECATED_MSG("SDK 2.0 End-of-life");
+- (void)getSDVideoListWithDeviceId:(NSString * _Nonnull)deviceId startTime:(NSTimeInterval)startTime stopTime:(NSTimeInterval)stopTime customParam:(NSDictionary<NSString *, id> * _Nullable)customParam :(void (^ _Nonnull)(VideoTimeModelResponse * _Nonnull, enum A4xSDVideoError))completionCallback SWIFT_DEPRECATED_MSG("SDK 2.0 End-of-life");
+- (void)startSdcardWithDeviceId:(NSString * _Nonnull)deviceId startTime:(NSTimeInterval)startTime hasData:(BOOL)hasData audio:(BOOL)audio customParam:(NSDictionary<NSString *, id> * _Nullable)customParam;
+- (void)stopSdcardWithDeviceId:(NSString * _Nonnull)deviceId customParam:(NSDictionary<NSString *, id> * _Nullable)customParam;
 - (void)setRenderViewWithDeviceId:(NSString * _Nonnull)deviceId renderView:(UIView * _Nonnull)renderView customParam:(NSDictionary<NSString *, id> * _Nullable)customParam;
 - (void)reCreateRenderViewWithDeviceId:(NSString * _Nonnull)deviceId customParam:(NSDictionary<NSString *, id> * _Nullable)customParam;
 - (void)removeRenderViewWithDeviceId:(NSString * _Nonnull)deviceId customParam:(NSDictionary<NSString *, id> * _Nullable)customParam;
@@ -2812,9 +2711,9 @@ SWIFT_PROTOCOL("_TtP18SmartDeviceCoreSDK10LivePlayer_")
 - (void)setPreLocationPointWithCoordinate:(NSString * _Nonnull)coordinate onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
 - (void)stopLive;
 - (void)destroyLive;
-- (void)getSdHasVideoDaysWithStartTime:(NSTimeInterval)startTime videoslices:(NSArray<A4xVideoTimeModel *> * _Nullable)videoslices comple:(void (^ _Nonnull)(A4xSDStateModelResponse * _Nullable))comple;
-- (void)getSDVideoListWithStartTime:(NSTimeInterval)startTime stopTime:(NSTimeInterval)stopTime customParam:(NSDictionary<NSString *, id> * _Nullable)customParam :(void (^ _Nonnull)(A4xVideoTimeModelResponse * _Nonnull, enum A4xSDVideoError))completionCallback;
-- (void)startSdcardWithStartTime:(NSTimeInterval)startTime hasData:(BOOL)hasData audio:(BOOL)audio customParam:(NSDictionary<NSString *, id> * _Nullable)customParam;
+- (void)getSdHasVideoDaysWithStartTime:(int64_t)startTime endTime:(int64_t)endTime :(void (^ _Nonnull)(NSInteger, NSArray<HaveRecordDayResponse *> * _Nullable, NSString * _Nonnull))onSuccess :(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
+- (void)getSDVideoListWithStartTime:(int64_t)startTime stopTime:(int64_t)stopTime :(void (^ _Nonnull)(NSInteger, VideoTimeModelResponse * _Nullable, NSString * _Nonnull))onSuccess :(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
+- (void)startSdcardWithStartTime:(int64_t)startTime;
 - (void)stopSdcard;
 - (void)setRenderViewWithRenderView:(UIView * _Nonnull)renderView;
 - (void)reCreateRenderView;
@@ -2908,9 +2807,9 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK12NSLivePlayer")
 - (void)setPreLocationPointWithCoordinate:(NSString * _Nonnull)coordinate onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
 - (void)stopLive;
 - (void)destroyLive;
-- (void)getSdHasVideoDaysWithStartTime:(NSTimeInterval)startTime videoslices:(NSArray<A4xVideoTimeModel *> * _Nullable)videoslices comple:(void (^ _Nonnull)(A4xSDStateModelResponse * _Nullable))comple;
-- (void)getSDVideoListWithStartTime:(NSTimeInterval)startTime stopTime:(NSTimeInterval)stopTime customParam:(NSDictionary<NSString *, id> * _Nullable)customParam :(void (^ _Nonnull)(A4xVideoTimeModelResponse * _Nonnull, enum A4xSDVideoError))completionCallback;
-- (void)startSdcardWithStartTime:(NSTimeInterval)startTime hasData:(BOOL)hasData audio:(BOOL)audio customParam:(NSDictionary<NSString *, id> * _Nullable)customParam;
+- (void)getSdHasVideoDaysWithStartTime:(int64_t)startTime endTime:(int64_t)endTime :(void (^ _Nonnull)(NSInteger, NSArray<HaveRecordDayResponse *> * _Nullable, NSString * _Nonnull))onSuccess :(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
+- (void)getSDVideoListWithStartTime:(int64_t)startTime stopTime:(int64_t)stopTime :(void (^ _Nonnull)(NSInteger, VideoTimeModelResponse * _Nullable, NSString * _Nonnull))onSuccess :(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
+- (void)startSdcardWithStartTime:(int64_t)startTime;
 - (void)stopSdcard;
 - (void)setRenderViewWithRenderView:(UIView * _Nonnull)renderView;
 - (void)reCreateRenderView;
@@ -3441,6 +3340,27 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK19VideoAiFeedBackCore")
 - (void)fetchVideoFeedbackListWithTraceId:(NSString * _Nonnull)traceId onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull, QuestionFeedBackBean * _Nullable))onSuccess onFail:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onFail;
 - (void)commitVideoFeedbackWithTraceID:(NSString * _Nonnull)traceID reasionCode:(NSArray<NSNumber *> * _Nonnull)reasionCode remark:(NSString * _Nullable)remark onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onSuccess onFail:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onFail;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC18SmartDeviceCoreSDK14VideoTimeModel")
+@interface VideoTimeModel : NSObject
+- (nonnull instancetype)initWithStart:(int64_t)start end:(int64_t)end OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic) int64_t start;
+@property (nonatomic) int64_t end;
+- (NSString * _Nonnull)log SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC18SmartDeviceCoreSDK22VideoTimeModelResponse")
+@interface VideoTimeModelResponse : NSObject
+@property (nonatomic, copy) NSArray<VideoTimeModel *> * _Nullable videoSlices;
+@property (nonatomic, strong) VideoTimeModel * _Nullable earliestVideoSlice;
+- (nonnull instancetype)initWithVideoSlices:(NSArray<VideoTimeModel *> * _Nullable)videoSlices earliestVideoSlice:(VideoTimeModel * _Nullable)earliestVideoSlice OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 

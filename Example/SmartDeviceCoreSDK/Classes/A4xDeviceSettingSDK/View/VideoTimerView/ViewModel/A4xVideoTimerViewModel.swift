@@ -79,15 +79,15 @@ extension Date {
 class A4xVideoTimerViewModel {
     var loadDataUnits : Set<Int> = []
     var loadingUnits : Set<Int> = []
-    var dataSources : [A4xVideoTimeModel] = []
+    var dataSources : [VideoTimeModel] = []
     
-    private var loadMinDataBlock: ((_ fromDate : Date , _ toDate : Date , _ comple: @escaping ((_ isError: Bool, _ dateSourde: [A4xVideoTimeModel]?, _ fromDate: Date, _ toData: Date) -> Void))-> Void )
+    private var loadMinDataBlock: ((_ fromDate : Date , _ toDate : Date , _ comple: @escaping ((_ isError: Bool, _ dateSourde: [VideoTimeModel]?, _ fromDate: Date, _ toData: Date) -> Void))-> Void )
     
-    init(loadDataBlock: @escaping ((_ fromDate : Date , _ toDate : Date , _ comple : @escaping ((_ isError : Bool , _ dateSourde : [A4xVideoTimeModel]? ,_  fromDate : Date , _ toDate : Date) -> Void))-> Void )) {
+    init(loadDataBlock: @escaping ((_ fromDate : Date , _ toDate : Date , _ comple : @escaping ((_ isError : Bool , _ dateSourde : [VideoTimeModel]? ,_  fromDate : Date , _ toDate : Date) -> Void))-> Void )) {
         loadMinDataBlock = loadDataBlock
     }
     
-    var onDataSourcesChange : (([A4xVideoTimeModel]) -> Void)?
+    var onDataSourcesChange : (([VideoTimeModel]) -> Void)?
     
     func clearData() {
         loadDataUnits.removeAll()
@@ -96,7 +96,7 @@ class A4xVideoTimerViewModel {
     }
     
     
-    func loadData(currentTime: Date, maxTimeRange: TimeInterval, comple: @escaping (([A4xVideoTimeModel]) -> Void)) {
+    func loadData(currentTime: Date, maxTimeRange: TimeInterval, comple: @escaping (([VideoTimeModel]) -> Void)) {
         
         
         let checkLoadDatas = currentTime.checkLoadDate(maxTimeRange: Int64(maxTimeRange), loadHours: loadDataUnits.union(loadingUnits))
@@ -134,7 +134,7 @@ class A4xVideoTimerViewModel {
                 
                 strongSelf.loadDataUnits = strongSelf.loadDataUnits.union(datas)
                 
-                let array: Set<A4xVideoTimeModel> = Set(strongSelf.dataSources)
+                let array: Set<VideoTimeModel> = Set(strongSelf.dataSources)
                 
                 strongSelf.dataSources = Array(array.union(Set(dateSourde ?? []))).sorted { (t1, t2) -> Bool in
                     return t1.start ?? 0 < t2.start ?? 0

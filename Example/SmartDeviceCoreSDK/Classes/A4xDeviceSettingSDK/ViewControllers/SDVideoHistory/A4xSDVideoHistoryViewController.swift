@@ -44,11 +44,11 @@ class A4xSDVideoHistoryViewController: A4xBaseViewController {
     
     var isQuite: Bool = false
     
-    var earliestVideoSlice: A4xVideoTimeModel?
+    var earliestVideoSlice: VideoTimeModel?
     
     var mLivePlayer: LivePlayer?
     
-    var hasDaysBlock: ((_ isScuess: Bool, _ dateSource: [A4xVideoTimeModel]?) -> Void)?
+    var hasDaysBlock: ((_ isScuess: Bool, _ dateSource: [VideoTimeModel]?) -> Void)?
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -237,13 +237,13 @@ class A4xSDVideoHistoryViewController: A4xBaseViewController {
     private var isFirstData: Bool = false
     
     // 加载列表信息: 先获取列表数据，再获取本年的日历数据
-    func loadVideoData(from: TimeInterval, toDate: TimeInterval, comple: @escaping (_ isScuess: Bool, _ dateSourde: [A4xVideoTimeModel]?) -> Void) {
+    func loadVideoData(from: TimeInterval, toDate: TimeInterval, comple: @escaping (_ isScuess: Bool, _ dateSourde: [VideoTimeModel]?) -> Void) {
         
         hasDaysBlock = comple
         
         logDebug("-----------> SDVideoHistoryView loadVideoData fromDate: \(from)  fromDate(1970世界时间): \(Date.init(timeIntervalSince1970: from)) toDate: \(toDate) toDate(1970世界时间): \(Date.init(timeIntervalSince1970: toDate))")
         
-        let resultBlock: (A4xVideoTimeModelResponse)->Void = { [weak self] model in
+        let resultBlock: (VideoTimeModelResponse)->Void = { [weak self] model in
             UIApplication.shared.keyWindow?.hideToastActivity(block: {})
 
             var hasLoadData: Bool = false
@@ -270,18 +270,17 @@ class A4xSDVideoHistoryViewController: A4xBaseViewController {
         }
         
         isFirstData = self.hasDataDates.count == 0
-        
+        weak var weakSelf = self
         if deviceModel!.isWebRtcDevice {
-            
-            mLivePlayer?.getSDVideoList(startTime: from, stopTime: toDate, customParam: ["apToken" : deviceModel?.apModeModel?.aptoken ?? ""], { [weak self] sliceModel, error in
-                onMainThread {
-                    resultBlock(sliceModel)
-                    if error  != .none {
-                        self?.sdErrorLimit(error: error)
-                        return
-                    }
-                }
-            })
+            onMainThread {
+                weakSelf?.mLivePlayer?.getSDVideoList(startTime: Int64(from), stopTime: Int64(toDate), { code, model, message in
+                    resultBlock(model ?? VideoTimeModelResponse())
+                }, { code, message in
+                    resultBlock(VideoTimeModelResponse())
+                    weakSelf?.sdErrorLimit(error: A4xSDVideoError(rawValue: code) ?? .none)
+                    return
+                })
+            }
         } else {
             A4xBaseLiveInterface.shared.ijk_sdVideo(deviceId: self.deviceModel?.serialNumber ?? "", from: from, toDate: toDate) { (code, msg, model) in
                 if code == 0 {
@@ -296,7 +295,7 @@ class A4xSDVideoHistoryViewController: A4xBaseViewController {
     }
     
     // 加载sd卡列表视频数据
-    private func loadAllDates(startTime: TimeInterval, videoslices: [A4xVideoTimeModel]?) {
+    private func loadAllDates(startTime: TimeInterval, videoslices: [VideoTimeModel]?) {
         guard let deviceModle = self.deviceModel else {
             return
         }
@@ -332,15 +331,15 @@ class A4xSDVideoHistoryViewController: A4xBaseViewController {
         
         let requestData = A4xSDStateModelRequest(endTime: startTime)
         
-        mLivePlayer?.getSdHasVideoDays(startTime: startTime, videoslices: [], comple: { [weak self] data in
+        var stopDate: Int64 = Int64((Date.endOfCurrentMonth(returnEndTime: true).timeIntervalSince1970))
+        mLivePlayer?.getSdHasVideoDays(startTime: Int64(startTime), endTime: stopDate, {[weak self] code, model, message in
             onMainThread {
                 self?.hasDataDatesStartTime = requestData.startTime
-                var videoSlices: [A4xVideoTimeModel] = []
-                data?.videoInfo?.forEach({ (model) in
+                var videoSlices: [VideoTimeModel] = []
+                model?.forEach({ (model) in
                     if let start = model.startTime {
                         let currentStr = Date(timeIntervalSince1970: TimeInterval(start)).dateString()
-                        logDebug("-----------> hasDataDates currentStr: \(currentStr)")
-                        let tmpModel = A4xVideoTimeModel()
+                        let tmpModel = VideoTimeModel()
                         tmpModel.start = Int64(model.startTime ?? 0)
                         videoSlices.append(tmpModel)
                         self?.hasDataDates.insert(currentStr)
@@ -364,7 +363,10 @@ class A4xSDVideoHistoryViewController: A4xBaseViewController {
                 self?.calendar.reloadData()
              
             }
+        }, { code, message in
+            SmartDeviceLogger.debug("A4xSDVideoHistoryViewController", message: "failed ! code: \(code)")
         })
+
     }
     
     private func loadNavtion() {
@@ -599,7 +601,7 @@ extension A4xSDVideoHistoryViewController: FSCalendarDelegate, FSCalendarDataSou
         let (vdata, date) = timeControlView.timerView.hasDataDate(date: defaultData)
         
         
-        mLivePlayer?.startSdcard(startTime: date.timeIntervalSince1970, hasData: vdata != nil, audio: true, customParam: ["live_player_type" : "sd_half"])
+        mLivePlayer?.startSdcard(startTime: Int64(date.timeIntervalSince1970))
     }
     
     func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
@@ -821,7 +823,7 @@ extension A4xSDVideoHistoryViewController: A4xVideoTimerViewProtocol {
     
     func timerView(timerView: A4xVideoTimerView, willSelectDate date: Date) {}
     
-    func timerView(timerView: A4xVideoTimerView, didSelectDate date: Date, inData: A4xVideoTimeModel?) {
+    func timerView(timerView: A4xVideoTimerView, didSelectDate date: Date, inData: VideoTimeModel?) {
         
         guard self.deviceModel != nil else {
             return
@@ -841,7 +843,7 @@ extension A4xSDVideoHistoryViewController: A4xVideoTimerViewProtocol {
         }
         timeControlView.currentIsChange = true
         
-        mLivePlayer?.startSdcard(startTime: date.timeIntervalSince1970, hasData: inData != nil, audio: true, customParam: ["live_player_type" : "sd_half"])
+        mLivePlayer?.startSdcard(startTime: Int64(date.timeIntervalSince1970))
         
         logDebug("timerView \(date) \(inData != nil)")
     }
@@ -915,7 +917,7 @@ extension A4xSDVideoHistoryViewController: A4xSDLocalVideoViewProtocol {
         isFirstData = false
         comple(true)
         // 包含sd卡的起始和结束时间
-        mLivePlayer?.startSdcard(startTime: date.timeIntervalSince1970, hasData: videoData != nil, audio: true, customParam: ["live_player_type" : "sd_half"])
+        mLivePlayer?.startSdcard(startTime: Int64(date.timeIntervalSince1970))
     }
     
     // sd卡回看点击暂停按钮

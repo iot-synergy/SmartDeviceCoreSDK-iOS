@@ -154,7 +154,7 @@ extension LanguageViewController : UITableViewDelegate , UITableViewDataSource {
         self.view.makeToastActivity(title: A4xBaseManager.shared.getLocalString(key: "loading")) { (f) in }
         weak var weakSelf = self
         
-        A4xBaseAccountCenterInterface.shared.updateAppLanguage(name: type) { (code, msg, res) in
+        A4xBaseAppLanguageType.updateAppLanguage(name: type) { (code, msg, res) in
             weakSelf?.view.hideToastActivity(block: {})
             if code == 0 {
                 

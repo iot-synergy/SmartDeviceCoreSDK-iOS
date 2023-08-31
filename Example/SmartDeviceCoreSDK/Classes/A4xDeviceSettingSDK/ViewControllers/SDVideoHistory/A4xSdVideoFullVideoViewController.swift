@@ -50,7 +50,7 @@ class A4xSdVideoFullVideoViewController: A4xBaseViewController {
     }
     
     var currentStartPlayDate : Date?
-    var nextCanPlayData : ((Date?) -> (Date ,A4xVideoTimeModel?))?
+    var nextCanPlayData : ((Date?) -> (Date ,VideoTimeModel?))?
     /// 定义SD全屏返回的block
     var isBackFromSDFullBlock : ((Bool) -> Void)?
     var endPlayDate : TimeInterval = Date().timeIntervalSince1970
@@ -239,7 +239,7 @@ extension A4xSdVideoFullVideoViewController : A4xSDLocalVideoFullViewProtocol {
             return
         }
         
-        self.mLivePlayer?.startSdcard(startTime: date.timeIntervalSince1970, hasData: playData != nil, audio: true, customParam: ["videoScale" : A4xPlayerViewScale.aspectFit, "live_player_type" : "sd_full"])
+        self.mLivePlayer?.startSdcard(startTime: Int64(date.timeIntervalSince1970))
     }
     
     /// SD视频全屏返回

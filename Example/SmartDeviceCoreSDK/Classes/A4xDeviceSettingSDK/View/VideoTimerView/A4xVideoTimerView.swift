@@ -303,7 +303,7 @@ class A4xVideoTimerView: UIView, UIScrollViewDelegate {
 extension A4xVideoTimerView : A4xVideoTimerViewInterface {
   
     
-    func timerCurrentInfo(date: Date? = nil) -> (Date, A4xVideoTimeModel?) {
+    func timerCurrentInfo(date: Date? = nil) -> (Date, VideoTimeModel?) {
         let currentDate = (date == nil ? self.selectDate : date)
         let (currentData, date) = self.timerView.hasDataDate(date: currentDate ?? Date())
         return (date, currentData)

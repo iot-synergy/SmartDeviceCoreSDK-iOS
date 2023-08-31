@@ -126,30 +126,6 @@ public struct A4xAccountDisturbModel : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-public enum A4xAiDemoAPI : Swift.String {
-  case liveUrl
-  case region
-  case click_point
-  case stop
-  public static func getPath(service: SmartDeviceCoreSDK.A4xAiDemoModel) -> Swift.String
-  public static func getParam(service: SmartDeviceCoreSDK.A4xAiDemoModel) -> Foundation.Data?
-  public static func getMethod(service: SmartDeviceCoreSDK.A4xAiDemoModel) -> SmartDeviceCoreSDK.Method
-  public static func getURL(service: SmartDeviceCoreSDK.A4xAiDemoModel) -> Foundation.URL
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public struct ADAiPointModel : Swift.Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
-public struct ADAiDemoRequstModel : Swift.Codable {
-  public init()
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
 @objc @objcMembers public class A4xAnalysisResponse : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(deviceName: Swift.String? = nil, serialNumber: Swift.String? = nil, list: [SmartDeviceCoreSDK.AnalysisModelBean]? = nil)
   @objc public var deviceName: Swift.String?
@@ -266,11 +242,6 @@ public struct A4xAppBuildConfig : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-public struct A4xSaveKey {
-  public static let A4xDeviceListChangeNotificationKey: Foundation.NSNotification.Name
-  public static let A4xAlexaScuessNotificationKey: Foundation.NSNotification.Name
-  public static let A4xFromPushNotificationKey: Foundation.NSNotification.Name
-}
 public struct A4xAppErrorConfig {
   public init(code: Swift.Int? = nil)
   public var code: Swift.Int?
@@ -307,198 +278,6 @@ public struct A4xBaseErrorUnit {
   public static func accountMessage(code: Swift.Int) -> (Swift.String?, SmartDeviceCoreSDK.A4xAccountErrorType?)
   public static func addAccountCompleBlock(type: SmartDeviceCoreSDK.A4xAccountErrorType, Tag tag: Swift.String, block: @escaping (Swift.String) -> Swift.Void)
   public static func removeBlock(Tag tag: Swift.String)
-}
-public enum A4xAppEventAPI : Swift.String {
-  case logAppEvent
-  case logAppError
-  case logOtaCheck
-  case logOtaStart
-  case logOtaProgress
-  case logOtaResult
-  public static func getPath(service: SmartDeviceCoreSDK.AppEventMoudel) -> Swift.String
-  public static func getParam(service: SmartDeviceCoreSDK.AppEventMoudel) -> Foundation.Data?
-  public static func getMethod(service: SmartDeviceCoreSDK.AppEventMoudel) -> SmartDeviceCoreSDK.Method
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public struct AppEvnetAPIModel : Swift.Codable {
-  public var eventType: Swift.Int?
-  public var id: Swift.Int?
-  public var key: Swift.String?
-  public var language: Swift.String?
-  public var tenantId: Swift.String?
-  public var appName: Swift.String?
-  public var albumName: Swift.String?
-  public var regionCode: Swift.String?
-  public var buildEnv: Swift.String?
-  public var app_version: Swift.String?
-  public var build_version: Swift.String?
-  public var country: Swift.String?
-  public var osVersion: Swift.String?
-  public var cacheState: Swift.String?
-  public var push_permissions: Swift.String?
-  public var imgUrl: Swift.String?
-  public var interval: Swift.String?
-  public var downLoadSuccess: Swift.String?
-  public var adminId: Swift.Int?
-  public var user_name: Swift.String?
-  public var user_id: Swift.String?
-  public var user_phone: Swift.String?
-  public var user_email: Swift.String?
-  public var network: Swift.String?
-  public var error_tips: Swift.String?
-  public var err_code: Swift.String?
-  public var err_info: Swift.String?
-  public var currentTime: Swift.String?
-  public var current_user_time: Swift.String?
-  public var current_page_name: Swift.String?
-  public var api: Swift.String?
-  public var push_selected: Swift.String?
-  public var video_duration: Swift.String?
-  public var video_duration_sum: Swift.String?
-  public var video_size: Swift.String?
-  public var video_size_sum: Swift.String?
-  public var videoId: Swift.String?
-  public var result: Swift.String?
-  public var error_msg: Swift.String?
-  public var hidden_reason: Swift.String?
-  public var tags: Swift.String?
-  public var video_type: Swift.String?
-  public var vertices: Swift.String?
-  public var zoneId: Swift.String?
-  public var full_type: Swift.String?
-  public var show_num: Swift.String?
-  public var card_show_num: Swift.String?
-  public var page_on_time: Swift.String?
-  public var source: Swift.String?
-  public var pay_position: Swift.String?
-  public var subscribe_count: Swift.String?
-  public var type: Swift.String?
-  public var end_way: Swift.String?
-  public var selected_content: Swift.String?
-  public var pay_result: Swift.String?
-  public var redeem_result: Swift.String?
-  public var pay_type: Swift.String?
-  public var pay_content: Swift.String?
-  public var pay_price: Swift.String?
-  public var is_continuous_subscription: Swift.String?
-  public var order_info: Swift.String?
-  public var error_info: Swift.String?
-  public var user_status: Swift.String?
-  public var fetch_result: Swift.String?
-  public var error_key: Swift.String?
-  public var bird_free_result: Swift.String?
-  public var bird_free_content: Swift.String?
-  public var index: Swift.String?
-  public var auto_get_wifi: Swift.String?
-  public var bind_code: Swift.String?
-  public var bind_local_code: Swift.String?
-  public var bind_from: Swift.String?
-  public var bind_mode: Swift.String?
-  public var bluetooth_info: Swift.String?
-  public var selected_AP_info: Swift.String?
-  public var show_5G_wifi_error: Swift.String?
-  public var fill_way: Swift.String?
-  public var save_wifi: Swift.String?
-  public var count_save_wifi: Swift.String?
-  public var location_permission: Swift.String?
-  public var is_used_proxy: Swift.String?
-  public var is_open_vpn: Swift.String?
-  public var need_location_pop_window: Swift.String?
-  public var location_service: Swift.String?
-  public var failed_step: Swift.String?
-  public var auto_failed_code: Swift.String?
-  public var QRcode_type: Swift.String?
-  public var connect_result: Swift.String?
-  public var connect_device: Swift.String?
-  public var launch_way: Swift.String?
-  public var permissions: Swift.String?
-  public var select_error_button: Swift.String?
-  public var launch_button: Swift.String?
-  public var device_code: Swift.String?
-  public var upgrade_result: Swift.String?
-  public var error_result: Swift.String?
-  public var get_result_count: Swift.String?
-  public var QRcode_size: Swift.String?
-  public var status: Swift.String?
-  public var current_language: Swift.String?
-  public var wanted_language: Swift.String?
-  public var current_value: Swift.String?
-  public var wanted_value: Swift.String?
-  public var signal_strength: Swift.String?
-  public var wifi_signal_value: Swift.String?
-  public var bindErrorInfoList: Swift.String?
-  public var bind_network_ssid: Swift.String?
-  public var bluetooth: Swift.String?
-  public var local_network: Swift.String?
-  public var click_type: Swift.String?
-  public var sn: Swift.String?
-  public var msg: Swift.String?
-  public var reason_id: Swift.String?
-  public var connect_ssid: Swift.String?
-  public var connect_pwd: Swift.String?
-  public var wifi_input_source: Swift.String?
-  public var is_5g_wifi: Swift.String?
-  public var broadcast_info: Swift.String?
-  public var live_player_type: Swift.String?
-  public var stream_protocol: Swift.String?
-  public var current_is_fullscreen: Swift.String?
-  public var live_result: Swift.String?
-  public var is_retry: Swift.String?
-  public var retry_code: Swift.String?
-  public var error_code: Swift.String?
-  public var stream_duration: Swift.String?
-  public var stop_way: Swift.String?
-  public var wait_time: Swift.String?
-  public var is_p2p_channel_reconnect: Swift.String?
-  public var p2p_connection_type: Swift.String?
-  public var p2pinfo: Swift.String?
-  public var switch_status: Swift.String?
-  public var track_mode: Swift.String?
-  public var more_than_5: Swift.String?
-  public var get_point_failure_from_camera: Swift.String?
-  public var server_save_failure: Swift.String?
-  public var server_delete_failure: Swift.String?
-  public var cancel_by_user: Swift.String?
-  public var save_point_id: Swift.String?
-  public var storage_space: Swift.String?
-  public var from_resolution: Swift.String?
-  public var to_resolution: Swift.String?
-  public var connect_device_version: Swift.String?
-  public var connect_device_model: Swift.String?
-  public var download_speeds: Swift.String?
-  public var live_id: Swift.String?
-  public var peer_in_time: Swift.String?
-  public var play_start_time: Swift.String?
-  public var live_id_time: Swift.String?
-  public var button_type: Swift.String?
-  public var live_player_way: Swift.String?
-  public var is_replay: Swift.String?
-  public var connectLog: Swift.String?
-  public var standby: Swift.String?
-  public var localNetwork: Swift.String?
-  public var traceId: Swift.String?
-  public var ota_version: Swift.String?
-  public var ota_path: Swift.String?
-  public var ota_progress: Swift.String?
-  public var connect_device_state: Swift.String?
-  public var deviceName: Swift.String?
-  public var msg_id: Swift.String?
-  public var image_enable: Swift.String?
-  public var video_enable: Swift.String?
-  public var device_id: Swift.String?
-  public var library_id: Swift.String?
-  public var msgType: Swift.String?
-  public var phoneType: Swift.String?
-  public var time: Swift.String?
-  public var day: Swift.String?
-  public var libraryType: Swift.String?
-  public init()
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
 }
 @_inheritsConvenienceInitializers @objc open class A4xAppGroupIdManager : ObjectiveC.NSObject {
   @objc public static let shared: SmartDeviceCoreSDK.A4xAppGroupIdManager
@@ -549,25 +328,6 @@ public struct AppRemoveNodeModle : Swift.Codable {
   public init()
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
-}
-@_inheritsConvenienceInitializers @objc open class A4xBaseAccountCenterInterface : ObjectiveC.NSObject {
-  @objc public static let shared: SmartDeviceCoreSDK.A4xBaseAccountCenterInterface
-  public func getCountryList(_ language: Swift.String?, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: [SmartDeviceCoreSDK.A4xCountryModel]) -> Swift.Void)
-  public func getCountryQuery(_ name: Swift.String?, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: [SmartDeviceCoreSDK.A4xCountryModel]) -> Swift.Void)
-  public func requestRegister(account: Swift.String, isEmail: Swift.Bool, pwd: Swift.String, vaildCode: Swift.String, name: Swift.String, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: SmartDeviceCoreSDK.A4xUserDataModel?) -> Swift.Void)
-  public func userLogin(account: Swift.String, userPwd: Swift.String = "", isEmail: Swift.Bool, vaildCode: Swift.String, needLoadCode: Swift.Bool = false, loginType: SmartDeviceCoreSDK.A4xLoginType, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: SmartDeviceCoreSDK.A4xUserDataModel?) -> Swift.Void)
-  public func changeAccount(code: Swift.String, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: Swift.Bool?) -> Swift.Void)
-  public func updateUserPwd(oldPwd: Swift.String, newPwd: Swift.String, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: SmartDeviceCoreSDK.A4xUserDataModel?) -> Swift.Void)
-  public func resetPwd(account: Swift.String, isEmail: Swift.Bool, code: Swift.String, pwd: Swift.String, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: SmartDeviceCoreSDK.A4xUserDataModel?) -> Swift.Void)
-  public func updateAppLanguage(name: SmartDeviceCoreSDK.A4xBaseAppLanguageType, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: Swift.Bool?) -> Swift.Void)
-  public func userLoginOut(comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: Swift.Bool?) -> Swift.Void)
-  public func deleteAccount(comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: Swift.Bool?) -> Swift.Void)
-  public func validationPwd(pwd: Swift.String, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: Swift.Bool?) -> Swift.Void)
-  public func updateUserName(userName: Swift.String, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: Swift.Bool?) -> Swift.Void)
-  public func verificationCode(account: Swift.String, isEmail: Swift.Bool, vaildCode: Swift.String = "", codeType: SmartDeviceCoreSDK.A4xVerificationCodeType, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: Swift.Bool?) -> Swift.Void)
-  public func getZendeskToken(comple: @escaping (_ code: Swift.Int, _ message: Swift.String, _ result: Swift.String?) -> Swift.Void)
-  @objc override dynamic public init()
-  @objc deinit
 }
 public let A4xBaseActivityZonePointColorsValue: [Swift.Int]
 public struct A4xActivityZonePointsResponse : Swift.Codable {
@@ -629,6 +389,7 @@ public enum A4xBaseAppLanguageType : Swift.String {
   case cezch
   public static func language() -> SmartDeviceCoreSDK.A4xBaseAppLanguageType
   public static func tryUpdateServerLanguage()
+  public static func updateAppLanguage(name: SmartDeviceCoreSDK.A4xBaseAppLanguageType, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: Swift.Bool?) -> Swift.Void)
   public static func isSelectedLanguage() -> Swift.Bool
   public static func cleanSelectedLanguage()
   public static func configureUserNotifications()
@@ -765,8 +526,6 @@ extension SmartDeviceCoreSDK.OTABean {
   public func updatePackageDetectionPush(deviceId: Swift.String, enable: Swift.Bool, comple: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void)
   public func queryAiCapability(deviceCode: Swift.String, a4xAiLibVersion: Swift.String, comple: @escaping (_ code: Swift.Int, _ message: Swift.String?, _ model: SmartDeviceCoreSDK.MagicPixBean?) -> Swift.Void)
   public func updateAiCapability(deviceCode: Swift.String, magicPix: SmartDeviceCoreSDK.MagicPixBean, a4xAiLibVersion: Swift.String, comple: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void)
-  public func aiBoxPoint(point: CoreFoundation.CGPoint, comple: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void)
-  public func aiRectPoints(points: [CoreFoundation.CGPoint], comple: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void)
   public func queryReidNotifySetting(serialNumber: Swift.String, comple: @escaping (_ code: Swift.Int, _ message: Swift.String?, _ models: [SmartDeviceCoreSDK.A4xReIdPushModel]?) -> Swift.Void)
   public func updateReidNotifySetting(serialNumber: Swift.String, options: [SmartDeviceCoreSDK.DeviceVehicleAiModel], comple: @escaping (_ code: Swift.Int, _ message: Swift.String?, _ result: Swift.Bool?) -> Swift.Void)
   public func getShareId(deviceId: Swift.String, comple: @escaping (_ code: Swift.Int, _ message: Swift.String?, _ model: SmartDeviceCoreSDK.ShareDeviceBean?) -> Swift.Void)
@@ -822,7 +581,6 @@ extension SmartDeviceCoreSDK.A4xBaseFormatTool {
   public func searchAllPresetPosition(deviceId: Swift.String, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: SmartDeviceCoreSDK.A4xPresetModelResponse?) -> Swift.Void)
   public func ijk_startOldLive(deviceId: Swift.String, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: SmartDeviceCoreSDK.A4xLiveResultList?) -> Swift.Void)
   public func ijk_startLive(deviceId: Swift.String, resolution: Swift.String, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: SmartDeviceCoreSDK.A4xLiveResultList?) -> Swift.Void)
-  public func ijk_stopOldLive(deviceId: Swift.String, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: Swift.Bool?) -> Swift.Void)
   public func ijk_stopLive(deviceId: Swift.String, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: Swift.Bool?) -> Swift.Void)
   public func ijk_playSDVideo(deviceId: Swift.String, start: Foundation.TimeInterval, end: Foundation.TimeInterval, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: Swift.String?) -> Swift.Void)
   public func ijk_stopSDVideo(deviceId: Swift.String, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: Swift.Bool?) -> Swift.Void)
@@ -830,36 +588,22 @@ extension SmartDeviceCoreSDK.A4xBaseFormatTool {
   public func ijk_stopAudio(deviceId: Swift.String, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: Swift.Bool?) -> Swift.Void)
   public func ijk_setWhiteLightByNet(deviceId: Swift.String, enable: Swift.Bool, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: Swift.Bool?) -> Swift.Void)
   public func ijk_setLiveVideoQuality(deviceId: Swift.String, ratio: Swift.String, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: Swift.Bool?) -> Swift.Void)
-  public func ijk_getAiDemoUrl(deviceId: Swift.String, videoUrl: Swift.String, type: Swift.Int, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: SmartDeviceCoreSDK.A4xAiTestUrlModel?) -> Swift.Void)
-  public func ijk_sdVideo(deviceId: Swift.String, from: Foundation.TimeInterval, toDate: Foundation.TimeInterval, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: SmartDeviceCoreSDK.A4xVideoTimeModelResponse?) -> Swift.Void)
+  public func ijk_sdVideo(deviceId: Swift.String, from: Foundation.TimeInterval, toDate: Foundation.TimeInterval, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: SmartDeviceCoreSDK.VideoTimeModelResponse?) -> Swift.Void)
   @objc override dynamic public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc open class A4xBaseManager : ObjectiveC.NSObject {
+@_inheritsConvenienceInitializers @objc open class A4xBaseManager : ObjectiveC.NSObject {
   @objc public static let shared: SmartDeviceCoreSDK.A4xBaseManager
-  @objc final public let a4xVersion: Swift.String
-  @objc final public let a4xDate: Swift.String
   public var baseAdapter: SmartDeviceCoreSDK.BaseAdapterProtocol?
   public var mediaCodecAdapter: SmartDeviceCoreSDK.MediaCodecProtocol?
   public func setupBaseAdapter(adapterInstance: SmartDeviceCoreSDK.BaseAdapterProtocol?)
   public func setUpMediaCodecAdapter(adapterInstance: SmartDeviceCoreSDK.MediaCodecProtocol?)
-  @objc override dynamic open func copy() -> Any
-  @objc override dynamic open func mutableCopy() -> Any
   @objc public func getLocalString(key: Swift.String, param: [Swift.String] = []) -> Swift.String
-  public func getDeviceTypeString(deviceModelCategory: Swift.Int) -> Swift.String
-  public func getArticleUrl(articleId: Swift.String) -> Swift.String
-  public func getArticleUrlFromService(articleString: Swift.String) -> Swift.String
-  public func getAgreementURL(subjectType: SmartDeviceCoreSDK.A4xAgreementType) -> Swift.String
-  public func getBindSuccessGuideUrl() -> Swift.String
-  public func getIndoorUnitGuideUrl() -> Swift.String
-  public func getWebviewParams(deviceID: Swift.String) -> Swift.Dictionary<Swift.String, Any>
-  public func isRTL() -> Swift.Bool
-  @objc public func matchStrRange(_ matchStr: Swift.String) -> [Foundation.NSRange]
   open func setLanguage(by name: SmartDeviceCoreSDK.A4xBaseAppLanguageType, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String) -> Swift.Void)
   @objc open func checkIsDebug() -> Swift.Bool
-  @objc open func checkPushIsRight(userInfo: Swift.Dictionary<Swift.AnyHashable, Any>) -> Swift.Bool
   public func hookNet()
   public func getAccountInfo(comple: @escaping (_ code: Swift.Int?, _ msg: Swift.String?) -> Swift.Void)
+  @objc override dynamic public init()
   @objc deinit
 }
 public protocol A4xBaseNetworkIotManagerProtocol : AnyObject {
@@ -966,50 +710,6 @@ public class A4xBasePlayerLog {
   }
   public func logEvent(_ state: SmartDeviceCoreSDK.A4xPlayerLogType, newEvent: Swift.Bool = true)
 }
-@objc public enum A4xSDKTabbarType : Swift.Int {
-  case Default = 0
-  case ExploreAtFirst = 1
-  case ExploreAtLast = 2
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc public enum A4xSDKPayType : Swift.Int {
-  case Default = 0
-  case OEM_HG = 1
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc public enum A4xAgreementType : Swift.Int {
-  case terms = 0
-  case policy = 1
-  case awareness = 2
-  case subscription = 3
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc @_inheritsConvenienceInitializers public class A4xBaseThemeConfig : ObjectiveC.NSObject {
-  @objc public static let shared: SmartDeviceCoreSDK.A4xBaseThemeConfig
-  @objc public var sdkPayType: SmartDeviceCoreSDK.A4xSDKPayType
-  @objc public var supportArray_CN: [Swift.String]
-  @objc public func supportCN() -> Swift.Bool
-  @objc public func supportBindType() -> Swift.Int
-  @objc public func supportDeviceType() -> Swift.Int
-  @objc public var userSettingTopThemeColorTenantIds: [Swift.String]
-  @objc public var payDetailDesByDevice: [Swift.String]
-  @objc public var faqList: [Swift.String : Swift.String]
-  @objc public var OEMList: [Swift.String : Swift.String]
-  @objc override dynamic public init()
-  @objc deinit
-}
 public func onMainThread(block: @escaping (() -> Swift.Void))
 public func requestAccessForAudio(comple: @escaping (Swift.Bool) -> Swift.Void)
 public func openRecordServiceWithBlock(action: @escaping ((Swift.Bool) -> ()))
@@ -1043,22 +743,6 @@ public func thumbTimes(deviceID: Swift.String?) -> Foundation.TimeInterval
 public func thumbTimeUpdate(deviceID: Swift.String?, times: Foundation.TimeInterval? = nil)
 public func updateThumbImage(deviceID: Swift.String?, image: UIKit.UIImage, times: Foundation.TimeInterval? = nil, comple: ((Swift.Bool) -> Swift.Void)? = {_ in})
 public func removeThumb(deviceID: Swift.String?)
-public enum A4xCornerType : Swift.Int {
-  case all
-  case top
-  case bottom
-  case normal
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@_inheritsConvenienceInitializers @objc public class A4xBaseViewCornerRedisUtil : ObjectiveC.NSObject {
-  public static func setCornerRedis(view: UIKit.UIView, cornerType: SmartDeviceCoreSDK.A4xCornerType)
-  @objc override dynamic public init()
-  @objc deinit
-}
 @objc @_inheritsConvenienceInitializers public class A4xBaseWifiIotModel : ObjectiveC.NSObject {
   public var ssid: Swift.String?
   public var password: Swift.String?
@@ -1302,10 +986,8 @@ public class A4xCountryModel : Swift.Decodable, Swift.Encodable {
   public var id: Swift.String
   public var value: Swift.String
   public var pinyin: Swift.String?
-  public class func getCountryIndexs(models ms: [SmartDeviceCoreSDK.A4xCountryModel]?) -> Swift.Dictionary<Swift.String, [SmartDeviceCoreSDK.A4xCountryModel]>?
-  public class func getCountryList(_ language: Swift.String?, completion: @escaping (_ code: Swift.Int, _ data: [SmartDeviceCoreSDK.A4xCountryModel]) -> Swift.Void)
-  public class func getCountryQuery(_ name: Swift.String?, completion: @escaping (_ code: Swift.Int, _ data: [SmartDeviceCoreSDK.A4xCountryModel]) -> Swift.Void)
   public class func getCurrentCountryByCode(completion: @escaping (_ code: Swift.Int, _ data: [SmartDeviceCoreSDK.A4xCountryModel]) -> Swift.Void)
+  public class func getCountryQuery(_ name: Swift.String?, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: [SmartDeviceCoreSDK.A4xCountryModel]) -> Swift.Void)
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
@@ -2884,6 +2566,7 @@ public struct A4xNetNormaiModel : Swift.Codable {
   @objc open func requestURL() -> Swift.String
   @objc open func requestToken() -> Swift.String?
   public static func execute<T>(reqMoudelType: SmartDeviceCoreSDK.A4xNetMoudelType, resModelType: T.Type, completion: @escaping (_ result: SmartDeviceCoreSDK.NetResult<T>) -> Swift.Void) where T : Swift.Decodable, T : Swift.Encodable
+  public static func execute<T, Target>(target: Target, resModelType: T.Type, completion: @escaping (_ result: SmartDeviceCoreSDK.NetResult<T>) -> Swift.Void) where T : Swift.Decodable, T : Swift.Encodable, Target : SmartDeviceCoreSDK.TargetType
   @objc deinit
 }
 public enum A4xNetMoudelType {
@@ -2892,11 +2575,8 @@ public enum A4xNetMoudelType {
   case Location(_: SmartDeviceCoreSDK.LocationMoudel)
   case Library(_: SmartDeviceCoreSDK.LibraryMoudel)
   case LocalHost(_: SmartDeviceCoreSDK.LocalHostMoudel)
-  case aidemo(_: SmartDeviceCoreSDK.A4xAiDemoModel)
   case appMove(_: SmartDeviceCoreSDK.AppRemoveNodeMoudel)
-  case UserVip(_: SmartDeviceCoreSDK.A4xUserVipsMoudel)
   case DeviceControl(_: SmartDeviceCoreSDK.DeviceControlMoudel)
-  case AppEvents(_: SmartDeviceCoreSDK.AppEventMoudel)
   case Bird(_: SmartDeviceCoreSDK.BirdMoudel)
 }
 public protocol A4xNetMoudelProtocol {
@@ -3136,34 +2816,6 @@ public enum BirdMoudel : SmartDeviceCoreSDK.A4xNetMoudelProtocol {
   case queryBirdAiSetting(serialNumber: Swift.String)
   case updateBirdAiSetting(serialNumber: Swift.String, aiAnalyzeSwitch: Swift.Bool, aiNotifySwitch: Swift.Bool)
 }
-public enum A4xAiDemoModel : SmartDeviceCoreSDK.A4xNetMoudelProtocol {
-  case getAiUrl(url: Swift.String, id: Swift.String, type: Swift.Int)
-  case rectPoints(points: [CoreFoundation.CGPoint])
-  case boxPoint(point: CoreFoundation.CGPoint)
-  case stop(id: Swift.String)
-}
-public enum A4xUserVipsMoudel : SmartDeviceCoreSDK.A4xNetMoudelProtocol {
-  case order(productId: Swift.Int)
-  case verify(guidanceSource: Swift.Int?, orderId: Swift.String?, originOrder: Swift.String?, orderMsg: Swift.String, productId: Swift.Int, appleOrder: Swift.String?)
-  case restore(orderMsg: Swift.String?, orders: [Swift.String]?)
-  case productList(reqeustAdditionalTierNotCheckVip: Swift.Bool?)
-  case productTips
-  case planPrice(tierId: Swift.Int)
-  case vipInfo
-  case notify
-  case momoPay(productId: Swift.Int, partyId: Swift.String)
-  case momoCheck
-  case momoClosePay(orderSn: Swift.String)
-  case redeemCode(code: Swift.String)
-  case redeemCodeInfo(productId: Swift.Int64)
-  case buyList
-  case vipDiffList
-  case currentDeviceList
-  case deviceManageList
-  case updateVipDeviceManager(list: [SmartDeviceCoreSDK.A4xUserVipsRequstListModel])
-  case receiveVip
-  case receiveAddtionalTier(tierUid: Swift.String, productId: Swift.Int)
-}
 public enum DeviceControlMoudel : SmartDeviceCoreSDK.A4xNetMoudelProtocol {
   case saveRotationPoint(deviceId: Swift.String, coordinate: Swift.String, name: Swift.String, imageData: Foundation.Data)
   case delPresetPosition(deviceId: Swift.String, id: Swift.Int)
@@ -3176,13 +2828,8 @@ public enum AppRemoveNodeMoudel : SmartDeviceCoreSDK.A4xNetMoudelProtocol {
   case queryNode(userName: Swift.String)
   case sdkQueryNode
 }
-public enum AppEventMoudel : SmartDeviceCoreSDK.A4xNetMoudelProtocol {
-  case logAppEvent(model: SmartDeviceCoreSDK.AppEvnetAPIModel, param: [Swift.String : Any]? = [:])
-  case logAppError(model: SmartDeviceCoreSDK.AppEvnetAPIModel, param: [Swift.String : Any]? = [:])
-  case logOtaCheck(model: SmartDeviceCoreSDK.AppEvnetAPIModel, param: [Swift.String : Any]? = [:])
-  case logOtaStart(model: SmartDeviceCoreSDK.AppEvnetAPIModel, param: [Swift.String : Any]? = [:])
-  case logOtaProgress(model: SmartDeviceCoreSDK.AppEvnetAPIModel, param: [Swift.String : Any]? = [:])
-  case logOtaResult(model: SmartDeviceCoreSDK.AppEvnetAPIModel, param: [Swift.String : Any]? = [:])
+extension Foundation.Data {
+  public func appendHttpPublic() -> Foundation.Data?
 }
 extension Swift.String {
   public func md5() -> Swift.String
@@ -3633,13 +3280,13 @@ public struct A4xSDStateModelRequest : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
 }
 @objc @objcMembers public class A4xSDStateModelResponse : ObjectiveC.NSObject, Swift.Codable {
-  @objc public init(videoInfo: [SmartDeviceCoreSDK.A4xSDStateItemResponse]? = nil)
-  @objc public var videoInfo: [SmartDeviceCoreSDK.A4xSDStateItemResponse]?
+  @objc public init(videoInfo: [SmartDeviceCoreSDK.HaveRecordDayResponse]? = nil)
+  @objc public var videoInfo: [SmartDeviceCoreSDK.HaveRecordDayResponse]?
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
 }
-@objc @objcMembers public class A4xSDStateItemResponse : ObjectiveC.NSObject, Swift.Codable {
+@objc @objcMembers public class HaveRecordDayResponse : ObjectiveC.NSObject, Swift.Codable {
   public init(startTime: Swift.Double? = nil, hasVideo: Swift.Bool = false)
   public var startTime: Swift.Double?
   @objc public var hasVideo: Swift.Bool
@@ -4013,48 +3660,6 @@ public struct UserTokenModel : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-public enum A4xUserVipAPI : Swift.String {
-  case order
-  case verify
-  case restore
-  case vipInfo
-  case productList
-  case productTips
-  case planPrice
-  case notify
-  case redeemCode
-  case redeemCodeInfo
-  case momoPay
-  case momoCheck
-  case momoClosePay
-  case buyList
-  case vipDiffList
-  case currentDeviceList
-  case deviceManageList
-  case updateVipDeviceManager
-  case receiveVip
-  case receiveAddtionalTier
-  public static func getPath(service: SmartDeviceCoreSDK.A4xUserVipsMoudel) -> Swift.String
-  public static func getParam(service: SmartDeviceCoreSDK.A4xUserVipsMoudel) -> Foundation.Data?
-  public static func getMethod(service: SmartDeviceCoreSDK.A4xUserVipsMoudel) -> SmartDeviceCoreSDK.Method
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public struct A4xUserVipsRequstModel : Swift.Codable {
-  public init(receiptData: Swift.String? = nil, outTradeNo: Swift.String? = nil, productId: Swift.Int? = nil, tradeType: Swift.Int? = 0, tierId: Swift.Int? = nil, orders: [Swift.String]? = nil, transactionId: Swift.String? = nil, transactionOriginId: Swift.String? = nil, partyId: Swift.String? = nil, orderSn: Swift.String? = nil, code: Swift.String? = nil, id: Swift.Int64? = nil, reqeustAdditionalTierNotCheckVip: Swift.Bool? = nil, productVersion: Swift.Int? = nil, list: [SmartDeviceCoreSDK.A4xUserVipsRequstListModel]? = nil, guidanceSource: Swift.Int? = nil, tierUid: Swift.String? = nil)
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
-public struct A4xUserVipsRequstListModel : Swift.Codable {
-  public init(tierId: Swift.Int? = nil, activeDeviceSnList: [Swift.String]? = nil)
-  public var tierId: Swift.Int?
-  public var activeDeviceSnList: [Swift.String]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
 public struct A4xSubTierModel : Swift.Codable {
   public var tierId: Swift.Int?
   public var additionalTierUid: Swift.String?
@@ -4230,19 +3835,19 @@ public struct A4xUserVipModel : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
 }
-@objc @objcMembers public class A4xVideoTimeModelResponse : ObjectiveC.NSObject, Swift.Codable {
-  @objc public var videoSlices: [SmartDeviceCoreSDK.A4xVideoTimeModel]?
-  @objc public var earliestVideoSlice: SmartDeviceCoreSDK.A4xVideoTimeModel?
-  @objc public init(videoSlices: [SmartDeviceCoreSDK.A4xVideoTimeModel]? = nil, earliestVideoSlice: SmartDeviceCoreSDK.A4xVideoTimeModel? = nil)
+@objc @objcMembers public class VideoTimeModelResponse : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var videoSlices: [SmartDeviceCoreSDK.VideoTimeModel]?
+  @objc public var earliestVideoSlice: SmartDeviceCoreSDK.VideoTimeModel?
+  @objc public init(videoSlices: [SmartDeviceCoreSDK.VideoTimeModel]? = nil, earliestVideoSlice: SmartDeviceCoreSDK.VideoTimeModel? = nil)
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
 }
-@objc @objcMembers public class A4xVideoTimeModel : ObjectiveC.NSObject, Swift.Codable {
+@objc @objcMembers public class VideoTimeModel : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(start: Swift.Int64 = 0, end: Swift.Int64 = 0)
   @objc public var start: Swift.Int64
   @objc public var end: Swift.Int64
-  public static func == (lhs: SmartDeviceCoreSDK.A4xVideoTimeModel, rhs: SmartDeviceCoreSDK.A4xVideoTimeModel) -> Swift.Bool
+  public static func == (lhs: SmartDeviceCoreSDK.VideoTimeModel, rhs: SmartDeviceCoreSDK.VideoTimeModel) -> Swift.Bool
   @objc public func log() -> Swift.String
   @objc deinit
   public func encode(to encoder: Swift.Encoder) throws
@@ -4293,9 +3898,9 @@ public struct A4xUserVipModel : Swift.Codable {
   @objc func setPreLocationPoint(coordinate: Swift.String, onSuccess: @escaping SmartDeviceCoreSDK.onSuccess, onError: @escaping SmartDeviceCoreSDK.onError)
   @objc func stopLive()
   @objc func destroyLive()
-  @objc func getSdHasVideoDays(startTime: Foundation.TimeInterval, videoslices: [SmartDeviceCoreSDK.A4xVideoTimeModel]?, comple: @escaping (SmartDeviceCoreSDK.A4xSDStateModelResponse?) -> Swift.Void)
-  @objc func getSDVideoList(startTime: Foundation.TimeInterval, stopTime: Foundation.TimeInterval, customParam: [Swift.String : Any]?, _ completionCallback: @escaping ((_ sliceModel: SmartDeviceCoreSDK.A4xVideoTimeModelResponse, _ error: SmartDeviceCoreSDK.A4xSDVideoError) -> Swift.Void))
-  @objc func startSdcard(startTime: Foundation.TimeInterval, hasData: Swift.Bool, audio: Swift.Bool, customParam: [Swift.String : Any]?)
+  @objc func getSdHasVideoDays(startTime: Swift.Int64, endTime: Swift.Int64, _ onSuccess: @escaping (_ code: Swift.Int, _ model: [SmartDeviceCoreSDK.HaveRecordDayResponse]?, _ message: Swift.String) -> Swift.Void, _ onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
+  @objc func getSDVideoList(startTime: Swift.Int64, stopTime: Swift.Int64, _ onSuccess: @escaping (_ code: Swift.Int, _ model: SmartDeviceCoreSDK.VideoTimeModelResponse?, _ message: Swift.String) -> Swift.Void, _ onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
+  @objc func startSdcard(startTime: Swift.Int64)
   @objc func stopSdcard()
   @objc func setRenderView(renderView: UIKit.UIView)
   @objc func reCreateRenderView()
@@ -5947,37 +5552,6 @@ extension SmartDeviceCoreSDK.SettingMoudle : SmartDeviceCoreSDK.A4xNetTargetType
     get
   }
 }
-extension SmartDeviceCoreSDK.A4xAiDemoModel : SmartDeviceCoreSDK.A4xNetTargetTypeProtocol {
-  public var baseURL: Foundation.URL {
-    get
-  }
-  public var path: Swift.String {
-    get
-  }
-  public var method: SmartDeviceCoreSDK.Method {
-    get
-  }
-  public var sampleData: Foundation.Data {
-    get
-  }
-  public var task: SmartDeviceCoreSDK.Task {
-    get
-  }
-}
-extension SmartDeviceCoreSDK.A4xUserVipsMoudel : SmartDeviceCoreSDK.A4xNetTargetTypeProtocol {
-  public var path: Swift.String {
-    get
-  }
-  public var method: SmartDeviceCoreSDK.Method {
-    get
-  }
-  public var sampleData: Foundation.Data {
-    get
-  }
-  public var task: SmartDeviceCoreSDK.Task {
-    get
-  }
-}
 extension SmartDeviceCoreSDK.DeviceControlMoudel : SmartDeviceCoreSDK.A4xNetTargetTypeProtocol {
   public var path: Swift.String {
     get
@@ -5993,20 +5567,6 @@ extension SmartDeviceCoreSDK.DeviceControlMoudel : SmartDeviceCoreSDK.A4xNetTarg
   }
 }
 extension SmartDeviceCoreSDK.AppRemoveNodeMoudel : SmartDeviceCoreSDK.A4xNetTargetTypeProtocol {
-  public var path: Swift.String {
-    get
-  }
-  public var method: SmartDeviceCoreSDK.Method {
-    get
-  }
-  public var sampleData: Foundation.Data {
-    get
-  }
-  public var task: SmartDeviceCoreSDK.Task {
-    get
-  }
-}
-extension SmartDeviceCoreSDK.AppEventMoudel : SmartDeviceCoreSDK.A4xNetTargetTypeProtocol {
   public var path: Swift.String {
     get
   }
@@ -6233,9 +5793,9 @@ public protocol LiveManagerInstanceInterface {
   func stopLive(deviceId: Swift.String, customParam: [Swift.String : Any]?)
   func destroyLive(deviceId: Swift.String, customParam: [Swift.String : Any]?)
   @available(*, deprecated, message: "SDK 2.0 End-of-life")
-  func getSdHasVideoDays(deviceId: Swift.String, startTime: Foundation.TimeInterval, videoslices: [SmartDeviceCoreSDK.A4xVideoTimeModel]?, customParam: [Swift.String : Any]?, comple: @escaping (SmartDeviceCoreSDK.A4xSDStateModelResponse?) -> Swift.Void)
+  func getSdHasVideoDays(deviceId: Swift.String, startTime: Foundation.TimeInterval, videoslices: [SmartDeviceCoreSDK.VideoTimeModel]?, customParam: [Swift.String : Any]?, comple: @escaping (SmartDeviceCoreSDK.A4xSDStateModelResponse?) -> Swift.Void)
   @available(*, deprecated, message: "SDK 2.0 End-of-life")
-  func getSDVideoList(deviceId: Swift.String, startTime: Foundation.TimeInterval, stopTime: Foundation.TimeInterval, customParam: [Swift.String : Any]?, _ completionCallback: @escaping (_ sliceModel: SmartDeviceCoreSDK.A4xVideoTimeModelResponse, _ error: SmartDeviceCoreSDK.A4xSDVideoError) -> Swift.Void)
+  func getSDVideoList(deviceId: Swift.String, startTime: Foundation.TimeInterval, stopTime: Foundation.TimeInterval, customParam: [Swift.String : Any]?, _ completionCallback: @escaping (_ sliceModel: SmartDeviceCoreSDK.VideoTimeModelResponse, _ error: SmartDeviceCoreSDK.A4xSDVideoError) -> Swift.Void)
   @available(*, deprecated, message: "SDK 2.0 End-of-life")
   func startSdcard(deviceId: Swift.String, startTime: Foundation.TimeInterval, hasData: Swift.Bool, audio: Swift.Bool, customParam: [Swift.String : Any]?)
   @available(*, deprecated, message: "SDK 2.0 End-of-life")
@@ -6286,8 +5846,8 @@ extension SmartDeviceCoreSDK.LiveManagerInstanceInterface {
   public func setPreLocationPoint(deviceId: Swift.String, coordinate: Swift.String, onSuccess: @escaping SmartDeviceCoreSDK.onSuccess, onError: @escaping SmartDeviceCoreSDK.onError)
   public func stopLive(deviceId: Swift.String)
   public func destroyLive(deviceId: Swift.String)
-  public func getSdHasVideoDays(deviceId: Swift.String, startTime: Foundation.TimeInterval, videoslices: [SmartDeviceCoreSDK.A4xVideoTimeModel]?, comple: @escaping (SmartDeviceCoreSDK.A4xSDStateModelResponse?) -> Swift.Void)
-  public func getSDVideoList(deviceId: Swift.String, startTime: Foundation.TimeInterval, stopTime: Foundation.TimeInterval, _ completionCallback: @escaping (_ sliceModel: SmartDeviceCoreSDK.A4xVideoTimeModelResponse, _ error: SmartDeviceCoreSDK.A4xSDVideoError) -> Swift.Void)
+  public func getSdHasVideoDays(deviceId: Swift.String, startTime: Foundation.TimeInterval, videoslices: [SmartDeviceCoreSDK.VideoTimeModel]?, comple: @escaping (SmartDeviceCoreSDK.A4xSDStateModelResponse?) -> Swift.Void)
+  public func getSDVideoList(deviceId: Swift.String, startTime: Foundation.TimeInterval, stopTime: Foundation.TimeInterval, _ completionCallback: @escaping (_ sliceModel: SmartDeviceCoreSDK.VideoTimeModelResponse, _ error: SmartDeviceCoreSDK.A4xSDVideoError) -> Swift.Void)
   public func startSdcard(deviceId: Swift.String, startTime: Foundation.TimeInterval, hasData: Swift.Bool, audio: Swift.Bool)
   public func stopSdcard(deviceId: Swift.String)
   public func setRenderView(deviceId: Swift.String, renderView: UIKit.UIView)
@@ -6348,13 +5908,11 @@ extension SmartDeviceCoreSDK.LiveManagerInstance : SmartDeviceCoreSDK.LiveManage
   @objc dynamic public func stopLive(deviceId: Swift.String, customParam: [Swift.String : Any]?)
   @objc dynamic public func destroyLive(deviceId: Swift.String, customParam: [Swift.String : Any]?)
   @objc @available(*, deprecated, message: "SDK 2.0 End-of-life")
-  dynamic public func getSdHasVideoDays(deviceId: Swift.String, startTime: Foundation.TimeInterval, videoslices: [SmartDeviceCoreSDK.A4xVideoTimeModel]?, customParam: [Swift.String : Any]?, comple: @escaping (SmartDeviceCoreSDK.A4xSDStateModelResponse?) -> Swift.Void)
+  dynamic public func getSdHasVideoDays(deviceId: Swift.String, startTime: Foundation.TimeInterval, videoslices: [SmartDeviceCoreSDK.VideoTimeModel]?, customParam: [Swift.String : Any]?, comple: @escaping (SmartDeviceCoreSDK.A4xSDStateModelResponse?) -> Swift.Void)
   @objc @available(*, deprecated, message: "SDK 2.0 End-of-life")
-  dynamic public func getSDVideoList(deviceId: Swift.String, startTime: Foundation.TimeInterval, stopTime: Foundation.TimeInterval, customParam: [Swift.String : Any]?, _ completionCallback: @escaping (SmartDeviceCoreSDK.A4xVideoTimeModelResponse, _ error: SmartDeviceCoreSDK.A4xSDVideoError) -> Swift.Void)
-  @objc @available(*, deprecated, message: "SDK 2.0 End-of-life")
-  dynamic public func startSdcard(deviceId: Swift.String, startTime: Foundation.TimeInterval, hasData: Swift.Bool, audio: Swift.Bool, customParam: [Swift.String : Any]?)
-  @objc @available(*, deprecated, message: "SDK 2.0 End-of-life")
-  dynamic public func stopSdcard(deviceId: Swift.String, customParam: [Swift.String : Any]?)
+  dynamic public func getSDVideoList(deviceId: Swift.String, startTime: Foundation.TimeInterval, stopTime: Foundation.TimeInterval, customParam: [Swift.String : Any]?, _ completionCallback: @escaping (SmartDeviceCoreSDK.VideoTimeModelResponse, _ error: SmartDeviceCoreSDK.A4xSDVideoError) -> Swift.Void)
+  @objc dynamic public func startSdcard(deviceId: Swift.String, startTime: Foundation.TimeInterval, hasData: Swift.Bool, audio: Swift.Bool, customParam: [Swift.String : Any]?)
+  @objc dynamic public func stopSdcard(deviceId: Swift.String, customParam: [Swift.String : Any]?)
   @objc dynamic public func setRenderView(deviceId: Swift.String, renderView: UIKit.UIView, customParam: [Swift.String : Any]?)
   @objc dynamic public func reCreateRenderView(deviceId: Swift.String, customParam: [Swift.String : Any]?)
   @objc dynamic public func removeRenderView(deviceId: Swift.String, customParam: [Swift.String : Any]?)
@@ -6860,9 +6418,9 @@ extension CoreFoundation.CGFloat {
   @objc public func setPreLocationPoint(coordinate: Swift.String, onSuccess: @escaping SmartDeviceCoreSDK.onSuccess, onError: @escaping SmartDeviceCoreSDK.onError)
   @objc public func stopLive()
   @objc public func destroyLive()
-  @objc public func getSdHasVideoDays(startTime: Foundation.TimeInterval, videoslices: [SmartDeviceCoreSDK.A4xVideoTimeModel]?, comple: @escaping (SmartDeviceCoreSDK.A4xSDStateModelResponse?) -> Swift.Void)
-  @objc public func getSDVideoList(startTime: Foundation.TimeInterval, stopTime: Foundation.TimeInterval, customParam: [Swift.String : Any]?, _ completionCallback: @escaping ((SmartDeviceCoreSDK.A4xVideoTimeModelResponse, SmartDeviceCoreSDK.A4xSDVideoError) -> Swift.Void))
-  @objc public func startSdcard(startTime: Foundation.TimeInterval, hasData: Swift.Bool, audio: Swift.Bool, customParam: [Swift.String : Any]?)
+  @objc public func getSdHasVideoDays(startTime: Swift.Int64, endTime: Swift.Int64, _ onSuccess: @escaping (_ code: Swift.Int, _ model: [SmartDeviceCoreSDK.HaveRecordDayResponse]?, _ message: Swift.String) -> Swift.Void, _ onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
+  @objc public func getSDVideoList(startTime: Swift.Int64, stopTime: Swift.Int64, _ onSuccess: @escaping (_ code: Swift.Int, _ model: SmartDeviceCoreSDK.VideoTimeModelResponse?, _ message: Swift.String) -> Swift.Void, _ onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
+  @objc public func startSdcard(startTime: Swift.Int64)
   @objc public func stopSdcard()
   @objc public func setRenderView(renderView: UIKit.UIView)
   @objc public func reCreateRenderView()
@@ -7897,9 +7455,6 @@ extension SmartDeviceCoreSDK.ValidationType : Swift.Equatable {
 extension SmartDeviceCoreSDK.A4xAccountAPI : Swift.Equatable {}
 extension SmartDeviceCoreSDK.A4xAccountAPI : Swift.Hashable {}
 extension SmartDeviceCoreSDK.A4xAccountAPI : Swift.RawRepresentable {}
-extension SmartDeviceCoreSDK.A4xAiDemoAPI : Swift.Equatable {}
-extension SmartDeviceCoreSDK.A4xAiDemoAPI : Swift.Hashable {}
-extension SmartDeviceCoreSDK.A4xAiDemoAPI : Swift.RawRepresentable {}
 extension SmartDeviceCoreSDK.A4xHostNode : Swift.Equatable {}
 extension SmartDeviceCoreSDK.A4xHostNode : Swift.Hashable {}
 extension SmartDeviceCoreSDK.A4xHostNode : Swift.RawRepresentable {}
@@ -7912,9 +7467,6 @@ extension SmartDeviceCoreSDK.A4xBuildItems : Swift.RawRepresentable {}
 extension SmartDeviceCoreSDK.A4xAccountErrorType : Swift.Equatable {}
 extension SmartDeviceCoreSDK.A4xAccountErrorType : Swift.Hashable {}
 extension SmartDeviceCoreSDK.A4xAccountErrorType : Swift.RawRepresentable {}
-extension SmartDeviceCoreSDK.A4xAppEventAPI : Swift.Equatable {}
-extension SmartDeviceCoreSDK.A4xAppEventAPI : Swift.Hashable {}
-extension SmartDeviceCoreSDK.A4xAppEventAPI : Swift.RawRepresentable {}
 extension SmartDeviceCoreSDK.A4xAppRemoveAPI : Swift.Equatable {}
 extension SmartDeviceCoreSDK.A4xAppRemoveAPI : Swift.Hashable {}
 extension SmartDeviceCoreSDK.A4xAppRemoveAPI : Swift.RawRepresentable {}
@@ -7929,20 +7481,8 @@ extension SmartDeviceCoreSDK.A4xBasePhotoError : Swift.Hashable {}
 extension SmartDeviceCoreSDK.A4xPlayerConnectError : Swift.Equatable {}
 extension SmartDeviceCoreSDK.A4xPlayerConnectError : Swift.Hashable {}
 extension SmartDeviceCoreSDK.A4xPlayerConnectError : Swift.RawRepresentable {}
-extension SmartDeviceCoreSDK.A4xSDKTabbarType : Swift.Equatable {}
-extension SmartDeviceCoreSDK.A4xSDKTabbarType : Swift.Hashable {}
-extension SmartDeviceCoreSDK.A4xSDKTabbarType : Swift.RawRepresentable {}
-extension SmartDeviceCoreSDK.A4xSDKPayType : Swift.Equatable {}
-extension SmartDeviceCoreSDK.A4xSDKPayType : Swift.Hashable {}
-extension SmartDeviceCoreSDK.A4xSDKPayType : Swift.RawRepresentable {}
-extension SmartDeviceCoreSDK.A4xAgreementType : Swift.Equatable {}
-extension SmartDeviceCoreSDK.A4xAgreementType : Swift.Hashable {}
-extension SmartDeviceCoreSDK.A4xAgreementType : Swift.RawRepresentable {}
 extension SmartDeviceCoreSDK.MagicPixAbilityType : Swift.Equatable {}
 extension SmartDeviceCoreSDK.MagicPixAbilityType : Swift.Hashable {}
-extension SmartDeviceCoreSDK.A4xCornerType : Swift.Equatable {}
-extension SmartDeviceCoreSDK.A4xCornerType : Swift.Hashable {}
-extension SmartDeviceCoreSDK.A4xCornerType : Swift.RawRepresentable {}
 extension SmartDeviceCoreSDK.A4xBindMulticastNetWorkState : Swift.Equatable {}
 extension SmartDeviceCoreSDK.A4xBindMulticastNetWorkState : Swift.Hashable {}
 extension SmartDeviceCoreSDK.A4xBirdAnalysisPageType : Swift.Equatable {}
@@ -8055,9 +7595,6 @@ extension SmartDeviceCoreSDK.A4xLoginType : Swift.RawRepresentable {}
 extension SmartDeviceCoreSDK.A4xVerificationCodeType : Swift.Equatable {}
 extension SmartDeviceCoreSDK.A4xVerificationCodeType : Swift.Hashable {}
 extension SmartDeviceCoreSDK.A4xVerificationCodeType : Swift.RawRepresentable {}
-extension SmartDeviceCoreSDK.A4xUserVipAPI : Swift.Equatable {}
-extension SmartDeviceCoreSDK.A4xUserVipAPI : Swift.Hashable {}
-extension SmartDeviceCoreSDK.A4xUserVipAPI : Swift.RawRepresentable {}
 extension SmartDeviceCoreSDK.A4xSourceFrom : Swift.Equatable {}
 extension SmartDeviceCoreSDK.A4xSourceFrom : Swift.Hashable {}
 extension SmartDeviceCoreSDK.A4xSourceFrom : Swift.RawRepresentable {}

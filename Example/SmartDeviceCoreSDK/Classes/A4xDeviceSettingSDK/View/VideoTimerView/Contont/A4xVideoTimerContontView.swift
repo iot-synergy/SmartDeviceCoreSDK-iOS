@@ -82,9 +82,9 @@ class A4xVideoTimerContontView: UIView {
     var isFirstMin: Bool = true
     
     
-    func hasDataDate(date: Date) -> (A4xVideoTimeModel?, Date) {
+    func hasDataDate(date: Date) -> (VideoTimeModel?, Date) {
         
-        var hasData: A4xVideoTimeModel? = nil
+        var hasData: VideoTimeModel? = nil
         
         let timeInterval = date.timeIntervalSince1970
         
@@ -150,7 +150,7 @@ class A4xVideoTimerContontView: UIView {
         self.addGestureRecognizer(pinchRecognizer)
     }
     
-    init(frame: CGRect = .zero, loadDataBlock: @escaping ((_ fromDate: Date, _ toDate: Date, _ comple: @escaping ((_ isError : Bool, _ dateSourde: [A4xVideoTimeModel]?, _  fromDate: Date, _ toDate: Date) -> Void))-> Void )) {
+    init(frame: CGRect = .zero, loadDataBlock: @escaping ((_ fromDate: Date, _ toDate: Date, _ comple: @escaping ((_ isError : Bool, _ dateSourde: [VideoTimeModel]?, _  fromDate: Date, _ toDate: Date) -> Void))-> Void )) {
         self.timeStep = A4xSDVideoPlaySpacers.default()
         minDate = Date()
         viewModel = A4xVideoTimerViewModel(loadDataBlock: loadDataBlock)
