@@ -4692,6 +4692,7 @@ final public class CredentialsPlugin : SmartDeviceCoreSDK.PluginType {
 }
 @objc @_inheritsConvenienceInitializers public class DeviceAICore : ObjectiveC.NSObject {
   @objc public class func getInstance() -> SmartDeviceCoreSDK.DeviceAICore
+  @objc public func closePush(serialNumber: Swift.String, isClose: Swift.Bool, onSuccess: @escaping (_ code: Swift.Int, _ msg: Swift.String?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ msg: Swift.String?) -> Swift.Void)
   @objc public func getMessageNotificationConfig(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ msg: Swift.String?, _ models: [SmartDeviceCoreSDK.NotificationConfigBean]?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ msg: Swift.String?) -> Swift.Void)
   @objc public func updateMessageNotification(serialNumber: Swift.String, bean: SmartDeviceCoreSDK.NotificationDetailBean, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void)
   @objc public func getAnalysisEventConfig(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String?, _ models: [SmartDeviceCoreSDK.AnalysisModelBean]) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void)
@@ -7019,6 +7020,14 @@ extension SmartDeviceCoreSDK.Result {
 @available(*, unavailable, renamed: "ErrorConvertible")
 public protocol ErrorProtocolConvertible : SmartDeviceCoreSDK.ErrorConvertible {
 }
+@_inheritsConvenienceInitializers @objc public class SDCardManager : ObjectiveC.NSObject {
+  @objc public class func getInstance() -> SmartDeviceCoreSDK.SDCardManager
+  @objc public func sdcardFormat(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
+  @objc public func stopSdcardFormat()
+  @objc override dynamic public init()
+  @objc deinit
+}
+public func getSdkVersion() -> Swift.String
 open class ServerTrustPolicyManager {
   final public let policies: [Swift.String : SmartDeviceCoreSDK.ServerTrustPolicy]
   public init(policies: [Swift.String : SmartDeviceCoreSDK.ServerTrustPolicy])

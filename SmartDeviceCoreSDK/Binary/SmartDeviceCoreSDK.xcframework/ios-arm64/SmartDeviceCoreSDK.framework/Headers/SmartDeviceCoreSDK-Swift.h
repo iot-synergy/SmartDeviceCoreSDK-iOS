@@ -1783,6 +1783,19 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK11CustomParam")
 SWIFT_CLASS("_TtC18SmartDeviceCoreSDK12DeviceAICore")
 @interface DeviceAICore : NSObject
 + (DeviceAICore * _Nonnull)getInstance SWIFT_WARN_UNUSED_RESULT;
+/// 是否关闭设备通知
+/// 先从 <code>DeviceBean.pushIgnored</code> 拿到是否开启了推送开关,这个接口是用来更新这个开关状态
+/// public var pushIgnored   : Bool? // 设备推送是否已忽略
+/// 如果 <code>pushIgnored == true</code>,说明推送被忽略(关闭),收不到推送,开关显示关闭
+/// <hr/>
+/// @param serialNumber : 设备Id
+/// @param isClose      : 如果<code>isClose == true</code>,说明关闭设备推送
+/// @param onSuccess    : 更新成功回调
+/// @param onError      : 更新失败回调
+/// <hr/>
+/// @return code    : 错误码 0-成功 其他-失败
+/// @return message : 返回信息描述
+- (void)closePushWithSerialNumber:(NSString * _Nonnull)serialNumber isClose:(BOOL)isClose onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nullable))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nullable))onError;
 /// 获取消息推送信息sdk版本
 /// <hr/>
 /// @param serialNumber : 设备Id,唯一标识(必传)
@@ -3006,6 +3019,21 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK15RecordEventBean")
 @property (nonatomic, readonly) BOOL manager;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC18SmartDeviceCoreSDK13SDCardManager")
+@interface SDCardManager : NSObject
++ (SDCardManager * _Nonnull)getInstance SWIFT_WARN_UNUSED_RESULT;
+/// 开始OTA
+/// @param serialNumber: 设备序列号
+/// <hr/>
+/// @return onSuccess : OTA成功
+/// @return onProgress code : Int OTA进度百分比 例如:50 就是50%
+/// @return onError OTA错误
+- (void)sdcardFormatWithSerialNumber:(NSString * _Nonnull)serialNumber onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
+- (void)stopSdcardFormat;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
