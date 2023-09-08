@@ -7027,7 +7027,12 @@ public protocol ErrorProtocolConvertible : SmartDeviceCoreSDK.ErrorConvertible {
   @objc override dynamic public init()
   @objc deinit
 }
-public func getSdkVersion() -> Swift.String
+@_inheritsConvenienceInitializers @objc public class SDKVersion : ObjectiveC.NSObject {
+  @objc public func getPrivateSDKVersion() -> Swift.String
+  @objc public func getPublicSDKVersion() -> Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
 open class ServerTrustPolicyManager {
   final public let policies: [Swift.String : SmartDeviceCoreSDK.ServerTrustPolicy]
   public init(policies: [Swift.String : SmartDeviceCoreSDK.ServerTrustPolicy])
