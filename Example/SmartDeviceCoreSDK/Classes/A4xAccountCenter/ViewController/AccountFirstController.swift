@@ -76,7 +76,7 @@ class AccountFirstController: A4xBaseViewController {
     @objc
     func loginAction() {
         
-        SmartDeviceCore.getInstance().login(token: "Bearer eyJhbGciOiJIUzUxMiJ9.eyJ0aGlyZFVzZXJJZCI6InNoZW5tb3VfdGVzdF9uVHpiV1VhQUpHSXN6RzREd045dnYxIiwiYWNjb3VudElkIjoic2hlbm1vdV90ZXN0Iiwic2VlZCI6Ijk1OWY3ZjE2NzNlMjRmMDM4MDQ5ODBiOTZhMWJjZTQ2IiwiZXhwIjoyNjkxNjQ3MjQ1LCJ1c2VySWQiOjEwMTY0ODF9.MwdO-kN6itp6ipJyKwdLancqInNz8yRb3tvFf7g63QvGYHaq_gb5SJtv08X9uvmmTkaMXyQWZXyzgcYtYxCf4g") { code, message in
+        SmartDeviceCore.getInstance().login(token: "Bearer eyJhbGciOiJIUzUxMiJ9.eyJ0aGlyZFVzZXJJZCI6InNoZW5tb3VfdGVzdF8zMmZBT3ZOMmN5WVVpM1ZtTk5Na3YxIiwiYWNjb3VudElkIjoic2hlbm1vdV90ZXN0Iiwic2VlZCI6IjhhYmFiOThiMTdhODRkYmJhYTg1NjJlZDBhNjM3NGY4IiwiZXhwIjoyNjkxNjQ3MjQ4LCJ1c2VySWQiOjEwMTY0ODR9.Lk9PXaQj66jA35zJygsujV3_UyrdDrBS1RIjnyhdZCo_ya6mfQaBP1RJk71HBuurSfgBU7zPOlIZp9LXazu_Vw") { code, message in
             let homeVC = RootViewController(menuIndex: 0)
             let nav: A4xBaseAccountNavgationContoller =  A4xBaseAccountNavgationContoller(rootViewController: homeVC)
             nav.setDirectionConfig()

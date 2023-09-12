@@ -23,9 +23,9 @@ class LiveBottomMenuView: UIView {
     
     var deviceModel: DeviceBean? {
         didSet {
-            self.alpha = (self.deviceModel?.deviceContrl?.rotate ?? false) ? 1 : 0.8
+            self.alpha = (self.deviceModel?.deviceContrl?.canRotate ?? false) ? 1 : 0.8
             
-            self.canRotate = self.deviceModel?.deviceContrl?.rotate ?? false
+            self.canRotate = self.deviceModel?.deviceContrl?.canRotate ?? false
             
             self.supportMotionTrack = self.deviceModel?.deviceContrl?.supportMotionTrack ?? false
             

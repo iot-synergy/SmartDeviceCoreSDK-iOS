@@ -493,7 +493,7 @@ class A4xDevicesShowSleepPlanCell: UITableViewCell, A4xBaseGridViewDelegate {
     
     let timeName = ["00:00","04:00","08:00","12:00","16:00","20:00","24:00"]
     
-    var sleepPlanModels: [A4xDeviceSleepPlanBean]? {
+    var sleepPlanModels: [DeviceSleepPlanBean]? {
         didSet {
             
             DispatchQueue.main.a4xAfter(0.3) { [weak self] in

@@ -31,7 +31,7 @@ public class A4xBaseGridView: UIView {
         }
     }
     
-    public var sleepPlanModelArr: [A4xDeviceSleepPlanBean]? = [] {
+    public var sleepPlanModelArr: [DeviceSleepPlanBean]? = [] {
         didSet {
 
 
@@ -326,7 +326,7 @@ public class A4xBaseGridView: UIView {
         
         let sleepPlanDataSource = Dictionary(grouping: sleepPlanModelArr ?? [], by: { $0.period })
         
-        //let sleepPlanDataSource = sleepPlanModelArr?.reduce(into: [Int: [A4xDeviceSleepPlanBean]]()) {
+        //let sleepPlanDataSource = sleepPlanModelArr?.reduce(into: [Int: [DeviceSleepPlanBean]]()) {
         
         //}
         

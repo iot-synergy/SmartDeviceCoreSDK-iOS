@@ -11,7 +11,7 @@ import SmartDeviceCoreSDK
 import Resolver
 
 struct A4xSleepPlanList : Codable {
-    var sleeplist : [A4xDeviceSleepPlanBean]?
+    var sleeplist : [DeviceSleepPlanBean]?
 }
 
 class A4xDeviceControlViewModel : Codable {
@@ -53,7 +53,7 @@ class A4xDeviceControlViewModel : Codable {
     
     var sleepPlanStatus : Bool? 
     var deviceStatus: Int? 
-    var sleepPlanModels : [A4xDeviceSleepPlanBean]?
+    var sleepPlanModels : [DeviceSleepPlanBean]?
     
     
     
@@ -208,15 +208,7 @@ class A4xDeviceControlViewModel : Codable {
     func getSleepPlanList(comple: @escaping (_ error: String?) -> Void) {
         weak var weakSelf = self
         DeviceSleepPlanCore.getInstance().getSleepPlanList(serialNumber: self.deviceModel.serialNumber ?? "") { code, message, modebeans in
-            var beans : [A4xDeviceSleepPlanBean] = []
-            if modebeans.count > 0 {
-                for i in 0..<modebeans.count {
-                    let modebean = modebeans.getIndex(i)
-                    let bean = DeviceSleepPlanUtil.toA4xDeviceSleepPlanBean(bean: modebean ?? DeviceSleepPlanBean())
-                    beans.append(bean)
-                }
-            }
-            weakSelf?.sleepPlanModels = beans
+            weakSelf?.sleepPlanModels = modebeans
             weakSelf?.save()
             comple(nil)
         } onError: { code, message in

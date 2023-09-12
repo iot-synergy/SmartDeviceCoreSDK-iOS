@@ -30,7 +30,7 @@ class A4xDevicesSleepPlanSetViewController: A4xBaseViewController {
     var timeName = ["00:00","04:00","08:00","12:00","16:00","20:00","24:00"]
     
 
-    var sleepPlanModels: [A4xDeviceSleepPlanBean]? = []
+    var sleepPlanModels: [DeviceSleepPlanBean]? = []
     var setSleepPlanNew: Bool? = true
     var period : Int?
     
@@ -118,7 +118,7 @@ class A4xDevicesSleepPlanSetViewController: A4xBaseViewController {
         if setSleepPlanNew ?? true {
             
             planStartDay?.forEach({ (planDay) in
-                var sleepModel = A4xDeviceSleepPlanBean()
+                var sleepModel = DeviceSleepPlanBean()
                 sleepModel.period = 1024
                 sleepModel.startHour = startHour
                 sleepModel.startMinute = startMinute
@@ -168,7 +168,7 @@ class A4xDevicesSleepPlanSetViewController: A4xBaseViewController {
         if (self.endHour ?? 18) < (self.startHour ?? 9) {
             
             for index in 0..<(planStartDay?.count ?? 0) {
-                var sleepModel = A4xDeviceSleepPlanBean()
+                var sleepModel = DeviceSleepPlanBean()
                 if index + 1 < (planStartDay?.count ?? 0) {
                     if range != (planStartDay?[index + 1] ?? 0) - (planStartDay?[index] ?? 0) {
                         
@@ -190,7 +190,7 @@ class A4xDevicesSleepPlanSetViewController: A4xBaseViewController {
                         sleepPlanModels?.append(sleepModel)
                     }
                 } else {
-                    var sleepModel = A4xDeviceSleepPlanBean()
+                    var sleepModel = DeviceSleepPlanBean()
                     sleepModel.period = period
                     //sleepModel.planStartDay = planStartDay?.sorted()
                     sleepModel.startHour = startHour
@@ -239,7 +239,7 @@ class A4xDevicesSleepPlanSetViewController: A4xBaseViewController {
             var nextPeriod = 2024
             
             for index in 0..<nextPlanStartDay.count {
-                var sleepModel = A4xDeviceSleepPlanBean()
+                var sleepModel = DeviceSleepPlanBean()
                 if index + 1 < nextPlanStartDay.count {
                     if range != (nextPlanStartDay[index + 1] - nextPlanStartDay[index]) {
                         
@@ -261,7 +261,7 @@ class A4xDevicesSleepPlanSetViewController: A4xBaseViewController {
                         sleepPlanModels?.append(sleepModel)
                     }
                 } else {
-                    var sleepModel = A4xDeviceSleepPlanBean()
+                    var sleepModel = DeviceSleepPlanBean()
                     sleepModel.period = nextPeriod
                     sleepModel.startHour = 0
                     sleepModel.startMinute = 0
@@ -273,7 +273,7 @@ class A4xDevicesSleepPlanSetViewController: A4xBaseViewController {
             }
         } else {
             for index in 0..<(planStartDay?.count ?? 0) {
-                var sleepModel = A4xDeviceSleepPlanBean()
+                var sleepModel = DeviceSleepPlanBean()
                 if index + 1 < (planStartDay?.count ?? 0) {
                     if range != (planStartDay?[index + 1] ?? 0) - (planStartDay?[index] ?? 0) {
                         
@@ -295,7 +295,7 @@ class A4xDevicesSleepPlanSetViewController: A4xBaseViewController {
                         sleepPlanModels?.append(sleepModel)
                     }
                 } else {
-                    var sleepModel = A4xDeviceSleepPlanBean()
+                    var sleepModel = DeviceSleepPlanBean()
                     sleepModel.period = period
                     //sleepModel.planStartDay = planStartDay?.sorted()
                     sleepModel.startHour = startHour

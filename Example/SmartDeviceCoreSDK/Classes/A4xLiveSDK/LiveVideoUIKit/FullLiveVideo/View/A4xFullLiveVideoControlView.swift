@@ -252,7 +252,7 @@ public class A4xFullLiveVideoControlView: UIView {
             videoRatio = getVideoRatio()
             supperWhitelight = dataSource?.deviceContrl?.whiteLight ?? false
             
-            canRotate = dataSource?.deviceContrl?.rotate ?? false
+            canRotate = dataSource?.deviceContrl?.canRotate ?? false
             supportMotionTrack = dataSource?.deviceContrl?.supportMotionTrack ?? false
             isFollowAdmin = dataSource?.isAdmin() ?? false
             
@@ -502,7 +502,7 @@ public class A4xFullLiveVideoControlView: UIView {
     
     lazy var moreMenuSubLeftView: A4xFullLiveVideoMoreMenuView = {
         let admin = self.dataSource?.isAdmin() ?? false
-        let rotate = self.dataSource?.deviceContrl?.rotate ?? false
+        let rotate = self.dataSource?.deviceContrl?.canRotate ?? false
         let supperAlert = self.dataSource?.deviceSupport?.deviceSupportAlarm ?? false
         let temp = A4xFullLiveVideoMoreMenuView(supperAlert: supperAlert, rotateEnable: rotate,supportMotionTrack: self.dataSource?.deviceContrl?.supportMotionTrack ?? false, lightSupper: self.dataSource?.deviceContrl?.whiteLight ?? false , fllowEnable: admin && rotate)
         temp.protocol = self

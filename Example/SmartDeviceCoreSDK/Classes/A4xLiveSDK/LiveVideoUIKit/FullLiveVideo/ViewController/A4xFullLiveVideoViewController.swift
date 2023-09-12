@@ -126,7 +126,7 @@ open class A4xFullLiveVideoViewController: A4xBaseViewController {
         
         let whiteLightEnable = dataSource?.deviceContrl?.whiteLight ?? false
         fullLiveVideoControlView.supperWhitelight = whiteLightEnable
-        fullLiveVideoControlView.canRotating = self.dataSource?.deviceContrl?.rotate ?? false
+        fullLiveVideoControlView.canRotating = self.dataSource?.deviceContrl?.canRotate ?? false
     }
     
     private func stopLive(reason: A4xPlayerStopReason) {
@@ -205,7 +205,7 @@ extension A4xFullLiveVideoViewController: ILiveStateListener {
             fullLiveVideoControlView.videoState = (stateCode, dataSource?.serialNumber ?? "")
             weak var weakSelf = self
 
-            if state == .playing && dataSource?.deviceContrl?.rotate ?? false {
+            if state == .playing && dataSource?.deviceContrl?.canRotate ?? false {
                 liveVideoViewModel?.searchAllPresetPosition(deviceModel: dataSource) { error in
                     if let e = error {
                         weakSelf?.view.makeToast(e)

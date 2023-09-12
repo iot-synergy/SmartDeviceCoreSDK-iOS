@@ -683,7 +683,7 @@ extension A4xHomeLiveVideoCollectCell {
         case .locations_edit:
             fallthrough
         case .playControl:
-            return normalVideoBaseHeight + LiveBottomMenuView.height(type: type, forWidth: itemWidth, alertSupper: deviceModel?.deviceSupport?.deviceSupportAlarm ?? false, supportMagicPix: deviceModel?.deviceSupportMagicPix() ?? false, rotateEnable: deviceModel?.deviceContrl?.rotate ?? false, supportMotionTrack: deviceModel?.deviceContrl?.supportMotionTrack ?? false, whiteLight: deviceModel?.deviceContrl?.whiteLight ?? false, supportVoiceEffect: deviceModel?.deviceSupportVoiceEffect() ?? false)
+            return normalVideoBaseHeight + LiveBottomMenuView.height(type: type, forWidth: itemWidth, alertSupper: deviceModel?.deviceSupport?.deviceSupportAlarm ?? false, supportMagicPix: deviceModel?.deviceSupportMagicPix() ?? false, rotateEnable: deviceModel?.deviceContrl?.canRotate ?? false, supportMotionTrack: deviceModel?.deviceContrl?.supportMotionTrack ?? false, whiteLight: deviceModel?.deviceContrl?.whiteLight ?? false, supportVoiceEffect: deviceModel?.deviceSupportVoiceEffect() ?? false)
         }
     }
 }
