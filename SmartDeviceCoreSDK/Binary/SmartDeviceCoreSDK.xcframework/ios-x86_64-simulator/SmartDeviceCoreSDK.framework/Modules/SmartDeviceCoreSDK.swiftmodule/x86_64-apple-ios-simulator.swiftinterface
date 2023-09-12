@@ -20,97 +20,6 @@ import UIKit.UIImage
 import UIKit
 import _Concurrency
 import _StringProcessing
-public enum A4xAccountAPI : Swift.String {
-  case loginOut
-  case loginIn
-  case updateToken
-  case getaccountinfo
-  case resetPwd
-  case register
-  case registerCode
-  case resetPwdCode
-  case vaildCode
-  case updateUserPwd
-  case updateName
-  case appVersion
-  case appCountryNode
-  case deviceslibrary
-  case devicesActivityZone
-  case loginPhoneCode
-  case changeAccountCode
-  case changeAccount
-  case validationPwd
-  case updateLanguage
-  case zendeskToken
-  case getLoginErrorCode
-  case getAutoMoudles
-  case getAutoMoudleDetail
-  case deleteAccount
-  case countryList
-  case countryQuery
-  case updateDisturb
-  case getUserPushShield
-  case deleteUserPushShield
-  case reportReceivePush
-  case displayScoringGuidance
-  case reportScoringGuidance
-  case reportScoringInfo
-  public static func getPath(service: SmartDeviceCoreSDK.AccountMoudel) -> Swift.String
-  public static func getParam(service: SmartDeviceCoreSDK.AccountMoudel) -> Foundation.Data?
-  public static func getMethod(service: SmartDeviceCoreSDK.AccountMoudel) -> SmartDeviceCoreSDK.Method
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public struct AccountError : Swift.Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
-public struct AccountRequstModel : Swift.Codable {
-  public var email: Swift.String?
-  public var phone: Swift.String?
-  public var password: Swift.String?
-  public var code: Swift.String?
-  public var msgType: Swift.Int?
-  public var msgToken: Swift.String?
-  public var iosVoipToken: Swift.String?
-  public var loginType: Swift.Int?
-  public var oldPassword: Swift.String?
-  public var name: Swift.String?
-  public var newPassword: Swift.String?
-  public var targetLanguage: Swift.String?
-  public var moduleName: Swift.String?
-  public var traceId: Swift.String?
-  public var msgId: Swift.Int?
-  public var pushType: Swift.String?
-  public var phoneModel: Swift.String?
-  public var timestamp: Swift.Int64?
-  public var keyId: Swift.String?
-  public var localNode: Swift.String?
-  public var pushTenantId: Swift.String?
-  public var pushNode: Swift.String?
-  public var pushUserId: Swift.String?
-  public var language: Swift.String?
-  public var country: Swift.String?
-  public var timeSlot: Swift.Int?
-  public init()
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
-public struct A4xScoreRequestModel : Swift.Codable {
-  public var eject: Swift.Bool?
-  public var id: Swift.Int64?
-  public var reason: Swift.String?
-  public var satisfied: Swift.Int?
-  public var scoreType: Swift.Int?
-  public var score: Swift.Int?
-  public var remark: Swift.String?
-  public init()
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
 public struct A4xLiveResultList : Swift.Codable {
   public var url: Swift.String?
   public var liveId: Swift.String?
@@ -502,6 +411,7 @@ extension SmartDeviceCoreSDK.OTABean {
 }
 @_inheritsConvenienceInitializers @objc open class A4xBaseDeviceSettingInterface : ObjectiveC.NSObject {
   @objc public static let shared: SmartDeviceCoreSDK.A4xBaseDeviceSettingInterface
+  final public let concurrentQueue: Dispatch.DispatchQueue
   public func uploadApDeviceList(list: [SmartDeviceCoreSDK.A4xDeviceRequestModel], comple: @escaping (_ code: Swift.Int, _ message: Swift.String?, _ result: Swift.Bool?) -> Swift.Void)
   public func getApDeviceList(comple: @escaping (_ code: Swift.Int, _ message: Swift.String?, _ models: [SmartDeviceCoreSDK.DeviceBean]?) -> Swift.Void)
   public func delApDeviceList(deviceIds: [Swift.String], comple: @escaping (_ code: Swift.Int, _ message: Swift.String?, _ result: Swift.Bool?) -> Swift.Void)
@@ -518,9 +428,6 @@ extension SmartDeviceCoreSDK.OTABean {
   public func queryDeviceAudio(deviceId: Swift.String, comple: @escaping (_ code: Swift.Int, _ message: Swift.String, _ result: SmartDeviceCoreSDK.A4xDeviceAudioResponseModel?) -> Swift.Void)
   public func updateDeviceAudio(deviceId: Swift.String, liveAudioToggleOn: Swift.Bool, recordingAudioToggleOn: Swift.Bool, liveSpeakerVolume: Swift.Int, doorBellRingKey: Swift.Int, comple: @escaping (_ code: Swift.Int, _ message: Swift.String, _ result: Swift.Bool?) -> Swift.Void)
   public func updateDevicePushSwitch(deviceId: Swift.String, enable: Swift.Bool, comple: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void)
-  public func closeUserDisturb(comple: @escaping (_ isSuccess: Swift.Bool, _ message: Swift.String?) -> Swift.Void)
-  public func getUserDisturbInfo(comple: @escaping (_ isSuccess: Swift.Bool, _ error: Swift.String?) -> Swift.Void)
-  public func openUserDisturbEnable(duration: Swift.Int, comple: @escaping (_ isSuccess: Swift.Bool, _ error: Swift.String?) -> Swift.Void)
   public func queryAnalysisEventConfig(isAll: Swift.Bool, serialNumbers: [Swift.String], comple: @escaping (_ code: Swift.Int, _ message: Swift.String?, _ models: [SmartDeviceCoreSDK.A4xAnalysisResponse]) -> Swift.Void)
   public func updateAnalysisEventConfig(list: [SmartDeviceCoreSDK.AnalysisModelBean]?, serialNumber: Swift.String, comple: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void)
   public func updatePackageDetectionPush(deviceId: Swift.String, enable: Swift.Bool, comple: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void)
@@ -1587,6 +1494,7 @@ public enum A4xDevicesCodeSelectionEnum : Swift.String {
   @objc public var supportIndoor: Swift.Bool
   @objc public var supportStarlightSensor: Swift.Bool
   @objc public var supportPirAi: Swift.Bool
+  @objc public var supportRotateCalibration: Swift.Bool
   required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
   @objc deinit
@@ -2570,7 +2478,6 @@ public struct A4xNetNormaiModel : Swift.Codable {
   @objc deinit
 }
 public enum A4xNetMoudelType {
-  case Account(_: SmartDeviceCoreSDK.AccountMoudel)
   case Devices(_: SmartDeviceCoreSDK.DeviceMoudel)
   case Location(_: SmartDeviceCoreSDK.LocationMoudel)
   case Library(_: SmartDeviceCoreSDK.LibraryMoudel)
@@ -2580,44 +2487,6 @@ public enum A4xNetMoudelType {
   case Bird(_: SmartDeviceCoreSDK.BirdMoudel)
 }
 public protocol A4xNetMoudelProtocol {
-}
-public enum AccountMoudel : SmartDeviceCoreSDK.A4xNetMoudelProtocol {
-  case userLogin(isErrorLogin: Swift.Bool, account: Swift.String, isEmail: Swift.Bool, userPsd: Swift.String, pushToken: Swift.String?, iosVoipToken: Swift.String?, vaildCode: Swift.String?)
-  case phoneLogin(phone: Swift.String, code: Swift.String, pushToken: Swift.String?)
-  case loginPhoneCode(phone: Swift.String, pushToken: Swift.String?)
-  case getChangeAccountCode(account: Swift.String, isEmail: Swift.Bool)
-  case getLoginErrorCode(account: Swift.String, isEmail: Swift.Bool)
-  case changeAccount(code: Swift.String)
-  case validationPwd(pwd: Swift.String)
-  case userLoginOut
-  case userRegistered(account: Swift.String, isEmail: Swift.Bool, pwd: Swift.String, vaildCode: Swift.String, pushToken: Swift.String?, name: Swift.String?)
-  case resetPwd(account: Swift.String, isEmail: Swift.Bool, code: Swift.String, pwd: Swift.String)
-  case updateToken(token: Swift.String, iosVoipToken: Swift.String?)
-  case updateVoipToken(iosVoipToken: Swift.String)
-  case getaccountinfo
-  case registerCode(account: Swift.String, isEmail: Swift.Bool)
-  case resetPwdCode(account: Swift.String, isEmail: Swift.Bool)
-  case vaildCode(account: Swift.String, isEmail: Swift.Bool, code: Swift.String)
-  case updateUserPwd(oldPwd: Swift.String, newPwd: Swift.String)
-  case updateName(userName: Swift.String)
-  case appVersion
-  case countryNode
-  case deviceslibrary
-  case devicesActivityZone
-  case updateLanguage(updateLanguage: Swift.String)
-  case zendeskToken
-  case getAutoMoudles
-  case getAutoMoudleDetail(moduleName: Swift.String)
-  case reportReceivePush(traceId: Swift.String?, msgId: Swift.Int?, msgType: Swift.Int?, phoneType: Swift.String?, keyId: Swift.String?, timestamp: Swift.Int64, localNode: Swift.String?, pushTenantId: Swift.String?, pushNode: Swift.String?, pushUserId: Swift.String?)
-  case deleteAccount
-  case countryList(language: Swift.String?)
-  case countryQuery(queryName: Swift.String?, language: Swift.String?)
-  case updateDisturb(time: Swift.Int)
-  case getUserPushShield
-  case deleteUserPushShield
-  case displayScoringGuidance
-  case reportScoringGuidance(eject: Swift.Bool?, id: Swift.Int64?, reason: Swift.String?)
-  case reportScoringInfo(id: Swift.Int64?, satisfied: Swift.Int?, scoreType: Swift.Int?, score: Swift.Int?, remark: Swift.String?)
 }
 public enum SettingMoudle : SmartDeviceCoreSDK.A4xNetMoudelProtocol {
   case setting1(userName: Swift.String, usePsd: Swift.String)
@@ -4316,6 +4185,47 @@ extension SmartDeviceCoreSDK.AnyError : Foundation.LocalizedError {
     get
   }
 }
+public enum BaseAccountAPI : Swift.String {
+  case updateLanguage
+  case getaccountinfo
+  case countryQuery
+  case devicesActivityZone
+  public static func getPath(service: SmartDeviceCoreSDK.BaseAccountModel) -> Swift.String
+  public static func getParam(service: SmartDeviceCoreSDK.BaseAccountModel) -> Foundation.Data?
+  public static func getMethod(service: SmartDeviceCoreSDK.BaseAccountModel) -> SmartDeviceCoreSDK.Method
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum BaseAccountModel : SmartDeviceCoreSDK.A4xNetMoudelProtocol {
+  case updateLanguage(updateLanguage: Swift.String)
+  case getaccountinfo
+  case countryQuery(queryName: Swift.String?, language: Swift.String?)
+  case devicesActivityZone
+}
+public struct BaseAccountRequestModel : Swift.Codable {
+  public var targetLanguage: Swift.String?
+  public var language: Swift.String?
+  public var country: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension SmartDeviceCoreSDK.BaseAccountModel : SmartDeviceCoreSDK.A4xNetTargetTypeProtocol {
+  public var path: Swift.String {
+    get
+  }
+  public var method: SmartDeviceCoreSDK.Method {
+    get
+  }
+  public var sampleData: Foundation.Data {
+    get
+  }
+  public var task: SmartDeviceCoreSDK.Task {
+    get
+  }
+}
 public protocol BaseAdapterProtocol {
   func getLocalString(key: Swift.String, param: [Swift.String]) -> Swift.String
   func updateBundle(language: SmartDeviceCoreSDK.A4xBaseAppLanguageType)
@@ -4867,14 +4777,14 @@ public enum A4xDevcieUpgradeStatus {
   public static func == (lhs: SmartDeviceCoreSDK.A4xDevcieUpgradeStatus, rhs: SmartDeviceCoreSDK.A4xDevcieUpgradeStatus) -> Swift.Bool
 }
 @objc @objcMembers public class A4xDeviceControlModel : ObjectiveC.NSObject, Swift.Codable {
-  @objc public init(name: Swift.String? = nil, rotate: Swift.Bool = NULL_BOOL, standby: Swift.Bool = NULL_BOOL, stream: Swift.String? = nil, audioType: Swift.String? = nil, whiteLight: Swift.Bool = NULL_BOOL, personDetect: Swift.Bool = NULL_BOOL, supportMotionTrack: Swift.Bool = NULL_BOOL)
-  @objc public var name: Swift.String?
-  @objc public var rotate: Swift.Bool
-  @objc public var standby: Swift.Bool
-  @objc public var stream: Swift.String?
-  @objc public var audioType: Swift.String?
+  @objc public init(modelName: Swift.String? = nil, canRotate: Swift.Bool = NULL_BOOL, canStandby: Swift.Bool = true, streamProtocol: Swift.String? = nil, audioCodecType: Swift.String? = nil, whiteLight: Swift.Bool = NULL_BOOL, devicePersonDetect: Swift.Bool = NULL_BOOL, supportMotionTrack: Swift.Bool = NULL_BOOL)
+  @objc public var modelName: Swift.String?
+  @objc public var canRotate: Swift.Bool
+  @objc public var canStandby: Swift.Bool
+  @objc public var streamProtocol: Swift.String?
+  @objc public var audioCodecType: Swift.String?
   @objc public var whiteLight: Swift.Bool
-  @objc public var personDetect: Swift.Bool
+  @objc public var devicePersonDetect: Swift.Bool
   @objc public var supportMotionTrack: Swift.Bool
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
@@ -4969,9 +4879,9 @@ public struct A4xDeviceSleepPlanStatusModel : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-public struct A4xDeviceSleepPlanBean : Swift.Codable {
-  public init(id: Swift.Int? = nil, userId: Swift.Int? = nil, serialNumber: Swift.String? = nil, period: Swift.Int? = nil, startHour: Swift.Int? = nil, startMinute: Swift.Int? = nil, endHour: Swift.Int? = nil, endMinute: Swift.Int? = nil, planStartDay: [Swift.Int]? = nil, planDay: Swift.Int? = nil, startTime: Swift.Int? = nil, endTime: Swift.Int? = nil)
-  public var id: Swift.Int?
+@objc public class DeviceSleepPlanBean : ObjectiveC.NSObject, Swift.Codable {
+  public init(sleepPlanID: Swift.Int? = NULL_INT, userId: Swift.Int? = NULL_INT, serialNumber: Swift.String? = nil, period: Swift.Int? = NULL_INT, startHour: Swift.Int? = NULL_INT, startMinute: Swift.Int? = NULL_INT, endHour: Swift.Int? = NULL_INT, endMinute: Swift.Int? = NULL_INT, planStartDay: [Swift.Int]? = nil, planDay: Swift.Int? = NULL_INT, startTime: Swift.Int? = NULL_INT, endTime: Swift.Int? = NULL_INT)
+  public var sleepPlanID: Swift.Int?
   public var userId: Swift.Int?
   public var serialNumber: Swift.String?
   public var period: Swift.Int?
@@ -4983,8 +4893,9 @@ public struct A4xDeviceSleepPlanBean : Swift.Codable {
   public var planDay: Swift.Int?
   public var startTime: Swift.Int?
   public var endTime: Swift.Int?
+  required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  @objc deinit
 }
 public struct A4xDeviceWebRtcIceServerDataModel : Swift.Codable {
   public init(url: Swift.String? = nil, username: Swift.String? = nil, credential: Swift.String? = nil)
@@ -5219,6 +5130,12 @@ public struct A4xDeviceTimeIntervalModel : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   @objc deinit
 }
+@objc public class DeviceCoverImageModel : ObjectiveC.NSObject, Swift.Codable {
+  public init(serialNumber: Swift.String? = nil, lastPushTime: Swift.Int64 = Int64(NULL_INT), lastPushImageUrl: Swift.String? = nil)
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
 @objc @_inheritsConvenienceInitializers public class DeviceLocationCore : ObjectiveC.NSObject {
   @objc public class func getInstance() -> SmartDeviceCoreSDK.DeviceLocationCore
   @objc public func getUserDeviceLocationList(onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String?, _ models: [SmartDeviceCoreSDK.DeviceLocationModel]) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void)
@@ -5265,6 +5182,7 @@ public struct A4xDeviceTimeIntervalModel : Swift.Codable {
   @objc public func doorBellDingDongAudition(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   public func setMotionTrack(serialNumber: Swift.String, enable: Swift.Bool, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   public func updateDeviceLanguage(serialNumber: Swift.String, language: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
+  public func getRecentCoverImage(serialNumbers: Swift.Array<Swift.String>, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String, _ result: [SmartDeviceCoreSDK.DeviceCoverImageModel]?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   @objc override dynamic public init()
   @objc deinit
 }
@@ -5285,24 +5203,6 @@ public struct A4xDeviceTimeIntervalModel : Swift.Codable {
   @objc override dynamic public init()
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @objcMembers public class DeviceSleepPlanBean : ObjectiveC.NSObject, Swift.Codable {
-  @objc override dynamic public init()
-  public var sleepPlanID: Swift.Int?
-  public var userId: Swift.Int?
-  @objc public var serialNumber: Swift.String?
-  public var period: Swift.Int?
-  public var startHour: Swift.Int?
-  public var startMinute: Swift.Int?
-  public var endHour: Swift.Int?
-  public var endMinute: Swift.Int?
-  @objc public var planStartDay: [Swift.Int]?
-  public var planDay: Swift.Int?
-  public var startTime: Swift.Int?
-  public var endTime: Swift.Int?
-  @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
-}
 @_inheritsConvenienceInitializers @objc public class DeviceSleepPlanCore : ObjectiveC.NSObject {
   @objc public class func getInstance() -> SmartDeviceCoreSDK.DeviceSleepPlanCore
   @objc public func getSleepPlanList(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String, _ modebeans: [SmartDeviceCoreSDK.DeviceSleepPlanBean]) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
@@ -5310,11 +5210,6 @@ public struct A4xDeviceTimeIntervalModel : Swift.Codable {
   @objc public func editSleepPlan(serialNumber: Swift.String, planBean: SmartDeviceCoreSDK.DeviceSleepPlanBean, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   @objc public func deleteSleepPlan(period: Swift.Int, serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   @objc public func setSleep(serialNumber: Swift.String, enable: Swift.Bool, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
-  @objc override dynamic public init()
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers public class DeviceSleepPlanUtil : ObjectiveC.NSObject {
-  public class func toA4xDeviceSleepPlanBean(bean: SmartDeviceCoreSDK.DeviceSleepPlanBean) -> SmartDeviceCoreSDK.A4xDeviceSleepPlanBean
   @objc override dynamic public init()
   @objc deinit
 }
@@ -5497,20 +5392,6 @@ extension SmartDeviceCoreSDK.LibraryMoudel : SmartDeviceCoreSDK.A4xNetTargetType
     get
   }
 }
-extension SmartDeviceCoreSDK.AccountMoudel : SmartDeviceCoreSDK.A4xNetTargetTypeProtocol {
-  public var path: Swift.String {
-    get
-  }
-  public var method: SmartDeviceCoreSDK.Method {
-    get
-  }
-  public var sampleData: Foundation.Data {
-    get
-  }
-  public var task: SmartDeviceCoreSDK.Task {
-    get
-  }
-}
 extension SmartDeviceCoreSDK.DeviceMoudel : SmartDeviceCoreSDK.A4xNetTargetTypeProtocol {
   public var path: Swift.String {
     get
@@ -5632,7 +5513,6 @@ public typealias Image = SmartDeviceCoreSDK.ImageType
   @objc public func setReadStatus(missing: Swift.Int, traceId: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ res: Swift.Bool) -> Swift.Void, onFail: @escaping (_ code: Swift.Int, _ msg: Swift.String) -> Swift.Void)
   @objc public func loadSingleLibraryInfo(msgId: Swift.String, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, SmartDeviceCoreSDK.RecordBean?) -> Swift.Void)
   @objc public func fetchZoneImages(comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, [SmartDeviceCoreSDK.ZoneBean]?) -> Swift.Void)
-  @objc public func fetchAllDeviceWhichHasVideo(comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, [SmartDeviceCoreSDK.DeviceBean]?) -> Swift.Void)
   public func updatePushed(labelIds: [Swift.String], complement: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ res: Swift.Bool?) -> Swift.Void)
   public func fetchDoorbellFilterTag(complement: @escaping (_ code: Swift.Int, _ message: Swift.String, _ result: [SmartDeviceCoreSDK.A4xLibraryVideoAiTagType]?) -> Swift.Void)
   @objc public func queryVideoSearchOption(isFromSDCard: Swift.Bool, serialNumber: Swift.String?, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String, _ tagBean: SmartDeviceCoreSDK.TagBean?) -> Swift.Void, onFail: @escaping (_ code: Swift.Int, _ msg: Swift.String) -> Swift.Void)
@@ -7466,9 +7346,6 @@ public enum ValidationType {
 extension SmartDeviceCoreSDK.ValidationType : Swift.Equatable {
   public static func == (lhs: SmartDeviceCoreSDK.ValidationType, rhs: SmartDeviceCoreSDK.ValidationType) -> Swift.Bool
 }
-extension SmartDeviceCoreSDK.A4xAccountAPI : Swift.Equatable {}
-extension SmartDeviceCoreSDK.A4xAccountAPI : Swift.Hashable {}
-extension SmartDeviceCoreSDK.A4xAccountAPI : Swift.RawRepresentable {}
 extension SmartDeviceCoreSDK.A4xHostNode : Swift.Equatable {}
 extension SmartDeviceCoreSDK.A4xHostNode : Swift.Hashable {}
 extension SmartDeviceCoreSDK.A4xHostNode : Swift.RawRepresentable {}
@@ -7623,6 +7500,9 @@ extension SmartDeviceCoreSDK.A4xWebRtcPlayerVideoSharpType : Swift.Hashable {}
 extension SmartDeviceCoreSDK.A4xWebRtcPlayerVideoSharpType : Swift.RawRepresentable {}
 extension SmartDeviceCoreSDK.A4xWebRtcCmdError : Swift.Equatable {}
 extension SmartDeviceCoreSDK.A4xWebRtcCmdError : Swift.Hashable {}
+extension SmartDeviceCoreSDK.BaseAccountAPI : Swift.Equatable {}
+extension SmartDeviceCoreSDK.BaseAccountAPI : Swift.Hashable {}
+extension SmartDeviceCoreSDK.BaseAccountAPI : Swift.RawRepresentable {}
 extension SmartDeviceCoreSDK.TSMediaAssetExportSessionStatus : Swift.Equatable {}
 extension SmartDeviceCoreSDK.TSMediaAssetExportSessionStatus : Swift.Hashable {}
 extension SmartDeviceCoreSDK.TSMediaAssetExportSessionStatus : Swift.RawRepresentable {}

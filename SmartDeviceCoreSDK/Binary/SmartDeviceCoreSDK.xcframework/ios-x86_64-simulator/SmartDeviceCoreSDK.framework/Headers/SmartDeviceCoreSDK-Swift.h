@@ -496,14 +496,14 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK19A4xDeviceAudioModel")
 
 SWIFT_CLASS("_TtC18SmartDeviceCoreSDK21A4xDeviceControlModel")
 @interface A4xDeviceControlModel : NSObject
-- (nonnull instancetype)initWithName:(NSString * _Nullable)name rotate:(BOOL)rotate standby:(BOOL)standby stream:(NSString * _Nullable)stream audioType:(NSString * _Nullable)audioType whiteLight:(BOOL)whiteLight personDetect:(BOOL)personDetect supportMotionTrack:(BOOL)supportMotionTrack OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic, copy) NSString * _Nullable name;
-@property (nonatomic) BOOL rotate;
-@property (nonatomic) BOOL standby;
-@property (nonatomic, copy) NSString * _Nullable stream;
-@property (nonatomic, copy) NSString * _Nullable audioType;
+- (nonnull instancetype)initWithModelName:(NSString * _Nullable)modelName canRotate:(BOOL)canRotate canStandby:(BOOL)canStandby streamProtocol:(NSString * _Nullable)streamProtocol audioCodecType:(NSString * _Nullable)audioCodecType whiteLight:(BOOL)whiteLight devicePersonDetect:(BOOL)devicePersonDetect supportMotionTrack:(BOOL)supportMotionTrack OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, copy) NSString * _Nullable modelName;
+@property (nonatomic) BOOL canRotate;
+@property (nonatomic) BOOL canStandby;
+@property (nonatomic, copy) NSString * _Nullable streamProtocol;
+@property (nonatomic, copy) NSString * _Nullable audioCodecType;
 @property (nonatomic) BOOL whiteLight;
-@property (nonatomic) BOOL personDetect;
+@property (nonatomic) BOOL devicePersonDetect;
 @property (nonatomic) BOOL supportMotionTrack;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -582,6 +582,7 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK36A4xDeviceSettingFixedAttributesModel")
 @property (nonatomic) BOOL supportIndoor;
 @property (nonatomic) BOOL supportStarlightSensor;
 @property (nonatomic) BOOL supportPirAi;
+@property (nonatomic) BOOL supportRotateCalibration;
 @end
 
 @class ModifiableAnyAttribute;
@@ -2025,6 +2026,13 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK10DeviceBean")
 - (NSString * _Nonnull)doorBellRings SWIFT_WARN_UNUSED_RESULT;
 @end
 
+
+SWIFT_CLASS("_TtC18SmartDeviceCoreSDK21DeviceCoverImageModel")
+@interface DeviceCoverImageModel : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 @class DeviceLocationModel;
 
 SWIFT_CLASS("_TtC18SmartDeviceCoreSDK18DeviceLocationCore")
@@ -2283,9 +2291,8 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK15DeviceShareCore")
 
 SWIFT_CLASS("_TtC18SmartDeviceCoreSDK19DeviceSleepPlanBean")
 @interface DeviceSleepPlanBean : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic, copy) NSString * _Nullable serialNumber;
-@property (nonatomic, copy) NSArray<NSNumber *> * _Nullable planStartDay;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
@@ -2307,7 +2314,7 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK19DeviceSleepPlanCore")
 /// <hr/>
 /// @return code            : 错误码 0-成功 其他-失败
 /// @return message         : 信息描述
-/// A4xDeviceSleepPlanBean
+/// DeviceSleepPlanBean
 - (void)creatSleepPlanWithSerialNumber:(NSString * _Nonnull)serialNumber planBean:(DeviceSleepPlanBean * _Nonnull)planBean onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
 /// 编辑休眠计划
 /// <hr/>
@@ -2333,12 +2340,6 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK19DeviceSleepPlanCore")
 /// @return code            : 错误码 0-成功 其他-失败
 /// @return message         : 信息描述
 - (void)setSleepWithSerialNumber:(NSString * _Nonnull)serialNumber enable:(BOOL)enable onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC18SmartDeviceCoreSDK19DeviceSleepPlanUtil")
-@interface DeviceSleepPlanUtil : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -2541,7 +2542,6 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK11LibraryCore")
 - (void)setReadStatusWithMissing:(NSInteger)missing traceId:(NSString * _Nonnull)traceId onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull, BOOL))onSuccess onFail:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onFail;
 - (void)loadSingleLibraryInfoWithMsgId:(NSString * _Nonnull)msgId comple:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull, RecordBean * _Nullable))comple;
 - (void)fetchZoneImagesWithComple:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull, NSArray<ZoneBean *> * _Nullable))comple;
-- (void)fetchAllDeviceWhichHasVideoWithComple:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull, NSArray<DeviceBean *> * _Nullable))comple;
 - (void)queryVideoSearchOptionWithIsFromSDCard:(BOOL)isFromSDCard serialNumber:(NSString * _Nullable)serialNumber onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull, TagBean * _Nullable))onSuccess onFail:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onFail;
 /// download source
 /// \param models sources models
