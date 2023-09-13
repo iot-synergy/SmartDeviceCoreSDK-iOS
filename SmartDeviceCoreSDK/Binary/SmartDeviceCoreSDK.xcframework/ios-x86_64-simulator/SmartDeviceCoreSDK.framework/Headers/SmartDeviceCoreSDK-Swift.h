@@ -1918,6 +1918,8 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK20DeviceAttributesBean")
 
 SWIFT_CLASS("_TtC18SmartDeviceCoreSDK10DeviceBean")
 @interface DeviceBean : NSObject
+- (id _Nonnull)copy SWIFT_WARN_UNUSED_RESULT;
+- (id _Nonnull)mutableCopy SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, copy) NSString * _Nullable serialNumber;
 @property (nonatomic, copy) NSString * _Nullable deviceName;
 @property (nonatomic, copy) NSString * _Nullable modelNo;
