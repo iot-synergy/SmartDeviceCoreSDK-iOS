@@ -2104,13 +2104,13 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK18DeviceLocationUtil")
 SWIFT_CLASS("_TtC18SmartDeviceCoreSDK16DeviceManageCore")
 @interface DeviceManageCore : NSObject
 + (DeviceManageCore * _Nonnull)getInstance SWIFT_WARN_UNUSED_RESULT;
-/// 获取所有已经绑定设备的方法
+/// 获取所有已经绑定设备的方法,内部实现把设备数据存储到本地
 /// <hr/>
 /// @return code    : 错误码 0-成功 其他-失败
 /// @return models  : 返回获取到的设备详细信息数组
 /// @return message : 返回信息描述
 - (void)queryDeviceListOnSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nullable, NSArray<DeviceBean *> * _Nullable))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nullable))onError;
-/// 获取某个设备详细信息的方法
+/// 获取某个设备详细信息的方法,内部实现把设备数据存储到本地
 /// <hr/>
 /// @param deviceId : 设备Id,唯一标识(必传)
 /// <hr/>
@@ -2141,6 +2141,13 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK16DeviceManageCore")
 /// @return code    : 错误码 0-成功 其他-失败
 /// @return message : 信息描述
 - (void)deleteDeviceWithSerialNumber:(NSString * _Nonnull)serialNumber onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
+/// 通过serialNumber使分享者解除某个设备
+/// <hr/>
+/// @param serialNumber : 设备Id,唯一标识(必传)
+/// <hr/>
+/// @return code    : 错误码 0-成功 其他-失败
+/// @return message : 信息描述
+- (void)deleteShareDeviceWithSerialNumber:(NSString * _Nonnull)serialNumber onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

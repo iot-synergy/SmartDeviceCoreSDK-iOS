@@ -5161,6 +5161,7 @@ public struct A4xDeviceTimeIntervalModel : Swift.Codable {
   @objc public func getDeviceSettingConfig(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String?, _ model: SmartDeviceCoreSDK.DeviceBean?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void)
   @objc public func updateDeviceName(serialNumber: Swift.String, deviceName: Swift.String, comple: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   @objc public func deleteDevice(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
+  @objc public func deleteShareDevice(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   @objc override dynamic public init()
   @objc deinit
 }
