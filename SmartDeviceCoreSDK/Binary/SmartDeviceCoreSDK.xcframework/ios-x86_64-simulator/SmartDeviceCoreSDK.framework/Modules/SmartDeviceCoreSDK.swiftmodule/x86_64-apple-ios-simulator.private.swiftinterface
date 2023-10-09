@@ -4777,12 +4777,12 @@ public enum A4xDevcieUpgradeStatus {
   public static func == (lhs: SmartDeviceCoreSDK.A4xDevcieUpgradeStatus, rhs: SmartDeviceCoreSDK.A4xDevcieUpgradeStatus) -> Swift.Bool
 }
 @objc @objcMembers public class A4xDeviceControlModel : ObjectiveC.NSObject, Swift.Codable {
-  @objc public init(modelName: Swift.String? = nil, canRotate: Swift.Bool = NULL_BOOL, canStandby: Swift.Bool = true, streamProtocol: Swift.String? = nil, audioCodecType: Swift.String? = nil, whiteLight: Swift.Bool = NULL_BOOL, devicePersonDetect: Swift.Bool = NULL_BOOL, supportMotionTrack: Swift.Bool = NULL_BOOL)
+  @objc public init(modelName: Swift.String? = nil, canRotate: Swift.Bool = NULL_BOOL, canStandby: Swift.Bool = true, streamProtocol: Swift.String? = nil, audioCodectype: Swift.String? = nil, whiteLight: Swift.Bool = NULL_BOOL, devicePersonDetect: Swift.Bool = NULL_BOOL, supportMotionTrack: Swift.Bool = NULL_BOOL)
   @objc public var modelName: Swift.String?
   @objc public var canRotate: Swift.Bool
   @objc public var canStandby: Swift.Bool
   @objc public var streamProtocol: Swift.String?
-  @objc public var audioCodecType: Swift.String?
+  @objc public var audioCodectype: Swift.String?
   @objc public var whiteLight: Swift.Bool
   @objc public var devicePersonDetect: Swift.Bool
   @objc public var supportMotionTrack: Swift.Bool

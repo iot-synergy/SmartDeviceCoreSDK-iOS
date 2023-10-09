@@ -496,12 +496,12 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK19A4xDeviceAudioModel")
 
 SWIFT_CLASS("_TtC18SmartDeviceCoreSDK21A4xDeviceControlModel")
 @interface A4xDeviceControlModel : NSObject
-- (nonnull instancetype)initWithModelName:(NSString * _Nullable)modelName canRotate:(BOOL)canRotate canStandby:(BOOL)canStandby streamProtocol:(NSString * _Nullable)streamProtocol audioCodecType:(NSString * _Nullable)audioCodecType whiteLight:(BOOL)whiteLight devicePersonDetect:(BOOL)devicePersonDetect supportMotionTrack:(BOOL)supportMotionTrack OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithModelName:(NSString * _Nullable)modelName canRotate:(BOOL)canRotate canStandby:(BOOL)canStandby streamProtocol:(NSString * _Nullable)streamProtocol audioCodectype:(NSString * _Nullable)audioCodectype whiteLight:(BOOL)whiteLight devicePersonDetect:(BOOL)devicePersonDetect supportMotionTrack:(BOOL)supportMotionTrack OBJC_DESIGNATED_INITIALIZER;
 @property (nonatomic, copy) NSString * _Nullable modelName;
 @property (nonatomic) BOOL canRotate;
 @property (nonatomic) BOOL canStandby;
 @property (nonatomic, copy) NSString * _Nullable streamProtocol;
-@property (nonatomic, copy) NSString * _Nullable audioCodecType;
+@property (nonatomic, copy) NSString * _Nullable audioCodectype;
 @property (nonatomic) BOOL whiteLight;
 @property (nonatomic) BOOL devicePersonDetect;
 @property (nonatomic) BOOL supportMotionTrack;
