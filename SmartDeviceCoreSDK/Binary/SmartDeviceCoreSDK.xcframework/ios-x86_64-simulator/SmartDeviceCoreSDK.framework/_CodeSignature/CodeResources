@@ -226,15 +226,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		EM0wdRO1cXt7CaysuF78xq88+r0=
+		1gQN5Q7jPcOK4Zz7Z99jljecPVg=
 		</data>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		YB2Yi+Dx7Yq9k7gPhfzxGAjsQKE=
+		FYJMeZiQo1BsMWn6oLNFJC6/Ogg=
 		</data>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		fCUIib5ur/rUT2x16YGilne62qc=
+		d4lWJ+hA2tMDcxukhBf+gQ7RR6o=
 		</data>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -258,7 +258,7 @@
 		</data>
 		<key>version.json</key>
 		<data>
-		PUSqsdfcSk/bd8q01TtoxKYOZgA=
+		WYxfrdonzKl1rfjrGeWIYCNmIaQ=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -652,14 +652,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QtQwM29n6Yp4llaHZX/LmB0mLaqD7aRe2IXhS4DqdKU=
+			Ef4MNAci5jEndQcVK80dCcPuzuPADFBL0dwQP4N+Syo=
 			</data>
 		</dict>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zx9AzKuw79rT4dzXpLN8/Zm1q+PbmJl0byLJvgNFcl8=
+			a7WNBtFUwdHd3mih3+JWQPve00m8Iek9pZjgz5s7CvI=
 			</data>
 		</dict>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -701,7 +701,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oZICtYtzk16+ZCjWCjHK4T2tMURQnNW49V7H/6dAiw0=
+			KfNj/OBxx4Gs+pYujhc4qU+qe1Kp1r1COGxOmn4megM=
 			</data>
 		</dict>
 	</dict>
