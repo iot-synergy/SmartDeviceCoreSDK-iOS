@@ -3923,6 +3923,7 @@ public enum WebSocketInterfaceType {
   case GET_INFO(token: Swift.String)
   case CHANGE_AP_PASSWORD(token: Swift.String, pwd: Swift.String)
   case SET_SETTINGS(deviceModel: SmartDeviceCoreSDK.DeviceBean)
+  case SET_SETTING_ATTRIBUTES(serialNumber: Swift.String, attributeModel: Swift.Array<SmartDeviceCoreSDK.ApDeviceAttributeModel>)
   case SET_WIFI(data: [Swift.String : Swift.String])
   case FORMAT_SDCARD(token: Swift.String)
   case UNBIND
@@ -3940,11 +3941,13 @@ extension SmartDeviceCoreSDK.A4xWebSocketMessageTool : SmartDeviceCoreSDK.A4xSig
 }
 @_inheritsConvenienceInitializers @objc public class A4xWebSocketMessageTool : ObjectiveC.NSObject {
   @objc public static let shared: SmartDeviceCoreSDK.A4xWebSocketMessageTool
+  public func getApWebSocketConnectStatus(serialNumber: Swift.String) -> SmartDeviceCoreSDK.ApWebSocketConnectStatus
   public func connectWebSocket(sn: Swift.String, apAddr: Swift.String, uid: Swift.String, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ res: Swift.Bool?) -> Swift.Void)
   public func destory(sn: Swift.String)
   public func getMessageId() -> Swift.String
   public func sendMessage(msgType: SmartDeviceCoreSDK.WebSocketInterfaceType, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ res: SmartDeviceCoreSDK.A4xWebSocketMessageModel?) -> Swift.Void)
   @objc public func receiveMessage(message: Swift.String) -> SmartDeviceCoreSDK.A4xWebSocketMessageModel
+  public func formatAttrModel(attributeArray: Swift.Array<SmartDeviceCoreSDK.ApDeviceAttributeModel>) -> Swift.Dictionary<Swift.String, Swift.AnyObject>
   public func formatDeviceModel(deviceModel: SmartDeviceCoreSDK.DeviceBean) -> Swift.Dictionary<Swift.String, Swift.AnyObject>
   public func toDeviceModel(infoDic: Swift.Dictionary<Swift.String, Swift.AnyObject>, settingsDic: Swift.Dictionary<Swift.String, Swift.AnyObject>) -> SmartDeviceCoreSDK.DeviceBean
   public func checkApConnected(deviceId: Swift.String) -> Swift.Bool
@@ -4185,6 +4188,20 @@ extension SmartDeviceCoreSDK.AnyError : Foundation.LocalizedError {
     get
   }
 }
+@_inheritsConvenienceInitializers @objc public class ApConnectCore : ObjectiveC.NSObject {
+  @objc public class func getInstance() -> SmartDeviceCoreSDK.ApConnectCore
+  @available(iOS 12.0, *)
+  @objc public func connectAp(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
+  @objc public func isConnectAp(serialNumber: Swift.String) -> Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers public class ApDeviceAttributeModel : ObjectiveC.NSObject {
+  @objc public var name: Swift.String?
+  @objc public var value: Any?
+  @objc override dynamic public init()
+  @objc deinit
+}
 public enum BaseAccountAPI : Swift.String {
   case updateLanguage
   case getaccountinfo
@@ -4379,11 +4396,11 @@ public struct BindHistoryWifiModel : Swift.Codable {
 }
 @_inheritsConvenienceInitializers @objc open class BindNetworkAPI : ObjectiveC.NSObject {
   @objc public static let shared: SmartDeviceCoreSDK.BindNetworkAPI
-  @objc open func getBindCode(comple: @escaping (_ code: Swift.Int, _ message: Swift.String?, _ result: Swift.String) -> Swift.Void)
-  public func getBindResult(operationIdArr: [Swift.String], comple: @escaping (_ code: Swift.Int, _ message: Swift.String?, _ result: SmartDeviceCoreSDK.A4xBindResult?) -> Swift.Void)
-  public func getQrCodeValue(bindCode: Swift.String, deviceNetType: Swift.Int, wifiName: Swift.String, wifiPwd: Swift.String, isOldStyle: Swift.Bool, comple: @escaping (_ code: Swift.Int, _ message: Swift.String?, _ result: SmartDeviceCoreSDK.A4xBindResponse?) -> Swift.Void)
-  public func bindCableDevice(userSn: Swift.String, bindCode: Swift.String, comple: @escaping (_ code: Swift.Int, _ message: Swift.String?, _ result: SmartDeviceCoreSDK.A4xBindResponse?) -> Swift.Void)
-  public func queryDeviceBindByApText(bindCode: Swift.String, wifiName: Swift.String, wifiPwd: Swift.String, comple: @escaping (_ code: Swift.Int, _ message: Swift.String?, _ result: SmartDeviceCoreSDK.A4xBindResponse?) -> Swift.Void)
+  @objc open func getBindCode(comple: @escaping (_ code: Swift.Int, _ message: Swift.String, _ result: Swift.String) -> Swift.Void)
+  public func getBindResult(operationIdArr: [Swift.String], comple: @escaping (_ code: Swift.Int, _ message: Swift.String, _ result: SmartDeviceCoreSDK.A4xBindResult?) -> Swift.Void)
+  public func getQrCodeValue(bindCode: Swift.String, deviceNetType: Swift.Int, wifiName: Swift.String, wifiPwd: Swift.String, isOldStyle: Swift.Bool, comple: @escaping (_ code: Swift.Int, _ message: Swift.String, _ result: SmartDeviceCoreSDK.A4xBindResponse?) -> Swift.Void)
+  public func bindCableDevice(userSn: Swift.String, bindCode: Swift.String, comple: @escaping (_ code: Swift.Int, _ message: Swift.String, _ result: SmartDeviceCoreSDK.A4xBindResponse?) -> Swift.Void)
+  public func queryDeviceBindByApText(bindCode: Swift.String, wifiName: Swift.String, wifiPwd: Swift.String, comple: @escaping (_ code: Swift.Int, _ message: Swift.String, _ result: SmartDeviceCoreSDK.A4xBindResponse?) -> Swift.Void)
   public func requestBind(shareId: Swift.String, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: Swift.Bool?) -> Swift.Void)
   public func deviceBindInit(serialNumber: Swift.String?, bindType: Swift.Int, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: SmartDeviceCoreSDK.A4xDeviceBindInitModel?) -> Swift.Void)
   public func addDeviceName(deviceId: Swift.String, name: Swift.String, locationId: Swift.Int?, locationName: Swift.String?, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: Swift.Bool?) -> Swift.Void)
@@ -4551,7 +4568,7 @@ public struct A4xReIdPushModel : Swift.Codable {
 @_inheritsConvenienceInitializers @objc public class CarRecognizeCore : ObjectiveC.NSObject {
   @objc public class func getInstance() -> SmartDeviceCoreSDK.CarRecognizeCore
   @objc public func getAllCarReidList(onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String, _ models: [SmartDeviceCoreSDK.CarReIdBean]) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
-  public func updateReId(deleteLabelImages: [Swift.String : [Swift.String]], markLabelIds: [Swift.String], unmarkLabelIds: [Swift.String], merges: [[Swift.String : Swift.String]], deleteLabelIds: [Swift.String], comple: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void)
+  public func updateReId(deleteLabelImages: [Swift.String : [Swift.String]], markLabelIds: [Swift.String], unmarkLabelIds: [Swift.String], merges: [[Swift.String : Swift.String]], deleteLabelIds: [Swift.String], comple: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   @objc public func deleteReidCarImage(deleteLabelImages: [Swift.String : [Swift.String]], onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   @objc public func markReidCarLabel(markLabelIds: [Swift.String], onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   @objc public func unmarkReidCarLabel(unmarkLabelIds: [Swift.String], onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
@@ -4604,9 +4621,9 @@ final public class CredentialsPlugin : SmartDeviceCoreSDK.PluginType {
   @objc public class func getInstance() -> SmartDeviceCoreSDK.DeviceAICore
   @objc public func closePush(serialNumber: Swift.String, isClose: Swift.Bool, onSuccess: @escaping (_ code: Swift.Int, _ msg: Swift.String?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ msg: Swift.String?) -> Swift.Void)
   @objc public func getMessageNotificationConfig(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ msg: Swift.String?, _ models: [SmartDeviceCoreSDK.NotificationConfigBean]?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ msg: Swift.String?) -> Swift.Void)
-  @objc public func updateMessageNotification(serialNumber: Swift.String, bean: SmartDeviceCoreSDK.NotificationDetailBean, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void)
-  @objc public func getAnalysisEventConfig(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String?, _ models: [SmartDeviceCoreSDK.AnalysisModelBean]) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void)
-  @objc public func updateAnalysisEventConfig(beans: [SmartDeviceCoreSDK.AnalysisModelBean], serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void)
+  @objc public func updateMessageNotification(serialNumber: Swift.String, bean: SmartDeviceCoreSDK.NotificationDetailBean, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
+  @objc public func getAnalysisEventConfig(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String, _ models: [SmartDeviceCoreSDK.AnalysisModelBean]) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
+  @objc public func updateAnalysisEventConfig(beans: [SmartDeviceCoreSDK.AnalysisModelBean], serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   @objc public func getMergePushData(onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String, _ isOpen: Swift.Int) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   @objc public func updateMergePushData(isOpen: Swift.Int, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void)
   @objc public func getBirdAiSetting(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String, _ result: SmartDeviceCoreSDK.AiBirdSettingBean?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
@@ -4954,6 +4971,35 @@ public class A4xDeviceListModel : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
 }
+@objc @objcMembers public class DeviceConfigBean : ObjectiveC.NSObject, Swift.Codable {
+  @objc public init(needMotion: Swift.Int = NULL_INT, motionSensitivity: Swift.Int = NULL_INT, motionTrack: Swift.Int = NULL_INT, motionTrackMode: Swift.Int = NULL_INT, needNightVision: Swift.Int = NULL_INT, nightVisionSensitivity: Swift.Int = NULL_INT, nightThresholdLevel: Swift.Int = NULL_INT, nightVisionMode: Swift.Int = NULL_INT, needAlarm: Swift.Int = NULL_INT, alarmSeconds: Swift.Int = NULL_INT, needVideo: Swift.Int = NULL_INT, videoSeconds: Swift.Int = NULL_INT, deviceLanguage: Swift.String? = nil, timeZoneArea: Swift.String? = nil, whiteLightScintillation: Swift.Int = NULL_INT, voiceVolumeSwitch: Swift.Int = NULL_INT, voiceVolume: Swift.Int = NULL_INT, alarmVolume: Swift.Int = NULL_INT, antiflickerSwitch: Swift.Int = NULL_INT, antiflicker: Swift.Int = NULL_INT, mirrorFlip: Swift.Int = NULL_INT, recLamp: Swift.Int = NULL_INT, deviceSupportLanguage: [Swift.String]? = nil)
+  @objc public var needMotion: Swift.Int
+  @objc public var motionSensitivity: Swift.Int
+  @objc public var motionTrack: Swift.Int
+  @objc public var motionTrackMode: Swift.Int
+  @objc public var needNightVision: Swift.Int
+  @objc public var nightVisionSensitivity: Swift.Int
+  @objc public var nightThresholdLevel: Swift.Int
+  @objc public var nightVisionMode: Swift.Int
+  @objc public var needAlarm: Swift.Int
+  @objc public var alarmSeconds: Swift.Int
+  @objc public var needVideo: Swift.Int
+  @objc public var videoSeconds: Swift.Int
+  @objc public var deviceLanguage: Swift.String?
+  @objc public var timeZoneArea: Swift.String?
+  @objc public var whiteLightScintillation: Swift.Int
+  @objc public var voiceVolumeSwitch: Swift.Int
+  @objc public var voiceVolume: Swift.Int
+  @objc public var alarmVolume: Swift.Int
+  @objc public var antiflickerSwitch: Swift.Int
+  @objc public var antiflicker: Swift.Int
+  @objc public var mirrorFlip: Swift.Int
+  @objc public var recLamp: Swift.Int
+  @objc public var deviceSupportLanguage: [Swift.String]?
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  @objc deinit
+}
 @objc @objcMembers public class DeviceBean : ObjectiveC.NSObject, Swift.Codable {
   public init(serialNumber: Swift.String? = nil, deviceName: Swift.String? = nil, modelNo: Swift.String? = nil, displayModelNo: Swift.String? = nil, serialNo: Swift.String? = nil, macAddress: Swift.String? = nil, batteryLevel: Swift.Int = 0, admin: Swift.Int? = nil, awake: Swift.Int = 1, signalStrength: Swift.Int = 0, locationId: Swift.Int = NULL_INT, locationName: Swift.String? = nil, adminId: Swift.Int64 = Int64(NULL_INT), userId: Swift.Int64 = Int64(NULL_INT), online: Swift.Int = 1, offlineTime: Swift.Double? = nil, deviceStatus: Swift.Int = 0, dormancyPlanSwitch: Swift.Int? = nil, deviceDormancyMessage: Swift.String? = nil, sleepPlan: Swift.Int = 0, networkName: Swift.String? = nil, devicePersonDetect: Swift.Int? = nil, mirrorFlip: Swift.Int = 0, needVideo: Swift.Int? = nil, videoSeconds: Swift.Int? = nil, needAlarm: Swift.Int? = nil, alarmSeconds: Swift.Int? = nil, needNightVision: Swift.Int? = nil, nightVisionSensitivity: Swift.Int? = nil, nightThresholdLevel: Swift.Int? = nil, whiteLightScintillation: Swift.Int? = nil, nightVisionMode: Swift.Int? = nil, mcuNumber: Swift.String? = nil, firmwareId: Swift.String? = nil, adminName: Swift.String? = nil, adminEmail: Swift.String? = nil, adminPhone: Swift.String? = nil, activatedTime: Swift.Double? = nil, activated: Swift.Int? = nil, role: Swift.Int? = nil, statusCode: Swift.Int? = nil, upgradeStatus: Swift.Int = 0, upgradeProgress: Swift.Float = -1, userSn: Swift.String? = nil, isCharging: Swift.Int = 0, newestFirmwareId: Swift.String? = nil, deviceLanguage: Swift.String? = nil, timeZone: Swift.String? = nil, presetLocations: [SmartDeviceCoreSDK.A4xPresetModel]? = nil, wifiChannel: Swift.Int? = nil, ip: Swift.String? = nil, resolution: Swift.String? = nil, pushIgnored: Swift.Bool? = nil, sdCard: SmartDeviceCoreSDK.A4xSDCardModel? = nil, deviceContrl: SmartDeviceCoreSDK.A4xDeviceControlModel? = nil, packagePush: Swift.Int? = nil, deviceSupportLanguage: [Swift.String]? = nil, antiflickerSupport: Swift.Bool? = nil, antiflickerSwitch: Swift.Int? = nil, antiflicker: Swift.Int? = nil, recLamp: Swift.Int? = nil, voiceVolumeSwitch: Swift.Int? = nil, voiceVolume: Swift.Int? = nil, alarmVolume: Swift.Int? = nil, needMotion: Swift.Int? = nil, motionSensitivity: Swift.Int? = nil, personDetect: Swift.Int? = nil, motionTrack: Swift.Int? = nil, motionTrackMode: Swift.Int? = nil, cryDetect: Swift.Int? = nil, cryDetectLevel: Swift.Int? = nil, deviceSupport: SmartDeviceCoreSDK.A4xDeviceSupportModel? = nil, icon: Swift.String? = nil, smallIcon: Swift.String? = nil, displayGitSha: Swift.String? = nil, quantityCharge: Swift.Bool? = nil, zonePointListCount: Swift.Int? = nil, zonePointList: [SmartDeviceCoreSDK.ZoneBean]? = nil, notificationConfigList: [SmartDeviceCoreSDK.NotificationConfigBean]? = nil, list: [SmartDeviceCoreSDK.A4xAnalysisResponse]? = nil, birdAnalyzeSwitch: Swift.Bool = false, birdNotifySwitch: Swift.Bool = false, showCodecChange: Swift.Bool? = nil, codecSupported: Swift.Bool? = nil, defaultCodec: Swift.String? = nil, codec: Swift.String? = nil, firmwareSupported: Swift.Bool? = nil, deviceVipLevel: Swift.Int = 0, cooldown: SmartDeviceCoreSDK.A4xCooldownModel? = nil, apModeModel: SmartDeviceCoreSDK.A4xAPModeModel? = nil, apModeType: SmartDeviceCoreSDK.A4xDeviceAPModeType? = .WiFi, apModeUpload: Swift.Int? = nil, apModeDelState: Swift.Int? = nil, settings: Swift.String? = nil, liveAudioToggleOn: Swift.Bool? = nil, bindDeviceModel: SmartDeviceCoreSDK.BindDeviceModel? = nil, apInfo: Swift.String? = nil, modelCategory: Swift.Int? = nil, chargingMode: Swift.Int? = nil, wiredMacAddress: Swift.String? = nil, alarmWhenRemoveToggleOn: Swift.Bool? = nil, supportBirdVip: Swift.Bool = NULL_BOOL, deviceNetType: Swift.Int = 0, doorBellRingKey: Swift.Int? = nil, supportDoorBellRingKey: Swift.Array<SmartDeviceCoreSDK.A4xSupportDoorBellRingModel>? = nil, motionSensitivityOptionList: [Swift.Int]? = nil, deviceCallToggleOn: Swift.Bool? = nil, mechanicalDingDongSwitch: Swift.Int? = nil, mechanicalDingDongDuration: Swift.Int? = nil, chargeAutoPowerOnSwitch: Swift.Int? = nil, chargeAutoPowerOnCapacityOptions: [Swift.Int]? = nil, chargeAutoPowerOnCapacity: Swift.Int? = nil, otaAutoUpgrade: Swift.Bool? = nil, deviceInVip: Swift.Bool = NULL_BOOL)
   @objc override dynamic public func copy() -> Any
@@ -5073,6 +5119,7 @@ public class A4xDeviceListModel : Swift.Codable {
   public var chargeAutoPowerOnCapacity: Swift.Int?
   public var otaAutoUpgrade: Swift.Bool?
   @objc public var deviceInVip: Swift.Bool
+  @objc public var deviceConfigBean: SmartDeviceCoreSDK.DeviceConfigBean?
   required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
   @objc deinit
@@ -5141,10 +5188,10 @@ public struct A4xDeviceTimeIntervalModel : Swift.Codable {
 @objc @_inheritsConvenienceInitializers public class DeviceLocationCore : ObjectiveC.NSObject {
   @objc public class func getInstance() -> SmartDeviceCoreSDK.DeviceLocationCore
   @objc public func getUserDeviceLocationList(onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String?, _ models: [SmartDeviceCoreSDK.DeviceLocationModel]) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void)
-  @objc public func createUserDeviceLocation(bean: SmartDeviceCoreSDK.DeviceLocationModel, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String?, _ bean: SmartDeviceCoreSDK.DeviceLocationModel?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void)
-  @objc public func updateUserDeviceLocation(bean: SmartDeviceCoreSDK.DeviceLocationModel, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String?, _ bean: SmartDeviceCoreSDK.DeviceLocationModel?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void)
-  @objc public func deleteUserDeviceLocation(location_id: Swift.Int, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void)
-  public func setDeviceLocation(serialNumber: Swift.String, locationId: Swift.Int, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void)
+  @objc public func createUserDeviceLocation(bean: SmartDeviceCoreSDK.DeviceLocationModel, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String, _ bean: SmartDeviceCoreSDK.DeviceLocationModel?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
+  @objc public func updateUserDeviceLocation(bean: SmartDeviceCoreSDK.DeviceLocationModel, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String, _ bean: SmartDeviceCoreSDK.DeviceLocationModel?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
+  @objc public func deleteUserDeviceLocation(location_id: Swift.Int, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
+  public func setDeviceLocation(serialNumber: Swift.String, locationId: Swift.Int, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   @objc override dynamic public init()
   @objc deinit
 }
@@ -5156,12 +5203,16 @@ public struct A4xDeviceTimeIntervalModel : Swift.Codable {
 }
 @_inheritsConvenienceInitializers @objc public class DeviceManageCore : ObjectiveC.NSObject {
   @objc public class func getInstance() -> SmartDeviceCoreSDK.DeviceManageCore
-  @objc public func queryDeviceList(onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String?, _ models: [SmartDeviceCoreSDK.DeviceBean]?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void)
-  @objc public func querySingleDeviceInfo(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String?, _ model: SmartDeviceCoreSDK.DeviceBean?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void)
-  @objc public func getDeviceSettingConfig(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String?, _ model: SmartDeviceCoreSDK.DeviceBean?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String?) -> Swift.Void)
+  @objc public func queryDeviceList(onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String, _ models: [SmartDeviceCoreSDK.DeviceBean]?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
+  @objc public func querySingleDeviceInfo(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String, _ model: SmartDeviceCoreSDK.DeviceBean?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
+  @objc public func getDeviceSettingConfig(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String, _ model: SmartDeviceCoreSDK.DeviceBean?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   @objc public func updateDeviceName(serialNumber: Swift.String, deviceName: Swift.String, comple: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   @objc public func deleteDevice(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   @objc public func deleteShareDevice(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
+  @objc public func queryApDeviceList(onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String, _ models: [SmartDeviceCoreSDK.DeviceBean]?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
+  @objc public func querySingleApDeviceInfo(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String, _ model: SmartDeviceCoreSDK.DeviceBean?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
+  @objc public func updateApDeviceName(serialNumber: Swift.String, deviceName: Swift.String)
+  @objc public func deleteApDevice(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   @objc override dynamic public init()
   @objc deinit
 }
@@ -5186,6 +5237,8 @@ public struct A4xDeviceTimeIntervalModel : Swift.Codable {
   public func setMotionTrack(serialNumber: Swift.String, enable: Swift.Bool, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   public func updateDeviceLanguage(serialNumber: Swift.String, language: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   public func getRecentCoverImage(serialNumbers: Swift.Array<Swift.String>, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String, _ result: [SmartDeviceCoreSDK.DeviceCoverImageModel]?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
+  public func getApDeviceInfo(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ apModel: SmartDeviceCoreSDK.DeviceBean, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
+  public func updateApDeviceInfo(serialNumber: Swift.String, attributes: Swift.Array<SmartDeviceCoreSDK.ApDeviceAttributeModel>, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   @objc override dynamic public init()
   @objc deinit
 }
@@ -5763,6 +5816,7 @@ extension SmartDeviceCoreSDK.LiveManagerInstanceInterface {
   @objc public var playerStateChangeList: Foundation.NSPointerArray
   public var playerStateChangeProtocolList: [Swift.String : SmartDeviceCoreSDK.LiveManagerInstanceProtocol]
   @objc public var playerNumber: Swift.Int
+  @objc public func initLiveSDK()
   @objc deinit
 }
 extension SmartDeviceCoreSDK.LiveManagerInstance {
@@ -6907,6 +6961,7 @@ public protocol ErrorProtocolConvertible : SmartDeviceCoreSDK.ErrorConvertible {
   @objc public class func getInstance() -> SmartDeviceCoreSDK.SDCardManager
   @objc public func sdcardFormat(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   @objc public func stopSdcardFormat()
+  @objc public func apSdcardFormat(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   @objc override dynamic public init()
   @objc deinit
 }
@@ -7349,6 +7404,26 @@ public enum ValidationType {
 extension SmartDeviceCoreSDK.ValidationType : Swift.Equatable {
   public static func == (lhs: SmartDeviceCoreSDK.ValidationType, rhs: SmartDeviceCoreSDK.ValidationType) -> Swift.Bool
 }
+public enum ApWebSocketConnectStatus : ObjectiveC.NSInteger {
+  case isAllConnected
+  case noApConnected
+  case noWsConnected
+  case noAuth
+  case updateDeviceFailed
+  case getDeviceInfoFailed
+  case deleteApDeviceFailed
+  case formatApDeviceSDCardFailed
+  public init?(rawValue: ObjectiveC.NSInteger)
+  public typealias RawValue = ObjectiveC.NSInteger
+  public var rawValue: ObjectiveC.NSInteger {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class WebSocketHelper : ObjectiveC.NSObject {
+  public func reconnect(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
+  @objc override dynamic public init()
+  @objc deinit
+}
 extension SmartDeviceCoreSDK.A4xHostNode : Swift.Equatable {}
 extension SmartDeviceCoreSDK.A4xHostNode : Swift.Hashable {}
 extension SmartDeviceCoreSDK.A4xHostNode : Swift.RawRepresentable {}
@@ -7583,3 +7658,6 @@ extension SmartDeviceCoreSDK.URLEncoding.ArrayEncoding : Swift.Equatable {}
 extension SmartDeviceCoreSDK.URLEncoding.ArrayEncoding : Swift.Hashable {}
 extension SmartDeviceCoreSDK.URLEncoding.BoolEncoding : Swift.Equatable {}
 extension SmartDeviceCoreSDK.URLEncoding.BoolEncoding : Swift.Hashable {}
+extension SmartDeviceCoreSDK.ApWebSocketConnectStatus : Swift.Equatable {}
+extension SmartDeviceCoreSDK.ApWebSocketConnectStatus : Swift.Hashable {}
+extension SmartDeviceCoreSDK.ApWebSocketConnectStatus : Swift.RawRepresentable {}

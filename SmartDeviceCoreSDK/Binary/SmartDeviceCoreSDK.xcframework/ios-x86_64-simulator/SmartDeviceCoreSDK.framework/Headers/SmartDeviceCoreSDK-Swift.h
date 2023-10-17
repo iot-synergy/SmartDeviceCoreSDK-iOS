@@ -1382,6 +1382,23 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK17AnalysisModelBean")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+
+SWIFT_CLASS("_TtC18SmartDeviceCoreSDK13ApConnectCore")
+@interface ApConnectCore : NSObject
++ (ApConnectCore * _Nonnull)getInstance SWIFT_WARN_UNUSED_RESULT;
+- (void)connectApWithSerialNumber:(NSString * _Nonnull)serialNumber onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError SWIFT_AVAILABILITY(ios,introduced=12.0);
+- (BOOL)isConnectApWithSerialNumber:(NSString * _Nonnull)serialNumber SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC18SmartDeviceCoreSDK22ApDeviceAttributeModel")
+@interface ApDeviceAttributeModel : NSObject
+@property (nonatomic, copy) NSString * _Nullable name;
+@property (nonatomic) id _Nullable value;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @protocol IBindtateListener;
 @class BindDeviceModel;
 enum BindType : NSInteger;
@@ -1539,7 +1556,7 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK14BindNetworkAPI")
 @interface BindNetworkAPI : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) BindNetworkAPI * _Nonnull shared;)
 + (BindNetworkAPI * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
-- (void)getBindCodeWithComple:(void (^ _Nonnull)(NSInteger, NSString * _Nullable, NSString * _Nonnull))comple;
+- (void)getBindCodeWithComple:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull, NSString * _Nonnull))comple;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -1812,7 +1829,7 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK12DeviceAICore")
 /// <hr/>
 /// @return code    : 错误码 0-成功 其他-失败
 /// @return message : 返回信息描述
-- (void)updateMessageNotificationWithSerialNumber:(NSString * _Nonnull)serialNumber bean:(NotificationDetailBean * _Nonnull)bean onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nullable))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nullable))onError;
+- (void)updateMessageNotificationWithSerialNumber:(NSString * _Nonnull)serialNumber bean:(NotificationDetailBean * _Nonnull)bean onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
 /// 获取用户AI分析的配置
 /// <hr/>
 /// @param serialNumber : 设备Id
@@ -1820,7 +1837,7 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK12DeviceAICore")
 /// @return code    : 错误码 0-成功 其他-失败
 /// @return message : 返回信息描述
 /// @return models  : 返回获取到的设备详细信息数组
-- (void)getAnalysisEventConfigWithSerialNumber:(NSString * _Nonnull)serialNumber onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nullable, NSArray<AnalysisModelBean *> * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nullable))onError;
+- (void)getAnalysisEventConfigWithSerialNumber:(NSString * _Nonnull)serialNumber onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull, NSArray<AnalysisModelBean *> * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
 /// 更新用户AI分析的配置
 /// <hr/>
 /// @param list         : 需要更新的AI对象数组 [AnalysisModelBean]
@@ -1828,7 +1845,7 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK12DeviceAICore")
 /// <hr/>
 /// @return code    : 错误码 0-成功 其他-失败
 /// @return message : 返回信息描述
-- (void)updateAnalysisEventConfigWithBeans:(NSArray<AnalysisModelBean *> * _Nonnull)beans serialNumber:(NSString * _Nonnull)serialNumber onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nullable))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nullable))onError;
+- (void)updateAnalysisEventConfigWithBeans:(NSArray<AnalysisModelBean *> * _Nonnull)beans serialNumber:(NSString * _Nonnull)serialNumber onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
 /// 查询合并消息推送开关
 /// <hr/>
 /// @return code    : 错误码 0-成功 其他-失败
@@ -1915,6 +1932,7 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK20DeviceAttributesBean")
 @property (nonatomic, copy) NSArray<A4xDeviceSettingModifiableAttributesModel *> * _Nullable modifiableAttributes;
 @end
 
+@class DeviceConfigBean;
 
 SWIFT_CLASS("_TtC18SmartDeviceCoreSDK10DeviceBean")
 @interface DeviceBean : NSObject
@@ -1986,6 +2004,7 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK10DeviceBean")
 @property (nonatomic, copy) NSArray<NSNumber *> * _Nullable motionSensitivityOptionList;
 @property (nonatomic, copy) NSArray<NSNumber *> * _Nullable chargeAutoPowerOnCapacityOptions;
 @property (nonatomic) BOOL deviceInVip;
+@property (nonatomic, strong) DeviceConfigBean * _Nullable deviceConfigBean;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -2029,6 +2048,59 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK10DeviceBean")
 @end
 
 
+SWIFT_CLASS("_TtC18SmartDeviceCoreSDK16DeviceConfigBean")
+@interface DeviceConfigBean : NSObject
+- (nonnull instancetype)initWithNeedMotion:(NSInteger)needMotion motionSensitivity:(NSInteger)motionSensitivity motionTrack:(NSInteger)motionTrack motionTrackMode:(NSInteger)motionTrackMode needNightVision:(NSInteger)needNightVision nightVisionSensitivity:(NSInteger)nightVisionSensitivity nightThresholdLevel:(NSInteger)nightThresholdLevel nightVisionMode:(NSInteger)nightVisionMode needAlarm:(NSInteger)needAlarm alarmSeconds:(NSInteger)alarmSeconds needVideo:(NSInteger)needVideo videoSeconds:(NSInteger)videoSeconds deviceLanguage:(NSString * _Nullable)deviceLanguage timeZoneArea:(NSString * _Nullable)timeZoneArea whiteLightScintillation:(NSInteger)whiteLightScintillation voiceVolumeSwitch:(NSInteger)voiceVolumeSwitch voiceVolume:(NSInteger)voiceVolume alarmVolume:(NSInteger)alarmVolume antiflickerSwitch:(NSInteger)antiflickerSwitch antiflicker:(NSInteger)antiflicker mirrorFlip:(NSInteger)mirrorFlip recLamp:(NSInteger)recLamp deviceSupportLanguage:(NSArray<NSString *> * _Nullable)deviceSupportLanguage OBJC_DESIGNATED_INITIALIZER;
+/// 是否开启运动检测
+@property (nonatomic) NSInteger needMotion;
+/// 运动检测灵敏度, low middle high
+@property (nonatomic) NSInteger motionSensitivity;
+/// 运动跟踪: # 1表示 开启运动跟踪， 0表示 关闭运动跟踪
+@property (nonatomic) NSInteger motionTrack;
+/// 运动追踪类型:0,移动追踪；1,人形追踪
+@property (nonatomic) NSInteger motionTrackMode;
+/// 是否需要红外监测, 0关闭
+@property (nonatomic) NSInteger needNightVision;
+/// 红外监测灵敏度
+@property (nonatomic) NSInteger nightVisionSensitivity;
+/// 夜视模式(新)0关闭 1开启,夜视模式灵敏度-低 2开启,夜视模式灵敏度-中 3开启,夜视模式灵敏度-高
+@property (nonatomic) NSInteger nightThresholdLevel;
+/// 夜视模式,0-红外灯，1-白光灯,-1:不支持
+@property (nonatomic) NSInteger nightVisionMode;
+/// 是否开启警报
+@property (nonatomic) NSInteger needAlarm;
+/// 警报时长
+@property (nonatomic) NSInteger alarmSeconds;
+/// 是否开启录像
+@property (nonatomic) NSInteger needVideo;
+/// 录像时长
+@property (nonatomic) NSInteger videoSeconds;
+/// 设备语言
+@property (nonatomic, copy) NSString * _Nullable deviceLanguage;
+/// 时区
+@property (nonatomic, copy) NSString * _Nullable timeZoneArea;
+/// 白光灯闪烁 0:关，1开,-1:不支持
+@property (nonatomic) NSInteger whiteLightScintillation;
+/// 扬声器声音开关
+@property (nonatomic) NSInteger voiceVolumeSwitch;
+/// 扬声器音量
+@property (nonatomic) NSInteger voiceVolume;
+/// 警铃音量 10到100
+@property (nonatomic) NSInteger alarmVolume;
+/// 频闪开关，0关1开
+@property (nonatomic) NSInteger antiflickerSwitch;
+/// 频率： 50Hz、60Hz
+@property (nonatomic) NSInteger antiflicker;
+/// 视频翻转 0关闭，1开启
+@property (nonatomic) NSInteger mirrorFlip;
+/// 是否打开录像指示灯
+@property (nonatomic) NSInteger recLamp;
+@property (nonatomic, copy) NSArray<NSString *> * _Nullable deviceSupportLanguage;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC18SmartDeviceCoreSDK21DeviceCoverImageModel")
 @interface DeviceCoverImageModel : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -2058,7 +2130,7 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK18DeviceLocationCore")
 /// @return code    : 错误码 0-成功 其他-失败
 /// @return models  : 返回获取到的设备详细信息数组
 /// @return message : 返回信息描述
-- (void)createUserDeviceLocationWithBean:(DeviceLocationModel * _Nonnull)bean onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nullable, DeviceLocationModel * _Nullable))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nullable))onError;
+- (void)createUserDeviceLocationWithBean:(DeviceLocationModel * _Nonnull)bean onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull, DeviceLocationModel * _Nullable))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
 /// 更新用户位置
 /// @param locationId : 位置id
 /// @param adminId    : 用户id
@@ -2071,7 +2143,7 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK18DeviceLocationCore")
 /// @return code    : 错误码 0-成功 其他-失败
 /// @return models  : 返回获取到的设备详细信息数组
 /// @return message : 返回信息描述
-- (void)updateUserDeviceLocationWithBean:(DeviceLocationModel * _Nonnull)bean onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nullable, DeviceLocationModel * _Nullable))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nullable))onError;
+- (void)updateUserDeviceLocationWithBean:(DeviceLocationModel * _Nonnull)bean onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull, DeviceLocationModel * _Nullable))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
 /// 删除用户位置
 /// @param locationId : 位置id
 /// @param adminId    : 用户id
@@ -2084,7 +2156,7 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK18DeviceLocationCore")
 /// @return code    : 错误码 0-成功 其他-失败
 /// @return models  : 返回获取到的设备详细信息数组
 /// @return message : 返回信息描述
-- (void)deleteUserDeviceLocationWithLocation_id:(NSInteger)location_id onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nullable))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nullable))onError;
+- (void)deleteUserDeviceLocationWithLocation_id:(NSInteger)location_id onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -2109,7 +2181,7 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK16DeviceManageCore")
 /// @return code    : 错误码 0-成功 其他-失败
 /// @return models  : 返回获取到的设备详细信息数组
 /// @return message : 返回信息描述
-- (void)queryDeviceListOnSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nullable, NSArray<DeviceBean *> * _Nullable))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nullable))onError;
+- (void)queryDeviceListOnSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull, NSArray<DeviceBean *> * _Nullable))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
 /// 获取某个设备详细信息的方法,内部实现把设备数据存储到本地
 /// <hr/>
 /// @param deviceId : 设备Id,唯一标识(必传)
@@ -2117,7 +2189,7 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK16DeviceManageCore")
 /// @return code    : 错误码 0-成功 其他-失败
 /// @return model   : 返回获取到的设备详细信息
 /// @return message : 信息描述
-- (void)querySingleDeviceInfoWithSerialNumber:(NSString * _Nonnull)serialNumber onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nullable, DeviceBean * _Nullable))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nullable))onError;
+- (void)querySingleDeviceInfoWithSerialNumber:(NSString * _Nonnull)serialNumber onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull, DeviceBean * _Nullable))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
 /// 获取某个设备详细配置的方法
 /// <hr/>
 /// @param deviceId : 设备Id,唯一标识(必传)
@@ -2125,7 +2197,7 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK16DeviceManageCore")
 /// @return code    : 错误码 0-成功 其他-失败
 /// @return model   : 返回获取到的设备详细配置
 /// @return message : 信息描述
-- (void)getDeviceSettingConfigWithSerialNumber:(NSString * _Nonnull)serialNumber onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nullable, DeviceBean * _Nullable))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nullable))onError;
+- (void)getDeviceSettingConfigWithSerialNumber:(NSString * _Nonnull)serialNumber onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull, DeviceBean * _Nullable))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
 /// 通过deviceId更新某个设备的设备名称
 /// <hr/>
 /// @param deviceId   : 设备Id,唯一标识(必传)
@@ -2148,6 +2220,32 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK16DeviceManageCore")
 /// @return code    : 错误码 0-成功 其他-失败
 /// @return message : 信息描述
 - (void)deleteShareDeviceWithSerialNumber:(NSString * _Nonnull)serialNumber onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
+/// 获取所有已经绑定Ap设备的方法,绑定完成后已经存储到本地缓存
+/// <hr/>
+/// @return code    : 错误码 0-成功 其他-失败
+/// @return models  : 返回获取到的设备详细信息数组
+/// @return message : 返回信息描述
+- (void)queryApDeviceListOnSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull, NSArray<DeviceBean *> * _Nullable))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
+/// 获取某个AP设备详细信息的方法,绑定完成后已经存储到本地缓存
+/// <hr/>
+/// @param deviceId : 设备Id,唯一标识(必传)
+/// <hr/>
+/// @return code    : 错误码 0-成功 其他-失败
+/// @return model   : 返回获取到的设备详细信息
+/// @return message : 信息描述
+- (void)querySingleApDeviceInfoWithSerialNumber:(NSString * _Nonnull)serialNumber onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull, DeviceBean * _Nullable))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
+/// 通过deviceId更新某个AP设备的设备名称
+/// <hr/>
+/// @param deviceId   : 设备Id,唯一标识(必传)
+/// @param deviceName : 需要修改的新设备名称(必传)
+- (void)updateApDeviceNameWithSerialNumber:(NSString * _Nonnull)serialNumber deviceName:(NSString * _Nonnull)deviceName;
+/// 通过deviceId删除某个设备
+/// <hr/>
+/// @param deviceId : 设备Id,唯一标识(必传)
+/// <hr/>
+/// @return code    : 错误码 0-成功 其他-失败
+/// @return message : 信息描述
+- (void)deleteApDeviceWithSerialNumber:(NSString * _Nonnull)serialNumber onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -2619,6 +2717,7 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK19LiveManagerInstance")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @property (nonatomic, strong) NSPointerArray * _Nonnull playerStateChangeList;
 @property (nonatomic) NSInteger playerNumber;
+- (void)initLiveSDK SWIFT_METHOD_FAMILY(none);
 @end
 
 
@@ -3042,6 +3141,7 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK13SDCardManager")
 /// @return onError OTA错误
 - (void)sdcardFormatWithSerialNumber:(NSString * _Nonnull)serialNumber onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
 - (void)stopSdcardFormat;
+- (void)apSdcardFormatWithSerialNumber:(NSString * _Nonnull)serialNumber onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -3153,32 +3253,6 @@ SWIFT_AVAILABILITY(tvos,introduced=9.0) SWIFT_AVAILABILITY(macos,introduced=10.1
 - (void)URLSession:(NSURLSession * _Nonnull)session streamTask:(NSURLSessionStreamTask * _Nonnull)streamTask didBecomeInputStream:(NSInputStream * _Nonnull)inputStream outputStream:(NSOutputStream * _Nonnull)outputStream;
 @end
 
-@class NSURLAuthenticationChallenge;
-@class NSURLCredential;
-
-@interface SessionDelegate (SWIFT_EXTENSION(SmartDeviceCoreSDK)) <NSURLSessionDelegate>
-/// Tells the delegate that the session has been invalidated.
-/// \param session The session object that was invalidated.
-///
-/// \param error The error that caused invalidation, or nil if the invalidation was explicit.
-///
-- (void)URLSession:(NSURLSession * _Nonnull)session didBecomeInvalidWithError:(NSError * _Nullable)error;
-/// Requests credentials from the delegate in response to a session-level authentication request from the
-/// remote server.
-/// \param session The session containing the task that requested authentication.
-///
-/// \param challenge An object that contains the request for authentication.
-///
-/// \param completionHandler A handler that your delegate method must call providing the disposition
-/// and credential.
-///
-- (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
-/// Tells the delegate that all messages enqueued for a session have been delivered.
-/// \param session The session that no longer has any outstanding requests.
-///
-- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession * _Nonnull)session;
-@end
-
 @class NSURLSessionDataTask;
 @class NSURLResponse;
 @class NSCachedURLResponse;
@@ -3227,6 +3301,32 @@ SWIFT_AVAILABILITY(tvos,introduced=9.0) SWIFT_AVAILABILITY(macos,introduced=10.1
 /// handler; otherwise, your app leaks memory.
 ///
 - (void)URLSession:(NSURLSession * _Nonnull)session dataTask:(NSURLSessionDataTask * _Nonnull)dataTask willCacheResponse:(NSCachedURLResponse * _Nonnull)proposedResponse completionHandler:(void (^ _Nonnull)(NSCachedURLResponse * _Nullable))completionHandler;
+@end
+
+@class NSURLAuthenticationChallenge;
+@class NSURLCredential;
+
+@interface SessionDelegate (SWIFT_EXTENSION(SmartDeviceCoreSDK)) <NSURLSessionDelegate>
+/// Tells the delegate that the session has been invalidated.
+/// \param session The session object that was invalidated.
+///
+/// \param error The error that caused invalidation, or nil if the invalidation was explicit.
+///
+- (void)URLSession:(NSURLSession * _Nonnull)session didBecomeInvalidWithError:(NSError * _Nullable)error;
+/// Requests credentials from the delegate in response to a session-level authentication request from the
+/// remote server.
+/// \param session The session containing the task that requested authentication.
+///
+/// \param challenge An object that contains the request for authentication.
+///
+/// \param completionHandler A handler that your delegate method must call providing the disposition
+/// and credential.
+///
+- (void)URLSession:(NSURLSession * _Nonnull)session didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
+/// Tells the delegate that all messages enqueued for a session have been delivered.
+/// \param session The session that no longer has any outstanding requests.
+///
+- (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession * _Nonnull)session;
 @end
 
 @class NSURLSessionTask;
@@ -3406,6 +3506,12 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK22VideoTimeModelResponse")
 - (nonnull instancetype)initWithVideoSlices:(NSArray<VideoTimeModel *> * _Nullable)videoSlices earliestVideoSlice:(VideoTimeModel * _Nullable)earliestVideoSlice OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC18SmartDeviceCoreSDK15WebSocketHelper")
+@interface WebSocketHelper : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
