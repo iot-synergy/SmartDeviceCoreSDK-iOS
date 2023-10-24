@@ -2172,6 +2172,7 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK18DeviceLocationUtil")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class FreeTierBean;
 
 SWIFT_CLASS("_TtC18SmartDeviceCoreSDK16DeviceManageCore")
 @interface DeviceManageCore : NSObject
@@ -2246,6 +2247,12 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK16DeviceManageCore")
 /// @return code    : 错误码 0-成功 其他-失败
 /// @return message : 信息描述
 - (void)deleteApDeviceWithSerialNumber:(NSString * _Nonnull)serialNumber onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
+/// 获取免费套餐详细信息
+/// <hr/>
+/// @return code    : 错误码 0-成功 其他-失败
+/// @return bean    : 免费套餐详细信息
+/// @return message : 信息描述
+- (void)queryFreeTierOnSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull, FreeTierBean * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -2515,6 +2522,23 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK20FilterTagDeviceModel")
 
 
 
+/// 免费套餐信息对象
+SWIFT_CLASS("_TtC18SmartDeviceCoreSDK12FreeTierBean")
+@interface FreeTierBean : NSObject
+/// 免费套餐是否有效
+@property (nonatomic) BOOL isValid;
+/// 开始生效时间。10位utc时间戳
+@property (nonatomic) NSInteger effectTime;
+/// 生效结束时间。10位utc时间戳
+@property (nonatomic) NSInteger endTime;
+/// 回看天数。
+@property (nonatomic) NSInteger rollingDays;
+/// 最大视频空间。
+@property (nonatomic) int64_t storage;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
 SWIFT_CLASS("_TtC18SmartDeviceCoreSDK21HaveRecordDayResponse")
 @interface HaveRecordDayResponse : NSObject
 @property (nonatomic) BOOL hasVideo;
@@ -2649,6 +2673,10 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK11LibraryCore")
 - (void)setReadStatusWithMissing:(NSInteger)missing traceId:(NSString * _Nonnull)traceId onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull, BOOL))onSuccess onFail:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onFail;
 - (void)loadSingleLibraryInfoWithMsgId:(NSString * _Nonnull)msgId comple:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull, RecordBean * _Nullable))comple;
 - (void)fetchZoneImagesWithComple:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull, NSArray<ZoneBean *> * _Nullable))comple;
+- (void)queryVideoTagsByCloudWithSerialNumber:(NSString * _Nullable)serialNumber onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull, TagBean * _Nullable))onSuccess onFail:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onFail;
+/// 该接口逻辑如下
+/// 如果 isFromSDCard == true,查询新版本SDCard的相册标签,serialNumber必传
+/// 如果 isFromSDCard == false,查询云端相册对应该用户所有的tags标签
 - (void)queryVideoSearchOptionWithIsFromSDCard:(BOOL)isFromSDCard serialNumber:(NSString * _Nullable)serialNumber onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull, TagBean * _Nullable))onSuccess onFail:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onFail;
 /// download source
 /// \param models sources models

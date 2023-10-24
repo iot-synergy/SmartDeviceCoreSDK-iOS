@@ -2063,6 +2063,7 @@ public enum A4xLibraryVideoAPI : Swift.String {
   case traceLibrary
   case otherTagNameList
   case queryVideoSearchOption
+  case queryVideoSearchOptionBySn
   case queryFreePurchaseBanner
   case closeFreePurchaseBanner
   public static func getPath(service: SmartDeviceCoreSDK.LibraryMoudel) -> Swift.String
@@ -2673,6 +2674,7 @@ public enum LibraryMoudel : SmartDeviceCoreSDK.A4xNetMoudelProtocol {
   case traceLibrary(traceId: Swift.String)
   case otherTagNameList
   case queryVideoSearchOption
+  case queryVideoSearchOptionBySn(serialNumber: Swift.String)
   case getQuestionBackOptionsV2(traceId: Swift.String)
   case queryFreePurchaseBanner
   case closeFreePurchaseBanner
@@ -4202,11 +4204,23 @@ extension SmartDeviceCoreSDK.AnyError : Foundation.LocalizedError {
   @objc override dynamic public init()
   @objc deinit
 }
+@objc @_inheritsConvenienceInitializers public class FreeTierBean : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var isValid: Swift.Bool
+  @objc public var effectTime: Swift.Int
+  @objc public var endTime: Swift.Int
+  @objc public var rollingDays: Swift.Int
+  @objc public var storage: Swift.Int64
+  @objc override dynamic public init()
+  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
 public enum BaseAccountAPI : Swift.String {
   case updateLanguage
   case getaccountinfo
   case countryQuery
   case devicesActivityZone
+  case queryFreeTier
   public static func getPath(service: SmartDeviceCoreSDK.BaseAccountModel) -> Swift.String
   public static func getParam(service: SmartDeviceCoreSDK.BaseAccountModel) -> Foundation.Data?
   public static func getMethod(service: SmartDeviceCoreSDK.BaseAccountModel) -> SmartDeviceCoreSDK.Method
@@ -4221,6 +4235,7 @@ public enum BaseAccountModel : SmartDeviceCoreSDK.A4xNetMoudelProtocol {
   case getaccountinfo
   case countryQuery(queryName: Swift.String?, language: Swift.String?)
   case devicesActivityZone
+  case queryFreeTier
 }
 public struct BaseAccountRequestModel : Swift.Codable {
   public var targetLanguage: Swift.String?
@@ -4583,6 +4598,7 @@ public struct A4xReIdPushModel : Swift.Codable {
 public let NULL_INT: Swift.Int
 public let NULL_FLOAT: Swift.Float
 public let NULL_DOUBLE: Swift.Double
+public let NULL_INT64: Swift.Int64
 public let NULL_BOOL: Swift.Bool
 final public class CredentialsPlugin : SmartDeviceCoreSDK.PluginType {
   public typealias CredentialClosure = (SmartDeviceCoreSDK.TargetType) -> Foundation.URLCredential?
@@ -5213,6 +5229,7 @@ public struct A4xDeviceTimeIntervalModel : Swift.Codable {
   @objc public func querySingleApDeviceInfo(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String, _ model: SmartDeviceCoreSDK.DeviceBean?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   @objc public func updateApDeviceName(serialNumber: Swift.String, deviceName: Swift.String)
   @objc public func deleteApDevice(serialNumber: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
+  @objc public func queryFreeTier(onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String, _ bean: SmartDeviceCoreSDK.FreeTierBean) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   @objc override dynamic public init()
   @objc deinit
 }
@@ -5571,6 +5588,7 @@ public typealias Image = SmartDeviceCoreSDK.ImageType
   @objc public func fetchZoneImages(comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, [SmartDeviceCoreSDK.ZoneBean]?) -> Swift.Void)
   public func updatePushed(labelIds: [Swift.String], complement: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ res: Swift.Bool?) -> Swift.Void)
   public func fetchDoorbellFilterTag(complement: @escaping (_ code: Swift.Int, _ message: Swift.String, _ result: [SmartDeviceCoreSDK.A4xLibraryVideoAiTagType]?) -> Swift.Void)
+  @objc public func queryVideoTagsByCloud(serialNumber: Swift.String?, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String, _ tagBean: SmartDeviceCoreSDK.TagBean?) -> Swift.Void, onFail: @escaping (_ code: Swift.Int, _ msg: Swift.String) -> Swift.Void)
   @objc public func queryVideoSearchOption(isFromSDCard: Swift.Bool, serialNumber: Swift.String?, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String, _ tagBean: SmartDeviceCoreSDK.TagBean?) -> Swift.Void, onFail: @escaping (_ code: Swift.Int, _ msg: Swift.String) -> Swift.Void)
   public func queryFreePurchaseBanner(complement: @escaping (_ code: Swift.Int, _ message: Swift.String, _ result: SmartDeviceCoreSDK.A4xFreePurchaseBannerResponseModel?) -> Swift.Void)
   public func closeFreePurchaseBanner(complement: @escaping (_ code: Swift.Int, _ message: Swift.String, _ result: Swift.Bool?) -> Swift.Void)
