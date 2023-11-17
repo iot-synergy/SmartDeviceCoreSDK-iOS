@@ -20,9 +20,6 @@ class A4xBindWiredGuideView: A4xBindBaseView {
     
     var backClick: (()->Void)?
     
-    var zendeskChatClick: (()->Void)?
-    
-    
     override var datas: Dictionary<String, String>? {
         didSet {
             

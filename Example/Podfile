@@ -4,7 +4,7 @@ platform :ios, '11.0'
 
 target 'SmartDeviceCoreSDK_Example' do
 
-  pod 'SmartDeviceCoreSDK', :path => '../'
+  pod 'SmartDeviceCoreSDK', :path => '../', :subspecs => ["Source"]
   
   
   pod 'A4xIJKMediaPlayerUIKit', :path => 'SmartDeviceCoreSDK/Classes/A4xIJKMediaPlayerUIKit'

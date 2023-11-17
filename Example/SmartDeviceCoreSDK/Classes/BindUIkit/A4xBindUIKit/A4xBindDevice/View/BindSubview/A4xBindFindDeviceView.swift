@@ -69,7 +69,8 @@ class A4xBindFindDeviceView: A4xBindBaseView {
     
     private var isDingDong: Bool = false
     
-    
+    // 是否apmode
+    private var isAPMode: Bool = false
     
     private var isNoDataView: Bool = false
     
@@ -107,6 +108,10 @@ class A4xBindFindDeviceView: A4xBindBaseView {
         
         temp.leftClickBlock = { [weak self] in
             self?.stopTimer()
+            if self?.isAPMode ?? false {
+                self?.apModeSearchAniBackToShowDingDongView()
+                return
+            }
             self?.backClick?()
         }
         
@@ -266,14 +271,15 @@ class A4xBindFindDeviceView: A4xBindBaseView {
         return lblTV
     }()
     
-    init(frame: CGRect, isDingDong: Bool) {
+    init(frame: CGRect, isDingDong: Bool, isAPMode: Bool = false) {
         super.init(frame: frame)
         self.frame = frame
         self.backgroundColor = .white
         self.isUserInteractionEnabled = true
         self.isDingDong = isDingDong
+        self.isAPMode = isAPMode
         self.loadingTimerCount = isDingDong ? 6 : 0
-        self.searchTimeoutCount = 5
+        self.searchTimeoutCount = isAPMode ? 30 : 5
         
         setupUI()
         
@@ -854,9 +860,9 @@ class A4xBindFindDeviceView: A4xBindBaseView {
     
     private func noFindDeviceHintAnimaiton() {
         
-        //let item = DispatchWorkItem {}
-        //animationSerialQueue.sync(execute: item)
-        
+        if self.isAPMode {
+            return
+        }
         var newTransform = CGAffineTransform.identity
         newTransform.ty = -60.auto()
         UIView.animate(withDuration: 0.5, delay: 0.0, options: [.curveEaseOut], animations: {
@@ -896,7 +902,12 @@ class A4xBindFindDeviceView: A4xBindBaseView {
             self.searchSmallAniView.isHidden = true
             
             if stopType == .bleOffOrUnAuth {
-                
+                if self.isAPMode {
+                    self.searchTopAniView.pause()
+                    self.searchTopAniView.isHidden = true
+                    self.stopTimer()
+                    return
+                }
                 self.bindDingDongVoiceGuideView?.isHidden = false
                 self.noFindDeviceAnimation(duration: 0.8)
                 DispatchQueue.main.a4xAfter(1.0) {
@@ -927,16 +938,19 @@ class A4xBindFindDeviceView: A4xBindBaseView {
         
         if checkSearchTimeOut() {
             
-            self.topResetDeviceAnimation()
-            
-            
-            if (self.dataSource?.count ?? 0) > 0 {
-                DispatchQueue.main.a4xAfter(1) {
-                    self.topFindDeviceAnimation()
+            if isAPMode {
+                reSetSearch()
+            } else {
+                self.topResetDeviceAnimation()
+                
+                
+                if (self.dataSource?.count ?? 0) > 0 {
+                    DispatchQueue.main.a4xAfter(1) {
+                        self.topFindDeviceAnimation()
+                    }
                 }
+                
             }
-            
-            
         } else {
             
             
@@ -1004,16 +1018,20 @@ class A4xBindFindDeviceView: A4xBindBaseView {
     
     func viewWillAppear() {
         if checkSearchTimeOut() {
-            
-            startSearch()
+            if isAPMode {
+                reSetSearch()
+            } else {
+                // 保持不变，开始继续扫描
+                startSearch()
+            }
         } else {
-            
+            // 重新开始动画和计时
             
             if (self.dataSource?.count ?? 0) > 0 {
-                
+                // 搜到设备，保持不变，开始扫描
                 startSearch()
             } else {
-                
+                // 未搜到设备，重新开始动画
                 reSetSearch()
             }
         }
@@ -1237,12 +1255,59 @@ extension A4xBindFindDeviceView {
         }
         
         if loadingTimerCount == searchTimeoutCount + 1 {
-            self.protocol?.searchTimeout()
-            self.noFindDeviceAnimation(duration: 0.8)
+            if isAPMode {
+                self.protocol?.search_nofindDevice()
+            } else {
+                self.protocol?.searchTimeout()
+                self.noFindDeviceAnimation(duration: 0.8)
+            }
         }
         
-        
+        // 停止计时
         stopTimer()
+    }
+    
+    private func apModeSearchAniBackToShowDingDongView() {
+        self.titleLbl.alpha = 0
+        var voiceGuideTransform = CGAffineTransform.identity
+        voiceGuideTransform.ty = -self.maxY
+        self.bindDingDongVoiceGuideView?.transform = voiceGuideTransform
+        self.bindDingDongVoiceGuideView?.alpha = 1
+        self.bindDingDongVoiceGuideView?.isHidden = false
+        self.bluetoothTableView.isHidden = true
+        self.searchTopAniView.pause()
+        self.searchTopAniView.isHidden = true
+        self.stopTimer()
+    }
+    
+    public func dingDongViewToApModeSearchAni() {
+        self.titleLbl.alpha = 1
+        self.titleLbl.isHidden = false
+        var voiceGuideTransform = CGAffineTransform.identity
+        voiceGuideTransform.ty = self.maxY
+        self.bindDingDongVoiceGuideView?.transform = voiceGuideTransform
+        self.bindDingDongVoiceGuideView?.alpha = 1
+        self.bindDingDongVoiceGuideView?.isHidden = true
+        self.bluetoothTableView.isHidden = false
+        self.searchTopAniView.pause()
+        self.searchTopAniView.isHidden = true
+        self.searchSmallAniView.pause()
+        self.searchSmallAniView.isHidden = true
+        
+        if (self.dataSource?.count ?? 0 > 0) {
+            let item = DispatchWorkItem {
+                self.loadingTimerCount = 0
+                self.bluetoothTableView.reloadData()
+                if !self.checkSearchTimeOut() {
+                    self.searchSmallAniView.isHidden = true
+                    self.searchNothingLbl.isHidden = true
+                }
+            }
+            self.animationSerialQueue.sync(execute: item)
+            self.findDeviceAnimation(duration: 0.8)
+        } else {
+            self.startTimer(isContinue: false)
+        }
     }
     
     public func checkSearchTimeOut() -> Bool {

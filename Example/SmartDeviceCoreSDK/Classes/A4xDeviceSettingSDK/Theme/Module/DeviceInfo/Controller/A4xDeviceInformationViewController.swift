@@ -43,8 +43,13 @@ class A4xDeviceInformationViewController: A4xBaseViewController, A4xDeviceSettin
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.deviceModel = A4xUserDataHandle.Handle?.getDevice(deviceId: self.deviceModel?.serialNumber ?? "", modeType: self.deviceModel?.apModeType ?? .WiFi)
-        
-        self.getDeviceInfoFromNetwork()
+        // 获取网络请求信息,再次过程中需要处理本地展示的数据源
+        if self.deviceModel?.apModeType == .AP {
+            self.getDeviceInfoFromAPNet()
+        } else {
+            // AP模式下特殊数据处理
+            self.getDeviceInfoFromNetwork()
+        }
     }
     
     deinit {
@@ -104,6 +109,132 @@ class A4xDeviceInformationViewController: A4xBaseViewController, A4xDeviceSettin
             
         }
     }
+    
+    //MARK: ----- 处理Ap模式数据源 -----
+    private func getDeviceInfoFromAPNet() {
+        var allModels : Array<Array<A4xDeviceSettingModuleModel>> = []
+        // 设备信息模块
+        let deviceInfoModule = self.getdeviceInfoCasesFromAPMode()
+        allModels.append(deviceInfoModule)
+        // 设备系统信息模块
+        let systemInfoModule = self.getSystemInfoCasesFromAPMode()
+        allModels.append(systemInfoModule)
+        // 网络信息模块
+        let networkInfoModule = self.getNetworkInfoCasesFromAPMode()
+        allModels.append(networkInfoModule)
+        self.tableViewPresenter?.allCases = allModels
+    }
+    
+    /// AP基本信息
+    private func getdeviceInfoCasesFromAPMode() -> Array<A4xDeviceSettingModuleModel>
+    {
+        let tool = A4xDeviceSettingModuleTool()
+        var deviceInfoModule : Array<A4xDeviceSettingModuleModel> = []
+        
+        // 设备名称
+        let tempString = A4xBaseManager.shared.getDeviceTypeString(deviceModelCategory: self.deviceModel?.modelCategory ?? 1)
+        let deviceName = A4xBaseManager.shared.getLocalString(key: "device_name", param: [tempString]).capitalized
+
+        let deviceNameModuleModel = tool.createMuduleModel(moduleType: .ArrowPoint, currentType: .DeviceName, title: deviceName, titleContent: self.deviceModel?.deviceName ?? "", isShowTitleDescription: false, titleDescription: "", subModuleModels: [], moduleLevelType: .Main, isShowContent: false, content: "", isShowSeparator: false, isShowIntroduce: false, introduce: "", isInteractiveHidden: false, isSwitchOpen: false, isSwitchLoading: false, isSelected: false, isSelectionBoxLoading: false, isNetWorking: false, enumDataSource: [], iconPath: "", buttonTitle: "", leftImage: "", rightImage: "")
+        deviceInfoModule.append(deviceNameModuleModel)
+        
+        // 设备型号
+        let title = A4xBaseManager.shared.getLocalString(key: "model_number", param: [A4xBaseManager.shared.getDeviceTypeString(deviceModelCategory: self.deviceModel?.modelCategory ?? 0)]).capitalized
+        
+        let titleContent = self.deviceModel?.displayModelNo?.isBlank != true ? self.deviceModel?.displayModelNo : self.deviceModel?.modelNo
+        
+        let modelNoModuleModel = tool.createMuduleModel(moduleType: .ArrowPoint, currentType: .DeviceType, title: title, titleContent: titleContent ?? "", isShowTitleDescription: false, titleDescription: "", subModuleModels: [], moduleLevelType: .Main, isShowContent: false, content: "", isShowSeparator: false, isShowIntroduce: false, introduce: "", isInteractiveHidden: true, isSwitchOpen: false, isSwitchLoading: false, isSelected: false, isSelectionBoxLoading: false, isNetWorking: false, enumDataSource: [], iconPath: "", buttonTitle: "", leftImage: "", rightImage: "")
+        deviceInfoModule.append(modelNoModuleModel)
+        
+        // 电池电量这里
+        let batteryLevel = self.deviceModel?.batteryLevel
+        if batteryLevel != 0
+        {
+            let title = A4xBaseManager.shared.getLocalString(key: "battery_level").capitalized
+            let batteryLevelModuleModel = tool.createMuduleModel(moduleType: .ArrowPoint, currentType: .BatteryLevel, title: title, titleContent: "\(batteryLevel!)%", isShowTitleDescription: false, titleDescription: "", subModuleModels: [], moduleLevelType: .Main, isShowContent: false, content: "", isShowSeparator: false, isShowIntroduce: false, introduce: "", isInteractiveHidden: true, isSwitchOpen: false, isSwitchLoading: false, isSelected: false, isSelectionBoxLoading: false, isNetWorking: false, enumDataSource: [], iconPath: "", buttonTitle: "", leftImage: "", rightImage: "")
+            deviceInfoModule.append(batteryLevelModuleModel)
+        }
+        
+        // 设备序列号
+        let serialTitle = A4xBaseManager.shared.getLocalString(key: "serial_number")
+        let serialNoModuleModel = tool.createMuduleModel(moduleType: .ArrowPoint, currentType: .DeviceType, title: serialTitle, titleContent: self.deviceModel?.userSn ?? "", isShowTitleDescription: false, titleDescription: "", subModuleModels: [], moduleLevelType: .Main, isShowContent: false, content: "", isShowSeparator: false, isShowIntroduce: false, introduce: "", isInteractiveHidden: true, isSwitchOpen: false, isSwitchLoading: false, isSelected: false, isSelectionBoxLoading: false, isNetWorking: false, enumDataSource: [], iconPath: "", buttonTitle: "", leftImage: "", rightImage: "")
+        deviceInfoModule.append(serialNoModuleModel)
+        
+        let sortedDeviceInfoModule = tool.sortModuleArray(moduleArray: deviceInfoModule)
+        return sortedDeviceInfoModule
+    }
+    
+    // AP系统信息
+    private func getSystemInfoCasesFromAPMode() -> Array<A4xDeviceSettingModuleModel>
+    {
+        let tool = A4xDeviceSettingModuleTool()
+        var systemModule : Array<A4xDeviceSettingModuleModel> = []
+        
+        /// 系统版本
+        let firmwareId = self.deviceModel?.firmwareId ?? ""
+        let displayGitSha = self.deviceModel?.displayGitSha ?? ""
+        let systemVersion = "\(firmwareId)(\(displayGitSha))"
+        // 存在型号
+        let systemVersionTitle = A4xBaseManager.shared.getLocalString(key: "system_version").capitalized
+        let systemVersionModel = tool.createMuduleModel(moduleType: .ArrowPoint, currentType: .SystemVersion, title: systemVersionTitle, titleContent: systemVersion, isShowTitleDescription: false, titleDescription: "", subModuleModels: [], moduleLevelType: .Main, isShowContent: false, content: "", isShowSeparator: false, isShowIntroduce: false, introduce: "", isInteractiveHidden: true, isSwitchOpen: false, isSwitchLoading: false, isSelected: false, isSelectionBoxLoading: false, isNetWorking: false, enumDataSource: [], iconPath: "", buttonTitle: "", leftImage: "", rightImage: "")
+        systemModule.append(systemVersionModel)
+        // MCU
+        let mcuVersionTitle = A4xBaseManager.shared.getLocalString(key: "mcu_version").capitalized
+        let mcuNumber = self.deviceModel?.mcuNumber ?? ""
+        let mcuVersionModel = tool.createMuduleModel(moduleType: .ArrowPoint, currentType: .SystemMCU, title: mcuVersionTitle, titleContent: mcuNumber, isShowTitleDescription: false, titleDescription: "", subModuleModels: [], moduleLevelType: .Main, isShowContent: false, content: "", isShowSeparator: false, isShowIntroduce: false, introduce: "", isInteractiveHidden: true, isSwitchOpen: false, isSwitchLoading: false, isSelected: false, isSelectionBoxLoading: false, isNetWorking: false, enumDataSource: [], iconPath: "", buttonTitle: "", leftImage: "", rightImage: "")
+        systemModule.append(mcuVersionModel)
+        
+        // 信道号
+        let channelTitle = A4xBaseManager.shared.getLocalString(key: "wifi_channel")
+        let channelNumber = self.deviceModel?.wifiChannel ?? 0
+        let channelModel = tool.createMuduleModel(moduleType: .ArrowPoint, currentType: .WifiChannel, title: channelTitle, titleContent: "\(channelNumber)", isShowTitleDescription: false, titleDescription: "", subModuleModels: [], moduleLevelType: .Main, isShowContent: false, content: "", isShowSeparator: false, isShowIntroduce: false, introduce: "", isInteractiveHidden: true, isSwitchOpen: false, isSwitchLoading: false, isSelected: false, isSelectionBoxLoading: false, isNetWorking: false, enumDataSource: [], iconPath: "", buttonTitle: "", leftImage: "", rightImage: "")
+        systemModule.append(channelModel)
+
+        let sortedSystemModule = tool.sortModuleArray(moduleArray: systemModule)
+        return sortedSystemModule
+    }
+    
+    // AP网络数据
+    private func getNetworkInfoCasesFromAPMode() -> Array<A4xDeviceSettingModuleModel>
+    {
+        let tool = A4xDeviceSettingModuleTool()
+        var networkModule : Array<A4xDeviceSettingModuleModel> = []
+        
+        // 设备热点名称
+        let networkName = self.deviceModel?.networkName ?? ""
+        let hotspotTitle = A4xBaseManager.shared.getLocalString(key: "set_info_hotspot")
+        let hotspotModel = tool.createMuduleModel(moduleType: .ArrowPoint, currentType: .WifiName, title: hotspotTitle, titleContent: networkName, isShowTitleDescription: false, titleDescription: "", subModuleModels: [], moduleLevelType: .Main, isShowContent: false, content: "", isShowSeparator: false, isShowIntroduce: false, introduce: "", isInteractiveHidden: true, isSwitchOpen: false, isSwitchLoading: false, isSelected: false, isSelectionBoxLoading: false, isNetWorking: false, enumDataSource: [], iconPath: "", buttonTitle: "", leftImage: "", rightImage: "")
+        networkModule.append(hotspotModel)
+        // IP
+        let ipContent = self.deviceModel?.ip ?? ""
+        let ipTitle = A4xBaseManager.shared.getLocalString(key: "device_ip", param: [A4xBaseManager.shared.getDeviceTypeString(deviceModelCategory:  self.deviceModel?.modelCategory ?? 1)]).capitalized
+        let ipModel = tool.createMuduleModel(moduleType: .ArrowPoint, currentType: .IPAddress, title: ipTitle, titleContent: ipContent, isShowTitleDescription: false, titleDescription: "", subModuleModels: [], moduleLevelType: .Main, isShowContent: false, content: "", isShowSeparator: false, isShowIntroduce: false, introduce: "", isInteractiveHidden: true, isSwitchOpen: false, isSwitchLoading: false, isSelected: false, isSelectionBoxLoading: false, isNetWorking: false, enumDataSource: [], iconPath: "", buttonTitle: "", leftImage: "", rightImage: "")
+        networkModule.append(ipModel)
+        // 无线地址
+        var isMac = true // 默认无线
+        if self.deviceModel?.deviceNetType == 0 {
+            isMac = true
+        } else {
+            isMac = false
+        }
+        if isMac == true {
+            // 如果macAddress 有值
+            let macAddressTitle = A4xBaseManager.shared.getLocalString(key: "mac_address").capitalized
+            let macAddress = self.deviceModel?.macAddress ?? ""
+            let macAddressModel = tool.createMuduleModel(moduleType: .ArrowPoint, currentType: .WirelessMacAddress, title: macAddressTitle, titleContent: macAddress, isShowTitleDescription: false, titleDescription: "", subModuleModels: [], moduleLevelType: .Main, isShowContent: false, content: "", isShowSeparator: false, isShowIntroduce: false, introduce: "", isInteractiveHidden: true, isSwitchOpen: false, isSwitchLoading: false, isSelected: false, isSelectionBoxLoading: false, isNetWorking: false, enumDataSource: [], iconPath: "", buttonTitle: "", leftImage: "", rightImage: "")
+            networkModule.append(macAddressModel)
+        } else {
+            // 有线地址
+            let wiredMacAddress = self.deviceModel?.wiredMacAddress ?? ""
+            let wiredMacAddressTitle = A4xBaseManager.shared.getLocalString(key: "ethernet_mac_address").capitalized
+            let wiredMacAddressModel = tool.createMuduleModel(moduleType: .ArrowPoint, currentType: .WiredMacAddress, title: wiredMacAddressTitle, titleContent: wiredMacAddress, isShowTitleDescription: false, titleDescription: "", subModuleModels: [], moduleLevelType: .Main, isShowContent: false, content: "", isShowSeparator: false, isShowIntroduce: false, introduce: "", isInteractiveHidden: true, isSwitchOpen: false, isSwitchLoading: false, isSelected: false, isSelectionBoxLoading: false, isNetWorking: false, enumDataSource: [], iconPath: "", buttonTitle: "", leftImage: "", rightImage: "")
+            networkModule.append(wiredMacAddressModel)
+        }
+        
+        let sortedSystemModule = tool.sortModuleArray(moduleArray: networkModule)
+        return sortedSystemModule
+    }
+    
     
     
     //MARK: ----- 获取网络请求数据 -----
@@ -377,7 +508,7 @@ class A4xDeviceInformationViewController: A4xBaseViewController, A4xDeviceSettin
         let moduleModel = self.tableViewPresenter?.allCases?[indexPath.section][indexPath.row]
         let currentType = moduleModel?.currentType
         if currentType == .ChangeNetWork {
-            Resolver.bindImpl.pushBindViewController(bindFromType: .change_wifi, navigationController: self.navigationController)
+//            Resolver.bindImpl.pushBindViewController(bindFromType: .change_wifi, navigationController: self.navigationController)
         } else if currentType == .DeviceName {
             
             let vc = A4xDevicesNameEditViewController() //
@@ -420,25 +551,33 @@ class A4xDeviceInformationViewController: A4xBaseViewController, A4xDeviceSettin
     {
         if isComple == true {
             
-            self.getDeviceInfoFromNetwork()
-            var tempAttributeModel = self.deviceAttributeModel
-            var tempModifiableAttributes = tempAttributeModel?.modifiableAttributes
-            for i in 0..<(tempModifiableAttributes?.count ?? 0) {
-                let attrModel = tempModifiableAttributes?.getIndex(i)
-                let name = attrModel?.name
-                if name == "deviceName" {
-                    var nameModel = attrModel
-                    let anyCodable = ModifiableAnyAttribute()
-                    anyCodable.value = nameModel
-                    nameModel?.value = anyCodable
-                    tempModifiableAttributes?[i] = nameModel ?? A4xDeviceSettingModifiableAttributesModel()
+            if self.deviceModel?.apModeType == .AP {
+                // AP模式下特殊数据处理
+                // AP模式下,名称修改完成更新一下新的设备名称即可
+                self.deviceModel?.deviceName = deviceName
+                self.getDeviceInfoFromAPNet()
+                self.tableView.reloadData()
+            } else {
+                self.getDeviceInfoFromNetwork()
+                var tempAttributeModel = self.deviceAttributeModel
+                var tempModifiableAttributes = tempAttributeModel?.modifiableAttributes
+                for i in 0..<(tempModifiableAttributes?.count ?? 0) {
+                    let attrModel = tempModifiableAttributes?.getIndex(i)
+                    let name = attrModel?.name
+                    if name == "deviceName" {
+                        var nameModel = attrModel
+                        let anyCodable = ModifiableAnyAttribute()
+                        anyCodable.value = nameModel
+                        nameModel?.value = anyCodable
+                        tempModifiableAttributes?[i] = nameModel ?? A4xDeviceSettingModifiableAttributesModel()
+                    }
                 }
+                tempAttributeModel?.modifiableAttributes = tempModifiableAttributes
+                self.deviceModel?.deviceName = deviceName
+                self.deviceAttributeModel = tempAttributeModel
+                self.getAllCases()
+                self.tableView.reloadData()
             }
-            tempAttributeModel?.modifiableAttributes = tempModifiableAttributes
-            self.deviceModel?.deviceName = deviceName
-            self.deviceAttributeModel = tempAttributeModel
-            self.getAllCases()
-            self.tableView.reloadData()
             
         }
     }

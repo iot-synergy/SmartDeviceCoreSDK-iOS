@@ -70,6 +70,65 @@ public enum A4xDeviceSettingInfoEnum {
         }
     }
     
+    /// AP模式下获取Cases
+    internal static func managerApCases(deviceModel : DeviceBean?) -> [[A4xDeviceSettingInfoEnum]]  {
+        
+        var allSetting: [[A4xDeviceSettingInfoEnum]] = [[.header]] // [[.header ], [.wifi, .location_setting]]
+        
+        
+        var isApConnect = A4xWebSocketMessageTool.shared.checkApConnected(deviceId: deviceModel?.serialNumber ?? "")
+        if isApConnect == false {
+            allSetting.append( [.remove])
+            return allSetting
+        }
+        
+        /// 判断AP设备在线
+        var online : Bool = false
+        if A4xWebSocketMessageTool.shared.checkAPOnline(deviceId: deviceModel?.serialNumber ?? "") == true {
+            /// 在线
+            online = true
+        } else {
+            online = false
+        }
+        
+        var boxSetting: [A4xDeviceSettingInfoEnum] = []
+        
+        var boxSubSetting: [A4xDeviceSettingSubInfoEnum] = [.motion, .alarmSetting, .videoSetting]
+        let motionDesStr = ""
+        let notifiDesStr = ""
+        let alarmSettingDesString = ""
+        let videoSettingDesString = ""
+        var boxSetDesArr = [motionDesStr, notifiDesStr, alarmSettingDesString, videoSettingDesString]
+        
+        
+        // sd卡录像新增
+        if deviceModel?.sdCard != nil {
+            if (online == true) && deviceModel?.sdCard?.formatStatus != 1 {
+                boxSubSetting.append(.backvideo)
+                boxSetDesArr.append("")
+            }
+        }
+        if (online == true) {
+            boxSetting.append(.boxArr((boxSubSetting, boxSetDesArr)))
+        }
+        allSetting.append(boxSetting)
+        
+        // light && sound
+        var normal2Settings : [A4xDeviceSettingInfoEnum] = []
+        if (online == true) {
+            normal2Settings.append(.lightSet)
+            normal2Settings.append(.soundSet)
+        }
+        allSetting.append(normal2Settings)
+
+
+        // delete device tag
+        allSetting.append([.remove])
+        
+        return allSetting
+    }
+    
+    
     
     internal static func managerCases(vip : Bool,offline : Bool , deviceModel : DeviceBean?) -> [[A4xDeviceSettingInfoEnum]]  {
         
