@@ -2,6 +2,7 @@ import UIKit
 import SmartDeviceCoreSDK
 import BindInterface
 import BaseUI
+import Resolver
 
 private class BindBaseCommonBean: NSObject {
     
@@ -12,6 +13,7 @@ private class BindBaseCommonBean: NSObject {
     public var bindFrom: String? = "addCamera"
     public var bindFromType: BindFromTypeEnum? = .top_menu_add
     public var bindMode: String? = "unknown"
+    public var isAPMode: Bool? = false
     public var isAPQuickLink: Bool? = false
     public var selectedBindDeviceModel: BindDeviceModel?
     public var wifiName: String? = ""
@@ -28,6 +30,16 @@ public class BindBaseViewController: A4xBaseViewController {
             return BindBaseCommonBean.shared.bindCode
         }
     }
+    
+    public var isAPMode: Bool? {
+        set {
+            BindBaseCommonBean.shared.isAPMode = newValue
+        }
+        get {
+            return BindBaseCommonBean.shared.isAPMode
+        }
+    }
+    
     public var bindLocalCode: String? {
         set {
             BindBaseCommonBean.shared.bindLocalCode = newValue
@@ -190,7 +202,14 @@ extension BindBaseViewController: IBindtateListener {
     
     public func onGenarateQrCode(newQRCdoe: UIImage?, oldQRCode: UIImage?, wireQRCode: UIImage?) {}
    
-    public func onSuccess(code: Int, msg: String?, serialNumber: String?) {}
+    public func onSuccess(code: Int, msg: String?, serialNumber: String?) {
+
+        if isAPMode ?? false {
+            Resolver.liveUIImpl.pushHotlinkLiveVideoViewController(fromVCType: .apModeBind, navigationViewController: self.navigationController)
+            return
+        }
+        jumpToBindConnectWaitViewController(currentStep: 4, serialNumber: serialNumber)
+    }
     
     public func onError(code: Int, msg: String?) {}
 }

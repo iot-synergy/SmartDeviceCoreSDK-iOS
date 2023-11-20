@@ -12,19 +12,19 @@ import BaseUI
 
 
 @objc public enum A4xDeviceStarLightBitOperationStatus : Int {
-    case NoWhite_NoStarLight_NoOpenNightVisionMode = 0 
-    case NoWhite_NoStarLight_OpenNightVisionMode   = 1 
-    case NoWhite_StarLight_NoOpenNightVisionMode   = 2 
-    case NoWhite_StarLight_OpenNightVisionMode     = 3 
-    case White_NoStarLight_NoOpenNightVisionMode   = 4 
-    case White_NoStarLight_OpenNightVisionMode     = 5 
-    case White_StarLight_NoOpenNightVisionMode     = 6 
-    case White_StarLight_OpenNightVisionMode       = 7 
+    case NoWhite_NoStarLight_NoOpenNightVisionMode = 0
+    case NoWhite_NoStarLight_OpenNightVisionMode   = 1
+    case NoWhite_StarLight_NoOpenNightVisionMode   = 2
+    case NoWhite_StarLight_OpenNightVisionMode     = 3
+    case White_NoStarLight_NoOpenNightVisionMode   = 4
+    case White_NoStarLight_OpenNightVisionMode     = 5
+    case White_StarLight_NoOpenNightVisionMode     = 6
+    case White_StarLight_OpenNightVisionMode       = 7
 }
 
 class A4xDeviceSettingVideoSettingViewController: A4xBaseViewController, A4xDeviceSettingModuleTableViewCellDelegate, A4xDeviceSettingEnumAlertViewDelegate {
         
-    //MARK: ----- 属性 -----
+    //MARK: ----- property -----
     
     let group = DispatchGroup()
     let queue = DispatchQueue.global()
@@ -39,7 +39,7 @@ class A4xDeviceSettingVideoSettingViewController: A4xBaseViewController, A4xDevi
     
     var isNetworking : Bool = false
     
-    //MARK: ----- UI组件 -----
+    //MARK: ----- UI -----
     lazy private var tableView: UITableView = {
         let temp = UITableView(frame: CGRect.zero, style: UITableView.Style.grouped);
         temp.backgroundColor = UIColor.clear
@@ -63,7 +63,7 @@ class A4xDeviceSettingVideoSettingViewController: A4xBaseViewController, A4xDevi
         return temp
     }()
     
-    //MARK: ----- 系统方法 -----
+    //MARK: ----- System Functions -----
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -86,8 +86,13 @@ class A4xDeviceSettingVideoSettingViewController: A4xBaseViewController, A4xDevi
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
-        self.getDeviceInfoFromNetwork()
+        // 获取网络请求信息,再次过程中需要处理本地展示的数据源
+        if self.deviceModel?.apModeType == .AP {
+            self.getApAllCases()
+            self.tableView.reloadData()
+        } else {
+            self.getDeviceInfoFromNetwork()
+        }
         
     }
     //MARK: ----- UI相关 -----
@@ -100,15 +105,6 @@ class A4xDeviceSettingVideoSettingViewController: A4xBaseViewController, A4xDevi
         self.navView?.leftClickBlock = {
             weakSelf?.navigationController?.popViewController(animated: true)
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
     }
     
     //MARK: ----- Wifi模式 -----
@@ -116,7 +112,7 @@ class A4xDeviceSettingVideoSettingViewController: A4xBaseViewController, A4xDevi
     private func getDeviceInfoFromNetwork()
     {
         weak var weakSelf = self
-        
+        // Loading
         DispatchQueue.main.async {
             weakSelf?.view.makeToastActivity(title: A4xBaseManager.shared.getLocalString(key: "loading")) { (f) in }
         }
@@ -138,8 +134,6 @@ class A4xDeviceSettingVideoSettingViewController: A4xBaseViewController, A4xDevi
         }
     }
     
-    
-    
     private func loadAttributesData(withGroup: Bool) {
         weak var weakSelf = self
         DeviceSettingCoreUtil.getDeviceAttributes(deviceId: self.deviceModel?.serialNumber ?? "") { code, model, message in
@@ -155,7 +149,6 @@ class A4xDeviceSettingVideoSettingViewController: A4xBaseViewController, A4xDevi
             }
         }
     }
-    
     
     private func getAllCases()
     {
@@ -416,7 +409,7 @@ class A4xDeviceSettingVideoSettingViewController: A4xBaseViewController, A4xDevi
         
         switch status {
         case .NoWhite_NoStarLight_NoOpenNightVisionMode:
-            
+            // 000 / 100 / 010 / 110
             fallthrough
         case .White_NoStarLight_NoOpenNightVisionMode:
             fallthrough
@@ -426,16 +419,16 @@ class A4xDeviceSettingVideoSettingViewController: A4xBaseViewController, A4xDevi
             bottomContent = A4xBaseManager.shared.getLocalString(key: "night_vision_off_descr", param: [deviceType])
             break
         case .NoWhite_NoStarLight_OpenNightVisionMode:
-            
+            // 001 / 011
             fallthrough
         case .NoWhite_StarLight_OpenNightVisionMode:
             bottomContent = A4xBaseManager.shared.getLocalString(key: "night_vision_on_descr", param: [deviceType])
             break
         case .White_NoStarLight_OpenNightVisionMode:
-            
+            // 101 / 111 无底部文案
             fallthrough
         case .White_StarLight_OpenNightVisionMode:
-            
+            // 111
             bottomContent = ""
             break
         default:
@@ -464,9 +457,8 @@ class A4xDeviceSettingVideoSettingViewController: A4xBaseViewController, A4xDevi
             }
         }
         
-        
+        // 排序
         var sortedArray = tool.sortModuleArray(moduleArray: models)
-        
         if sortedArray.count > 0 {
             let lastModel = sortedArray.last
             if bottomContent != "" {
@@ -508,78 +500,291 @@ class A4xDeviceSettingVideoSettingViewController: A4xBaseViewController, A4xDevi
         return models
     }
     
-    //MARK: ----- 数据更新 -----
-    
-    @objc private func updateSwitch(currentType: A4xDeviceSettingCurrentType, enable: Bool) {
+    //MARK: ----- AP模式 -----
+    //MARK: ----- 通过deviceModel处理AP数据源 -----
+    private func getApAllCases() {
+        var allModels : Array<Array<A4xDeviceSettingModuleModel>> = []
         
+        // 录制模块
+        let videoRecordModule = self.getAPVideoRecordCase()
+        allModels.append(videoRecordModule)
+        
+        let antiFlickerModule = self.getAPAntiFlickerCase()
+        allModels.append(antiFlickerModule)
+
+        self.tableViewPresenter?.allCases = allModels
+    }
+    
+    // 视频录制模块
+    private func getAPVideoRecordCase() -> Array<A4xDeviceSettingModuleModel>
+    {
+        // 视频录制相关
+
+        let tool = A4xDeviceSettingModuleTool()
+        // 视频分辨率
+        var models: Array<A4xDeviceSettingModuleModel> = []
+        
+        // 视频翻转,这里用来判断有没有入口 mirrorFlip
+        if self.deviceModel?.deviceSupport?.deviceSupportMirrorFlip == true {
+            let titleString = A4xBaseManager.shared.getLocalString(key: "rotate_image").capitalized
+            let videoFlipModel = tool.createMuduleModel(moduleType: .ArrowPoint, currentType: .videoFlipEntrance, title: titleString, titleContent: "", isShowTitleDescription: false, titleDescription: "", subModuleModels: [], moduleLevelType: .Main, isShowContent: false, content: "", isShowSeparator: false, isShowIntroduce: false, introduce: "", isInteractiveHidden: false, isSwitchOpen: false, isSwitchLoading: false, isSelected: false, isSelectionBoxLoading: false, isNetWorking: false, enumDataSource: [], iconPath: "", buttonTitle: "", leftImage: "", rightImage: "")
+            models.append(videoFlipModel)
+        }
+        // 排序
+        let sortedArray = tool.sortModuleArray(moduleArray: models)
+        return sortedArray
+    }
+    
+    // 获取抗频闪case
+    private func getAPAntiFlickerCase() -> Array<A4xDeviceSettingModuleModel>
+    {
+        // 视频录制相关
+        var models: Array<A4xDeviceSettingModuleModel> = []
+        let tool = A4xDeviceSettingModuleTool()
+        
+        let titleString = A4xBaseManager.shared.getLocalString(key: "anti_flicker")
+        var antiFlickerValue = false
+        if self.deviceModel?.antiflickerSupport == true {
+            // 支持抗频闪
+            if self.deviceModel?.deviceConfigBean?.antiflickerSwitch == 1 {
+                antiFlickerValue = true
+            } else {
+                antiFlickerValue = false
+            }
+            // 抗频闪开关
+            let antiFlickerModel = tool.createBaseSwitchModel(moduleType: .Switch, currentType: .antiFlickerSwitch, title: titleString, isSwitchOpen: antiFlickerValue, isSwitchLoading: false)
+            models.append(antiFlickerModel)
+            
+            //"videoAntiFlickerFrequency_options_50Hz" = "50Hz";
+            //"videoAntiFlickerFrequency_options_60Hz" = "60Hz";
+            
+            if antiFlickerValue == true {
+                // 抗频闪率
+                let titleString = A4xBaseManager.shared.getLocalString(key: "flicker_rate")
+                let antiFlickerFrequency = self.deviceModel?.deviceConfigBean?.antiflicker ?? 50
+                let antiFlickerFrequencyValue = "\(antiFlickerFrequency)Hz"
+                // 获取枚举的数据源
+                var antiFlickerEnumData: Array<A4xDeviceSettingEnumAlertModel> = []
+                let antiFlickerEnumModel_50Hz = self.getAntiflickerEnumData(value: 50)
+                if !(antiFlickerEnumModel_50Hz.content?.isBlank ?? true) {
+                    antiFlickerEnumData.append(antiFlickerEnumModel_50Hz)
+                }
+                let antiFlickerEnumModel_60Hz = self.getAntiflickerEnumData(value: 60)
+                if !(antiFlickerEnumModel_60Hz.content?.isBlank ?? true) {
+                    antiFlickerEnumData.append(antiFlickerEnumModel_60Hz)
+                }
+                let allCase = antiFlickerEnumData
+                let antiFlickerFrequencyContentKey = tool.getModifiableAttributeTypeName(currentType: .AntiFlickerFrequency) + "_options_" + (antiFlickerFrequencyValue)
+                let antiFlickerFrequencyModel = tool.createBaseEnumModel(moduleType: .Enumeration, currentType: .AntiFlickerFrequency, title: titleString, titleContent: A4xBaseManager.shared.getLocalString(key: antiFlickerFrequencyContentKey), enumDataSource: allCase)
+                if allCase.count > 0 {
+                    // 如果枚举的数据源数量 > 0,则添加
+                    models.append(antiFlickerFrequencyModel)
+                }
+            }
+        }
+        // 排序
+        var sortedArray = tool.sortModuleArray(moduleArray: models)
+        // 给最后一条数据添加底部的文案
+        if sortedArray.count > 0 {
+            let lastModel = sortedArray.last
+            lastModel?.isShowContent = true
+            let tempString = A4xBaseManager.shared.getDeviceTypeString(deviceModelCategory: self.deviceModel?.modelCategory ?? 0)
+            lastModel?.content = A4xBaseManager.shared.getLocalString(key: "anti_flicker_tips", param: [tempString])
+            lastModel?.cellHeight = tool.getCellHeight(moduleModel: lastModel ?? A4xDeviceSettingModuleModel())
+            lastModel?.moduleHeight = tool.getModuleHeight(moduleModel: lastModel ?? A4xDeviceSettingModuleModel())
+            lastModel?.contentHeight = tool.getContentHeight(moduleModel: lastModel ?? A4xDeviceSettingModuleModel())
+            sortedArray[sortedArray.count-1] = lastModel ?? A4xDeviceSettingModuleModel()
+        }
+        return sortedArray
+    }
+    
+    // AP模式处理枚举的数据源,如果没有对应文案,返回空
+    // value: 传入的value
+    private func getAntiflickerEnumData(value: Int) -> A4xDeviceSettingEnumAlertModel
+    {
+        let antiflickerEnumModel = A4xDeviceSettingEnumAlertModel()
+        let tool = A4xDeviceSettingModuleTool()
+        let antiflickerContentKey = tool.getModifiableAttributeTypeName(currentType: .AntiFlickerFrequency) + "_options_" + "\(value)Hz"
+        let content = A4xBaseManager.shared.getLocalString(key: antiflickerContentKey)
+        antiflickerEnumModel.content = content
+        antiflickerEnumModel.requestContent = "\(value)"
+        antiflickerEnumModel.isEnable = true
+        antiflickerEnumModel.descriptionContent = ""
+        return antiflickerEnumModel
+    }
+    
+    //MARK: ----- AP模式下的数据处理 -----
+    // 获取Ap模式下的解析的数据源 String
+    private func getApModeStringValue(currentType: A4xDeviceSettingCurrentType ,value: Int) -> String {
+        var modeValue = ""
+        switch currentType {
+        case .NightVisionSensitivity:
+            // 夜视灵敏度
+            if value == 1 {
+                modeValue = "low"
+            } else if value == 2 {
+                modeValue = "mid"
+            } else if value == 3 {
+                modeValue = "high"
+            }
+            return modeValue
+        default:
+            return ""
+        }
+    }
+    
+    //MARK: ----- 数据更新 -----
+    // 更新开关(AP和WIFI模式通用,内部已经处理)
+    @objc private func updateSwitch(currentType: A4xDeviceSettingCurrentType, enable: Bool) {
+        // 先Loading
         self.updateLocalSwitchCase(currentType: currentType, isOpen: false, isLoading: true)
         self.tableView.reloadData()
-        
-        var model = ModifiableAttributes()
-        switch currentType {
-        case .antiFlickerSwitch:
-            model.name = "videoAntiFlickerSwitch"
-        case .AutoNightVisionSwitch:
-            model.name = "nightVisionSwitch"
-        default:
-            model.name = ""
-        }
-        let codableModel = ModifiableAnyAttribute()
-        codableModel.value = enable
-        model.value = codableModel
-        let modifiableAttributes = [model]
-        weak var weakSelf = self
-        DeviceSettingCoreUtil.updateModifiableAttributes(deviceId: self.deviceModel?.serialNumber ?? "", modifiableAttributes: modifiableAttributes) { code, message in
-            
-            if code == 0 {
-                
-                weakSelf?.getDeviceInfoFromNetwork()
-            } else {
-                
-                weakSelf?.updateLocalSwitchCase(currentType: currentType, isOpen: !enable, isLoading: false)
+        // 再处理数据
+        if self.deviceModel?.apModeType == .AP {
+            let attribute = ApDeviceAttributeModel()
+            switch currentType {
+            case .antiFlickerSwitch:
+                attribute.name = "antiflickerSwitch"
+                if enable == true {
+                    self.deviceModel?.deviceConfigBean?.antiflickerSwitch = 1
+                    attribute.value = 1
+                } else {
+                    self.deviceModel?.deviceConfigBean?.antiflickerSwitch = 0
+                    attribute.value = 0
+                }
+            case .AutoNightVisionSwitch:
+                attribute.name = "needNightVision"
+                if enable == true
+                {
+                    self.deviceModel?.deviceConfigBean?.needNightVision = 1
+                    attribute.value = 1
+                } else {
+                    self.deviceModel?.deviceConfigBean?.needNightVision = 0
+                    attribute.value = 0
+                }
+                break
+            default:
+                break
+            }
+            weak var weakSelf = self
+            let attributeArray : Array<ApDeviceAttributeModel> = [attribute]
+            DeviceSettingCore.getInstance().updateApDeviceInfo(serialNumber: self.deviceModel?.serialNumber ?? "", attributes: attributeArray) { code, message in
+                A4xUserDataHandle.Handle?.updateDevice(device: weakSelf?.deviceModel)
+                // 成功之后更新数据
+                weakSelf?.getApAllCases()
                 weakSelf?.tableView.reloadData()
+            } onError: { code, message in
+                self.view.makeToast(A4xBaseManager.shared.getLocalString(key: "open_fail_retry"))
+            }
+        } else {
+            var model = ModifiableAttributes()
+            switch currentType {
+            case .antiFlickerSwitch:
+                model.name = "videoAntiFlickerSwitch"
+            case .AutoNightVisionSwitch:
+                model.name = "nightVisionSwitch"
+            default:
+                model.name = ""
+            }
+            let codableModel = ModifiableAnyAttribute()
+            codableModel.value = enable
+            model.value = codableModel
+            let modifiableAttributes = [model]
+            weak var weakSelf = self
+            DeviceSettingCoreUtil.updateModifiableAttributes(deviceId: self.deviceModel?.serialNumber ?? "", modifiableAttributes: modifiableAttributes) { code, message in
+                NSLog("拿到的model 更新结果: \(code)")
+                if code == 0 {
+                    // 重新获取数据
+                    weakSelf?.getDeviceInfoFromNetwork()
+                } else {
+                    // 解决网络请求失败导致的一直Loading的BUG,除非退出页面
+                    weakSelf?.updateLocalSwitchCase(currentType: currentType, isOpen: !enable, isLoading: false)
+                    weakSelf?.tableView.reloadData()
+                }
             }
         }
         
     }
     
-    
+    // 更新枚举值
     @objc private func updateEnumValue(indexPath: IndexPath = IndexPath(), currentType: A4xDeviceSettingCurrentType, value: String) {
-        var model = ModifiableAttributes()
-        switch currentType {
-        case .StarlightWhiteBlack:
-            
-            fallthrough
-        case .StarlightColor:
-            
-            self.isNetworking = true
-            model.name = "nightVisionMode"
-            break
-        case .VideoResolution:
-            model.name = "videoResolution"
-        case .AntiFlickerFrequency:
-            model.name = "videoAntiFlickerFrequency"
-        case .NightVisionSensitivity:
-            model.name = "nightVisionSensitivity"
-        default:
-            model.name = ""
-        }
-        let codableModel = ModifiableAnyAttribute()
-        codableModel.value = value
-        model.value = codableModel
-        let modifiableAttributes = [model]
-        weak var weakSelf = self
-        DeviceSettingCoreUtil.updateModifiableAttributes(deviceId: self.deviceModel?.serialNumber ?? "", modifiableAttributes: modifiableAttributes) { code, message in
-            
-            
-            weakSelf?.isNetworking = false
-            if code == 0 {
+        if self.deviceModel?.apModeType == .AP {
+            let attribute = ApDeviceAttributeModel()
+            switch currentType {
+            case .StarlightWhiteBlack:
+                attribute.name = "nightVisionMode"
+                // 夜视模式,0-红外灯，1-白光灯
+                self.deviceModel?.deviceConfigBean?.nightVisionMode = 0
+                attribute.value = 0
+                break
+            case .StarlightColor:
+                self.deviceModel?.deviceConfigBean?.nightVisionMode = 1
+                attribute.value = 1
+                break
                 
-                weakSelf?.getDeviceInfoFromNetwork()
-            } else {
-                
+            case .VideoResolution:
+                self.deviceModel?.resolution = value
+                break
+            case .AntiFlickerFrequency:
+                attribute.name = "antiflicker"
+                self.deviceModel?.deviceConfigBean?.antiflicker = self.getApModeRequestEnumValue(currentType: currentType, value: value)
+                attribute.value = self.getApModeRequestEnumValue(currentType: currentType, value: value)
+                break
+            case .NightVisionSensitivity:
+                attribute.name = "nightVisionSensitivity"
+                self.deviceModel?.deviceConfigBean?.nightVisionSensitivity = Int(value) ?? 0
+                attribute.value = Int(value)
+                break
+            default:
+                break
+            }
+            weak var weakSelf = self
+            let attributeArray : Array<ApDeviceAttributeModel> = [attribute]
+            DeviceSettingCore.getInstance().updateApDeviceInfo(serialNumber: self.deviceModel?.serialNumber ?? "", attributes: attributeArray) { code, message in
+                A4xUserDataHandle.Handle?.updateDevice(device: weakSelf?.deviceModel)
+                // 成功之后更新数据
+                weakSelf?.getApAllCases()
                 weakSelf?.tableView.reloadData()
-                UIApplication.shared.keyWindow?.makeToast(message)
+            } onError: { code, message in
+                self.view.makeToast(A4xBaseManager.shared.getLocalString(key: "open_fail_retry"))
+            }
+        } else {
+            var model = ModifiableAttributes()
+            switch currentType {
+            case .StarlightWhiteBlack:
+                // 夜视模式,0-红外灯，1-白光灯
+                fallthrough
+            case .StarlightColor:
+                // 网络请求开始
+                self.isNetworking = true
+                model.name = "nightVisionMode"
+                break
+            case .VideoResolution:
+                model.name = "videoResolution"
+            case .AntiFlickerFrequency:
+                model.name = "videoAntiFlickerFrequency"
+            case .NightVisionSensitivity:
+                model.name = "nightVisionSensitivity"
+            default:
+                model.name = ""
+            }
+            let codableModel = ModifiableAnyAttribute()
+            codableModel.value = value
+            model.value = codableModel
+            let modifiableAttributes = [model]
+            weak var weakSelf = self
+            DeviceSettingCoreUtil.updateModifiableAttributes(deviceId: self.deviceModel?.serialNumber ?? "", modifiableAttributes: modifiableAttributes) { code, message in
+                NSLog("拿到的model 更新结果: \(code)")
+                // 请求结束
+                weakSelf?.isNetworking = false
+                if code == 0 {
+                    // 重新获取数据
+                    weakSelf?.getDeviceInfoFromNetwork()
+                } else {
+                    // 请求失败要停止loading
+                    weakSelf?.tableView.reloadData()
+                    UIApplication.shared.keyWindow?.makeToast(message)
+                }
             }
         }
         
@@ -604,21 +809,21 @@ class A4xDeviceSettingVideoSettingViewController: A4xBaseViewController, A4xDevi
         self.tableViewPresenter?.allCases = tempCases
     }
     
-    
+    // 获取Ap模式下的上传的数据源 Int
     private func getApModeRequestEnumValue(currentType: A4xDeviceSettingCurrentType ,value: String) -> Int {
         
         var modeValue = 0
         switch currentType {
         case .VideoResolution:
-            
+            // Pir灵敏度
             modeValue = value.intValue()
             return modeValue
         case .AntiFlickerFrequency:
-            
+            // Pir灵敏度
             modeValue = value.intValue()
             return modeValue
         case .PirRecordTime:
-            
+            // 视频时长
             if value == "auto" {
                 modeValue = -1
             } else {
@@ -626,8 +831,8 @@ class A4xDeviceSettingVideoSettingViewController: A4xBaseViewController, A4xDevi
             }
             return modeValue
         case .PirCooldownTime:
-            
-            
+            // 拍摄间隔
+            // 视频时长
             if value == "auto" {
                 modeValue = -1
             } else {
@@ -640,7 +845,7 @@ class A4xDeviceSettingVideoSettingViewController: A4xBaseViewController, A4xDevi
     }
     
     //MARK: ----- 私有方法 -----
-    
+    // 处理SelectionBox数据,并且loading
     private func selectionBoxLoading(indexPath: IndexPath, isBoxLoading: Bool = true) {
         var tempAllCases = self.tableViewPresenter?.allCases
         let moduleModel = self.tableViewPresenter?.allCases?[indexPath.section][indexPath.row]
@@ -664,33 +869,33 @@ class A4xDeviceSettingVideoSettingViewController: A4xBaseViewController, A4xDevi
     
     
     //MARK: ----- A4xDeviceSettingModuleTableViewCellDelegate -----
-    
+    /// 点击了cell上的哪个indexPath 的 哪个开关
     func A4xDeviceSettingModuleTableViewCellSwitchDidClick(indexPath: IndexPath, isOn: Bool)
     {
-        
+        NSLog("点击了视频设置开关 indexPath :\(indexPath)")
         let moduleModel = self.tableViewPresenter?.allCases?[indexPath.section][indexPath.row]
         let currentType = moduleModel?.currentType
-        
+        // 其他,(拍摄间隔,休眠时间开关灯)更新
         self.updateSwitch(currentType: currentType ?? .PirCooldownSwitch, enable: isOn)
     }
     
-    
+    /// 点击了cell上的哪个indexPath的第几个index 的 选择框
     func A4xDeviceSettingModuleTableViewCellSelectionBoxDidClick(indexPath: IndexPath, index: Int)
     {
-        
+        NSLog("点击了视频设置复选框 indexPath :\(indexPath)")
         let moduleModel = self.tableViewPresenter?.allCases?[indexPath.section][indexPath.row]
         let currentType = moduleModel?.currentType
         switch currentType {
         case .StarlightWhiteBlack:
-            
-            
+            // 黑白模式
+            // 先loading
             if self.isNetworking == false {
                 self.selectionBoxLoading(indexPath: indexPath)
                 self.updateEnumValue(indexPath: indexPath, currentType: currentType ?? .StarlightWhiteBlack, value: "infrared")
             }
             break
         case .StarlightColor:
-            
+            // 彩色模式
             if self.isNetworking == false {
                 self.selectionBoxLoading(indexPath: indexPath)
                 self.updateEnumValue(indexPath: indexPath, currentType: currentType ?? .StarlightColor, value: "white")
@@ -701,10 +906,10 @@ class A4xDeviceSettingVideoSettingViewController: A4xBaseViewController, A4xDevi
         }
     }
     
-    
+    /// 点击了cell上的哪个indexPath的第几个Cell被点击,一般是展示枚举,或者跳转到那个界面
     func A4xDeviceSettingModuleTableViewCellDidClick(indexPath: IndexPath)
     {
-        
+        NSLog("点击了视频设置Cell indexPath :\(indexPath)")
         let moduleModel = self.tableViewPresenter?.allCases?[indexPath.section][indexPath.row]
         let currentType = moduleModel?.currentType
         switch currentType {
@@ -722,16 +927,12 @@ class A4xDeviceSettingVideoSettingViewController: A4xBaseViewController, A4xDevi
             break
         case .audioVideoLinkage:
             break
-            
-
-
-
         case .VideoResolution:
             fallthrough
         case .NightVisionSensitivity:
             fallthrough
         case .AntiFlickerFrequency:
-            
+            // 点击枚举弹窗
             let enumAlert = A4xDeviceSettingEnumAlertView.init(frame: self.view.bounds, currentType: currentType ?? .NotiMode, allCases: moduleModel?.enumDataSource ?? [])
             enumAlert.delegate = self
             enumAlert.showAlert()
@@ -740,21 +941,21 @@ class A4xDeviceSettingVideoSettingViewController: A4xBaseViewController, A4xDevi
         }
     }
     
-    
+    /// 点击了cell上更多信息按钮,跳转到那个界面
     func A4xDeviceSettingModuleTableViewCellButtonDidClick(indexPath: IndexPath)
     {
         
     }
     
-    
+    /// 当前模块滑动条被滑动,返回最终结果,和当前的IndexPath
     func A4xDeviceSettingModuleTableViewCellSliderDidDrag(value: Float, indexPath: IndexPath)
     {
-        
+        NSLog("滑动了视频设置Cell的滑动条,最终结果: \(value) indexPath :\(indexPath)")
     }
     
     //MARK: ----- A4xDeviceSettingEnumAlertViewDelegate -----
     func A4xDeviceSettingEnumAlertViewCellDidClick(currentType: A4xDeviceSettingCurrentType, enumModel: A4xDeviceSettingEnumAlertModel) {
-        
+        NSLog("当前点击的枚举类型是: \(currentType.rawValue) , 枚举模型: \(enumModel)")
         self.updateEnumValue(currentType: currentType, value: enumModel.requestContent ?? "")
     }
 }

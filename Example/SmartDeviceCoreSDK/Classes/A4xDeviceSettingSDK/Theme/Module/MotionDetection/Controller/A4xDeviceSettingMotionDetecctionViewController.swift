@@ -35,9 +35,13 @@ class A4xDeviceSettingMotionDetecctionViewController: A4xBaseViewController, A4x
         
         self.loadNavtion()
         self.tableView.isHidden = false
-        
-        
-        self.getDeviceInfoFromNetwork()
+        if self.deviceModel?.apModeType == .AP {
+            // AP Mode
+            self.getApCases()
+            self.tableView.reloadData()
+        } else {
+            self.getDeviceInfoFromNetwork()
+        }
         
     }
     
@@ -329,8 +333,161 @@ class A4xDeviceSettingMotionDetecctionViewController: A4xBaseViewController, A4x
         return motionTrackModule
     }
     
-    //MARK: ----- AP和WIFI模式下拍摄设置入口 -----
+    //MARK: ----- 获取AP模式数据 -----
+    private func getApCases()
+    {
+        var allModels : Array<Array<A4xDeviceSettingModuleModel>> = []
+        // 运动检测模块
+        let motionModule = self.getApMotionCases()
+        allModels.append(motionModule)
+        
+        let isShow = self.isShowShootingSetting()
+        if isShow {
+            let shootingModule = self.getWifiAndAPShootingCases()
+            allModels.append(shootingModule)
+        }
+        
+        self.tableViewPresenter?.allCases = allModels
+    }
     
+    // 运动检测通知
+    private func getApMotionCases() -> Array<A4xDeviceSettingModuleModel>
+    {
+        let tool = A4xDeviceSettingModuleTool()
+        var apMotionModule : Array<A4xDeviceSettingModuleModel> = []
+        
+        // pirSwitch 运动检测开关
+        let titleString = A4xBaseManager.shared.getLocalString(key: "motion_detection")
+        var pirSwitchValue: Bool = false
+        if self.deviceModel?.deviceConfigBean?.needMotion == 1 {
+            pirSwitchValue = true
+        } else {
+            pirSwitchValue = false
+        }
+        
+        let pirSwitchModel = tool.createBaseSwitchModel(moduleType: tool.getModuleType(type: "SWITCH"), currentType: .PirSwitch, title: titleString, isSwitchOpen: pirSwitchValue, isSwitchLoading: false)
+        apMotionModule.append(pirSwitchModel)
+        
+        // 拍摄间隔开关
+        var cooldownSwitchValue: Bool = false
+        // 只有开启了运动检测,下面一系列才会显示出来
+        if pirSwitchValue == true {
+            // pir灵敏度 pirSensitivity
+            let currentPirSensitivityTitle = A4xBaseManager.shared.getLocalString(key: "detection_sensitivity")
+            let currentPirSensitivityTitleString = A4xBaseManager.shared.getLocalString(key: "detection_sensitivity")
+            var currentMotionSensitivityString = self.getApModeStringValue(currentType: .PirSensitivity, value: self.deviceModel?.deviceConfigBean?.motionSensitivity ?? 1)
+            let currentPirSensitivityContentKey = tool.getModifiableAttributeTypeName(currentType: .PirSensitivity) + "_options_" + (currentMotionSensitivityString)
+            // 获取枚举的数据源 [1,2,3]
+            var pirSensitivityEnumData: Array<A4xDeviceSettingEnumAlertModel> = []
+            for i in 1..<4 {
+                let pirSensitivityEnumModel = A4xDeviceSettingEnumAlertModel()
+                let enumMotionSensitivityString = self.getApModeStringValue(currentType: .PirSensitivity, value: i)
+                let enumPirSensitivityContentKey = tool.getModifiableAttributeTypeName(currentType: .PirSensitivity) + "_options_" + (enumMotionSensitivityString)
+                pirSensitivityEnumModel.content = A4xBaseManager.shared.getLocalString(key: enumPirSensitivityContentKey)
+                pirSensitivityEnumModel.requestContent = "\(i)"
+                pirSensitivityEnumModel.isEnable = true
+                pirSensitivityEnumData.append(pirSensitivityEnumModel)
+            }
+            
+            let pirSensitivityModel = tool.createBaseEnumModel(moduleType: tool.getModuleType(type: "ENUM"), currentType: .PirSensitivity, title: currentPirSensitivityTitle, titleContent: A4xBaseManager.shared.getLocalString(key: currentPirSensitivityContentKey), enumDataSource: pirSensitivityEnumData)
+            apMotionModule.append(pirSensitivityModel)
+        
+            // 录制时长 pirRecordTime
+            let currentRecordTimeTitle = A4xBaseManager.shared.getLocalString(key: "video_duration")
+            // 处理enum
+            var secondsEnumData: Array<A4xDeviceSettingEnumAlertModel> = []
+            for i in 0..<(self.deviceModel?.apModeModel?.videoSecondsValues?.count ?? 0) {
+                let secondsValue_Int = self.deviceModel?.apModeModel?.videoSecondsValues?.getIndex(i)
+                var secondsValue = ""
+                let secondsEnumModel = A4xDeviceSettingEnumAlertModel()
+                if secondsValue_Int == -1 {
+                    secondsValue = "auto"
+                    secondsEnumModel.requestContent = "auto"
+                    let tempString = A4xBaseManager.shared.getDeviceTypeString(deviceModelCategory: self.deviceModel?.modelCategory ?? 0)
+                    secondsEnumModel.descriptionContent = A4xBaseManager.shared.getLocalString(key: "auto_video_record_desc", param: [tempString])
+                } else {
+                    secondsValue = "\(secondsValue_Int ?? 10)s"
+                    secondsEnumModel.requestContent = "\(secondsValue_Int ?? 10)"
+                }
+                
+                let secondsContentKey = tool.getModifiableAttributeTypeName(currentType: .PirRecordTime) + "_options_" + (secondsValue)
+                secondsEnumModel.content = A4xBaseManager.shared.getLocalString(key: secondsContentKey)
+                
+                secondsEnumModel.isEnable = true
+                secondsEnumData.append(secondsEnumModel)
+                
+            }
+            
+            let videoSeconds_Int = self.deviceModel?.deviceConfigBean?.videoSeconds
+            var currentVideoSeconds = self.getApModeStringValue(currentType: .PirRecordTime, value: videoSeconds_Int ?? 10)
+            let pirRecordTimeContentKey = tool.getModifiableAttributeTypeName(currentType: .PirRecordTime) + "_options_" + (currentVideoSeconds)
+            let pirRecordTimeModel = tool.createBaseEnumModel(moduleType: tool.getModuleType(type: "ENUM"), currentType: .PirRecordTime, title: currentRecordTimeTitle, titleContent: A4xBaseManager.shared.getLocalString(key: pirRecordTimeContentKey), enumDataSource: secondsEnumData)
+            apMotionModule.append(pirRecordTimeModel)
+        }
+        
+        
+//        }
+        // 排序
+        var sortedMotionModule = tool.sortModuleArray(moduleArray: apMotionModule)
+        
+        return sortedMotionModule
+    }
+    
+    //MARK: ----- AP模式下的数据处理 -----
+    // 获取Ap模式下的解析的数据源 String
+    private func getApModeStringValue(currentType: A4xDeviceSettingCurrentType ,value: Int) -> String {
+        var modeValue = ""
+        switch currentType {
+        case .PirSensitivity:
+            // Pir灵敏度
+            if value == 1 {
+                modeValue = "low"
+            } else if value == 2 {
+                modeValue = "mid"
+            } else if value == 3 {
+                modeValue = "high"
+            } else if value == 4 {
+                modeValue = "auto"
+            } else {
+                modeValue = "auto"
+            }
+            return modeValue
+        case .PirRecordTime:
+            // 视频时长
+            if value == -1 {
+                modeValue = "auto"
+            } else {
+                modeValue = "\(value)s"
+            }
+            return modeValue
+        default:
+            return ""
+        }
+    }
+    
+    // 获取Ap模式下的上传的数据源 Int
+    private func getApModeRequestEnumValue(currentType: A4xDeviceSettingCurrentType ,value: String) -> Int {
+        
+        var modeValue = 0
+        switch currentType {
+        case .PirSensitivity:
+            // Pir灵敏度
+            modeValue = value.intValue()
+            return modeValue
+        case .PirRecordTime:
+            // 视频时长
+            if value == "auto" {
+                modeValue = -1
+            } else {
+                modeValue = value.intValue()
+            }
+            return modeValue
+        default:
+            return 0
+        }
+    }
+    
+    //MARK: ----- AP和WIFI模式下拍摄设置入口 -----
     private func getWifiAndAPShootingCases() -> Array<A4xDeviceSettingModuleModel>
     {
         let tool = A4xDeviceSettingModuleTool()
@@ -343,81 +500,69 @@ class A4xDeviceSettingMotionDetecctionViewController: A4xBaseViewController, A4x
     
     //MARK: ----- 获取是否展示拍摄设置的入口 -----
     private func isShowShootingSetting() -> Bool {
-        
-        
         var isShow = false
-        
-        
-        var isOpenPirCooldownSwitch = false
-        
-        var isOpenSdCardCooldownSwitch = false
-        
-        let tool = A4xDeviceSettingModuleTool()
-        let modifiableAttributes = self.deviceAttributeModel?.modifiableAttributes
-        for i in 0..<(modifiableAttributes?.count ?? 0) {
-            let attrModel = modifiableAttributes?.getIndex(i)
-            let name = attrModel?.name
-            if name == "pirCooldownSwitch" {
-                
-                
-                let disabled = attrModel?.disabled
-                if disabled != true {
-                    isShow = true
-                    break
-                }
-                
-                let value = attrModel?.value
-                isOpenPirCooldownSwitch = tool.getValueOrOption(anyCodable: value ?? ModifiableAnyAttribute()) as? Bool ?? false
+        if self.deviceModel?.apModeType == .AP {
+            isShow = true
+        } else {
+            var isOpenPirCooldownSwitch = false
+            var isOpenSdCardCooldownSwitch = false
+            
+            let tool = A4xDeviceSettingModuleTool()
+            let modifiableAttributes = self.deviceAttributeModel?.modifiableAttributes
+            for i in 0..<(modifiableAttributes?.count ?? 0) {
+                let attrModel = modifiableAttributes?.getIndex(i)
+                let name = attrModel?.name
+                if name == "pirCooldownSwitch" {
+                    let disabled = attrModel?.disabled
+                    if disabled != true {
+                        isShow = true
+                        break
+                    }
+                    
+                    let value = attrModel?.value
+                    isOpenPirCooldownSwitch = tool.getValueOrOption(anyCodable: value ?? ModifiableAnyAttribute()) as? Bool ?? false
 
-            } else if name == "sdCardCooldownSwitch" {
-                
-                
-                let disabled = attrModel?.disabled
-                if disabled != true {
-                    isShow = true
-                    break
+                } else if name == "sdCardCooldownSwitch" {
+                    let disabled = attrModel?.disabled
+                    if disabled != true {
+                        isShow = true
+                        break
+                    }
+                    let value = attrModel?.value
+                    isOpenSdCardCooldownSwitch = tool.getValueOrOption(anyCodable: value ?? ModifiableAnyAttribute()) as? Bool ?? false
                 }
-                let value = attrModel?.value
-                isOpenSdCardCooldownSwitch = tool.getValueOrOption(anyCodable: value ?? ModifiableAnyAttribute()) as? Bool ?? false
-            }
-            else if name == "sdCardVideoModes" {
-                
-                
-                let allCase = tool.getEnumCases(currentType: .SDCardVideoModes, modifiableAttributeModel: attrModel ?? A4xDeviceSettingModifiableAttributesModel())
-                if allCase.count > 0 {
-                    isShow = true
-                    break
-                }
-            }
-        }
-        
-        for i in 0..<(modifiableAttributes?.count ?? 0) {
-            let attrModel = modifiableAttributes?.getIndex(i)
-            let name = attrModel?.name
-            if name == "sdCardCooldownSeconds" {
-                if isOpenSdCardCooldownSwitch == true {
-                    
-                    
-                    let allCase = tool.getEnumCases(currentType: .SDCardCooldownSeconds, modifiableAttributeModel: attrModel ?? A4xDeviceSettingModifiableAttributesModel())
+                else if name == "sdCardVideoModes" {
+                    let allCase = tool.getEnumCases(currentType: .SDCardVideoModes, modifiableAttributeModel: attrModel ?? A4xDeviceSettingModifiableAttributesModel())
                     if allCase.count > 0 {
                         isShow = true
                         break
                     }
                 }
             }
-            else if name == "pirCooldownTime" {
-                if isOpenPirCooldownSwitch == true {
-                    
-                    
-                    let allCase = tool.getEnumCases(currentType: .PirCooldownTime, modifiableAttributeModel: attrModel ?? A4xDeviceSettingModifiableAttributesModel())
-                    if allCase.count > 0 {
-                        isShow = true
-                        break
+            
+            for i in 0..<(modifiableAttributes?.count ?? 0) {
+                let attrModel = modifiableAttributes?.getIndex(i)
+                let name = attrModel?.name
+                if name == "sdCardCooldownSeconds" {
+                    if isOpenSdCardCooldownSwitch == true {
+                        let allCase = tool.getEnumCases(currentType: .SDCardCooldownSeconds, modifiableAttributeModel: attrModel ?? A4xDeviceSettingModifiableAttributesModel())
+                        if allCase.count > 0 {
+                            isShow = true
+                            break
+                        }
+                    }
+                }
+                else if name == "pirCooldownTime" {
+                    if isOpenPirCooldownSwitch == true {
+                        let allCase = tool.getEnumCases(currentType: .PirCooldownTime, modifiableAttributeModel: attrModel ?? A4xDeviceSettingModifiableAttributesModel())
+                        if allCase.count > 0 {
+                            isShow = true
+                            break
+                        }
                     }
                 }
             }
         }
-       
         return isShow
     }
     
@@ -435,23 +580,6 @@ class A4xDeviceSettingMotionDetecctionViewController: A4xBaseViewController, A4x
             weakSelf?.tableView.reloadData()
         }
     }
-    
-    
-    @objc private func updateMotionTrackSwitch(enable: Bool) {
-        self.updateLocalSwitchCase(currentType: .MotionTrackingSwitch, isOpen: false, isLoading: true)
-        self.tableView.reloadData()
-        
-        weak var weakSelf = self
-        var tempDeviceModel = A4xUserDataHandle.Handle?.getDevice(deviceId: self.deviceModel?.serialNumber ?? "", modeType: self.deviceModel?.apModeType ?? .WiFi)
-        DeviceSettingCore.getInstance().setMotionTrack(serialNumber: self.deviceModel?.serialNumber ?? "", enable: enable) { code, message in
-            weakSelf?.getDeviceInfoFromNetwork()
-        } onError: { code, message in
-            weakSelf?.updateLocalSwitchCase(currentType: .MotionTrackingSwitch, isOpen: !enable, isLoading: false)
-            weakSelf?.tableView.reloadData()
-        }
-
-    }
-    
     
     @objc private func showPirSwitchAlert(enable: Bool) {
         weak var weakSelf = self
@@ -478,41 +606,70 @@ class A4xDeviceSettingMotionDetecctionViewController: A4xBaseViewController, A4x
     }
     
     
+    // 更新开关(AP和WIFI模式通用,内部已经处理)
     @objc private func updateSwitch(currentType: A4xDeviceSettingCurrentType, enable: Bool) {
-        
+        // 先Loading
         self.updateLocalSwitchCase(currentType: currentType, isOpen: false, isLoading: true)
         self.tableView.reloadData()
-        
-        var model = ModifiableAttributes()
-        switch currentType {
-        case .PirSwitch:
-            model.name = "pirSwitch"
-        case .PirCooldownSwitch:
-            model.name = "pirCooldownSwitch"
-        case .TimedDormancySwitch:
-            model.name = "timedDormancySwitch"
-        case .MotionTrackingSwitch:
-            
-            model.name = "motionTrackingSwitch"
-        default:
-            model.name = ""
-        }
-        let codableModel = ModifiableAnyAttribute()
-        codableModel.value = enable
-        model.value = codableModel
-        let modifiableAttributes = [model]
-        weak var weakSelf = self
-        DeviceSettingCoreUtil.updateModifiableAttributes(deviceId: self.deviceModel?.serialNumber ?? "", modifiableAttributes: modifiableAttributes) { code, message in
-            
-            if code == 0 {
-                
-                weakSelf?.getDeviceInfoFromNetwork()
-                let postDic : [String: Any] = ["type":model.name ?? "", "deviceId": weakSelf?.deviceModel?.serialNumber ?? "", "enable" : enable]
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "A4xLiveNeedUpdateData"), object: nil, userInfo: postDic)
-            } else {
-                
-                weakSelf?.updateLocalSwitchCase(currentType: currentType, isOpen: !enable, isLoading: false)
+        // 再处理数据
+        if self.deviceModel?.apModeType == .AP {
+            let attribute = ApDeviceAttributeModel()
+            switch currentType {
+            case .PirSwitch:
+                attribute.name = "needMotion"
+                if enable == true {
+                    self.deviceModel?.deviceConfigBean?.needMotion = 1
+                    attribute.value = 1
+                } else {
+                    self.deviceModel?.deviceConfigBean?.needMotion = 0
+                    attribute.value = 0
+                }
+            default:
+                break
+            }
+            weak var weakSelf = self
+            let attributeArray : Array<ApDeviceAttributeModel> = [attribute]
+            DeviceSettingCore.getInstance().updateApDeviceInfo(serialNumber: self.deviceModel?.serialNumber ?? "", attributes: attributeArray) { code, message in
+                A4xUserDataHandle.Handle?.updateDevice(device: weakSelf?.deviceModel)
+                // 成功之后更新数据
+                weakSelf?.getApCases()
                 weakSelf?.tableView.reloadData()
+            } onError: { code, message in
+                self.view.makeToast(A4xBaseManager.shared.getLocalString(key: "open_fail_retry"))
+            }
+
+        } else {
+            
+            var model = ModifiableAttributes()
+            switch currentType {
+            case .PirSwitch:
+                model.name = "pirSwitch"
+            case .PirCooldownSwitch:
+                model.name = "pirCooldownSwitch"
+            case .TimedDormancySwitch:
+                model.name = "timedDormancySwitch"
+            case .MotionTrackingSwitch:
+                model.name = "motionTrackingSwitch"
+            default:
+                model.name = ""
+            }
+            let codableModel = ModifiableAnyAttribute()
+            codableModel.value = enable
+            model.value = codableModel
+            let modifiableAttributes = [model]
+            weak var weakSelf = self
+            DeviceSettingCoreUtil.updateModifiableAttributes(deviceId: self.deviceModel?.serialNumber ?? "", modifiableAttributes: modifiableAttributes) { code, message in
+                if code == 0 {
+                    // 重新获取数据
+                    weakSelf?.getDeviceInfoFromNetwork()
+                    let postDic : [String: Any] = ["type":model.name ?? "", "deviceId": weakSelf?.deviceModel?.serialNumber ?? "", "enable" : enable]
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "A4xLiveNeedUpdateData"), object: nil, userInfo: postDic)
+                    weakSelf?.deviceModel?.motionTrack = enable.toInt()
+                    A4xUserDataHandle.Handle?.updateDevice(device: weakSelf?.deviceModel)
+                } else {
+                    weakSelf?.updateLocalSwitchCase(currentType: currentType, isOpen: !enable, isLoading: false)
+                    weakSelf?.tableView.reloadData()
+                }
             }
         }
         
@@ -520,12 +677,10 @@ class A4xDeviceSettingMotionDetecctionViewController: A4xBaseViewController, A4x
     
     
     @objc private func updateCheckBox(module: A4xDeviceSettingModuleModel, indexPath: IndexPath, index: Int, isSelected: Bool, isLoading: Bool, values: [String]) {
-        
         let currentType = module.currentType ?? .PirDetectPreference
         var model = ModifiableAttributes()
         switch currentType {
         case .PirDetectPreference:
-            
             model.name = "pirAi"
         default:
             model.name = ""
@@ -536,61 +691,72 @@ class A4xDeviceSettingMotionDetecctionViewController: A4xBaseViewController, A4x
         let modifiableAttributes = [model]
         weak var weakSelf = self
         DeviceSettingCoreUtil.updateModifiableAttributes(deviceId: self.deviceModel?.serialNumber ?? "", modifiableAttributes: modifiableAttributes) { code, message in
-            
             if code == 0 {
-                
                 weakSelf?.getDeviceInfoFromNetwork()
             } else {
-                
-                
                 weakSelf?.tableView.reloadData()
             }
         }
-        
     }
     
     
     @objc private func updateEnumValue(currentType: A4xDeviceSettingCurrentType, value: String) {
-        var model = ModifiableAttributes()
-        switch currentType {
-        case .PirSwitch:
-            model.name = "pirSwitch"
-        case .PirSensitivity:
-            model.name = "pirSensitivity"
-        case .PirRecordTime:
-            model.name = "pirRecordTime"
-        case .TimedDormancySwitch:
-            model.name = "timedDormancySwitch"
-        default:
-            model.name = ""
-        }
-        let codableModel = ModifiableAnyAttribute()
-        codableModel.value = value
-        model.value = codableModel
-        let modifiableAttributes = [model]
-        weak var weakSelf = self
-        DeviceSettingCoreUtil.updateModifiableAttributes(deviceId: self.deviceModel?.serialNumber ?? "", modifiableAttributes: modifiableAttributes) { code, message in
+        if self.deviceModel?.apModeType == .AP {
             
-            if code == 0 {
-                
-                weakSelf?.getDeviceInfoFromNetwork()
-            } else {
-                //
-                UIApplication.shared.keyWindow?.makeToast(message)
+            var attribute = ApDeviceAttributeModel()
+            switch currentType {
+            case .PirSensitivity:
+                attribute.name = "motionSensitivity"
+                self.deviceModel?.deviceConfigBean?.motionSensitivity = self.getApModeRequestEnumValue(currentType: currentType, value: value)
+                break
+            case .PirRecordTime:
+                attribute.name = "videoSeconds"
+                self.deviceModel?.deviceConfigBean?.videoSeconds = self.getApModeRequestEnumValue(currentType: currentType, value: value)
+                break
+            default:
+                break
             }
-        }
-        
-    }
-    
-    //MARK: ----- 更新本地数据源 -----
-    @objc private func updateLocalSourceCase(name: String, type: String, isOpen: Bool, currentValue: String) {
-        
-        var tempModifiableAttributes = self.deviceAttributeModel?.modifiableAttributes
-        for i in 0..<(tempModifiableAttributes?.count ?? 0) {
-            let modifiableModel = tempModifiableAttributes?.getIndex(i)
-            var tempModifiableModel = modifiableModel
-            if name == modifiableModel?.name {
-                
+            
+            attribute.value = self.getApModeRequestEnumValue(currentType: currentType, value: value) as Any?
+            let attributeArray : Array<ApDeviceAttributeModel> = [attribute]
+            
+            weak var weakSelf = self
+            DeviceSettingCore.getInstance().updateApDeviceInfo(serialNumber: self.deviceModel?.serialNumber ?? "", attributes: attributeArray) { code, message in
+                A4xUserDataHandle.Handle?.updateDevice(device: weakSelf?.deviceModel)
+                // 成功之后更新数据
+                weakSelf?.getApCases()
+                weakSelf?.tableView.reloadData()
+            } onError: { code, message in
+                self.view.makeToast(A4xBaseManager.shared.getLocalString(key: "open_fail_retry"))
+            }
+
+        } else {
+            var model = ModifiableAttributes()
+            switch currentType {
+            case .PirSwitch:
+                model.name = "pirSwitch"
+            case .PirSensitivity:
+                model.name = "pirSensitivity"
+            case .PirRecordTime:
+                model.name = "pirRecordTime"
+            case .TimedDormancySwitch:
+                model.name = "timedDormancySwitch"
+            default:
+                model.name = ""
+            }
+            let codableModel = ModifiableAnyAttribute()
+            codableModel.value = value
+            model.value = codableModel
+            let modifiableAttributes = [model]
+            weak var weakSelf = self
+            DeviceSettingCoreUtil.updateModifiableAttributes(deviceId: self.deviceModel?.serialNumber ?? "", modifiableAttributes: modifiableAttributes) { code, message in
+                if code == 0 {
+                    // 重新获取数据
+                    weakSelf?.getDeviceInfoFromNetwork()
+                } else {
+                    //
+                    UIApplication.shared.keyWindow?.makeToast(message)
+                }
             }
         }
         

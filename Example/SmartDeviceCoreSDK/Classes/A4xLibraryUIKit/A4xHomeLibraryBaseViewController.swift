@@ -12,6 +12,92 @@ import Resolver
 
 public class A4xHomeLibraryBaseViewController: A4xHomeBaseViewController {
     
+    private var recordLoadSemaphore = DispatchSemaphore(value: 0)
+    private var recordLoadQueue = DispatchQueue.init(label: "com.cinmoore.recordLoad")
+    private var isCancleDownload = false
+    
+    //取消批量下载
+    func cancleDownLoad()
+    {
+        self.isCancleDownload = true
+        self.recordLoadSemaphore.signal()
+    }
+    ///  批量下载云录像
+    /// - Parameters:
+    ///   - iotId: 设备id
+    ///   - eventIds: 消息id列表
+    ///   - processHandle: 过程回调 sucessNum成功下载导出的数量 failNum下载失败数量 totalNum总数量
+    func downLoadRecordList(iotId:String, recordBeans:[RecordBean],
+                            processHandle: @escaping (_ sucessNum:Int,_ failNum:Int, _ totalNum:Int, _ error:Error? ) -> Void)
+    {
+
+        
+        self.isCancleDownload = false
+        
+        /// ① 每个eventId都要先去调用接口获取fileName
+        /// ② 每个fileName都要去调用接口获取真实地址   可以调用 downLoadRecord(iotId:fileName:completeHandle:)实现
+        /// ③每个下载成功后都要导出
+        recordLoadSemaphore = DispatchSemaphore(value: 0)
+        recordLoadQueue.async {
+            var successNum:Int = 0
+            var failNum:Int = 0
+            let totalNum = recordBeans.count
+
+            for recordBean in recordBeans
+            {
+                var lastErr:Error?
+                self.downLoadRecord(recordBean:recordBean) { error in
+                    logDebug("下载完成 \(String(describing: error))")
+                    lastErr = error
+                    if error != nil
+                    {
+                        failNum = failNum + 1
+                    }
+                    else{
+                        successNum = successNum + 1
+                    }
+                    self.recordLoadSemaphore.signal()
+                    DispatchQueue.main.async {
+                        processHandle(successNum,failNum,totalNum, lastErr)
+                    }
+                }
+                
+                self.recordLoadSemaphore.wait()
+                if self.isCancleDownload
+                {
+                    break
+                }
+            }
+        }
+    }
+    
+    /// 根据消息ID下载单个录像
+    /// - Parameters:
+    ///   - iotId: 设备ID
+    ///   - eventId: 消息id
+    ///   - completeHandle: 回调
+    func downLoadRecord(recordBean:RecordBean,completeHandle: @escaping (_ error:Error?) -> Void)
+    {
+        
+        logDebug("下载录像--------地址:\(recordBean.traceId ?? "")")
+        LibraryCore.getInstance().downloadSource(tasks: [recordBean],isShare: false) { downloadIndex, total, progress, describe in
+            
+        } onFinish: { res, sharePathArr, shareComple in
+            logDebug("下载录像--------成功回调:\(res)")
+            var err:NSError?
+            if !res
+            {
+                let info: [String: Any] = [
+                    "message": "下载失败",
+                    NSLocalizedDescriptionKey: "下载失败"
+                ]
+                err = NSError(domain: "www.microbt.com", code: 8989, userInfo: info)
+            }
+            completeHandle(err)
+        }
+        
+    }
+    
     public var libraryEditBtnClickCallback: ((Bool) -> Void)?
     
     private var selectEventResouce : Set<String> = Set() {
@@ -981,7 +1067,12 @@ extension A4xHomeLibraryBaseViewController {
             DispatchQueue.main.async {
                 self.selectEventResouce.removeAll()
                 self.editManager(flag: false)
-                UIWindow.downloadSource(models: downloadSource, nav: self.navigationController, haveTabBar: true) 
+                
+                self.downLoadRecordList(iotId: "", recordBeans: downloadSource) { sucessNum, failNum, totalNum, error in
+                    
+                }
+                
+//                UIWindow.downloadSource(models: downloadSource, nav: self.navigationController, haveTabBar: true)
             }
         }
     }

@@ -160,39 +160,143 @@ class A4xDeviceSettingLightSettingViewModel: NSObject {
         return sortedArray
     }
     
+    //MARK: ----- Ap模式 -----
+    // 本地tableview数据源
+    public func getApAllCases()
+    {
+        var allModels : Array<Array<A4xDeviceSettingModuleModel>> = []
+        // 指示灯开关模块 recLampSwitch
+        let recLampModule = self.getApRecLampCase()
+        allModels.append(recLampModule)
+        
+        // 夜视模块
+        let nightVisionModule = self.getApNightVisionCase()
+        allModels.append(nightVisionModule)
+        self.allCases = allModels
+    }
+    
+    // 指示灯
+    private func getApRecLampCase() -> Array<A4xDeviceSettingModuleModel>
+    {
+        let tool = A4xDeviceSettingModuleTool()
+        var models: Array<A4xDeviceSettingModuleModel> = []
+            
+        if self.deviceModel?.supportRecLamp() == true {
+            // 指示灯开关组件
+            let recLampTitle = A4xBaseManager.shared.getLocalString(key: "indicator")
+            var recLampSwitchValue = false
+            if self.deviceModel?.deviceConfigBean?.recLamp == 1 {
+                recLampSwitchValue = true
+            } else {
+                recLampSwitchValue = false
+            }
+            let recLampModel = tool.createBaseSwitchModel(moduleType: .Switch, currentType: .RecLampSwitch, title: recLampTitle, isSwitchOpen: recLampSwitchValue, isSwitchLoading: false)
+            recLampModel.isShowContent = true
+            let tempString = A4xBaseManager.shared.getDeviceTypeString(deviceModelCategory: self.deviceModel?.modelCategory ?? 0)
+            recLampModel.content = A4xBaseManager.shared.getLocalString(key: "indicator_des", param: [tempString])
+            recLampModel.cellHeight = tool.getCellHeight(moduleModel: recLampModel)
+            recLampModel.moduleHeight = tool.getModuleHeight(moduleModel: recLampModel)
+            recLampModel.contentHeight = tool.getContentHeight(moduleModel: recLampModel)
+            models.append(recLampModel)
+        }
+        
+        // 排序
+        let sortedArray = tool.sortModuleArray(moduleArray: models)
+        
+        return sortedArray
+    }
+    
+    // 夜视
+    private func getApNightVisionCase() -> Array<A4xDeviceSettingModuleModel>
+    {
+        // 夜视模块相关
+        let tool = A4xDeviceSettingModuleTool()
+        var models: Array<A4xDeviceSettingModuleModel> = []
+            
+        // 夜视开关
+        var nightVisionValue = false
+        if self.deviceModel?.deviceConfigBean?.nightVisionMode != -1 {
+            // 支持夜视模式
+            // 夜视开关
+            let titleString = A4xBaseManager.shared.getLocalString(key: "night_version")
+            if self.deviceModel?.deviceConfigBean?.needNightVision == 1 {
+                // 开启了夜视开关
+                nightVisionValue = true
+            } else {
+                // 关闭了夜视开关
+                nightVisionValue = false
+            }
+            let nightVisionModel = tool.createBaseSwitchModel(moduleType: .Switch, currentType: .NightVisionSwitch, title: titleString, isSwitchOpen: nightVisionValue, isSwitchLoading: false)
+            models.append(nightVisionModel)
+        }
+        return models
+    }
+    
     //MARK: ----- 更新数据 -----
     
     @objc public func updateSwitch(currentType: A4xDeviceSettingCurrentType, enable: Bool, comple: @escaping (_ code: Int, _ message: String) -> Void) {
         
-        var model = ModifiableAttributes()
-        switch currentType {
-        case .RecLampSwitch:
-            model.name = "recLampSwitch"
-            break
-        case .NightVisionSwitch:
-            model.name = "nightVisionSwitch"
-            break
-        case .AlarmFlashSwitch:
-            model.name = "alarmFlashLightSwitch"
-            break
-        default:
-            model.name = ""
-            break
-        }
-        let codableModel = ModifiableAnyAttribute()
-        codableModel.value = enable
-        model.value = codableModel
-        let modifiableAttributes = [model]
-        weak var weakSelf = self
-        DeviceSettingCoreUtil.updateModifiableAttributes(deviceId: self.deviceModel?.serialNumber ?? "", modifiableAttributes: modifiableAttributes) { code, message in
+        // 再处理数据
+        if self.deviceModel?.apModeType == .AP {
+            let attribute = ApDeviceAttributeModel()
+            switch currentType {
+            case .RecLampSwitch:
+                attribute.name = "recLamp"
+                if enable == true {
+                    self.deviceModel?.deviceConfigBean?.recLamp = 1
+                    attribute.value = 1
+                } else {
+                    self.deviceModel?.deviceConfigBean?.recLamp = 0
+                    attribute.value = 0
+                }
+                break
+            case .NightVisionSwitch:
+                attribute.name = "needNightVision"
+                if enable == true
+                {
+                    self.deviceModel?.deviceConfigBean?.needNightVision = 1
+                    attribute.value = 1
+                } else {
+                    self.deviceModel?.deviceConfigBean?.needNightVision = 0
+                    attribute.value = 0
+                }
+            default:
+                break
+            }
+            weak var weakSelf = self
+            let attributeArray : Array<ApDeviceAttributeModel> = [attribute]
+            DeviceSettingCore.getInstance().updateApDeviceInfo(serialNumber: self.deviceModel?.serialNumber ?? "", attributes: attributeArray) { code, message in
+                A4xUserDataHandle.Handle?.updateDevice(device: weakSelf?.deviceModel)
+                weakSelf?.getApAllCases()
+                comple(code, message)
+            } onError: { code, message in
+                comple(code, A4xBaseManager.shared.getLocalString(key: "open_fail_retry"))
+            }
+        } else {
             
-            if code == 0 {
-                
-                comple(code, message)
-            } else {
-                
-                //weakSelf?.updateLocalSwitchCase(currentType: currentType, isOpen: !enable, isLoading: false)
-                comple(code, message)
+            var model = ModifiableAttributes()
+            switch currentType {
+            case .RecLampSwitch:
+                model.name = "recLampSwitch"
+                break
+            case .NightVisionSwitch:
+                model.name = "nightVisionSwitch"
+                break
+            default:
+                model.name = ""
+                break
+            }
+            let codableModel = ModifiableAnyAttribute()
+            codableModel.value = enable
+            model.value = codableModel
+            let modifiableAttributes = [model]
+            weak var weakSelf = self
+            DeviceSettingCoreUtil.updateModifiableAttributes(deviceId: self.deviceModel?.serialNumber ?? "", modifiableAttributes: modifiableAttributes) { code, message in
+                if code == 0 {
+                    comple(code, message)
+                } else {
+                    comple(code, message)
+                }
             }
         }
         
@@ -217,34 +321,62 @@ class A4xDeviceSettingLightSettingViewModel: NSObject {
         self.allCases = tempCases
     }
     
-    
+    // 更新枚举值
     @objc public func updateEnumValue(currentType: A4xDeviceSettingCurrentType, value: String, comple: @escaping (_ code: Int, _ message: String) -> Void) {
-        var model = ModifiableAttributes()
-        switch currentType {
-        case .NightVisionMode:
-            model.name = "nightVisionMode"
-            break
-        case .NightVisionSensitivity:
-            model.name = "nightVisionSensitivity"
-            break
-        default:
-            model.name = ""
-            break
-        }
-        let codableModel = ModifiableAnyAttribute()
-        codableModel.value = value
-        model.value = codableModel
-        let modifiableAttributes = [model]
-        weak var weakSelf = self
-        DeviceSettingCoreUtil.updateModifiableAttributes(deviceId: self.deviceModel?.serialNumber ?? "", modifiableAttributes: modifiableAttributes) { code, message in
-            
-            if code == 0 {
-                
+        if self.deviceModel?.apModeType == .AP {
+            let attribute = ApDeviceAttributeModel()
+            switch currentType {
+            case .NightVisionMode:
+                attribute.name = "nightVisionMode"
+                attribute.value = Int(value)
+                self.deviceModel?.deviceConfigBean?.nightVisionMode = Int(value) ?? 0
+                break
+            case .NightVisionSensitivity:
+                attribute.name = "nightVisionSensitivity"
+                attribute.value = Int(value)
+                self.deviceModel?.deviceConfigBean?.nightVisionSensitivity = Int(value) ?? 0
+                break
+            default:
+                break
+            }
+            weak var weakSelf = self
+            let attributeArray : Array<ApDeviceAttributeModel> = [attribute]
+            DeviceSettingCore.getInstance().updateApDeviceInfo(serialNumber: self.deviceModel?.serialNumber ?? "", attributes: attributeArray) { code, message in
+                A4xUserDataHandle.Handle?.updateDevice(device: weakSelf?.deviceModel)
+                // 成功之后更新数据
+                weakSelf?.getApAllCases()
                 comple(code, message)
-            } else {
-                
-                //weakSelf?.updateLocalSwitchCase(currentType: currentType, isOpen: !enable, isLoading: false)
+            } onError: { code, message in
                 comple(code, message)
+            }
+        } else {
+            var model = ModifiableAttributes()
+            switch currentType {
+            case .NightVisionMode:
+                model.name = "nightVisionMode"
+                break
+            case .NightVisionSensitivity:
+                model.name = "nightVisionSensitivity"
+                break
+            default:
+                model.name = ""
+                break
+            }
+            let codableModel = ModifiableAnyAttribute()
+            codableModel.value = value
+            model.value = codableModel
+            let modifiableAttributes = [model]
+            weak var weakSelf = self
+            DeviceSettingCoreUtil.updateModifiableAttributes(deviceId: self.deviceModel?.serialNumber ?? "", modifiableAttributes: modifiableAttributes) { code, message in
+                NSLog("拿到的model 更新结果: \(code)")
+                if code == 0 {
+                    // 重新获取数据
+                    comple(code, message)
+                } else {
+                    // 解决网络请求失败导致的一直Loading的BUG,除非退出页面
+                    //weakSelf?.updateLocalSwitchCase(currentType: currentType, isOpen: !enable, isLoading: false)
+                    comple(code, message)
+                }
             }
         }
         

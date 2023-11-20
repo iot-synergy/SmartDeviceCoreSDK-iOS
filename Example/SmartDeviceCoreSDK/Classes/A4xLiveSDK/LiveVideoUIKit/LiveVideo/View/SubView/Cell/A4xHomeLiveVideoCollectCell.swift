@@ -13,11 +13,17 @@ import BaseUI
 
 
 public enum A4xHomeLiveVideoCollectCellEnum {
+    case apMode
     case normalMode
     
     static public func allCase(apEnable: Bool = false) -> [A4xHomeLiveVideoCollectCellEnum] {
         var cases: [A4xHomeLiveVideoCollectCellEnum] = Array()
-        cases = [.normalMode]
+        let deviceAPModels = A4xUserDataHandle.Handle?.deviceAPModels
+        if (deviceAPModels?.count ?? 0) > 0 {
+            cases = [.apMode, .normalMode]
+        } else {
+            cases.append(.normalMode)
+        }
         return cases
     }
 }
@@ -193,7 +199,7 @@ class A4xHomeLiveVideoCollectCell: UICollectionViewCell {
         livePlayerControlView.isHidden = false
         
         LiveManagerInstance.getInstance().addLiveStateProtocol(deviceId: "all", target: self)
-        mLivePlayer = LiveManagerInstance.getInstance().creatLivePlayer(serialNumber: dataSource?.serialNumber ?? "")
+        mLivePlayer = LiveManagerInstance.getInstance().creatLivePlayer(serialNumber: dataSource?.serialNumber ?? "", customParam: ["isAPMode" : dataSource?.apModeType == .AP])
         mLivePlayer?.setListener(liveStateListener: self)
         
         self.livePlayerControlView.videoStyle = self.videoStyle

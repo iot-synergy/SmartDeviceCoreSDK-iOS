@@ -142,24 +142,37 @@ class A4xDevicesNameEditViewController: A4xBaseViewController {
         }
         let tempString = A4xBaseManager.shared.getDeviceTypeString(deviceModelCategory: self.dataSource?.modelCategory ?? 1)
         
-        self.view.makeToastActivity(title: A4xBaseManager.shared.getLocalString(key: "loading")) { (r) in }
-        weak var weakSelf = self
-        DeviceSettingCore.getInstance().updateAttribute(serialNumber: self.dataSource?.serialNumber ?? "", name: "deviceName", value: self.textView.text ?? "") { code, message in
-            if weakSelf?.delegate != nil {
-                weakSelf?.delegate?.A4xDevicesNameEditViewControllerDidEditDeviceName(isComple: true, deviceId: self.dataSource?.serialNumber ?? "", deviceName: self.textView.text ?? "")
+        if self.dataSource?.apModeType == .AP {
+            var deviceModel = self.dataSource
+            deviceModel?.deviceName = self.textView.text
+            DeviceManageCore.getInstance().updateApDeviceName(serialNumber: self.dataSource?.serialNumber ?? "", deviceName: self.textView.text ?? "")
+            UIApplication.shared.keyWindow?.makeToast(A4xBaseManager.shared.getLocalString(key: "update_device_name_scuess", param: [tempString]))
+            if self.delegate != nil {
+                self.delegate?.A4xDevicesNameEditViewControllerDidEditDeviceName(isComple: true, deviceId: self.dataSource?.serialNumber ?? "", deviceName: self.textView.text ?? "")
             }
-                
-            if let strongSelf = weakSelf {
-                strongSelf.dataSource?.deviceName = strongSelf.textView.text
-                A4xUserDataHandle.Handle?.updateDevice(device: strongSelf.dataSource!)
-                UIApplication.shared.keyWindow?.makeToast(A4xBaseManager.shared.getLocalString(key: "update_device_name_scuess", param: [tempString]))
-                strongSelf.navigationController?.popViewController(animated: true)
+            self.navigationController?.popViewController(animated: true)
+        } else {
+            self.view.makeToastActivity(title: A4xBaseManager.shared.getLocalString(key: "loading")) { (r) in }
+            weak var weakSelf = self
+            DeviceSettingCore.getInstance().updateAttribute(serialNumber: self.dataSource?.serialNumber ?? "", name: "deviceName", value: self.textView.text ?? "") { code, message in
+                if weakSelf?.delegate != nil {
+                    weakSelf?.delegate?.A4xDevicesNameEditViewControllerDidEditDeviceName(isComple: true, deviceId: self.dataSource?.serialNumber ?? "", deviceName: self.textView.text ?? "")
+                }
+                    
+                if let strongSelf = weakSelf {
+                    strongSelf.dataSource?.deviceName = strongSelf.textView.text
+                    A4xUserDataHandle.Handle?.updateDevice(device: strongSelf.dataSource!)
+                    UIApplication.shared.keyWindow?.makeToast(A4xBaseManager.shared.getLocalString(key: "update_device_name_scuess", param: [tempString]))
+                    strongSelf.navigationController?.popViewController(animated: true)
+                }
+            } onError: { code, message in
+                if weakSelf?.delegate != nil {
+                    weakSelf?.delegate?.A4xDevicesNameEditViewControllerDidEditDeviceName(isComple: false, deviceId: self.dataSource?.serialNumber ?? "", deviceName: "")
+                }
+                weakSelf?.view.makeToast(message)
             }
-        } onError: { code, message in
-            if weakSelf?.delegate != nil {
-                weakSelf?.delegate?.A4xDevicesNameEditViewControllerDidEditDeviceName(isComple: false, deviceId: self.dataSource?.serialNumber ?? "", deviceName: "")
-            }
-            weakSelf?.view.makeToast(message)
         }
+        
+        
     }
 }

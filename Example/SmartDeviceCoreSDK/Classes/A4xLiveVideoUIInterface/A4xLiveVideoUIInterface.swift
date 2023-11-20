@@ -14,6 +14,9 @@ public protocol A4xLiveVideoUIInterface {
     
     func tryPopToFullLiveVideoViewController(navigationController: UINavigationController?)
     
+    // To ApMode Live page
+    func pushHotlinkLiveVideoViewController(fromVCType: FromViewControllerEnum?, navigationViewController: UINavigationController?)
+    
 }
 
 
@@ -24,6 +27,10 @@ class NoopLiveVideoUIImpl: A4xLiveVideoUIInterface {
     }
     
     func tryPopToFullLiveVideoViewController(navigationController: UINavigationController?) {
+        noopImplToast()
+    }
+    
+    func pushHotlinkLiveVideoViewController(fromVCType: FromViewControllerEnum?, navigationViewController: UINavigationController?) {
         noopImplToast()
     }
     
