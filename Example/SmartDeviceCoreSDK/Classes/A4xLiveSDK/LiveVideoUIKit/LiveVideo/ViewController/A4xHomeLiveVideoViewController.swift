@@ -23,7 +23,35 @@ public enum LivePresetEditType: Int {
     case delete
 }
 
-public class A4xHomeLiveVideoViewController: A4xHomeLiveBaseViewController {
+public final class A4xHomeLiveVideoViewController: A4xHomeBaseViewController {
+    
+    let liveVideoViewModel: A4xLiveVideoViewModel = A4xLiveVideoViewModel()
+    
+    private let group = DispatchGroup()
+    
+    private let queue = DispatchQueue(label: "A4xHomeLiveVideoVC.list.request")
+
+    
+    var fullVideoSelIndexPath: IndexPath?
+    
+    var fromLiveVideo: Bool? = false 
+    
+    var popMenu: A4xBasePopMenuView! 
+
+
+    var currentLiveDeviceModel: DeviceBean? 
+    private var cellTypes: [A4xVideoCellType] = []
+    public var dataSource: [DeviceBean]? {
+        return self.getCacheDeviceList()
+    }
+    
+    
+    private func getCacheDeviceList() -> [DeviceBean]? {
+        var allDataSource: [DeviceBean] = []
+        allDataSource = A4xUserDataHandle.Handle?.devicesFilter(filter: true, filterType: A4xUserDataHandle.Handle?.locationType ?? .all) ?? []
+        return allDataSource
+    }
+    
     
     private func collectViewReloadData(code: Int, error: String?) {
         
@@ -79,7 +107,6 @@ public class A4xHomeLiveVideoViewController: A4xHomeLiveBaseViewController {
         temp.delegate = self
         temp.clipsToBounds = false
         temp.backgroundColor = .clear
-        temp.register(A4xHomeAPLiveCollectCell.self, forCellWithReuseIdentifier: "A4xHomeAPLiveCollectCell")
         temp.register(A4xHomeLiveVideoCollectCell.self, forCellWithReuseIdentifier: "A4xHomeLiveVideoCollectCell-0")
         temp.register(A4xHomeLiveVideoCollectCell.self, forCellWithReuseIdentifier: "A4xHomeLiveVideoCollectCell-1")
         temp.register(A4xHomeLiveVideoCollectCell.self, forCellWithReuseIdentifier: "A4xHomeLiveVideoCollectCell-2")
@@ -109,7 +136,6 @@ public class A4xHomeLiveVideoViewController: A4xHomeLiveBaseViewController {
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-//        self.checkAPModeDataSourceUpload()
         
         if !(collectView.mj_header?.isRefreshing ?? true) {
             
@@ -122,7 +148,7 @@ public class A4xHomeLiveVideoViewController: A4xHomeLiveBaseViewController {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-        logDebug("-----------> viewDidLoad func")
+        
         
         view.backgroundColor = ADTheme.C6
         collectView.isHidden = false
@@ -135,16 +161,9 @@ public class A4xHomeLiveVideoViewController: A4xHomeLiveBaseViewController {
     private func refreshList() {
         var shouldUpdateDistan = true
         
-//        self.queue.async(group: self.group, execute: {
-//            self.group.enter()
-//            A4xBaseDeviceSettingInterface.shared.getApDeviceList { (code, error, models) in
-//                self.group.leave()
-//            }
-//        })
-        
         self.queue.async(group: self.group, execute: {
             self.group.enter()
-            // 首页下拉列表刷新处理
+            
             DeviceManageUtil.getDeviceList { (code, err, models) in
                 self.group.leave()
                 if code == 0 {
@@ -193,6 +212,11 @@ public class A4xHomeLiveVideoViewController: A4xHomeLiveBaseViewController {
         }
     }
     
+    
+    private func stopLiveAll(skipDeviceId: String?, reason: A4xPlayerStopReason) {
+        liveVideoViewModel.stopAllLive(skipDeviceId: skipDeviceId ?? "", customParam: ["stopReason" : "\(reason.keyString())"])
+    }
+    
     public override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
@@ -224,7 +248,7 @@ public class A4xHomeLiveVideoViewController: A4xHomeLiveBaseViewController {
         NotificationCenter.default.addObserver(forName: LanguageChangeNotificationKey, object: nil, queue: OperationQueue.main) { _ in
             
             DeviceManageUtil.getDeviceList { (code, err, models) in
-                // 刷新数据
+                
                 weakSelf?.collectViewReloadData(code: code, error: err)
                 if code == 0 {
                     
@@ -260,6 +284,10 @@ public class A4xHomeLiveVideoViewController: A4xHomeLiveBaseViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    @objc required public init(nav: UINavigationController?) {
+        super.init(nav: nav)
+    }
+    
     @objc func deviceListChange(noti: NSNotification) {
         DispatchQueue.main.async {
             self.collectView.mj_header?.beginRefreshing()
@@ -276,7 +304,7 @@ extension A4xHomeLiveVideoViewController {
     
     @objc func showMenu() {
         //数据源（icon可不填）
-        let popData = [(icon:"nav_menu_add_device",title:A4xBaseManager.shared.getLocalString(key: "add_new_camera")),(icon:"nav_menu_add_device",title: "Add AP Carema"),
+        let popData = [(icon:"nav_menu_add_device",title:A4xBaseManager.shared.getLocalString(key: "add_new_camera")),
                        (icon:"nav_menu_add_friend_device",title:A4xBaseManager.shared.getLocalString(key: "join_friend_device"))]
         //设置参数
         let parameters:[A4xBasePopMenuViewConfigure] = [
@@ -286,10 +314,9 @@ extension A4xHomeLiveVideoViewController {
         ]
         
         let title1Size = NSString(string: A4xBaseManager.shared.getLocalString(key: "add_new_camera")).size(withAttributes: [NSAttributedString.Key.font : UIFont.regular(15)])
-        let title2Size = NSString(string: "Add AP Carema").size(withAttributes: [NSAttributedString.Key.font : UIFont.regular(15)])
-        let title3Size = NSString(string: A4xBaseManager.shared.getLocalString(key: "join_friend_device")).size(withAttributes: [NSAttributedString.Key.font : UIFont.regular(15)])
+        let title2Size = NSString(string: A4xBaseManager.shared.getLocalString(key: "join_friend_device")).size(withAttributes: [NSAttributedString.Key.font : UIFont.regular(15)])
         
-        let menuWidth = max(title1Size.width, title2Size.width, title3Size.width) + 45 > 182 ? 195 : 182
+        let menuWidth = max(title1Size.width, title2Size.width) + 45 > 182 ? 195 : 182
         
         popMenu = A4xBasePopMenuView(menuWidth: CGFloat(menuWidth.auto()), arrow: CGPoint(x: headerView.addCameraView.center.x, y: headerView.addCameraView.center.y + 30), datas: popData, configures: parameters)
         
@@ -301,13 +328,10 @@ extension A4xHomeLiveVideoViewController {
             switch index {
             case 0:
                 self?.stopLiveAll(skipDeviceId: nil, reason: A4xPlayerStopReason.changePage)
-                Resolver.bindImpl.pushBindViewController(isAPMode: false, bindFromType: .top_menu_add, navigationController: self?.navigationController)
+                
+                Resolver.bindImpl.presentBindViewController(bindFromType: .top_menu_add, navigationController: self?.navigationController)
                 break
             case 1:
-                self?.stopLiveAll(skipDeviceId: nil, reason: A4xPlayerStopReason.changePage)
-                Resolver.bindImpl.pushBindViewController(isAPMode: true, bindFromType: .top_menu_add, navigationController: self?.navigationController)
-                break
-            case 2:
                 self?.stopLiveAll(skipDeviceId: nil, reason: A4xPlayerStopReason.changePage)
                 Resolver.bindImpl.pushScanQrCodeViewController(navigationController: self?.navigationController, comple: {code,msg,result in
                     
@@ -354,17 +378,10 @@ extension A4xHomeLiveVideoViewController: A4xHomeVideoCellContentProtocol, UICol
     
     func getDefaultCellType(rowIndex: Int) -> A4xVideoCellType {
         let currentCellType: A4xVideoCellType = .default
-        var viewType: A4xVideoCellType = self.cellTypes.getIndex(rowIndex) ?? currentCellType
+        let viewType: A4xVideoCellType = self.cellTypes.getIndex(rowIndex) ?? currentCellType
         if let deviceModle = dataSource?.getIndex(rowIndex) {
-            // 首次加载 initAllLivePlayer
-            if let state = self.liveVideoViewModel.getLiveState(deviceId: deviceModle.serialNumber ?? "", customParam: ["isAPMode" : deviceModle.apModeType == .AP]) {
-                if state == A4xPlayerStateType.playing.rawValue {
-                    if viewType == .default {
-                        viewType = .playControl(isShowMore: false)
-                    }
-                } else {
-                    viewType = .default
-                }
+            
+            if let state = self.liveVideoViewModel.getLiveState(deviceId: deviceModle.serialNumber ?? "", customParam: [:]) {
                 updateCellType(type: viewType, rowIndex: rowIndex)
             }
         }
@@ -373,108 +390,72 @@ extension A4xHomeLiveVideoViewController: A4xHomeVideoCellContentProtocol, UICol
     
     
     public func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return cellInfos?.count ?? 1
+        return 1
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let curSection = section
-        var type: A4xHomeLiveVideoCollectCellEnum = .normalMode
-        if curSection <= (cellInfos?.count ?? 0) - 1 {
-            type = cellInfos?[curSection] ?? .normalMode
-        }
-        if type == .apMode {
-            return 1
-        } else {
-            return (dataSource?.count ?? 0)
-        }
+
+        return (dataSource?.count ?? 0)
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let curSection = indexPath.section
-        var type: A4xHomeLiveVideoCollectCellEnum = .normalMode
-        if curSection <= (cellInfos?.count ?? 0) - 1 {
-            type = cellInfos?[curSection] ?? .normalMode
+
+        let tag = indexPath.row % 3
+        let model = dataSource?.getIndex(indexPath.row)
+        let cell: A4xHomeLiveVideoCollectCell = collectionView.dequeueReusableCell(withReuseIdentifier: "A4xHomeLiveVideoCollectCell-\(tag)", for: indexPath) as! A4xHomeLiveVideoCollectCell
+        cell.indexPath = indexPath
+        let currentCellType: A4xVideoCellType = .default
+        cell.videoStyle = cellTypes.getIndex(indexPath.row) ?? currentCellType
+        cell.protocol = self
+        
+        let isTrackingOpen = liveVideoViewModel.isTrackingOpen(deviceId: model?.serialNumber ?? "")
+        
+        let isFollowAdmin = model?.isAdmin() ?? false
+        
+        
+        let presetListData = liveVideoViewModel.presetModelBy(deviceId: model?.serialNumber ?? "")
+        
+        var dataDic: [String : Any] = [:]
+        dataDic["autoFollowBtnIsHumanImg"] = false
+        dataDic["isTrackingOpen"] = isTrackingOpen
+        dataDic["isFollowAdmin"] = isFollowAdmin
+        dataDic["presetListData"] = presetListData
+        
+        cell.dataDic = dataDic
+        cell.dataSource = model
+        
+        
+        weak var weakSelf = self
+        cell.autoFollowBlock = { deviceModel, follow, comple in
+            weakSelf?.deviceFllowAction(devceModel: deviceModel, enable: follow, comple: comple)
+            
         }
-        if type == .apMode {
-            let cell: A4xHomeAPLiveCollectCell = collectionView.dequeueReusableCell(withReuseIdentifier: "A4xHomeAPLiveCollectCell", for: indexPath) as! A4xHomeAPLiveCollectCell
-            cell.apTitleLabel?.text = A4xBaseManager.shared.getLocalString(key: "home_device_hotspot")
-            return cell
-        } else {
-            let tag = indexPath.row % 3
-            let model = dataSource?.getIndex(indexPath.row)
-            let cell: A4xHomeLiveVideoCollectCell = collectionView.dequeueReusableCell(withReuseIdentifier: "A4xHomeLiveVideoCollectCell-\(tag)", for: indexPath) as! A4xHomeLiveVideoCollectCell
-            if self.showImageAnimailRow == indexPath.row {
-                cell.showChangeAnilmail(true)
-                self.showImageAnimailRow = -1
-            } else {
-                cell.showChangeAnilmail(false)
-            }
-            
-            logDebug("-----------> collectionView cell create sn: \(model?.serialNumber ?? "") row: \(indexPath.row)")
-            
-            cell.indexPath = indexPath
-            let currentCellType: A4xVideoCellType = .default
-            cell.videoStyle = cellTypes.getIndex(indexPath.row) ?? currentCellType
-            cell.protocol = self
-            
-            
-            // 竖屏运动追踪状态图标
-            let isTrackingOpen = liveVideoViewModel.isTrackingOpen(deviceId: model?.serialNumber ?? "")
-            
-            // 是否为用户自己设备
-            let isFollowAdmin = model?.isAdmin() ?? false
-            
-            // 预设位置信息
-            let presetListData = liveVideoViewModel.presetModelBy(deviceId: model?.serialNumber ?? "")
-            
-            var dataDic: [String : Any] = [:]
-            dataDic["isTrackingOpen"] = isTrackingOpen
-            dataDic["isFollowAdmin"] = isFollowAdmin
-            dataDic["presetListData"] = presetListData
-            
-            cell.dataDic = dataDic
-            cell.dataSource = model
-            
-            // cell 点击事件处理
-            weak var weakSelf = self
-            cell.autoFollowBlock = { deviceModel, follow, comple in
-                weakSelf?.deviceFllowAction(devceModel: deviceModel, enable: follow, comple: comple)
-                logDebug("A4xHomeLiveVideoCollectCell autoFollowBlock device:\(deviceModel?.serialNumber ?? "") value \(follow)")
-            }
-            
-            cell.itemliveStartBlock = { [weak self] model in
-                self?.currentLiveDeviceModel = model
-            }
-            
-            cell.presetItemActionBlock = { deviceModel, data, type, img in
-                weakSelf?.presetItemAction(deviceModel: deviceModel, preset: data, type: type, image: img)
-            }
-            
-            cell.liveStateChangeBlock = { [weak self] deviceModel, stateCode in
-                if let state = A4xPlayerStateType(rawValue: stateCode) {
-                    self?.liveStateChange(state: state, deviceId: deviceModel?.serialNumber ?? "")
-                }
-            }
-            
-            return cell
+        
+        cell.itemliveStartBlock = { [weak self] model in
+            self?.currentLiveDeviceModel = model
         }
+        
+        cell.presetItemActionBlock = { deviceModel, data, type, img in
+            weakSelf?.presetItemAction(deviceModel: deviceModel, preset: data, type: type, image: img)
+        }
+        
+        cell.liveStateChangeBlock = { [weak self] deviceModel, stateCode in
+            if let state = A4xPlayerStateType(rawValue: stateCode) {
+                self?.liveStateChange(state: state, deviceId: deviceModel?.serialNumber ?? "")
+            }
+        }
+        
+        return cell
     }
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let curSection = indexPath.section
         var type: A4xHomeLiveVideoCollectCellEnum = .normalMode
-        if curSection <= (cellInfos?.count ?? 0) - 1 {
-            type = cellInfos?[curSection] ?? .normalMode
-        }
-        if type == .apMode {
-            self.stopLiveAll(skipDeviceId: nil, reason: A4xPlayerStopReason.changePage)
-            let vc = A4xHotlinkLiveVideoViewController(nav: self.navigationController)
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+
     }
     
     public func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        //logDebug("-----------> A4xHomeLiveVideoCollectLayout type1: \(type)")
+        //
         //全屏切半屏后定位到切之前的位置
         if fullVideoSelIndexPath != nil {
             let tmpIndexPath = fullVideoSelIndexPath
@@ -488,45 +469,35 @@ extension A4xHomeLiveVideoViewController: A4xHomeVideoCellContentProtocol, UICol
         }
     }
     
-    // 更新对应index的cell的显示类型
+    
     private func updateCellType(type: A4xVideoCellType, rowIndex: Int) {
         
-        // 数量不等
         if self.cellTypes.count != self.dataSource?.count {
             reloadCellTypes()
         }
         
-        guard rowIndex < cellTypes.count  else {
+        if rowIndex > cellTypes.count || rowIndex < 0 {
             return
         }
-        
-        if rowIndex < 0 {
-            return
-        }
-        
         cellTypes[rowIndex] = type
     }
     
-    // 根据直播状态，设置cell展示样式 - 枚举类型
+    
     private func reloadCellTypes() {
-        // 移除所有样式
+        
         cellTypes.removeAll()
         
         let count  = self.dataSource?.count ?? 0
         guard count > 0 else {
             return
         }
-        
-        // 初始化cell
-        self.cellInfos = A4xHomeLiveVideoCollectCellEnum.allCase()
-        
-        // 非四分屏
+                
         var types = Array(repeating: A4xVideoCellType.default, count: count)
         
         for index in 0..<count {
             if let device = self.dataSource?.getIndex(index) {
-                // 初始化 竖屏包含对所有直播实例的实例化
-                if let state = liveVideoViewModel.getLiveState(deviceId: device.serialNumber ?? "", customParam: ["isAPMode" : device.apModeType == .AP]) {
+                
+                if let state = liveVideoViewModel.getLiveState(deviceId: device.serialNumber ?? "", customParam: [:]) {
                     if state == A4xPlayerStateType.playing.rawValue {
                         types[index] = .playControl(isShowMore: false)
                     }
@@ -646,19 +617,8 @@ extension A4xHomeLiveVideoViewController: A4xHomeLiveVideoCollectCellProtocol {
             collectViewReloadData(code: 0, error: nil)
             if state == .playing {
                 if fullVideoSelIndexPath == nil {
-//                    collectView.layoutIfNeeded()
-                    // 因为布局未渲染完，导致调用scrollToItem不准确。
-                    // 如果在ap模式下，先延迟0.3s用于重新渲染布局
-                    // 如果在nomal模式下，则不会产生此问题，所以不需要延迟渲染
-                    let section = (self.cellInfos?.count ?? 1) > 1 ? 1 : 0
-                    if self.cellInfos?.count ?? 0 > 1 {
-                        DispatchQueue.main.a4xAfter(0.3) {
-                            self.collectView.scrollToItem(at: IndexPath(row: index, section: section), at: .top, animated: true)
-                        }
-                    } else {
-                        // 触发 A4xHomeLiveVideoCollectLayout prepare，系统还会再触发一次
-                        self.collectView.scrollToItem(at: IndexPath(row: index, section: section), at: .top, animated: true)
-                    }
+                    let section = 0
+                    self.collectView.scrollToItem(at: IndexPath(row: index, section: section), at: .top, animated: true)
                 }
             }
         }
@@ -763,13 +723,7 @@ extension A4xHomeLiveVideoViewController: A4xHomeLiveVideoCollectCellProtocol {
         if device == nil {
             return
         }
-        self.stopLiveAll(skipDeviceId: device?.serialNumber ?? "", reason: .changePage)
-        let vc = A4xFullLiveVideoViewController()
-        vc.delegate = self
-        vc.dataSource = device
-        vc.liveVideoViewModel = liveVideoViewModel
-        vc.currentIndexPath = indexPath
-        navigationController?.pushViewController(vc, animated: true)
+        presentLiveVideo(device: device, currentIndexPath: indexPath)
     }
     
     //
@@ -792,7 +746,46 @@ extension A4xHomeLiveVideoViewController: A4xHomeLiveVideoCollectCellProtocol {
 
 extension A4xHomeLiveVideoViewController: A4xFullLiveVideoViewControllerDelegate {
     
+    @objc private func presentAddCamera() {
+        self.stopLiveAll(skipDeviceId: nil, reason: A4xPlayerStopReason.changePage)
+        
+        Resolver.bindImpl.presentBindViewController(bindFromType: .no_device_add, navigationController: navigationController)
+        
+    }
+    
+    private func presentAddLocation() {
+        self.stopLiveAll(skipDeviceId: nil, reason: A4xPlayerStopReason.changePage)
+        Resolver.bindImpl.pushAddLocationViewController(locationModle: nil, navigationController: navigationController)
+    }
+    
+    private func presentLocationManager() {
+        self.stopLiveAll(skipDeviceId: nil, reason: A4xPlayerStopReason.changePage)
+        
+        
+    }
+    
+    
+    private func presentLiveVideo(device: DeviceBean?, currentIndexPath: IndexPath?) {
+        
+        if device == nil {
+            return
+        }
+        
+        self.stopLiveAll(skipDeviceId: device?.serialNumber ?? "", reason: A4xPlayerStopReason.changeMode)
+        
+        let vc = A4xFullLiveVideoViewController()
+        vc.delegate = self
+        vc.dataSource = device
+        vc.liveVideoViewModel = liveVideoViewModel
+        vc.currentIndexPath = currentIndexPath
+        navigationController?.pushViewController(vc, animated: true)
+        
+        
+    }
+    
     func didFinishViewController(controller: UIViewController, currentIndexPath: IndexPath) {
+        
+        fromLiveVideo = true
         controller.navigationController?.popViewController(animated: true)
         self.fullVideoSelIndexPath = currentIndexPath
     }

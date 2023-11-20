@@ -31,7 +31,7 @@ class BindFindDeviceViewController: BindBaseViewController {
         defaultNav()
         self.navView?.lineView?.isHidden = true
         
-        bindFindDeviceView = A4xBindFindDeviceView(frame: CGRect(x: 0, y:0, width: self.view.width, height: self.view.height), isDingDong: self.isDingDong, isAPMode: isAPMode ?? false)
+        bindFindDeviceView = A4xBindFindDeviceView(frame: CGRect(x: 0, y:0, width: self.view.width, height: self.view.height), isDingDong: self.isDingDong)
         let currentView = bindFindDeviceView
         currentView?.protocol = self
         self.view.addSubview(currentView!)
@@ -62,11 +62,7 @@ class BindFindDeviceViewController: BindBaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if isDingDong {
-            if self.isAPMode ?? false {
-                bindFindDeviceView?.viewWillAppear()
-            } else {
-                bindFindDeviceView?.stopSearch(stopType: .bleOffOrUnAuth)
-            }
+            bindFindDeviceView?.stopSearch(stopType: .bleOffOrUnAuth)
         } else {
             bindFindDeviceView?.viewWillAppear()
         }
@@ -259,38 +255,10 @@ extension BindFindDeviceViewController: A4xBindFindDeviceViewProtocol {
         self.bindFindDeviceView?.stopSearch(stopType: .keepScan)
         selectedBindDeviceModel = model
         
-        if isAPMode ?? false {
-            if model?.supportApConnect == 1 {
-                BindCore.getInstance().startBindByApDirect(bindDeviceModel: model)
-            } else {
-                var config = A4xBaseAlertAnimailConfig()
-                config.leftbtnBgColor = UIColor.white
-                config.leftTitleColor = UIColor.colorFromHex("#2F3742")
-                
-                config.rightbtnBgColor = UIColor.white
-                config.rightTextColor = ADTheme.Theme
-                config.messageColor = UIColor.colorFromHex("#2F3742")
-                
-                let alert = A4xBaseAlertView(param: config, identifier: "back click")
-                alert.message = A4xBaseManager.shared.getLocalString(key: "add_notsupport_hotspot")
-                alert.leftButtonTitle = A4xBaseManager.shared.getLocalString(key: "drop_out")
-                alert.rightButtonTitle = A4xBaseManager.shared.getLocalString(key: "add_reselect")
-                alert.leftButtonBlock = { [weak self] in
-                    self?.isAPMode = false
-                    
-                }
-                alert.rightButtonBlock = { [weak self] in
-                    self?.navigationController?.popViewController(animated: false)
-                }
-                alert.show()
-            }
-        } else {
-            // 检测设备支持情况
-            self.view.makeToastActivity(title: "loading") { (f) in }
-            wiredBindCheck()
-        }
 
-        
+        // 检测设备支持情况
+        self.view.makeToastActivity(title: "loading") { (f) in }
+        wiredBindCheck()
 
     }
     

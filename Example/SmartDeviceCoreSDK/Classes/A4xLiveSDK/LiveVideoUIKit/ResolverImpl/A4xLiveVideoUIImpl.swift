@@ -31,11 +31,5 @@ public class A4xLiveVideoUIImpl: A4xLiveVideoUIInterface {
         navigationController?.popToViewController(toViewController, animated: true)
     }
     
-    public func pushHotlinkLiveVideoViewController(fromVCType: FromViewControllerEnum?, navigationViewController: UINavigationController?) {
-        let vc = A4xHotlinkLiveVideoViewController(nav: navigationViewController)
-        vc.fromVCType = fromVCType
-        navigationViewController?.pushViewController(vc, animated: true)
-    }
-    
     
 }

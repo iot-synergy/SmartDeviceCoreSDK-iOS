@@ -59,19 +59,13 @@ class A4xDeviceSettingAlarmSettingViewController: A4xBaseViewController, A4xDevi
         self.viewModel?.deviceModel = self.deviceModel
         self.viewModel?.allCases?.removeAll()
         
-        if self.deviceModel?.apModeType == .AP {
-            self.deviceModel = A4xUserDataHandle.Handle?.getDevice(deviceId: self.deviceModel?.serialNumber ?? "", modeType: .AP)
-            self.viewModel?.deviceModel = self.deviceModel
-            self.viewModel?.getApAllCases()
-            self.tableViewReloadData()
-        } else {
-            weak var weakSelf = self
-            self.viewModel?.getDeviceInfoFromNetwork { code in
-                if code == 0 {
-                    weakSelf?.tableViewReloadData()
-                } else {
-                    
-                }
+        weak var weakSelf = self
+        self.viewModel?.getDeviceInfoFromNetwork { code in
+            if code == 0 {
+                
+                weakSelf?.tableViewReloadData()
+            } else {
+                
             }
         }
     }
@@ -129,20 +123,17 @@ class A4xDeviceSettingAlarmSettingViewController: A4xBaseViewController, A4xDevi
             weak var weakSelf = self
             self.viewModel?.updateSwitch(currentType: currentType ?? .PirSwitch, enable: isOn) { code, message in
                 if code == 0 {
-                    if self.deviceModel?.apModeType == .AP {
-                        weakSelf?.tableViewReloadData()
-                    } else {
-                        weakSelf?.viewModel?.getDeviceInfoFromNetwork { code in
-                            if code == 0 {
-                                //A4xDeviceSettingAlarmSettingViewModel.shared.updateLocalSwitchCase(currentType: currentType ?? .PirSwitch, isOpen: isOn, isLoading: false)
-                                weakSelf?.tableViewReloadData()
-                            } else {
-                                weakSelf?.viewModel?.updateLocalSwitchCase(currentType: currentType ?? .PirSwitch, isOpen: !isOn, isLoading: false)
-                                weakSelf?.view.makeToast(message)
-                                weakSelf?.tableViewReloadData()
-                            }
+                    weakSelf?.viewModel?.getDeviceInfoFromNetwork { code in
+                        if code == 0 {
+                            //A4xDeviceSettingAlarmSettingViewModel.shared.updateLocalSwitchCase(currentType: currentType ?? .PirSwitch, isOpen: isOn, isLoading: false)
+                            weakSelf?.tableViewReloadData()
+                        } else {
+                            weakSelf?.viewModel?.updateLocalSwitchCase(currentType: currentType ?? .PirSwitch, isOpen: !isOn, isLoading: false)
+                            weakSelf?.view.makeToast(message)
+                            weakSelf?.tableViewReloadData()
                         }
                     }
+                    
                 } else {
                     self.viewModel?.updateLocalSwitchCase(currentType: currentType ?? .PirSwitch, isOpen: !isOn, isLoading: false)
                     weakSelf?.tableViewReloadData()
@@ -192,16 +183,13 @@ class A4xDeviceSettingAlarmSettingViewController: A4xBaseViewController, A4xDevi
         weak var weakSelf = self
         self.viewModel?.updateEnumValue(currentType: currentType, value: enumModel.requestContent ?? "") { code, message in
             if code == 0 {
-                if self.deviceModel?.apModeType == .AP {
-                    weakSelf?.tableViewReloadData()
-                } else {
-                    self.viewModel?.getDeviceInfoFromNetwork { code in
-                        if code == 0 {
-                            weakSelf?.tableViewReloadData()
-                        } else {
-                            self.view.makeToast(message)
-                            weakSelf?.tableViewReloadData()
-                        }
+                self.viewModel?.getDeviceInfoFromNetwork { code in
+                    if code == 0 {
+                        //A4xDeviceSettingAlarmSettingViewModel.shared.updateLocalSwitchCase(currentType: currentType ?? .PirSwitch, isOpen: isOn, isLoading: false)
+                        weakSelf?.tableViewReloadData()
+                    } else {
+                        self.view.makeToast(message)
+                        weakSelf?.tableViewReloadData()
                     }
                 }
             } else {

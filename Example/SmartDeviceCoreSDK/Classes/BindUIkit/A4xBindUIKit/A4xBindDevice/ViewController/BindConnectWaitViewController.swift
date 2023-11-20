@@ -973,13 +973,10 @@ extension BindConnectWaitViewController {
     override func onSuccess(code: Int, msg: String?, serialNumber: String?) {
         logDebug("---------> onSuccess")
         self.viewModel?.saveBindWifiToCache(wifiName: self.wifiName ?? "", wifiPwd: self.wifiPwd ?? "" )
-        self.navigationController?.popToRootViewController(animated: false)
+        
         // 打点事件（发送后端）
         //self.logBindComplete(model?.opretionId, step)
-        
-        
         self.bindSuccess(serialNumber: serialNumber)
-        BindCore.getInstance().stopBind()
     }
     
     override func onError(code: Int, msg: String?) {
@@ -1070,10 +1067,10 @@ extension BindConnectWaitViewController {
     func jumpBindManuallyAddAPNetGuideViewController() {
 
         
-        let vc = BindManuallyAddAPNetGuideViewController()
-        vc.apInfoDetailModel  = self.apInfoDetailModel
-        vc.needSendBindText = self.needSendBindText
-        self.navigationController?.pushViewController(vc, animated: true)
+//        let vc = BindManuallyAddAPNetGuideViewController()
+//        vc.apInfoDetailModel  = self.apInfoDetailModel
+//        vc.needSendBindText = self.needSendBindText
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     // 跳转

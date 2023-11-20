@@ -15,7 +15,9 @@ public class A4xDevicesSettingViewController: A4xBaseViewController {
     var isWifiSignalWeak: Bool? = false
     
     var dataSource : DeviceBean? {
-        didSet { }
+        didSet {
+            
+        }
     }
     
     
@@ -67,22 +69,20 @@ public class A4xDevicesSettingViewController: A4xBaseViewController {
         })
         
         self.tableView.mj_header?.beginRefreshing {
-            if self.dataSource?.apModeType == .WiFi {
-                A4xUserDataHandle.Handle?.videoHelper.keepAlive(deviceId: self.deviceModel?.serialNumber ?? "" ) { [weak self ](state, flag) in
-                    switch state {
-                    case .start:
-                        break
-                    case  .done(_):
-                        
-                        self?.loadData(showLoading: false)
-                        break
-                    case let .error(error):
-                        self?.view.makeToast(error)
-                        self?.tableView.mj_header?.endRefreshing()
-                    }
+            
+            A4xUserDataHandle.Handle?.videoHelper.keepAlive(deviceId: self.deviceModel?.serialNumber ?? "" ) { [weak self ](state, flag) in
+                switch state {
+                case .start:
+                    break
+                case  .done(_):
+                    
+                    self?.loadData(showLoading: false)
+                    break
+                case let .error(error):
+                    self?.view.makeToast(error)
+                    self?.tableView.mj_header?.endRefreshing()
                 }
             }
-            
         }
         
         
@@ -95,29 +95,26 @@ public class A4xDevicesSettingViewController: A4xBaseViewController {
     
     
     private func loadData(showLoading : Bool = true) {
+        queue.async(group: group, execute: {
+            self.group.enter()
+            self.getSelectSingleDevice(showLoading: showLoading)
+        })
         
-        if self.dataSource?.apModeType != .AP {
-            // WIFI模式请求数据
-            queue.async(group: group, execute: {
-                self.group.enter()
-                self.getSelectSingleDevice(showLoading: showLoading)
-            })
-            
-            
-            queue.async(group: group, execute: {
-                self.group.enter()
-                self.getUserConfig()
-            })
         
-            group.notify(queue: queue) {
-                DispatchQueue.main.async {
-                    
-                    self.saveDataToLocal()
-                    self.reloadData()
-                    self.tableView.mj_header?.endRefreshing()
-                }
+        queue.async(group: group, execute: {
+            self.group.enter()
+            self.getUserConfig()
+        })
+    
+        group.notify(queue: queue) {
+            DispatchQueue.main.async {
+                
+                self.saveDataToLocal()
+                self.reloadData()
+                self.tableView.mj_header?.endRefreshing()
             }
         }
+        
     }
     
     
@@ -127,20 +124,15 @@ public class A4xDevicesSettingViewController: A4xBaseViewController {
     
     //
     @objc private func reloadData() {
+        let hasVip = A4xDeviceSettingManager.shared.deviceIsVip(deviceId: self.deviceModel?.serialNumber ?? "")
+        let offline = self.dataSource?.online ?? 0
+        self.cellInfos = A4xDeviceSettingInfoEnum.managerCases(vip: hasVip,
+                                                               offline: offline == 0,
+                                                               deviceModel: self.dataSource)
         
-        if self.dataSource?.apModeType == .AP {
-            self.cellInfos = A4xDeviceSettingInfoEnum.managerApCases(deviceModel: self.dataSource)
-            // Wi-Fi: no
-            self.isWifiSignalWeak = .none
-        } else {
-            let hasVip = A4xDeviceSettingManager.shared.deviceIsVip(deviceId: self.deviceModel?.serialNumber ?? "")
-            let offline = self.dataSource?.online ?? 0
-            self.cellInfos = A4xDeviceSettingInfoEnum.managerCases(vip: hasVip,
-                                                                   offline: offline == 0,
-                                                                   deviceModel: self.dataSource)
-            self.isWifiSignalWeak = (self.dataSource?.wifiStrength() ?? .none) == .weak //|| (self.dataSource?.wifiStrength() ?? A4xWiFiStyle.none) == .none
-        }
         
+        
+        self.isWifiSignalWeak = (self.dataSource?.wifiStrength() ?? .none) == .weak //|| (self.dataSource?.wifiStrength() ?? A4xWiFiStyle.none) == .none
         self.tableView.reloadData()
     }
     
@@ -156,19 +148,6 @@ public class A4xDevicesSettingViewController: A4xBaseViewController {
         self.navView?.leftClickBlock = {
             weakSelf?.navigationController?.popViewController(animated: true)
         }
-        
-        // test for Ap Device SDCard Format
-//        var rightItem = A4xBaseNavItem()
-//        rightItem.normalImg =  "icon_back_gray"
-//        self.navView?.rightItem = rightItem
-//        self.navView?.rightClickBlock = {
-//            SDCardManager.getInstance().apSdcardFormat(serialNumber: self.deviceModel?.serialNumber ?? "") { code, message in
-//
-//            } onError: { code, message in
-//
-//            }
-//
-//        }
     }
     
     
@@ -633,40 +612,25 @@ extension A4xDevicesSettingViewController: UITableViewDelegate, UITableViewDataS
         
         let tempString = A4xBaseManager.shared.getDeviceTypeString(deviceModelCategory: self.dataSource?.modelCategory ?? 1)
         
-        if self.dataSource?.apModeType == .AP {
-            // AP
-            DeviceManageCore.getInstance().deleteApDevice(serialNumber: self.deviceModel?.serialNumber ?? "") { code, message in
-                self.navigationController?.popViewController(animated: true)
+        DeviceManageCore.getInstance().deleteDevice(serialNumber: self.deviceModel?.serialNumber ?? "") { code, message in
+            if let strongSelf = weakSelf {
+                let stringKey = "\(strongSelf.deviceModel?.serialNumber ?? "")_lastVoiceEnable"
+                UserDefaults.standard.removeObject(forKey: stringKey)
+                UserDefaults.standard.synchronize()
+                
+                
+                let videosharpKey: String = (strongSelf.deviceModel?.serialNumber ?? "") + "_videosharp"
+                UserDefaults.standard.removeObject(forKey: videosharpKey)
+                UserDefaults.standard.synchronize()
+                
+                A4xUserDataHandle.Handle?.removeDevice(device: weakSelf?.dataSource)
+                strongSelf.navigationController?.popViewController(animated: true)
                 UIApplication.shared.keyWindow?.makeToast(A4xBaseManager.shared.getLocalString(key: "remove_device_success", param: [tempString]))
-                A4xObjcWebRtcPlayerManager.instance().destroyPlayer(self.deviceModel?.serialNumber ?? "")
-            } onError: { code, message in
-                NSLog("\(message) - \(code)")
+                A4xObjcWebRtcPlayerManager.instance().destroyPlayer(strongSelf.deviceModel?.serialNumber ?? "")
+                LiveManagerInstance.getInstance().destroyLive(deviceId: strongSelf.deviceModel?.serialNumber ?? "")
             }
-
-        } else {
-            // WIFI
-            DeviceManageCore.getInstance().deleteDevice(serialNumber: self.deviceModel?.serialNumber ?? "") { code, message in
-                if let strongSelf = weakSelf {
-                    let stringKey = "\(strongSelf.deviceModel?.serialNumber ?? "")_lastVoiceEnable"
-                    UserDefaults.standard.removeObject(forKey: stringKey)
-                    UserDefaults.standard.synchronize()
-                    
-                    
-                    let videosharpKey: String = (strongSelf.deviceModel?.serialNumber ?? "") + "_videosharp"
-                    UserDefaults.standard.removeObject(forKey: videosharpKey)
-                    UserDefaults.standard.synchronize()
-                    
-                    A4xUserDataHandle.Handle?.removeDevice(device: weakSelf?.dataSource)
-                    strongSelf.navigationController?.popViewController(animated: true)
-                    UIApplication.shared.keyWindow?.makeToast(A4xBaseManager.shared.getLocalString(key: "remove_device_success", param: [tempString]))
-                    A4xObjcWebRtcPlayerManager.instance().destroyPlayer(strongSelf.deviceModel?.serialNumber ?? "")
-                    LiveManagerInstance.getInstance().destroyLive(deviceId: strongSelf.deviceModel?.serialNumber ?? "")
-                }
-            } onError: { code, message in
-                weakSelf?.view.makeToast(A4xAppErrorConfig(code: code).message())
-            }
+        } onError: { code, message in
+            weakSelf?.view.makeToast(A4xAppErrorConfig(code: code).message())
         }
-        
-        
     }
 }

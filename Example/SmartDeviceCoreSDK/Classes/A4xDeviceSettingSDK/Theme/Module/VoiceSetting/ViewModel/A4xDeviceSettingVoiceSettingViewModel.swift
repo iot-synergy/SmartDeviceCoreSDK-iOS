@@ -298,115 +298,11 @@ class A4xDeviceSettingVoiceSettingViewModel: NSObject {
         return sortedArray
     }
     
-    //MARK: ----- AP Cases -----
-    public func getApAllCases()
-    {
-        var allModels : Array<Array<A4xDeviceSettingModuleModel>> = []
-        // Alarm Ring
-        let alarmRingApModule = self.getAlarmRingApCase()
-        allModels.append(alarmRingApModule)
-        
-        // Voice Setting
-        let voiceApModule = self.getVoiceApCase()
-        allModels.append(voiceApModule)
-        
-        self.allCases = allModels
-    }
-    
-    // 报警铃声Ap
-    private func getAlarmRingApCase() -> Array<A4xDeviceSettingModuleModel>
-    {
-        // 云台校准模块相关
-        let tool = A4xDeviceSettingModuleTool()
-        var models: Array<A4xDeviceSettingModuleModel> = []
-        
-        if self.deviceModel?.supportAlarmVolume() == true {
-            // 警铃音量
-            let valueInt = self.deviceModel?.alarmVolume ?? 0
-            // 赋值,这里暂时没有设备上报数据源,只能先写死范围[10,100]
-            let min = 10
-            let max = 100
-            let interval = 1
-            let minFloat = Float(min)
-            let maxFloat = Float(max)
-            let intervalFloat = Float(interval)
-            let valueFloat = Float(valueInt)
-            // alarm_volume
-            let alarmVolumeTitle = A4xBaseManager.shared.getLocalString(key: "alarm_volume")
-            let alarmVolumeContent = "\(valueInt)"
-            var leftImage = ""
-            if valueInt >= 50
-            {
-                leftImage = "device_alarm_volume_loud"
-            } else {
-                leftImage = "device_alarm_volume_low"
-            }
-            let rightImage = ""
-            let alarmVolumeModel = tool.createBaseSliderModel(moduleType: .Slider, currentType: .AlarmRingVolume, title: alarmVolumeTitle, titleContent: alarmVolumeContent, leftImage: leftImage, rightImage: rightImage, sliderValue: valueFloat, scale: intervalFloat, minValue: minFloat, maxValue: maxFloat, isNormalSlider: true)
-            models.append(alarmVolumeModel)
-        }
-        // 排序
-        let sortedArray = tool.sortModuleArray(moduleArray: models)
-        return sortedArray
-    }
-    
-    // 声音模块Ap
-    private func getVoiceApCase() -> Array<A4xDeviceSettingModuleModel>
-    {
-        // 云台校准模块相关
-        let tool = A4xDeviceSettingModuleTool()
-        var models: Array<A4xDeviceSettingModuleModel> = []
-        
-        let tempString = A4xBaseManager.shared.getDeviceTypeString(deviceModelCategory: self.deviceModel?.modelCategory ?? 0)
-        
-
-        // 设备语音
-        let deviceLanguageTitle = A4xBaseManager.shared.getLocalString(key: "device_language", param: [tempString])
-        let deviceLanguageValue = self.deviceModel?.deviceLanguage ?? ""
-        let deviceLanguageContentKey = tool.getModifiableAttributeTypeName(currentType: .DeviceLanguage) + "_options_" + (deviceLanguageValue)
-        let deviceLanguageContent = A4xBaseManager.shared.getLocalString(key: deviceLanguageContentKey)
-        let deviceLanguageModel = tool.createBaseArrowPointModel(moduleType: .ArrowPoint, currentType: .DeviceLanguage, title: deviceLanguageTitle, isInteractiveHidden: false)
-        deviceLanguageModel.titleContent = deviceLanguageContent
-        models.append(deviceLanguageModel)
-
-        
-        // 声音音量
-        if self.deviceModel?.supportVoiceVolume() == true {
-            let valueInt = self.deviceModel?.voiceVolume ?? 0
-            
-            let min = 0
-            let max = 100
-            let interval = 1
-            let minFloat = Float(min)
-            let maxFloat = Float(max)
-            let intervalFloat = Float(interval)
-            let valueFloat = Float(valueInt)
-                     
-            
-            // alarm_volume
-            let voiceVolumeTitle = A4xBaseManager.shared.getLocalString(key: "prompt_volume")
-            let voiceVolumeContent = "\(valueInt)"
-            var leftImage = ""
-            if valueInt <= 0 {
-                leftImage = "device_speaker_volume_mute"
-            } else if valueInt > 0 && valueInt <= 50 {
-                leftImage = "device_speaker_volume_low"
-            } else {
-                leftImage = "device_speaker_volume_loud"
-            }
-            let rightImage = ""
-            let voiceVolumeModel = tool.createBaseSliderModel(moduleType: .Slider, currentType: .VoiceVolume, title: voiceVolumeTitle, titleContent: voiceVolumeContent, leftImage: leftImage, rightImage: rightImage, sliderValue: valueFloat, scale: intervalFloat, minValue: minFloat, maxValue: maxFloat, isNormalSlider: true)
-            models.append(voiceVolumeModel)
-        }
-        // 排序
-        let sortedArray = tool.sortModuleArray(moduleArray: models)
-        return sortedArray
-    }
-    
     
     //MARK: ----- 更新数据 -----
     
     @objc public func updateSwitch(currentType: A4xDeviceSettingCurrentType, enable: Bool, comple: @escaping (_ code: Int, _ message: String) -> Void) {
+        
         
         var model = ModifiableAttributes()
         switch currentType {
@@ -439,68 +335,40 @@ class A4xDeviceSettingVoiceSettingViewModel: NSObject {
     
     @objc public func updateSlider(currentType: A4xDeviceSettingCurrentType, value: Int, comple: @escaping (_ code: Int, _ message: String) -> Void) {
         
-        if self.deviceModel?.apModeType == .AP {
-            var attribute = ApDeviceAttributeModel()
-            switch currentType {
-            case .AlarmRingVolume:
-                self.deviceModel?.deviceConfigBean?.alarmVolume = value
-                attribute.name = "alarmVolume"
-                attribute.value = value
-                break
-            case .VoiceVolume:
-                // VoiceVolume
-                self.deviceModel?.deviceConfigBean?.voiceVolume = value
-                attribute.name = "voiceVolume"
-                attribute.value = value
-                break
-            case .LiveSpeakerVolume:
-                break
-            default:
-                break
-            }
-            weak var weakSelf = self
-            let attributeArray : Array<ApDeviceAttributeModel> = [attribute]
-            DeviceSettingCore.getInstance().updateApDeviceInfo(serialNumber: self.deviceModel?.serialNumber ?? "", attributes: attributeArray) { code, message in
-                A4xUserDataHandle.Handle?.updateDevice(device: weakSelf?.deviceModel)
-                weakSelf?.getApAllCases()
+        
+        var model = ModifiableAttributes()
+        switch currentType {
+        case .AlarmRingVolume:
+            model.name = "alarmVolume"
+            break
+        case .VoiceVolume:
+            model.name = "voiceVolume"
+            break
+        case .LiveSpeakerVolume:
+            
+            model.name = "liveSpeakerVolume"
+            break
+        default:
+            model.name = ""
+            break
+        }
+        let codableModel = ModifiableAnyAttribute()
+        codableModel.value = value
+        model.value = codableModel
+        let modifiableAttributes = [model]
+        weak var weakSelf = self
+        DeviceSettingCoreUtil.updateModifiableAttributes(deviceId: self.deviceModel?.serialNumber ?? "", modifiableAttributes: modifiableAttributes) { code, message in
+            
+            if code == 0 {
+                
                 comple(code, message)
-            } onError: { code, message in
-                comple(code, A4xBaseManager.shared.getLocalString(key: "open_fail_retry"))
-            }
-        } else {
-            var model = ModifiableAttributes()
-            switch currentType {
-            case .AlarmRingVolume:
-                model.name = "alarmVolume"
-                break
-            case .VoiceVolume:
-                model.name = "voiceVolume"
-                break
-            case .LiveSpeakerVolume:
+            } else {
                 
-                model.name = "liveSpeakerVolume"
-                break
-            default:
-                model.name = ""
-                break
-            }
-            let codableModel = ModifiableAnyAttribute()
-            codableModel.value = value
-            model.value = codableModel
-            let modifiableAttributes = [model]
-            weak var weakSelf = self
-            DeviceSettingCoreUtil.updateModifiableAttributes(deviceId: self.deviceModel?.serialNumber ?? "", modifiableAttributes: modifiableAttributes) { code, message in
-                
-                if code == 0 {
-                    
-                    comple(code, message)
-                } else {
-                    
-                    //weakSelf?.updateLocalSwitchCase(currentType: currentType, isOpen: !enable, isLoading: false)
-                    comple(code, message)
-                }
+                //weakSelf?.updateLocalSwitchCase(currentType: currentType, isOpen: !enable, isLoading: false)
+                comple(code, message)
             }
         }
+        
     }
     
     @objc public func updateLocalSwitchCase(currentType: A4xDeviceSettingCurrentType, isOpen: Bool, isLoading: Bool) {

@@ -31,16 +31,14 @@ public class BindUIkitImpl: BindInterface {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    public func pushBindViewController(isAPMode: Bool, bindFromType: BindFromTypeEnum, navigationController: UINavigationController?) {
+    public func pushBindViewController(bindFromType: BindFromTypeEnum, navigationController: UINavigationController?) {
         let vc = BindBootUpGuideViewController()
         vc.bindFromType = bindFromType
-        vc.isAPMode = isAPMode
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    public func presentBindViewController(isAPMode: Bool, bindFromType: BindFromTypeEnum, navigationController: UINavigationController?) {
+    public func presentBindViewController(bindFromType: BindFromTypeEnum, navigationController: UINavigationController?) {
         let vc = BindBootUpGuideViewController()
-        vc.isAPMode = isAPMode
         vc.bindFromType = bindFromType
         vc.isPresent = true
         let nav = UINavigationController(rootViewController: vc)
