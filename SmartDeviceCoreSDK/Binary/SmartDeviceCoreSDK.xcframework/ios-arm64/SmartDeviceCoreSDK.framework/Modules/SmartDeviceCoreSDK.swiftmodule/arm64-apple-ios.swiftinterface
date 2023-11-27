@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SmartDeviceCoreSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
@@ -24,35 +24,35 @@ public struct A4xLiveResultList : Swift.Codable {
   public var url: Swift.String?
   public var liveId: Swift.String?
   public var audioUrl: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xAccountDisturbModel : Swift.Codable {
   public var shield: Swift.Bool?
   public var timeSlot: Swift.Int?
   public var timeSet: Foundation.TimeInterval?
   public func currentTime() -> (time: Swift.String, idDone: Swift.Bool)
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc @objcMembers public class A4xAnalysisResponse : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(deviceName: Swift.String? = nil, serialNumber: Swift.String? = nil, list: [SmartDeviceCoreSDK.AnalysisModelBean]? = nil)
   @objc public var deviceName: Swift.String?
   @objc public var serialNumber: Swift.String?
   @objc public var list: [SmartDeviceCoreSDK.AnalysisModelBean]?
-  required public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
 public struct A4xAnalysisUpdateResponse : Swift.Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xAiTestUrlModel : Swift.Codable {
   public init(url: Swift.String? = nil)
   public var url: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xAppBaseUrlNodeModel : Swift.Codable {
   public init(nodeUrl: Swift.String? = nil, zendeskHost: Swift.String? = nil, zendeskAppId: Swift.String? = nil, zendeskClientId: Swift.String? = nil)
@@ -60,8 +60,8 @@ public struct A4xAppBaseUrlNodeModel : Swift.Codable {
   public var zendeskHost: Swift.String?
   public var zendeskAppId: Swift.String?
   public var zendeskClientId: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public let kBuildEnvKey: Swift.String
 public enum A4xHostNode : Swift.String {
@@ -148,8 +148,8 @@ public struct A4xAppBuildConfig : Swift.Codable {
   public static func changeHost(url: Swift.String)
   public static func resetHost()
   public static func loadHost() -> Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xAppErrorConfig {
   public init(code: Swift.Int? = nil)
@@ -235,15 +235,15 @@ public enum A4xAppRemoveAPI : Swift.String {
 public struct AppRemoveNodeModle : Swift.Codable {
   public var userName: Swift.String?
   public init()
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public let A4xBaseActivityZonePointColorsValue: [Swift.Int]
 public struct A4xActivityZonePointsResponse : Swift.Codable {
   public init(list: [SmartDeviceCoreSDK.ZoneBean]? = nil)
   public func getList() -> [SmartDeviceCoreSDK.ZoneBean]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc @objcMembers public class ZoneBean : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(zoneId: Swift.Int = NULL_INT, serialNumber: Swift.String? = nil, zoneName: Swift.String? = nil, vertices: Swift.String? = nil, needPush: Swift.Int = NULL_INT_SUPPORT_STATUS, needRecord: Swift.Int = NULL_INT_SUPPORT_STATUS, needAlarm: Swift.Int = NULL_INT_SUPPORT_STATUS, rectColor: Swift.Int = NULL_INT, errPoint: Swift.Int = NULL_INT)
@@ -256,8 +256,8 @@ public struct A4xActivityZonePointsResponse : Swift.Codable {
   @objc public var needAlarm: Swift.Int
   @objc public var rectColor: Swift.Int
   @objc public var errPoint: Swift.Int
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
   @objc public func verticesPoints() -> [CoreFoundation.CGPoint]?
   @objc public func checkFloatPointsArr(vertices: Swift.String?) -> Swift.Int
   @objc public static func pointsToVertices(points: [CoreFoundation.CGPoint]) -> Swift.String
@@ -360,13 +360,13 @@ public struct A4xBaseDeviceOtaModel : Swift.Codable {
   public var path: Swift.String?
   public var serialNumber: Swift.String?
   public func corverUpdateInfo(deviceId: Swift.String) -> SmartDeviceCoreSDK.OTABean?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xBaseOtaResultModel : Swift.Codable {
   public var list: [SmartDeviceCoreSDK.A4xBaseDeviceOtaModel]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 extension SmartDeviceCoreSDK.OTABean {
   @objc dynamic public func canUpdate(firmwareStatus: Swift.Int = -100) -> Swift.Bool
@@ -383,16 +383,16 @@ extension SmartDeviceCoreSDK.OTABean {
   @objc public var releaseNote: [Swift.String]?
   @objc public var adminId: Swift.Int
   @objc public var md5: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class A4xDeviceOtaCheckInfoModel : ObjectiveC.NSObject, Swift.Codable {
   public var list: SmartDeviceCoreSDK.OTABean?
   @objc override dynamic public init()
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc public class A4xDeviceUpdateProgressInfoModel : ObjectiveC.NSObject, Swift.Codable {
   public init(serialNumber: Swift.String? = nil, targetFirmware: Swift.String? = nil, inProgress: Swift.Int = 0, transferredSize: Swift.Int = 0, totalSize: Swift.Int64 = 0, status: Swift.Int = 0, timeout: Swift.Int = 600, otaStatus: Swift.Int = 0, otaStartTime: Swift.Int64 = 0)
@@ -405,8 +405,8 @@ extension SmartDeviceCoreSDK.OTABean {
   public var timeout: Swift.Int
   public var otaStatus: Swift.Int
   public var otaStartTime: Swift.Int64
-  required public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc open class A4xBaseDeviceSettingInterface : ObjectiveC.NSObject {
@@ -501,10 +501,20 @@ extension SmartDeviceCoreSDK.A4xBaseFormatTool {
 }
 @_inheritsConvenienceInitializers @objc open class A4xBaseManager : ObjectiveC.NSObject {
   @objc public static let shared: SmartDeviceCoreSDK.A4xBaseManager
-  public var baseAdapter: SmartDeviceCoreSDK.BaseAdapterProtocol?
-  public var mediaCodecAdapter: SmartDeviceCoreSDK.MediaCodecProtocol?
-  public func setupBaseAdapter(adapterInstance: SmartDeviceCoreSDK.BaseAdapterProtocol?)
-  public func setUpMediaCodecAdapter(adapterInstance: SmartDeviceCoreSDK.MediaCodecProtocol?)
+  @objc public var baseAdapter: (any SmartDeviceCoreSDK.BaseAdapterProtocol)?
+  public var mediaCodecAdapter: (any SmartDeviceCoreSDK.MediaCodecProtocol)?
+  public var baseLanguageAdapter: (any SmartDeviceCoreSDK.BaseLanguageProtocol)?
+  @objc public var isDoorBellLive: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var isVoipAnswerCall: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  public func setupBaseAdapter(adapterInstance: (any SmartDeviceCoreSDK.BaseAdapterProtocol)?)
+  public func setUpMediaCodecAdapter(adapterInstance: (any SmartDeviceCoreSDK.MediaCodecProtocol)?)
+  public func setBaseLanguageAdapter(adapterInstance: (any SmartDeviceCoreSDK.BaseLanguageProtocol)?)
   @objc public func getLocalString(key: Swift.String, param: [Swift.String] = []) -> Swift.String
   open func setLanguage(by name: SmartDeviceCoreSDK.A4xBaseAppLanguageType, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String) -> Swift.Void)
   @objc open func checkIsDebug() -> Swift.Bool
@@ -517,7 +527,7 @@ public protocol A4xBaseNetworkIotManagerProtocol : AnyObject {
   func discoverMulticastPeripheral(resStr: Swift.String?)
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class A4xBaseNetworkIotManager : ObjectiveC.NSObject {
-  weak public var `protocol`: SmartDeviceCoreSDK.A4xBaseNetworkIotManagerProtocol?
+  weak public var `protocol`: (any SmartDeviceCoreSDK.A4xBaseNetworkIotManagerProtocol)?
   public static var share: SmartDeviceCoreSDK.A4xBaseNetworkIotManager
   public var wifiModel: SmartDeviceCoreSDK.A4xBaseWifiIotModel?
   public func connet(model: SmartDeviceCoreSDK.A4xBaseWifiIotModel?, result: @escaping (Swift.Bool, Swift.String) -> Swift.Void)
@@ -668,26 +678,26 @@ public struct A4xBindResponse : Swift.Codable {
   public var image: Swift.String?
   public var bindText: Swift.String?
   public var contents: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xBindIconResponse : Swift.Codable {
   public init(devices: [SmartDeviceCoreSDK.A4xBindIconInfoModel]? = nil)
   public var devices: [SmartDeviceCoreSDK.A4xBindIconInfoModel]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xBindIconInfoModel : Swift.Codable {
   public var icon: Swift.String?
   public var smallIcon: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xBindAPResponse : Swift.Codable {
   public init(deviceApInfo: SmartDeviceCoreSDK.BindDeviceModel? = nil)
   public var deviceApInfo: SmartDeviceCoreSDK.BindDeviceModel?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc @objcMembers public class BindDeviceModel : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(userSn: Swift.String? = nil, serialNumber: Swift.String? = nil, modelNo: Swift.String? = nil, displayModelNo: Swift.String? = nil, apInfo: Swift.String? = nil, multicastInfo: Swift.String? = nil, smallIcon: Swift.String? = nil, icon: Swift.String? = nil, apRuleTextDeviceStatePosition: Swift.String? = nil, networkModePosition: Swift.String? = nil, supportApConnect: Swift.Int = 0, defaultSupportApConnect: Swift.Int = 0, supportApSetWifi: Swift.Int = 0, defaultSupportApSetWifi: Swift.Int = 0, subModuleTypePosition: Swift.String? = nil, subModuleErrCodePosition: Swift.String? = nil, apBitParamsPosition: Swift.String? = nil, macAddress: Swift.String? = nil, wiredMacAddress: Swift.String? = nil, net: Swift.Int = 0)
@@ -711,8 +721,8 @@ public struct A4xBindAPResponse : Swift.Codable {
   @objc public var macAddress: Swift.String?
   @objc public var wiredMacAddress: Swift.String?
   @objc public var net: Swift.Int
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
   public func getMulticastInfoModel() -> SmartDeviceCoreSDK.A4xBindMulticastInfoModel?
   @objc public func isWireless() -> Swift.Bool
   @objc public func isWired() -> Swift.Bool
@@ -730,8 +740,8 @@ public struct A4xBindCloudServiceSettingModel : Swift.Codable {
   public var icon: Swift.String?
   public var language: Swift.String?
   public var deviceModel: SmartDeviceCoreSDK.A4xDeviceControlModel?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xBindAPDeviceInfoModel : Swift.Codable {
   public var ssid: Swift.String?
@@ -739,8 +749,8 @@ public struct A4xBindAPDeviceInfoModel : Swift.Codable {
   public var asideServerIp: Swift.String?
   public var asideServerPort: Swift.String?
   public var safePassword: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public enum A4xBindMulticastNetWorkState {
   case none
@@ -762,27 +772,27 @@ public struct A4xBindMulticastInfoModel : Swift.Codable {
   public var ip: Swift.String?
   public var port: Swift.Int?
   public var net: Swift.Int?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xBindResult : Swift.Codable {
   public init(opretionId: Swift.String? = nil, serialNumber: Swift.String? = nil, deviceBindStep: Swift.Int? = nil)
   public var opretionId: Swift.String?
   public var serialNumber: Swift.String?
   public var deviceBindStep: Swift.Int?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xZendeskChatSupportModel : Swift.Codable {
   public init(zendeskChatSupport: Swift.Bool? = nil)
   public var zendeskChatSupport: Swift.Bool?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xBirdAnalysisCommitResponseModel : Swift.Codable {
   public var matchList: [SmartDeviceCoreSDK.A4xBirdAnalysisResponseModel]
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc public class BirdSearchedModel : ObjectiveC.NSObject {
   public init(keyWord: Swift.String = "", matchName: Swift.String = "", stdName: Swift.String = "", zhName: Swift.String = "", enName: Swift.String = "", score: Swift.Float = 0.5)
@@ -828,8 +838,8 @@ public struct A4xBirdAnalysisResponseModel : Swift.Codable {
   public var enName: Swift.String?
   public var confidence: Swift.Float?
   public var imageUrl: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc public class BirdModel : ObjectiveC.NSObject {
   public init(matchName: Swift.String = "", currentLanguage: Swift.String = "", enName: Swift.String = "", zhName: Swift.String = "", similarity: Swift.Float = 0.0, similarityString: Swift.String = "80%", imageUrl: Swift.String = "", wikiBirdIcon: Swift.String = "", wikiBirdDesc: Swift.String = "", stdName: Swift.String = "")
@@ -851,8 +861,8 @@ public struct A4xBirdAnalysisResponseModel : Swift.Codable {
 public struct A4xBirdAnalysisPushNotificationResponseModel : Swift.Codable {
   public var aiAnalyzeSwitch: Swift.Bool
   public var aiNotifySwitch: Swift.Bool
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @_inheritsConvenienceInitializers @objc public class A4xBirdAnalysisPushNotificationModel : ObjectiveC.NSObject {
   public var aiSupportBirdAnalysis: Swift.Bool
@@ -869,8 +879,8 @@ public struct A4xBirdAnalysisPushNotificationResponseModel : Swift.Codable {
   @objc deinit
 }
 public struct A4xNetBirdRequestModel : Swift.Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public enum A4xBirdAPI : Swift.String {
   case queryVideoPossibleSubcategory
@@ -896,8 +906,8 @@ public class A4xCountryModel : Swift.Decodable, Swift.Encodable {
   public class func getCurrentCountryByCode(completion: @escaping (_ code: Swift.Int, _ data: [SmartDeviceCoreSDK.A4xCountryModel]) -> Swift.Void)
   public class func getCountryQuery(_ name: Swift.String?, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ result: [SmartDeviceCoreSDK.A4xCountryModel]) -> Swift.Void)
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 public enum A4xDeviceAPI : Swift.String {
   case bindResult
@@ -1042,13 +1052,13 @@ public enum A4xDeviceAPI : Swift.String {
   }
 }
 public struct A4xDeviceRequestLogModel : Swift.Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xAPDeviceListModel : Swift.Codable {
   public var list: [SmartDeviceCoreSDK.A4xDeviceRequestModel]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xDeviceRequestModel : Swift.Codable {
   public init(id: Swift.Int? = nil, userId: Swift.Int? = nil, targetId: Swift.Int? = nil, status: Swift.Int? = nil, shareId: Swift.String? = nil, serialNumber: Swift.String? = nil, liveResolution: Swift.String? = nil, deviceName: Swift.String? = nil, needMotion: Swift.Int? = nil, motionSensitivity: Swift.Int? = nil, needVideo: Swift.Int? = nil, videoSeconds: Swift.Int? = nil, deviceLanguage: Swift.String? = nil, language: Swift.String? = nil, needAlarm: Swift.Int? = nil, alarmSeconds: Swift.Int? = nil, needRecord: Swift.Int? = nil, needPush: Swift.Int? = nil, vertices: Swift.String? = nil, zoneName: Swift.String? = nil, needNightVision: Swift.Int? = nil, nightThresholdLevel: Swift.Int? = nil, nightVisionSensitivity: Swift.Int? = nil, locationId: Swift.Int? = nil, seconds: Swift.Int? = nil, timeZone: Swift.String? = nil, operationId: Swift.String? = nil, audioUrl: Swift.String? = nil, targetFirmware: Swift.String? = nil, personDetect: Swift.Int? = nil, eventObjects: [Swift.String]? = nil, eventObjectType: [Swift.String : [Swift.String]]? = nil, recResolution: Swift.String? = nil, switchOn: Swift.Bool? = nil, reason: Swift.Int? = nil, startTime: Foundation.TimeInterval? = nil, endTime: Foundation.TimeInterval? = nil, whiteLight: Swift.Int? = nil, whiteLightScintillation: Swift.Int? = nil, nightVisionMode: Swift.Int? = nil, bindOperation: Swift.Bool? = nil, motionTrack: Swift.Int? = nil, packagePush: Swift.Int? = nil, aloneConfigList: [Swift.Dictionary<Swift.String, Swift.Int>]? = nil, devicePersonDetect: Swift.Int? = nil, locationName: Swift.String? = nil, width: Swift.Int? = nil, height: Swift.Int? = nil, type: Swift.Int? = nil, codeType: Swift.Int? = nil, networkName: Swift.String? = nil, password: Swift.String? = nil, antiflickerSwitch: Swift.Int? = nil, antiflicker: Swift.Int? = nil, bindCode: Swift.String? = nil, deviceNetType: Swift.Int? = nil, motionTrackMode: Swift.Int? = nil, userSn: Swift.String? = nil, firmwareId: Swift.String? = nil, userSns: [Swift.String]? = nil, apRuleText: Swift.String? = nil, bindType: Swift.Int? = nil, recLamp: Swift.Int? = nil, voiceVolumeSwitch: Swift.Int? = nil, voiceVolume: Swift.Int? = nil, alarmVolume: Swift.Int? = nil, mirrorFlip: Swift.Int? = nil, cryDetect: Swift.Int? = nil, cryDetectLevel: Swift.Int? = nil, dormancySwitch: Swift.Int? = nil, planStartDay: [Swift.Int]? = nil, startHour: Swift.Int? = nil, startMinute: Swift.Int? = nil, endHour: Swift.Int? = nil, endMinute: Swift.Int? = nil, period: Swift.Int? = nil, messageMergeSwitch: Swift.Int? = nil, voiceReminder: Swift.Bool? = nil, isAll: Swift.Bool? = nil, serialNumbers: [Swift.String]? = nil, serialNumberList: [Swift.String]? = nil, list: [SmartDeviceCoreSDK.AnalysisModelBean]? = [], defaultCodec: Swift.String? = nil, cooldown: SmartDeviceCoreSDK.A4xShootingIntervalModel? = nil, deviceAudio: SmartDeviceCoreSDK.A4xDeviceAudioModel? = nil, doorbellConfig: SmartDeviceCoreSDK.A4xDoorBellConfigModel? = nil, deleteLabelImages: [Swift.String : [Swift.String]]? = nil, markLabelIds: [Swift.String]? = nil, unmarkLabelIds: [Swift.String]? = nil, merges: [[Swift.String : Swift.String]]? = nil, deleteLabelIds: [Swift.String]? = nil, labelId: Swift.String? = nil, labelName: Swift.String? = nil, labelIds: [Swift.String]? = nil, options: [SmartDeviceCoreSDK.DeviceVehicleAiModel]? = nil, deviceCallToggleOn: Swift.Bool? = nil, mechanicalDingDongSwitch: Swift.Int? = nil, mechanicalDingDongDuration: Swift.Int? = nil, chargeAutoPowerOnSwitch: Swift.Int? = nil, chargeAutoPowerOnCapacity: Swift.Int? = nil, otaAutoUpgrade: Swift.Bool? = nil, batteryLevel: Swift.Int? = nil, isCharging: Swift.Int? = nil, settings: Swift.String? = nil, lastAct: Swift.Int? = nil, filterByAiAnalyze: Swift.Bool? = nil, returnFixedAttributes: Swift.Bool? = nil, returnRealTimeAttributes: Swift.Bool? = nil, returnModifiableAttributes: Swift.Bool? = nil, modifiableAttributes: [SmartDeviceCoreSDK.ModifiableAttributes]? = nil, needCalibration: Swift.Bool? = nil, deviceCode: Swift.String? = nil, a4xAiLibVersion: Swift.String? = nil, magicPix: SmartDeviceCoreSDK.MagicPixBean? = nil)
@@ -1166,37 +1176,37 @@ public struct A4xDeviceRequestModel : Swift.Codable {
   public var deviceCode: Swift.String?
   public var a4xAiLibVersion: Swift.String?
   public var magicPix: SmartDeviceCoreSDK.MagicPixBean?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct DeviceVehicleAiModel : Swift.Codable {
   public var checked: Swift.Bool?
   public var eventObject: Swift.String?
   public var mark: Swift.String?
   public init()
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc public class AnalysisModelBean : ObjectiveC.NSObject, Swift.Codable {
   public init(checked: Swift.Bool = false, eventObject: Swift.String? = "")
   public var checked: Swift.Bool
   public var eventObject: Swift.String?
-  required public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
 public struct A4xShootingIntervalModel : Swift.Codable {
   public var userEnable: Swift.Bool?
   public var value: Swift.Int?
   public init()
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xDeviceAudioResponseModel : Swift.Codable {
   public init(deviceAudio: SmartDeviceCoreSDK.A4xDeviceAudioModel? = nil)
   public var deviceAudio: SmartDeviceCoreSDK.A4xDeviceAudioModel?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc @objcMembers public class A4xDeviceAudioModel : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(liveAudioToggleOn: Swift.Bool = false, recordingAudioToggleOn: Swift.Bool = false, liveSpeakerVolume: Swift.Int = 0, doorBellRingKey: Swift.Int = 0, supportDoorBellRingKey: Swift.Array<SmartDeviceCoreSDK.A4xSupportDoorBellRingModel>? = nil)
@@ -1205,36 +1215,36 @@ public struct A4xDeviceAudioResponseModel : Swift.Codable {
   @objc public var liveSpeakerVolume: Swift.Int
   @objc public var doorBellRingKey: Swift.Int
   @objc public var supportDoorBellRingKey: Swift.Array<SmartDeviceCoreSDK.A4xSupportDoorBellRingModel>?
-  required public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
 @objc @objcMembers public class A4xSupportDoorBellRingModel : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(ringId: Swift.Int = 0, url: Swift.String? = "")
   @objc public var ringId: Swift.Int
   @objc public var url: Swift.String?
-  required public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
 public struct A4xDoorBellConfigModel : Swift.Codable {
   public init(alarmWhenRemoveToggleOn: Swift.Bool? = false)
   public var alarmWhenRemoveToggleOn: Swift.Bool?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct MagicPixResponseModel : Swift.Codable {
   public init(magicPix: SmartDeviceCoreSDK.MagicPixBean? = nil)
   public var magicPix: SmartDeviceCoreSDK.MagicPixBean?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct MagicPixBean : Swift.Codable {
   public init(image: Swift.String? = nil, video: Swift.String? = nil)
   public var image: Swift.String?
   public var video: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public enum A4xDeviceControlAPI : Swift.String {
   case saveRotationPoint
@@ -1253,8 +1263,8 @@ public enum A4xDeviceControlAPI : Swift.String {
   }
 }
 public struct KYDeviceControlModel : Swift.Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public enum A4xDeviceLanguageEnum : Swift.String {
   case chinese
@@ -1313,27 +1323,27 @@ public enum A4xDeviceLocationAPI : Swift.String {
   public var insertTime: Swift.Double?
   public var postalCode: Swift.String?
   @objc override dynamic public init()
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
   @objc deinit
 }
 public struct DeleteLocationModel : Swift.Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class ModifiableAttributes : ObjectiveC.NSObject, Swift.Codable {
   @objc public var name: Swift.String?
   @objc public var value: SmartDeviceCoreSDK.ModifiableAnyAttribute?
   @objc override dynamic public init()
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class ModifiableAnyAttribute : ObjectiveC.NSObject, Swift.Codable {
   @objc public var value: Any?
   @objc override dynamic public init()
-  required public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
 @objc @objcMembers public class A4xDeviceSettingUnitModel : ObjectiveC.NSObject, Swift.Codable {
@@ -1344,8 +1354,8 @@ public struct DeleteLocationModel : Swift.Codable {
   @objc public var at_leat: Swift.Int
   @objc public var at_most: Swift.Int
   @objc public var checkables: [Swift.String]?
-  required public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
 public protocol A4xDeviceLocationFilterModel : SmartDeviceCoreSDK.A4xBaseAlertModelProtocol {
@@ -1364,8 +1374,8 @@ public class A4xDeviceLocationAllModel : SmartDeviceCoreSDK.A4xDeviceLocationFil
   }
   public init()
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers public class A4xDeviceLocationApModel : SmartDeviceCoreSDK.A4xDeviceLocationFilterModel {
   public var showName: Swift.String {
@@ -1378,8 +1388,8 @@ public class A4xDeviceLocationAllModel : SmartDeviceCoreSDK.A4xDeviceLocationFil
     get
   }
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 public class A4xDeviceLocationShareModel : SmartDeviceCoreSDK.A4xDeviceLocationFilterModel {
   public var showName: Swift.String {
@@ -1393,8 +1403,8 @@ public class A4xDeviceLocationShareModel : SmartDeviceCoreSDK.A4xDeviceLocationF
   }
   public init()
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xDeviceBindInitModel : Swift.Codable {
   public var serialNumber: Swift.String?
@@ -1404,8 +1414,8 @@ public struct A4xDeviceBindInitModel : Swift.Codable {
   public var locationId: Swift.Int?
   public var locationDOList: [SmartDeviceCoreSDK.A4xDeviceLocationModel]?
   public func canUpdate() -> Swift.Bool
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xDeviceLocationModel : SmartDeviceCoreSDK.A4xDeviceLocationFilterModel {
   public var showName: Swift.String {
@@ -1430,14 +1440,14 @@ public struct A4xDeviceLocationModel : SmartDeviceCoreSDK.A4xDeviceLocationFilte
   public var addTime: Swift.Double?
   public init()
   public static func == (lhs: SmartDeviceCoreSDK.A4xDeviceLocationModel, rhs: SmartDeviceCoreSDK.A4xDeviceLocationModel) -> Swift.Bool
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xDevicesCodeSelectionModel : Swift.Codable {
   public init(defaultCodec: Swift.String? = nil)
   public var defaultCodec: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public enum A4xDevicesCodeSelectionEnum : Swift.String {
   case linkageSupport
@@ -1457,8 +1467,8 @@ public enum A4xDevicesCodeSelectionEnum : Swift.String {
   @objc public var realTimeAttributes: SmartDeviceCoreSDK.A4xDeviceSettingRealTimeAttributesModel?
   @objc public var modifiableAttributes: [SmartDeviceCoreSDK.A4xDeviceSettingModifiableAttributesModel]?
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class A4xDeviceSettingFixedAttributesModel : ObjectiveC.NSObject, Swift.Codable {
   @objc override dynamic public init()
@@ -1495,8 +1505,10 @@ public enum A4xDevicesCodeSelectionEnum : Swift.String {
   @objc public var supportStarlightSensor: Swift.Bool
   @objc public var supportPirAi: Swift.Bool
   @objc public var supportRotateCalibration: Swift.Bool
-  required public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
+  @objc public var customerId: Swift.String?
+  @objc public var enableLiveChat: Swift.Bool
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class A4xDeviceSettingRealTimeAttributesModel : ObjectiveC.NSObject, Swift.Codable {
@@ -1519,8 +1531,8 @@ public enum A4xDevicesCodeSelectionEnum : Swift.String {
   @objc public var displayGitSha: Swift.String?
   @objc public var sdCard: SmartDeviceCoreSDK.A4xSDCardModel?
   @objc public var whiteLight: Swift.Int
-  required public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class A4xDeviceSettingModifiableAttributesModel : ObjectiveC.NSObject, Swift.Codable {
@@ -1532,15 +1544,15 @@ public enum A4xDevicesCodeSelectionEnum : Swift.String {
   @objc public var options: SmartDeviceCoreSDK.ModifiableAnyAttribute?
   @objc public var disabledOptions: SmartDeviceCoreSDK.ModifiableAnyAttribute?
   @objc public var intRange: Swift.Dictionary<Swift.String, Swift.Int>?
-  required public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
 public struct DeviceShareResponseBean : Swift.Codable {
   public init(list: [SmartDeviceCoreSDK.ShareDeviceBean]? = nil)
   public var list: [SmartDeviceCoreSDK.ShareDeviceBean]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc public class ShareDeviceBean : ObjectiveC.NSObject, Swift.Codable {
   public init(mainId: Swift.Int64 = Int64(NULL_INT), adminId: Swift.Int64 = Int64(NULL_INT), targetId: Swift.Int64 = Int64(NULL_INT), targetName: Swift.String? = nil, targetEmail: Swift.String? = nil, targetPhone: Swift.String? = nil, serialNumber: Swift.String? = nil, deviceName: Swift.String? = nil, roleId: Swift.Int64 = 2, role: Swift.Int64 = 0, shareId: Swift.String? = nil, adminName: Swift.String? = nil, adminEmail: Swift.String? = nil, expireTime: Swift.Int = NULL_INT)
@@ -1559,8 +1571,8 @@ public struct DeviceShareResponseBean : Swift.Codable {
   public var adminEmail: Swift.String?
   public var expireTime: Swift.Int
   public func roleText() -> Swift.String
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
   @objc deinit
 }
 @objc public class FeedBackOptionBean : ObjectiveC.NSObject, Swift.Codable {
@@ -1575,8 +1587,8 @@ public struct DeviceShareResponseBean : Swift.Codable {
   public var category: Swift.String?
   public var childOptions: [SmartDeviceCoreSDK.FeedBackOptionBean]?
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc public class QuestionFeedBackBean : ObjectiveC.NSObject, Swift.Codable {
   public init(isFirst: Swift.Bool? = nil, options: [SmartDeviceCoreSDK.FeedBackOptionBean]? = nil, remark: Swift.String? = nil, playOptions: [SmartDeviceCoreSDK.FeedBackOptionBean]? = nil)
@@ -1585,8 +1597,8 @@ public struct DeviceShareResponseBean : Swift.Codable {
   public var remark: Swift.String?
   public var playOptions: [SmartDeviceCoreSDK.FeedBackOptionBean]?
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers public class A4xDownloadManager : ObjectiveC.NSObject {
   @objc public static let shared: SmartDeviceCoreSDK.A4xDownloadManager
@@ -1613,8 +1625,8 @@ public struct DeviceShareResponseBean : Swift.Codable {
   @objc public var downloadOutputPath: Swift.String?
   @objc public var isShare: Swift.Bool
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 public enum DownloadResult<Value> {
   case success(Value)
@@ -1623,8 +1635,8 @@ public enum DownloadResult<Value> {
 public enum WLError : Swift.Error {
   case parametersInvalid
   case urlDuplicate
-  case handleCacheFailed(Swift.Error)
-  case downloadFailed(Swift.Error?)
+  case handleCacheFailed(any Swift.Error)
+  case downloadFailed((any Swift.Error)?)
   case logicError
   case m3uFileContentInvalid
 }
@@ -2027,8 +2039,8 @@ extension UIKit.UIImage {
     @objc get
   }
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 public enum A4xLocalHostAPI : Swift.String {
   case rtcconnectionOpen
@@ -2076,8 +2088,8 @@ public enum A4xLibraryVideoAPI : Swift.String {
   }
 }
 public struct A4xLibraryReqModel : Swift.Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc public enum A4xLibraryVideoReadStateType : Swift.Int {
   case unread = 0
@@ -2146,14 +2158,14 @@ public struct A4xLibraryReqModel : Swift.Codable {
   @objc public var total: Swift.Int
   @objc public var list: [SmartDeviceCoreSDK.RecordBean]?
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers public class A4xFilterModel : Swift.Codable {
   public var otherTagNameList: [Swift.String]
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class TagBean : ObjectiveC.NSObject, Swift.Codable {
   @objc public var devices: [SmartDeviceCoreSDK.FilterTagDeviceModel]?
@@ -2162,8 +2174,8 @@ public struct A4xLibraryReqModel : Swift.Codable {
   @objc public var operateOptions: [SmartDeviceCoreSDK.FilterAiEventTag]?
   @objc override dynamic public init()
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc @objcMembers public class FilterTagDeviceModel : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(serialNumber: Swift.String? = nil, isBind: Swift.Bool = false, roleId: Swift.Int = -1, deviceName: Swift.String? = nil, modelCategory: Swift.Int = -1)
@@ -2173,22 +2185,22 @@ public struct A4xLibraryReqModel : Swift.Codable {
   @objc public var deviceName: Swift.String?
   @objc public var modelCategory: Swift.Int
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc @objcMembers public class FilterAiEventTag : ObjectiveC.NSObject, Swift.Codable {
   @objc public var name: Swift.String?
   @objc public var subTags: [SmartDeviceCoreSDK.FilterAiSubTag]?
   @objc public init(name: Swift.String? = nil, subTags: [SmartDeviceCoreSDK.FilterAiSubTag]? = nil)
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc @_hasMissingDesignatedInitializers public class FilterAiSubTag : ObjectiveC.NSObject, Swift.Codable {
   public var name: Swift.String?
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc @objcMembers public class A4xLibraryDeleteModel : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(removed: Swift.Int = 0, failed: [Swift.Int] = [0], failedTraceIdList: [Swift.String] = [""])
@@ -2196,8 +2208,8 @@ public struct A4xLibraryReqModel : Swift.Codable {
   @objc public var failed: [Swift.Int]
   @objc public var failedTraceIdList: [Swift.String]
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc @objcMembers public class RecordBean : ObjectiveC.NSObject, Swift.Codable {
   public init(cName: Swift.String? = nil, image: Swift.String? = nil, period: Swift.Float? = nil, id: Swift.Int? = nil, missing: Swift.Int? = nil, mark: Swift.Int? = nil, type: Swift.Int? = nil, from: Swift.Int? = nil, time: Foundation.TimeInterval? = nil, cID: Swift.String? = nil, date: Swift.String? = nil, source: Swift.String? = nil, tags: Swift.String? = nil, managerName: Swift.String? = nil, locationId: Swift.Int? = nil, locationName: Swift.String? = nil, videoURL: Foundation.URL? = nil, adminId: Swift.Int64? = nil, pushInfo: Swift.String? = nil, traceId: Swift.String? = nil, fileSize: Swift.Int? = nil, eventInfo: Swift.String? = nil, packageEventInfo: Swift.String? = nil, eventInfoList: [Swift.String]? = nil, adminIsVip: Swift.Bool? = nil, activityZoneName: Swift.String? = nil, hasPossibleSubcategory: Swift.Bool? = nil, videoEvent: Swift.String? = nil)
@@ -2283,8 +2295,8 @@ public struct A4xLibraryReqModel : Swift.Codable {
     }
   }
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc @objcMembers public class LibraryEventDatabean : ObjectiveC.NSObject, Swift.Codable {
   public init(eventCount: Swift.Int? = nil, libraryCount: Swift.Int? = nil, list: [SmartDeviceCoreSDK.RecordEventBean]? = nil)
@@ -2292,8 +2304,8 @@ public struct A4xLibraryReqModel : Swift.Codable {
   public var libraryCount: Swift.Int?
   @objc public var list: [SmartDeviceCoreSDK.RecordEventBean]?
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc @objcMembers public class RecordEventBean : ObjectiveC.NSObject, Swift.Codable {
   public init(videoEventKey: Swift.String? = nil, startTime: Foundation.TimeInterval? = nil, endTime: Foundation.TimeInterval? = nil, period: Swift.Float? = nil, deviceName: Swift.String? = nil, imageUrl: Swift.String? = nil, videoUrls: Swift.String? = nil, tags: SmartDeviceCoreSDK.A4xLibraryVideoTagsModel? = nil, libraryCount: Swift.Int? = nil, type: Swift.Int? = nil, missing: Swift.Int? = nil, marked: Swift.Int? = nil, libraryIds: Swift.String? = nil, adminId: Swift.Int64? = nil, hasPossibleSubcategory: Swift.Bool? = nil)
@@ -2355,8 +2367,8 @@ public struct A4xLibraryReqModel : Swift.Codable {
   public func videoTags(tags: Swift.String) -> [SmartDeviceCoreSDK.A4xLibraryVideoAiTagType]
   public func getType() -> SmartDeviceCoreSDK.A4xLibraryResourcesType?
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xLibraryVideoTagsModel : Swift.Codable {
   public init(device_call: Swift.Int? = nil, doorbell_press: Swift.Int? = nil, doorbell_remove: Swift.Int? = nil, person: Swift.Int? = nil, pet: Swift.Int? = nil, vehicle: Swift.Int? = nil, packageContent: Swift.Int? = nil, bird: Swift.Int? = nil)
@@ -2368,8 +2380,8 @@ public struct A4xLibraryVideoTagsModel : Swift.Codable {
   public var vehicle: Swift.Int?
   public var packageContent: Swift.Int?
   public var bird: Swift.Int?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xFreePurchaseBannerResponseModel : Swift.Codable {
   public init(notify: Swift.Bool? = nil, notifyType: Swift.Int? = nil, notifyMessage: Swift.String? = nil, recommendProduct: SmartDeviceCoreSDK.A4xFreePurchaseBannerRecommendProductModel? = nil, notifyCount: Swift.Int? = nil, upgradeFreeBtn: Swift.String? = nil)
@@ -2379,18 +2391,18 @@ public struct A4xFreePurchaseBannerResponseModel : Swift.Codable {
   public var recommendProduct: SmartDeviceCoreSDK.A4xFreePurchaseBannerRecommendProductModel?
   public var notifyCount: Swift.Int?
   public var upgradeFreeBtn: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xFreePurchaseBannerRecommendProductModel : Swift.Codable {
   public var productId: Swift.Int?
   public var maxDeviceNum: Swift.Int?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xLibraryStatusResponse : Swift.Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers public class A4xLockTool : ObjectiveC.NSObject {
   public static var share: SmartDeviceCoreSDK.A4xLockTool
@@ -2463,11 +2475,11 @@ public enum NetResult<Value> {
   case failure(code: Swift.Int, errorMsg: Any?)
 }
 public struct A4xNetNormaiModel : Swift.Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @_inheritsConvenienceInitializers @objc open class A4xNetManager : ObjectiveC.NSObject {
-  public var requestHandle: ((SmartDeviceCoreSDK.A4xRequestState, Foundation.URLRequest?, SmartDeviceCoreSDK.A4xNetTargetTypeProtocol, Swift.AnyObject?) -> Swift.Void)?
+  public var requestHandle: ((SmartDeviceCoreSDK.A4xRequestState, Foundation.URLRequest?, any SmartDeviceCoreSDK.A4xNetTargetTypeProtocol, Swift.AnyObject?) -> Swift.Void)?
   @objc public static var engine: SmartDeviceCoreSDK.A4xNetManager
   @objc override dynamic public init()
   public func addFilterCode(code: Swift.Int, tag: Swift.String, block: @escaping (Swift.Int) -> Swift.Void)
@@ -2656,13 +2668,13 @@ public enum DeviceMoudel : SmartDeviceCoreSDK.A4xNetMoudelProtocol {
 public enum LocalHostMoudel : SmartDeviceCoreSDK.A4xNetMoudelProtocol {
   case rtcconnectionOpen(serialNumber: Swift.String)
   case rtcconnectionClose(serialNumber: Swift.String)
-  case librarystatus(start: Foundation.TimeInterval, end: Foundation.TimeInterval, mark: Swift.Int, miss: Swift.Int, deviceIdArr: [Swift.String]?, tags: [Swift.String], doorbellTags: [Swift.String], deviceCallEventTag: Swift.String)
+  case librarystatus(start: Foundation.TimeInterval, end: Foundation.TimeInterval, mark: Swift.Int, miss: Swift.Int, deviceIdArr: [Swift.String]?, serialNumberToActivityZone: Swift.Dictionary<Swift.String, [Swift.Int]?>?, tags: [Swift.String], doorbellTags: [Swift.String], deviceCallEventTag: Swift.String)
   case selectlibrary(start: Foundation.TimeInterval, end: Foundation.TimeInterval, mark: Swift.Int, miss: Swift.Int, deviceIdArr: [Swift.String]?, from: Swift.Int, to: Swift.Int, tags: [Swift.String], doorbellTags: [Swift.String], deviceCallEventTag: Swift.String, serialNumberToActivityZone: Swift.Dictionary<Swift.String, [Swift.Int]?>?, videoEventKey: Swift.String?)
   case selectlibraryEvent(start: Foundation.TimeInterval, end: Foundation.TimeInterval, mark: Swift.Int, miss: Swift.Int, deviceIdArr: [Swift.String]?, from: Swift.Int, to: Swift.Int, tags: [Swift.String], doorbellTags: [Swift.String], deviceCallEventTag: Swift.String?, serialNumberToActivityZone: Swift.Dictionary<Swift.String, [Swift.Int]?>?, deviceName: Swift.String?)
   case queryVideoSearchOption(serialNumber: Swift.String?)
 }
 public enum LibraryMoudel : SmartDeviceCoreSDK.A4xNetMoudelProtocol {
-  case librarystatus(start: Foundation.TimeInterval, end: Foundation.TimeInterval, mark: Swift.Int, miss: Swift.Int, deviceIdArr: [Swift.String]?, tags: [Swift.String], doorbellTags: [Swift.String], deviceCallEventTag: Swift.String)
+  case librarystatus(start: Foundation.TimeInterval, end: Foundation.TimeInterval, mark: Swift.Int, miss: Swift.Int, deviceIdArr: [Swift.String]?, serialNumberToActivityZone: Swift.Dictionary<Swift.String, [Swift.Int]?>?, tags: [Swift.String], doorbellTags: [Swift.String], deviceCallEventTag: Swift.String)
   case selectlibrary(start: Foundation.TimeInterval, end: Foundation.TimeInterval, mark: Swift.Int, miss: Swift.Int, deviceIdArr: [Swift.String]?, from: Swift.Int, to: Swift.Int, tags: [Swift.String], doorbellTags: [Swift.String], deviceCallEventTag: Swift.String, serialNumberToActivityZone: Swift.Dictionary<Swift.String, [Swift.Int]?>?, videoEventKey: Swift.String?)
   case selectlibraryEvent(start: Foundation.TimeInterval, end: Foundation.TimeInterval, mark: Swift.Int, miss: Swift.Int, deviceIdArr: [Swift.String]?, from: Swift.Int, to: Swift.Int, tags: [Swift.String], doorbellTags: [Swift.String], deviceCallEventTag: Swift.String?, serialNumberToActivityZone: Swift.Dictionary<Swift.String, [Swift.Int]?>?)
   case miss(traceId: Swift.String, missing: Swift.Int)
@@ -3015,27 +3027,27 @@ public enum A4xPlayerStateType : Swift.Int, Swift.Equatable {
 }
 public struct A4xReplaySeekParamModel : Swift.Codable {
   public var seekTime: Swift.Int64?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xReplaySeekModel : Swift.Codable {
   public var action: Swift.String?
   public var timeStamp: Swift.Int64?
   public var parameters: SmartDeviceCoreSDK.A4xReplaySeekParamModel?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xReplayDevReportParamModel : Swift.Codable {
   public var value: Swift.Int?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xReplayDevReport : Swift.Codable {
   public var action: Swift.String?
   public var timeStamp: Swift.Int64?
   public var parameters: SmartDeviceCoreSDK.A4xReplayDevReportParamModel?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public enum A4xWebRtcPlayerStopReason : Swift.Int {
   case none
@@ -3105,6 +3117,7 @@ public struct A4xProjectConfigModel : Swift.Codable {
   public var phoneTime: Swift.String?
   public var apiNodeUrl: SmartDeviceCoreSDK.ApiNodeURL?
   public var agreementNodeUrl: Swift.String?
+  public var isCN: Swift.Bool?
   public var indoorUnitBaseUrl: Swift.String?
   public var indoorUnitVersion: Swift.String?
   public var copyright: Swift.String?
@@ -3123,8 +3136,8 @@ public struct A4xProjectConfigModel : Swift.Codable {
   public var buildIndex: Swift.String?
   public var buildCommitId: Swift.String?
   public var isDebug: Swift.Bool?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public enum A4xThemeType : Swift.String, Swift.Codable {
   case `default`
@@ -3136,40 +3149,40 @@ public enum A4xThemeType : Swift.String, Swift.Codable {
   }
 }
 public struct ApiNodeURL : Swift.Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct RegionURL : Swift.Codable {
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xSDStateModelRequest : Swift.Codable {
   public init(startTime: Swift.Double, stopTime: Swift.Double)
   public var startTime: Swift.Double
   public init(endTime: Swift.Double)
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc @objcMembers public class A4xSDStateModelResponse : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(videoInfo: [SmartDeviceCoreSDK.HaveRecordDayResponse]? = nil)
   @objc public var videoInfo: [SmartDeviceCoreSDK.HaveRecordDayResponse]?
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc @objcMembers public class HaveRecordDayResponse : ObjectiveC.NSObject, Swift.Codable {
   public init(startTime: Swift.Double? = nil, hasVideo: Swift.Bool = false)
   public var startTime: Swift.Double?
   @objc public var hasVideo: Swift.Bool
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xShareUserResponseModel : Swift.Codable {
   public init(list: [SmartDeviceCoreSDK.ShareUserBean]? = nil)
   public var list: [SmartDeviceCoreSDK.ShareUserBean]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct ShareUserBean : Swift.Codable {
   public init(userId: Swift.Int64? = nil, deviceId: Swift.String? = nil, roleId: Swift.Int? = nil, userName: Swift.String? = nil, userEmail: Swift.String? = nil, userPhone: Swift.String? = nil)
@@ -3180,8 +3193,8 @@ public struct ShareUserBean : Swift.Codable {
   public var userEmail: Swift.String?
   public var userPhone: Swift.String?
   public func transitionUser() -> SmartDeviceCoreSDK.A4xUserDataModel
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc public enum A4xSDKModuleType : Swift.Int {
   case live = 0
@@ -3317,17 +3330,17 @@ public protocol A4xUserDataHanleProtocol : SmartDeviceCoreSDK.A4xAccountProtocol
   var deviceWebrtcTicketModels: [SmartDeviceCoreSDK.A4xDeviceWebRtcDataModel]? { get set }
   func clearAllData()
   func getBaseDateFormatStr() -> Swift.String?
-  var delegate: SmartDeviceCoreSDK.A4xClearUserHandelProtocol? { get set }
+  var delegate: (any SmartDeviceCoreSDK.A4xClearUserHandelProtocol)? { get set }
 }
 @_hasMissingDesignatedInitializers public class A4xUserDataHandle : SmartDeviceCoreSDK.A4xUserDataHanleProtocol {
   public var voipToken: Swift.String?
-  public static var Handle: SmartDeviceCoreSDK.A4xUserDataHanleProtocol?
+  public static var Handle: (any SmartDeviceCoreSDK.A4xUserDataHanleProtocol)?
   public var queryNodeViewModel: SmartDeviceCoreSDK.QueryNodeViewModel
   public var isShow4GNet: Swift.Bool
   public var nodeCountry: SmartDeviceCoreSDK.A4xCountryModel?
   public var videoHelper: SmartDeviceCoreSDK.A4xPlayerHandle
   public var netConnectType: SmartDeviceCoreSDK.A4xReaStatus
-  public var delegate: SmartDeviceCoreSDK.A4xClearUserHandelProtocol?
+  public var delegate: (any SmartDeviceCoreSDK.A4xClearUserHandelProtocol)?
   public var locationsModel: [SmartDeviceCoreSDK.A4xDeviceLocationModel] {
     get
     set
@@ -3511,7 +3524,7 @@ public enum A4xBaseUserSettingType : Swift.Hashable {
   public static func == (a: SmartDeviceCoreSDK.A4xBaseUserSettingType, b: SmartDeviceCoreSDK.A4xBaseUserSettingType) -> Swift.Bool
 }
 public struct A4xUserDataModel : Swift.Codable {
-  public init(id: Swift.Int64? = nil, name: Swift.String? = nil, email: Swift.String? = nil, phone: Swift.String? = nil, age: Swift.Int? = nil, sex: Swift.Bool? = nil, userId: Swift.String? = nil, token: SmartDeviceCoreSDK.UserTokenModel? = nil, node: Swift.String? = nil)
+  public init(id: Swift.Int64? = nil, name: Swift.String? = nil, email: Swift.String? = nil, phone: Swift.String? = nil, age: Swift.Int? = nil, sex: Swift.Bool? = nil, userId: Swift.String? = nil, token: SmartDeviceCoreSDK.UserTokenModel? = nil, node: Swift.String? = nil, trackerToken: Swift.String? = nil)
   public var id: Swift.Int64?
   public var name: Swift.String?
   public var email: Swift.String?
@@ -3521,15 +3534,16 @@ public struct A4xUserDataModel : Swift.Codable {
   public var userId: Swift.String?
   public var token: SmartDeviceCoreSDK.UserTokenModel?
   public var node: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public var trackerToken: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct UserTokenModel : Swift.Codable {
   public init(tokenType: Swift.String? = nil, token: Swift.String? = nil)
   public var tokenType: Swift.String?
   public var token: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xSubTierModel : Swift.Codable {
   public var tierId: Swift.Int?
@@ -3539,16 +3553,16 @@ public struct A4xSubTierModel : Swift.Codable {
   public var tierDateEnd: Swift.String?
   public var tierStartTime: Foundation.TimeInterval?
   public var tierEndTime: Foundation.TimeInterval?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xUserVipPlanItemModel : Swift.Codable {
   public init(describe: Swift.String? = nil, title: Swift.String? = nil, url: Swift.String? = nil)
   public var describe: Swift.String?
   public var title: Swift.String?
   public var url: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public enum A4xUserVipTypeEnum {
   case none(tip: Swift.String)
@@ -3558,14 +3572,14 @@ public enum A4xUserVipTypeEnum {
 public struct A4xUserVipBirdAddOnPackageModel : Swift.Codable {
   public init(tierUid: Swift.String = "", type: Swift.Int = 0, tierDateStart: Swift.String = "", tierDateEnd: Swift.String = "", expirationMessage: Swift.String? = "")
   public var type: Swift.Int
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xUserVipBirdAddOnPackageListModel : Swift.Codable {
   public init(activeList: [SmartDeviceCoreSDK.A4xUserVipBirdAddOnPackageModel] = [])
   public var activeList: [SmartDeviceCoreSDK.A4xUserVipBirdAddOnPackageModel]
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xUserVipModel : Swift.Codable {
   public init(vip: Swift.Bool? = nil, sn2VipLevel: Swift.Dictionary<Swift.String, Swift.Int>? = nil, protection: Swift.Bool? = nil, tierReceive: Swift.Bool? = nil, tierId: Swift.Int? = nil, tierName: Swift.String? = nil, name: Swift.String? = nil, subhead: Swift.String? = nil, unit: Swift.String? = nil, price: Swift.String? = nil, endTime: Swift.Double? = nil, effectiveTime: Swift.Double? = nil, message: Swift.String? = nil, notifyType: Swift.Int? = nil, notify: Swift.Bool? = nil, shouldReminder: Swift.Bool? = nil, recommendProduct: SmartDeviceCoreSDK.A4xUserVipModel.A4xUserRecommendProductModel? = nil, popupMessage: Swift.String? = nil, tierTermList: [SmartDeviceCoreSDK.A4xUserVipPlanItemModel]? = nil, subTierList: [SmartDeviceCoreSDK.A4xSubTierModel]? = nil, tierDescribeList: [SmartDeviceCoreSDK.A4xUserVipPlanItemModel]? = nil, protectionMessage: Swift.String? = nil, lastTierName: Swift.String? = nil, product: SmartDeviceCoreSDK.A4xUserVipModel.A4xUserProductModel? = nil, additionalTierInfo: SmartDeviceCoreSDK.A4xUserVipBirdAddOnPackageListModel? = nil)
@@ -3597,17 +3611,17 @@ public struct A4xUserVipModel : Swift.Codable {
   public static func TestDemo() -> SmartDeviceCoreSDK.A4xUserVipModel
   public struct A4xUserProductModel : Swift.Codable {
     public var month: Swift.Int?
-    public func encode(to encoder: Swift.Encoder) throws
-    public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
   }
   public struct A4xUserRecommendProductModel : Swift.Codable {
     public var productId: Swift.Int?
     public var maxDeviceNum: Swift.Int?
-    public func encode(to encoder: Swift.Encoder) throws
-    public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
   }
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc public enum A4xSourceFrom : Swift.Int {
   case motion = 1
@@ -3670,8 +3684,8 @@ public struct A4xUserVipModel : Swift.Codable {
   @objc public var doorbellTags: [Swift.String]?
   @objc public var deviceCallEventTag: Swift.String?
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc @objcMembers public class A4xVideoLibraryFilterModel : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(onlyDisplayZonePointsources: Swift.Dictionary<Swift.String, Swift.String>? = [:], saveZonePointsources: Swift.Dictionary<Swift.String, [Swift.Int]>? = [:], fromType: Swift.Int = 0, otherType: Swift.Int = 0, videoTag: Swift.Int = 0, videoEventKey: Swift.String? = nil)
@@ -3703,16 +3717,16 @@ public struct A4xUserVipModel : Swift.Codable {
   @objc public func save()
   @objc public static func clear()
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc @objcMembers public class VideoTimeModelResponse : ObjectiveC.NSObject, Swift.Codable {
   @objc public var videoSlices: [SmartDeviceCoreSDK.VideoTimeModel]?
   @objc public var earliestVideoSlice: SmartDeviceCoreSDK.VideoTimeModel?
   @objc public init(videoSlices: [SmartDeviceCoreSDK.VideoTimeModel]? = nil, earliestVideoSlice: SmartDeviceCoreSDK.VideoTimeModel? = nil)
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc @objcMembers public class VideoTimeModel : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(start: Swift.Int64 = 0, end: Swift.Int64 = 0)
@@ -3721,8 +3735,8 @@ public struct A4xUserVipModel : Swift.Codable {
   public static func == (lhs: SmartDeviceCoreSDK.VideoTimeModel, rhs: SmartDeviceCoreSDK.VideoTimeModel) -> Swift.Bool
   @objc public func log() -> Swift.String
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc @objcMembers public class CustomParam : ObjectiveC.NSObject {
   @objc public init(verifyDormancyPlan: Swift.Bool = true, isAPMode: Swift.Bool = false, resolution: Swift.String? = nil, apToken: Swift.String? = nil, autoResolutionEnable: Swift.Bool = false, live_player_type: Swift.String? = nil, videoScale: Swift.Int, playerNumber: Swift.Int, lookWhite: Swift.Bool)
@@ -3747,9 +3761,9 @@ public struct A4xUserVipModel : Swift.Codable {
   @objc var zoomEnable: Swift.Bool { get set }
   @objc var isRecord: Swift.Bool { get set }
   @objc var videoSize: CoreFoundation.CGSize { get }
-  @objc var liveAllStateProtocol: SmartDeviceCoreSDK.LiveAllStateProtocol? { get set }
+  @objc var liveAllStateProtocol: (any SmartDeviceCoreSDK.LiveAllStateProtocol)? { get set }
   @objc func startLive(customParam: [Swift.String : Any]?)
-  @objc func setListener(liveStateListener: SmartDeviceCoreSDK.ILiveStateListener)
+  @objc func setListener(liveStateListener: any SmartDeviceCoreSDK.ILiveStateListener)
   @objc func startRecord(path: Swift.String)
   @objc func stopRecord()
   @objc func screenShot(onSuccess: @escaping (_ _code: Swift.Int, _ msg: Swift.String, _ image: UIKit.UIImage?) -> Swift.Void, onError: @escaping SmartDeviceCoreSDK.onError)
@@ -3973,7 +3987,7 @@ public enum AuthorizationType {
 public struct AccessTokenPlugin : SmartDeviceCoreSDK.PluginType {
   public let tokenClosure: () -> Swift.String
   public init(tokenClosure: @escaping () -> Swift.String)
-  public func prepare(_ request: Foundation.URLRequest, target: SmartDeviceCoreSDK.TargetType) -> Foundation.URLRequest
+  public func prepare(_ request: Foundation.URLRequest, target: any SmartDeviceCoreSDK.TargetType) -> Foundation.URLRequest
 }
 @objc public protocol AccountChangeListener {
   @objc func onAccountInfoError(status: Swift.Int)
@@ -3981,23 +3995,23 @@ public struct AccessTokenPlugin : SmartDeviceCoreSDK.PluginType {
 public enum AFError : Swift.Error {
   public enum ParameterEncodingFailureReason {
     case missingURL
-    case jsonEncodingFailed(error: Swift.Error)
-    case propertyListEncodingFailed(error: Swift.Error)
+    case jsonEncodingFailed(error: any Swift.Error)
+    case propertyListEncodingFailed(error: any Swift.Error)
   }
   public enum MultipartEncodingFailureReason {
     case bodyPartURLInvalid(url: Foundation.URL)
     case bodyPartFilenameInvalid(in: Foundation.URL)
     case bodyPartFileNotReachable(at: Foundation.URL)
-    case bodyPartFileNotReachableWithError(atURL: Foundation.URL, error: Swift.Error)
+    case bodyPartFileNotReachableWithError(atURL: Foundation.URL, error: any Swift.Error)
     case bodyPartFileIsDirectory(at: Foundation.URL)
     case bodyPartFileSizeNotAvailable(at: Foundation.URL)
-    case bodyPartFileSizeQueryFailedWithError(forURL: Foundation.URL, error: Swift.Error)
+    case bodyPartFileSizeQueryFailedWithError(forURL: Foundation.URL, error: any Swift.Error)
     case bodyPartInputStreamCreationFailed(for: Foundation.URL)
     case outputStreamCreationFailed(for: Foundation.URL)
     case outputStreamFileAlreadyExists(at: Foundation.URL)
     case outputStreamURLInvalid(url: Foundation.URL)
-    case outputStreamWriteFailed(error: Swift.Error)
-    case inputStreamReadFailed(error: Swift.Error)
+    case outputStreamWriteFailed(error: any Swift.Error)
+    case inputStreamReadFailed(error: any Swift.Error)
   }
   public enum ResponseValidationFailureReason {
     case dataFileNil
@@ -4012,10 +4026,10 @@ public enum AFError : Swift.Error {
     case inputFileNil
     case inputFileReadFailed(at: Foundation.URL)
     case stringSerializationFailed(encoding: Swift.String.Encoding)
-    case jsonSerializationFailed(error: Swift.Error)
-    case propertyListSerializationFailed(error: Swift.Error)
+    case jsonSerializationFailed(error: any Swift.Error)
+    case propertyListSerializationFailed(error: any Swift.Error)
   }
-  case invalidURL(url: SmartDeviceCoreSDK.URLConvertible)
+  case invalidURL(url: any SmartDeviceCoreSDK.URLConvertible)
   case parameterEncodingFailed(reason: SmartDeviceCoreSDK.AFError.ParameterEncodingFailureReason)
   case multipartEncodingFailed(reason: SmartDeviceCoreSDK.AFError.MultipartEncodingFailureReason)
   case responseValidationFailed(reason: SmartDeviceCoreSDK.AFError.ResponseValidationFailureReason)
@@ -4039,13 +4053,13 @@ extension SmartDeviceCoreSDK.AFError {
   }
 }
 extension SmartDeviceCoreSDK.AFError {
-  public var urlConvertible: SmartDeviceCoreSDK.URLConvertible? {
+  public var urlConvertible: (any SmartDeviceCoreSDK.URLConvertible)? {
     get
   }
   public var url: Foundation.URL? {
     get
   }
-  public var underlyingError: Swift.Error? {
+  public var underlyingError: (any Swift.Error)? {
     get
   }
   public var acceptableContentTypes: [Swift.String]? {
@@ -4090,32 +4104,32 @@ extension Foundation.URLRequest : SmartDeviceCoreSDK.URLRequestConvertible {
   public func asURLRequest() throws -> Foundation.URLRequest
 }
 extension Foundation.URLRequest {
-  public init(url: SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil) throws
+  public init(url: any SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil) throws
 }
 @discardableResult
-public func request(_ url: SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod = .get, parameters: SmartDeviceCoreSDK.Parameters? = nil, encoding: SmartDeviceCoreSDK.ParameterEncoding = URLEncoding.default, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil) -> SmartDeviceCoreSDK.DataRequest
+public func request(_ url: any SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod = .get, parameters: SmartDeviceCoreSDK.Parameters? = nil, encoding: any SmartDeviceCoreSDK.ParameterEncoding = URLEncoding.default, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil) -> SmartDeviceCoreSDK.DataRequest
 @discardableResult
-public func request(_ urlRequest: SmartDeviceCoreSDK.URLRequestConvertible) -> SmartDeviceCoreSDK.DataRequest
+public func request(_ urlRequest: any SmartDeviceCoreSDK.URLRequestConvertible) -> SmartDeviceCoreSDK.DataRequest
 @discardableResult
-public func download(_ url: SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod = .get, parameters: SmartDeviceCoreSDK.Parameters? = nil, encoding: SmartDeviceCoreSDK.ParameterEncoding = URLEncoding.default, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil, to destination: SmartDeviceCoreSDK.DownloadRequest.DownloadFileDestination? = nil) -> SmartDeviceCoreSDK.DownloadRequest
+public func download(_ url: any SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod = .get, parameters: SmartDeviceCoreSDK.Parameters? = nil, encoding: any SmartDeviceCoreSDK.ParameterEncoding = URLEncoding.default, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil, to destination: SmartDeviceCoreSDK.DownloadRequest.DownloadFileDestination? = nil) -> SmartDeviceCoreSDK.DownloadRequest
 @discardableResult
-public func download(_ urlRequest: SmartDeviceCoreSDK.URLRequestConvertible, to destination: SmartDeviceCoreSDK.DownloadRequest.DownloadFileDestination? = nil) -> SmartDeviceCoreSDK.DownloadRequest
+public func download(_ urlRequest: any SmartDeviceCoreSDK.URLRequestConvertible, to destination: SmartDeviceCoreSDK.DownloadRequest.DownloadFileDestination? = nil) -> SmartDeviceCoreSDK.DownloadRequest
 @discardableResult
 public func download(resumingWith resumeData: Foundation.Data, to destination: SmartDeviceCoreSDK.DownloadRequest.DownloadFileDestination? = nil) -> SmartDeviceCoreSDK.DownloadRequest
 @discardableResult
-public func upload(_ fileURL: Foundation.URL, to url: SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod = .post, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil) -> SmartDeviceCoreSDK.UploadRequest
+public func upload(_ fileURL: Foundation.URL, to url: any SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod = .post, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil) -> SmartDeviceCoreSDK.UploadRequest
 @discardableResult
-public func upload(_ fileURL: Foundation.URL, with urlRequest: SmartDeviceCoreSDK.URLRequestConvertible) -> SmartDeviceCoreSDK.UploadRequest
+public func upload(_ fileURL: Foundation.URL, with urlRequest: any SmartDeviceCoreSDK.URLRequestConvertible) -> SmartDeviceCoreSDK.UploadRequest
 @discardableResult
-public func upload(_ data: Foundation.Data, to url: SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod = .post, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil) -> SmartDeviceCoreSDK.UploadRequest
+public func upload(_ data: Foundation.Data, to url: any SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod = .post, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil) -> SmartDeviceCoreSDK.UploadRequest
 @discardableResult
-public func upload(_ data: Foundation.Data, with urlRequest: SmartDeviceCoreSDK.URLRequestConvertible) -> SmartDeviceCoreSDK.UploadRequest
+public func upload(_ data: Foundation.Data, with urlRequest: any SmartDeviceCoreSDK.URLRequestConvertible) -> SmartDeviceCoreSDK.UploadRequest
 @discardableResult
-public func upload(_ stream: Foundation.InputStream, to url: SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod = .post, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil) -> SmartDeviceCoreSDK.UploadRequest
+public func upload(_ stream: Foundation.InputStream, to url: any SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod = .post, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil) -> SmartDeviceCoreSDK.UploadRequest
 @discardableResult
-public func upload(_ stream: Foundation.InputStream, with urlRequest: SmartDeviceCoreSDK.URLRequestConvertible) -> SmartDeviceCoreSDK.UploadRequest
-public func upload(multipartFormData: @escaping (SmartDeviceCoreSDK.MultipartFormData) -> Swift.Void, usingThreshold encodingMemoryThreshold: Swift.UInt64 = SessionManager.multipartFormDataEncodingMemoryThreshold, to url: SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod = .post, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil, encodingCompletion: ((SmartDeviceCoreSDK.SessionManager.MultipartFormDataEncodingResult) -> Swift.Void)?)
-public func upload(multipartFormData: @escaping (SmartDeviceCoreSDK.MultipartFormData) -> Swift.Void, usingThreshold encodingMemoryThreshold: Swift.UInt64 = SessionManager.multipartFormDataEncodingMemoryThreshold, with urlRequest: SmartDeviceCoreSDK.URLRequestConvertible, encodingCompletion: ((SmartDeviceCoreSDK.SessionManager.MultipartFormDataEncodingResult) -> Swift.Void)?)
+public func upload(_ stream: Foundation.InputStream, with urlRequest: any SmartDeviceCoreSDK.URLRequestConvertible) -> SmartDeviceCoreSDK.UploadRequest
+public func upload(multipartFormData: @escaping (SmartDeviceCoreSDK.MultipartFormData) -> Swift.Void, usingThreshold encodingMemoryThreshold: Swift.UInt64 = SessionManager.multipartFormDataEncodingMemoryThreshold, to url: any SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod = .post, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil, encodingCompletion: ((SmartDeviceCoreSDK.SessionManager.MultipartFormDataEncodingResult) -> Swift.Void)?)
+public func upload(multipartFormData: @escaping (SmartDeviceCoreSDK.MultipartFormData) -> Swift.Void, usingThreshold encodingMemoryThreshold: Swift.UInt64 = SessionManager.multipartFormDataEncodingMemoryThreshold, with urlRequest: any SmartDeviceCoreSDK.URLRequestConvertible, encodingCompletion: ((SmartDeviceCoreSDK.SessionManager.MultipartFormDataEncodingResult) -> Swift.Void)?)
 @available(iOS 9.0, macOS 10.11, tvOS 9.0, *)
 @discardableResult
 public func stream(withHostName hostName: Swift.String, port: Swift.Int) -> SmartDeviceCoreSDK.StreamRequest
@@ -4124,7 +4138,7 @@ public func stream(withHostName hostName: Swift.String, port: Swift.Int) -> Smar
 public func stream(with netService: Foundation.NetService) -> SmartDeviceCoreSDK.StreamRequest
 public enum AlamofireResult<Value> {
   case success(Value)
-  case failure(Swift.Error)
+  case failure(any Swift.Error)
   public var isSuccess: Swift.Bool {
     get
   }
@@ -4134,7 +4148,7 @@ public enum AlamofireResult<Value> {
   public var value: Value? {
     get
   }
-  public var error: Swift.Error? {
+  public var error: (any Swift.Error)? {
     get
   }
 }
@@ -4153,23 +4167,23 @@ extension SmartDeviceCoreSDK.AlamofireResult {
   public func unwrap() throws -> Value
   public func map<T>(_ transform: (Value) -> T) -> SmartDeviceCoreSDK.AlamofireResult<T>
   public func flatMap<T>(_ transform: (Value) throws -> T) -> SmartDeviceCoreSDK.AlamofireResult<T>
-  public func mapError<T>(_ transform: (Swift.Error) -> T) -> SmartDeviceCoreSDK.AlamofireResult<Value> where T : Swift.Error
-  public func flatMapError<T>(_ transform: (Swift.Error) throws -> T) -> SmartDeviceCoreSDK.AlamofireResult<Value> where T : Swift.Error
+  public func mapError<T>(_ transform: (any Swift.Error) -> T) -> SmartDeviceCoreSDK.AlamofireResult<Value> where T : Swift.Error
+  public func flatMapError<T>(_ transform: (any Swift.Error) throws -> T) -> SmartDeviceCoreSDK.AlamofireResult<Value> where T : Swift.Error
   @discardableResult
   public func withValue(_ closure: (Value) throws -> Swift.Void) rethrows -> SmartDeviceCoreSDK.AlamofireResult<Value>
   @discardableResult
-  public func withError(_ closure: (Swift.Error) throws -> Swift.Void) rethrows -> SmartDeviceCoreSDK.AlamofireResult<Value>
+  public func withError(_ closure: (any Swift.Error) throws -> Swift.Void) rethrows -> SmartDeviceCoreSDK.AlamofireResult<Value>
   @discardableResult
   public func ifSuccess(_ closure: () throws -> Swift.Void) rethrows -> SmartDeviceCoreSDK.AlamofireResult<Value>
   @discardableResult
   public func ifFailure(_ closure: () throws -> Swift.Void) rethrows -> SmartDeviceCoreSDK.AlamofireResult<Value>
 }
 public struct AnyError : Swift.Error {
-  public let error: Swift.Error
-  public init(_ error: Swift.Error)
+  public let error: any Swift.Error
+  public init(_ error: any Swift.Error)
 }
 extension SmartDeviceCoreSDK.AnyError : SmartDeviceCoreSDK.ErrorConvertible {
-  public static func error(from error: Swift.Error) -> SmartDeviceCoreSDK.AnyError
+  public static func error(from error: any Swift.Error) -> SmartDeviceCoreSDK.AnyError
 }
 extension SmartDeviceCoreSDK.AnyError : Swift.CustomStringConvertible {
   public var description: Swift.String {
@@ -4211,8 +4225,8 @@ extension SmartDeviceCoreSDK.AnyError : Foundation.LocalizedError {
   @objc public var rollingDays: Swift.Int
   @objc public var storage: Swift.Int64
   @objc override dynamic public init()
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
   @objc deinit
 }
 public enum BaseAccountAPI : Swift.String {
@@ -4241,8 +4255,8 @@ public struct BaseAccountRequestModel : Swift.Codable {
   public var targetLanguage: Swift.String?
   public var language: Swift.String?
   public var country: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 extension SmartDeviceCoreSDK.BaseAccountModel : SmartDeviceCoreSDK.A4xNetTargetTypeProtocol {
   public var path: Swift.String {
@@ -4258,13 +4272,15 @@ extension SmartDeviceCoreSDK.BaseAccountModel : SmartDeviceCoreSDK.A4xNetTargetT
     get
   }
 }
-public protocol BaseAdapterProtocol {
-  func getLocalString(key: Swift.String, param: [Swift.String]) -> Swift.String
+@objc public protocol BaseAdapterProtocol {
+  @objc func getLocalString(key: Swift.String, param: [Swift.String]) -> Swift.String
+  @objc func vCommonLogError(_ closure: @autoclosure () -> Any?)
+  @objc func vLiveLog(level: SmartDeviceCoreSDK.XCGLoggerLevel, _ closure: @autoclosure () -> Any?)
+  @objc func clearResultFile(url: Foundation.URL)
+  @objc func makeToast(_ message: Swift.String?)
+}
+public protocol BaseLanguageProtocol {
   func updateBundle(language: SmartDeviceCoreSDK.A4xBaseAppLanguageType)
-  func vCommonLogError(_ closure: @autoclosure () -> Any?)
-  func vLiveLog(level: SmartDeviceCoreSDK.XCGLoggerLevel, _ closure: @autoclosure () -> Any?)
-  func clearResultFile(url: Foundation.URL)
-  func makeToast(_ message: Swift.String?)
 }
 @objc public enum TSMediaAssetExportSessionStatus : Swift.Int {
   case unknown
@@ -4283,7 +4299,7 @@ public protocol BaseAdapterProtocol {
   @objc func turnMp4Video(inputPath: Swift.String, outputPath: Swift.String) -> Swift.Bool
   @objc func ts2Mp4(inputPath: Swift.String, outputPath: Swift.String, complete: @escaping (SmartDeviceCoreSDK.TSMediaAssetExportSessionStatus, Swift.String) -> Swift.Void) -> Swift.Bool
 }
-public enum XCGLoggerLevel : Swift.Int {
+@objc public enum XCGLoggerLevel : Swift.Int {
   case verbose
   case debug
   case info
@@ -4323,7 +4339,7 @@ public enum XCGLoggerLevel : Swift.Int {
 @objc @_inheritsConvenienceInitializers @objcMembers public class BindCore : ObjectiveC.NSObject {
   @objc public class func getInstance() -> SmartDeviceCoreSDK.BindCore
   @objc override dynamic public init()
-  @objc public func setListener(bindStateListener: SmartDeviceCoreSDK.IBindtateListener)
+  @objc public func setListener(bindStateListener: any SmartDeviceCoreSDK.IBindtateListener)
   @objc public func discoverDevice(onDiscoverDevice: @escaping (_ model: SmartDeviceCoreSDK.BindDeviceModel) -> Swift.Void, onDiscoverError: @escaping (_ code: Swift.Int, _ msg: Swift.String?) -> Swift.Void)
   @objc public func stopDiscoverDevice()
   @objc public func startBind(ssid: Swift.String?, ssidPassword: Swift.String?, bindDeviceModel: SmartDeviceCoreSDK.BindDeviceModel?, type: SmartDeviceCoreSDK.BindType, onStepChange: @escaping (_ code: Swift.Int) -> Swift.Void, onGenarateQrCode: @escaping (_ qrCdoe: UIKit.UIImage?) -> Swift.Void, onSuccess: @escaping (_ code: Swift.Int, _ msg: Swift.String?, _ serialNumber: Swift.String?) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ msg: Swift.String?) -> Swift.Void)
@@ -4365,7 +4381,7 @@ public protocol BindDeviceViewModelProtocol : AnyObject {
   func onError(code: Swift.Int, msg: Swift.String?)
 }
 public class BindDeviceViewModel {
-  weak public var `protocol`: SmartDeviceCoreSDK.BindDeviceViewModelProtocol?
+  weak public var `protocol`: (any SmartDeviceCoreSDK.BindDeviceViewModelProtocol)?
   public var localHistoryWifiDatas: [Swift.String : [SmartDeviceCoreSDK.BindHistoryWifiModel]] {
     get
     set
@@ -4406,8 +4422,8 @@ public struct BindHistoryWifiModel : Swift.Codable {
     set
   }
   public func hisWifiDataList(userId: Swift.String) -> [SmartDeviceCoreSDK.BindHistoryWifiModel]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @_inheritsConvenienceInitializers @objc open class BindNetworkAPI : ObjectiveC.NSObject {
   @objc public static let shared: SmartDeviceCoreSDK.BindNetworkAPI
@@ -4487,7 +4503,7 @@ public enum BleResultEnum : Swift.String {
   @objc optional func bleDeinit()
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers open class BluetoothManager : ObjectiveC.NSObject, SmartDeviceCoreSDK.BluetoothManagerInterface {
-  @objc weak public var `protocol`: SmartDeviceCoreSDK.BluetoothManagerProtocol?
+  @objc weak public var `protocol`: (any SmartDeviceCoreSDK.BluetoothManagerProtocol)?
   @objc public static var share: SmartDeviceCoreSDK.BluetoothManager
   @objc deinit
   @objc public func isBlePermissionGranted() -> Swift.Bool
@@ -4503,17 +4519,17 @@ extension SmartDeviceCoreSDK.BluetoothManager : CoreBluetooth.CBCentralManagerDe
   @objc dynamic public func centralManagerDidUpdateState(_ central: CoreBluetooth.CBCentralManager)
   @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didDiscover peripheral: CoreBluetooth.CBPeripheral, advertisementData: [Swift.String : Any], rssi RSSI: Foundation.NSNumber)
   @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didConnect peripheral: CoreBluetooth.CBPeripheral)
-  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didFailToConnect peripheral: CoreBluetooth.CBPeripheral, error: Swift.Error?)
-  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didDisconnectPeripheral peripheral: CoreBluetooth.CBPeripheral, error: Swift.Error?)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didFailToConnect peripheral: CoreBluetooth.CBPeripheral, error: (any Swift.Error)?)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didDisconnectPeripheral peripheral: CoreBluetooth.CBPeripheral, error: (any Swift.Error)?)
   @objc dynamic public func peripheralDidUpdateName(_ peripheral: CoreBluetooth.CBPeripheral)
-  @objc dynamic public func peripheralDidUpdateRSSI(_ peripheral: CoreBluetooth.CBPeripheral, error: Swift.Error?)
+  @objc dynamic public func peripheralDidUpdateRSSI(_ peripheral: CoreBluetooth.CBPeripheral, error: (any Swift.Error)?)
 }
 extension SmartDeviceCoreSDK.BluetoothManager : CoreBluetooth.CBPeripheralDelegate {
-  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverServices error: Swift.Error?)
-  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverCharacteristicsFor service: CoreBluetooth.CBService, error: Swift.Error?)
-  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didWriteValueFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
-  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateValueFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
-  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateNotificationStateFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverServices error: (any Swift.Error)?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverCharacteristicsFor service: CoreBluetooth.CBService, error: (any Swift.Error)?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didWriteValueFor characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateValueFor characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateNotificationStateFor characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
 }
 @objc @_inheritsConvenienceInitializers public class BluetoothModel : ObjectiveC.NSObject {
   public var codeRes: Swift.Int
@@ -4532,8 +4548,8 @@ public protocol Cancellable {
   public var desId: Swift.String?
   public func toDictionary() -> [Swift.String : Swift.String]?
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 public enum UpdateReIdType {
   case deleteLabelImages
@@ -4560,8 +4576,8 @@ public enum UpdateReIdType {
   public var deleted: Swift.Bool?
   public var lastModifyTime: Swift.Int64?
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc @objcMembers public class A4xReIdImagesModel : ObjectiveC.NSObject, Swift.Codable {
   public init(reIdImageid: Swift.String? = nil, url: Swift.String? = nil, timestamp: Swift.Int64? = nil)
@@ -4569,16 +4585,16 @@ public enum UpdateReIdType {
   @objc public var url: Swift.String?
   public var timestamp: Swift.Int64?
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xReIdPushModel : Swift.Codable {
   public init(mark: Swift.String? = nil, eventObject: Swift.String? = nil, checked: Swift.Bool? = nil)
   public var mark: Swift.String?
   public var eventObject: Swift.String?
   public var checked: Swift.Bool?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @_inheritsConvenienceInitializers @objc public class CarRecognizeCore : ObjectiveC.NSObject {
   @objc public class func getInstance() -> SmartDeviceCoreSDK.CarRecognizeCore
@@ -4601,9 +4617,9 @@ public let NULL_DOUBLE: Swift.Double
 public let NULL_INT64: Swift.Int64
 public let NULL_BOOL: Swift.Bool
 final public class CredentialsPlugin : SmartDeviceCoreSDK.PluginType {
-  public typealias CredentialClosure = (SmartDeviceCoreSDK.TargetType) -> Foundation.URLCredential?
+  public typealias CredentialClosure = (any SmartDeviceCoreSDK.TargetType) -> Foundation.URLCredential?
   public init(credentialsClosure: @escaping SmartDeviceCoreSDK.CredentialsPlugin.CredentialClosure)
-  final public func willSend(_ request: SmartDeviceCoreSDK.RequestType, target: SmartDeviceCoreSDK.TargetType)
+  final public func willSend(_ request: any SmartDeviceCoreSDK.RequestType, target: any SmartDeviceCoreSDK.TargetType)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class DeviceActivityZoneCore : ObjectiveC.NSObject {
@@ -4630,8 +4646,8 @@ final public class CredentialsPlugin : SmartDeviceCoreSDK.PluginType {
   public var aiAnalyzeSwitch: Swift.Bool
   public var aiNotifySwitch: Swift.Bool
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers public class DeviceAICore : ObjectiveC.NSObject {
   @objc public class func getInstance() -> SmartDeviceCoreSDK.DeviceAICore
@@ -4668,20 +4684,20 @@ public enum A4xVideoCellStyle : Swift.Int {
   @objc public var presetId: Swift.Int
   @objc public var coordinate: Swift.String?
   @objc public var serialNumber: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
   @objc deinit
 }
 public struct A4xPresetModelResponse : Swift.Codable {
   public var list: [SmartDeviceCoreSDK.A4xPresetModel]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct NotificationConfigBeanResponseModel : Swift.Codable {
   public init(list: [SmartDeviceCoreSDK.NotificationConfigBean]? = nil)
   public var list: [SmartDeviceCoreSDK.NotificationConfigBean]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc @objcMembers public class NotificationConfigBean : ObjectiveC.NSObject, Swift.Codable {
   public init(notificationId: Swift.Int = NULL_INT, userId: Swift.Int = NULL_INT, serialNumber: Swift.String? = nil, eventObjects: Swift.String? = nil, name: Swift.String? = nil, choice: Swift.Bool? = nil, subEvent: [SmartDeviceCoreSDK.NotificationConfigBean]? = nil)
@@ -4692,8 +4708,8 @@ public struct NotificationConfigBeanResponseModel : Swift.Codable {
   @objc public var name: Swift.String?
   public var choice: Swift.Bool?
   @objc public var subEvent: [SmartDeviceCoreSDK.NotificationConfigBean]?
-  required public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   public func events() -> [SmartDeviceCoreSDK.A4xNotificationSettingEnum]
   @objc deinit
 }
@@ -4760,17 +4776,17 @@ public enum A4xDeviceRole : Swift.CaseIterable {
     get
   }
 }
-public enum SmartDeviceState {
+public enum SmartDeviceState : Swift.Int {
   case online
-  case offline
   case sleep
+  case offline
   case lowPower
   public var stringValue: Swift.String {
     get
   }
-  public static func == (a: SmartDeviceCoreSDK.SmartDeviceState, b: SmartDeviceCoreSDK.SmartDeviceState) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
     get
   }
 }
@@ -4819,8 +4835,8 @@ public enum A4xDevcieUpgradeStatus {
   @objc public var whiteLight: Swift.Bool
   @objc public var devicePersonDetect: Swift.Bool
   @objc public var supportMotionTrack: Swift.Bool
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
   @objc deinit
 }
 public enum A4xDeviceAudioState : Swift.String {
@@ -4852,8 +4868,8 @@ public enum A4xDeviceAudioState : Swift.String {
   @objc public var total: Swift.Float
   @objc public var used: Swift.Float
   @objc public func state() -> SmartDeviceCoreSDK.A4xDeviceSDState
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
   @objc deinit
 }
 public let NULL_INT_SUPPORT_STATUS: Swift.Int
@@ -4884,8 +4900,8 @@ public let NULL_INT_SUPPORT_STATUS: Swift.Int
   @objc public var supportStarlightSensor: Swift.Bool
   @objc public var supportMagicPix: Swift.Bool
   @objc public var supportSdCardCooldown: Swift.Int
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
   @objc deinit
 }
 @objc @objcMembers public class A4xDeviceResolutionDesModel : ObjectiveC.NSObject, Swift.Codable {
@@ -4894,23 +4910,23 @@ public let NULL_INT_SUPPORT_STATUS: Swift.Int
   @objc public var resolutionLevel: Swift.String?
   @objc public var resolutionDesc: Swift.String?
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xDeviceZendeskModel : Swift.Codable {
   public init(modelNo: Swift.String? = nil, zendeskpath: Swift.String? = nil)
   public var modelNo: Swift.String?
   public var zendeskpath: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xDeviceSleepPlanStatusModel : Swift.Codable {
   public init(result: Swift.String? = nil, msg: Swift.String? = nil, data: Swift.Int? = nil)
   public var result: Swift.String?
   public var msg: Swift.String?
   public var data: Swift.Int?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc public class DeviceSleepPlanBean : ObjectiveC.NSObject, Swift.Codable {
   public init(sleepPlanID: Swift.Int? = NULL_INT, userId: Swift.Int? = NULL_INT, serialNumber: Swift.String? = nil, period: Swift.Int? = NULL_INT, startHour: Swift.Int? = NULL_INT, startMinute: Swift.Int? = NULL_INT, endHour: Swift.Int? = NULL_INT, endMinute: Swift.Int? = NULL_INT, planStartDay: [Swift.Int]? = nil, planDay: Swift.Int? = NULL_INT, startTime: Swift.Int? = NULL_INT, endTime: Swift.Int? = NULL_INT)
@@ -4926,8 +4942,8 @@ public struct A4xDeviceSleepPlanStatusModel : Swift.Codable {
   public var planDay: Swift.Int?
   public var startTime: Swift.Int?
   public var endTime: Swift.Int?
-  required public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
 public struct A4xDeviceWebRtcIceServerDataModel : Swift.Codable {
@@ -4935,8 +4951,8 @@ public struct A4xDeviceWebRtcIceServerDataModel : Swift.Codable {
   public var url: Swift.String?
   public var username: Swift.String?
   public var credential: Swift.String?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xDeviceWebRtcDataModel : Swift.Codable {
   public init(deviceId: Swift.String? = nil, traceId: Swift.String? = nil, groupId: Swift.String? = nil, role: Swift.String? = nil, id: Swift.String? = nil, signalServer: Swift.String? = nil, sign: Swift.String? = nil, time: Swift.Int? = nil, signalPingInterval: Swift.Int? = nil, appStopLiveTimeout: Swift.Int? = nil, expirationTime: Swift.Double? = nil, iceServer: [SmartDeviceCoreSDK.A4xDeviceWebRtcIceServerDataModel]? = nil)
@@ -4953,13 +4969,13 @@ public struct A4xDeviceWebRtcDataModel : Swift.Codable {
   public var expirationTime: Swift.Double?
   public var iceServer: [SmartDeviceCoreSDK.A4xDeviceWebRtcIceServerDataModel]?
   public func newCopy(model: SmartDeviceCoreSDK.A4xDeviceWebRtcDataModel) throws -> SmartDeviceCoreSDK.A4xDeviceWebRtcDataModel
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xBaseDeviceListModel : Swift.Codable {
   public var list: [SmartDeviceCoreSDK.DeviceBean]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc public enum A4xDeviceAPModeType : Swift.Int, Swift.Codable {
   case WiFi = 0
@@ -4984,8 +5000,8 @@ public class A4xDeviceListModel : Swift.Codable {
   public func alldevices(modeType: SmartDeviceCoreSDK.A4xDeviceAPModeType = .WiFi) -> [SmartDeviceCoreSDK.DeviceBean]?
   public func allDeviceWebrtcTicketModels() -> [SmartDeviceCoreSDK.A4xDeviceWebRtcDataModel]?
   @objc deinit
-  public func encode(to encoder: Swift.Encoder) throws
-  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc @objcMembers public class DeviceConfigBean : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(needMotion: Swift.Int = NULL_INT, motionSensitivity: Swift.Int = NULL_INT, motionTrack: Swift.Int = NULL_INT, motionTrackMode: Swift.Int = NULL_INT, needNightVision: Swift.Int = NULL_INT, nightVisionSensitivity: Swift.Int = NULL_INT, nightThresholdLevel: Swift.Int = NULL_INT, nightVisionMode: Swift.Int = NULL_INT, needAlarm: Swift.Int = NULL_INT, alarmSeconds: Swift.Int = NULL_INT, needVideo: Swift.Int = NULL_INT, videoSeconds: Swift.Int = NULL_INT, deviceLanguage: Swift.String? = nil, timeZoneArea: Swift.String? = nil, whiteLightScintillation: Swift.Int = NULL_INT, voiceVolumeSwitch: Swift.Int = NULL_INT, voiceVolume: Swift.Int = NULL_INT, alarmVolume: Swift.Int = NULL_INT, antiflickerSwitch: Swift.Int = NULL_INT, antiflicker: Swift.Int = NULL_INT, mirrorFlip: Swift.Int = NULL_INT, recLamp: Swift.Int = NULL_INT, deviceSupportLanguage: [Swift.String]? = nil)
@@ -5012,12 +5028,12 @@ public class A4xDeviceListModel : Swift.Codable {
   @objc public var mirrorFlip: Swift.Int
   @objc public var recLamp: Swift.Int
   @objc public var deviceSupportLanguage: [Swift.String]?
-  required public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
 @objc @objcMembers public class DeviceBean : ObjectiveC.NSObject, Swift.Codable {
-  public init(serialNumber: Swift.String? = nil, deviceName: Swift.String? = nil, modelNo: Swift.String? = nil, displayModelNo: Swift.String? = nil, serialNo: Swift.String? = nil, macAddress: Swift.String? = nil, batteryLevel: Swift.Int = 0, admin: Swift.Int? = nil, awake: Swift.Int = 1, signalStrength: Swift.Int = 0, locationId: Swift.Int = NULL_INT, locationName: Swift.String? = nil, adminId: Swift.Int64 = Int64(NULL_INT), userId: Swift.Int64 = Int64(NULL_INT), online: Swift.Int = 1, offlineTime: Swift.Double? = nil, deviceStatus: Swift.Int = 0, dormancyPlanSwitch: Swift.Int? = nil, deviceDormancyMessage: Swift.String? = nil, sleepPlan: Swift.Int = 0, networkName: Swift.String? = nil, devicePersonDetect: Swift.Int? = nil, mirrorFlip: Swift.Int = 0, needVideo: Swift.Int? = nil, videoSeconds: Swift.Int? = nil, needAlarm: Swift.Int? = nil, alarmSeconds: Swift.Int? = nil, needNightVision: Swift.Int? = nil, nightVisionSensitivity: Swift.Int? = nil, nightThresholdLevel: Swift.Int? = nil, whiteLightScintillation: Swift.Int? = nil, nightVisionMode: Swift.Int? = nil, mcuNumber: Swift.String? = nil, firmwareId: Swift.String? = nil, adminName: Swift.String? = nil, adminEmail: Swift.String? = nil, adminPhone: Swift.String? = nil, activatedTime: Swift.Double? = nil, activated: Swift.Int? = nil, role: Swift.Int? = nil, statusCode: Swift.Int? = nil, upgradeStatus: Swift.Int = 0, upgradeProgress: Swift.Float = -1, userSn: Swift.String? = nil, isCharging: Swift.Int = 0, newestFirmwareId: Swift.String? = nil, deviceLanguage: Swift.String? = nil, timeZone: Swift.String? = nil, presetLocations: [SmartDeviceCoreSDK.A4xPresetModel]? = nil, wifiChannel: Swift.Int? = nil, ip: Swift.String? = nil, resolution: Swift.String? = nil, pushIgnored: Swift.Bool? = nil, sdCard: SmartDeviceCoreSDK.A4xSDCardModel? = nil, deviceContrl: SmartDeviceCoreSDK.A4xDeviceControlModel? = nil, packagePush: Swift.Int? = nil, deviceSupportLanguage: [Swift.String]? = nil, antiflickerSupport: Swift.Bool? = nil, antiflickerSwitch: Swift.Int? = nil, antiflicker: Swift.Int? = nil, recLamp: Swift.Int? = nil, voiceVolumeSwitch: Swift.Int? = nil, voiceVolume: Swift.Int? = nil, alarmVolume: Swift.Int? = nil, needMotion: Swift.Int? = nil, motionSensitivity: Swift.Int? = nil, personDetect: Swift.Int? = nil, motionTrack: Swift.Int? = nil, motionTrackMode: Swift.Int? = nil, cryDetect: Swift.Int? = nil, cryDetectLevel: Swift.Int? = nil, deviceSupport: SmartDeviceCoreSDK.A4xDeviceSupportModel? = nil, icon: Swift.String? = nil, smallIcon: Swift.String? = nil, displayGitSha: Swift.String? = nil, quantityCharge: Swift.Bool? = nil, zonePointListCount: Swift.Int? = nil, zonePointList: [SmartDeviceCoreSDK.ZoneBean]? = nil, notificationConfigList: [SmartDeviceCoreSDK.NotificationConfigBean]? = nil, list: [SmartDeviceCoreSDK.A4xAnalysisResponse]? = nil, birdAnalyzeSwitch: Swift.Bool = false, birdNotifySwitch: Swift.Bool = false, showCodecChange: Swift.Bool? = nil, codecSupported: Swift.Bool? = nil, defaultCodec: Swift.String? = nil, codec: Swift.String? = nil, firmwareSupported: Swift.Bool? = nil, deviceVipLevel: Swift.Int = 0, cooldown: SmartDeviceCoreSDK.A4xCooldownModel? = nil, apModeModel: SmartDeviceCoreSDK.A4xAPModeModel? = nil, apModeType: SmartDeviceCoreSDK.A4xDeviceAPModeType? = .WiFi, apModeUpload: Swift.Int? = nil, apModeDelState: Swift.Int? = nil, settings: Swift.String? = nil, liveAudioToggleOn: Swift.Bool? = nil, bindDeviceModel: SmartDeviceCoreSDK.BindDeviceModel? = nil, apInfo: Swift.String? = nil, modelCategory: Swift.Int? = nil, chargingMode: Swift.Int? = nil, wiredMacAddress: Swift.String? = nil, alarmWhenRemoveToggleOn: Swift.Bool? = nil, supportBirdVip: Swift.Bool = NULL_BOOL, deviceNetType: Swift.Int = 0, doorBellRingKey: Swift.Int? = nil, supportDoorBellRingKey: Swift.Array<SmartDeviceCoreSDK.A4xSupportDoorBellRingModel>? = nil, motionSensitivityOptionList: [Swift.Int]? = nil, deviceCallToggleOn: Swift.Bool? = nil, mechanicalDingDongSwitch: Swift.Int? = nil, mechanicalDingDongDuration: Swift.Int? = nil, chargeAutoPowerOnSwitch: Swift.Int? = nil, chargeAutoPowerOnCapacityOptions: [Swift.Int]? = nil, chargeAutoPowerOnCapacity: Swift.Int? = nil, otaAutoUpgrade: Swift.Bool? = nil, deviceInVip: Swift.Bool = NULL_BOOL)
+  public init(serialNumber: Swift.String? = nil, deviceName: Swift.String? = nil, modelNo: Swift.String? = nil, displayModelNo: Swift.String? = nil, serialNo: Swift.String? = nil, macAddress: Swift.String? = nil, batteryLevel: Swift.Int = 0, admin: Swift.Int? = nil, awake: Swift.Int = 1, signalStrength: Swift.Int = NULL_INT, locationId: Swift.Int = NULL_INT, locationName: Swift.String? = nil, adminId: Swift.Int64 = Int64(NULL_INT), userId: Swift.Int64 = Int64(NULL_INT), online: Swift.Int = 1, offlineTime: Swift.Double? = nil, deviceStatus: Swift.Int = 0, dormancyPlanSwitch: Swift.Int? = nil, deviceDormancyMessage: Swift.String? = nil, sleepPlan: Swift.Int = 0, networkName: Swift.String? = nil, devicePersonDetect: Swift.Int? = nil, mirrorFlip: Swift.Int? = nil, needVideo: Swift.Int? = nil, videoSeconds: Swift.Int? = nil, needAlarm: Swift.Int? = nil, alarmSeconds: Swift.Int? = nil, needNightVision: Swift.Int? = nil, nightVisionSensitivity: Swift.Int? = nil, nightThresholdLevel: Swift.Int? = nil, whiteLightScintillation: Swift.Int? = nil, nightVisionMode: Swift.Int? = nil, mcuNumber: Swift.String? = nil, firmwareId: Swift.String? = nil, adminName: Swift.String? = nil, adminEmail: Swift.String? = nil, adminPhone: Swift.String? = nil, activatedTime: Swift.Double? = nil, activated: Swift.Int? = nil, role: Swift.Int? = nil, statusCode: Swift.Int? = nil, upgradeStatus: Swift.Int = 0, upgradeProgress: Swift.Float = -1, userSn: Swift.String? = nil, isCharging: Swift.Int = 0, newestFirmwareId: Swift.String? = nil, deviceLanguage: Swift.String? = nil, timeZone: Swift.String? = nil, presetLocations: [SmartDeviceCoreSDK.A4xPresetModel]? = nil, wifiChannel: Swift.Int? = nil, ip: Swift.String? = nil, resolution: Swift.String? = nil, pushIgnored: Swift.Bool? = nil, sdCard: SmartDeviceCoreSDK.A4xSDCardModel? = nil, deviceContrl: SmartDeviceCoreSDK.A4xDeviceControlModel? = nil, packagePush: Swift.Int? = nil, deviceSupportLanguage: [Swift.String]? = nil, antiflickerSupport: Swift.Bool? = nil, antiflickerSwitch: Swift.Int? = nil, antiflicker: Swift.Int? = nil, recLamp: Swift.Int? = nil, voiceVolumeSwitch: Swift.Int? = nil, voiceVolume: Swift.Int? = nil, alarmVolume: Swift.Int? = nil, needMotion: Swift.Int? = nil, motionSensitivity: Swift.Int? = nil, personDetect: Swift.Int? = nil, motionTrack: Swift.Int? = nil, motionTrackMode: Swift.Int? = nil, cryDetect: Swift.Int? = nil, cryDetectLevel: Swift.Int? = nil, deviceSupport: SmartDeviceCoreSDK.A4xDeviceSupportModel? = nil, icon: Swift.String? = nil, smallIcon: Swift.String? = nil, displayGitSha: Swift.String? = nil, quantityCharge: Swift.Bool? = nil, zonePointListCount: Swift.Int? = nil, zonePointList: [SmartDeviceCoreSDK.ZoneBean]? = nil, notificationConfigList: [SmartDeviceCoreSDK.NotificationConfigBean]? = nil, list: [SmartDeviceCoreSDK.A4xAnalysisResponse]? = nil, birdAnalyzeSwitch: Swift.Bool = false, birdNotifySwitch: Swift.Bool = false, showCodecChange: Swift.Bool? = nil, codecSupported: Swift.Bool? = nil, defaultCodec: Swift.String? = nil, codec: Swift.String? = nil, firmwareSupported: Swift.Bool? = nil, deviceVipLevel: Swift.Int = 0, cooldown: SmartDeviceCoreSDK.A4xCooldownModel? = nil, apModeModel: SmartDeviceCoreSDK.A4xAPModeModel? = nil, apModeType: SmartDeviceCoreSDK.A4xDeviceAPModeType? = .WiFi, apModeUpload: Swift.Int? = nil, apModeDelState: Swift.Int? = nil, settings: Swift.String? = nil, liveAudioToggleOn: Swift.Bool? = nil, bindDeviceModel: SmartDeviceCoreSDK.BindDeviceModel? = nil, apInfo: Swift.String? = nil, modelCategory: Swift.Int? = nil, chargingMode: Swift.Int? = nil, wiredMacAddress: Swift.String? = nil, alarmWhenRemoveToggleOn: Swift.Bool? = nil, supportBirdVip: Swift.Bool = NULL_BOOL, deviceNetType: Swift.Int = 0, doorBellRingKey: Swift.Int? = nil, supportDoorBellRingKey: Swift.Array<SmartDeviceCoreSDK.A4xSupportDoorBellRingModel>? = nil, motionSensitivityOptionList: [Swift.Int]? = nil, deviceCallToggleOn: Swift.Bool? = nil, mechanicalDingDongSwitch: Swift.Int? = nil, mechanicalDingDongDuration: Swift.Int? = nil, chargeAutoPowerOnSwitch: Swift.Int? = nil, chargeAutoPowerOnCapacityOptions: [Swift.Int]? = nil, chargeAutoPowerOnCapacity: Swift.Int? = nil, otaAutoUpgrade: Swift.Bool? = nil, deviceInVip: Swift.Bool = NULL_BOOL, customerId: Swift.String? = nil, enableLiveChat: Swift.Bool = NULL_BOOL)
   @objc override dynamic public func copy() -> Any
   @objc override dynamic public func mutableCopy() -> Any
   @objc public var serialNumber: Swift.String?
@@ -5136,8 +5152,10 @@ public class A4xDeviceListModel : Swift.Codable {
   public var otaAutoUpgrade: Swift.Bool?
   @objc public var deviceInVip: Swift.Bool
   @objc public var deviceConfigBean: SmartDeviceCoreSDK.DeviceConfigBean?
-  required public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
+  @objc public var customerId: Swift.String?
+  @objc public var enableLiveChat: Swift.Bool
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class A4xDeviceSleepModel : ObjectiveC.NSObject {
@@ -5148,31 +5166,31 @@ public struct A4xMergePushModel : Swift.Codable {
   public init(messageMergeSwitch: Swift.Int? = nil, userId: Swift.Int? = nil)
   public var messageMergeSwitch: Swift.Int?
   public var userId: Swift.Int?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xDeviceFormOptionsModel : Swift.Codable {
   public var deviceFormOptions: SmartDeviceCoreSDK.A4xDeviceFormOptionsSubModel
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xDeviceFormOptionsSubModel : Swift.Codable {
   public var cooldown_in_s: [SmartDeviceCoreSDK.A4xDeviceTimeIntervalModel]?
   public var videoSeconds: [SmartDeviceCoreSDK.A4xDeviceTimeIntervalModel]?
   public var cooldownUserEnable: [SmartDeviceCoreSDK.A4xDeviceCooldownUserEnable]?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xDeviceCooldownUserEnable : Swift.Codable {
   public var value: Swift.Bool?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xDeviceTimeIntervalModel : Swift.Codable {
   public var value: Swift.Int?
   public var enabled: Swift.Bool?
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @objc @objcMembers public class A4xCooldownModel : ObjectiveC.NSObject, Swift.Codable {
   @objc public init(closeValue: Swift.Int = NULL_INT, notCloseValues: [Swift.Int]? = nil, deviceSupport: Swift.Bool = NULL_BOOL, userEnable: Swift.Bool = NULL_BOOL, value: Swift.Int = NULL_INT)
@@ -5181,8 +5199,8 @@ public struct A4xDeviceTimeIntervalModel : Swift.Codable {
   @objc public var deviceSupport: Swift.Bool
   @objc public var userEnable: Swift.Bool
   @objc public var value: Swift.Int
-  required public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
 @objc @objcMembers public class A4xAPModeModel : ObjectiveC.NSObject, Swift.Codable {
@@ -5191,14 +5209,14 @@ public struct A4xDeviceTimeIntervalModel : Swift.Codable {
   @objc public var liveSpeakerVolume: Swift.Int
   @objc public var recordingAudioToggleOn: Swift.Bool
   @objc public var videoSecondsValues: [Swift.Int]?
-  required public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
 @objc public class DeviceCoverImageModel : ObjectiveC.NSObject, Swift.Codable {
   public init(serialNumber: Swift.String? = nil, lastPushTime: Swift.Int64 = Int64(NULL_INT), lastPushImageUrl: Swift.String? = nil)
-  required public init(from decoder: Swift.Decoder) throws
-  public func encode(to encoder: Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers public class DeviceLocationCore : ObjectiveC.NSObject {
@@ -5556,8 +5574,8 @@ public typealias Image = SmartDeviceCoreSDK.ImageType
   @objc public func setLanguage(_ language: Swift.String) -> Self
   @objc public func setCountryNo(_ countryNo: Swift.String) -> Self
   @objc public func setIsDebug(_ isDebug: Swift.Bool) -> Self
-  @objc public func setLoggerDelegate(_ loggerDelegate: SmartDeviceCoreSDK.LoggerDelegate?) -> Self
-  @objc public func setAccountChangeListener(_ accountListener: SmartDeviceCoreSDK.AccountChangeListener?) -> Self
+  @objc public func setLoggerDelegate(_ loggerDelegate: (any SmartDeviceCoreSDK.LoggerDelegate)?) -> Self
+  @objc public func setAccountChangeListener(_ accountListener: (any SmartDeviceCoreSDK.AccountChangeListener)?) -> Self
   @objc public func build() -> SmartDeviceCoreSDK.InitSDKConfig
   @objc override dynamic public init()
   @objc deinit
@@ -5568,8 +5586,8 @@ public typealias Image = SmartDeviceCoreSDK.ImageType
   @objc public var language: Swift.String?
   @objc public var countryNo: Swift.String?
   @objc public var isDebug: Swift.Bool
-  @objc public var loggerDelegate: SmartDeviceCoreSDK.LoggerDelegate?
-  @objc public var accountChangeListener: SmartDeviceCoreSDK.AccountChangeListener?
+  @objc public var loggerDelegate: (any SmartDeviceCoreSDK.LoggerDelegate)?
+  @objc public var accountChangeListener: (any SmartDeviceCoreSDK.AccountChangeListener)?
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class LibraryCore : ObjectiveC.NSObject {
@@ -5585,6 +5603,7 @@ public typealias Image = SmartDeviceCoreSDK.ImageType
   @objc public func setMarkStatus(marked: Swift.Int, traceId: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ res: Swift.Bool) -> Swift.Void, onFail: @escaping (_ code: Swift.Int, _ msg: Swift.String) -> Swift.Void)
   @objc public func setReadStatus(missing: Swift.Int, traceId: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ res: Swift.Bool) -> Swift.Void, onFail: @escaping (_ code: Swift.Int, _ msg: Swift.String) -> Swift.Void)
   @objc public func loadSingleLibraryInfo(msgId: Swift.String, comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, SmartDeviceCoreSDK.RecordBean?) -> Swift.Void)
+  @objc public func queryUserActivityZone(onSuccess: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ libraryStatusListBeans: [SmartDeviceCoreSDK.ZoneBean]?) -> Swift.Void, onFail: @escaping (_ code: Swift.Int, _ msg: Swift.String) -> Swift.Void)
   @objc public func fetchZoneImages(comple: @escaping (_ code: Swift.Int, _ msg: Swift.String, [SmartDeviceCoreSDK.ZoneBean]?) -> Swift.Void)
   public func updatePushed(labelIds: [Swift.String], complement: @escaping (_ code: Swift.Int, _ msg: Swift.String, _ res: Swift.Bool?) -> Swift.Void)
   public func fetchDoorbellFilterTag(complement: @escaping (_ code: Swift.Int, _ message: Swift.String, _ result: [SmartDeviceCoreSDK.A4xLibraryVideoAiTagType]?) -> Swift.Void)
@@ -5594,6 +5613,8 @@ public typealias Image = SmartDeviceCoreSDK.ImageType
   public func closeFreePurchaseBanner(complement: @escaping (_ code: Swift.Int, _ message: Swift.String, _ result: Swift.Bool?) -> Swift.Void)
   public func getLibraryByTraceId(traceId: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String, _ resultModel: SmartDeviceCoreSDK.A4xLibraryStatusResponse?) -> Swift.Void, onFail: @escaping (_ code: Swift.Int, _ msg: Swift.String) -> Swift.Void)
   @objc public func downloadSource(tasks: [SmartDeviceCoreSDK.RecordBean], isShare: Swift.Bool = false, onProgress: @escaping (_ downloadIndex: Swift.Int, _ total: Swift.Int, _ progress: Swift.Float, _ describe: Swift.String) -> Swift.Void, onFinish: @escaping (_ res: Swift.Bool, _ sharePathArr: [Swift.String]?, @escaping () -> Swift.Void) -> Swift.Void)
+  @objc public func stopDownload()
+  @objc public func cancelDownload(urlStr: Swift.String?)
   @objc deinit
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class VideoAiFeedBackCore : ObjectiveC.NSObject {
@@ -5654,7 +5675,7 @@ public protocol LiveManagerInstanceProtocol : AnyObject {
   func onMagicPixProcessState(deviceId: Swift.String, status: Swift.Int)
   func onRecordState(deviceId: Swift.String, state: Swift.Int, videoPath: Swift.String)
   func onCurrentSdRecordTime(deviceId: Swift.String, time: Foundation.TimeInterval)
-  func onIJKPlayer(deviceId: Swift.String) -> SmartDeviceCoreSDK.LivePlayer?
+  func onIJKPlayer(deviceId: Swift.String) -> (any SmartDeviceCoreSDK.LivePlayer)?
 }
 extension SmartDeviceCoreSDK.LiveManagerInstanceProtocol {
   public func onRenderView(deviceId: Swift.String, surfaceView: UIKit.UIView)
@@ -5667,7 +5688,7 @@ extension SmartDeviceCoreSDK.LiveManagerInstanceProtocol {
   public func onMagicPixProcessState(deviceId: Swift.String, status: Swift.Int)
   public func onRecordState(deviceId: Swift.String, state: Swift.Int, videoPath: Swift.String)
   public func onCurrentSdRecordTime(deviceId: Swift.String, time: Foundation.TimeInterval)
-  public func onIJKPlayer(deviceId: Swift.String) -> SmartDeviceCoreSDK.LivePlayer?
+  public func onIJKPlayer(deviceId: Swift.String) -> (any SmartDeviceCoreSDK.LivePlayer)?
 }
 public enum A4xPlayerViewScale : Swift.Int {
   case none
@@ -5725,7 +5746,7 @@ public enum A4xPlayerDisplayType {
 public typealias onSuccess = (_ code: Swift.Int, _ msg: Swift.String) -> Swift.Void
 public typealias onError = (_ code: Swift.Int, _ msg: Swift.String) -> Swift.Void
 public protocol LiveManagerInstanceInterface {
-  func creatLivePlayer(serialNumber: Swift.String, customParam: [Swift.String : Any]?) -> SmartDeviceCoreSDK.LivePlayer?
+  func creatLivePlayer(serialNumber: Swift.String, customParam: [Swift.String : Any]?) -> (any SmartDeviceCoreSDK.LivePlayer)?
   func startLive(deviceId: Swift.String, customParam: [Swift.String : Any]?)
   func addLiveStateProtocol<Target>(deviceId: Swift.String, target: Target) where Target : SmartDeviceCoreSDK.LiveManagerInstanceProtocol
   func startRecord(deviceId: Swift.String, path: Swift.String, customParam: [Swift.String : Any]?)
@@ -5780,7 +5801,7 @@ public protocol LiveManagerInstanceInterface {
   func getAPLivePlayer(deviceId: Swift.String) -> SmartDeviceCoreSDK.A4xObjcWebRtcPlayer
 }
 extension SmartDeviceCoreSDK.LiveManagerInstanceInterface {
-  public func creatLivePlayer(serialNumber: Swift.String) -> SmartDeviceCoreSDK.LivePlayer?
+  public func creatLivePlayer(serialNumber: Swift.String) -> (any SmartDeviceCoreSDK.LivePlayer)?
   public func startLive(deviceId: Swift.String)
   public func startRecord(deviceId: Swift.String, path: Swift.String)
   public func stopRecord(deviceId: Swift.String)
@@ -5832,7 +5853,7 @@ extension SmartDeviceCoreSDK.LiveManagerInstanceInterface {
   @objc public class func getInstance() -> SmartDeviceCoreSDK.LiveManagerInstance
   @objc override dynamic public init()
   @objc public var playerStateChangeList: Foundation.NSPointerArray
-  public var playerStateChangeProtocolList: [Swift.String : SmartDeviceCoreSDK.LiveManagerInstanceProtocol]
+  public var playerStateChangeProtocolList: [Swift.String : any SmartDeviceCoreSDK.LiveManagerInstanceProtocol]
   @objc public var playerNumber: Swift.Int
   @objc public func initLiveSDK()
   @objc deinit
@@ -5841,7 +5862,7 @@ extension SmartDeviceCoreSDK.LiveManagerInstance {
   @objc dynamic public func stopOtherLive(skipDeviceId: Swift.String, customParam: [Swift.String : Any]? = [:], comple: @escaping (_ code: Swift.Int) -> Swift.Void)
 }
 extension SmartDeviceCoreSDK.LiveManagerInstance : SmartDeviceCoreSDK.LiveManagerInstanceInterface {
-  @objc dynamic public func creatLivePlayer(serialNumber: Swift.String, customParam: [Swift.String : Any]?) -> SmartDeviceCoreSDK.LivePlayer?
+  @objc dynamic public func creatLivePlayer(serialNumber: Swift.String, customParam: [Swift.String : Any]?) -> (any SmartDeviceCoreSDK.LivePlayer)?
   @objc dynamic public func startLive(deviceId: Swift.String, customParam: [Swift.String : Any]? = [:])
   public func addLiveStateProtocol<Target>(deviceId: Swift.String, target: Target) where Target : SmartDeviceCoreSDK.LiveManagerInstanceProtocol
   @objc dynamic public func startRecord(deviceId: Swift.String, path: Swift.String, customParam: [Swift.String : Any]?)
@@ -5950,12 +5971,12 @@ public enum MoyaError : Swift.Error {
   case imageMapping(SmartDeviceCoreSDK.MoyaResponse)
   case jsonMapping(SmartDeviceCoreSDK.MoyaResponse)
   case stringMapping(SmartDeviceCoreSDK.MoyaResponse)
-  case objectMapping(Swift.Error, SmartDeviceCoreSDK.MoyaResponse)
-  case encodableMapping(Swift.Error)
+  case objectMapping(any Swift.Error, SmartDeviceCoreSDK.MoyaResponse)
+  case encodableMapping(any Swift.Error)
   case statusCode(SmartDeviceCoreSDK.MoyaResponse)
-  case underlying(Swift.Error, SmartDeviceCoreSDK.MoyaResponse?)
+  case underlying(any Swift.Error, SmartDeviceCoreSDK.MoyaResponse?)
   case requestMapping(Swift.String)
-  case parameterEncoding(Swift.Error)
+  case parameterEncoding(any Swift.Error)
 }
 extension SmartDeviceCoreSDK.MoyaError {
   public var response: SmartDeviceCoreSDK.MoyaResponse? {
@@ -5999,7 +6020,7 @@ public struct ProgressResponse {
 }
 public protocol MoyaProviderType : AnyObject {
   associatedtype Target : SmartDeviceCoreSDK.TargetType
-  func request(_ target: Self.Target, callbackQueue: Dispatch.DispatchQueue?, progress: SmartDeviceCoreSDK.ProgressBlock?, completion: @escaping SmartDeviceCoreSDK.Completion) -> SmartDeviceCoreSDK.Cancellable
+  func request(_ target: Self.Target, callbackQueue: Dispatch.DispatchQueue?, progress: SmartDeviceCoreSDK.ProgressBlock?, completion: @escaping SmartDeviceCoreSDK.Completion) -> any SmartDeviceCoreSDK.Cancellable
 }
 open class MoyaProvider<Target> : SmartDeviceCoreSDK.MoyaProviderType where Target : SmartDeviceCoreSDK.TargetType {
   public typealias EndpointClosure = (Target) -> SmartDeviceCoreSDK.Endpoint
@@ -6010,15 +6031,15 @@ open class MoyaProvider<Target> : SmartDeviceCoreSDK.MoyaProviderType where Targ
   final public let requestClosure: SmartDeviceCoreSDK.MoyaProvider<Target>.RequestClosure
   final public let stubClosure: SmartDeviceCoreSDK.MoyaProvider<Target>.StubClosure
   final public let manager: SmartDeviceCoreSDK.Manager
-  final public let plugins: [SmartDeviceCoreSDK.PluginType]
+  final public let plugins: [any SmartDeviceCoreSDK.PluginType]
   final public let trackInflights: Swift.Bool
   open var inflightRequests: [SmartDeviceCoreSDK.Endpoint : [SmartDeviceCoreSDK.Completion]] {
     get
   }
-  public init(endpointClosure: @escaping SmartDeviceCoreSDK.MoyaProvider<Target>.EndpointClosure = MoyaProvider.defaultEndpointMapping, requestClosure: @escaping SmartDeviceCoreSDK.MoyaProvider<Target>.RequestClosure = MoyaProvider.defaultRequestMapping, stubClosure: @escaping SmartDeviceCoreSDK.MoyaProvider<Target>.StubClosure = MoyaProvider.neverStub, callbackQueue: Dispatch.DispatchQueue? = nil, manager: SmartDeviceCoreSDK.Manager = MoyaProvider<Target>.defaultAlamofireManager(), plugins: [SmartDeviceCoreSDK.PluginType] = [], trackInflights: Swift.Bool = false)
+  public init(endpointClosure: @escaping SmartDeviceCoreSDK.MoyaProvider<Target>.EndpointClosure = MoyaProvider.defaultEndpointMapping, requestClosure: @escaping SmartDeviceCoreSDK.MoyaProvider<Target>.RequestClosure = MoyaProvider.defaultRequestMapping, stubClosure: @escaping SmartDeviceCoreSDK.MoyaProvider<Target>.StubClosure = MoyaProvider.neverStub, callbackQueue: Dispatch.DispatchQueue? = nil, manager: SmartDeviceCoreSDK.Manager = MoyaProvider<Target>.defaultAlamofireManager(), plugins: [any SmartDeviceCoreSDK.PluginType] = [], trackInflights: Swift.Bool = false)
   open func endpoint(_ token: Target) -> SmartDeviceCoreSDK.Endpoint
   @discardableResult
-  open func request(_ target: Target, callbackQueue: Dispatch.DispatchQueue? = .none, progress: SmartDeviceCoreSDK.ProgressBlock? = .none, completion: @escaping SmartDeviceCoreSDK.Completion) -> SmartDeviceCoreSDK.Cancellable
+  open func request(_ target: Target, callbackQueue: Dispatch.DispatchQueue? = .none, progress: SmartDeviceCoreSDK.ProgressBlock? = .none, completion: @escaping SmartDeviceCoreSDK.Completion) -> any SmartDeviceCoreSDK.Cancellable
   @discardableResult
   open func stubRequest(_ target: Target, request: Foundation.URLRequest, callbackQueue: Dispatch.DispatchQueue?, completion: @escaping SmartDeviceCoreSDK.Completion, endpoint: SmartDeviceCoreSDK.Endpoint, stubBehavior: SmartDeviceCoreSDK.StubBehavior) -> SmartDeviceCoreSDK.CancellableToken
   @objc deinit
@@ -6033,7 +6054,7 @@ extension SmartDeviceCoreSDK.MoyaProvider {
   final public class func immediatelyStub(_: Target) -> SmartDeviceCoreSDK.StubBehavior
   final public class func delayedStub(_ seconds: Foundation.TimeInterval) -> (Target) -> SmartDeviceCoreSDK.StubBehavior
 }
-public func convertResponseToResult(_ response: Foundation.HTTPURLResponse?, request: Foundation.URLRequest?, data: Foundation.Data?, error: Swift.Error?, metrics: Swift.AnyObject?) -> SmartDeviceCoreSDK.Result<SmartDeviceCoreSDK.MoyaResponse, SmartDeviceCoreSDK.MoyaError>
+public func convertResponseToResult(_ response: Foundation.HTTPURLResponse?, request: Foundation.URLRequest?, data: Foundation.Data?, error: (any Swift.Error)?, metrics: Swift.AnyObject?) -> SmartDeviceCoreSDK.Result<SmartDeviceCoreSDK.MoyaResponse, SmartDeviceCoreSDK.MoyaError>
 extension SmartDeviceCoreSDK.MoyaProvider {
   final public class func defaultEndpointMapping(for target: Target) -> SmartDeviceCoreSDK.Endpoint
   final public class func defaultRequestMapping(for endpoint: SmartDeviceCoreSDK.Endpoint, closure: (SmartDeviceCoreSDK.Result<Foundation.URLRequest, SmartDeviceCoreSDK.MoyaError>) -> Swift.Void)
@@ -6045,9 +6066,9 @@ extension SmartDeviceCoreSDK.HTTPMethod {
   }
 }
 extension SmartDeviceCoreSDK.MoyaProvider {
-  public func requestNormal(_ target: Target, callbackQueue: Dispatch.DispatchQueue?, progress: SmartDeviceCoreSDK.ProgressBlock?, completion: @escaping SmartDeviceCoreSDK.Completion) -> SmartDeviceCoreSDK.Cancellable
+  public func requestNormal(_ target: Target, callbackQueue: Dispatch.DispatchQueue?, progress: SmartDeviceCoreSDK.ProgressBlock?, completion: @escaping SmartDeviceCoreSDK.Completion) -> any SmartDeviceCoreSDK.Cancellable
   public func cancelCompletion(_ completion: (_ result: SmartDeviceCoreSDK.Result<SmartDeviceCoreSDK.MoyaResponse, SmartDeviceCoreSDK.MoyaError>) -> Swift.Void, target: Target)
-  final public func createStubFunction(_ token: SmartDeviceCoreSDK.CancellableToken, forTarget target: Target, withCompletion completion: @escaping SmartDeviceCoreSDK.Completion, endpoint: SmartDeviceCoreSDK.Endpoint, plugins: [SmartDeviceCoreSDK.PluginType], request: Foundation.URLRequest) -> (() -> Swift.Void)
+  final public func createStubFunction(_ token: SmartDeviceCoreSDK.CancellableToken, forTarget target: Target, withCompletion completion: @escaping SmartDeviceCoreSDK.Completion, endpoint: SmartDeviceCoreSDK.Endpoint, plugins: [any SmartDeviceCoreSDK.PluginType], request: Foundation.URLRequest) -> (() -> Swift.Void)
   final public func notifyPluginsOfImpendingStub(for request: Foundation.URLRequest, target: Target)
 }
 final public class MoyaResponse : Swift.CustomDebugStringConvertible, Swift.Equatable {
@@ -6098,8 +6119,8 @@ open class MultipartFormData {
   @objc deinit
 }
 public enum MultiTarget : SmartDeviceCoreSDK.TargetType {
-  case target(SmartDeviceCoreSDK.TargetType)
-  public init(_ target: SmartDeviceCoreSDK.TargetType)
+  case target(any SmartDeviceCoreSDK.TargetType)
+  public init(_ target: any SmartDeviceCoreSDK.TargetType)
   public var path: Swift.String {
     get
   }
@@ -6121,7 +6142,7 @@ public enum MultiTarget : SmartDeviceCoreSDK.TargetType {
   public var headers: [Swift.String : Swift.String]? {
     get
   }
-  public var target: SmartDeviceCoreSDK.TargetType {
+  public var target: any SmartDeviceCoreSDK.TargetType {
     get
   }
 }
@@ -6134,18 +6155,18 @@ public enum NetworkActivityChangeType {
   }
 }
 final public class NetworkActivityPlugin : SmartDeviceCoreSDK.PluginType {
-  public typealias NetworkActivityClosure = (_ change: SmartDeviceCoreSDK.NetworkActivityChangeType, _ target: SmartDeviceCoreSDK.TargetType) -> Swift.Void
+  public typealias NetworkActivityClosure = (_ change: SmartDeviceCoreSDK.NetworkActivityChangeType, _ target: any SmartDeviceCoreSDK.TargetType) -> Swift.Void
   public init(networkActivityClosure: @escaping SmartDeviceCoreSDK.NetworkActivityPlugin.NetworkActivityClosure)
-  final public func willSend(_ request: SmartDeviceCoreSDK.RequestType, target: SmartDeviceCoreSDK.TargetType)
-  final public func didReceive(_ result: SmartDeviceCoreSDK.Result<SmartDeviceCoreSDK.MoyaResponse, SmartDeviceCoreSDK.MoyaError>, target: SmartDeviceCoreSDK.TargetType)
+  final public func willSend(_ request: any SmartDeviceCoreSDK.RequestType, target: any SmartDeviceCoreSDK.TargetType)
+  final public func didReceive(_ result: SmartDeviceCoreSDK.Result<SmartDeviceCoreSDK.MoyaResponse, SmartDeviceCoreSDK.MoyaError>, target: any SmartDeviceCoreSDK.TargetType)
   @objc deinit
 }
 final public class NetworkLoggerPlugin : SmartDeviceCoreSDK.PluginType {
   final public let isVerbose: Swift.Bool
   final public let cURL: Swift.Bool
   public init(verbose: Swift.Bool = false, cURL: Swift.Bool = false, output: ((_ separator: Swift.String, _ terminator: Swift.String, _ items: Any...) -> Swift.Void)? = nil, requestDataFormatter: ((Foundation.Data) -> (Swift.String))? = nil, responseDataFormatter: ((Foundation.Data) -> (Foundation.Data))? = nil)
-  final public func willSend(_ request: SmartDeviceCoreSDK.RequestType, target: SmartDeviceCoreSDK.TargetType)
-  final public func didReceive(_ result: SmartDeviceCoreSDK.Result<SmartDeviceCoreSDK.MoyaResponse, SmartDeviceCoreSDK.MoyaError>, target: SmartDeviceCoreSDK.TargetType)
+  final public func willSend(_ request: any SmartDeviceCoreSDK.RequestType, target: any SmartDeviceCoreSDK.TargetType)
+  final public func didReceive(_ result: SmartDeviceCoreSDK.Result<SmartDeviceCoreSDK.MoyaResponse, SmartDeviceCoreSDK.MoyaError>, target: any SmartDeviceCoreSDK.TargetType)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers open class NetworkReachabilityManager {
@@ -6323,8 +6344,8 @@ extension CoreFoundation.CGFloat {
   }
 }
 @objc @objcMembers public class NSLivePlayer : ObjectiveC.NSObject, SmartDeviceCoreSDK.LivePlayer {
-  @objc weak public var liveStateListener: SmartDeviceCoreSDK.ILiveStateListener?
-  @objc weak public var liveAllStateProtocol: SmartDeviceCoreSDK.LiveAllStateProtocol?
+  @objc weak public var liveStateListener: (any SmartDeviceCoreSDK.ILiveStateListener)?
+  @objc weak public var liveAllStateProtocol: (any SmartDeviceCoreSDK.LiveAllStateProtocol)?
   @objc public var playView: SmartDeviceCoreSDK.A4xLivePlayerView
   @objc public var liveLogPath: Swift.String? {
     @objc get
@@ -6354,7 +6375,7 @@ extension CoreFoundation.CGFloat {
   @objc public init(device: SmartDeviceCoreSDK.DeviceBean)
   @objc deinit
   @objc public func startLive(customParam: [Swift.String : Any]?)
-  @objc public func setListener(liveStateListener: SmartDeviceCoreSDK.ILiveStateListener)
+  @objc public func setListener(liveStateListener: any SmartDeviceCoreSDK.ILiveStateListener)
   @objc public func startRecord(path: Swift.String)
   @objc public func stopRecord()
   @objc public func screenShot(onSuccess: @escaping (_ _code: Swift.Int, _ msg: Swift.String, _ image: UIKit.UIImage?) -> Swift.Void, onError: @escaping SmartDeviceCoreSDK.onError)
@@ -6482,7 +6503,7 @@ public enum HTTPMethod : Swift.String {
 }
 public typealias Parameters = [Swift.String : Any]
 public protocol ParameterEncoding {
-  func encode(_ urlRequest: SmartDeviceCoreSDK.URLRequestConvertible, with parameters: SmartDeviceCoreSDK.Parameters?) throws -> Foundation.URLRequest
+  func encode(_ urlRequest: any SmartDeviceCoreSDK.URLRequestConvertible, with parameters: SmartDeviceCoreSDK.Parameters?) throws -> Foundation.URLRequest
 }
 public struct URLEncoding : SmartDeviceCoreSDK.ParameterEncoding {
   public enum Destination {
@@ -6525,7 +6546,7 @@ public struct URLEncoding : SmartDeviceCoreSDK.ParameterEncoding {
   public let arrayEncoding: SmartDeviceCoreSDK.URLEncoding.ArrayEncoding
   public let boolEncoding: SmartDeviceCoreSDK.URLEncoding.BoolEncoding
   public init(destination: SmartDeviceCoreSDK.URLEncoding.Destination = .methodDependent, arrayEncoding: SmartDeviceCoreSDK.URLEncoding.ArrayEncoding = .brackets, boolEncoding: SmartDeviceCoreSDK.URLEncoding.BoolEncoding = .numeric)
-  public func encode(_ urlRequest: SmartDeviceCoreSDK.URLRequestConvertible, with parameters: SmartDeviceCoreSDK.Parameters?) throws -> Foundation.URLRequest
+  public func encode(_ urlRequest: any SmartDeviceCoreSDK.URLRequestConvertible, with parameters: SmartDeviceCoreSDK.Parameters?) throws -> Foundation.URLRequest
   public func queryComponents(fromKey key: Swift.String, value: Any) -> [(Swift.String, Swift.String)]
   public func escape(_ string: Swift.String) -> Swift.String
 }
@@ -6538,8 +6559,8 @@ public struct JSONEncoding : SmartDeviceCoreSDK.ParameterEncoding {
   }
   public let options: Foundation.JSONSerialization.WritingOptions
   public init(options: Foundation.JSONSerialization.WritingOptions = [])
-  public func encode(_ urlRequest: SmartDeviceCoreSDK.URLRequestConvertible, with parameters: SmartDeviceCoreSDK.Parameters?) throws -> Foundation.URLRequest
-  public func encode(_ urlRequest: SmartDeviceCoreSDK.URLRequestConvertible, withJSONObject jsonObject: Any? = nil) throws -> Foundation.URLRequest
+  public func encode(_ urlRequest: any SmartDeviceCoreSDK.URLRequestConvertible, with parameters: SmartDeviceCoreSDK.Parameters?) throws -> Foundation.URLRequest
+  public func encode(_ urlRequest: any SmartDeviceCoreSDK.URLRequestConvertible, withJSONObject jsonObject: Any? = nil) throws -> Foundation.URLRequest
 }
 public struct PropertyListEncoding : SmartDeviceCoreSDK.ParameterEncoding {
   public static var `default`: SmartDeviceCoreSDK.PropertyListEncoding {
@@ -6554,7 +6575,7 @@ public struct PropertyListEncoding : SmartDeviceCoreSDK.ParameterEncoding {
   public let format: Foundation.PropertyListSerialization.PropertyListFormat
   public let options: Foundation.PropertyListSerialization.WriteOptions
   public init(format: Foundation.PropertyListSerialization.PropertyListFormat = .xml, options: Foundation.PropertyListSerialization.WriteOptions = 0)
-  public func encode(_ urlRequest: SmartDeviceCoreSDK.URLRequestConvertible, with parameters: SmartDeviceCoreSDK.Parameters?) throws -> Foundation.URLRequest
+  public func encode(_ urlRequest: any SmartDeviceCoreSDK.URLRequestConvertible, with parameters: SmartDeviceCoreSDK.Parameters?) throws -> Foundation.URLRequest
 }
 @available(iOS 14.0, *)
 public var sharedBrowser: SmartDeviceCoreSDK.PeerBrowserManager?
@@ -6565,22 +6586,22 @@ public protocol PeerBrowserManagerDelegate : AnyObject {
 }
 @objc @available(iOS 14.0, *)
 @objcMembers public class PeerBrowserManager : ObjectiveC.NSObject {
-  public init(delegate: SmartDeviceCoreSDK.PeerBrowserManagerDelegate, typeStr: Swift.String = "_a4x._tcp")
+  public init(delegate: any SmartDeviceCoreSDK.PeerBrowserManagerDelegate, typeStr: Swift.String = "_a4x._tcp")
   @objc public func startBrowsing(typeStr: Swift.String = "_a4x._tcp")
   @objc public func stopBrowsing()
   @objc deinit
 }
 public protocol PluginType {
-  func prepare(_ request: Foundation.URLRequest, target: SmartDeviceCoreSDK.TargetType) -> Foundation.URLRequest
-  func willSend(_ request: SmartDeviceCoreSDK.RequestType, target: SmartDeviceCoreSDK.TargetType)
-  func didReceive(_ result: SmartDeviceCoreSDK.Result<SmartDeviceCoreSDK.MoyaResponse, SmartDeviceCoreSDK.MoyaError>, target: SmartDeviceCoreSDK.TargetType)
-  func process(_ result: SmartDeviceCoreSDK.Result<SmartDeviceCoreSDK.MoyaResponse, SmartDeviceCoreSDK.MoyaError>, target: SmartDeviceCoreSDK.TargetType) -> SmartDeviceCoreSDK.Result<SmartDeviceCoreSDK.MoyaResponse, SmartDeviceCoreSDK.MoyaError>
+  func prepare(_ request: Foundation.URLRequest, target: any SmartDeviceCoreSDK.TargetType) -> Foundation.URLRequest
+  func willSend(_ request: any SmartDeviceCoreSDK.RequestType, target: any SmartDeviceCoreSDK.TargetType)
+  func didReceive(_ result: SmartDeviceCoreSDK.Result<SmartDeviceCoreSDK.MoyaResponse, SmartDeviceCoreSDK.MoyaError>, target: any SmartDeviceCoreSDK.TargetType)
+  func process(_ result: SmartDeviceCoreSDK.Result<SmartDeviceCoreSDK.MoyaResponse, SmartDeviceCoreSDK.MoyaError>, target: any SmartDeviceCoreSDK.TargetType) -> SmartDeviceCoreSDK.Result<SmartDeviceCoreSDK.MoyaResponse, SmartDeviceCoreSDK.MoyaError>
 }
 extension SmartDeviceCoreSDK.PluginType {
-  public func prepare(_ request: Foundation.URLRequest, target: SmartDeviceCoreSDK.TargetType) -> Foundation.URLRequest
-  public func willSend(_ request: SmartDeviceCoreSDK.RequestType, target: SmartDeviceCoreSDK.TargetType)
-  public func didReceive(_ result: SmartDeviceCoreSDK.Result<SmartDeviceCoreSDK.MoyaResponse, SmartDeviceCoreSDK.MoyaError>, target: SmartDeviceCoreSDK.TargetType)
-  public func process(_ result: SmartDeviceCoreSDK.Result<SmartDeviceCoreSDK.MoyaResponse, SmartDeviceCoreSDK.MoyaError>, target: SmartDeviceCoreSDK.TargetType) -> SmartDeviceCoreSDK.Result<SmartDeviceCoreSDK.MoyaResponse, SmartDeviceCoreSDK.MoyaError>
+  public func prepare(_ request: Foundation.URLRequest, target: any SmartDeviceCoreSDK.TargetType) -> Foundation.URLRequest
+  public func willSend(_ request: any SmartDeviceCoreSDK.RequestType, target: any SmartDeviceCoreSDK.TargetType)
+  public func didReceive(_ result: SmartDeviceCoreSDK.Result<SmartDeviceCoreSDK.MoyaResponse, SmartDeviceCoreSDK.MoyaError>, target: any SmartDeviceCoreSDK.TargetType)
+  public func process(_ result: SmartDeviceCoreSDK.Result<SmartDeviceCoreSDK.MoyaResponse, SmartDeviceCoreSDK.MoyaError>, target: any SmartDeviceCoreSDK.TargetType) -> SmartDeviceCoreSDK.Result<SmartDeviceCoreSDK.MoyaResponse, SmartDeviceCoreSDK.MoyaError>
 }
 public protocol RequestType {
   var request: Foundation.URLRequest? { get }
@@ -6596,7 +6617,7 @@ public protocol RequestAdapter {
 }
 public typealias RequestRetryCompletion = (_ shouldRetry: Swift.Bool, _ timeDelay: Foundation.TimeInterval) -> Swift.Void
 public protocol RequestRetrier {
-  func should(_ manager: SmartDeviceCoreSDK.SessionManager, retry request: SmartDeviceCoreSDK.Request, with error: Swift.Error, completion: @escaping SmartDeviceCoreSDK.RequestRetryCompletion)
+  func should(_ manager: SmartDeviceCoreSDK.SessionManager, retry request: SmartDeviceCoreSDK.Request, with error: any Swift.Error, completion: @escaping SmartDeviceCoreSDK.RequestRetryCompletion)
 }
 public typealias HTTPHeaders = [Swift.String : Swift.String]
 @_hasMissingDesignatedInitializers open class Request {
@@ -6696,9 +6717,9 @@ public struct DefaultDataResponse {
   public let request: Foundation.URLRequest?
   public let response: Foundation.HTTPURLResponse?
   public let data: Foundation.Data?
-  public let error: Swift.Error?
+  public let error: (any Swift.Error)?
   public let timeline: SmartDeviceCoreSDK.Timeline
-  public init(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: Swift.Error?, timeline: SmartDeviceCoreSDK.Timeline = Timeline(), metrics: Swift.AnyObject? = nil)
+  public init(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: (any Swift.Error)?, timeline: SmartDeviceCoreSDK.Timeline = Timeline(), metrics: Swift.AnyObject? = nil)
 }
 public struct DataResponse<Value> {
   public let request: Foundation.URLRequest?
@@ -6709,7 +6730,7 @@ public struct DataResponse<Value> {
   public var value: Value? {
     get
   }
-  public var error: Swift.Error? {
+  public var error: (any Swift.Error)? {
     get
   }
   public init(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, result: SmartDeviceCoreSDK.AlamofireResult<Value>, timeline: SmartDeviceCoreSDK.Timeline = Timeline())
@@ -6725,8 +6746,8 @@ extension SmartDeviceCoreSDK.DataResponse : Swift.CustomStringConvertible, Swift
 extension SmartDeviceCoreSDK.DataResponse {
   public func map<T>(_ transform: (Value) -> T) -> SmartDeviceCoreSDK.DataResponse<T>
   public func flatMap<T>(_ transform: (Value) throws -> T) -> SmartDeviceCoreSDK.DataResponse<T>
-  public func mapError<E>(_ transform: (Swift.Error) -> E) -> SmartDeviceCoreSDK.DataResponse<Value> where E : Swift.Error
-  public func flatMapError<E>(_ transform: (Swift.Error) throws -> E) -> SmartDeviceCoreSDK.DataResponse<Value> where E : Swift.Error
+  public func mapError<E>(_ transform: (any Swift.Error) -> E) -> SmartDeviceCoreSDK.DataResponse<Value> where E : Swift.Error
+  public func flatMapError<E>(_ transform: (any Swift.Error) throws -> E) -> SmartDeviceCoreSDK.DataResponse<Value> where E : Swift.Error
 }
 public struct DefaultDownloadResponse {
   public let request: Foundation.URLRequest?
@@ -6734,9 +6755,9 @@ public struct DefaultDownloadResponse {
   public let temporaryURL: Foundation.URL?
   public let destinationURL: Foundation.URL?
   public let resumeData: Foundation.Data?
-  public let error: Swift.Error?
+  public let error: (any Swift.Error)?
   public let timeline: SmartDeviceCoreSDK.Timeline
-  public init(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, temporaryURL: Foundation.URL?, destinationURL: Foundation.URL?, resumeData: Foundation.Data?, error: Swift.Error?, timeline: SmartDeviceCoreSDK.Timeline = Timeline(), metrics: Swift.AnyObject? = nil)
+  public init(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, temporaryURL: Foundation.URL?, destinationURL: Foundation.URL?, resumeData: Foundation.Data?, error: (any Swift.Error)?, timeline: SmartDeviceCoreSDK.Timeline = Timeline(), metrics: Swift.AnyObject? = nil)
 }
 public struct DownloadResponse<Value> {
   public let request: Foundation.URLRequest?
@@ -6749,7 +6770,7 @@ public struct DownloadResponse<Value> {
   public var value: Value? {
     get
   }
-  public var error: Swift.Error? {
+  public var error: (any Swift.Error)? {
     get
   }
   public init(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, temporaryURL: Foundation.URL?, destinationURL: Foundation.URL?, resumeData: Foundation.Data?, result: SmartDeviceCoreSDK.AlamofireResult<Value>, timeline: SmartDeviceCoreSDK.Timeline = Timeline())
@@ -6765,8 +6786,8 @@ extension SmartDeviceCoreSDK.DownloadResponse : Swift.CustomStringConvertible, S
 extension SmartDeviceCoreSDK.DownloadResponse {
   public func map<T>(_ transform: (Value) -> T) -> SmartDeviceCoreSDK.DownloadResponse<T>
   public func flatMap<T>(_ transform: (Value) throws -> T) -> SmartDeviceCoreSDK.DownloadResponse<T>
-  public func mapError<E>(_ transform: (Swift.Error) -> E) -> SmartDeviceCoreSDK.DownloadResponse<Value> where E : Swift.Error
-  public func flatMapError<E>(_ transform: (Swift.Error) throws -> E) -> SmartDeviceCoreSDK.DownloadResponse<Value> where E : Swift.Error
+  public func mapError<E>(_ transform: (any Swift.Error) -> E) -> SmartDeviceCoreSDK.DownloadResponse<Value> where E : Swift.Error
+  public func flatMapError<E>(_ transform: (any Swift.Error) throws -> E) -> SmartDeviceCoreSDK.DownloadResponse<Value> where E : Swift.Error
 }
 @available(iOS 10.0, macOS 10.12, tvOS 10.0, *)
 extension SmartDeviceCoreSDK.DefaultDataResponse {
@@ -6794,21 +6815,21 @@ extension SmartDeviceCoreSDK.DownloadResponse {
 }
 public protocol DataResponseSerializerProtocol {
   associatedtype SerializedObject
-  var serializeResponse: (Foundation.URLRequest?, Foundation.HTTPURLResponse?, Foundation.Data?, Swift.Error?) -> SmartDeviceCoreSDK.AlamofireResult<Self.SerializedObject> { get }
+  var serializeResponse: (Foundation.URLRequest?, Foundation.HTTPURLResponse?, Foundation.Data?, (any Swift.Error)?) -> SmartDeviceCoreSDK.AlamofireResult<Self.SerializedObject> { get }
 }
 public struct DataResponseSerializer<Value> : SmartDeviceCoreSDK.DataResponseSerializerProtocol {
   public typealias SerializedObject = Value
-  public var serializeResponse: (Foundation.URLRequest?, Foundation.HTTPURLResponse?, Foundation.Data?, Swift.Error?) -> SmartDeviceCoreSDK.AlamofireResult<Value>
-  public init(serializeResponse: @escaping (Foundation.URLRequest?, Foundation.HTTPURLResponse?, Foundation.Data?, Swift.Error?) -> SmartDeviceCoreSDK.AlamofireResult<Value>)
+  public var serializeResponse: (Foundation.URLRequest?, Foundation.HTTPURLResponse?, Foundation.Data?, (any Swift.Error)?) -> SmartDeviceCoreSDK.AlamofireResult<Value>
+  public init(serializeResponse: @escaping (Foundation.URLRequest?, Foundation.HTTPURLResponse?, Foundation.Data?, (any Swift.Error)?) -> SmartDeviceCoreSDK.AlamofireResult<Value>)
 }
 public protocol DownloadResponseSerializerProtocol {
   associatedtype SerializedObject
-  var serializeResponse: (Foundation.URLRequest?, Foundation.HTTPURLResponse?, Foundation.URL?, Swift.Error?) -> SmartDeviceCoreSDK.AlamofireResult<Self.SerializedObject> { get }
+  var serializeResponse: (Foundation.URLRequest?, Foundation.HTTPURLResponse?, Foundation.URL?, (any Swift.Error)?) -> SmartDeviceCoreSDK.AlamofireResult<Self.SerializedObject> { get }
 }
 public struct DownloadResponseSerializer<Value> : SmartDeviceCoreSDK.DownloadResponseSerializerProtocol {
   public typealias SerializedObject = Value
-  public var serializeResponse: (Foundation.URLRequest?, Foundation.HTTPURLResponse?, Foundation.URL?, Swift.Error?) -> SmartDeviceCoreSDK.AlamofireResult<Value>
-  public init(serializeResponse: @escaping (Foundation.URLRequest?, Foundation.HTTPURLResponse?, Foundation.URL?, Swift.Error?) -> SmartDeviceCoreSDK.AlamofireResult<Value>)
+  public var serializeResponse: (Foundation.URLRequest?, Foundation.HTTPURLResponse?, Foundation.URL?, (any Swift.Error)?) -> SmartDeviceCoreSDK.AlamofireResult<Value>
+  public init(serializeResponse: @escaping (Foundation.URLRequest?, Foundation.HTTPURLResponse?, Foundation.URL?, (any Swift.Error)?) -> SmartDeviceCoreSDK.AlamofireResult<Value>)
 }
 extension SmartDeviceCoreSDK.DataRequest {
   @discardableResult
@@ -6823,7 +6844,7 @@ extension SmartDeviceCoreSDK.DownloadRequest {
   public func response<T>(queue: Dispatch.DispatchQueue? = nil, responseSerializer: T, completionHandler: @escaping (SmartDeviceCoreSDK.DownloadResponse<T.SerializedObject>) -> Swift.Void) -> Self where T : SmartDeviceCoreSDK.DownloadResponseSerializerProtocol
 }
 extension SmartDeviceCoreSDK.Request {
-  public static func serializeResponseData(response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: Swift.Error?) -> SmartDeviceCoreSDK.AlamofireResult<Foundation.Data>
+  public static func serializeResponseData(response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: (any Swift.Error)?) -> SmartDeviceCoreSDK.AlamofireResult<Foundation.Data>
 }
 extension SmartDeviceCoreSDK.DataRequest {
   public static func dataResponseSerializer() -> SmartDeviceCoreSDK.DataResponseSerializer<Foundation.Data>
@@ -6836,7 +6857,7 @@ extension SmartDeviceCoreSDK.DownloadRequest {
   public func responseData(queue: Dispatch.DispatchQueue? = nil, completionHandler: @escaping (SmartDeviceCoreSDK.DownloadResponse<Foundation.Data>) -> Swift.Void) -> Self
 }
 extension SmartDeviceCoreSDK.Request {
-  public static func serializeResponseString(encoding: Swift.String.Encoding?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: Swift.Error?) -> SmartDeviceCoreSDK.AlamofireResult<Swift.String>
+  public static func serializeResponseString(encoding: Swift.String.Encoding?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: (any Swift.Error)?) -> SmartDeviceCoreSDK.AlamofireResult<Swift.String>
 }
 extension SmartDeviceCoreSDK.DataRequest {
   public static func stringResponseSerializer(encoding: Swift.String.Encoding? = nil) -> SmartDeviceCoreSDK.DataResponseSerializer<Swift.String>
@@ -6849,7 +6870,7 @@ extension SmartDeviceCoreSDK.DownloadRequest {
   public func responseString(queue: Dispatch.DispatchQueue? = nil, encoding: Swift.String.Encoding? = nil, completionHandler: @escaping (SmartDeviceCoreSDK.DownloadResponse<Swift.String>) -> Swift.Void) -> Self
 }
 extension SmartDeviceCoreSDK.Request {
-  public static func serializeResponseJSON(options: Foundation.JSONSerialization.ReadingOptions, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: Swift.Error?) -> SmartDeviceCoreSDK.AlamofireResult<Any>
+  public static func serializeResponseJSON(options: Foundation.JSONSerialization.ReadingOptions, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: (any Swift.Error)?) -> SmartDeviceCoreSDK.AlamofireResult<Any>
 }
 extension SmartDeviceCoreSDK.DataRequest {
   public static func jsonResponseSerializer(options: Foundation.JSONSerialization.ReadingOptions = .allowFragments) -> SmartDeviceCoreSDK.DataResponseSerializer<Any>
@@ -6862,7 +6883,7 @@ extension SmartDeviceCoreSDK.DownloadRequest {
   public func responseJSON(queue: Dispatch.DispatchQueue? = nil, options: Foundation.JSONSerialization.ReadingOptions = .allowFragments, completionHandler: @escaping (SmartDeviceCoreSDK.DownloadResponse<Any>) -> Swift.Void) -> Self
 }
 extension SmartDeviceCoreSDK.Request {
-  public static func serializeResponsePropertyList(options: Foundation.PropertyListSerialization.ReadOptions, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: Swift.Error?) -> SmartDeviceCoreSDK.AlamofireResult<Any>
+  public static func serializeResponsePropertyList(options: Foundation.PropertyListSerialization.ReadOptions, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: (any Swift.Error)?) -> SmartDeviceCoreSDK.AlamofireResult<Any>
 }
 extension SmartDeviceCoreSDK.DataRequest {
   public static func propertyListResponseSerializer(options: Foundation.PropertyListSerialization.ReadOptions = []) -> SmartDeviceCoreSDK.DataResponseSerializer<Any>
@@ -6922,7 +6943,7 @@ public func materialize<T>(_ f: () throws -> T) -> SmartDeviceCoreSDK.Result<T, 
 @available(*, deprecated, renamed: "Result.init(_:)")
 public func materialize<T>(_ f: @autoclosure () throws -> T) -> SmartDeviceCoreSDK.Result<T, SmartDeviceCoreSDK.AnyError>
 extension Foundation.NSError : SmartDeviceCoreSDK.ErrorConvertible {
-  public static func error(from error: Swift.Error) -> Self
+  public static func error(from error: any Swift.Error) -> Self
 }
 @available(*, unavailable, message: "Use the overload which returns `Result<T, AnyError>` instead")
 public func materialize<T>(_ f: () throws -> T) -> SmartDeviceCoreSDK.Result<T, Foundation.NSError>
@@ -6958,7 +6979,7 @@ extension SmartDeviceCoreSDK.Result {
   public func recover(with result: @autoclosure () -> SmartDeviceCoreSDK.Result<Value, Error>) -> SmartDeviceCoreSDK.Result<Value, Error>
 }
 public protocol ErrorConvertible : Swift.Error {
-  static func error(from error: Swift.Error) -> Self
+  static func error(from error: any Swift.Error) -> Self
 }
 extension SmartDeviceCoreSDK.Result where Error : SmartDeviceCoreSDK.ErrorConvertible {
   public func tryMap<U>(_ transform: (Value) throws -> U) -> SmartDeviceCoreSDK.Result<U, Error>
@@ -7007,7 +7028,7 @@ public enum ServerTrustPolicy {
   public func evaluate(_ serverTrust: Security.SecTrust, forHost host: Swift.String) -> Swift.Bool
 }
 @objc @_inheritsConvenienceInitializers open class SessionDelegate : ObjectiveC.NSObject {
-  open var sessionDidBecomeInvalidWithError: ((Foundation.URLSession, Swift.Error?) -> Swift.Void)?
+  open var sessionDidBecomeInvalidWithError: ((Foundation.URLSession, (any Swift.Error)?) -> Swift.Void)?
   open var sessionDidReceiveChallenge: ((Foundation.URLSession, Foundation.URLAuthenticationChallenge) -> (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?))?
   open var sessionDidReceiveChallengeWithCompletion: ((Foundation.URLSession, Foundation.URLAuthenticationChallenge, @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void) -> Swift.Void)?
   open var sessionDidFinishEventsForBackgroundURLSession: ((Foundation.URLSession) -> Swift.Void)?
@@ -7018,7 +7039,7 @@ public enum ServerTrustPolicy {
   open var taskNeedNewBodyStream: ((Foundation.URLSession, Foundation.URLSessionTask) -> Foundation.InputStream?)?
   open var taskNeedNewBodyStreamWithCompletion: ((Foundation.URLSession, Foundation.URLSessionTask, @escaping (Foundation.InputStream?) -> Swift.Void) -> Swift.Void)?
   open var taskDidSendBodyData: ((Foundation.URLSession, Foundation.URLSessionTask, Swift.Int64, Swift.Int64, Swift.Int64) -> Swift.Void)?
-  open var taskDidComplete: ((Foundation.URLSession, Foundation.URLSessionTask, Swift.Error?) -> Swift.Void)?
+  open var taskDidComplete: ((Foundation.URLSession, Foundation.URLSessionTask, (any Swift.Error)?) -> Swift.Void)?
   open var dataTaskDidReceiveResponse: ((Foundation.URLSession, Foundation.URLSessionDataTask, Foundation.URLResponse) -> Foundation.URLSession.ResponseDisposition)?
   open var dataTaskDidReceiveResponseWithCompletion: ((Foundation.URLSession, Foundation.URLSessionDataTask, Foundation.URLResponse, @escaping (Foundation.URLSession.ResponseDisposition) -> Swift.Void) -> Swift.Void)?
   open var dataTaskDidBecomeDownloadTask: ((Foundation.URLSession, Foundation.URLSessionDataTask, Foundation.URLSessionDownloadTask) -> Swift.Void)?
@@ -7057,7 +7078,7 @@ public enum ServerTrustPolicy {
   @objc deinit
 }
 extension SmartDeviceCoreSDK.SessionDelegate : Foundation.URLSessionDelegate {
-  @objc dynamic open func urlSession(_ session: Foundation.URLSession, didBecomeInvalidWithError error: Swift.Error?)
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, didBecomeInvalidWithError error: (any Swift.Error)?)
   @objc dynamic open func urlSession(_ session: Foundation.URLSession, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
   @objc dynamic open func urlSessionDidFinishEvents(forBackgroundURLSession session: Foundation.URLSession)
 }
@@ -7068,7 +7089,7 @@ extension SmartDeviceCoreSDK.SessionDelegate : Foundation.URLSessionTaskDelegate
   @objc dynamic open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didSendBodyData bytesSent: Swift.Int64, totalBytesSent: Swift.Int64, totalBytesExpectedToSend: Swift.Int64)
   @available(iOS 10.0, macOS 10.12, tvOS 10.0, *)
   @objc(URLSession:task:didFinishCollectingMetrics:) dynamic open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didFinishCollecting metrics: Foundation.URLSessionTaskMetrics)
-  @objc dynamic open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: Swift.Error?)
+  @objc dynamic open func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
 }
 extension SmartDeviceCoreSDK.SessionDelegate : Foundation.URLSessionDataDelegate {
   @objc dynamic open func urlSession(_ session: Foundation.URLSession, dataTask: Foundation.URLSessionDataTask, didReceive response: Foundation.URLResponse, completionHandler: @escaping (Foundation.URLSession.ResponseDisposition) -> Swift.Void)
@@ -7091,7 +7112,7 @@ extension SmartDeviceCoreSDK.SessionDelegate : Foundation.URLSessionStreamDelega
 open class SessionManager {
   public enum MultipartFormDataEncodingResult {
     case success(request: SmartDeviceCoreSDK.UploadRequest, streamingFromDisk: Swift.Bool, streamFileURL: Foundation.URL?)
-    case failure(Swift.Error)
+    case failure(any Swift.Error)
   }
   public static let `default`: SmartDeviceCoreSDK.SessionManager
   public static let defaultHTTPHeaders: SmartDeviceCoreSDK.HTTPHeaders
@@ -7099,8 +7120,8 @@ open class SessionManager {
   final public let session: Foundation.URLSession
   final public let delegate: SmartDeviceCoreSDK.SessionDelegate
   open var startRequestsImmediately: Swift.Bool
-  open var adapter: SmartDeviceCoreSDK.RequestAdapter?
-  open var retrier: SmartDeviceCoreSDK.RequestRetrier? {
+  open var adapter: (any SmartDeviceCoreSDK.RequestAdapter)?
+  open var retrier: (any SmartDeviceCoreSDK.RequestRetrier)? {
     get
     set
   }
@@ -7109,29 +7130,29 @@ open class SessionManager {
   public init?(session: Foundation.URLSession, delegate: SmartDeviceCoreSDK.SessionDelegate, serverTrustPolicyManager: SmartDeviceCoreSDK.ServerTrustPolicyManager? = nil)
   @objc deinit
   @discardableResult
-  open func request(_ url: SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod = .get, parameters: SmartDeviceCoreSDK.Parameters? = nil, encoding: SmartDeviceCoreSDK.ParameterEncoding = URLEncoding.default, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil) -> SmartDeviceCoreSDK.DataRequest
+  open func request(_ url: any SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod = .get, parameters: SmartDeviceCoreSDK.Parameters? = nil, encoding: any SmartDeviceCoreSDK.ParameterEncoding = URLEncoding.default, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil) -> SmartDeviceCoreSDK.DataRequest
   @discardableResult
-  open func request(_ urlRequest: SmartDeviceCoreSDK.URLRequestConvertible) -> SmartDeviceCoreSDK.DataRequest
+  open func request(_ urlRequest: any SmartDeviceCoreSDK.URLRequestConvertible) -> SmartDeviceCoreSDK.DataRequest
   @discardableResult
-  open func download(_ url: SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod = .get, parameters: SmartDeviceCoreSDK.Parameters? = nil, encoding: SmartDeviceCoreSDK.ParameterEncoding = URLEncoding.default, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil, to destination: SmartDeviceCoreSDK.DownloadRequest.DownloadFileDestination? = nil) -> SmartDeviceCoreSDK.DownloadRequest
+  open func download(_ url: any SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod = .get, parameters: SmartDeviceCoreSDK.Parameters? = nil, encoding: any SmartDeviceCoreSDK.ParameterEncoding = URLEncoding.default, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil, to destination: SmartDeviceCoreSDK.DownloadRequest.DownloadFileDestination? = nil) -> SmartDeviceCoreSDK.DownloadRequest
   @discardableResult
-  open func download(_ urlRequest: SmartDeviceCoreSDK.URLRequestConvertible, to destination: SmartDeviceCoreSDK.DownloadRequest.DownloadFileDestination? = nil) -> SmartDeviceCoreSDK.DownloadRequest
+  open func download(_ urlRequest: any SmartDeviceCoreSDK.URLRequestConvertible, to destination: SmartDeviceCoreSDK.DownloadRequest.DownloadFileDestination? = nil) -> SmartDeviceCoreSDK.DownloadRequest
   @discardableResult
   open func download(resumingWith resumeData: Foundation.Data, to destination: SmartDeviceCoreSDK.DownloadRequest.DownloadFileDestination? = nil) -> SmartDeviceCoreSDK.DownloadRequest
   @discardableResult
-  open func upload(_ fileURL: Foundation.URL, to url: SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod = .post, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil) -> SmartDeviceCoreSDK.UploadRequest
+  open func upload(_ fileURL: Foundation.URL, to url: any SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod = .post, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil) -> SmartDeviceCoreSDK.UploadRequest
   @discardableResult
-  open func upload(_ fileURL: Foundation.URL, with urlRequest: SmartDeviceCoreSDK.URLRequestConvertible) -> SmartDeviceCoreSDK.UploadRequest
+  open func upload(_ fileURL: Foundation.URL, with urlRequest: any SmartDeviceCoreSDK.URLRequestConvertible) -> SmartDeviceCoreSDK.UploadRequest
   @discardableResult
-  open func upload(_ data: Foundation.Data, to url: SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod = .post, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil) -> SmartDeviceCoreSDK.UploadRequest
+  open func upload(_ data: Foundation.Data, to url: any SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod = .post, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil) -> SmartDeviceCoreSDK.UploadRequest
   @discardableResult
-  open func upload(_ data: Foundation.Data, with urlRequest: SmartDeviceCoreSDK.URLRequestConvertible) -> SmartDeviceCoreSDK.UploadRequest
+  open func upload(_ data: Foundation.Data, with urlRequest: any SmartDeviceCoreSDK.URLRequestConvertible) -> SmartDeviceCoreSDK.UploadRequest
   @discardableResult
-  open func upload(_ stream: Foundation.InputStream, to url: SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod = .post, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil) -> SmartDeviceCoreSDK.UploadRequest
+  open func upload(_ stream: Foundation.InputStream, to url: any SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod = .post, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil) -> SmartDeviceCoreSDK.UploadRequest
   @discardableResult
-  open func upload(_ stream: Foundation.InputStream, with urlRequest: SmartDeviceCoreSDK.URLRequestConvertible) -> SmartDeviceCoreSDK.UploadRequest
-  open func upload(multipartFormData: @escaping (SmartDeviceCoreSDK.MultipartFormData) -> Swift.Void, usingThreshold encodingMemoryThreshold: Swift.UInt64 = SessionManager.multipartFormDataEncodingMemoryThreshold, to url: SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod = .post, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil, queue: Dispatch.DispatchQueue? = nil, encodingCompletion: ((SmartDeviceCoreSDK.SessionManager.MultipartFormDataEncodingResult) -> Swift.Void)?)
-  open func upload(multipartFormData: @escaping (SmartDeviceCoreSDK.MultipartFormData) -> Swift.Void, usingThreshold encodingMemoryThreshold: Swift.UInt64 = SessionManager.multipartFormDataEncodingMemoryThreshold, with urlRequest: SmartDeviceCoreSDK.URLRequestConvertible, queue: Dispatch.DispatchQueue? = nil, encodingCompletion: ((SmartDeviceCoreSDK.SessionManager.MultipartFormDataEncodingResult) -> Swift.Void)?)
+  open func upload(_ stream: Foundation.InputStream, with urlRequest: any SmartDeviceCoreSDK.URLRequestConvertible) -> SmartDeviceCoreSDK.UploadRequest
+  open func upload(multipartFormData: @escaping (SmartDeviceCoreSDK.MultipartFormData) -> Swift.Void, usingThreshold encodingMemoryThreshold: Swift.UInt64 = SessionManager.multipartFormDataEncodingMemoryThreshold, to url: any SmartDeviceCoreSDK.URLConvertible, method: SmartDeviceCoreSDK.HTTPMethod = .post, headers: SmartDeviceCoreSDK.HTTPHeaders? = nil, queue: Dispatch.DispatchQueue? = nil, encodingCompletion: ((SmartDeviceCoreSDK.SessionManager.MultipartFormDataEncodingResult) -> Swift.Void)?)
+  open func upload(multipartFormData: @escaping (SmartDeviceCoreSDK.MultipartFormData) -> Swift.Void, usingThreshold encodingMemoryThreshold: Swift.UInt64 = SessionManager.multipartFormDataEncodingMemoryThreshold, with urlRequest: any SmartDeviceCoreSDK.URLRequestConvertible, queue: Dispatch.DispatchQueue? = nil, encodingCompletion: ((SmartDeviceCoreSDK.SessionManager.MultipartFormDataEncodingResult) -> Swift.Void)?)
   @available(iOS 9.0, macOS 10.11, tvOS 9.0, *)
   @discardableResult
   open func stream(withHostName hostName: Swift.String, port: Swift.Int) -> SmartDeviceCoreSDK.StreamRequest
@@ -7180,23 +7201,23 @@ extension SmartDeviceCoreSDK.TargetType {
 public enum Task {
   case requestPlain
   case requestData(Foundation.Data)
-  case requestJSONEncodable(Swift.Encodable)
-  case requestCustomJSONEncodable(Swift.Encodable, encoder: Foundation.JSONEncoder)
-  case requestParameters(parameters: [Swift.String : Any], encoding: SmartDeviceCoreSDK.ParameterEncoding)
+  case requestJSONEncodable(any Swift.Encodable)
+  case requestCustomJSONEncodable(any Swift.Encodable, encoder: Foundation.JSONEncoder)
+  case requestParameters(parameters: [Swift.String : Any], encoding: any SmartDeviceCoreSDK.ParameterEncoding)
   case requestCompositeData(bodyData: Foundation.Data, urlParameters: [Swift.String : Any])
-  case requestCompositeParameters(bodyParameters: [Swift.String : Any], bodyEncoding: SmartDeviceCoreSDK.ParameterEncoding, urlParameters: [Swift.String : Any])
+  case requestCompositeParameters(bodyParameters: [Swift.String : Any], bodyEncoding: any SmartDeviceCoreSDK.ParameterEncoding, urlParameters: [Swift.String : Any])
   case uploadFile(Foundation.URL)
   case uploadMultipart([SmartDeviceCoreSDK.MoyaMultipartFormData])
   case uploadCompositeMultipart([SmartDeviceCoreSDK.MoyaMultipartFormData], urlParameters: [Swift.String : Any])
   case downloadDestination(SmartDeviceCoreSDK.DownloadDestination)
-  case downloadParameters(parameters: [Swift.String : Any], encoding: SmartDeviceCoreSDK.ParameterEncoding, destination: SmartDeviceCoreSDK.DownloadDestination)
+  case downloadParameters(parameters: [Swift.String : Any], encoding: any SmartDeviceCoreSDK.ParameterEncoding, destination: SmartDeviceCoreSDK.DownloadDestination)
 }
 @objc @_hasMissingDesignatedInitializers open class TaskDelegate : ObjectiveC.NSObject {
   final public let queue: Foundation.OperationQueue
   public var data: Foundation.Data? {
     get
   }
-  public var error: Swift.Error?
+  public var error: (any Swift.Error)?
   @objc deinit
 }
 public struct Timeline {
@@ -7388,7 +7409,7 @@ extension Foundation.URL {
 extension SmartDeviceCoreSDK.Request {
   public enum ValidationResult {
     case success
-    case failure(Swift.Error)
+    case failure(any Swift.Error)
   }
 }
 extension SmartDeviceCoreSDK.DataRequest {
@@ -7631,6 +7652,7 @@ extension SmartDeviceCoreSDK.A4xDeviceRole : Swift.Equatable {}
 extension SmartDeviceCoreSDK.A4xDeviceRole : Swift.Hashable {}
 extension SmartDeviceCoreSDK.SmartDeviceState : Swift.Equatable {}
 extension SmartDeviceCoreSDK.SmartDeviceState : Swift.Hashable {}
+extension SmartDeviceCoreSDK.SmartDeviceState : Swift.RawRepresentable {}
 extension SmartDeviceCoreSDK.A4xDeviceAudioState : Swift.Equatable {}
 extension SmartDeviceCoreSDK.A4xDeviceAudioState : Swift.Hashable {}
 extension SmartDeviceCoreSDK.A4xDeviceAudioState : Swift.RawRepresentable {}

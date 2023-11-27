@@ -19,5 +19,6 @@ extension AppDelegate: ResolverRegistering {
         Resolver.main.register { A4xLiveVideoUIImpl() }.implements(A4xLiveVideoUIInterface.self)
         A4xBaseManager.shared.setupBaseAdapter(adapterInstance: BaseCoreAdapter())
         A4xBaseManager.shared.setUpMediaCodecAdapter(adapterInstance: MediaCodecAdapter())
+        A4xBaseManager.shared.setBaseLanguageAdapter(adapterInstance: BaseLanguageAdapter())
     }
 }

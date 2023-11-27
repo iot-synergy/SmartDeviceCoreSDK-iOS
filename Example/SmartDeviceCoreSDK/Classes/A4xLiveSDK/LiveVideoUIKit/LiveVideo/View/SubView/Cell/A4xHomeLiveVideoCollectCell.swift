@@ -591,8 +591,8 @@ extension A4xHomeLiveVideoCollectCell: ILiveStateListener {
     
     ///
     public func onPlayerState(stateCode: Int, msg: String) {
-        let voipLiveKey = UserDefaults.standard.value(forKey: "A4xDoorBellLiveKey") as? String
-        if voipLiveKey == "1" {
+        let voipLiveKey = A4xBaseManager.shared.isDoorBellLive
+        if voipLiveKey {
             return
         }
         

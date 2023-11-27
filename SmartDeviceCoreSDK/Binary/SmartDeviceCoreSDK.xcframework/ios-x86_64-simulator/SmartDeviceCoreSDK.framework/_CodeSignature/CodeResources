@@ -24,6 +24,10 @@
 		<data>
 		Ux08kIRy3g/4lZ+bEmUwv9EwANQ=
 		</data>
+		<key>Headers/A4xNotificationManager.h</key>
+		<data>
+		0XHr6jpu6UHVhKi1U95weR5gvZg=
+		</data>
 		<key>Headers/A4xNsLog.h</key>
 		<data>
 		4fht90GD8l1WZuQoSuRDl42/22k=
@@ -202,11 +206,11 @@
 		</data>
 		<key>Headers/SmartDeviceCoreSDK-Swift.h</key>
 		<data>
-		6ThU0Y7KBD/nAiHVeclm5fADpFA=
+		Cz7N7UO4Pwhhcj4jqYbFT40nXUc=
 		</data>
 		<key>Headers/SmartDeviceCoreSDK-umbrella.h</key>
 		<data>
-		ZyUOdUZFckSTMqrcLTBJK9Gtt0c=
+		+XIzL/XxkrPiFCSn5soAze1HQVg=
 		</data>
 		<key>Headers/SmartDeviceCoreSDK.h</key>
 		<data>
@@ -226,31 +230,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		VxAm0fvUdzUFPXT/9r/7catOcyQ=
+		z3HqF42qcw8pK/tm5fq3Kk4Rcxg=
 		</data>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		GzjuOnCoCTPJK8UsMKL78w2YoOU=
+		8H/vIqbOy1azeDF1QDhU02yrWvA=
 		</data>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		7xuhD3CAEtS/SG3oZBU3aYazJHk=
+		C0bg9RqnwiQ/TGqMboYzq6qDIew=
 		</data>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		Ow7/v1kSYqQ49tJLOOUVwQl4WY8=
+		6It9t85alKXglMjSclM87eyBYI0=
 		</data>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		KYXNLnSoBxqjKKW1ab+iALySb08=
+		twUqSBWuv6avYRYTweasucnCkc8=
 		</data>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Ow7/v1kSYqQ49tJLOOUVwQl4WY8=
+		6It9t85alKXglMjSclM87eyBYI0=
 		</data>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		TwBqtKOeJRi5K7LSZPASKrn9ZKE=
+		fMiXDPBdOcjXxHoP9fWZNxw7P1M=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -258,7 +262,7 @@
 		</data>
 		<key>version.json</key>
 		<data>
-		JD5cVyIApwb6YzztZd3Y2Gk+LKA=
+		Lg6HNUVk5Wpx2A36UyCvoXGaWFM=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -296,6 +300,13 @@
 			<key>hash2</key>
 			<data>
 			37Bom0t92MmcRR/VC1mRBG4URU63XcIvWeE1gkf+v7g=
+			</data>
+		</dict>
+		<key>Headers/A4xNotificationManager.h</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			39yH2UraBNNuT9FjVu929fOJ1Kl1Pn3cxNVsI0uQ134=
 			</data>
 		</dict>
 		<key>Headers/A4xNsLog.h</key>
@@ -610,14 +621,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4inClYt7jMFcezULjxmY7v9c76QojEdONu6kv+QWKr8=
+			XtbcjgJ3h6Md9XB5xUYUaX0CSdd7AK185VJqz4MvCoc=
 			</data>
 		</dict>
 		<key>Headers/SmartDeviceCoreSDK-umbrella.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2I06S7kuax3edENyxCRS5U09nOogu6m6X5P4FToRBOo=
+			TbzPfuiXgeS6auxFCrTzIwGN0Ct4RvAiIbX0wR71dio=
 			</data>
 		</dict>
 		<key>Headers/SmartDeviceCoreSDK.h</key>
@@ -652,42 +663,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RMpxUiP/cUk/rdlKM9dvjzCi/mKVZLTz5mW7wFORI/k=
+			uEp5b1l1Lx8zuFyzYoM0bbI/3TQEQ6ZOGgAvMixkEgY=
 			</data>
 		</dict>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ouA0N7DHqMuIwpj+3Y4IrcdO+7/UxxYoEh3QrhAlMVc=
+			es/qtkXzVnZmzKZO6Q5q1Fycdhw106gVkwJl1et0YaE=
 			</data>
 		</dict>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MrI3jsKcFN46M7FFXV6z5zyvT4Rkv94eRukljGZgjPQ=
+			TJdemYAlhl0dkg6uLJlln/zQwK7hsihqmUlbUF3Irv0=
 			</data>
 		</dict>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AVbK6129zXrUugUd0uBZxx8MxmRDizkKCtSbxbNA2eM=
+			x2syHFjXe+68FTB3e5F1dnqIKkjhMa8JC0shuYAjW5o=
 			</data>
 		</dict>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MrI3jsKcFN46M7FFXV6z5zyvT4Rkv94eRukljGZgjPQ=
+			TJdemYAlhl0dkg6uLJlln/zQwK7hsihqmUlbUF3Irv0=
 			</data>
 		</dict>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eYXKf6h+R4wB0247jHij2biw9N1mIH2F6awHw39pzxM=
+			iXQw+vmiHe6MDiaBfaTKg5gxb8KgDgwi3oYM9ds98ZQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -701,7 +712,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eGPFaT7/gxFrtPem1GQvn5B7uyy006eiJmyHLGm3+Mo=
+			fXgAP2OcLbdj3qcrnwfcXB3Lk8ewkMGB8aftS3ZBSWU=
 			</data>
 		</dict>
 	</dict>

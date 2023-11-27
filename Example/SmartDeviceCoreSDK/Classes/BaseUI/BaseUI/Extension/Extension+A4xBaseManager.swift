@@ -77,7 +77,7 @@ extension A4xBaseManager {
         // https://api-us.dzeesja.com
         // 默认先从配置文件里读
         var baseUrl = A4xProjectConfigManager.projectConfig.agreementNodeUrl ?? ""
-        
+        let isCN = A4xProjectConfigManager.projectConfig.isCN ?? false
         // 1.先从UserDefault获取agreementNodelUrl
         if let userDefaultBaseUrl = UserDefaults.standard.string(forKey: "A4xAgreementNodeUrl") {
             if !(userDefaultBaseUrl.isBlank) {
@@ -104,11 +104,19 @@ extension A4xBaseManager {
         var typeDes = ""
         switch subjectType {
         case .terms:
-            type = "terms-of-use"
+            if isCN {
+                type = "terms-of-use-cn"
+            } else {
+                type = "terms-of-use"
+            }
             typeDes = "terms"
             break
         case .policy:
-            type = "privacy-policy"
+            if isCN {
+                type = "privacy-policy-cn"
+            } else {
+                type = "privacy-policy"
+            }
             typeDes = "policy"
             break
         case .awareness:

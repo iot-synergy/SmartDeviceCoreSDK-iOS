@@ -77,17 +77,6 @@ public class BaseCoreAdapter: BaseAdapterProtocol {
             return content
         }
     }
- 
-    
-    public func updateBundle(language: A4xBaseAppLanguageType) {
-        let string: String = language.rawValue
-        
-        let bundlePath = a4xBaseBundle().path(forResource: "\(string)", ofType: "lproj") ?? ""
-        languageBundle = Bundle(path: bundlePath) ?? Bundle.main
-        languageLocale = Locale(identifier: language.rawValue)
-        DateFormatter.kyDatalocal = CurrentLocale()
-        NotificationCenter.default.post(name: LanguageChangeNotificationKey, object: nil)
-    }
     
     
     public func vCommonLogError(_ closure: @autoclosure () -> Any?) {

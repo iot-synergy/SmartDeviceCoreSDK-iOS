@@ -35,6 +35,7 @@
 #import "A4xCommon.h"
 #import "A4xDataChannel.h"
 #import "A4xLogReportDelegate.h"
+#import "A4xNotificationManager.h"
 #import "A4xObjcWebRtcPlayer.h"
 #import "A4xObjcWebRtcPlayerManager.h"
 #import "A4xPlayerSDK.h"
