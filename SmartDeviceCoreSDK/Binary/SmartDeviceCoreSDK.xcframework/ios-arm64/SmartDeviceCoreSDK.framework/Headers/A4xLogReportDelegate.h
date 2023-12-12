@@ -30,6 +30,9 @@
 //TODO:
 @property (atomic, assign) long long elapse; //http connect elapse
 @property (atomic, copy) NSString* videoCodec;
+
+- (NSDictionary *)toMap;
+
 @end
 
 

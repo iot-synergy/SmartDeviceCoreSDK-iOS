@@ -18,7 +18,7 @@
 		</data>
 		<key>Headers/A4xLogReportDelegate.h</key>
 		<data>
-		n7jCRuMPO49qQRM51D3zjZz59bs=
+		+U3lovsydT9+w+IldS53ZSV2QuM=
 		</data>
 		<key>Headers/A4xMediaKit.h</key>
 		<data>
@@ -230,11 +230,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		r/LDVCAlRHSb46eEX/LuOtCD6vs=
+		5FgoTUnXb+9HPWGTe4fG1C/qvGk=
 		</data>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		G0ulBQKibkfLvDP7rm6SgXdibpQ=
+		beZjXmN+4ueAOqloeKE9G9czUnU=
 		</data>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -262,7 +262,7 @@
 		</data>
 		<key>version.json</key>
 		<data>
-		UFyqyrTBLzAnpNhlqWDmvUXZOG0=
+		XPuHICAfGDedEzNJJM4W16f5Elo=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -292,7 +292,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RKpYoc8ENEO8KJS081Z8k4wmSqKSMbg0WWqpHRqip6s=
+			9n3nAfaigJpaUi9DfY2ElXhkdiSbHoLS7w5v3mgHCVE=
 			</data>
 		</dict>
 		<key>Headers/A4xMediaKit.h</key>
@@ -663,7 +663,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qXnijIIhLfMq/W5616+q3o+LWyFQ+LFtULCretkP1ic=
+			NHCsuwJMzhxtHVPQUcoELmyyUxaCECEBImBaCrkasx4=
 			</data>
 		</dict>
 		<key>Modules/SmartDeviceCoreSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -712,7 +712,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0SmeaafSHLcwRpDxK1Dz0w3xzyjKcc6TeC0MByJdcZw=
+			nzxYdMD7ef0MH2tZwelOQgsAN0/mL8ZloWAS/kw9xkc=
 			</data>
 		</dict>
 	</dict>
