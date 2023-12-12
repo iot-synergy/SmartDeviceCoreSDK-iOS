@@ -60,6 +60,7 @@ public struct A4xAppBaseUrlNodeModel : Swift.Codable {
   public var zendeskHost: Swift.String?
   public var zendeskAppId: Swift.String?
   public var zendeskClientId: Swift.String?
+  public var trackerUrl: Swift.String?
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -146,6 +147,8 @@ public struct A4xAppBuildConfig : Swift.Codable {
   public static func getZendeskInfo() -> SmartDeviceCoreSDK.A4xAppBaseUrlNodeModel
   public static func saveZendesk(modle: SmartDeviceCoreSDK.A4xAppBaseUrlNodeModel?)
   public static func changeHost(url: Swift.String)
+  public static func saveTrackUrl(url: Swift.String?)
+  public static func getTrackUrl() -> Swift.String
   public static func resetHost()
   public static func loadHost() -> Swift.String?
   public func encode(to encoder: any Swift.Encoder) throws
@@ -3582,7 +3585,7 @@ public struct A4xUserVipBirdAddOnPackageListModel : Swift.Codable {
   public init(from decoder: any Swift.Decoder) throws
 }
 public struct A4xUserVipModel : Swift.Codable {
-  public init(vip: Swift.Bool? = nil, sn2VipLevel: Swift.Dictionary<Swift.String, Swift.Int>? = nil, protection: Swift.Bool? = nil, tierReceive: Swift.Bool? = nil, tierId: Swift.Int? = nil, tierName: Swift.String? = nil, name: Swift.String? = nil, subhead: Swift.String? = nil, unit: Swift.String? = nil, price: Swift.String? = nil, endTime: Swift.Double? = nil, effectiveTime: Swift.Double? = nil, message: Swift.String? = nil, notifyType: Swift.Int? = nil, notify: Swift.Bool? = nil, shouldReminder: Swift.Bool? = nil, recommendProduct: SmartDeviceCoreSDK.A4xUserVipModel.A4xUserRecommendProductModel? = nil, popupMessage: Swift.String? = nil, tierTermList: [SmartDeviceCoreSDK.A4xUserVipPlanItemModel]? = nil, subTierList: [SmartDeviceCoreSDK.A4xSubTierModel]? = nil, tierDescribeList: [SmartDeviceCoreSDK.A4xUserVipPlanItemModel]? = nil, protectionMessage: Swift.String? = nil, lastTierName: Swift.String? = nil, product: SmartDeviceCoreSDK.A4xUserVipModel.A4xUserProductModel? = nil, additionalTierInfo: SmartDeviceCoreSDK.A4xUserVipBirdAddOnPackageListModel? = nil)
+  public init(vip: Swift.Bool? = nil, sn2VipLevel: Swift.Dictionary<Swift.String, Swift.Int>? = nil, protection: Swift.Bool? = nil, tierReceive: Swift.Bool? = nil, tierId: Swift.Int? = nil, tierName: Swift.String? = nil, name: Swift.String? = nil, subhead: Swift.String? = nil, unit: Swift.String? = nil, price: Swift.String? = nil, endTime: Swift.Double? = nil, effectiveTime: Swift.Double? = nil, message: Swift.String? = nil, notifyType: Swift.Int? = nil, notify: Swift.Bool? = nil, shouldReminder: Swift.Bool? = nil, recommendProduct: SmartDeviceCoreSDK.A4xUserVipModel.A4xUserRecommendProductModel? = nil, popupMessage: Swift.String? = nil, tierTermList: [SmartDeviceCoreSDK.A4xUserVipPlanItemModel]? = nil, subTierList: [SmartDeviceCoreSDK.A4xSubTierModel]? = nil, tierDescribeList: [SmartDeviceCoreSDK.A4xUserVipPlanItemModel]? = nil, protectionMessage: Swift.String? = nil, lastTierName: Swift.String? = nil, product: SmartDeviceCoreSDK.A4xUserVipModel.A4xUserProductModel? = nil, additionalTierInfo: SmartDeviceCoreSDK.A4xUserVipBirdAddOnPackageListModel? = nil, tierNameKey: Swift.String? = nil)
   public var vip: Swift.Bool?
   public var sn2VipLevel: Swift.Dictionary<Swift.String, Swift.Int>?
   public var protection: Swift.Bool?
@@ -3608,6 +3611,7 @@ public struct A4xUserVipModel : Swift.Codable {
   public var lastTierName: Swift.String?
   public var product: SmartDeviceCoreSDK.A4xUserVipModel.A4xUserProductModel?
   public var additionalTierInfo: SmartDeviceCoreSDK.A4xUserVipBirdAddOnPackageListModel?
+  public var tierNameKey: Swift.String?
   public static func TestDemo() -> SmartDeviceCoreSDK.A4xUserVipModel
   public struct A4xUserProductModel : Swift.Codable {
     public var month: Swift.Int?
@@ -3809,7 +3813,7 @@ extension SmartDeviceCoreSDK.LivePlayer {
 @objc public protocol LiveAllStateProtocol {
   @objc func onRenderView(deviceId: Swift.String, surfaceView: UIKit.UIView)
   @objc func onPlayerState(deviceId: Swift.String, stateCode: Swift.Int)
-  @objc func onDownloadSpeedUpdate(deviceId: Swift.String, speed: Swift.String)
+  @objc func onDownloadSpeedUpdate(deviceId: Swift.String, speed: Swift.Int64)
   @objc func onDebug(deviceId: Swift.String, dic: [Swift.AnyHashable : Any])
   @objc func onMicFrame(deviceId: Swift.String, data: [Swift.Float])
   @objc func onDeviceMsgPush(deviceId: Swift.String, code: Swift.Int)
@@ -3821,7 +3825,7 @@ extension SmartDeviceCoreSDK.LivePlayer {
 extension SmartDeviceCoreSDK.LiveAllStateProtocol {
   public func onRenderView(deviceId: Swift.String, surfaceView: UIKit.UIView)
   public func onPlayerState(deviceId: Swift.String, stateCode: Swift.Int)
-  public func onDownloadSpeedUpdate(deviceId: Swift.String, speed: Swift.String)
+  public func onDownloadSpeedUpdate(deviceId: Swift.String, speed: Swift.Int64)
   public func onDebug(deviceId: Swift.String, dic: [Swift.AnyHashable : Any])
   public func onMicFrame(deviceId: Swift.String, data: [Swift.Float])
   public func onDeviceMsgPush(deviceId: Swift.String, code: Swift.Int)
@@ -3833,7 +3837,7 @@ extension SmartDeviceCoreSDK.LiveAllStateProtocol {
 @objc public protocol ILiveStateListener {
   @objc optional func onRenderView(surfaceView: UIKit.UIView)
   @objc optional func onPlayerState(stateCode: Swift.Int, msg: Swift.String)
-  @objc optional func onDownloadSpeedUpdate(speed: Swift.String)
+  @objc optional func onDownloadSpeedUpdate(speed: Swift.Int64)
   @objc optional func onDebug(dic: [Swift.AnyHashable : Any])
   @objc optional func onMicFrame(data: [Swift.Float])
   @objc optional func onDeviceMsgPush(code: Swift.Int)
@@ -3991,6 +3995,7 @@ public struct AccessTokenPlugin : SmartDeviceCoreSDK.PluginType {
 }
 @objc public protocol AccountChangeListener {
   @objc func onAccountInfoError(status: Swift.Int)
+  @objc func onLoginSuccess(userId: Swift.Int64)
 }
 public enum AFError : Swift.Error {
   public enum ParameterEncodingFailureReason {
@@ -5667,7 +5672,7 @@ public enum A4xVideoAction {
 public protocol LiveManagerInstanceProtocol : AnyObject {
   func onRenderView(deviceId: Swift.String, surfaceView: UIKit.UIView)
   func onPlayerState(deviceId: Swift.String, stateCode: Swift.Int)
-  func onDownloadSpeedUpdate(deviceId: Swift.String, speed: Swift.String)
+  func onDownloadSpeedUpdate(deviceId: Swift.String, speed: Swift.Int64)
   func onDebug(deviceId: Swift.String, dic: [Swift.AnyHashable : Any])
   func onMicFrame(deviceId: Swift.String, data: [Swift.Float])
   func onDeviceMsgPush(deviceId: Swift.String, code: Swift.Int)
@@ -5680,7 +5685,7 @@ public protocol LiveManagerInstanceProtocol : AnyObject {
 extension SmartDeviceCoreSDK.LiveManagerInstanceProtocol {
   public func onRenderView(deviceId: Swift.String, surfaceView: UIKit.UIView)
   public func onPlayerState(deviceId: Swift.String, stateCode: Swift.Int)
-  public func onDownloadSpeedUpdate(deviceId: Swift.String, speed: Swift.String)
+  public func onDownloadSpeedUpdate(deviceId: Swift.String, speed: Swift.Int64)
   public func onDebug(deviceId: Swift.String, dic: [Swift.AnyHashable : Any])
   public func onMicFrame(deviceId: Swift.String, data: [Swift.Float])
   public func onDeviceMsgPush(deviceId: Swift.String, code: Swift.Int)
@@ -5917,7 +5922,7 @@ extension SmartDeviceCoreSDK.LiveManagerInstance : SmartDeviceCoreSDK.LiveManage
 extension SmartDeviceCoreSDK.LiveManagerInstance : SmartDeviceCoreSDK.LiveAllStateProtocol {
   @objc dynamic public func onRenderView(deviceId: Swift.String, surfaceView: UIKit.UIView)
   @objc dynamic public func onPlayerState(deviceId: Swift.String, stateCode: Swift.Int)
-  @objc dynamic public func onDownloadSpeedUpdate(deviceId: Swift.String, speed: Swift.String)
+  @objc dynamic public func onDownloadSpeedUpdate(deviceId: Swift.String, speed: Swift.Int64)
   @objc dynamic public func onDebug(deviceId: Swift.String, dic: [Swift.AnyHashable : Any])
   @objc dynamic public func onMicFrame(deviceId: Swift.String, data: [Swift.Float])
   @objc dynamic public func onDeviceMsgPush(deviceId: Swift.String, code: Swift.Int)
@@ -6610,6 +6615,7 @@ public protocol RequestType {
 }
 @_hasMissingDesignatedInitializers public class QueryNodeViewModel {
   public func loadNetNode(userName: Swift.String, comple: @escaping (_ errorString: Swift.String?) -> Swift.Void)
+  public func requestNode(userName: Swift.String, comple: @escaping (_ errorString: Swift.String?) -> Swift.Void)
   @objc deinit
 }
 public protocol RequestAdapter {
@@ -7163,6 +7169,7 @@ open class SessionManager {
 @_inheritsConvenienceInitializers @objc public class SmartDeviceCore : ObjectiveC.NSObject {
   @objc public class func getInstance() -> SmartDeviceCoreSDK.SmartDeviceCore
   @objc public var isDebug: Swift.Bool
+  @objc public var accountListener: (any SmartDeviceCoreSDK.AccountChangeListener)?
   @objc public func initSDK(config: SmartDeviceCoreSDK.InitSDKConfig, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   @objc public func login(token: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)
   @objc public func updateLanguage(language: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void, onError: @escaping (_ code: Swift.Int, _ message: Swift.String) -> Swift.Void)

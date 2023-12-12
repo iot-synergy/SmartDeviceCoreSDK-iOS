@@ -1401,6 +1401,7 @@ SWIFT_PROTOCOL("_TtP18SmartDeviceCoreSDK21AccountChangeListener_")
 /// -1024: other login
 /// -1025: token missing
 - (void)onAccountInfoErrorWithStatus:(NSInteger)status;
+- (void)onLoginSuccessWithUserId:(int64_t)userId;
 @end
 
 
@@ -2626,7 +2627,7 @@ SWIFT_PROTOCOL("_TtP18SmartDeviceCoreSDK18ILiveStateListener_")
 /// 0-准备中; 1-无网络; 2-设备离线; 3-低电量; 4-点击关机; 5-弱电关机; 6-设备休眠 ; 7-固件正在升级; 8-固件强制升级;9-固件建议升级;10-直播中;11-暂停 ;12-直播服务超时;13-直播观看人数已达上限，请稍后重试;14-出图失败 ;15-AP未连接;16-无权限访问
 - (void)onPlayerStateWithStateCode:(NSInteger)stateCode msg:(NSString * _Nonnull)msg;
 /// 下载速度更新时调用
-- (void)onDownloadSpeedUpdateWithSpeed:(NSString * _Nonnull)speed;
+- (void)onDownloadSpeedUpdateWithSpeed:(int64_t)speed;
 /// 调试信息回调，提供额外的详细信息
 - (void)onDebugWithDic:(NSDictionary * _Nonnull)dic;
 /// 接收到麦克风帧时调用
@@ -2774,7 +2775,7 @@ SWIFT_PROTOCOL("_TtP18SmartDeviceCoreSDK20LiveAllStateProtocol_")
 /// 0-准备中; 1-无网络; 2-设备离线; 3-低电量; 4-点击关机; 5-弱电关机; 6-设备休眠 ; 7-固件正在升级; 8-固件强制升级;9-固件建议升级;10-直播中;11-暂停 ;12-直播服务超时;13-直播观看人数已达上限，请稍后重试;14-出图失败 ;15-AP未连接;16-无权限访问
 - (void)onPlayerStateWithDeviceId:(NSString * _Nonnull)deviceId stateCode:(NSInteger)stateCode;
 /// 下载速度更新时调用
-- (void)onDownloadSpeedUpdateWithDeviceId:(NSString * _Nonnull)deviceId speed:(NSString * _Nonnull)speed;
+- (void)onDownloadSpeedUpdateWithDeviceId:(NSString * _Nonnull)deviceId speed:(int64_t)speed;
 /// 调试信息回调，提供额外的详细信息
 - (void)onDebugWithDeviceId:(NSString * _Nonnull)deviceId dic:(NSDictionary * _Nonnull)dic;
 /// 接收到麦克风帧时调用
@@ -2811,7 +2812,7 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK19LiveManagerInstance")
 @interface LiveManagerInstance (SWIFT_EXTENSION(SmartDeviceCoreSDK)) <LiveAllStateProtocol>
 - (void)onRenderViewWithDeviceId:(NSString * _Nonnull)deviceId surfaceView:(UIView * _Nonnull)surfaceView;
 - (void)onPlayerStateWithDeviceId:(NSString * _Nonnull)deviceId stateCode:(NSInteger)stateCode;
-- (void)onDownloadSpeedUpdateWithDeviceId:(NSString * _Nonnull)deviceId speed:(NSString * _Nonnull)speed;
+- (void)onDownloadSpeedUpdateWithDeviceId:(NSString * _Nonnull)deviceId speed:(int64_t)speed;
 - (void)onDebugWithDeviceId:(NSString * _Nonnull)deviceId dic:(NSDictionary * _Nonnull)dic;
 - (void)onMicFrameWithDeviceId:(NSString * _Nonnull)deviceId data:(NSArray<NSNumber *> * _Nonnull)data;
 - (void)onDeviceMsgPushWithDeviceId:(NSString * _Nonnull)deviceId code:(NSInteger)code;
@@ -3492,6 +3493,7 @@ SWIFT_CLASS("_TtC18SmartDeviceCoreSDK15SmartDeviceCore")
 @interface SmartDeviceCore : NSObject
 + (SmartDeviceCore * _Nonnull)getInstance SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic) BOOL isDebug;
+@property (nonatomic, strong) id <AccountChangeListener> _Nullable accountListener;
 /// 初始化SDK
 /// config : 配置项
 - (void)initSDKWithConfig:(InitSDKConfig * _Nonnull)config onSuccess:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onSuccess onError:(void (^ _Nonnull)(NSInteger, NSString * _Nonnull))onError SWIFT_METHOD_FAMILY(none);

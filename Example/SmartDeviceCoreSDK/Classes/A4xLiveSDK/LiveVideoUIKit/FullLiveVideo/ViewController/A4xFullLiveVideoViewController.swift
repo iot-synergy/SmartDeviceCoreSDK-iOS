@@ -253,11 +253,19 @@ extension A4xFullLiveVideoViewController: ILiveStateListener {
         }
     }
     
-    public func onDownloadSpeedUpdate(speed: String) {
+    public func onDownloadSpeedUpdate(speed: Int64) {
+        
+        var speedStr = ""
+        if speed < 1000 {
+            speedStr = "\(speed)B/s"
+        } else {
+            speedStr = "\(speed / 1000)KB/s"
+        }
         weak var weakSelf = self
         DispatchQueue.main.async {
-            weakSelf?.fullLiveVideoControlView.downloadSpeed = speed
+            weakSelf?.fullLiveVideoControlView.downloadSpeed = speedStr
         }
+        
     }
     
     public func onMicFrame(data: [Float]) {

@@ -31,7 +31,7 @@ import SmartDeviceCoreSDK
     }
     
     private func log(_ level: LogLevel, _ tag: String, message: String) {
-        if A4xAppBuildConfig.buildInfo().isDebug() {
+        if A4xBaseManager.shared.checkIsDebug() {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "HH:mm:ss:SSSS"
             print("\(dateFormatter.string(from: Date())) \(tag) \(level.stringValue): \(message)")

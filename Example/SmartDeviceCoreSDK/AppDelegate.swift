@@ -22,9 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // init smart device core sdk
         let config:InitSDKConfig = InitConfigBuilder()
-            .setTenantId("shenmou_test")
+            .setTenantId("vicoo")
             .setLanguage("en")
-            .setCountryNo("US")
             .setIsDebug(true)
             .setLoggerDelegate(LoggerImpl())
             .setAccountChangeListener(self)
@@ -68,6 +67,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension AppDelegate: AccountChangeListener {
+    func onLoginSuccess(userId: Int64) {
+        
+    }
+    
     
     // 账号过期
     func onAccountInfoError(status: Int) {
