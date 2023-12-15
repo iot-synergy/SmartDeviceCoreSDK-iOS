@@ -2079,7 +2079,6 @@ public enum A4xLibraryVideoAPI : Swift.String {
   case otherTagNameList
   case queryVideoSearchOption
   case queryVideoSearchOptionBySn
-  case queryFreePurchaseBanner
   case closeFreePurchaseBanner
   public static func getPath(service: SmartDeviceCoreSDK.LibraryMoudel) -> Swift.String
   public static func getParam(service: SmartDeviceCoreSDK.LibraryMoudel) -> Foundation.Data?
@@ -2386,23 +2385,6 @@ public struct A4xLibraryVideoTagsModel : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct A4xFreePurchaseBannerResponseModel : Swift.Codable {
-  public init(notify: Swift.Bool? = nil, notifyType: Swift.Int? = nil, notifyMessage: Swift.String? = nil, recommendProduct: SmartDeviceCoreSDK.A4xFreePurchaseBannerRecommendProductModel? = nil, notifyCount: Swift.Int? = nil, upgradeFreeBtn: Swift.String? = nil)
-  public var notify: Swift.Bool?
-  public var notifyType: Swift.Int?
-  public var notifyMessage: Swift.String?
-  public var recommendProduct: SmartDeviceCoreSDK.A4xFreePurchaseBannerRecommendProductModel?
-  public var notifyCount: Swift.Int?
-  public var upgradeFreeBtn: Swift.String?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct A4xFreePurchaseBannerRecommendProductModel : Swift.Codable {
-  public var productId: Swift.Int?
-  public var maxDeviceNum: Swift.Int?
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
 public struct A4xLibraryStatusResponse : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
@@ -2691,7 +2673,6 @@ public enum LibraryMoudel : SmartDeviceCoreSDK.A4xNetMoudelProtocol {
   case queryVideoSearchOption
   case queryVideoSearchOptionBySn(serialNumber: Swift.String)
   case getQuestionBackOptionsV2(traceId: Swift.String)
-  case queryFreePurchaseBanner
   case closeFreePurchaseBanner
   case commitQuestionBack(traceId: Swift.String, reasionCode: [Swift.Int], remark: Swift.String?)
 }
@@ -5614,7 +5595,6 @@ public typealias Image = SmartDeviceCoreSDK.ImageType
   public func fetchDoorbellFilterTag(complement: @escaping (_ code: Swift.Int, _ message: Swift.String, _ result: [SmartDeviceCoreSDK.A4xLibraryVideoAiTagType]?) -> Swift.Void)
   @objc public func queryVideoTagsByCloud(serialNumber: Swift.String?, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String, _ tagBean: SmartDeviceCoreSDK.TagBean?) -> Swift.Void, onFail: @escaping (_ code: Swift.Int, _ msg: Swift.String) -> Swift.Void)
   @objc public func queryVideoSearchOption(isFromSDCard: Swift.Bool, serialNumber: Swift.String?, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String, _ tagBean: SmartDeviceCoreSDK.TagBean?) -> Swift.Void, onFail: @escaping (_ code: Swift.Int, _ msg: Swift.String) -> Swift.Void)
-  public func queryFreePurchaseBanner(complement: @escaping (_ code: Swift.Int, _ message: Swift.String, _ result: SmartDeviceCoreSDK.A4xFreePurchaseBannerResponseModel?) -> Swift.Void)
   public func closeFreePurchaseBanner(complement: @escaping (_ code: Swift.Int, _ message: Swift.String, _ result: Swift.Bool?) -> Swift.Void)
   public func getLibraryByTraceId(traceId: Swift.String, onSuccess: @escaping (_ code: Swift.Int, _ message: Swift.String, _ resultModel: SmartDeviceCoreSDK.A4xLibraryStatusResponse?) -> Swift.Void, onFail: @escaping (_ code: Swift.Int, _ msg: Swift.String) -> Swift.Void)
   @objc public func downloadSource(tasks: [SmartDeviceCoreSDK.RecordBean], isShare: Swift.Bool = false, onProgress: @escaping (_ downloadIndex: Swift.Int, _ total: Swift.Int, _ progress: Swift.Float, _ describe: Swift.String) -> Swift.Void, onFinish: @escaping (_ res: Swift.Bool, _ sharePathArr: [Swift.String]?, @escaping () -> Swift.Void) -> Swift.Void)
